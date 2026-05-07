@@ -14,6 +14,7 @@ export function Mdx({ source, components }: MdxProps) {
       source={source}
       components={{ ...mdxComponents, ...(components ?? {}) }}
       options={{
+        blockJS: false,
         mdxOptions: {
           remarkPlugins: [remarkGfm],
           rehypePlugins: [rehypeSlug],
