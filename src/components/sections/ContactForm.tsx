@@ -80,6 +80,7 @@ export function ContactForm() {
           <option value="" disabled>
             Choose a topic
           </option>
+          <option value="ligna-2026">Ligna 2026 — pre-book a meeting</option>
           <option value="business-development">Business Development</option>
           <option value="production-optimization">Production Optimization</option>
           <option value="project-solutions">Project Solutions</option>
