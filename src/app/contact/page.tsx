@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -60,9 +61,71 @@ export default function ContactPage() {
           </div>
         </Container>
       </Section>
+
+      <Section tone="paper" size="md">
+        <Container>
+          <Eyebrow>Our team</Eyebrow>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink-900)]">
+            The people you'll work with
+          </h2>
+          <p className="mt-4 text-[1.0625rem] leading-relaxed text-[var(--color-ink-500)] max-w-xl">
+            We are a small, specialised team. When you reach out, you speak directly with the people who do the work.
+          </p>
+
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {team.map((person) => (
+              <div key={person.name} className="group">
+                <div className="overflow-hidden rounded-[var(--radius-lg)] bg-[var(--color-beige-200)] aspect-[3/4]">
+                  <Image
+                    src={person.image}
+                    alt={person.name}
+                    width={480}
+                    height={640}
+                    className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="mt-4">
+                  <p className="text-[1.0625rem] font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                  <p className="mt-0.5 text-sm text-[var(--color-ink-500)]">{person.title}</p>
+                  {person.email && (
+                    <a
+                      href={`mailto:${person.email}`}
+                      className="mt-2 inline-flex items-center gap-1.5 text-sm text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                    >
+                      <Mail className="size-3.5" aria-hidden />
+                      {person.email}
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
     </>
   );
 }
+
+const team = [
+  {
+    name: "Henrik Ibsen",
+    title: "Partner & Senior Consultant",
+    email: "hi@nicholaisen.dk",
+    image: "/images/Medarbejder/Henrik%20Ibsen.jpg",
+  },
+  {
+    name: "Lars Sommer",
+    title: "Senior Consultant",
+    email: "ls@nicholaisen.dk",
+    image: "/images/Medarbejder/Lars%20Sommer.jpeg",
+  },
+  {
+    name: "Thomas Biehl",
+    title: "Consultant",
+    email: "tb@nicholaisen.dk",
+    image: "/images/Medarbejder/Thomas%20Biehl.jpeg",
+  },
+];
 
 function ContactRow({
   icon,
