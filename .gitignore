@@ -39,3 +39,6 @@ next-env.d.ts
 
 # pagefind
 public/pagefind
+
+# claude local settings
+.claude/settings.local.json
