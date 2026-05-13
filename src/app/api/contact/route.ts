@@ -48,11 +48,11 @@ export async function POST(request: Request) {
 
   try {
     const resend = new Resend(apiKey);
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from,
       to,
       replyTo: data.email,
-      subject: `Website enquiry — ${data.company}`,
+      subject: `Website enquiry - ${data.company}`,
       text: [
         `Name:     ${data.name}`,
         `Company:  ${data.company}`,
@@ -63,6 +63,14 @@ export async function POST(request: Request) {
         data.message,
       ].join("\n"),
     });
+    if (result.error) {
+      console.error("[contact] resend rejected send", result.error, { from, to });
+      return NextResponse.json(
+        { error: "Could not send right now. Please try again or call us." },
+        { status: 502 },
+      );
+    }
+    console.info("[contact] sent", { id: result.data?.id, to });
   } catch (err) {
     console.error("[contact] send failed", err);
     return NextResponse.json(
