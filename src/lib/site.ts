@@ -8,6 +8,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://nicholaisen.dk",
   email: "info@nicholaisen.dk",
   phone: "+45 8692 4711",
+  phoneService: "+45 8692 4747",
   address: {
     street: "Sønderskovvej 17",
     postal: "8362",
