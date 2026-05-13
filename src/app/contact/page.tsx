@@ -108,22 +108,22 @@ export default function ContactPage() {
 
 const team = [
   {
+    name: "Thomas Biehl",
+    title: "CEO",
+    email: "tb@nicholaisen.dk",
+    image: "/images/Medarbejder/Thomas%20Biehl.jpeg",
+  },
+  {
     name: "Henrik Ibsen",
-    title: "Partner & Senior Consultant",
+    title: "COO",
     email: "hi@nicholaisen.dk",
     image: "/images/Medarbejder/Henrik%20Ibsen.jpg",
   },
   {
     name: "Lars Sommer",
-    title: "Senior Consultant",
+    title: "CFO",
     email: "ls@nicholaisen.dk",
     image: "/images/Medarbejder/Lars%20Sommer.jpeg",
-  },
-  {
-    name: "Thomas Biehl",
-    title: "Consultant",
-    email: "tb@nicholaisen.dk",
-    image: "/images/Medarbejder/Thomas%20Biehl.jpeg",
   },
 ];
 
