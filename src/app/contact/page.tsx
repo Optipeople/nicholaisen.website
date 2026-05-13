@@ -38,6 +38,14 @@ export default function ContactPage() {
                   >
                     {site.phone}
                   </a>
+                  <br />
+                  <span className="text-[var(--color-ink-500)]">Service: </span>
+                  <a
+                    href={`tel:${site.phoneService.replace(/\s+/g, "")}`}
+                    className="hover:text-[var(--color-navy-900)]"
+                  >
+                    {site.phoneService}
+                  </a>
                 </ContactRow>
                 <ContactRow icon={<Mail className="size-4" aria-hidden />} label="Email">
                   <a
