@@ -7,7 +7,7 @@ import { Container } from "@/components/layout/Container";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--color-ink-300)]/30 bg-pink-400/85 backdrop-blur supports-[backdrop-filter]:bg-pink-400/70">
+    <header className="sticky top-0 z-40 border-b border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)]/85 backdrop-blur supports-[backdrop-filter]:bg-[var(--color-cream-50)]/70">
       <Container>
         <div className="flex h-20 items-center justify-between gap-6">
           <Link href="/" className="flex items-center gap-3" aria-label="Nicholaisen — Home">
