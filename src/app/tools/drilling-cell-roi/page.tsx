@@ -19,23 +19,23 @@ export const metadata: Metadata = {
 
 // NichoMachines presentation theme — swap back to original after presentation
 const NM_THEME: React.CSSProperties = {
-  ["--color-navy-950" as string]: "#050505",
+  ["--color-navy-950" as string]: "#da5f06",
   ["--color-navy-900" as string]: "#da5f06",
   ["--color-navy-700" as string]: "#b84f00",
-  ["--color-navy-500" as string]: "#333333",
-  ["--color-slate-500" as string]: "#999999",
+  ["--color-navy-500" as string]: "#e8e8e8",
+  ["--color-slate-500" as string]: "#666666",
   ["--color-tan-500" as string]: "#da5f06",
   ["--color-tan-300" as string]: "#f08040",
-  ["--color-beige-200" as string]: "#2a2a2a",
-  ["--color-cream-50" as string]: "#0a0a0a",
-  ["--color-paper" as string]: "#111111",
-  ["--color-paper-dark" as string]: "#1e1e1e",
-  ["--color-ink-900" as string]: "#ffffff",
-  ["--color-ink-700" as string]: "#e0e0e0",
-  ["--color-ink-500" as string]: "#bbbbbb",
-  ["--color-ink-300" as string]: "#555555",
-  backgroundColor: "#0a0a0a",
-  color: "#e0e0e0",
+  ["--color-beige-200" as string]: "#e8e8e8",
+  ["--color-cream-50" as string]: "#f5f5f5",
+  ["--color-paper" as string]: "#ffffff",
+  ["--color-paper-dark" as string]: "#e8e8e8",
+  ["--color-ink-900" as string]: "#0a0a0a",
+  ["--color-ink-700" as string]: "#2a2a2a",
+  ["--color-ink-500" as string]: "#555555",
+  ["--color-ink-300" as string]: "#999999",
+  backgroundColor: "#f5f5f5",
+  color: "#0a0a0a",
 };
 
 export default function DrillingCellRoiPage() {
@@ -45,7 +45,7 @@ export default function DrillingCellRoiPage() {
         {/* NichoMachines logo — presentation only */}
         <div className="mb-10 flex items-center justify-center">
           <img
-            src="/nichomachines-white.png"
+            src="/nichomachines-black.png"
             alt="NichoMachines"
             className="h-16 w-auto"
           />
