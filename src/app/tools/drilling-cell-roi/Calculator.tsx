@@ -115,16 +115,47 @@ export function DrillingCellRoiCalculator() {
   const firstName = (contact.name.trim().split(/\s+/)[0] || "there").trim();
 
   const displayedSolutions = useMemo(() => {
-    const sorted = [...SOLUTIONS].sort((a, b) => a.investmentEur - b.investmentEur);
-    const picks =
-      sorted.length >= 3
-        ? [sorted[0]!, sorted[Math.floor(sorted.length / 2)]!, sorted[sorted.length - 1]!]
-        : sorted;
-    return picks.map((solution, i) => ({
-      solution,
-      ...(SOLUTION_LABELS[i] ?? SOLUTION_LABELS[SOLUTION_LABELS.length - 1]!),
+    const noAuto = new Set<string>();
+    const withMetrics = SOLUTIONS.map((s) => ({
+      solution: s,
+      m: calcSolution(s, activeProducts, quantities, operators, noAuto),
     }));
-  }, []);
+
+    // Feasible = capacity utilisation ≤ 200 %
+    const feasible = withMetrics.filter((w) => w.m.capacityUtilPct <= 200);
+    const pool = feasible.length > 0 ? feasible : withMetrics;
+
+    // Conservative: cheapest feasible solution
+    const conservative = [...pool].sort(
+      (a, b) => a.solution.investmentEur - b.solution.investmentEur,
+    )[0];
+
+    // Best fit: shortest payback among feasible
+    const bestFit = [...pool].sort((a, b) => {
+      if (!Number.isFinite(a.m.paybackYears)) return 1;
+      if (!Number.isFinite(b.m.paybackYears)) return -1;
+      return a.m.paybackYears - b.m.paybackYears;
+    })[0];
+
+    // Growth: lowest capacity utilisation across all solutions (incl. infeasible)
+    const growth = [...withMetrics].sort(
+      (a, b) => a.m.capacityUtilPct - b.m.capacityUtilPct,
+    )[0];
+
+    // Build deduplicated list preserving label order
+    const seen = new Set<string>();
+    const result: Array<{ solution: SolutionVariant; label: string; badge: string }> = [];
+    ([conservative, bestFit, growth] as const).forEach((item, i) => {
+      if (item && !seen.has(item.solution.name)) {
+        seen.add(item.solution.name);
+        result.push({
+          solution: item.solution,
+          ...(SOLUTION_LABELS[i] ?? SOLUTION_LABELS[SOLUTION_LABELS.length - 1]!),
+        });
+      }
+    });
+    return result;
+  }, [activeProducts, quantities, operators]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
