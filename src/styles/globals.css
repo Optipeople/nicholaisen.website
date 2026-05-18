@@ -146,6 +146,36 @@
   }
 }
 
+/* NichoMachines presentation theme — remove after presentation */
+[data-theme="nm"] {
+  --color-navy-950: #050505;
+  --color-navy-900: #0a0a0a;
+  --color-navy-700: #161616;
+  --color-navy-500: #2a2a2a;
+  --color-slate-500: #888888;
+  --color-tan-500: #da5f06;
+  --color-tan-300: #f08040;
+  --color-beige-200: #2a2a2a;
+  --color-cream-50: #0a0a0a;
+  --color-paper: #111111;
+  --color-paper-dark: #1e1e1e;
+  --color-ink-900: #ffffff;
+  --color-ink-700: #e0e0e0;
+  --color-ink-500: #bbbbbb;
+  --color-ink-300: #666666;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.5);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.4), 0 16px 40px rgb(0 0 0 / 0.6);
+}
+
+[data-theme="nm"] h1,
+[data-theme="nm"] h2,
+[data-theme="nm"] h3,
+[data-theme="nm"] h4,
+[data-theme="nm"] h5,
+[data-theme="nm"] h6 {
+  color: #ffffff;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;

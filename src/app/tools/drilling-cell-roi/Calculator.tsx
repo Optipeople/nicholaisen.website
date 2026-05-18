@@ -20,7 +20,7 @@ const OPERATOR_EUR_PER_HOUR = 35;
 const SHIFT_MINUTES = 440;
 
 const SOLUTION_LABELS = [
-  { label: "Conservative choice",       badge: "bg-[var(--color-paper-dark)] text-[var(--color-navy-900)]" },
+  { label: "Conservative choice",       badge: "bg-[var(--color-paper-dark)] text-[var(--color-ink-900)]" },
   { label: "Best fit for current needs", badge: "bg-[var(--color-tan-500)]/15 text-[var(--color-tan-700,#8a6a2a)]" },
   { label: "Growth ambitions",          badge: "bg-emerald-50 text-emerald-800" },
 ];
@@ -316,7 +316,7 @@ export function DrillingCellRoiCalculator() {
                   onClick={() => toggleProduct(p.id)}
                   aria-pressed={isSel}
                   className={cn(
-                    "group relative flex flex-col gap-3 rounded-lg border bg-white p-4 text-left transition-colors",
+                    "group relative flex flex-col gap-3 rounded-lg border bg-[var(--color-paper)] p-4 text-left transition-colors",
                     isSel
                       ? "border-[var(--color-navy-900)] bg-[var(--color-paper)]"
                       : "border-[var(--color-paper-dark)] hover:border-[var(--color-navy-500)]",
@@ -328,7 +328,7 @@ export function DrillingCellRoiCalculator() {
                       "absolute right-3 top-3 inline-flex size-5 items-center justify-center rounded border-2 transition-colors",
                       isSel
                         ? "border-[var(--color-navy-900)] bg-[var(--color-navy-900)] text-white"
-                        : "border-[var(--color-ink-300)] bg-white text-transparent",
+                        : "border-[var(--color-ink-300)] bg-[var(--color-paper)] text-transparent",
                     )}
                   >
                     <Check className="size-3" />
@@ -342,7 +342,7 @@ export function DrillingCellRoiCalculator() {
                     />
                   </div>
                   <div className="pr-8">
-                    <div className="text-sm font-semibold tracking-wide text-[var(--color-navy-900)]">
+                    <div className="text-sm font-semibold tracking-wide text-[var(--color-ink-900)]">
                       {p.id}
                     </div>
                     {p.name ? (
@@ -370,7 +370,7 @@ export function DrillingCellRoiCalculator() {
           description="Enter daily unit volumes for your selected products and how many operators handle the work today."
         >
           {activeProducts.length === 0 ? (
-            <p className="rounded-md border border-[var(--color-paper-dark)] bg-white p-4 text-sm text-[var(--color-ink-500)]">
+            <p className="rounded-md border border-[var(--color-paper-dark)] bg-[var(--color-paper)] p-4 text-sm text-[var(--color-ink-500)]">
               No products selected. Go back and select at least one.
             </p>
           ) : (
@@ -380,7 +380,7 @@ export function DrillingCellRoiCalculator() {
                 {activeProducts.map((p) => (
                   <li
                     key={p.id}
-                    className="rounded-lg border border-[var(--color-paper-dark)] bg-white p-3"
+                    className="rounded-lg border border-[var(--color-paper-dark)] bg-[var(--color-paper)] p-3"
                   >
                     <div className="flex items-start gap-3">
                       <div className="flex h-14 w-20 shrink-0 items-center justify-center rounded bg-[var(--color-cream-50)] p-1">
@@ -392,7 +392,7 @@ export function DrillingCellRoiCalculator() {
                         />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <div className="text-sm font-semibold text-[var(--color-navy-900)]">
+                        <div className="text-sm font-semibold text-[var(--color-ink-900)]">
                           {p.id}
                         </div>
                         <div className="text-xs text-[var(--color-slate-500)]">
@@ -443,7 +443,7 @@ export function DrillingCellRoiCalculator() {
                             />
                           </div>
                         </td>
-                        <td className="py-3 pr-3 text-sm font-semibold text-[var(--color-navy-900)]">
+                        <td className="py-3 pr-3 text-sm font-semibold text-[var(--color-ink-900)]">
                           {p.id}
                         </td>
                         <td className="py-3 pr-3 text-xs text-[var(--color-slate-500)]">
@@ -480,12 +480,12 @@ export function DrillingCellRoiCalculator() {
             />
           </FieldRow>
 
-          <div className="mt-3 rounded-lg border border-[var(--color-paper-dark)] bg-white px-5 py-4">
+          <div className="mt-3 rounded-lg border border-[var(--color-paper-dark)] bg-[var(--color-paper)] px-5 py-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">
               Annual operator hours
             </p>
             <div className="mt-2 flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-[var(--color-navy-900)]">
+              <span className="text-2xl font-bold text-[var(--color-ink-900)]">
                 {(operators * 1660).toLocaleString("da-DK")}
               </span>
               <span className="text-sm text-[var(--color-slate-500)]">hours / year</span>
@@ -515,22 +515,22 @@ export function DrillingCellRoiCalculator() {
           description="Based on your production data, we have matched three solution proposals. Select the one that fits best."
         >
           {/* Data summary */}
-          <div className="mb-6 rounded-lg border border-[var(--color-paper-dark)] bg-white p-4">
+          <div className="mb-6 rounded-lg border border-[var(--color-paper-dark)] bg-[var(--color-paper)] p-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">Your data</p>
             <div className="mt-3 grid grid-cols-3 gap-3">
               <div>
                 <p className="text-xs text-[var(--color-slate-500)]">Products</p>
-                <p className="text-sm font-semibold text-[var(--color-navy-900)]">{activeProducts.length} selected</p>
+                <p className="text-sm font-semibold text-[var(--color-ink-900)]">{activeProducts.length} selected</p>
               </div>
               <div>
                 <p className="text-xs text-[var(--color-slate-500)]">Units / day</p>
-                <p className="text-sm font-semibold text-[var(--color-navy-900)]">
+                <p className="text-sm font-semibold text-[var(--color-ink-900)]">
                   {activeProducts.reduce((s, p) => s + (quantities[p.id] ?? 0), 0).toLocaleString("en")}
                 </p>
               </div>
               <div>
                 <p className="text-xs text-[var(--color-slate-500)]">Operators today</p>
-                <p className="text-sm font-semibold text-[var(--color-navy-900)]">{operators.toLocaleString("en")}</p>
+                <p className="text-sm font-semibold text-[var(--color-ink-900)]">{operators.toLocaleString("en")}</p>
               </div>
             </div>
           </div>
@@ -558,7 +558,7 @@ export function DrillingCellRoiCalculator() {
                     "relative flex flex-col rounded-xl border-2 p-4 text-left transition-colors",
                     isSel
                       ? "border-[var(--color-navy-900)] bg-[var(--color-paper)]"
-                      : "border-[var(--color-paper-dark)] bg-white hover:border-[var(--color-navy-500)]",
+                      : "border-[var(--color-paper-dark)] bg-[var(--color-paper)] hover:border-[var(--color-navy-500)]",
                   )}
                 >
                   {isSel && (
@@ -573,7 +573,7 @@ export function DrillingCellRoiCalculator() {
                       </span>
                     ))}
                   </div>
-                  <p className="pr-6 text-sm font-semibold leading-snug text-[var(--color-navy-900)]">{solution.name}</p>
+                  <p className="pr-6 text-sm font-semibold leading-snug text-[var(--color-ink-900)]">{solution.name}</p>
                   {solution.description && (
                     <p className="mt-2 text-xs leading-relaxed text-[var(--color-ink-500)]">{solution.description}</p>
                   )}
@@ -595,13 +595,13 @@ export function DrillingCellRoiCalculator() {
           </div>
 
           {/* Automation note */}
-          <div className="mt-4 rounded-lg border border-[var(--color-paper-dark)] bg-white px-5 py-4">
+          <div className="mt-4 rounded-lg border border-[var(--color-paper-dark)] bg-[var(--color-paper)] px-5 py-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">
               Cell Automation Add-on
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink-500)]">
               All solutions above can be extended with automated cell integration — typically delivering a{" "}
-              <span className="font-semibold text-[var(--color-navy-900)]">10–20% improvement in OEE</span>{" "}
+              <span className="font-semibold text-[var(--color-ink-900)]">10–20% improvement in OEE</span>{" "}
               through reduced idle time, automated loading/unloading, and real-time monitoring.
               Our team will include this option in the personalised proposal sent to you.
             </p>
@@ -707,13 +707,13 @@ export function DrillingCellRoiCalculator() {
           description={
             <>
               Your request has been received. A Nicholaisen specialist will contact{" "}
-              <strong className="text-[var(--color-navy-900)]">{contact.email || "you"}</strong>{" "}
+              <strong className="text-[var(--color-ink-900)]">{contact.email || "you"}</strong>{" "}
               to take the conversation further.
             </>
           }
         >
-          <div className="mb-8 rounded-md border border-[var(--color-paper-dark)] border-l-4 border-l-[var(--color-navy-900)] bg-white p-5 text-sm leading-relaxed text-[var(--color-ink-500)]">
-            <strong className="text-[var(--color-navy-900)]">What happens next?</strong>
+          <div className="mb-8 rounded-md border border-[var(--color-paper-dark)] border-l-4 border-l-[var(--color-navy-900)] bg-[var(--color-paper)] p-5 text-sm leading-relaxed text-[var(--color-ink-500)]">
+            <strong className="text-[var(--color-ink-900)]">What happens next?</strong>
             <br />We will review your production data and selected solution, then reach out within 1–2
             business days to discuss your specific case, answer questions, and prepare a
             priced proposal matched to your actual requirements.
@@ -750,7 +750,7 @@ function StepShell({
   return (
     <div className="animate-[fadeUp_.35s_ease_forwards]">
       <p className="text-eyebrow text-[var(--color-tan-500)]">{eyebrow}</p>
-      <h2 className="mt-3 text-display-3 text-balance text-[var(--color-navy-900)]">{title}</h2>
+      <h2 className="mt-3 text-display-3 text-balance text-[var(--color-ink-900)]">{title}</h2>
       <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--color-ink-500)]">
         {description}
       </p>
@@ -761,9 +761,9 @@ function StepShell({
 
 function IntroCard({ phase, title, desc }: { phase: string; title: string; desc: string }) {
   return (
-    <div className="rounded-lg border border-[var(--color-paper-dark)] bg-white p-5">
+    <div className="rounded-lg border border-[var(--color-paper-dark)] bg-[var(--color-paper)] p-5">
       <p className="text-eyebrow text-[var(--color-tan-500)]">{phase}</p>
-      <p className="mt-2 font-semibold text-[var(--color-navy-900)]">{title}</p>
+      <p className="mt-2 font-semibold text-[var(--color-ink-900)]">{title}</p>
       <p className="mt-1 text-sm leading-relaxed text-[var(--color-ink-500)]">{desc}</p>
     </div>
   );
@@ -781,9 +781,9 @@ function FieldRow({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-[var(--color-paper-dark)] bg-white p-5 focus-within:border-[var(--color-navy-900)]">
+    <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-[var(--color-paper-dark)] bg-[var(--color-paper)] p-5 focus-within:border-[var(--color-navy-900)]">
       <div className="min-w-0 flex-1">
-        <div className="text-sm font-semibold text-[var(--color-navy-900)]">{label}</div>
+        <div className="text-sm font-semibold text-[var(--color-ink-900)]">{label}</div>
         {hint ? <div className="mt-0.5 text-xs text-[var(--color-slate-500)]">{hint}</div> : null}
       </div>
       <div className="flex items-center gap-2">
@@ -821,7 +821,7 @@ function TextField({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="text-sm font-semibold text-[var(--color-navy-900)]">
+      <label htmlFor={id} className="text-sm font-semibold text-[var(--color-ink-900)]">
         {label}
         {required ? <span className="ml-1 text-[var(--color-tan-500)]">*</span> : null}
       </label>
@@ -834,7 +834,7 @@ function TextField({
         placeholder={placeholder}
         aria-invalid={invalid || undefined}
         className={cn(
-          "w-full rounded-md border bg-white px-3.5 py-2.5 text-[0.95rem] outline-none transition-colors",
+          "w-full rounded-md border bg-[var(--color-paper)] px-3.5 py-2.5 text-[0.95rem] outline-none transition-colors",
           "focus:border-[var(--color-navy-900)] focus:ring-2 focus:ring-[var(--color-navy-900)]/15",
           invalid
             ? "border-[#b3261e]"
@@ -876,7 +876,7 @@ function NumberInput({
         onChange(Number.isFinite(n) ? n : 0);
       }}
       className={cn(
-        "rounded-md border border-[var(--color-paper-dark)] bg-white px-3 py-2 text-right text-[0.95rem] font-medium text-[var(--color-ink-900)] outline-none transition-colors",
+        "rounded-md border border-[var(--color-paper-dark)] bg-[var(--color-paper)] px-3 py-2 text-right text-[0.95rem] font-medium text-[var(--color-ink-900)] outline-none transition-colors",
         "focus:border-[var(--color-navy-900)] focus:ring-2 focus:ring-[var(--color-navy-900)]/15",
         className,
       )}
@@ -910,7 +910,7 @@ function SecondaryButton({
     <button
       {...props}
       className={cn(
-        "inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[var(--color-navy-900)]/20 bg-transparent px-5 text-[0.95rem] font-medium text-[var(--color-navy-900)] transition-colors",
+        "inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[var(--color-navy-900)]/20 bg-transparent px-5 text-[0.95rem] font-medium text-[var(--color-ink-900)] transition-colors",
         "hover:border-[var(--color-navy-900)]/60 disabled:opacity-50 disabled:pointer-events-none",
         props.className,
       )}
@@ -930,7 +930,7 @@ function SmallButton({
       {...props}
       className={cn(
         "inline-flex items-center rounded border border-[var(--color-paper-dark)] bg-transparent px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)] transition-colors",
-        "hover:border-[var(--color-navy-900)] hover:text-[var(--color-navy-900)]",
+        "hover:border-[var(--color-navy-900)] hover:text-[var(--color-ink-900)]",
         props.className,
       )}
     >
@@ -943,7 +943,7 @@ function SolutionMetric({ label, value, highlight }: { label: string; value: str
   return (
     <div className="flex items-baseline justify-between gap-2">
       <span className="text-xs text-[var(--color-slate-500)]">{label}</span>
-      <span className={cn("text-sm font-semibold", highlight ? "text-[var(--color-navy-900)]" : "text-[var(--color-ink-700)]")}>
+      <span className={cn("text-sm font-semibold", highlight ? "text-[var(--color-ink-900)]" : "text-[var(--color-ink-700)]")}>
         {value}
       </span>
     </div>
