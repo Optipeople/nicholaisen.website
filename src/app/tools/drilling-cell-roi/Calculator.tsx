@@ -316,10 +316,10 @@ export function DrillingCellRoiCalculator() {
                   onClick={() => toggleProduct(p.id)}
                   aria-pressed={isSel}
                   className={cn(
-                    "group relative flex flex-col gap-3 rounded-lg border bg-[var(--color-paper)] p-4 text-left transition-colors",
+                    "group relative flex flex-col gap-3 rounded-lg border bg-white p-4 text-left transition-colors",
                     isSel
-                      ? "border-[var(--color-navy-900)] bg-[var(--color-paper)]"
-                      : "border-[var(--color-paper-dark)] hover:border-[var(--color-navy-500)]",
+                      ? "border-[var(--color-navy-900)] bg-white"
+                      : "border-gray-200 hover:border-[var(--color-navy-900)]/50",
                   )}
                 >
                   <span
@@ -328,12 +328,12 @@ export function DrillingCellRoiCalculator() {
                       "absolute right-3 top-3 inline-flex size-5 items-center justify-center rounded border-2 transition-colors",
                       isSel
                         ? "border-[var(--color-navy-900)] bg-[var(--color-navy-900)] text-white"
-                        : "border-[var(--color-ink-300)] bg-[var(--color-paper)] text-transparent",
+                        : "border-gray-300 bg-white text-transparent",
                     )}
                   >
                     <Check className="size-3" />
                   </span>
-                  <div className="flex h-28 items-center justify-center rounded-md bg-[var(--color-cream-50)] p-3">
+                  <div className="flex h-28 items-center justify-center rounded-md bg-gray-50 p-3">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.image}
@@ -342,11 +342,11 @@ export function DrillingCellRoiCalculator() {
                     />
                   </div>
                   <div className="pr-8">
-                    <div className="text-sm font-semibold tracking-wide text-[var(--color-ink-900)]">
+                    <div className="text-sm font-semibold tracking-wide text-gray-900">
                       {p.id}
                     </div>
                     {p.name ? (
-                      <div className="text-sm text-[var(--color-ink-500)]">{p.name}</div>
+                      <div className="text-sm text-gray-500">{p.name}</div>
                     ) : null}
                   </div>
                 </button>
