@@ -547,40 +547,22 @@ export function DrillingCellRoiCalculator() {
                     />
                   </div>
 
-                  {/* Automation options */}
-                  {(solution.automationOptions ?? []).length > 0 && (
-                    <div
-                      className="mt-4 grid gap-2 border-t border-[var(--color-paper-dark)] pt-3"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">
-                        Automation add-ons
-                      </p>
-                      {(solution.automationOptions ?? []).map((opt) => (
-                        <label key={opt.name} className="flex cursor-pointer items-start gap-2">
-                          <input
-                            type="checkbox"
-                            checked={selAuto.has(opt.name)}
-                            onChange={(e) => toggleAuto(opt.name, e.target.checked)}
-                            className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--color-navy-900)]"
-                          />
-                          <span className="text-xs text-[var(--color-ink-500)]">
-                            <span className="font-semibold text-[var(--color-navy-900)]">{opt.name}</span>
-                            <span className="ml-1 text-[var(--color-slate-500)]">
-                              +€ {opt.priceEur.toLocaleString("en")}
-                            </span>
-                            <span className="block text-[var(--color-slate-500)]">
-                              +{opt.oeeBoostPct}% OEE
-                              {opt.operatorReduction > 0 && ` · −${opt.operatorReduction} operator`}
-                            </span>
-                          </span>
-                        </label>
-                      ))}
-                    </div>
-                  )}
                 </button>
               );
             })}
+          </div>
+
+          {/* Automation note */}
+          <div className="mt-4 rounded-lg border border-[var(--color-paper-dark)] bg-white px-5 py-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">
+              Cell Automation Add-on
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink-500)]">
+              All solutions above can be extended with automated cell integration — typically delivering a{" "}
+              <span className="font-semibold text-[var(--color-navy-900)]">10–20% improvement in OEE</span>{" "}
+              through reduced idle time, automated loading/unloading, and real-time monitoring.
+              Our team will include this option in the personalised proposal sent to you.
+            </p>
           </div>
 
           <NavRow onBack={() => goTo(2)} onNext={() => goTo(4)} />
