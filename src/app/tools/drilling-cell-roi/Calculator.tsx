@@ -20,9 +20,9 @@ const OPERATOR_EUR_PER_HOUR = 35;
 const AUTO_OEE_BOOST_PCT = 15;
 
 const SOLUTION_LABELS = [
-  { label: "Konservativt valg",               badge: "bg-[var(--color-paper-dark)] text-[var(--color-navy-900)]" },
-  { label: "Bedst egnet til nuværende behov", badge: "bg-[var(--color-tan-500)]/15 text-[var(--color-tan-700,#8a6a2a)]" },
-  { label: "Vækstambitioner",                 badge: "bg-emerald-50 text-emerald-800" },
+  { label: "Conservative choice",       badge: "bg-[var(--color-paper-dark)] text-[var(--color-navy-900)]" },
+  { label: "Best fit for current needs", badge: "bg-[var(--color-tan-500)]/15 text-[var(--color-tan-700,#8a6a2a)]" },
+  { label: "Growth ambitions",          badge: "bg-emerald-50 text-emerald-800" },
 ];
 
 function calcSolution(
