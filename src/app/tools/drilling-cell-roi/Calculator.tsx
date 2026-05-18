@@ -133,22 +133,29 @@ export function DrillingCellRoiCalculator() {
     });
     const byUtil = [...withMetrics].sort((a, b) => a.m.capacityUtilPct - b.m.capacityUtilPct);
 
-    // Each criterion picks the best not-yet-shown solution — guarantees 3 distinct cards
-    const seen = new Set<string>();
-    const result: Array<{ solution: SolutionVariant; label: string; badge: string }> = [];
-    const pickFirst = (sorted: typeof withMetrics, i: number) => {
-      const item = sorted.find((w) => !seen.has(w.solution.name));
-      if (item) {
-        seen.add(item.solution.name);
-        result.push({
-          solution: item.solution,
-          ...(SOLUTION_LABELS[i] ?? SOLUTION_LABELS[SOLUTION_LABELS.length - 1]!),
-        });
-      }
+    const conservative = byInvestment[0];
+    const bestFit = byPayback[0];
+    const growth = byUtil[0];
+
+    // Accumulate all earned labels per solution name
+    const labelMap = new Map<string, Array<{ label: string; badge: string }>>();
+    const earn = (item: (typeof withMetrics)[number] | undefined, i: number) => {
+      if (!item) return;
+      if (!labelMap.has(item.solution.name)) labelMap.set(item.solution.name, []);
+      labelMap.get(item.solution.name)!.push(SOLUTION_LABELS[i]!);
     };
-    pickFirst(byInvestment, 0); // Conservative
-    pickFirst(byPayback, 1);    // Best fit
-    pickFirst(byUtil, 2);       // Growth
+    earn(conservative, 0);
+    earn(bestFit, 1);
+    earn(growth, 2);
+
+    // Return unique solutions in order of first earned label
+    const seen = new Set<string>();
+    const result: Array<{ solution: SolutionVariant; labels: Array<{ label: string; badge: string }> }> = [];
+    [conservative, bestFit, growth].forEach((item) => {
+      if (!item || seen.has(item.solution.name)) return;
+      seen.add(item.solution.name);
+      result.push({ solution: item.solution, labels: labelMap.get(item.solution.name) ?? [] });
+    });
     return result;
   }, [activeProducts, quantities, operators]);
 
@@ -530,7 +537,7 @@ export function DrillingCellRoiCalculator() {
 
           {/* Solution cards */}
           <div className="grid gap-4 sm:grid-cols-3">
-            {displayedSolutions.map(({ solution, label, badge }) => {
+            {displayedSolutions.map(({ solution, labels }) => {
               const isSel = selectedSolutionName === solution.name;
               const selAuto = automationSelected[solution.name] ?? new Set<string>();
               const m = calcSolution(solution, activeProducts, quantities, operators, selAuto);
@@ -559,9 +566,13 @@ export function DrillingCellRoiCalculator() {
                       <Check className="size-3" />
                     </span>
                   )}
-                  <span className={cn("mb-3 inline-block rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider", badge)}>
-                    {label}
-                  </span>
+                  <div className="mb-3 flex flex-wrap gap-1">
+                    {labels.map(({ label, badge }) => (
+                      <span key={label} className={cn("inline-block rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider", badge)}>
+                        {label}
+                      </span>
+                    ))}
+                  </div>
                   <p className="pr-6 text-sm font-semibold leading-snug text-[var(--color-navy-900)]">{solution.name}</p>
                   {solution.description && (
                     <p className="mt-2 text-xs leading-relaxed text-[var(--color-ink-500)]">{solution.description}</p>
