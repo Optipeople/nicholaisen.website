@@ -17,7 +17,6 @@ const INPUT_STEPS = 5; // 0..4 inclusive
 
 const WORKING_DAYS = 220;
 const OPERATOR_EUR_PER_HOUR = 35;
-const AUTO_OEE_BOOST_PCT = 15;
 
 const SOLUTION_LABELS = [
   { label: "Conservative choice",       badge: "bg-[var(--color-paper-dark)] text-[var(--color-navy-900)]" },
@@ -30,22 +29,27 @@ function calcSolution(
   products: DrillingProduct[],
   quantities: Record<string, number>,
   operators: number,
-  withAutomation: boolean,
+  selectedAutoNames: Set<string>,
 ) {
-  const oee = withAutomation
-    ? Math.min(100, s.oeePercent * (1 + AUTO_OEE_BOOST_PCT / 100))
-    : s.oeePercent;
+  const selectedOptions = (s.automationOptions ?? []).filter((o) => selectedAutoNames.has(o.name));
+  const oeeBoost = selectedOptions.reduce((sum, o) => sum + o.oeeBoostPct, 0);
+  const operatorReduction = selectedOptions.reduce((sum, o) => sum + o.operatorReduction, 0);
+  const automationPrice = selectedOptions.reduce((sum, o) => sum + o.priceEur, 0);
+
+  const oee = Math.min(100, s.oeePercent + oeeBoost);
+  const effectiveOperators = Math.max(0, s.operators - operatorReduction);
+  const totalInvestment = s.investmentEur + automationPrice;
 
   const dailyMachineHours = products.reduce((sum, p) => {
     return sum + ((quantities[p.id] ?? 0) * (s.processingTimeSec[p.id] ?? 0)) / 3600;
   }, 0) / (oee / 100);
 
   const annualMachineHours = dailyMachineHours * WORKING_DAYS;
-  const operatorsFreed = Math.max(0, operators - s.operators);
+  const operatorsFreed = Math.max(0, operators - effectiveOperators);
   const annualSavingsEur = operatorsFreed * 1660 * OPERATOR_EUR_PER_HOUR;
-  const paybackYears = annualSavingsEur > 0 ? s.investmentEur / annualSavingsEur : Infinity;
+  const paybackYears = annualSavingsEur > 0 ? totalInvestment / annualSavingsEur : Infinity;
 
-  return { oee, annualMachineHours, operatorsFreed, annualSavingsEur, paybackYears };
+  return { oee, effectiveOperators, totalInvestment, annualMachineHours, operatorsFreed, annualSavingsEur, paybackYears };
 }
 
 type Contact = { name: string; email: string; job: string; company: string };
@@ -70,6 +74,7 @@ export function DrillingCellRoiCalculator() {
   const [formError, setFormError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [selectedSolutionName, setSelectedSolutionName] = useState<string | null>(null);
+  const [automationSelected, setAutomationSelected] = useState<Record<string, Set<string>>>({});
 
   const topRef = useRef<HTMLDivElement>(null);
 
@@ -147,7 +152,12 @@ export function DrillingCellRoiCalculator() {
         unitsPerDay: quantities[p.id] ?? 0,
       })),
       operators,
-      selectedSolution: selectedSolutionName ?? null,
+      selectedSolution: selectedSolutionName
+        ? {
+            name: selectedSolutionName,
+            automationOptions: [...(automationSelected[selectedSolutionName] ?? [])],
+          }
+        : null,
       website,
     };
 
@@ -179,6 +189,7 @@ export function DrillingCellRoiCalculator() {
     setErrors({});
     setFormError(null);
     setSelectedSolutionName(null);
+    setAutomationSelected({});
   };
 
   const progressPct =
@@ -492,7 +503,16 @@ export function DrillingCellRoiCalculator() {
           <div className="grid gap-4 sm:grid-cols-3">
             {displayedSolutions.map(({ solution, label, badge }) => {
               const isSel = selectedSolutionName === solution.name;
-              const m = calcSolution(solution, activeProducts, quantities, operators, false);
+              const selAuto = automationSelected[solution.name] ?? new Set<string>();
+              const m = calcSolution(solution, activeProducts, quantities, operators, selAuto);
+              const toggleAuto = (optName: string, checked: boolean) => {
+                setAutomationSelected((prev) => {
+                  const next = new Set(prev[solution.name] ?? []);
+                  if (checked) next.add(optName);
+                  else next.delete(optName);
+                  return { ...prev, [solution.name]: next };
+                });
+              };
               return (
                 <button
                   key={solution.name}
@@ -514,32 +534,53 @@ export function DrillingCellRoiCalculator() {
                     {label}
                   </span>
                   <p className="pr-6 text-sm font-semibold leading-snug text-[var(--color-navy-900)]">{solution.name}</p>
+
+                  {/* Core metrics */}
                   <div className="mt-4 grid gap-2 text-sm">
                     <SolutionMetric label="Utilisation rate" value={`${m.oee.toFixed(0)} %`} highlight />
-                    <SolutionMetric label="Operators" value={`${solution.operators} (from ${operators})`} />
-                    <SolutionMetric label="Investment" value={`€ ${solution.investmentEur.toLocaleString("en")}`} />
+                    <SolutionMetric label="Operators" value={`${m.effectiveOperators} (from ${operators})`} />
+                    <SolutionMetric label="Investment" value={`€ ${m.totalInvestment.toLocaleString("en")}`} />
                     <SolutionMetric
                       label="Payback period"
                       value={Number.isFinite(m.paybackYears) ? `~ ${m.paybackYears.toFixed(1)} yrs` : "Contact us"}
                       highlight
                     />
                   </div>
+
+                  {/* Automation options */}
+                  {(solution.automationOptions ?? []).length > 0 && (
+                    <div
+                      className="mt-4 grid gap-2 border-t border-[var(--color-paper-dark)] pt-3"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">
+                        Automation add-ons
+                      </p>
+                      {(solution.automationOptions ?? []).map((opt) => (
+                        <label key={opt.name} className="flex cursor-pointer items-start gap-2">
+                          <input
+                            type="checkbox"
+                            checked={selAuto.has(opt.name)}
+                            onChange={(e) => toggleAuto(opt.name, e.target.checked)}
+                            className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--color-navy-900)]"
+                          />
+                          <span className="text-xs text-[var(--color-ink-500)]">
+                            <span className="font-semibold text-[var(--color-navy-900)]">{opt.name}</span>
+                            <span className="ml-1 text-[var(--color-slate-500)]">
+                              +€ {opt.priceEur.toLocaleString("en")}
+                            </span>
+                            <span className="block text-[var(--color-slate-500)]">
+                              +{opt.oeeBoostPct}% OEE
+                              {opt.operatorReduction > 0 && ` · −${opt.operatorReduction} operator`}
+                            </span>
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
                 </button>
               );
             })}
-          </div>
-
-          {/* Automation note */}
-          <div className="mt-4 rounded-lg border border-[var(--color-paper-dark)] bg-white px-5 py-4">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">
-              Cell Automation Add-on
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink-500)]">
-              All solutions above can be extended with automated cell integration — typically delivering a{" "}
-              <span className="font-semibold text-[var(--color-navy-900)]">10–20% improvement in OEE</span>{" "}
-              through reduced idle time, automated loading/unloading, and real-time monitoring.
-              Our team will include this option in the personalised proposal sent to you.
-            </p>
           </div>
 
           <NavRow onBack={() => goTo(2)} onNext={() => goTo(4)} />

@@ -4,7 +4,23 @@
  * Add one entry per løsningsforslag i SOLUTIONS-arrayet.
  * Hvert produkt-id matcher id-feltet i products.ts.
  * processingTimeSec: maskintid i sekunder pr. emne (0 = produktet bearbejdes ikke i denne løsning).
+ *
+ * automationOptions: valgfrie tilkøb der forbedrer OEE og/eller reducerer operatørbehov.
+ * Hvert option summeres til investering og OEE, når kunden vælger det i trin 3.
  */
+
+export type AutomationOption = {
+  /** Kort navn vist i UI */
+  name: string;
+  /** Beskrivelse vist under navnet */
+  description: string;
+  /** Merpris i EUR */
+  priceEur: number;
+  /** OEE-forbedring i procentpoint (f.eks. 8 = +8 pp) */
+  oeeBoostPct: number;
+  /** Reduktion i antal operatører (f.eks. 0.5 = halvt årsværk) */
+  operatorReduction: number;
+};
 
 export type SolutionVariant = {
   /** Løsningens navn, f.eks. "Drilling Cell Standard" */
@@ -16,11 +32,14 @@ export type SolutionVariant = {
   /** Antal operatører nødvendigt for at køre maskinen */
   operators: number;
 
-  /** Investeringspris i EUR */
+  /** Investeringspris i EUR (ekskl. automatisering) */
   investmentEur: number;
 
   /** Maskintid i sekunder pr. emne for hvert produkt-id */
   processingTimeSec: Record<string, number>;
+
+  /** Valgfrie automatiseringstilkøb */
+  automationOptions?: AutomationOption[];
 };
 
 export const SOLUTIONS: SolutionVariant[] = [
@@ -40,6 +59,56 @@ export const SOLUTIONS: SolutionVariant[] = [
       "Drawer Front":            35,
       "Cabinet Side":            50,
     },
+    automationOptions: [
+      {
+        name: "Automatic Loading / Unloading",
+        description: "Conveyor-based panel feed and discharge — eliminates manual handling between operations.",
+        priceEur: 25_000,
+        oeeBoostPct: 10,
+        operatorReduction: 0.5,
+      },
+      {
+        name: "Real-time Production Monitoring",
+        description: "OPC-UA integration with live dashboard for cycle times, downtime, and throughput.",
+        priceEur: 8_000,
+        oeeBoostPct: 5,
+        operatorReduction: 0,
+      },
+    ],
+  },
+
+  {
+    name: "Single Machine - Double Side Drilling",
+    oeePercent: 60,
+    operators: 1,
+    investmentEur: 150_000,
+    processingTimeSec: {
+      "Special Milling Panel":   35,
+      "Sliding Door":            45,
+      "Hinge Door":              42,
+      "Fixed Shelf":             23,
+      "Tall Cabinet Side":       68,
+      "Middle Base w/ Groove":   30,
+      "Plinth Front":            20,
+      "Drawer Front":            27,
+      "Cabinet Side":            38,
+    },
+    automationOptions: [
+      {
+        name: "Automatic Loading / Unloading",
+        description: "Conveyor-based panel feed and discharge — eliminates manual handling between operations.",
+        priceEur: 25_000,
+        oeeBoostPct: 10,
+        operatorReduction: 0.5,
+      },
+      {
+        name: "Real-time Production Monitoring",
+        description: "OPC-UA integration with live dashboard for cycle times, downtime, and throughput.",
+        priceEur: 8_000,
+        oeeBoostPct: 5,
+        operatorReduction: 0,
+      },
+    ],
   },
 
   {
@@ -58,25 +127,23 @@ export const SOLUTIONS: SolutionVariant[] = [
       "Drawer Front":            18,
       "Cabinet Side":            25,
     },
+    automationOptions: [
+      {
+        name: "Automatic Loading / Unloading",
+        description: "Conveyor-based panel feed and discharge — eliminates manual handling between operations.",
+        priceEur: 35_000,
+        oeeBoostPct: 10,
+        operatorReduction: 1,
+      },
+      {
+        name: "Real-time Production Monitoring",
+        description: "OPC-UA integration with live dashboard for cycle times, downtime, and throughput.",
+        priceEur: 8_000,
+        oeeBoostPct: 5,
+        operatorReduction: 0,
+      },
+    ],
   },
-
-   {
-     name: "Single Machine - Double Side Drilling",
-     oeePercent: 60,
-     operators: 1,
-     investmentEur: 150_000,
-     processingTimeSec: {
-       "Special Milling Panel":   35,
-       "Sliding Door":            45,
-       "Hinge Door":              42,
-       "Fixed Shelf":             23,
-       "Tall Cabinet Side":       68,
-       "Middle Base w/ Groove":   30,
-       "Plinth Front":            20,
-       "Drawer Front":            27,
-       "Cabinet Side":            38,
-     },
-   },
 
   // {
   //   name: "",
@@ -94,5 +161,6 @@ export const SOLUTIONS: SolutionVariant[] = [
   //     "Drawer Front":            0,
   //     "Cabinet Side":            0,
   //   },
+  //   automationOptions: [],
   // },
 ];
