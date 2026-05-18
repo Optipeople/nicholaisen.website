@@ -575,13 +575,13 @@ export function DrillingCellRoiCalculator() {
       {/* STEP 4 — Contact */}
       {step === 4 && (
         <StepShell
-          eyebrow="Step 4 of 4 — Your Details"
+          eyebrow="Step 4 of 4 — Get in Touch"
           title={
             <>
-              Where should we send your <em className="not-italic text-[var(--color-tan-500)]">results?</em>
+              Let&apos;s turn this into a <em className="not-italic text-[var(--color-tan-500)]">real proposal</em>
             </>
           }
-          description="Almost done. Enter your details and our team will calculate your personalised ROI and send it to your inbox."
+          description="Share your details and a Nicholaisen specialist will reach out to walk you through the right solution, clarify the investment, and prepare a priced offer tailored to your production."
         >
           <form onSubmit={handleSubmit} noValidate className="grid gap-4">
             <TextField
@@ -648,7 +648,7 @@ export function DrillingCellRoiCalculator() {
                 <ArrowLeft className="size-4" aria-hidden /> Back
               </SecondaryButton>
               <PrimaryButton type="submit" disabled={submitting}>
-                {submitting ? "Sending…" : "Submit"}
+                {submitting ? "Sending…" : "Request proposal"}
                 {!submitting && <ArrowRight className="size-4" aria-hidden />}
               </PrimaryButton>
             </div>
@@ -667,18 +667,17 @@ export function DrillingCellRoiCalculator() {
           }
           description={
             <>
-              We&apos;ve received your details. Our team will prepare your personalised ROI
-              calculation based on your production data and send it to{" "}
-              <strong className="text-[var(--color-navy-900)]">{contact.email || "your email"}</strong>{" "}
-              shortly.
+              Your request has been received. A Nicholaisen specialist will contact{" "}
+              <strong className="text-[var(--color-navy-900)]">{contact.email || "you"}</strong>{" "}
+              to take the conversation further.
             </>
           }
         >
           <div className="mb-8 rounded-md border border-[var(--color-paper-dark)] border-l-4 border-l-[var(--color-navy-900)] bg-white p-5 text-sm leading-relaxed text-[var(--color-ink-500)]">
             <strong className="text-[var(--color-navy-900)]">What happens next?</strong>
-            <br />A Nicholaisen specialist will review your submission and reach out within 1–2
-            business days with a tailored breakdown of your potential savings, payback period, and
-            recommended Drilling Cell configuration.
+            <br />We will review your production data and selected solution, then reach out within 1–2
+            business days to discuss your specific case, answer questions, and prepare a
+            priced proposal matched to your actual requirements.
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <PrimaryButton

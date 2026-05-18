@@ -48,10 +48,10 @@ export type SolutionVariant = {
 export const SOLUTIONS: SolutionVariant[] = [
   {
     name: "Single Machine - Single Side Drilling",
-    description: "A single CNC drilling unit processing one face at a time. A proven entry point that reduces manual drilling with a low capital commitment and a straightforward installation.",
+    description: "A single machine with one drilling unita and manual in/outfeed.",
     oeePercent: 60,
     operators: 1,
-    investmentEur: 110_000,
+    investmentEur: 68_000,
     processingTimeSec: {
       "Special Milling Panel":   45,
       "Sliding Door":            60,
@@ -83,10 +83,10 @@ export const SOLUTIONS: SolutionVariant[] = [
 
   {
     name: "Single Machine - Double Side Drilling",
-    description: "One machine equipped to drill both faces in a single pass. Cuts cycle time significantly compared to single-side processing while keeping the footprint and operator count lean.",
+    description: "One machine with double drilling units for increased capacity. Comes with manual in/outfeed",
     oeePercent: 60,
     operators: 1,
-    investmentEur: 150_000,
+    investmentEur: 98_000,
     processingTimeSec: {
       "Special Milling Panel":   35,
       "Sliding Door":            45,
@@ -118,10 +118,10 @@ export const SOLUTIONS: SolutionVariant[] = [
 
   {
     name: "Double Machine - Double Side Drilling",
-    description: "Two parallel double-side drilling units running simultaneously. Maximises throughput for high-volume lines and provides built-in redundancy — production continues if one machine goes offline.",
+    description: "Two parallel double-side drilling units running simultaneously. Manual In/outfeed.",
     oeePercent: 60,
     operators: 2,
-    investmentEur: 220_000,
+    investmentEur: 140_000,
     processingTimeSec: {
       "Special Milling Panel":   23,
       "Sliding Door":            30,
@@ -151,22 +151,23 @@ export const SOLUTIONS: SolutionVariant[] = [
     ],
   },
 
-  // {
-  //   name: "",
-  //   oeePercent: 0,
-  //   operators: 1,
-  //   investmentEur: 0,
-  //   processingTimeSec: {
-  //     "Special Milling Panel":   0,
-  //     "Sliding Door":            0,
-  //     "Hinge Door":              0,
-  //     "Fixed Shelf":             0,
-  //     "Tall Cabinet Side":       0,
-  //     "Middle Base w/ Groove":   0,
-  //     "Plinth Front":            0,
-  //     "Drawer Front":            0,
-  //     "Cabinet Side":            0,
-  //   },
-  //   automationOptions: [],
-  // },
+   {
+     name: "Double Machine - Double Side Drilling, Full Automation",
+     description: "Two parallel double-side drilling units running simultaneously. With full automized return transportation and robot in/outfeed",
+     oeePercent: 80,
+     operators: 1,
+     investmentEur: 220_000,
+     processingTimeSec: {
+       "Special Milling Panel":   23,
+       "Sliding Door":            30,
+       "Hinge Door":              28,
+       "Fixed Shelf":             15,
+       "Tall Cabinet Side":       45,
+       "Middle Base w/ Groove":   20,
+       "Plinth Front":            13,
+       "Drawer Front":            18,
+       "Cabinet Side":            25,
+     },
+     automationOptions: [],
+   },
 ];
