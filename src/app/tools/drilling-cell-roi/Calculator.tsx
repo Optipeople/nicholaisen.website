@@ -20,9 +20,7 @@ const emailOk = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
 
 export function DrillingCellRoiCalculator() {
   const [step, setStep] = useState<Step>(0);
-  const [selected, setSelected] = useState<Set<string>>(
-    () => new Set(PRODUCTS.map((p) => p.id)),
-  );
+  const [selected, setSelected] = useState<Set<string>>(() => new Set());
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const [operators, setOperators] = useState<number>(2);
   const [investment, setInvestment] = useState<number>(110_000);
