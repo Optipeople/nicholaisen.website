@@ -254,9 +254,9 @@ export function DrillingCellRoiCalculator() {
                     <div className="text-sm font-semibold tracking-wide text-[var(--color-navy-900)]">
                       {p.id}
                     </div>
-                    <div className="text-sm text-[var(--color-ink-500)]">
-                      {p.name || "Panel"}
-                    </div>
+                    {p.name ? (
+                      <div className="text-sm text-[var(--color-ink-500)]">{p.name}</div>
+                    ) : null}
                   </div>
                 </button>
               );
@@ -304,9 +304,6 @@ export function DrillingCellRoiCalculator() {
                         <div className="text-sm font-semibold text-[var(--color-navy-900)]">
                           {p.id}
                         </div>
-                        <div className="truncate text-sm text-[var(--color-ink-700)]">
-                          {p.name || "—"}
-                        </div>
                         <div className="text-xs text-[var(--color-slate-500)]">
                           {p.size}
                         </div>
@@ -337,8 +334,7 @@ export function DrillingCellRoiCalculator() {
                   <thead>
                     <tr className="border-b-2 border-[var(--color-navy-900)] text-left">
                       <th className="w-[110px] pb-3" />
-                      <th className="pb-3 text-eyebrow">Product ID</th>
-                      <th className="pb-3 text-eyebrow">Product Name</th>
+                      <th className="pb-3 text-eyebrow">Product</th>
                       <th className="pb-3 text-eyebrow">Size</th>
                       <th className="pb-3 text-right text-eyebrow">Units / day</th>
                     </tr>
@@ -358,9 +354,6 @@ export function DrillingCellRoiCalculator() {
                         </td>
                         <td className="py-3 pr-3 text-sm font-semibold text-[var(--color-navy-900)]">
                           {p.id}
-                        </td>
-                        <td className="py-3 pr-3 text-sm text-[var(--color-ink-700)]">
-                          {p.name || "—"}
                         </td>
                         <td className="py-3 pr-3 text-xs text-[var(--color-slate-500)]">
                           {p.size}
