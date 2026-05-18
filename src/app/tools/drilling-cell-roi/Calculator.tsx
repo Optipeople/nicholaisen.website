@@ -69,7 +69,6 @@ export function DrillingCellRoiCalculator() {
   );
   const [formError, setFormError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
-  const [automationEnabled, setAutomationEnabled] = useState<Record<string, boolean>>({});
   const [selectedSolutionName, setSelectedSolutionName] = useState<string | null>(null);
 
   const topRef = useRef<HTMLDivElement>(null);
@@ -148,12 +147,7 @@ export function DrillingCellRoiCalculator() {
         unitsPerDay: quantities[p.id] ?? 0,
       })),
       operators,
-      selectedSolution: selectedSolutionName
-        ? {
-            name: selectedSolutionName,
-            withAutomation: automationEnabled[selectedSolutionName] ?? false,
-          }
-        : null,
+      selectedSolution: selectedSolutionName ?? null,
       website,
     };
 
@@ -184,7 +178,6 @@ export function DrillingCellRoiCalculator() {
     setContact({ name: "", email: "", job: "", company: "" });
     setErrors({});
     setFormError(null);
-    setAutomationEnabled({});
     setSelectedSolutionName(null);
   };
 
@@ -466,31 +459,31 @@ export function DrillingCellRoiCalculator() {
       {/* STEP 3 — Solutions */}
       {step === 3 && (
         <StepShell
-          eyebrow="Step 3 of 4 — Løsningsforslag"
+          eyebrow="Step 3 of 4 — Solution Proposals"
           title={
             <>
-              Vælg den <em className="not-italic text-[var(--color-tan-500)]">løsning der passer</em>
+              Choose the <em className="not-italic text-[var(--color-tan-500)]">right solution</em>
             </>
           }
-          description="Baseret på dine produktionsdata har vi sammensat tre løsningsforslag. Vælg det der matcher bedst."
+          description="Based on your production data, we have matched three solution proposals. Select the one that fits best."
         >
           {/* Data summary */}
           <div className="mb-6 rounded-lg border border-[var(--color-paper-dark)] bg-white p-4">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">Dine data</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">Your data</p>
             <div className="mt-3 grid grid-cols-3 gap-3">
               <div>
-                <p className="text-xs text-[var(--color-slate-500)]">Produkter</p>
-                <p className="text-sm font-semibold text-[var(--color-navy-900)]">{activeProducts.length} valgt</p>
+                <p className="text-xs text-[var(--color-slate-500)]">Products</p>
+                <p className="text-sm font-semibold text-[var(--color-navy-900)]">{activeProducts.length} selected</p>
               </div>
               <div>
-                <p className="text-xs text-[var(--color-slate-500)]">Enheder / dag</p>
+                <p className="text-xs text-[var(--color-slate-500)]">Units / day</p>
                 <p className="text-sm font-semibold text-[var(--color-navy-900)]">
-                  {activeProducts.reduce((s, p) => s + (quantities[p.id] ?? 0), 0).toLocaleString("da-DK")}
+                  {activeProducts.reduce((s, p) => s + (quantities[p.id] ?? 0), 0).toLocaleString("en")}
                 </p>
               </div>
               <div>
-                <p className="text-xs text-[var(--color-slate-500)]">Operatører i dag</p>
-                <p className="text-sm font-semibold text-[var(--color-navy-900)]">{operators.toLocaleString("da-DK")}</p>
+                <p className="text-xs text-[var(--color-slate-500)]">Operators today</p>
+                <p className="text-sm font-semibold text-[var(--color-navy-900)]">{operators.toLocaleString("en")}</p>
               </div>
             </div>
           </div>
@@ -499,8 +492,7 @@ export function DrillingCellRoiCalculator() {
           <div className="grid gap-4 sm:grid-cols-3">
             {displayedSolutions.map(({ solution, label, badge }) => {
               const isSel = selectedSolutionName === solution.name;
-              const hasAuto = automationEnabled[solution.name] ?? false;
-              const m = calcSolution(solution, activeProducts, quantities, operators, hasAuto);
+              const m = calcSolution(solution, activeProducts, quantities, operators, false);
               return (
                 <button
                   key={solution.name}
@@ -523,40 +515,31 @@ export function DrillingCellRoiCalculator() {
                   </span>
                   <p className="pr-6 text-sm font-semibold leading-snug text-[var(--color-navy-900)]">{solution.name}</p>
                   <div className="mt-4 grid gap-2 text-sm">
-                    <SolutionMetric label="Udnyttelsesgrad" value={`${m.oee.toFixed(0)} %`} highlight />
-                    <SolutionMetric label="Operatører" value={`${solution.operators} (fra ${operators})`} />
-                    <SolutionMetric label="Investering" value={`€ ${solution.investmentEur.toLocaleString("da-DK")}`} />
+                    <SolutionMetric label="Utilisation rate" value={`${m.oee.toFixed(0)} %`} highlight />
+                    <SolutionMetric label="Operators" value={`${solution.operators} (from ${operators})`} />
+                    <SolutionMetric label="Investment" value={`€ ${solution.investmentEur.toLocaleString("en")}`} />
                     <SolutionMetric
-                      label="Tilbagebetaling"
-                      value={Number.isFinite(m.paybackYears) ? `~ ${m.paybackYears.toFixed(1)} år` : "Kontakt os"}
+                      label="Payback period"
+                      value={Number.isFinite(m.paybackYears) ? `~ ${m.paybackYears.toFixed(1)} yrs` : "Contact us"}
                       highlight
                     />
                   </div>
-                  {/* Automation toggle */}
-                  <label
-                    className="mt-4 flex cursor-pointer items-start gap-2 border-t border-[var(--color-paper-dark)] pt-3"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={hasAuto}
-                      onChange={(e) => {
-                        e.stopPropagation();
-                        setAutomationEnabled((prev) => ({ ...prev, [solution.name]: e.target.checked }));
-                      }}
-                      className="mt-0.5 h-4 w-4 accent-[var(--color-navy-900)]"
-                    />
-                    <span className="text-xs text-[var(--color-ink-500)]">
-                      Inkl. automatisering{" "}
-                      <span className="font-semibold text-[var(--color-navy-900)]">
-                        +{AUTO_OEE_BOOST_PCT}% OEE
-                      </span>
-                      <span className="block text-[var(--color-slate-500)]">(10–20% forbedring)</span>
-                    </span>
-                  </label>
                 </button>
               );
             })}
+          </div>
+
+          {/* Automation note */}
+          <div className="mt-4 rounded-lg border border-[var(--color-paper-dark)] bg-white px-5 py-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">
+              Cell Automation Add-on
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink-500)]">
+              All solutions above can be extended with automated cell integration — typically delivering a{" "}
+              <span className="font-semibold text-[var(--color-navy-900)]">10–20% improvement in OEE</span>{" "}
+              through reduced idle time, automated loading/unloading, and real-time monitoring.
+              Our team will include this option in the personalised proposal sent to you.
+            </p>
           </div>
 
           <NavRow onBack={() => goTo(2)} onNext={() => goTo(4)} />
