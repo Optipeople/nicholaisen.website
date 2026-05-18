@@ -26,7 +26,7 @@ export type SolutionVariant = {
 export const SOLUTIONS: SolutionVariant[] = [
   {
     name: "Single Machine - Single Side Drilling",
-    oeePercent: 75,
+    oeePercent: 60,
     operators: 1,
     investmentEur: 110_000,
     processingTimeSec: {
@@ -44,9 +44,9 @@ export const SOLUTIONS: SolutionVariant[] = [
 
   {
     name: "Double Machine - Double Side Drilling",
-    oeePercent: 85,
-    operators: 1,
-    investmentEur: 150_000,
+    oeePercent: 60,
+    operators: 2,
+    investmentEur: 220_000,
     processingTimeSec: {
       "Special Milling Panel":   23,
       "Sliding Door":            30,
@@ -60,23 +60,23 @@ export const SOLUTIONS: SolutionVariant[] = [
     },
   },
 
-  // {
-  //   name: "",
-  //   oeePercent: 0,
-  //   operators: 1,
-  //   investmentEur: 0,
-  //   processingTimeSec: {
-  //     "Special Milling Panel":   0,
-  //     "Sliding Door":            0,
-  //     "Hinge Door":              0,
-  //     "Fixed Shelf":             0,
-  //     "Tall Cabinet Side":       0,
-  //     "Middle Base w/ Groove":   0,
-  //     "Plinth Front":            0,
-  //     "Drawer Front":            0,
-  //     "Cabinet Side":            0,
-  //   },
-  // },
+   {
+     name: "Single Machine - Double Side Drilling",
+     oeePercent: 60,
+     operators: 1,
+     investmentEur: 150_000,
+     processingTimeSec: {
+       "Special Milling Panel":   35,
+       "Sliding Door":            45,
+       "Hinge Door":              42,
+       "Fixed Shelf":             23,
+       "Tall Cabinet Side":       68,
+       "Middle Base w/ Groove":   30,
+       "Plinth Front":            20,
+       "Drawer Front":            27,
+       "Cabinet Side":            38,
+     },
+   },
 
   // {
   //   name: "",
