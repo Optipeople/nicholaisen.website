@@ -10,9 +10,43 @@ import {
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { PRODUCTS, type DrillingProduct } from "./products";
+import { SOLUTIONS, type SolutionVariant } from "./solutions";
 
-type Step = 0 | 1 | 2 | 3 | 4;
-const INPUT_STEPS = 4; // 0..3 inclusive
+type Step = 0 | 1 | 2 | 3 | 4 | 5;
+const INPUT_STEPS = 5; // 0..4 inclusive
+
+const WORKING_DAYS = 220;
+const OPERATOR_EUR_PER_HOUR = 35;
+const AUTO_OEE_BOOST_PCT = 15;
+
+const SOLUTION_LABELS = [
+  { label: "Konservativt valg",               badge: "bg-[var(--color-paper-dark)] text-[var(--color-navy-900)]" },
+  { label: "Bedst egnet til nuværende behov", badge: "bg-[var(--color-tan-500)]/15 text-[var(--color-tan-700,#8a6a2a)]" },
+  { label: "Vækstambitioner",                 badge: "bg-emerald-50 text-emerald-800" },
+];
+
+function calcSolution(
+  s: SolutionVariant,
+  products: DrillingProduct[],
+  quantities: Record<string, number>,
+  operators: number,
+  withAutomation: boolean,
+) {
+  const oee = withAutomation
+    ? Math.min(100, s.oeePercent * (1 + AUTO_OEE_BOOST_PCT / 100))
+    : s.oeePercent;
+
+  const dailyMachineHours = products.reduce((sum, p) => {
+    return sum + ((quantities[p.id] ?? 0) * (s.processingTimeSec[p.id] ?? 0)) / 3600;
+  }, 0) / (oee / 100);
+
+  const annualMachineHours = dailyMachineHours * WORKING_DAYS;
+  const operatorsFreed = Math.max(0, operators - s.operators);
+  const annualSavingsEur = operatorsFreed * 1660 * OPERATOR_EUR_PER_HOUR;
+  const paybackYears = annualSavingsEur > 0 ? s.investmentEur / annualSavingsEur : Infinity;
+
+  return { oee, annualMachineHours, operatorsFreed, annualSavingsEur, paybackYears };
+}
 
 type Contact = { name: string; email: string; job: string; company: string };
 
@@ -35,6 +69,8 @@ export function DrillingCellRoiCalculator() {
   );
   const [formError, setFormError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [automationEnabled, setAutomationEnabled] = useState<Record<string, boolean>>({});
+  const [selectedSolutionName, setSelectedSolutionName] = useState<string | null>(null);
 
   const topRef = useRef<HTMLDivElement>(null);
 
@@ -71,6 +107,18 @@ export function DrillingCellRoiCalculator() {
 
   const firstName = (contact.name.trim().split(/\s+/)[0] || "there").trim();
 
+  const displayedSolutions = useMemo(() => {
+    const sorted = [...SOLUTIONS].sort((a, b) => a.investmentEur - b.investmentEur);
+    const picks =
+      sorted.length >= 3
+        ? [sorted[0]!, sorted[Math.floor(sorted.length / 2)]!, sorted[sorted.length - 1]!]
+        : sorted;
+    return picks.map((solution, i) => ({
+      solution,
+      ...(SOLUTION_LABELS[i] ?? SOLUTION_LABELS[SOLUTION_LABELS.length - 1]!),
+    }));
+  }, []);
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const name = contact.name.trim();
@@ -100,6 +148,12 @@ export function DrillingCellRoiCalculator() {
         unitsPerDay: quantities[p.id] ?? 0,
       })),
       operators,
+      selectedSolution: selectedSolutionName
+        ? {
+            name: selectedSolutionName,
+            withAutomation: automationEnabled[selectedSolutionName] ?? false,
+          }
+        : null,
       website,
     };
 
@@ -116,7 +170,7 @@ export function DrillingCellRoiCalculator() {
         return;
       }
       setSubmitting(false);
-      goTo(4);
+      goTo(5);
     } catch {
       setFormError("Network error. Please try again.");
       setSubmitting(false);
@@ -130,6 +184,8 @@ export function DrillingCellRoiCalculator() {
     setContact({ name: "", email: "", job: "", company: "" });
     setErrors({});
     setFormError(null);
+    setAutomationEnabled({});
+    setSelectedSolutionName(null);
   };
 
   const progressPct =
@@ -146,7 +202,7 @@ export function DrillingCellRoiCalculator() {
           />
         </div>
         <div className="mt-4 flex items-center gap-2">
-          {[0, 1, 2, 3].map((i) => (
+          {[0, 1, 2, 3, 4].map((i) => (
             <span
               key={i}
               className={cn(
@@ -198,7 +254,7 @@ export function DrillingCellRoiCalculator() {
       {/* STEP 1 — Product selection */}
       {step === 1 && (
         <StepShell
-          eyebrow="Step 1 of 3 — Products"
+          eyebrow="Step 1 of 4 — Products"
           title={
             <>
               Select the products you <em className="not-italic text-[var(--color-tan-500)]">manufacture</em>
@@ -265,7 +321,7 @@ export function DrillingCellRoiCalculator() {
       {/* STEP 2 — Quantities + operators */}
       {step === 2 && (
         <StepShell
-          eyebrow="Step 2 of 3 — Production"
+          eyebrow="Step 2 of 4 — Production"
           title={
             <>
               How many units and <em className="not-italic text-[var(--color-tan-500)]">operators?</em>
@@ -407,10 +463,110 @@ export function DrillingCellRoiCalculator() {
         </StepShell>
       )}
 
-      {/* STEP 3 — Contact */}
+      {/* STEP 3 — Solutions */}
       {step === 3 && (
         <StepShell
-          eyebrow="Step 3 of 3 — Your Details"
+          eyebrow="Step 3 of 4 — Løsningsforslag"
+          title={
+            <>
+              Vælg den <em className="not-italic text-[var(--color-tan-500)]">løsning der passer</em>
+            </>
+          }
+          description="Baseret på dine produktionsdata har vi sammensat tre løsningsforslag. Vælg det der matcher bedst."
+        >
+          {/* Data summary */}
+          <div className="mb-6 rounded-lg border border-[var(--color-paper-dark)] bg-white p-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">Dine data</p>
+            <div className="mt-3 grid grid-cols-3 gap-3">
+              <div>
+                <p className="text-xs text-[var(--color-slate-500)]">Produkter</p>
+                <p className="text-sm font-semibold text-[var(--color-navy-900)]">{activeProducts.length} valgt</p>
+              </div>
+              <div>
+                <p className="text-xs text-[var(--color-slate-500)]">Enheder / dag</p>
+                <p className="text-sm font-semibold text-[var(--color-navy-900)]">
+                  {activeProducts.reduce((s, p) => s + (quantities[p.id] ?? 0), 0).toLocaleString("da-DK")}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs text-[var(--color-slate-500)]">Operatører i dag</p>
+                <p className="text-sm font-semibold text-[var(--color-navy-900)]">{operators.toLocaleString("da-DK")}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Solution cards */}
+          <div className="grid gap-4 sm:grid-cols-3">
+            {displayedSolutions.map(({ solution, label, badge }) => {
+              const isSel = selectedSolutionName === solution.name;
+              const hasAuto = automationEnabled[solution.name] ?? false;
+              const m = calcSolution(solution, activeProducts, quantities, operators, hasAuto);
+              return (
+                <button
+                  key={solution.name}
+                  type="button"
+                  onClick={() => setSelectedSolutionName(solution.name)}
+                  className={cn(
+                    "relative flex flex-col rounded-xl border-2 p-4 text-left transition-colors",
+                    isSel
+                      ? "border-[var(--color-navy-900)] bg-[var(--color-paper)]"
+                      : "border-[var(--color-paper-dark)] bg-white hover:border-[var(--color-navy-500)]",
+                  )}
+                >
+                  {isSel && (
+                    <span className="absolute right-3 top-3 inline-flex size-5 items-center justify-center rounded-full bg-[var(--color-navy-900)] text-white">
+                      <Check className="size-3" />
+                    </span>
+                  )}
+                  <span className={cn("mb-3 inline-block rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider", badge)}>
+                    {label}
+                  </span>
+                  <p className="pr-6 text-sm font-semibold leading-snug text-[var(--color-navy-900)]">{solution.name}</p>
+                  <div className="mt-4 grid gap-2 text-sm">
+                    <SolutionMetric label="Udnyttelsesgrad" value={`${m.oee.toFixed(0)} %`} highlight />
+                    <SolutionMetric label="Operatører" value={`${solution.operators} (fra ${operators})`} />
+                    <SolutionMetric label="Investering" value={`€ ${solution.investmentEur.toLocaleString("da-DK")}`} />
+                    <SolutionMetric
+                      label="Tilbagebetaling"
+                      value={Number.isFinite(m.paybackYears) ? `~ ${m.paybackYears.toFixed(1)} år` : "Kontakt os"}
+                      highlight
+                    />
+                  </div>
+                  {/* Automation toggle */}
+                  <label
+                    className="mt-4 flex cursor-pointer items-start gap-2 border-t border-[var(--color-paper-dark)] pt-3"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={hasAuto}
+                      onChange={(e) => {
+                        e.stopPropagation();
+                        setAutomationEnabled((prev) => ({ ...prev, [solution.name]: e.target.checked }));
+                      }}
+                      className="mt-0.5 h-4 w-4 accent-[var(--color-navy-900)]"
+                    />
+                    <span className="text-xs text-[var(--color-ink-500)]">
+                      Inkl. automatisering{" "}
+                      <span className="font-semibold text-[var(--color-navy-900)]">
+                        +{AUTO_OEE_BOOST_PCT}% OEE
+                      </span>
+                      <span className="block text-[var(--color-slate-500)]">(10–20% forbedring)</span>
+                    </span>
+                  </label>
+                </button>
+              );
+            })}
+          </div>
+
+          <NavRow onBack={() => goTo(2)} onNext={() => goTo(4)} />
+        </StepShell>
+      )}
+
+      {/* STEP 4 — Contact */}
+      {step === 4 && (
+        <StepShell
+          eyebrow="Step 4 of 4 — Your Details"
           title={
             <>
               Where should we send your <em className="not-italic text-[var(--color-tan-500)]">results?</em>
@@ -479,7 +635,7 @@ export function DrillingCellRoiCalculator() {
             ) : null}
 
             <div className="mt-2 flex flex-wrap items-center gap-3">
-              <SecondaryButton type="button" onClick={() => goTo(2)}>
+              <SecondaryButton type="button" onClick={() => goTo(3)}>
                 <ArrowLeft className="size-4" aria-hidden /> Back
               </SecondaryButton>
               <PrimaryButton type="submit" disabled={submitting}>
@@ -491,8 +647,8 @@ export function DrillingCellRoiCalculator() {
         </StepShell>
       )}
 
-      {/* STEP 4 — Thanks */}
-      {step === 4 && (
+      {/* STEP 5 — Thanks */}
+      {step === 5 && (
         <StepShell
           eyebrow="Submission Received"
           title={
@@ -733,6 +889,17 @@ function SmallButton({
     >
       {children}
     </button>
+  );
+}
+
+function SolutionMetric({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
+  return (
+    <div className="flex items-baseline justify-between gap-2">
+      <span className="text-xs text-[var(--color-slate-500)]">{label}</span>
+      <span className={cn("text-sm font-semibold", highlight ? "text-[var(--color-navy-900)]" : "text-[var(--color-ink-700)]")}>
+        {value}
+      </span>
+    </div>
   );
 }
 
