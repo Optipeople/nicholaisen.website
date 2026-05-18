@@ -125,35 +125,30 @@ export function DrillingCellRoiCalculator() {
     const feasible = withMetrics.filter((w) => w.m.capacityUtilPct <= 200);
     const pool = feasible.length > 0 ? feasible : withMetrics;
 
-    // Conservative: cheapest feasible solution
-    const conservative = [...pool].sort(
-      (a, b) => a.solution.investmentEur - b.solution.investmentEur,
-    )[0];
-
-    // Best fit: shortest payback among feasible
-    const bestFit = [...pool].sort((a, b) => {
+    const byInvestment = [...pool].sort((a, b) => a.solution.investmentEur - b.solution.investmentEur);
+    const byPayback = [...pool].sort((a, b) => {
       if (!Number.isFinite(a.m.paybackYears)) return 1;
       if (!Number.isFinite(b.m.paybackYears)) return -1;
       return a.m.paybackYears - b.m.paybackYears;
-    })[0];
+    });
+    const byUtil = [...withMetrics].sort((a, b) => a.m.capacityUtilPct - b.m.capacityUtilPct);
 
-    // Growth: lowest capacity utilisation across all solutions (incl. infeasible)
-    const growth = [...withMetrics].sort(
-      (a, b) => a.m.capacityUtilPct - b.m.capacityUtilPct,
-    )[0];
-
-    // Build deduplicated list preserving label order
+    // Each criterion picks the best not-yet-shown solution — guarantees 3 distinct cards
     const seen = new Set<string>();
     const result: Array<{ solution: SolutionVariant; label: string; badge: string }> = [];
-    ([conservative, bestFit, growth] as const).forEach((item, i) => {
-      if (item && !seen.has(item.solution.name)) {
+    const pickFirst = (sorted: typeof withMetrics, i: number) => {
+      const item = sorted.find((w) => !seen.has(w.solution.name));
+      if (item) {
         seen.add(item.solution.name);
         result.push({
           solution: item.solution,
           ...(SOLUTION_LABELS[i] ?? SOLUTION_LABELS[SOLUTION_LABELS.length - 1]!),
         });
       }
-    });
+    };
+    pickFirst(byInvestment, 0); // Conservative
+    pickFirst(byPayback, 1);    // Best fit
+    pickFirst(byUtil, 2);       // Growth
     return result;
   }, [activeProducts, quantities, operators]);
 
