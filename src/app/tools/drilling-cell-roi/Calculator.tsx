@@ -45,7 +45,7 @@ function calcSolution(
     return sum + ((quantities[p.id] ?? 0) * (s.processingTimeSec[p.id] ?? 0)) / 3600;
   }, 0);
   const dailyMachineHours = rawDailyHours / (oee / 100);
-  const capacityUtilPct = (rawDailyHours / (SHIFT_MINUTES / 60)) * 100;
+  const capacityUtilPct = (dailyMachineHours / (SHIFT_MINUTES / 60)) * 100;
 
   const annualMachineHours = dailyMachineHours * WORKING_DAYS;
   const operatorsFreed = Math.max(0, operators - effectiveOperators);
