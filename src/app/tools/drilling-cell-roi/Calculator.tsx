@@ -11,8 +11,8 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { PRODUCTS, type DrillingProduct } from "./products";
 
-type Step = 0 | 1 | 2 | 3 | 4 | 5;
-const INPUT_STEPS = 5; // 0..4 inclusive
+type Step = 0 | 1 | 2 | 3 | 4;
+const INPUT_STEPS = 4; // 0..3 inclusive
 
 type Contact = { name: string; email: string; job: string; company: string };
 
@@ -23,7 +23,6 @@ export function DrillingCellRoiCalculator() {
   const [selected, setSelected] = useState<Set<string>>(() => new Set());
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const [operators, setOperators] = useState<number>(2);
-  const [investment, setInvestment] = useState<number>(110_000);
   const [contact, setContact] = useState<Contact>({
     name: "",
     email: "",
@@ -101,7 +100,6 @@ export function DrillingCellRoiCalculator() {
         unitsPerDay: quantities[p.id] ?? 0,
       })),
       operators,
-      investment,
       website,
     };
 
@@ -118,7 +116,7 @@ export function DrillingCellRoiCalculator() {
         return;
       }
       setSubmitting(false);
-      goTo(5);
+      goTo(4);
     } catch {
       setFormError("Network error. Please try again.");
       setSubmitting(false);
@@ -129,7 +127,6 @@ export function DrillingCellRoiCalculator() {
     setAll(true);
     setQuantities({});
     setOperators(2);
-    setInvestment(110_000);
     setContact({ name: "", email: "", job: "", company: "" });
     setErrors({});
     setFormError(null);
@@ -149,7 +146,7 @@ export function DrillingCellRoiCalculator() {
           />
         </div>
         <div className="mt-4 flex items-center gap-2">
-          {[0, 1, 2, 3, 4].map((i) => (
+          {[0, 1, 2, 3].map((i) => (
             <span
               key={i}
               className={cn(
@@ -201,7 +198,7 @@ export function DrillingCellRoiCalculator() {
       {/* STEP 1 — Product selection */}
       {step === 1 && (
         <StepShell
-          eyebrow="Step 1 of 4 — Products"
+          eyebrow="Step 1 of 3 — Products"
           title={
             <>
               Select the products you <em className="not-italic text-[var(--color-tan-500)]">manufacture</em>
@@ -268,7 +265,7 @@ export function DrillingCellRoiCalculator() {
       {/* STEP 2 — Quantities + operators */}
       {step === 2 && (
         <StepShell
-          eyebrow="Step 2 of 4 — Production"
+          eyebrow="Step 2 of 3 — Production"
           title={
             <>
               How many units and <em className="not-italic text-[var(--color-tan-500)]">operators?</em>
@@ -394,38 +391,10 @@ export function DrillingCellRoiCalculator() {
         </StepShell>
       )}
 
-      {/* STEP 3 — Investment */}
+      {/* STEP 3 — Contact */}
       {step === 3 && (
         <StepShell
-          eyebrow="Step 3 of 4 — Investment"
-          title={
-            <>
-              What is the <em className="not-italic text-[var(--color-tan-500)]">capital investment?</em>
-            </>
-          }
-          description="Enter the expected investment for a Drilling Cell solution. This is used to calculate the payback period."
-        >
-          <FieldRow
-            label="Capital investment"
-            hint="Typical investment for a complete Drilling Cell installation"
-            unit="EUR"
-          >
-            <NumberInput
-              value={investment}
-              min={0}
-              onChange={setInvestment}
-              className="w-36"
-            />
-          </FieldRow>
-
-          <NavRow onBack={() => goTo(2)} onNext={() => goTo(4)} />
-        </StepShell>
-      )}
-
-      {/* STEP 4 — Contact */}
-      {step === 4 && (
-        <StepShell
-          eyebrow="Step 4 of 4 — Your Details"
+          eyebrow="Step 3 of 3 — Your Details"
           title={
             <>
               Where should we send your <em className="not-italic text-[var(--color-tan-500)]">results?</em>
@@ -494,7 +463,7 @@ export function DrillingCellRoiCalculator() {
             ) : null}
 
             <div className="mt-2 flex flex-wrap items-center gap-3">
-              <SecondaryButton type="button" onClick={() => goTo(3)}>
+              <SecondaryButton type="button" onClick={() => goTo(2)}>
                 <ArrowLeft className="size-4" aria-hidden /> Back
               </SecondaryButton>
               <PrimaryButton type="submit" disabled={submitting}>
@@ -506,8 +475,8 @@ export function DrillingCellRoiCalculator() {
         </StepShell>
       )}
 
-      {/* STEP 5 — Thanks */}
-      {step === 5 && (
+      {/* STEP 4 — Thanks */}
+      {step === 4 && (
         <StepShell
           eyebrow="Submission Received"
           title={
