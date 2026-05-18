@@ -26,6 +26,9 @@ export type SolutionVariant = {
   /** Løsningens navn, f.eks. "Drilling Cell Standard" */
   name: string;
 
+  /** Kort beskrivelse vist i trin 3 — hvad kendetegner løsningen */
+  description: string;
+
   /** Forventet OEE i procent (0–100) */
   oeePercent: number;
 
@@ -45,6 +48,7 @@ export type SolutionVariant = {
 export const SOLUTIONS: SolutionVariant[] = [
   {
     name: "Single Machine - Single Side Drilling",
+    description: "A single CNC drilling unit processing one face at a time. A proven entry point that reduces manual drilling with a low capital commitment and a straightforward installation.",
     oeePercent: 60,
     operators: 1,
     investmentEur: 110_000,
@@ -79,6 +83,7 @@ export const SOLUTIONS: SolutionVariant[] = [
 
   {
     name: "Single Machine - Double Side Drilling",
+    description: "One machine equipped to drill both faces in a single pass. Cuts cycle time significantly compared to single-side processing while keeping the footprint and operator count lean.",
     oeePercent: 60,
     operators: 1,
     investmentEur: 150_000,
@@ -113,6 +118,7 @@ export const SOLUTIONS: SolutionVariant[] = [
 
   {
     name: "Double Machine - Double Side Drilling",
+    description: "Two parallel double-side drilling units running simultaneously. Maximises throughput for high-volume lines and provides built-in redundancy — production continues if one machine goes offline.",
     oeePercent: 60,
     operators: 2,
     investmentEur: 220_000,

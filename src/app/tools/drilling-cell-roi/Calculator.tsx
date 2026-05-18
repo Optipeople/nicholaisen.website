@@ -534,6 +534,9 @@ export function DrillingCellRoiCalculator() {
                     {label}
                   </span>
                   <p className="pr-6 text-sm font-semibold leading-snug text-[var(--color-navy-900)]">{solution.name}</p>
+                  {solution.description && (
+                    <p className="mt-2 text-xs leading-relaxed text-[var(--color-ink-500)]">{solution.description}</p>
+                  )}
 
                   {/* Core metrics */}
                   <div className="mt-4 grid gap-2 text-sm">
