@@ -25,7 +25,7 @@ export type SolutionVariant = {
 
 export const SOLUTIONS: SolutionVariant[] = [
   {
-    name: "Drilling Cell — Standard",
+    name: "Single Machine - Single Side Drilling",
     oeePercent: 75,
     operators: 1,
     investmentEur: 110_000,
@@ -42,22 +42,57 @@ export const SOLUTIONS: SolutionVariant[] = [
     },
   },
 
-  // Tilføj flere løsningsvarianter herunder:
+  {
+    name: "Double Machine - Double Side Drilling",
+    oeePercent: 85,
+    operators: 1,
+    investmentEur: 150_000,
+    processingTimeSec: {
+      "Special Milling Panel":   23,
+      "Sliding Door":            30,
+      "Hinge Door":              28,
+      "Fixed Shelf":             15,
+      "Tall Cabinet Side":       45,
+      "Middle Base w/ Groove":   20,
+      "Plinth Front":            13,
+      "Drawer Front":            18,
+      "Cabinet Side":            25,
+    },
+  },
+
   // {
-  //   name: "Drilling Cell — Premium",
-  //   oeePercent: 85,
+  //   name: "",
+  //   oeePercent: 0,
   //   operators: 1,
-  //   investmentEur: 150_000,
+  //   investmentEur: 0,
   //   processingTimeSec: {
-  //     "Special Milling Panel":   35,
-  //     "Sliding Door":            45,
-  //     "Hinge Door":              42,
-  //     "Fixed Shelf":             22,
-  //     "Tall Cabinet Side":       70,
-  //     "Middle Base w/ Groove":   30,
-  //     "Plinth Front":            18,
-  //     "Drawer Front":            25,
-  //     "Cabinet Side":            38,
+  //     "Special Milling Panel":   0,
+  //     "Sliding Door":            0,
+  //     "Hinge Door":              0,
+  //     "Fixed Shelf":             0,
+  //     "Tall Cabinet Side":       0,
+  //     "Middle Base w/ Groove":   0,
+  //     "Plinth Front":            0,
+  //     "Drawer Front":            0,
+  //     "Cabinet Side":            0,
+  //   },
+  // },
+
+  // {
+  //   name: "",
+  //   oeePercent: 0,
+  //   operators: 1,
+  //   investmentEur: 0,
+  //   processingTimeSec: {
+  //     "Special Milling Panel":   0,
+  //     "Sliding Door":            0,
+  //     "Hinge Door":              0,
+  //     "Fixed Shelf":             0,
+  //     "Tall Cabinet Side":       0,
+  //     "Middle Base w/ Groove":   0,
+  //     "Plinth Front":            0,
+  //     "Drawer Front":            0,
+  //     "Cabinet Side":            0,
   //   },
   // },
 ];
