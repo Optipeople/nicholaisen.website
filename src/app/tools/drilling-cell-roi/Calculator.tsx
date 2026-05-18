@@ -17,6 +17,7 @@ const INPUT_STEPS = 5; // 0..4 inclusive
 
 const WORKING_DAYS = 220;
 const OPERATOR_EUR_PER_HOUR = 35;
+const SHIFT_MINUTES = 440;
 
 const SOLUTION_LABELS = [
   { label: "Conservative choice",       badge: "bg-[var(--color-paper-dark)] text-[var(--color-navy-900)]" },
@@ -40,16 +41,18 @@ function calcSolution(
   const effectiveOperators = Math.max(0, s.operators - operatorReduction);
   const totalInvestment = s.investmentEur + automationPrice;
 
-  const dailyMachineHours = products.reduce((sum, p) => {
+  const rawDailyHours = products.reduce((sum, p) => {
     return sum + ((quantities[p.id] ?? 0) * (s.processingTimeSec[p.id] ?? 0)) / 3600;
-  }, 0) / (oee / 100);
+  }, 0);
+  const dailyMachineHours = rawDailyHours / (oee / 100);
+  const capacityUtilPct = (rawDailyHours / (SHIFT_MINUTES / 60)) * 100;
 
   const annualMachineHours = dailyMachineHours * WORKING_DAYS;
   const operatorsFreed = Math.max(0, operators - effectiveOperators);
   const annualSavingsEur = operatorsFreed * 1660 * OPERATOR_EUR_PER_HOUR;
   const paybackYears = annualSavingsEur > 0 ? totalInvestment / annualSavingsEur : Infinity;
 
-  return { oee, effectiveOperators, totalInvestment, annualMachineHours, operatorsFreed, annualSavingsEur, paybackYears };
+  return { oee, effectiveOperators, totalInvestment, annualMachineHours, capacityUtilPct, operatorsFreed, annualSavingsEur, paybackYears };
 }
 
 type Contact = { name: string; email: string; job: string; company: string };
@@ -540,8 +543,7 @@ export function DrillingCellRoiCalculator() {
 
                   {/* Core metrics */}
                   <div className="mt-4 grid gap-2 text-sm">
-                    <SolutionMetric label="Utilisation rate" value={`${m.oee.toFixed(0)} %`} highlight />
-                    <SolutionMetric label="Operators" value={`${m.effectiveOperators} (from ${operators})`} />
+                    <SolutionMetric label="Capacity utilisation" value={`${Math.min(m.capacityUtilPct, 999).toFixed(0)} %`} highlight />
                     <SolutionMetric label="Investment" value={`€ ${m.totalInvestment.toLocaleString("en")}`} />
                     <SolutionMetric
                       label="Payback period"
