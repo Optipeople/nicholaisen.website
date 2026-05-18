@@ -378,10 +378,26 @@ export function DrillingCellRoiCalculator() {
               value={operators}
               min={0}
               max={1000}
+              step={0.5}
               onChange={setOperators}
               className="w-28"
             />
           </FieldRow>
+
+          <div className="mt-3 rounded-lg border border-[var(--color-paper-dark)] bg-white px-5 py-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-slate-500)]">
+              Annual operator hours
+            </p>
+            <div className="mt-2 flex items-baseline gap-2">
+              <span className="text-2xl font-bold text-[var(--color-navy-900)]">
+                {(operators * 1660).toLocaleString("da-DK")}
+              </span>
+              <span className="text-sm text-[var(--color-slate-500)]">hours / year</span>
+            </div>
+            <p className="mt-1 text-xs text-[var(--color-slate-500)]">
+              {operators.toLocaleString("da-DK")} operators × 1,660 hours
+            </p>
+          </div>
 
           <NavRow
             onBack={() => goTo(1)}
@@ -632,6 +648,7 @@ function NumberInput({
   onChange,
   min,
   max,
+  step,
   className,
 }: {
   id?: string;
@@ -639,13 +656,15 @@ function NumberInput({
   onChange: (v: number) => void;
   min?: number;
   max?: number;
+  step?: number;
   className?: string;
 }) {
   return (
     <input
       id={id}
       type="number"
-      inputMode="numeric"
+      inputMode={step && step % 1 !== 0 ? "decimal" : "numeric"}
+      step={step}
       value={Number.isFinite(value) ? value : 0}
       min={min}
       max={max}
