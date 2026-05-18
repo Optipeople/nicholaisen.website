@@ -264,10 +264,10 @@ export function DrillingCellRoiCalculator() {
           eyebrow="ROI Calculator"
           title={
             <>
-              What can a <em className="not-italic text-[var(--color-tan-500)]">Drilling Cell</em> save you?
+              What can a <em className="not-italic text-[var(--color-tan-500)]">6-Side Machining Cell</em> save you?
             </>
           }
-          description="Calculate your potential time savings and payback period in under 2 minutes."
+          description="Drilling, milling and grooving on all 6 sides — calculate your time savings and payback period in under 2 minutes."
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <IntroCard

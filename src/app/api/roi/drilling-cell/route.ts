@@ -66,7 +66,7 @@ export async function POST(request: Request) {
     .join("");
 
   const text = [
-    `New Drilling Cell ROI submission`,
+    `New 6-Side Machining Cell ROI submission`,
     ``,
     `Contact`,
     `  Name:    ${data.contact.name}`,
@@ -90,11 +90,11 @@ export async function POST(request: Request) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Drilling Cell ROI submission</title>
+<title>6-Side Machining Cell ROI submission</title>
 </head>
 <body style="margin:0;padding:24px;background:#fcf8ee;">
     <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:640px;margin:0 auto;color:#2a2d33;">
-      <h2 style="margin:0 0 16px;color:#0e2238;font-size:20px;">New Drilling Cell ROI submission</h2>
+      <h2 style="margin:0 0 16px;color:#0e2238;font-size:20px;">New 6-Side Machining Cell ROI submission</h2>
 
       <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
         <tr><td style="padding:4px 0;color:#5a7c9a;width:140px;font-size:13px;">Name</td><td style="padding:4px 0;font-size:14px;color:#0f1115;">${escapeHtml(data.contact.name)}</td></tr>
@@ -140,7 +140,7 @@ export async function POST(request: Request) {
       from,
       to,
       replyTo: data.contact.email,
-      subject: `Drilling Cell ROI - ${data.contact.name}${data.contact.company ? ` (${data.contact.company})` : ""}`,
+      subject: `6-Side Machining Cell ROI - ${data.contact.name}${data.contact.company ? ` (${data.contact.company})` : ""}`,
       text,
       html,
     });

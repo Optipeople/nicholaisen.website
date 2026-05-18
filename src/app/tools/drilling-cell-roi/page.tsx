@@ -3,14 +3,14 @@ import { Container } from "@/components/layout/Container";
 import { DrillingCellRoiCalculator } from "./Calculator";
 
 export const metadata: Metadata = {
-  title: "Drilling Cell ROI Calculator",
+  title: "6-Side Machining Cell ROI Calculator",
   description:
-    "Calculate the potential time savings and payback period of a Drilling Cell in your wood manufacturing operation.",
+    "Calculate the potential time savings and payback period of a 6-Side Machining Cell — drilling, milling and grooving in one machine.",
   alternates: { canonical: "/tools/drilling-cell-roi" },
   openGraph: {
-    title: "Drilling Cell ROI Calculator — Nicholaisen",
+    title: "6-Side Machining Cell ROI Calculator — Nicholaisen",
     description:
-      "Estimate your annual savings and payback period for a Drilling Cell solution in under two minutes.",
+      "Estimate your annual savings and payback period for a 6-Side Machining Cell in under two minutes.",
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -22,7 +22,7 @@ export default function DrillingCellRoiPage() {
       <Container size="default">
         <DrillingCellRoiCalculator />
         <p className="mt-16 text-center text-xs tracking-wide text-[var(--color-slate-500)]">
-          Nicholaisen · Drilling Cell ROI Estimator · For indicative purposes only
+          Nicholaisen · 6-Side Machining Cell ROI Estimator · For indicative purposes only
         </p>
       </Container>
     </section>
