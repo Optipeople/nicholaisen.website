@@ -178,7 +178,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
               <Image
-                src="/images/workshop/precision-machining.jpg"
+                src="/images/hero-workshop.jpg"
                 alt=""
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
