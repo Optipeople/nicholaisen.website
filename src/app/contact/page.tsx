@@ -77,30 +77,34 @@ export default function ContactPage() {
             The people you'll work with
           </h2>
           <p className="mt-4 text-[1.0625rem] leading-relaxed text-[var(--color-ink-500)] max-w-xl">
-            We are a small, specialised team. When you reach out, you speak directly with the people who do the work.
+            Reach out directly to the person who covers your area. Everyone you contact does the actual work.
           </p>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {team.map((person) => (
-              <div key={person.name} className="group">
-                <div className="overflow-hidden rounded-[var(--radius-lg)] bg-[var(--color-beige-200)] aspect-[3/4]">
+          {/* Leadership */}
+          <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {management.map((person) => (
+              <div
+                key={person.name}
+                className="flex items-center gap-4 rounded-xl border border-[var(--color-ink-300)]/20 bg-[var(--color-cream)] px-4 py-3"
+              >
+                <div className="relative size-12 shrink-0 overflow-hidden rounded-full bg-[var(--color-beige-200)]">
                   <Image
                     src={person.image}
                     alt={person.name}
-                    width={480}
-                    height={640}
-                    className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                    fill
+                    sizes="48px"
+                    className="object-cover object-top"
                   />
                 </div>
-                <div className="mt-4">
-                  <p className="text-[1.0625rem] font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                  <p className="mt-0.5 text-sm text-[var(--color-ink-500)]">{person.title}</p>
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                  <p className="truncate text-xs leading-snug text-[var(--color-ink-500)]">{person.title}</p>
                   {person.email && (
                     <a
                       href={`mailto:${person.email}`}
-                      className="mt-2 inline-flex items-center gap-1.5 text-sm text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      className="mt-1 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
                     >
-                      <Mail className="size-3.5" aria-hidden />
+                      <Mail className="size-3" aria-hidden />
                       {person.email}
                     </a>
                   )}
@@ -108,13 +112,40 @@ export default function ContactPage() {
               </div>
             ))}
           </div>
+
+          {/* Sales & project management */}
+          <div className="mt-10 border-t border-[var(--color-ink-300)]/20 pt-10">
+            <p className="text-eyebrow text-[var(--color-ink-500)]">Sales & Project Management</p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {sales.map((person) => (
+                <div
+                  key={person.name}
+                  className="flex items-center gap-4 rounded-xl border border-[var(--color-ink-300)]/20 bg-[var(--color-cream)] px-4 py-3"
+                >
+                  <div className="relative size-12 shrink-0 overflow-hidden rounded-full bg-[var(--color-beige-200)]">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="48px"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                    <p className="truncate text-xs leading-snug text-[var(--color-ink-500)]">{person.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </Container>
       </Section>
     </>
   );
 }
 
-const team = [
+const management = [
   {
     name: "Thomas Biehl",
     title: "CEO",
@@ -132,6 +163,54 @@ const team = [
     title: "CFO",
     email: "ls@nicholaisen.dk",
     image: "/images/Medarbejder/Lars%20Sommer.jpeg",
+  },
+];
+
+const sales = [
+  {
+    name: "Bo Bruun Holm",
+    title: "Sales – Plate & Furniture Industry",
+    image: "/images/Medarbejder/Bo%20Holm.jpeg",
+  },
+  {
+    name: "Mark Dige Høgh",
+    title: "Sales – Plate & Furniture Industry",
+    image: "/images/Medarbejder/Mark%20Dige.jpg",
+  },
+  {
+    name: "Bo Rasmussen",
+    title: "Sales – Door & Window Industry",
+    image: "/images/Medarbejder/Bo%20Rasmusen.png",
+  },
+  {
+    name: "Peter Haahr Larsen",
+    title: "Sales – Door & Window Industry",
+    image: "/images/Medarbejder/Peter%20Haahr.jpeg",
+  },
+  {
+    name: "Jørn Biehl",
+    title: "Sales – Wood Drying",
+    image: "/images/Medarbejder/J%C3%B8rn%20Biehl.jpeg",
+  },
+  {
+    name: "Claus Capion",
+    title: "Sales – Automation",
+    image: "/images/Medarbejder/Claus%20Capion.jpeg",
+  },
+  {
+    name: "René Beldam",
+    title: "Sales – NichoMachines",
+    image: "/images/Medarbejder/Ren%C3%A9%20Beldam.jpeg",
+  },
+  {
+    name: "Svenja Hartmann",
+    title: "Project Coordinator",
+    image: "/images/Medarbejder/Svenja%20Hartmann.jpeg",
+  },
+  {
+    name: "Kathrine Hovesen",
+    title: "PA to CEO",
+    image: "/images/Medarbejder/Kathrine%20Hovesen.jpeg",
   },
 ];
 
