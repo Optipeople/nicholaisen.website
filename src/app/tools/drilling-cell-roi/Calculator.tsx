@@ -333,12 +333,12 @@ export function DrillingCellRoiCalculator() {
                   >
                     <Check className="size-3" />
                   </span>
-                  <div className="flex h-28 items-center justify-center rounded-md bg-[var(--color-cream-50)] p-3">
+                  <div className="h-28 overflow-hidden rounded-md">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.image}
                       alt=""
-                      className="h-full w-full max-w-[200px] object-contain"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                   <div className="pr-8">
@@ -383,12 +383,12 @@ export function DrillingCellRoiCalculator() {
                     className="rounded-lg border border-[var(--color-paper-dark)] bg-[var(--color-paper)] p-3"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="flex h-14 w-20 shrink-0 items-center justify-center rounded bg-[var(--color-cream-50)] p-1">
+                      <div className="h-14 w-20 shrink-0 overflow-hidden rounded">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={p.image}
                           alt=""
-                          className="h-full w-full object-contain"
+                          className="h-full w-full object-cover"
                         />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -434,12 +434,12 @@ export function DrillingCellRoiCalculator() {
                     {activeProducts.map((p) => (
                       <tr key={p.id} className="border-b border-[var(--color-paper-dark)]">
                         <td className="py-3 pr-4">
-                          <div className="flex h-14 w-24 items-center justify-center rounded bg-[var(--color-cream-50)] p-1">
+                          <div className="h-14 w-24 overflow-hidden rounded">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                               src={p.image}
                               alt=""
-                              className="h-full w-full object-contain"
+                              className="h-full w-full object-cover"
                             />
                           </div>
                         </td>
