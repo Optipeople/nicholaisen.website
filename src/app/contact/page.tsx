@@ -130,23 +130,24 @@ function TeamSection({
             <div className="mt-3">
               <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
               <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-              {usePhone && person.phone ? (
-                <a
-                  href={`tel:${person.phone.replace(/\s+/g, "")}`}
-                  className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                >
-                  <Phone className="size-3" aria-hidden />
-                  {person.phone}
-                </a>
-              ) : person.email ? (
+              {person.email && (
                 <a
                   href={`mailto:${person.email}`}
-                  className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                  className="mt-1.5 flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
                 >
                   <Mail className="size-3" aria-hidden />
                   {person.email}
                 </a>
-              ) : null}
+              )}
+              {person.phone && (
+                <a
+                  href={`tel:${person.phone.replace(/\s+/g, "")}`}
+                  className="mt-1 flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                >
+                  <Phone className="size-3" aria-hidden />
+                  {person.phone}
+                </a>
+              )}
             </div>
           </div>
         ))}
@@ -173,7 +174,7 @@ const salesDenmark: Person[] = [
   { name: "Bo Rasmussen", title: "Sales – Door & Window Industry", email: "br@nicholaisen.dk", image: "/images/Medarbejder/Bo%20Rasmusen.png" },
   { name: "Peter Haahr Larsen", title: "Sales – Door & Window Industry", email: "phl@nicholaisen.dk", image: "/images/Medarbejder/Peter%20Haahr.jpeg" },
   { name: "Jørn Biehl", title: "Sales – Wood Drying", image: "/images/Medarbejder/J%C3%B8rn%20Biehl.jpeg" },
-  { name: "Claus Capion", title: "Sales – Automation", email: "cca@nicholaisen.dk", image: "/images/Medarbejder/Claus%20Capion.jpeg" },
+  { name: "Claus Capion", title: "Sales – Automation", email: "cca@nicholaisen.dk", phone: "+45 40880061", image: "/images/Medarbejder/Claus%20Capion.jpeg" },
   { name: "René Beldam", title: "Sales – NichoMachines", email: "rb@nicholaisen.dk", image: "/images/Medarbejder/Ren%C3%A9%20Beldam.jpeg" },
 ];
 
