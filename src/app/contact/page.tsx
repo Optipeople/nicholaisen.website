@@ -198,7 +198,7 @@ const innovation: Person[] = [
 const service: Person[] = [
   { name: "Tobias Kjærgaard", title: "Service Manager", email: "tk@nicholaisen.dk", image: "/images/Medarbejder/Tobias%20Kj%C3%A6rgaard.jpeg" },
   { name: "Lars Skaarup Petersen", title: "Spare Parts Manager", email: "lsp@nicholaisen.dk", image: "/images/Medarbejder/Lars%20Skaarup%20Petersen.jpeg" },
-  { name: "Søren Solhaug Madsen", title: "Consultant – Business Development", email: "sm@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Solhaug%20Madsen.jpeg" },
+  { name: "Søren Solhaug Madsen", title: "Consultant – Business Development", email: "ssm@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Solhaug%20Madsen.jpeg" },
   { name: "Johnny B. Kristensen", title: "Service Technician", email: "jk@nicholaisen.dk", image: "/images/Medarbejder/Johnny%20B.%20Kristensen.jpeg" },
   { name: "Søren Baldtzar Rasmussen", title: "Service Technician", email: "sr@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Baldtzer%20Rasmussen.jpg" },
 ];
