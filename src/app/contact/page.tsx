@@ -158,7 +158,7 @@ function TeamSection({
 
 const management: Person[] = [
   { name: "Thomas Biehl", title: "CEO", email: "tb@nicholaisen.dk", image: "/images/Medarbejder/Thomas%20Biehl.jpeg" },
-  { name: "Henrik Ibsen", title: "COO", email: "hi@nicholaisen.dk", image: "/images/Medarbejder/Henrik%20Ibsen.jpg" },
+  { name: "Henrik Ibsen", title: "COO", email: "hib@nicholaisen.dk", image: "/images/Medarbejder/Henrik%20Ibsen.jpg" },
   { name: "Lars Sommer", title: "CFO", email: "ls@nicholaisen.dk", image: "/images/Medarbejder/Lars%20Sommer.jpeg" },
 ];
 
