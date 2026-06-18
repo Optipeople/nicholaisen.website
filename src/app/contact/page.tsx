@@ -208,6 +208,39 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
+          {/* International Sales */}
+          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
+            <p className="text-eyebrow text-[var(--color-ink-500)]">International Sales</p>
+            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              {international.map((person) => (
+                <div key={person.name}>
+                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
+                    {person.phone && (
+                      <a
+                        href={`tel:${person.phone.replace(/\s+/g, "")}`}
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      >
+                        <Phone className="size-3" aria-hidden />
+                        {person.phone}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Service & Spare Parts */}
           <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
             <p className="text-eyebrow text-[var(--color-ink-500)]">Service & Spare Parts</p>
@@ -297,6 +330,33 @@ const management = [
     title: "CFO",
     email: "ls@nicholaisen.dk",
     image: "/images/Medarbejder/Lars%20Sommer.jpeg",
+  },
+];
+
+const international = [
+  {
+    name: "Siim Türk",
+    title: "Sales Manager",
+    phone: "+372 5867 6119",
+    image: "/images/Medarbejder/Siim%20T%C3%BCrk.jpg",
+  },
+  {
+    name: "Søren Jørgensen",
+    title: "Business Development Manager",
+    phone: "+372 509 6780",
+    image: "/images/Medarbejder/S%C3%B8ren%20J%C3%B8rgensen.jpeg",
+  },
+  {
+    name: "John Tøttrup Christensen",
+    title: "Sales",
+    phone: "+372 510 9486",
+    image: "/images/Medarbejder/John%20T%C3%B8ttrup%20Christensen.jpg",
+  },
+  {
+    name: "Andrejus Petrusovas",
+    title: "Sales",
+    phone: "+370 605 79720",
+    image: "/images/Medarbejder/Andrejus%20Petrusovas.jpg",
   },
 ];
 
