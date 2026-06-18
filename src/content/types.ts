@@ -32,16 +32,16 @@ export type IndustryDoc = {
 };
 
 export type ContentSource = {
-  listServices(): Promise<ServiceDoc[]>;
-  getService(slug: string): Promise<ServiceDoc | null>;
-  getServicesByCategory(category: string): Promise<ServiceDoc[]>;
+  listServices(locale?: string): Promise<ServiceDoc[]>;
+  getService(slug: string, locale?: string): Promise<ServiceDoc | null>;
+  getServicesByCategory(category: string, locale?: string): Promise<ServiceDoc[]>;
 
-  listIndustries(): Promise<IndustryDoc[]>;
-  getIndustry(slug: string): Promise<IndustryDoc | null>;
+  listIndustries(locale?: string): Promise<IndustryDoc[]>;
+  getIndustry(slug: string, locale?: string): Promise<IndustryDoc | null>;
 
-  listCases(): Promise<CaseDoc[]>;
-  getCase(slug: string): Promise<CaseDoc | null>;
+  listCases(locale?: string): Promise<CaseDoc[]>;
+  getCase(slug: string, locale?: string): Promise<CaseDoc | null>;
 
-  listInsights(): Promise<InsightDoc[]>;
-  getInsight(slug: string): Promise<InsightDoc | null>;
+  listInsights(locale?: string): Promise<InsightDoc[]>;
+  getInsight(slug: string, locale?: string): Promise<InsightDoc | null>;
 };

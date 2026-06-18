@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "services": "Services",
+    "industries": "Industries",
+    "cases": "Cases",
+    "insights": "Insights",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Schedule a call",
+    "featured": {
+      "label": "Featured",
+      "title": "Opti — real-time insight from the shop floor",
+      "description": "Our digital platform turns machine data into the decisions that move the line.",
+      "link": "Explore Opti"
+    },
+    "servicesMenu": {
+      "businessDevelopment": { "title": "Business Development", "description": "Align direction, sequence investment, plan for growth." },
+      "framingWorkshops": { "title": "Framing Workshops", "description": "Align direction and priorities." },
+      "investmentAdvisory": { "title": "Investment Advisory", "description": "Secure ROI before you invest." },
+      "strategicRoadmapping": { "title": "Strategic Roadmapping", "description": "Plan capacity and growth." },
+      "productionOptimization": { "title": "Production Optimization", "description": "Throughput, quality, and uptime — without capex." },
+      "flowOptimization": { "title": "Flow Optimization", "description": "Remove bottlenecks fast." },
+      "capacityImprovement": { "title": "Capacity Improvement", "description": "Increase output without capex." },
+      "oeeEfficiency": { "title": "OEE & Efficiency", "description": "Reduce waste and downtime." },
+      "projectSolutions": { "title": "Project Solutions", "description": "From a single line to a turnkey factory." },
+      "customProductionLines": { "title": "Custom Production Lines", "description": "Built for your business goals." },
+      "automationIntegration": { "title": "Automation & Integration", "description": "Connect and scale operations." },
+      "turnkeyProjects": { "title": "Turnkey Projects", "description": "From idea to execution." },
+      "digitalPerformance": { "title": "Digital Performance", "description": "Opti — real-time insight from the shop floor." },
+      "productionInsights": { "title": "Production Insights", "description": "Real-time performance visibility." },
+      "predictiveMaintenance": { "title": "Predictive Maintenance", "description": "Prevent downtime before it happens." },
+      "continuousOptimization": { "title": "Continuous Optimization", "description": "Improve performance over time." },
+      "partnership": { "title": "Partnership", "description": "A long-term efficiency partner." },
+      "capacityPlanning": { "title": "Capacity Planning", "description": "Align strategy and investments." },
+      "collaboration": { "title": "Collaboration", "description": "Work with shared goals." },
+      "partnershipBd": { "title": "Business Development", "description": "Strengthen competitiveness." }
+    },
+    "industriesMenu": {
+      "doorsWindows": { "title": "Doors & Windows", "description": "Precision joinery at scale." },
+      "panelFurniture": { "title": "Panel & Furniture", "description": "Sheet-good throughput and finish." },
+      "solidWood": { "title": "Solid Wood", "description": "Hardwood drying through to assembly." }
+    }
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "getInTouch": "Get in touch",
+    "scheduleCall": "Schedule a call",
+    "exploreSolutions": "Explore solutions",
+    "learnMore": "Learn more",
+    "optional": "(optional)"
+  },
+  "footer": {
+    "description": "Nicholaisen provides sales, engineering and consulting of innovative machine solutions and service concepts for the wood, plastics and aluminum industries.",
+    "sections": {
+      "solutions": "Solutions",
+      "industries": "Industries",
+      "company": "Company",
+      "legal": "Legal"
+    },
+    "company": {
+      "about": "About",
+      "cases": "Cases",
+      "insights": "Insights",
+      "contact": "Contact"
+    },
+    "legal": {
+      "privacy": "Privacy",
+      "cookies": "Cookies"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Nicholaisen · Your efficiency partner",
+      "title": "Optimizing wood production from strategy to shop floor.",
+      "lede": "Sales, engineering, and consulting for innovative machine solutions in the wood, plastics, and aluminum industries. Together, we turn your data into intelligent optimizations and profitable investments.",
+      "primary": "Explore solutions",
+      "secondary": "Get in touch"
+    },
+    "entry": {
+      "services": "Services",
+      "industries": "Industries",
+      "schedule": "Schedule a call",
+      "findService": "Find a service",
+      "browseIndustry": "Browse by industry",
+      "talkEngineer": "Talk to an engineer",
+      "scheduleTitle": "A 30-minute conversation. No deck.",
+      "scheduleBody": "Tell us what you're running, where you're stuck, and what better would look like. We'll come back with what we'd look at first.",
+      "scheduleBtn": "Schedule a call"
+    },
+    "infoCards": {
+      "eyebrow": "How to get started",
+      "title": "Three ways in.",
+      "newToTitle": "New to Nicholaisen?",
+      "newToDesc": "Sales, engineering and consulting for the wood, plastic and aluminum industries — for over 50 years.",
+      "newToCta": "Learn what we do",
+      "optimizeTitle": "Ready to optimize?",
+      "optimizeDesc": "From a single bottleneck to a turnkey factory. Five service tracks built around your line.",
+      "optimizeCta": "Explore our services",
+      "optiTitle": "Need Opti insights?",
+      "optiDesc": "Real-time visibility into the shop floor, with a path to predictive maintenance and continuous improvement.",
+      "optiCta": "Discover Opti"
+    },
+    "cta": {
+      "eyebrow": "Engineered precision, told quietly.",
+      "title": "Tell us what you're trying to make better.",
+      "body": "Bring us the part of the line that frustrates you. We'll come back with what we'd look at first.",
+      "primary": "Schedule a call",
+      "secondary": "Explore solutions"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About",
+      "description": "Nicholaisen — sales, engineering and consulting for the wood, plastics and aluminum industries."
+    },
+    "hero": {
+      "eyebrow": "About",
+      "title": "Your efficiency partner.",
+      "lede": "Sales, engineering and consulting for innovative machine solutions in the wood, plastics and aluminum industries — for over 50 years."
+    },
+    "what": {
+      "eyebrow": "What we do",
+      "title": "Together with you, we analyze and illuminate your data, strengths and potentials.",
+      "body1": "We provide sales, engineering and consulting of innovative machine solutions and service concepts. We advise on intelligent optimizations and profitable investments — from the first conversation through long after commissioning.",
+      "body2": "Most of our customers stay with us for decades. That isn't loyalty for its own sake — it's the practical result of working with a partner who knows the line and shows up when something is off."
+    },
+    "how": {
+      "eyebrow": "How we work",
+      "title": "Three principles, applied repeatedly."
+    },
+    "principles": {
+      "dataTitle": "Data before opinions",
+      "dataDesc": "Every recommendation we make is anchored in what the line is actually doing — not what it should be doing on paper.",
+      "specificTitle": "Specific over impressive",
+      "specificDesc": "We'd rather promise a 6-minute changeover than a digital transformation. Specific is testable.",
+      "longTitle": "Long over fast",
+      "longDesc": "We work with our customers across investment cycles, not just projects. The good results compound."
+    },
+    "history": {
+      "eyebrow": "History",
+      "title": "Five decades, four turning points.",
+      "1972Year": "1972",
+      "1972Title": "Founded in Hørning",
+      "1972Desc": "Started as a sales agent for woodworking machinery. The hard-won shop-floor knowledge from that era still shapes how we work.",
+      "1990sYear": "1990s",
+      "1990sTitle": "Engineering moves in-house",
+      "1990sDesc": "Customers asked for more than equipment — they wanted layouts, integrations, results. Engineering became part of the offer.",
+      "2010sYear": "2010s",
+      "2010sTitle": "Consulting becomes a discipline",
+      "2010sDesc": "Pre-investment data analysis. Production optimization. Capacity planning. The advisory work formalized into named tracks.",
+      "todayYear": "Today",
+      "todayTitle": "Opti — digital performance",
+      "todayDesc": "Real-time machine data turned into the decisions that move the line. Where strategy and shop floor meet."
+    },
+    "location": {
+      "eyebrow": "Find us",
+      "title": "Hørning, Denmark."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Get in touch with Nicholaisen — schedule a call, ask a question, or find your contact person."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's talk about your line.",
+      "lede": "Schedule a call, ask a question, or find your direct contact. We reply within one business day."
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "role": "Role",
+      "interest": "I'm interested in",
+      "interestDefault": "Choose a topic",
+      "message": "What are you trying to make better?",
+      "messagePlaceholder": "A few sentences is plenty.",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "replyTime": "We reply within one business day.",
+      "successTitle": "We'll be in touch within one business day.",
+      "successBody": "For anything urgent, you can reach us directly at",
+      "successLabel": "Thank you",
+      "interests": {
+        "ligna": "Ligna 2026 — pre-book a meeting",
+        "businessDevelopment": "Business Development",
+        "productionOptimization": "Production Optimization",
+        "projectSolutions": "Project Solutions",
+        "digitalPerformance": "Digital Performance · Opti",
+        "partnership": "Partnership",
+        "other": "Something else"
+      }
+    },
+    "team": {
+      "eyebrow": "Your contact people",
+      "title": "Find your direct line."
+    }
+  },
+  "cases": {
+    "meta": {
+      "title": "Cases",
+      "description": "Real projects from the shop floor — how Nicholaisen has helped producers optimize, invest, and build."
+    },
+    "hero": {
+      "eyebrow": "Cases",
+      "title": "Real results from the shop floor.",
+      "lede": "A selection of projects — from single-line optimizations to greenfield factories."
+    },
+    "readCase": "Read case",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "outcome": "Outcome",
+    "metrics": "Key metrics",
+    "relatedServices": "Related services",
+    "allCases": "All cases"
+  },
+  "insights": {
+    "meta": {
+      "title": "Insights",
+      "description": "Practical thinking from Nicholaisen on production optimization, investment decisions and the wood industries."
+    },
+    "hero": {
+      "eyebrow": "Insights",
+      "title": "Practical thinking from the shop floor.",
+      "lede": "Articles on production, investment, and the industries we work in."
+    },
+    "readingTime": "{minutes} min read",
+    "allInsights": "All insights",
+    "readInsight": "Read insight"
+  },
+  "services": {
+    "meta": {
+      "title": "Services",
+      "description": "Five service tracks built around your production — from strategy to digital performance."
+    },
+    "hero": {
+      "eyebrow": "Services",
+      "title": "Five tracks, one team.",
+      "lede": "From strategic direction to real-time shop-floor data — built around your operation."
+    },
+    "learnMore": "Learn more",
+    "relatedCases": "Related cases",
+    "allServices": "All services"
+  },
+  "industries": {
+    "relatedServices": "Services for this industry",
+    "relatedCases": "Cases in this industry"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How Nicholaisen collects, uses, and protects your personal data."
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "description": "How Nicholaisen uses cookies on this website."
+    }
+  }
+}

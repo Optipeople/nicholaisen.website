@@ -10,15 +10,15 @@ import type { ContentSource } from "@/content/types";
 
 const adapter: ContentSource = mdxAdapter;
 
-export const listServices = adapter.listServices;
-export const getService = adapter.getService;
-export const getServicesByCategory = adapter.getServicesByCategory;
+export const listServices = adapter.listServices.bind(adapter);
+export const getService = adapter.getService.bind(adapter);
+export const getServicesByCategory = adapter.getServicesByCategory.bind(adapter);
 
-export const listIndustries = adapter.listIndustries;
-export const getIndustry = adapter.getIndustry;
+export const listIndustries = adapter.listIndustries.bind(adapter);
+export const getIndustry = adapter.getIndustry.bind(adapter);
 
-export const listCases = adapter.listCases;
-export const getCase = adapter.getCase;
+export const listCases = adapter.listCases.bind(adapter);
+export const getCase = adapter.getCase.bind(adapter);
 
-export const listInsights = adapter.listInsights;
-export const getInsight = adapter.getInsight;
+export const listInsights = adapter.listInsights.bind(adapter);
+export const getInsight = adapter.getInsight.bind(adapter);

@@ -48,9 +48,28 @@ async function listMdxFiles(dir: string): Promise<string[]> {
   return out;
 }
 
-async function loadServices(): Promise<ServiceDoc[]> {
-  const dir = path.join(CONTENT_ROOT, "services");
-  const files = await listMdxFiles(dir);
+/** Returns locale-specific dir if it exists, otherwise falls back to English root dir. */
+function contentDir(type: string, locale = "en"): string {
+  if (locale === "en") return path.join(CONTENT_ROOT, type);
+  const localePath = path.join(CONTENT_ROOT, locale, type);
+  return localePath;
+}
+
+/** Merges locale-specific files with English fallback (locale wins on same slug). */
+async function mergedMdxFiles(type: string, locale: string): Promise<string[]> {
+  const enFiles = await listMdxFiles(path.join(CONTENT_ROOT, type));
+  if (locale === "en") return enFiles;
+  const localeFiles = await listMdxFiles(path.join(CONTENT_ROOT, locale, type));
+  if (localeFiles.length === 0) return enFiles;
+  // Build slug→path map: locale overrides English
+  const bySlug = new Map<string, string>();
+  for (const f of enFiles) bySlug.set(path.basename(f), f);
+  for (const f of localeFiles) bySlug.set(path.basename(f), f);
+  return Array.from(bySlug.values());
+}
+
+async function loadServices(locale = "en"): Promise<ServiceDoc[]> {
+  const files = await mergedMdxFiles("services", locale);
   const docs = await Promise.all(
     files.map(async (file) => {
       const { data, content } = await readMdx(file);
@@ -68,9 +87,8 @@ async function loadServices(): Promise<ServiceDoc[]> {
   return docs.sort((a, b) => (a.frontmatter.order ?? 99) - (b.frontmatter.order ?? 99));
 }
 
-async function loadCases(): Promise<CaseDoc[]> {
-  const dir = path.join(CONTENT_ROOT, "cases");
-  const files = await listMdxFiles(dir);
+async function loadCases(locale = "en"): Promise<CaseDoc[]> {
+  const files = await mergedMdxFiles("cases", locale);
   const docs = await Promise.all(
     files.map(async (file) => {
       const { data, content } = await readMdx(file);
@@ -91,9 +109,8 @@ async function loadCases(): Promise<CaseDoc[]> {
   );
 }
 
-async function loadInsights(): Promise<InsightDoc[]> {
-  const dir = path.join(CONTENT_ROOT, "insights");
-  const files = await listMdxFiles(dir);
+async function loadInsights(locale = "en"): Promise<InsightDoc[]> {
+  const files = await mergedMdxFiles("insights", locale);
   const docs = await Promise.all(
     files.map(async (file) => {
       const { data, content } = await readMdx(file);
@@ -114,9 +131,8 @@ async function loadInsights(): Promise<InsightDoc[]> {
   );
 }
 
-async function loadIndustries(): Promise<IndustryDoc[]> {
-  const dir = path.join(CONTENT_ROOT, "industries");
-  const files = await listMdxFiles(dir);
+async function loadIndustries(locale = "en"): Promise<IndustryDoc[]> {
+  const files = await mergedMdxFiles("industries", locale);
   const docs = await Promise.all(
     files.map(async (file) => {
       const { data, content } = await readMdx(file);
@@ -135,39 +151,31 @@ async function loadIndustries(): Promise<IndustryDoc[]> {
 }
 
 export const mdxAdapter: ContentSource = {
-  async listServices() {
-    return loadServices();
-  },
-  async getService(slug: string) {
-    const all = await loadServices();
+  async listServices(locale?: string) { return loadServices(locale); },
+  async getService(slug: string, locale?: string) {
+    const all = await loadServices(locale);
     return all.find((d) => d.frontmatter.slug === slug) ?? null;
   },
-  async getServicesByCategory(category: string) {
-    const all = await loadServices();
+  async getServicesByCategory(category: string, locale?: string) {
+    const all = await loadServices(locale);
     return all.filter((d) => d.frontmatter.parent === category);
   },
 
-  async listIndustries() {
-    return loadIndustries();
-  },
-  async getIndustry(slug: string) {
-    const all = await loadIndustries();
+  async listIndustries(locale?: string) { return loadIndustries(locale); },
+  async getIndustry(slug: string, locale?: string) {
+    const all = await loadIndustries(locale);
     return all.find((d) => d.frontmatter.slug === slug) ?? null;
   },
 
-  async listCases() {
-    return loadCases();
-  },
-  async getCase(slug: string) {
-    const all = await loadCases();
+  async listCases(locale?: string) { return loadCases(locale); },
+  async getCase(slug: string, locale?: string) {
+    const all = await loadCases(locale);
     return all.find((d) => d.frontmatter.slug === slug) ?? null;
   },
 
-  async listInsights() {
-    return loadInsights();
-  },
-  async getInsight(slug: string) {
-    const all = await loadInsights();
+  async listInsights(locale?: string) { return loadInsights(locale); },
+  async getInsight(slug: string, locale?: string) {
+    const all = await loadInsights(locale);
     return all.find((d) => d.frontmatter.slug === slug) ?? null;
   },
 };

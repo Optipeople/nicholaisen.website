@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "services": "Ydelser",
+    "industries": "Brancher",
+    "cases": "Cases",
+    "insights": "Indsigt",
+    "about": "Om os",
+    "contact": "Kontakt",
+    "cta": "Book et møde",
+    "featured": {
+      "label": "Fremhævet",
+      "title": "Opti — realtidsindsigt fra produktionsgulvet",
+      "description": "Vores digitale platform forvandler maskindata til de beslutninger, der flytter linjen.",
+      "link": "Udforsk Opti"
+    },
+    "servicesMenu": {
+      "businessDevelopment": { "title": "Forretningsudvikling", "description": "Afstem retning, planlæg investeringer, skab vækst." },
+      "framingWorkshops": { "title": "Rammeværksteder", "description": "Afstem retning og prioriteter." },
+      "investmentAdvisory": { "title": "Investeringsrådgivning", "description": "Sikr ROI, inden du investerer." },
+      "strategicRoadmapping": { "title": "Strategisk Roadmap", "description": "Planlæg kapacitet og vækst." },
+      "productionOptimization": { "title": "Produktionsoptimering", "description": "Gennemløb, kvalitet og oppetid — uden capex." },
+      "flowOptimization": { "title": "Flowoptimering", "description": "Fjern flaskehalse hurtigt." },
+      "capacityImprovement": { "title": "Kapacitetsforbedring", "description": "Øg output uden capex." },
+      "oeeEfficiency": { "title": "OEE & Effektivitet", "description": "Reducer spild og nedetid." },
+      "projectSolutions": { "title": "Projektløsninger", "description": "Fra en enkelt linje til en nøglefærdig fabrik." },
+      "customProductionLines": { "title": "Skræddersyede Produktionslinjer", "description": "Bygget til dine forretningsmål." },
+      "automationIntegration": { "title": "Automation & Integration", "description": "Forbind og skalér operationer." },
+      "turnkeyProjects": { "title": "Nøglefærdige Projekter", "description": "Fra idé til eksekvering." },
+      "digitalPerformance": { "title": "Digital Performance", "description": "Opti — realtidsindsigt fra produktionsgulvet." },
+      "productionInsights": { "title": "Produktionsindsigt", "description": "Realtidssynlighed af performance." },
+      "predictiveMaintenance": { "title": "Præventiv Vedligeholdelse", "description": "Forebyg nedetid, inden den sker." },
+      "continuousOptimization": { "title": "Løbende Optimering", "description": "Forbedre performance over tid." },
+      "partnership": { "title": "Partnerskab", "description": "En langsigtet effektivitetspartner." },
+      "capacityPlanning": { "title": "Kapacitetsplanlægning", "description": "Afstem strategi og investeringer." },
+      "collaboration": { "title": "Samarbejde", "description": "Arbejd med fælles mål." },
+      "partnershipBd": { "title": "Forretningsudvikling", "description": "Styrk konkurrenceevnen." }
+    },
+    "industriesMenu": {
+      "doorsWindows": { "title": "Døre & Vinduer", "description": "Præcisionssnedkeri i stor skala." },
+      "panelFurniture": { "title": "Plade & Møbler", "description": "Gennemløb og finish på pladematerialer." },
+      "solidWood": { "title": "Massivtræ", "description": "Fra tørring af hårdttræ til samling." }
+    }
+  },
+  "common": {
+    "readMore": "Læs mere",
+    "viewAll": "Se alle",
+    "getInTouch": "Kontakt os",
+    "scheduleCall": "Book et møde",
+    "exploreSolutions": "Udforsk løsninger",
+    "learnMore": "Læs mere",
+    "optional": "(valgfri)"
+  },
+  "footer": {
+    "description": "Nicholaisen leverer salg, ingeniørservice og rådgivning om innovative maskinløsninger og servicekoncept til træ-, plast- og aluminiumindustrien.",
+    "sections": {
+      "solutions": "Løsninger",
+      "industries": "Brancher",
+      "company": "Virksomhed",
+      "legal": "Juridisk"
+    },
+    "company": {
+      "about": "Om os",
+      "cases": "Cases",
+      "insights": "Indsigt",
+      "contact": "Kontakt"
+    },
+    "legal": {
+      "privacy": "Privatlivspolitik",
+      "cookies": "Cookiepolitik"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Nicholaisen · Din effektivitetspartner",
+      "title": "Optimering af træproduktion fra strategi til produktionsgulv.",
+      "lede": "Salg, ingeniørservice og rådgivning om innovative maskinløsninger til træ-, plast- og aluminiumindustrien. Sammen forvandler vi dine data til intelligente optimeringer og profitable investeringer.",
+      "primary": "Udforsk løsninger",
+      "secondary": "Kontakt os"
+    },
+    "entry": {
+      "services": "Ydelser",
+      "industries": "Brancher",
+      "schedule": "Book et møde",
+      "findService": "Find en ydelse",
+      "browseIndustry": "Gennemse efter branche",
+      "talkEngineer": "Tal med en ingeniør",
+      "scheduleTitle": "En 30-minutters samtale. Uden præsentation.",
+      "scheduleBody": "Fortæl os, hvad du kører, hvor du sidder fast, og hvad bedre ser ud. Vi vender tilbage med, hvad vi ville kigge på først.",
+      "scheduleBtn": "Book et møde"
+    },
+    "infoCards": {
+      "eyebrow": "Sådan kommer du i gang",
+      "title": "Tre veje ind.",
+      "newToTitle": "Ny til Nicholaisen?",
+      "newToDesc": "Salg, ingeniørservice og rådgivning til træ-, plast- og aluminiumindustrien — i over 50 år.",
+      "newToCta": "Lær hvad vi laver",
+      "optimizeTitle": "Klar til at optimere?",
+      "optimizeDesc": "Fra en enkelt flaskehals til en nøglefærdig fabrik. Fem servicelinjer bygget til din produktion.",
+      "optimizeCta": "Udforsk vores ydelser",
+      "optiTitle": "Brug for Opti-indsigt?",
+      "optiDesc": "Realtidssynlighed på produktionsgulvet med en vej til præventiv vedligeholdelse og løbende forbedring.",
+      "optiCta": "Opdag Opti"
+    },
+    "cta": {
+      "eyebrow": "Engineered precision, told quietly.",
+      "title": "Fortæl os, hvad du vil gøre bedre.",
+      "body": "Bring os den del af linjen, der frustrerer dig. Vi vender tilbage med, hvad vi ville kigge på først.",
+      "primary": "Book et møde",
+      "secondary": "Udforsk løsninger"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Om os",
+      "description": "Nicholaisen — salg, ingeniørservice og rådgivning til træ-, plast- og aluminiumindustrien."
+    },
+    "hero": {
+      "eyebrow": "Om os",
+      "title": "Din effektivitetspartner.",
+      "lede": "Salg, ingeniørservice og rådgivning om innovative maskinløsninger til træ-, plast- og aluminiumindustrien — i over 50 år."
+    },
+    "what": {
+      "eyebrow": "Hvad vi gør",
+      "title": "Sammen med dig analyserer og belyser vi dine data, styrker og potentialer.",
+      "body1": "Vi leverer salg, ingeniørservice og rådgivning om innovative maskinløsninger og servicekoncept. Vi rådgiver om intelligente optimeringer og profitable investeringer — fra den første samtale og lang tid efter idriftsættelse.",
+      "body2": "De fleste af vores kunder er hos os i årtier. Det er ikke loyalitet for loyalitetens skyld — det er det praktiske resultat af at arbejde med en partner, der kender linjen og møder op, når noget er galt."
+    },
+    "how": {
+      "eyebrow": "Sådan arbejder vi",
+      "title": "Tre principper, anvendt igen og igen."
+    },
+    "principles": {
+      "dataTitle": "Data frem for meninger",
+      "dataDesc": "Enhver anbefaling vi giver er forankret i, hvad linjen faktisk gør — ikke hvad den burde gøre på papiret.",
+      "specificTitle": "Konkret frem for imponerende",
+      "specificDesc": "Vi lover hellere en 6-minutters omstilling end en digital transformation. Det konkrete kan testes.",
+      "longTitle": "Langsigtet frem for hurtigt",
+      "longDesc": "Vi arbejder med vores kunder på tværs af investeringscyklusser, ikke kun projekter. De gode resultater fordobles."
+    },
+    "history": {
+      "eyebrow": "Historie",
+      "title": "Fem årtier, fire vendepunkter.",
+      "1972Year": "1972",
+      "1972Title": "Grundlagt i Hørning",
+      "1972Desc": "Startede som salgsagent for træbearbejdningsmaskiner. Den hårdttjente viden fra produktionsgulvet fra den tid former stadig måden, vi arbejder på.",
+      "1990sYear": "1990erne",
+      "1990sTitle": "Ingeniørservice flyttes ind",
+      "1990sDesc": "Kunderne bad om mere end udstyr — de ville have layouts, integrationer, resultater. Ingeniørservice blev en del af tilbuddet.",
+      "2010sYear": "2010erne",
+      "2010sTitle": "Rådgivning bliver en disciplin",
+      "2010sDesc": "Dataanalyse før investering. Produktionsoptimering. Kapacitetsplanlægning. Det rådgivende arbejde formaliseret i navngivne spor.",
+      "todayYear": "I dag",
+      "todayTitle": "Opti — digital performance",
+      "todayDesc": "Realtids maskindata omsat til de beslutninger, der flytter linjen. Hvor strategi og produktionsgulv mødes."
+    },
+    "location": {
+      "eyebrow": "Find os",
+      "title": "Hørning, Danmark."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt",
+      "description": "Kontakt Nicholaisen — book et møde, stil et spørgsmål eller find din kontaktperson."
+    },
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Lad os tale om din produktion.",
+      "lede": "Book et møde, stil et spørgsmål eller find din direkte kontakt. Vi svarer inden for én arbejdsdag."
+    },
+    "form": {
+      "title": "Send os en besked",
+      "name": "Navn",
+      "company": "Virksomhed",
+      "email": "E-mail",
+      "role": "Stilling",
+      "interest": "Jeg er interesseret i",
+      "interestDefault": "Vælg et emne",
+      "message": "Hvad forsøger du at gøre bedre?",
+      "messagePlaceholder": "Nogle få sætninger er nok.",
+      "submit": "Send besked",
+      "submitting": "Sender…",
+      "replyTime": "Vi svarer inden for én arbejdsdag.",
+      "successTitle": "Vi vender tilbage inden for én arbejdsdag.",
+      "successBody": "For hastesager kan du nå os direkte på",
+      "successLabel": "Tak",
+      "interests": {
+        "ligna": "Ligna 2026 — forbooking af møde",
+        "businessDevelopment": "Forretningsudvikling",
+        "productionOptimization": "Produktionsoptimering",
+        "projectSolutions": "Projektløsninger",
+        "digitalPerformance": "Digital Performance · Opti",
+        "partnership": "Partnerskab",
+        "other": "Noget andet"
+      }
+    },
+    "team": {
+      "eyebrow": "Dine kontaktpersoner",
+      "title": "Find din direkte linje."
+    }
+  },
+  "cases": {
+    "meta": {
+      "title": "Cases",
+      "description": "Virkelige projekter fra produktionsgulvet — hvordan Nicholaisen har hjulpet producenter med at optimere, investere og bygge."
+    },
+    "hero": {
+      "eyebrow": "Cases",
+      "title": "Virkelige resultater fra produktionsgulvet.",
+      "lede": "Et udvalg af projekter — fra enkelt-linje optimeringer til nøglefærdige fabrikker."
+    },
+    "readCase": "Læs case",
+    "challenge": "Udfordring",
+    "approach": "Tilgang",
+    "outcome": "Resultat",
+    "metrics": "Nøgletal",
+    "relatedServices": "Relaterede ydelser",
+    "allCases": "Alle cases"
+  },
+  "insights": {
+    "meta": {
+      "title": "Indsigt",
+      "description": "Praktisk tænkning fra Nicholaisen om produktionsoptimering, investeringsbeslutninger og træindustrien."
+    },
+    "hero": {
+      "eyebrow": "Indsigt",
+      "title": "Praktisk tænkning fra produktionsgulvet.",
+      "lede": "Artikler om produktion, investering og de brancher, vi arbejder i."
+    },
+    "readingTime": "{minutes} min læsetid",
+    "allInsights": "Alle artikler",
+    "readInsight": "Læs artikel"
+  },
+  "services": {
+    "meta": {
+      "title": "Ydelser",
+      "description": "Fem servicelinjer bygget til din produktion — fra strategi til digital performance."
+    },
+    "hero": {
+      "eyebrow": "Ydelser",
+      "title": "Fem spor, ét team.",
+      "lede": "Fra strategisk retning til realtidsdata fra produktionsgulvet — bygget til din operation."
+    },
+    "learnMore": "Læs mere",
+    "relatedCases": "Relaterede cases",
+    "allServices": "Alle ydelser"
+  },
+  "industries": {
+    "relatedServices": "Ydelser til denne branche",
+    "relatedCases": "Cases i denne branche"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privatlivspolitik",
+      "description": "Sådan indsamler, bruger og beskytter Nicholaisen dine personoplysninger."
+    },
+    "cookies": {
+      "title": "Cookiepolitik",
+      "description": "Sådan bruger Nicholaisen cookies på denne hjemmeside."
+    }
+  }
+}

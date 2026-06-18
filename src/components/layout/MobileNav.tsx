@@ -1,14 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { primaryNav } from "@/lib/nav";
 import { LinkButton } from "@/components/ui/Button";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("nav");
+
+  const navLabel = (section: { href: string; title: string }) => {
+    if (section.href === "/services") return t("services");
+    if (section.href === "/industries") return t("industries");
+    if (section.href === "/cases") return t("cases");
+    if (section.href === "/insights") return t("insights");
+    if (section.href === "/about") return t("about");
+    return section.title;
+  };
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -43,11 +54,11 @@ export function MobileNav() {
                 return (
                   <Link
                     key={section.href}
-                    href={section.href}
+                    href={section.href as "/"}
                     onClick={() => setOpen(false)}
                     className="block rounded-md px-4 py-3 text-base font-medium text-[var(--color-ink-900)] hover:bg-[var(--color-paper-dark)]"
                   >
-                    {section.title}
+                    {navLabel(section)}
                   </Link>
                 );
               }
@@ -56,13 +67,13 @@ export function MobileNav() {
                 <details key={section.href} className="group rounded-md">
                   <summary className="flex cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 text-base font-medium text-[var(--color-ink-900)] hover:bg-[var(--color-paper-dark)]">
                     <Link
-                      href={section.href}
+                      href={section.href as "/"}
                       onClick={(e) => {
                         e.stopPropagation();
                         setOpen(false);
                       }}
                     >
-                      {section.title}
+                      {navLabel(section)}
                     </Link>
                     <ChevronDown className="size-4 transition-transform group-open:rotate-180" />
                   </summary>
@@ -71,21 +82,25 @@ export function MobileNav() {
                       ? section.categories.map((cat) => (
                           <div key={cat.href} className="mt-2">
                             <Link
-                              href={cat.href}
+                              href={cat.href as "/"}
                               onClick={() => setOpen(false)}
                               className="block rounded-md px-3 py-2 text-sm font-semibold text-[var(--color-navy-900)]"
                             >
-                              {cat.title}
+                              {cat.key
+                                ? t(`servicesMenu.${cat.key}.title` as any)
+                                : cat.title}
                             </Link>
                             <ul className="space-y-0.5">
                               {cat.items.map((item) => (
                                 <li key={item.href}>
                                   <Link
-                                    href={item.href}
+                                    href={item.href as "/"}
                                     onClick={() => setOpen(false)}
                                     className="block rounded-md px-5 py-2 text-sm text-[var(--color-ink-700)] hover:bg-[var(--color-paper-dark)]"
                                   >
-                                    {item.title}
+                                    {item.key
+                                      ? t(`servicesMenu.${item.key}.title` as any)
+                                      : item.title}
                                   </Link>
                                 </li>
                               ))}
@@ -95,11 +110,13 @@ export function MobileNav() {
                       : sub.map((item) => (
                           <Link
                             key={item.href}
-                            href={item.href}
+                            href={item.href as "/"}
                             onClick={() => setOpen(false)}
                             className="block rounded-md px-4 py-2 text-sm text-[var(--color-ink-700)] hover:bg-[var(--color-paper-dark)]"
                           >
-                            {item.title}
+                            {(item as any).key
+                              ? t(`industriesMenu.${(item as any).key}.title` as any)
+                              : item.title}
                           </Link>
                         ))}
                   </div>
@@ -110,7 +127,7 @@ export function MobileNav() {
 
           <div className="mt-8 border-t border-[var(--color-ink-300)]/30 pt-6">
             <LinkButton href="/contact" variant="primary" size="md" className="w-full" withArrow>
-              Schedule a call
+              {t("cta")}
             </LinkButton>
           </div>
         </Dialog.Content>
