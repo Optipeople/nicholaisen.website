@@ -208,6 +208,39 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
+          {/* Service & Spare Parts */}
+          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
+            <p className="text-eyebrow text-[var(--color-ink-500)]">Service & Spare Parts</p>
+            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              {service.map((person) => (
+                <div key={person.name}>
+                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
+                    {person.email && (
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      >
+                        <Mail className="size-3" aria-hidden />
+                        {person.email}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Finance */}
           <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
             <p className="text-eyebrow text-[var(--color-ink-500)]">Finance</p>
@@ -264,6 +297,45 @@ const management = [
     title: "CFO",
     email: "ls@nicholaisen.dk",
     image: "/images/Medarbejder/Lars%20Sommer.jpeg",
+  },
+];
+
+const service = [
+  {
+    name: "Tobias Kjærgaard",
+    title: "Service Manager",
+    email: "tk@nicholaisen.dk",
+    image: "/images/Medarbejder/Tobias%20Kj%C3%A6rgaard.jpeg",
+  },
+  {
+    name: "Lars Skaarup Petersen",
+    title: "Spare Parts Manager",
+    email: "lp@nicholaisen.dk",
+    image: "/images/Medarbejder/Lars%20Skaarup%20Petersen.jpeg",
+  },
+  {
+    name: "Søren Solhaug Madsen",
+    title: "Consultant – Business Development",
+    email: "sm@nicholaisen.dk",
+    image: "/images/Medarbejder/S%C3%B8ren%20Solhaug%20Madsen.jpeg",
+  },
+  {
+    name: "Gitte Sandholm",
+    title: "Office Assistant",
+    email: "gs@nicholaisen.dk",
+    image: "/images/Medarbejder/Gitte%20Sandholm.jpeg",
+  },
+  {
+    name: "Johnny B. Kristensen",
+    title: "Service Technician",
+    email: "jk@nicholaisen.dk",
+    image: "/images/Medarbejder/Johnny%20B.%20Kristensen.jpeg",
+  },
+  {
+    name: "Søren Baldtzar Rasmussen",
+    title: "Service Technician",
+    email: "sr@nicholaisen.dk",
+    image: "/images/Medarbejder/S%C3%B8ren%20Baldtzer%20Rasmussen.jpg",
   },
 ];
 
