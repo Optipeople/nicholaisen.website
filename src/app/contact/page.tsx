@@ -208,6 +208,38 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
+          {/* Finance */}
+          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
+            <p className="text-eyebrow text-[var(--color-ink-500)]">Finance</p>
+            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              {finance.map((person) => (
+                <div key={person.name}>
+                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
+                    {person.email && (
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      >
+                        <Mail className="size-3" aria-hidden />
+                        {person.email}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </Container>
       </Section>
     </>
@@ -232,6 +264,21 @@ const management = [
     title: "CFO",
     email: "ls@nicholaisen.dk",
     image: "/images/Medarbejder/Lars%20Sommer.jpeg",
+  },
+];
+
+const finance = [
+  {
+    name: "Ole Faurholt Rasmussen",
+    title: "Accountant",
+    email: "or@nicholaisen.dk",
+    image: "/images/Medarbejder/Ole%20Faurholt%20Rasmussen.jpeg",
+  },
+  {
+    name: "Andreas Wrona",
+    title: "Financial Controller",
+    email: "aw@nicholaisen.dk",
+    image: "/images/Medarbejder/Andreas%20Wrona.jpg",
   },
 ];
 
