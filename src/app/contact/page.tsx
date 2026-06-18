@@ -358,6 +358,12 @@ const international = [
     phone: "+370 605 79720",
     image: "/images/Medarbejder/Andrejus%20Petrusovas.jpg",
   },
+  {
+    name: "Erik Nord",
+    title: "Sales – Nicholaisen Sweden",
+    phone: "+46 72 70 17 300",
+    image: "/images/Medarbejder/Erik%20Nord.jpg",
+  },
 ];
 
 const service = [
