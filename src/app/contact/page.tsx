@@ -206,7 +206,7 @@ const service: Person[] = [
 const marketing: Person[] = [
   { name: "Jacob Vedsø", title: "Communications & Marketing Manager", email: "jv@nicholaisen.dk", image: "/images/Medarbejder/Jacob%20Vedsø.jpg" },
   { name: "Simone Jørgensen", title: "Marketing Coordinator", email: "simone@nicholaisen.dk", image: "/images/Medarbejder/Simone%20J%C3%B8rgensen.jpg" },
-  { name: "Dennis Harløv Madsen", title: "Market Manager – Telemarketing", email: "dm@nicholaisen.dk", image: "/images/Medarbejder/Dennis%20Harl%C3%B8v%20Madsen.jpg" },
+  { name: "Dennis Harløv Madsen", title: "Market Manager – Telemarketing", email: "dhm@nicholaisen.dk", image: "/images/Medarbejder/Dennis%20Harl%C3%B8v%20Madsen.jpg" },
 ];
 
 const finance: Person[] = [
