@@ -173,7 +173,7 @@ const salesDenmark: Person[] = [
   { name: "Bo Rasmussen", title: "Sales – Door & Window Industry", email: "br@nicholaisen.dk", image: "/images/Medarbejder/Bo%20Rasmusen.png" },
   { name: "Peter Haahr Larsen", title: "Sales – Door & Window Industry", email: "phl@nicholaisen.dk", image: "/images/Medarbejder/Peter%20Haahr.jpeg" },
   { name: "Jørn Biehl", title: "Sales – Wood Drying", image: "/images/Medarbejder/J%C3%B8rn%20Biehl.jpeg" },
-  { name: "Claus Capion", title: "Sales – Automation", email: "cc@nicholaisen.dk", image: "/images/Medarbejder/Claus%20Capion.jpeg" },
+  { name: "Claus Capion", title: "Sales – Automation", email: "cca@nicholaisen.dk", image: "/images/Medarbejder/Claus%20Capion.jpeg" },
   { name: "René Beldam", title: "Sales – NichoMachines", email: "rb@nicholaisen.dk", image: "/images/Medarbejder/Ren%C3%A9%20Beldam.jpeg" },
 ];
 
