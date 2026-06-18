@@ -172,7 +172,7 @@ const salesDenmark: Person[] = [
   { name: "Bo Bruun Holm", title: "Sales – Plate & Furniture Industry", email: "bbh@nicholaisen.dk", phone: "+45 40 54 47 64", image: "/images/Medarbejder/Bo%20Holm.jpeg" },
   { name: "Mark Dige Høgh", title: "Sales – Plate & Furniture Industry", email: "mdh@nicholaisen.dk", phone: "+45 26 16 92 80", image: "/images/Medarbejder/Mark%20Dige.jpg" },
   { name: "Bo Rasmussen", title: "Sales – Door & Window Industry", email: "br@nicholaisen.dk", phone: "+45 40 82 55 45", image: "/images/Medarbejder/Bo%20Rasmusen.png" },
-  { name: "Peter Haahr Larsen", title: "Sales – Door & Window Industry", email: "phl@nicholaisen.dk", image: "/images/Medarbejder/Peter%20Haahr.jpeg" },
+  { name: "Peter Haahr Larsen", title: "Sales – Door & Window Industry", email: "phl@nicholaisen.dk", phone: "+45 40 96 47 11", image: "/images/Medarbejder/Peter%20Haahr.jpeg" },
   { name: "Jørn Biehl", title: "Sales – Wood Drying", image: "/images/Medarbejder/J%C3%B8rn%20Biehl.jpeg" },
   { name: "Claus Capion", title: "Sales – Automation", email: "cca@nicholaisen.dk", phone: "+45 40 88 00 61", image: "/images/Medarbejder/Claus%20Capion.jpeg" },
   { name: "René Beldam", title: "Sales – NichoMachines", email: "rb@nicholaisen.dk", phone: "+45 24 59 03 50", image: "/images/Medarbejder/Ren%C3%A9%20Beldam.jpeg" },
