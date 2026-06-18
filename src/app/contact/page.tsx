@@ -164,7 +164,7 @@ const management: Person[] = [
 const administration: Person[] = [
   { name: "Kathrine Hovesen", title: "PA to CEO", email: "kh@nicholaisen.dk", image: "/images/Medarbejder/Kathrine%20Hovesen.jpeg" },
   { name: "Svenja Hartmann", title: "Project Coordinator", email: "sh@nicholaisen.dk", image: "/images/Medarbejder/Svenja%20Hartmann.jpeg" },
-  { name: "Gitte Sandholm", title: "Office Assistant", email: "gs@nicholaisen.dk", image: "/images/Medarbejder/Gitte%20Sandholm.jpeg" },
+  { name: "Gitte Sandholm", title: "Office Assistant", email: "gis@nicholaisen.dk", image: "/images/Medarbejder/Gitte%20Sandholm.jpeg" },
 ];
 
 const salesDenmark: Person[] = [
