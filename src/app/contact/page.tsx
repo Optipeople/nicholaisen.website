@@ -81,10 +81,10 @@ export default function ContactPage() {
           </p>
 
           <TeamSection label="Leadership" people={management} />
+          <TeamSection label="Administration" people={administration} />
           <TeamSection label="Sales – Denmark" people={salesDenmark} />
           <TeamSection label="Sales – Baltic" people={baltic} usePhone />
           <TeamSection label="Sales – Sweden" people={sweden} usePhone />
-          <TeamSection label="Project Management" people={projectManagement} />
           <TeamSection label="Innovation & Efficiency" people={innovation} />
           <TeamSection label="Service & Spare Parts" people={service} />
           <TeamSection label="Marketing" people={marketing} />
@@ -159,7 +159,12 @@ const management: Person[] = [
   { name: "Thomas Biehl", title: "CEO", email: "tb@nicholaisen.dk", image: "/images/Medarbejder/Thomas%20Biehl.jpeg" },
   { name: "Henrik Ibsen", title: "COO", email: "hi@nicholaisen.dk", image: "/images/Medarbejder/Henrik%20Ibsen.jpg" },
   { name: "Lars Sommer", title: "CFO", email: "ls@nicholaisen.dk", image: "/images/Medarbejder/Lars%20Sommer.jpeg" },
+];
+
+const administration: Person[] = [
   { name: "Kathrine Hovesen", title: "PA to CEO", email: "kh@nicholaisen.dk", image: "/images/Medarbejder/Kathrine%20Hovesen.jpeg" },
+  { name: "Svenja Hartmann", title: "Project Coordinator", email: "sh@nicholaisen.dk", image: "/images/Medarbejder/Svenja%20Hartmann.jpeg" },
+  { name: "Gitte Sandholm", title: "Office Assistant", email: "gs@nicholaisen.dk", image: "/images/Medarbejder/Gitte%20Sandholm.jpeg" },
 ];
 
 const salesDenmark: Person[] = [
@@ -183,9 +188,6 @@ const sweden: Person[] = [
   { name: "Erik Nord", title: "Sales", phone: "+46 72 70 17 300", image: "/images/Medarbejder/Erik%20Nord.jpg" },
 ];
 
-const projectManagement: Person[] = [
-  { name: "Svenja Hartmann", title: "Project Coordinator", email: "sh@nicholaisen.dk", image: "/images/Medarbejder/Svenja%20Hartmann.jpeg" },
-];
 
 const innovation: Person[] = [
   { name: "Kenneth Bech Sørensen", title: "Project Manager – Data", email: "ks@nicholaisen.dk", image: "/images/Medarbejder/Kenneth%20Bech%20S%C3%B8rensen.jpeg" },
@@ -196,7 +198,6 @@ const service: Person[] = [
   { name: "Tobias Kjærgaard", title: "Service Manager", email: "tk@nicholaisen.dk", image: "/images/Medarbejder/Tobias%20Kj%C3%A6rgaard.jpeg" },
   { name: "Lars Skaarup Petersen", title: "Spare Parts Manager", email: "lp@nicholaisen.dk", image: "/images/Medarbejder/Lars%20Skaarup%20Petersen.jpeg" },
   { name: "Søren Solhaug Madsen", title: "Consultant – Business Development", email: "sm@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Solhaug%20Madsen.jpeg" },
-  { name: "Gitte Sandholm", title: "Office Assistant", email: "gs@nicholaisen.dk", image: "/images/Medarbejder/Gitte%20Sandholm.jpeg" },
   { name: "Johnny B. Kristensen", title: "Service Technician", email: "jk@nicholaisen.dk", image: "/images/Medarbejder/Johnny%20B.%20Kristensen.jpeg" },
   { name: "Søren Baldtzar Rasmussen", title: "Service Technician", email: "sr@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Baldtzer%20Rasmussen.jpg" },
 ];
