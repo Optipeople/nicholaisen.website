@@ -208,11 +208,44 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
-          {/* International Sales */}
+          {/* Baltic */}
           <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">International Sales</p>
+            <p className="text-eyebrow text-[var(--color-ink-500)]">Baltic</p>
             <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-              {international.map((person) => (
+              {baltic.map((person) => (
+                <div key={person.name}>
+                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
+                    {person.phone && (
+                      <a
+                        href={`tel:${person.phone.replace(/\s+/g, "")}`}
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      >
+                        <Phone className="size-3" aria-hidden />
+                        {person.phone}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Sweden */}
+          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
+            <p className="text-eyebrow text-[var(--color-ink-500)]">Sweden</p>
+            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              {sweden.map((person) => (
                 <div key={person.name}>
                   <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
                     <Image
@@ -333,7 +366,7 @@ const management = [
   },
 ];
 
-const international = [
+const baltic = [
   {
     name: "Siim Türk",
     title: "Sales Manager",
@@ -358,9 +391,12 @@ const international = [
     phone: "+370 605 79720",
     image: "/images/Medarbejder/Andrejus%20Petrusovas.jpg",
   },
+];
+
+const sweden = [
   {
     name: "Erik Nord",
-    title: "Sales – Nicholaisen Sweden",
+    title: "Sales",
     phone: "+46 72 70 17 300",
     image: "/images/Medarbejder/Erik%20Nord.jpg",
   },
