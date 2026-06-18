@@ -80,473 +80,136 @@ export default function ContactPage() {
             Reach out directly to the person who covers your area. Everyone you contact does the actual work.
           </p>
 
-          {/* Leadership */}
-          <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-            {management.map((person) => (
-              <div key={person.name}>
-                <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-                  <Image
-                    src={person.image}
-                    alt={person.name}
-                    fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="mt-3">
-                  <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                  <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-                  {person.email && (
-                    <a
-                      href={`mailto:${person.email}`}
-                      className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                    >
-                      <Mail className="size-3" aria-hidden />
-                      {person.email}
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Marketing */}
-          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">Marketing</p>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-              {marketing.map((person) => (
-                <div key={person.name}>
-                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-                    {person.email && (
-                      <a
-                        href={`mailto:${person.email}`}
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                      >
-                        <Mail className="size-3" aria-hidden />
-                        {person.email}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Innovation & Efficiency */}
-          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">Innovation & Efficiency</p>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-              {innovation.map((person) => (
-                <div key={person.name}>
-                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-                    {person.email && (
-                      <a
-                        href={`mailto:${person.email}`}
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                      >
-                        <Mail className="size-3" aria-hidden />
-                        {person.email}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Sales & project management */}
-          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">Sales & Project Management</p>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-              {sales.map((person) => (
-                <div key={person.name}>
-                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-                    {person.email && (
-                      <a
-                        href={`mailto:${person.email}`}
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                      >
-                        <Mail className="size-3" aria-hidden />
-                        {person.email}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Baltic */}
-          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">Baltic</p>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-              {baltic.map((person) => (
-                <div key={person.name}>
-                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-                    {person.phone && (
-                      <a
-                        href={`tel:${person.phone.replace(/\s+/g, "")}`}
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                      >
-                        <Phone className="size-3" aria-hidden />
-                        {person.phone}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Sweden */}
-          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">Sweden</p>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-              {sweden.map((person) => (
-                <div key={person.name}>
-                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-                    {person.phone && (
-                      <a
-                        href={`tel:${person.phone.replace(/\s+/g, "")}`}
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                      >
-                        <Phone className="size-3" aria-hidden />
-                        {person.phone}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Service & Spare Parts */}
-          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">Service & Spare Parts</p>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-              {service.map((person) => (
-                <div key={person.name}>
-                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-                    {person.email && (
-                      <a
-                        href={`mailto:${person.email}`}
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                      >
-                        <Mail className="size-3" aria-hidden />
-                        {person.email}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Finance */}
-          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">Finance</p>
-            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-              {finance.map((person) => (
-                <div key={person.name}>
-                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-                    {person.email && (
-                      <a
-                        href={`mailto:${person.email}`}
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                      >
-                        <Mail className="size-3" aria-hidden />
-                        {person.email}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <TeamSection label="Leadership" people={management} />
+          <TeamSection label="Sales – Denmark" people={salesDenmark} />
+          <TeamSection label="Sales – Baltic" people={baltic} usePhone />
+          <TeamSection label="Sales – Sweden" people={sweden} usePhone />
+          <TeamSection label="Project Management" people={projectManagement} />
+          <TeamSection label="Innovation & Efficiency" people={innovation} />
+          <TeamSection label="Service & Spare Parts" people={service} />
+          <TeamSection label="Marketing" people={marketing} />
+          <TeamSection label="Finance" people={finance} />
         </Container>
       </Section>
     </>
   );
 }
 
-const management = [
-  {
-    name: "Thomas Biehl",
-    title: "CEO",
-    email: "tb@nicholaisen.dk",
-    image: "/images/Medarbejder/Thomas%20Biehl.jpeg",
-  },
-  {
-    name: "Henrik Ibsen",
-    title: "COO",
-    email: "hi@nicholaisen.dk",
-    image: "/images/Medarbejder/Henrik%20Ibsen.jpg",
-  },
-  {
-    name: "Lars Sommer",
-    title: "CFO",
-    email: "ls@nicholaisen.dk",
-    image: "/images/Medarbejder/Lars%20Sommer.jpeg",
-  },
+type Person = {
+  name: string;
+  title: string;
+  email?: string;
+  phone?: string;
+  image: string;
+};
+
+function TeamSection({
+  label,
+  people,
+  usePhone = false,
+}: {
+  label: string;
+  people: Person[];
+  usePhone?: boolean;
+}) {
+  return (
+    <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10 first:border-t-0 first:pt-0 first:mt-12">
+      <p className="text-eyebrow text-[var(--color-ink-500)]">{label}</p>
+      <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+        {people.map((person) => (
+          <div key={person.name}>
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
+              <Image
+                src={person.image}
+                alt={person.name}
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="mt-3">
+              <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+              <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
+              {usePhone && person.phone ? (
+                <a
+                  href={`tel:${person.phone.replace(/\s+/g, "")}`}
+                  className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                >
+                  <Phone className="size-3" aria-hidden />
+                  {person.phone}
+                </a>
+              ) : person.email ? (
+                <a
+                  href={`mailto:${person.email}`}
+                  className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                >
+                  <Mail className="size-3" aria-hidden />
+                  {person.email}
+                </a>
+              ) : null}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const management: Person[] = [
+  { name: "Thomas Biehl", title: "CEO", email: "tb@nicholaisen.dk", image: "/images/Medarbejder/Thomas%20Biehl.jpeg" },
+  { name: "Henrik Ibsen", title: "COO", email: "hi@nicholaisen.dk", image: "/images/Medarbejder/Henrik%20Ibsen.jpg" },
+  { name: "Lars Sommer", title: "CFO", email: "ls@nicholaisen.dk", image: "/images/Medarbejder/Lars%20Sommer.jpeg" },
+  { name: "Kathrine Hovesen", title: "PA to CEO", email: "kh@nicholaisen.dk", image: "/images/Medarbejder/Kathrine%20Hovesen.jpeg" },
 ];
 
-const baltic = [
-  {
-    name: "Siim Türk",
-    title: "Sales Manager",
-    phone: "+372 5867 6119",
-    image: "/images/Medarbejder/Siim%20T%C3%BCrk.jpg",
-  },
-  {
-    name: "Søren Jørgensen",
-    title: "Business Development Manager",
-    phone: "+372 509 6780",
-    image: "/images/Medarbejder/S%C3%B8ren%20J%C3%B8rgensen.jpeg",
-  },
-  {
-    name: "John Tøttrup Christensen",
-    title: "Sales",
-    phone: "+372 510 9486",
-    image: "/images/Medarbejder/John%20T%C3%B8ttrup%20Christensen.jpg",
-  },
-  {
-    name: "Andrejus Petrusovas",
-    title: "Sales",
-    phone: "+370 605 79720",
-    image: "/images/Medarbejder/Andrejus%20Petrusovas.jpg",
-  },
+const salesDenmark: Person[] = [
+  { name: "Bo Bruun Holm", title: "Sales – Plate & Furniture Industry", email: "bh@nicholaisen.dk", image: "/images/Medarbejder/Bo%20Holm.jpeg" },
+  { name: "Mark Dige Høgh", title: "Sales – Plate & Furniture Industry", email: "mh@nicholaisen.dk", image: "/images/Medarbejder/Mark%20Dige.jpg" },
+  { name: "Bo Rasmussen", title: "Sales – Door & Window Industry", email: "br@nicholaisen.dk", image: "/images/Medarbejder/Bo%20Rasmusen.png" },
+  { name: "Peter Haahr Larsen", title: "Sales – Door & Window Industry", email: "pl@nicholaisen.dk", image: "/images/Medarbejder/Peter%20Haahr.jpeg" },
+  { name: "Jørn Biehl", title: "Sales – Wood Drying", email: "jb@nicholaisen.dk", image: "/images/Medarbejder/J%C3%B8rn%20Biehl.jpeg" },
+  { name: "Claus Capion", title: "Sales – Automation", email: "cc@nicholaisen.dk", image: "/images/Medarbejder/Claus%20Capion.jpeg" },
+  { name: "René Beldam", title: "Sales – NichoMachines", email: "rb@nicholaisen.dk", image: "/images/Medarbejder/Ren%C3%A9%20Beldam.jpeg" },
 ];
 
-const sweden = [
-  {
-    name: "Erik Nord",
-    title: "Sales",
-    phone: "+46 72 70 17 300",
-    image: "/images/Medarbejder/Erik%20Nord.jpg",
-  },
+const baltic: Person[] = [
+  { name: "Siim Türk", title: "Sales Manager", phone: "+372 5867 6119", image: "/images/Medarbejder/Siim%20T%C3%BCrk.jpg" },
+  { name: "Søren Jørgensen", title: "Business Development Manager", phone: "+372 509 6780", image: "/images/Medarbejder/S%C3%B8ren%20J%C3%B8rgensen.jpeg" },
+  { name: "John Tøttrup Christensen", title: "Sales", phone: "+372 510 9486", image: "/images/Medarbejder/John%20T%C3%B8ttrup%20Christensen.jpg" },
+  { name: "Andrejus Petrusovas", title: "Sales", phone: "+370 605 79720", image: "/images/Medarbejder/Andrejus%20Petrusovas.jpg" },
 ];
 
-const service = [
-  {
-    name: "Tobias Kjærgaard",
-    title: "Service Manager",
-    email: "tk@nicholaisen.dk",
-    image: "/images/Medarbejder/Tobias%20Kj%C3%A6rgaard.jpeg",
-  },
-  {
-    name: "Lars Skaarup Petersen",
-    title: "Spare Parts Manager",
-    email: "lp@nicholaisen.dk",
-    image: "/images/Medarbejder/Lars%20Skaarup%20Petersen.jpeg",
-  },
-  {
-    name: "Søren Solhaug Madsen",
-    title: "Consultant – Business Development",
-    email: "sm@nicholaisen.dk",
-    image: "/images/Medarbejder/S%C3%B8ren%20Solhaug%20Madsen.jpeg",
-  },
-  {
-    name: "Gitte Sandholm",
-    title: "Office Assistant",
-    email: "gs@nicholaisen.dk",
-    image: "/images/Medarbejder/Gitte%20Sandholm.jpeg",
-  },
-  {
-    name: "Johnny B. Kristensen",
-    title: "Service Technician",
-    email: "jk@nicholaisen.dk",
-    image: "/images/Medarbejder/Johnny%20B.%20Kristensen.jpeg",
-  },
-  {
-    name: "Søren Baldtzar Rasmussen",
-    title: "Service Technician",
-    email: "sr@nicholaisen.dk",
-    image: "/images/Medarbejder/S%C3%B8ren%20Baldtzer%20Rasmussen.jpg",
-  },
+const sweden: Person[] = [
+  { name: "Erik Nord", title: "Sales", phone: "+46 72 70 17 300", image: "/images/Medarbejder/Erik%20Nord.jpg" },
 ];
 
-const finance = [
-  {
-    name: "Ole Faurholt Rasmussen",
-    title: "Accountant",
-    email: "or@nicholaisen.dk",
-    image: "/images/Medarbejder/Ole%20Faurholt%20Rasmussen.jpeg",
-  },
-  {
-    name: "Andreas Wrona",
-    title: "Financial Controller",
-    email: "aw@nicholaisen.dk",
-    image: "/images/Medarbejder/Andreas%20Wrona.jpg",
-  },
+const projectManagement: Person[] = [
+  { name: "Svenja Hartmann", title: "Project Coordinator", email: "sh@nicholaisen.dk", image: "/images/Medarbejder/Svenja%20Hartmann.jpeg" },
 ];
 
-const marketing = [
-  {
-    name: "Jacob Vedsø",
-    title: "Communications & Marketing Manager",
-    email: "jv@nicholaisen.dk",
-    image: "/images/Medarbejder/Jacob%20Vedsø.jpg",
-  },
-  {
-    name: "Simone Jørgensen",
-    title: "Marketing Coordinator",
-    email: "sj@nicholaisen.dk",
-    image: "/images/Medarbejder/Simone%20J%C3%B8rgensen.jpg",
-  },
-  {
-    name: "Dennis Harløv Madsen",
-    title: "Market Manager – Telemarketing",
-    email: "dm@nicholaisen.dk",
-    image: "/images/Medarbejder/Dennis%20Harl%C3%B8v%20Madsen.jpg",
-  },
+const innovation: Person[] = [
+  { name: "Kenneth Bech Sørensen", title: "Project Manager – Data", email: "ks@nicholaisen.dk", image: "/images/Medarbejder/Kenneth%20Bech%20S%C3%B8rensen.jpeg" },
+  { name: "Henrik Risgaard Lundfold", title: "Project Manager", email: "hl@nicholaisen.dk", image: "/images/Medarbejder/Henrik%20Risgaard%20Lundfold.jpg" },
 ];
 
-const innovation = [
-  {
-    name: "Kenneth Bech Sørensen",
-    title: "Project Manager – Data",
-    email: "ks@nicholaisen.dk",
-    image: "/images/Medarbejder/Kenneth%20Bech%20S%C3%B8rensen.jpeg",
-  },
-  {
-    name: "Henrik Risgaard Lundfold",
-    title: "Project Manager",
-    email: "hl@nicholaisen.dk",
-    image: "/images/Medarbejder/Henrik%20Risgaard%20Lundfold.jpg",
-  },
+const service: Person[] = [
+  { name: "Tobias Kjærgaard", title: "Service Manager", email: "tk@nicholaisen.dk", image: "/images/Medarbejder/Tobias%20Kj%C3%A6rgaard.jpeg" },
+  { name: "Lars Skaarup Petersen", title: "Spare Parts Manager", email: "lp@nicholaisen.dk", image: "/images/Medarbejder/Lars%20Skaarup%20Petersen.jpeg" },
+  { name: "Søren Solhaug Madsen", title: "Consultant – Business Development", email: "sm@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Solhaug%20Madsen.jpeg" },
+  { name: "Gitte Sandholm", title: "Office Assistant", email: "gs@nicholaisen.dk", image: "/images/Medarbejder/Gitte%20Sandholm.jpeg" },
+  { name: "Johnny B. Kristensen", title: "Service Technician", email: "jk@nicholaisen.dk", image: "/images/Medarbejder/Johnny%20B.%20Kristensen.jpeg" },
+  { name: "Søren Baldtzar Rasmussen", title: "Service Technician", email: "sr@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Baldtzer%20Rasmussen.jpg" },
 ];
 
-const sales = [
-  {
-    name: "Bo Bruun Holm",
-    title: "Sales – Plate & Furniture Industry",
-    email: "bh@nicholaisen.dk",
-    image: "/images/Medarbejder/Bo%20Holm.jpeg",
-  },
-  {
-    name: "Mark Dige Høgh",
-    title: "Sales – Plate & Furniture Industry",
-    email: "mh@nicholaisen.dk",
-    image: "/images/Medarbejder/Mark%20Dige.jpg",
-  },
-  {
-    name: "Bo Rasmussen",
-    title: "Sales – Door & Window Industry",
-    email: "br@nicholaisen.dk",
-    image: "/images/Medarbejder/Bo%20Rasmusen.png",
-  },
-  {
-    name: "Peter Haahr Larsen",
-    title: "Sales – Door & Window Industry",
-    email: "pl@nicholaisen.dk",
-    image: "/images/Medarbejder/Peter%20Haahr.jpeg",
-  },
-  {
-    name: "Jørn Biehl",
-    title: "Sales – Wood Drying",
-    email: "jb@nicholaisen.dk",
-    image: "/images/Medarbejder/J%C3%B8rn%20Biehl.jpeg",
-  },
-  {
-    name: "Claus Capion",
-    title: "Sales – Automation",
-    email: "cc@nicholaisen.dk",
-    image: "/images/Medarbejder/Claus%20Capion.jpeg",
-  },
-  {
-    name: "René Beldam",
-    title: "Sales – NichoMachines",
-    email: "rb@nicholaisen.dk",
-    image: "/images/Medarbejder/Ren%C3%A9%20Beldam.jpeg",
-  },
-  {
-    name: "Svenja Hartmann",
-    title: "Project Coordinator",
-    email: "sh@nicholaisen.dk",
-    image: "/images/Medarbejder/Svenja%20Hartmann.jpeg",
-  },
-  {
-    name: "Kathrine Hovesen",
-    title: "PA to CEO",
-    email: "kh@nicholaisen.dk",
-    image: "/images/Medarbejder/Kathrine%20Hovesen.jpeg",
-  },
+const marketing: Person[] = [
+  { name: "Jacob Vedsø", title: "Communications & Marketing Manager", email: "jv@nicholaisen.dk", image: "/images/Medarbejder/Jacob%20Vedsø.jpg" },
+  { name: "Simone Jørgensen", title: "Marketing Coordinator", email: "sj@nicholaisen.dk", image: "/images/Medarbejder/Simone%20J%C3%B8rgensen.jpg" },
+  { name: "Dennis Harløv Madsen", title: "Market Manager – Telemarketing", email: "dm@nicholaisen.dk", image: "/images/Medarbejder/Dennis%20Harl%C3%B8v%20Madsen.jpg" },
+];
+
+const finance: Person[] = [
+  { name: "Ole Faurholt Rasmussen", title: "Accountant", email: "or@nicholaisen.dk", image: "/images/Medarbejder/Ole%20Faurholt%20Rasmussen.jpeg" },
+  { name: "Andreas Wrona", title: "Financial Controller", email: "aw@nicholaisen.dk", image: "/images/Medarbejder/Andreas%20Wrona.jpg" },
 ];
 
 function ContactRow({
