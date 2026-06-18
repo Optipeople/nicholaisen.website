@@ -110,6 +110,39 @@ export default function ContactPage() {
             ))}
           </div>
 
+          {/* Marketing */}
+          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
+            <p className="text-eyebrow text-[var(--color-ink-500)]">Marketing</p>
+            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              {marketing.map((person) => (
+                <div key={person.name}>
+                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
+                    {person.email && (
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      >
+                        <Mail className="size-3" aria-hidden />
+                        {person.email}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Innovation & Efficiency */}
           <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
             <p className="text-eyebrow text-[var(--color-ink-500)]">Innovation & Efficiency</p>
@@ -199,6 +232,27 @@ const management = [
     title: "CFO",
     email: "ls@nicholaisen.dk",
     image: "/images/Medarbejder/Lars%20Sommer.jpeg",
+  },
+];
+
+const marketing = [
+  {
+    name: "Jacob Vedsø",
+    title: "Communications & Marketing Manager",
+    email: "jv@nicholaisen.dk",
+    image: "/images/Medarbejder/Jacob%20Vedsø.jpg",
+  },
+  {
+    name: "Simone Jørgensen",
+    title: "Marketing Coordinator",
+    email: "sj@nicholaisen.dk",
+    image: "/images/Medarbejder/Simone%20J%C3%B8rgensen.jpg",
+  },
+  {
+    name: "Dennis Harløv Madsen",
+    title: "Market Manager – Telemarketing",
+    email: "dm@nicholaisen.dk",
+    image: "/images/Medarbejder/Dennis%20Harl%C3%B8v%20Madsen.jpg",
   },
 ];
 
