@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
-  description: "Tell us what you’re trying to make better. We reply within one business day.",
+  description: "Tell us what you're trying to make better. We reply within one business day.",
   path: "/contact",
 });
 
@@ -26,8 +26,8 @@ export default function ContactPage() {
                 A 30-minute conversation. No deck.
               </h1>
               <p className="mt-6 text-lede max-w-xl">
-                Tell us what you’re running, where you’re stuck, and what better would look
-                like. We’ll come back with what we’d look at first.
+                Tell us what you're running, where you're stuck, and what better would look
+                like. We'll come back with what we'd look at first.
               </p>
 
               <div className="mt-12 space-y-6">
@@ -81,28 +81,25 @@ export default function ContactPage() {
           </p>
 
           {/* Leadership */}
-          <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
             {management.map((person) => (
-              <div
-                key={person.name}
-                className="flex items-center gap-4 rounded-xl border border-[var(--color-ink-300)]/20 bg-[var(--color-cream)] px-4 py-3"
-              >
-                <div className="relative size-12 shrink-0 overflow-hidden rounded-full bg-[var(--color-beige-200)]">
+              <div key={person.name}>
+                <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
                   <Image
                     src={person.image}
                     alt={person.name}
                     fill
-                    sizes="48px"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                     className="object-cover object-top"
                   />
                 </div>
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                  <p className="truncate text-xs leading-snug text-[var(--color-ink-500)]">{person.title}</p>
+                <div className="mt-3">
+                  <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                  <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
                   {person.email && (
                     <a
                       href={`mailto:${person.email}`}
-                      className="mt-1 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
                     >
                       <Mail className="size-3" aria-hidden />
                       {person.email}
@@ -113,27 +110,66 @@ export default function ContactPage() {
             ))}
           </div>
 
-          {/* Sales & project management */}
-          <div className="mt-10 border-t border-[var(--color-ink-300)]/20 pt-10">
-            <p className="text-eyebrow text-[var(--color-ink-500)]">Sales & Project Management</p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {sales.map((person) => (
-                <div
-                  key={person.name}
-                  className="flex items-center gap-4 rounded-xl border border-[var(--color-ink-300)]/20 bg-[var(--color-cream)] px-4 py-3"
-                >
-                  <div className="relative size-12 shrink-0 overflow-hidden rounded-full bg-[var(--color-beige-200)]">
+          {/* Innovation & Efficiency */}
+          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
+            <p className="text-eyebrow text-[var(--color-ink-500)]">Innovation & Efficiency</p>
+            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              {innovation.map((person) => (
+                <div key={person.name}>
+                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
                     <Image
                       src={person.image}
                       alt={person.name}
                       fill
-                      sizes="48px"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                       className="object-cover object-top"
                     />
                   </div>
-                  <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-                    <p className="truncate text-xs leading-snug text-[var(--color-ink-500)]">{person.title}</p>
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
+                    {person.email && (
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      >
+                        <Mail className="size-3" aria-hidden />
+                        {person.email}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Sales & project management */}
+          <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10">
+            <p className="text-eyebrow text-[var(--color-ink-500)]">Sales & Project Management</p>
+            <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              {sales.map((person) => (
+                <div key={person.name}>
+                  <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
+                    <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
+                    {person.email && (
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
+                      >
+                        <Mail className="size-3" aria-hidden />
+                        {person.email}
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
@@ -166,50 +202,74 @@ const management = [
   },
 ];
 
+const innovation = [
+  {
+    name: "Kenneth Bech Sørensen",
+    title: "Project Manager – Data",
+    email: "ks@nicholaisen.dk",
+    image: "/images/Medarbejder/Kenneth%20Bech%20S%C3%B8rensen.jpeg",
+  },
+  {
+    name: "Henrik Risgaard Lundfold",
+    title: "Project Manager",
+    email: "hl@nicholaisen.dk",
+    image: "/images/Medarbejder/Henrik%20Risgaard%20Lundfold.jpg",
+  },
+];
+
 const sales = [
   {
     name: "Bo Bruun Holm",
     title: "Sales – Plate & Furniture Industry",
+    email: "bh@nicholaisen.dk",
     image: "/images/Medarbejder/Bo%20Holm.jpeg",
   },
   {
     name: "Mark Dige Høgh",
     title: "Sales – Plate & Furniture Industry",
+    email: "mh@nicholaisen.dk",
     image: "/images/Medarbejder/Mark%20Dige.jpg",
   },
   {
     name: "Bo Rasmussen",
     title: "Sales – Door & Window Industry",
+    email: "br@nicholaisen.dk",
     image: "/images/Medarbejder/Bo%20Rasmusen.png",
   },
   {
     name: "Peter Haahr Larsen",
     title: "Sales – Door & Window Industry",
+    email: "pl@nicholaisen.dk",
     image: "/images/Medarbejder/Peter%20Haahr.jpeg",
   },
   {
     name: "Jørn Biehl",
     title: "Sales – Wood Drying",
+    email: "jb@nicholaisen.dk",
     image: "/images/Medarbejder/J%C3%B8rn%20Biehl.jpeg",
   },
   {
     name: "Claus Capion",
     title: "Sales – Automation",
+    email: "cc@nicholaisen.dk",
     image: "/images/Medarbejder/Claus%20Capion.jpeg",
   },
   {
     name: "René Beldam",
     title: "Sales – NichoMachines",
+    email: "rb@nicholaisen.dk",
     image: "/images/Medarbejder/Ren%C3%A9%20Beldam.jpeg",
   },
   {
     name: "Svenja Hartmann",
     title: "Project Coordinator",
+    email: "sh@nicholaisen.dk",
     image: "/images/Medarbejder/Svenja%20Hartmann.jpeg",
   },
   {
     name: "Kathrine Hovesen",
     title: "PA to CEO",
+    email: "kh@nicholaisen.dk",
     image: "/images/Medarbejder/Kathrine%20Hovesen.jpeg",
   },
 ];
