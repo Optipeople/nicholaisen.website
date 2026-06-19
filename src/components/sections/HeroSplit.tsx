@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { LinkButton } from "@/components/ui/Button";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
-export function HeroSplit() {
+export async function HeroSplit() {
+  const t = await getTranslations("home.hero");
   return (
     <section className="relative isolate overflow-hidden bg-[var(--color-navy-950)]">
       <Image
@@ -27,20 +30,16 @@ export function HeroSplit() {
       <Container>
         <div className="relative flex min-h-[78vh] flex-col justify-center pt-28 pb-24 lg:min-h-[88vh] lg:pt-40 lg:pb-36">
           <div className="max-w-3xl">
-            <Eyebrow className="text-[var(--color-tan-300)]">
-              Nicholaisen · Your efficiency partner
-            </Eyebrow>
+            <Eyebrow className="text-[var(--color-tan-300)]">{t("eyebrow")}</Eyebrow>
             <h1 className="mt-6 text-display-1 text-balance text-[var(--color-cream-50)]">
-              Optimizing wood production from strategy to shop floor.
+              {t("title")}
             </h1>
             <p className="mt-8 max-w-xl text-lede text-pretty text-[var(--color-beige-200)]">
-              Sales, engineering, and consulting for innovative machine solutions in the wood,
-              plastics, and aluminum industries. Together, we turn your data into intelligent
-              optimizations and profitable investments.
+              {t("lede")}
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <LinkButton href="/services" size="lg" withArrow>
-                Explore solutions
+                {t("primary")}
               </LinkButton>
               <LinkButton
                 href="/contact"
@@ -48,7 +47,7 @@ export function HeroSplit() {
                 size="lg"
                 className="border-[var(--color-cream-50)]/30 bg-transparent text-[var(--color-cream-50)] hover:bg-[var(--color-cream-50)]/10"
               >
-                Get in touch
+                {t("secondary")}
               </LinkButton>
             </div>
           </div>

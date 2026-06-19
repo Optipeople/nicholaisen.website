@@ -1,12 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { ChevronDown, ArrowRight } from "lucide-react";
-import { primaryNav, type NavSection } from "@/lib/nav";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { services, industries, primaryNav, type NavSection } from "@/lib/nav";
 import { cn } from "@/lib/cn";
 
 export function MegaNav() {
+  const t = useTranslations("nav");
   return (
     <NavigationMenu.Root className="relative">
       <NavigationMenu.List className="flex items-center gap-1">
@@ -19,10 +21,16 @@ export function MegaNav() {
             ) : (
               <NavigationMenu.Link asChild>
                 <Link
-                  href={section.href}
+                  href={section.href as "/"}
                   className="px-3 py-2 text-sm font-medium text-[var(--color-ink-700)] hover:text-[var(--color-navy-900)] transition-colors"
                 >
-                  {section.title}
+                  {section.href === "/cases"
+                    ? t("cases")
+                    : section.href === "/insights"
+                      ? t("insights")
+                      : section.href === "/about"
+                        ? t("about")
+                        : section.title}
                 </Link>
               </NavigationMenu.Link>
             )}
@@ -44,10 +52,11 @@ export function MegaNav() {
 }
 
 function ServicesTrigger({ section }: { section: NavSection }) {
+  const t = useTranslations("nav");
   return (
     <>
       <NavigationMenu.Trigger className="group inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-[var(--color-ink-700)] hover:text-[var(--color-navy-900)] transition-colors">
-        {section.title}
+        {t("services")}
         <ChevronDown
           className="size-3.5 transition-transform group-data-[state=open]:rotate-180"
           aria-hidden
@@ -59,29 +68,35 @@ function ServicesTrigger({ section }: { section: NavSection }) {
             {section.categories?.map((cat) => (
               <div key={cat.href}>
                 <Link
-                  href={cat.href}
+                  href={cat.href as "/"}
                   className="text-sm font-semibold text-[var(--color-navy-900)] hover:underline"
                 >
-                  {cat.title}
+                  {cat.key
+                    ? t(`servicesMenu.${cat.key}.title` as any)
+                    : cat.title}
                 </Link>
-                {cat.description ? (
-                  <p className="mt-1 text-xs text-[var(--color-ink-500)]">{cat.description}</p>
-                ) : null}
+                <p className="mt-1 text-xs text-[var(--color-ink-500)]">
+                  {cat.key
+                    ? t(`servicesMenu.${cat.key}.description` as any)
+                    : cat.description}
+                </p>
                 <ul className="mt-3 space-y-2">
                   {cat.items.map((item) => (
                     <li key={item.href}>
                       <Link
-                        href={item.href}
+                        href={item.href as "/"}
                         className="group block rounded-md px-2 py-1.5 -mx-2 hover:bg-[var(--color-paper-dark)] transition-colors"
                       >
                         <span className="block text-sm text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
-                          {item.title}
+                          {item.key
+                            ? t(`servicesMenu.${item.key}.title` as any)
+                            : item.title}
                         </span>
-                        {item.description ? (
-                          <span className="block text-xs text-[var(--color-ink-500)]">
-                            {item.description}
-                          </span>
-                        ) : null}
+                        <span className="block text-xs text-[var(--color-ink-500)]">
+                          {item.key
+                            ? t(`servicesMenu.${item.key}.description` as any)
+                            : item.description}
+                        </span>
                       </Link>
                     </li>
                   ))}
@@ -90,18 +105,18 @@ function ServicesTrigger({ section }: { section: NavSection }) {
             ))}
           </div>
           <aside className="rounded-lg bg-[var(--color-navy-900)] p-6 text-[var(--color-cream-50)]">
-            <p className="text-eyebrow text-[var(--color-tan-300)]">Featured</p>
+            <p className="text-eyebrow text-[var(--color-tan-300)]">{t("featured.label")}</p>
             <h4 className="mt-2 text-lg font-semibold leading-tight text-[var(--color-cream-50)]">
-              Opti — real-time insight from the shop floor
+              {t("featured.title")}
             </h4>
             <p className="mt-2 text-sm text-[var(--color-cream-50)]/80">
-              Our digital platform turns machine data into the decisions that move the line.
+              {t("featured.description")}
             </p>
             <Link
               href="/services/digital-performance"
               className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium hover:gap-2 transition-all"
             >
-              Explore Opti <ArrowRight className="size-3.5" aria-hidden />
+              {t("featured.link")} <ArrowRight className="size-3.5" aria-hidden />
             </Link>
           </aside>
         </div>
@@ -111,10 +126,11 @@ function ServicesTrigger({ section }: { section: NavSection }) {
 }
 
 function FlatTrigger({ section }: { section: NavSection }) {
+  const t = useTranslations("nav");
   return (
     <>
       <NavigationMenu.Trigger className="group inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-[var(--color-ink-700)] hover:text-[var(--color-navy-900)] transition-colors">
-        {section.title}
+        {t("industries")}
         <ChevronDown
           className="size-3.5 transition-transform group-data-[state=open]:rotate-180"
           aria-hidden
@@ -125,17 +141,19 @@ function FlatTrigger({ section }: { section: NavSection }) {
           {section.items?.map((item) => (
             <li key={item.href}>
               <Link
-                href={item.href}
+                href={item.href as "/"}
                 className="group block rounded-md p-3 hover:bg-[var(--color-paper-dark)] transition-colors"
               >
                 <span className="block text-sm font-medium text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
-                  {item.title}
+                  {item.key
+                    ? t(`industriesMenu.${item.key}.title` as any)
+                    : item.title}
                 </span>
-                {item.description ? (
-                  <span className="block text-xs text-[var(--color-ink-500)] mt-0.5">
-                    {item.description}
-                  </span>
-                ) : null}
+                <span className="block text-xs text-[var(--color-ink-500)] mt-0.5">
+                  {item.key
+                    ? t(`industriesMenu.${item.key}.description` as any)
+                    : item.description}
+                </span>
               </Link>
             </li>
           ))}

@@ -1,10 +1,34 @@
-import Link from "next/link";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/layout/Container";
-import { footerNav } from "@/lib/nav";
+import { services, industries } from "@/lib/nav";
 import { site } from "@/lib/site";
 
-export function SiteFooter() {
+export async function SiteFooter() {
+  const t = await getTranslations();
+
+  const footerNav = {
+    [t("footer.sections.solutions")]: services.map((s) => ({
+      title: t(`nav.servicesMenu.${s.key}.title` as any),
+      href: s.href,
+    })),
+    [t("footer.sections.industries")]: industries.map((i) => ({
+      title: t(`nav.industriesMenu.${i.key}.title` as any),
+      href: i.href,
+    })),
+    [t("footer.sections.company")]: [
+      { title: t("footer.company.about"), href: "/about" },
+      { title: t("footer.company.cases"), href: "/cases" },
+      { title: t("footer.company.insights"), href: "/insights" },
+      { title: t("footer.company.contact"), href: "/contact" },
+    ],
+    [t("footer.sections.legal")]: [
+      { title: t("footer.legal.privacy"), href: "/legal/privacy" },
+      { title: t("footer.legal.cookies"), href: "/legal/cookies" },
+    ],
+  };
+
   return (
     <footer className="bg-[var(--color-navy-900)] text-[var(--color-cream-50)]">
       <Container>
@@ -21,7 +45,7 @@ export function SiteFooter() {
               <span className="text-lg font-semibold tracking-tight">Nicholaisen</span>
             </Link>
             <p className="mt-6 max-w-sm text-sm text-[var(--color-cream-50)]/70">
-              {site.description}
+              {t("footer.description")}
             </p>
             <address className="mt-8 not-italic text-sm leading-relaxed text-[var(--color-cream-50)]/70">
               {site.address.street}
@@ -52,7 +76,7 @@ export function SiteFooter() {
                   {links.map((link) => (
                     <li key={link.href}>
                       <Link
-                        href={link.href}
+                        href={link.href as "/"}
                         className="text-sm text-[var(--color-cream-50)]/80 hover:text-[var(--color-cream-50)] transition-colors"
                       >
                         {link.title}

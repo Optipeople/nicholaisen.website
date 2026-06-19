@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "services": "Teenused",
+    "industries": "Tööstusharud",
+    "cases": "Juhtumid",
+    "insights": "Ülevaated",
+    "about": "Meist",
+    "contact": "Kontakt",
+    "cta": "Broneeri kõne",
+    "featured": {
+      "label": "Esile tõstetud",
+      "title": "Opti — reaalajas ülevaade tootmispõrandalt",
+      "description": "Meie digitaalplatvorm muudab masinate andmed otsusteks, mis viivad liini edasi.",
+      "link": "Avasta Opti"
+    },
+    "servicesMenu": {
+      "businessDevelopment": { "title": "Äri arendamine", "description": "Seadke suund paika, planeerige investeeringuid, looge kasvuplaanid." },
+      "framingWorkshops": { "title": "Raamistamise töötoad", "description": "Kooskõlastage suund ja prioriteedid." },
+      "investmentAdvisory": { "title": "Investeerimisnõustamine", "description": "Kindlustage ROI enne investeerimist." },
+      "strategicRoadmapping": { "title": "Strateegiline teekaart", "description": "Planeerige võimsust ja kasvu." },
+      "productionOptimization": { "title": "Tootmise optimeerimine", "description": "Läbilaskevõime, kvaliteet ja tööaeg — ilma kapitalkuludeta." },
+      "flowOptimization": { "title": "Voo optimeerimine", "description": "Kõrvaldage kitsaskohad kiiresti." },
+      "capacityImprovement": { "title": "Võimsuse parandamine", "description": "Suurendage toodangut ilma kapitalkuludeta." },
+      "oeeEfficiency": { "title": "OEE ja efektiivsus", "description": "Vähendage raiskamist ja seisakuid." },
+      "projectSolutions": { "title": "Projektilahendused", "description": "Ühest liinist võtmevalmis tehaseni." },
+      "customProductionLines": { "title": "Kohandatud tootmisliinid", "description": "Ehitatud teie äri-eesmärkide jaoks." },
+      "automationIntegration": { "title": "Automatiseerimine ja integreerimine", "description": "Ühendage ja laiendage tegevust." },
+      "turnkeyProjects": { "title": "Võtmevalmis projektid", "description": "Ideest teostuseni." },
+      "digitalPerformance": { "title": "Digitaalne jõudlus", "description": "Opti — reaalajas ülevaade tootmispõrandalt." },
+      "productionInsights": { "title": "Tootmisülevaated", "description": "Reaalajas jõudluse nähtavus." },
+      "predictiveMaintenance": { "title": "Ennustav hooldus", "description": "Hoidke seisakuid ära enne nende tekkimist." },
+      "continuousOptimization": { "title": "Pidev optimeerimine", "description": "Parandage jõudlust aja jooksul." },
+      "partnership": { "title": "Partnerlus", "description": "Pikaajaline efektiivsuspartner." },
+      "capacityPlanning": { "title": "Võimsuse planeerimine", "description": "Kooskõlastage strateegia ja investeeringud." },
+      "collaboration": { "title": "Koostöö", "description": "Töötage ühiste eesmärkide nimel." },
+      "partnershipBd": { "title": "Äri arendamine", "description": "Tugevdage konkurentsivõimet." }
+    },
+    "industriesMenu": {
+      "doorsWindows": { "title": "Uksed ja aknad", "description": "Täpsuspuusepatöö suures mahus." },
+      "panelFurniture": { "title": "Paneelid ja mööbel", "description": "Plaatmaterjali läbilaskevõime ja viimistlus." },
+      "solidWood": { "title": "Massivpuit", "description": "Kõvapuidu kuivatamisest koostamiseni." }
+    }
+  },
+  "common": {
+    "readMore": "Loe rohkem",
+    "viewAll": "Vaata kõiki",
+    "getInTouch": "Võtke ühendust",
+    "scheduleCall": "Broneeri kõne",
+    "exploreSolutions": "Avasta lahendused",
+    "learnMore": "Loe rohkem",
+    "optional": "(valikuline)"
+  },
+  "footer": {
+    "description": "Nicholaisen pakub müüki, inseneriteenuseid ja nõustamist innovaatiliste masinalahenduste ja teenuskontseptsioonide osas puidu-, plasti- ja alumiiniumitööstusele.",
+    "sections": {
+      "solutions": "Lahendused",
+      "industries": "Tööstusharud",
+      "company": "Ettevõte",
+      "legal": "Õiguslik"
+    },
+    "company": {
+      "about": "Meist",
+      "cases": "Juhtumid",
+      "insights": "Ülevaated",
+      "contact": "Kontakt"
+    },
+    "legal": {
+      "privacy": "Privaatsuspoliitika",
+      "cookies": "Küpsiste poliitika"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Nicholaisen · Teie efektiivsuspartner",
+      "title": "Puidutootmise optimeerimine strateegiast tootmispõrandani.",
+      "lede": "Müük, inseneriteenused ja nõustamine innovaatiliste masinalahenduste osas puidu-, plasti- ja alumiiniumitööstuses. Koos muudame teie andmed arukaks optimeerimiseks ja kasumlikeks investeeringuteks.",
+      "primary": "Avasta lahendused",
+      "secondary": "Võtke ühendust"
+    },
+    "entry": {
+      "services": "Teenused",
+      "industries": "Tööstusharud",
+      "schedule": "Broneeri kõne",
+      "findService": "Leia teenus",
+      "browseIndustry": "Sirvige tööstusharu järgi",
+      "talkEngineer": "Rääkige inseneriga",
+      "scheduleTitle": "30-minutiline vestlus. Ilma esitluseta.",
+      "scheduleBody": "Rääkige meile, mida te toodate, kus takerdute ja milline oleks parem tulemus. Me tuleme tagasi sellega, mida vaataksime esmalt.",
+      "scheduleBtn": "Broneeri kõne"
+    },
+    "infoCards": {
+      "eyebrow": "Kuidas alustada",
+      "title": "Kolm teed sisse.",
+      "newToTitle": "Uus Nicholaiseni klient?",
+      "newToDesc": "Müük, inseneriteenused ja nõustamine puidu-, plasti- ja alumiiniumitööstusele — üle 50 aasta.",
+      "newToCta": "Tutvu meie tegevusega",
+      "optimizeTitle": "Valmis optimeerima?",
+      "optimizeDesc": "Ühest kitsaskohast võtmevalmis tehaseni. Viis teenuserada, mis on ehitatud teie tootmisliini ümber.",
+      "optimizeCta": "Avasta meie teenused",
+      "optiTitle": "Vajate Opti ülevaateid?",
+      "optiDesc": "Reaalajas nähtavus tootmispõrandal koos teega ennustava hoolduse ja pideva parandamiseni.",
+      "optiCta": "Avasta Opti"
+    },
+    "cta": {
+      "eyebrow": "Engineered precision, told quietly.",
+      "title": "Rääkige meile, mida soovite parandada.",
+      "body": "Tooge meile see osa liinist, mis teid frustrееrib. Me tuleme tagasi sellega, mida vaataksime esmalt.",
+      "primary": "Broneeri kõne",
+      "secondary": "Avasta lahendused"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Meist",
+      "description": "Nicholaisen — müük, inseneriteenused ja nõustamine puidu-, plasti- ja alumiiniumitööstusele."
+    },
+    "hero": {
+      "eyebrow": "Meist",
+      "title": "Teie efektiivsuspartner.",
+      "lede": "Müük, inseneriteenused ja nõustamine innovaatiliste masinalahenduste osas puidu-, plasti- ja alumiiniumitööstuses — üle 50 aasta."
+    },
+    "what": {
+      "eyebrow": "Mida me teeme",
+      "title": "Koos teiega analüüsime ja valgustame teie andmeid, tugevusi ja potentsiaale.",
+      "body1": "Pakume müüki, inseneriteenuseid ja nõustamist innovaatiliste masinalahenduste ja teenuskontseptsioonide osas. Nõustame aruka optimeerimise ja kasumlike investeeringute osas — esimesest vestlusest kuni kaua pärast kasutuselevõttu.",
+      "body2": "Enamik meie kliente jääb meiega aastakümneid. See ei ole lojaalsus lojaalsuse pärast — see on praktilise koostöö tulemus partneriga, kes tunneb tootmisliini ja ilmub kohale, kui midagi läheb valesti."
+    },
+    "how": {
+      "eyebrow": "Kuidas me töötame",
+      "title": "Kolm põhimõtet, korduvalt rakendatud."
+    },
+    "principles": {
+      "dataTitle": "Andmed enne arvamusi",
+      "dataDesc": "Iga meie soovitus põhineb sellel, mida liin tegelikult teeb — mitte sellel, mida ta paberil peaks tegema.",
+      "specificTitle": "Konkreetne enne muljetavaldavat",
+      "specificDesc": "Pigem lubame 6-minutilist vahetust kui digitaalset transformatsiooni. Konkreetset saab testida.",
+      "longTitle": "Pikaajaline enne kiiret",
+      "longDesc": "Töötame klientidega üle investeerimistsüklite, mitte ainult projektide. Head tulemused kasvavad."
+    },
+    "history": {
+      "eyebrow": "Ajalugu",
+      "title": "Viis aastakümmet, neli pöördepunkti.",
+      "1972Year": "1972",
+      "1972Title": "Asutatud Hørningis",
+      "1972Desc": "Alustas puidutöötlemismasinate müügiagendina. Tootmispõrandalt saadud raske teenitud teadmised kujundavad endiselt meie tööviisi.",
+      "1990sYear": "1990ndad",
+      "1990sTitle": "Inseneriteenused tuuakse sisse",
+      "1990sDesc": "Kliendid palusid rohkem kui seadmeid — nad tahtsid planeeringuid, integratsioone, tulemusi. Inseneriteenustest sai osa pakkumisest.",
+      "2010sYear": "2010ndad",
+      "2010sTitle": "Nõustamine saab distsipliiniks",
+      "2010sDesc": "Andmeanalüüs enne investeeringut. Tootmise optimeerimine. Võimsuse planeerimine. Nõustav töö formaliseeriti nimetatud radadeks.",
+      "todayYear": "Täna",
+      "todayTitle": "Opti — digitaalne jõudlus",
+      "todayDesc": "Reaalajas masinate andmed muudetud otsusteks, mis liini edasi viivad. Kus strateegia ja tootmispõrand kohtuvad."
+    },
+    "location": {
+      "eyebrow": "Leidke meid",
+      "title": "Hørning, Taani."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt",
+      "description": "Võtke ühendust Nicholaiseniga — broneerige kõne, esitage küsimus või leidke oma kontaktisik."
+    },
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Räägime teie tootmisliinist.",
+      "lede": "Broneerige kõne, esitage küsimus või leidke oma otsekontakt. Vastame ühe tööpäeva jooksul."
+    },
+    "form": {
+      "title": "Saatke meile sõnum",
+      "name": "Nimi",
+      "company": "Ettevõte",
+      "email": "E-post",
+      "role": "Roll",
+      "interest": "Mind huvitab",
+      "interestDefault": "Valige teema",
+      "message": "Mida soovite parandada?",
+      "messagePlaceholder": "Mõni lause piisab.",
+      "submit": "Saada sõnum",
+      "submitting": "Saadan…",
+      "replyTime": "Vastame ühe tööpäeva jooksul.",
+      "successTitle": "Võtame teiega ühendust ühe tööpäeva jooksul.",
+      "successBody": "Kiireloomuliste küsimuste korral saate meiega otse ühendust võtta",
+      "successLabel": "Tänan",
+      "interests": {
+        "ligna": "Ligna 2026 — eelbroneeri kohtumine",
+        "businessDevelopment": "Äri arendamine",
+        "productionOptimization": "Tootmise optimeerimine",
+        "projectSolutions": "Projektilahendused",
+        "digitalPerformance": "Digitaalne jõudlus · Opti",
+        "partnership": "Partnerlus",
+        "other": "Midagi muud"
+      }
+    },
+    "team": {
+      "eyebrow": "Teie kontaktisikud",
+      "title": "Leidke oma otsejoon."
+    }
+  },
+  "cases": {
+    "meta": {
+      "title": "Juhtumid",
+      "description": "Tegelikud projektid tootmispõrandalt — kuidas Nicholaisen on aidanud tootjatel optimeerida, investeerida ja ehitada."
+    },
+    "hero": {
+      "eyebrow": "Juhtumid",
+      "title": "Tegelikud tulemused tootmispõrandalt.",
+      "lede": "Valik projekte — ühe liini optimeerimisest võtmevalmis tehasteni."
+    },
+    "readCase": "Loe juhtumit",
+    "challenge": "Väljakutse",
+    "approach": "Lähenemine",
+    "outcome": "Tulemus",
+    "metrics": "Põhinäitajad",
+    "relatedServices": "Seotud teenused",
+    "allCases": "Kõik juhtumid"
+  },
+  "insights": {
+    "meta": {
+      "title": "Ülevaated",
+      "description": "Praktilised mõtted Nicholaisenilt tootmise optimeerimise, investeerimisotsuste ja puidutööstuse kohta."
+    },
+    "hero": {
+      "eyebrow": "Ülevaated",
+      "title": "Praktilised mõtted tootmispõrandalt.",
+      "lede": "Artiklid tootmise, investeerimise ja meie valdkondade kohta."
+    },
+    "readingTime": "{minutes} min lugemine",
+    "allInsights": "Kõik ülevaated",
+    "readInsight": "Loe ülevaadet"
+  },
+  "services": {
+    "meta": {
+      "title": "Teenused",
+      "description": "Viis teenuserada, mis on ehitatud teie tootmise ümber — strateegiast digitaalse jõudluseni."
+    },
+    "hero": {
+      "eyebrow": "Teenused",
+      "title": "Viis rada, üks meeskond.",
+      "lede": "Strateegilisest suunast reaalajas tootmispõranda andmeteni — ehitatud teie tegevuse ümber."
+    },
+    "learnMore": "Loe rohkem",
+    "relatedCases": "Seotud juhtumid",
+    "allServices": "Kõik teenused"
+  },
+  "industries": {
+    "relatedServices": "Selle tööstusharu teenused",
+    "relatedCases": "Selle tööstusharu juhtumid"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privaatsuspoliitika",
+      "description": "Kuidas Nicholaisen kogub, kasutab ja kaitseb teie isikuandmeid."
+    },
+    "cookies": {
+      "title": "Küpsiste poliitika",
+      "description": "Kuidas Nicholaisen kasutab küpsiseid sellel veebisaidil."
+    }
+  }
+}

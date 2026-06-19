@@ -1,11 +1,13 @@
-import Link from "next/link";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { LinkButton } from "@/components/ui/Button";
 import { MegaNav } from "@/components/layout/MegaNav";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { Container } from "@/components/layout/Container";
 
-export function SiteHeader() {
+export async function SiteHeader() {
+  const t = await getTranslations("nav");
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)]/85 backdrop-blur supports-[backdrop-filter]:bg-[var(--color-cream-50)]/70">
       <Container>
@@ -30,7 +32,7 @@ export function SiteHeader() {
 
           <div className="hidden lg:flex items-center gap-3">
             <LinkButton href="/contact" variant="primary" size="sm" withArrow>
-              Schedule a call
+              {t("cta")}
             </LinkButton>
           </div>
 
