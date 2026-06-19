@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { LinkButton } from "@/components/ui/Button";
 import { MegaNav } from "@/components/layout/MegaNav";
 import { MobileNav } from "@/components/layout/MobileNav";

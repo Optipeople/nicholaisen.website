@@ -95,7 +95,7 @@
       "newToDesc": "Pardavimas, inžinerinės paslaugos ir konsultacijos medienos, plastiko ir aliuminio pramonės šakoms — daugiau nei 50 metų.",
       "newToCta": "Sužinokite, ką mes darome",
       "optimizeTitle": "Pasiruošę optimizuoti?",
-      "optimizeDesc": "Nuo vieno pralaidumo taško iki raktų pavidalo gamyklos. Penki paslaugų takai, sukurti jūsų gamybos linijai.",
+      "optimizeDesc": "Nuo vienos kliūties iki raktų pavidalo gamyklos. Penki paslaugų takai, sukurti jūsų gamybos linijai.",
       "optimizeCta": "Ištirti mūsų paslaugas",
       "optiTitle": "Reikia Opti įžvalgų?",
       "optiDesc": "Realaus laiko matomumas gamybos ceche su keliu į prognozuojamą priežiūrą ir nuolatinį gerinimą.",
@@ -135,7 +135,7 @@
       "specificTitle": "Konkretus prieš įspūdingą",
       "specificDesc": "Mes verčiau pažadame 6 minučių perjungimą nei skaitmeninę transformaciją. Konkretų galima išbandyti.",
       "longTitle": "Ilgalaikis prieš greitą",
-      "longDesc": "Dirbame su klientais per investicijų ciklus, o ne tik projektus. Geri rezultatai daugėja."
+      "longDesc": "Dirbame su klientais per investicijų ciklus, o ne tik projektus. Geri rezultatai kaupiasi."
     },
     "history": {
       "eyebrow": "Istorija",
@@ -144,7 +144,7 @@
       "1972Title": "Įkurta Hørning mieste",
       "1972Desc": "Pradėjo kaip medžio apdirbimo mašinų pardavimo agentas. Sunkiai uždirbtos žinios iš gamybos cecho iš to laikotarpio vis dar formuoja mūsų darbo būdą.",
       "1990sYear": "1990-ieji",
-      "1990sTitle": "Inžinerinės paslaugos įtraukiamos",
+      "1990sTitle": "Inžinerinės paslaugos tampa mūsų dalimi",
       "1990sDesc": "Klientai prašė daugiau nei įrangos — jie norėjo išplanavimų, integracijų, rezultatų. Inžinerinės paslaugos tapo pasiūlymo dalimi.",
       "2010sYear": "2010-ieji",
       "2010sTitle": "Konsultavimas tampa disciplina",
@@ -196,7 +196,7 @@
     },
     "team": {
       "eyebrow": "Jūsų kontaktai",
-      "title": "Raskite savo tiesioginę liniją."
+      "title": "Raskite savo kontaktą."
     }
   },
   "cases": {

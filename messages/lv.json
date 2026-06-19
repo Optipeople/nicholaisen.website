@@ -121,7 +121,7 @@
     },
     "what": {
       "eyebrow": "Ko mēs darām",
-      "title": "Kopā ar jums mēs analizējam un apgaismojam jūsu datus, stiprās puses un potenciālus.",
+      "title": "Kopā ar jums mēs analizējam un atklājam jūsu datus, stiprās puses un potenciālus.",
       "body1": "Mēs nodrošinām pārdošanu, inženierpakalpojumus un konsultācijas par inovatīviem mašīnu risinājumiem un servisa konceptiem. Mēs sniedzam padomus par gudriem optimizācijas risinājumiem un ienesīgiem ieguldījumiem — no pirmās sarunas līdz ilgi pēc nodošanas ekspluatācijā.",
       "body2": "Lielākā daļa mūsu klientu paliek pie mums gadu desmitiem. Tas nav lojalitāte lojalitātes dēļ — tā ir praktiskā rezultāta sekas, strādājot ar partneri, kurš pārzina ražošanas līniju un parādās, kad kaut kas ir nepareizi."
     },
@@ -144,7 +144,7 @@
       "1972Title": "Dibināts Hørningā",
       "1972Desc": "Sākās kā koksnes apstrādes mašīnu tirdzniecības aģents. Grūti nopelnītās zināšanas no ražošanas cehiem no tā laika joprojām veido mūsu darba veidu.",
       "1990sYear": "1990. gadi",
-      "1990sTitle": "Inženierpakalpojumi nāk iekšā",
+      "1990sTitle": "Inženierpakalpojumi kļūst par mūsu piedāvājumu",
       "1990sDesc": "Klienti lūdza vairāk nekā aprīkojumu — viņi gribēja izkārtojumus, integrācijas, rezultātus. Inženierpakalpojumi kļuva par piedāvājuma daļu.",
       "2010sYear": "2010. gadi",
       "2010sTitle": "Konsultācijas kļūst par disciplīnu",
@@ -177,7 +177,7 @@
       "interest": "Mani interesē",
       "interestDefault": "Izvēlēties tēmu",
       "message": "Ko jūs mēģināt uzlabot?",
-      "messagePlaceholder": "Dažas teikumi pietiek.",
+      "messagePlaceholder": "Daži teikumi pietiek.",
       "submit": "Nosūtīt ziņu",
       "submitting": "Sūta…",
       "replyTime": "Mēs atbildam vienas darba dienas laikā.",
@@ -196,7 +196,7 @@
     },
     "team": {
       "eyebrow": "Jūsu kontaktpersonas",
-      "title": "Atrodiet savu tiešo savienojumu."
+      "title": "Atrodiet savu kontaktpersonu."
     }
   },
   "cases": {

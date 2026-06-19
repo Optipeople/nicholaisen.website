@@ -3,7 +3,7 @@
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { services, industries, primaryNav, type NavSection } from "@/lib/nav";
 import { cn } from "@/lib/cn";
 

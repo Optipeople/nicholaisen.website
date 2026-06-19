@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, Briefcase, Factory, CalendarCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { services, industries } from "@/lib/nav";
 import { Container } from "@/components/layout/Container";
 import { LinkButton } from "@/components/ui/Button";

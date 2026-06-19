@@ -104,7 +104,7 @@
     "cta": {
       "eyebrow": "Engineered precision, told quietly.",
       "title": "Rääkige meile, mida soovite parandada.",
-      "body": "Tooge meile see osa liinist, mis teid frustrееrib. Me tuleme tagasi sellega, mida vaataksime esmalt.",
+      "body": "Tooge meile see osa liinist, mis teid frustreerib. Me tuleme tagasi sellega, mida vaataksime esmalt.",
       "primary": "Broneeri kõne",
       "secondary": "Avasta lahendused"
     }
@@ -121,7 +121,7 @@
     },
     "what": {
       "eyebrow": "Mida me teeme",
-      "title": "Koos teiega analüüsime ja valgustame teie andmeid, tugevusi ja potentsiaale.",
+      "title": "Koos teiega analüüsime ja toome esile teie andmed, tugevused ja potentsiaalid.",
       "body1": "Pakume müüki, inseneriteenuseid ja nõustamist innovaatiliste masinalahenduste ja teenuskontseptsioonide osas. Nõustame aruka optimeerimise ja kasumlike investeeringute osas — esimesest vestlusest kuni kaua pärast kasutuselevõttu.",
       "body2": "Enamik meie kliente jääb meiega aastakümneid. See ei ole lojaalsus lojaalsuse pärast — see on praktilise koostöö tulemus partneriga, kes tunneb tootmisliini ja ilmub kohale, kui midagi läheb valesti."
     },
@@ -183,7 +183,7 @@
       "replyTime": "Vastame ühe tööpäeva jooksul.",
       "successTitle": "Võtame teiega ühendust ühe tööpäeva jooksul.",
       "successBody": "Kiireloomuliste küsimuste korral saate meiega otse ühendust võtta",
-      "successLabel": "Tänan",
+      "successLabel": "Aitäh",
       "interests": {
         "ligna": "Ligna 2026 — eelbroneeri kohtumine",
         "businessDevelopment": "Äri arendamine",

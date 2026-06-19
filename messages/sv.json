@@ -133,7 +133,7 @@
       "dataTitle": "Data före åsikter",
       "dataDesc": "Varje rekommendation vi ger är förankrad i vad linjen faktiskt gör — inte vad den borde göra på papper.",
       "specificTitle": "Konkret före imponerande",
-      "specificDesc": "Vi lovar hellre ett 6-minutersomställning än en digital transformation. Det konkreta kan testas.",
+      "specificDesc": "Vi lovar hellre en 6-minutersomställning än en digital transformation. Det konkreta kan testas.",
       "longTitle": "Långsiktigt före snabbt",
       "longDesc": "Vi arbetar med våra kunder över investeringscykler, inte bara projekt. De goda resultaten förstärks."
     },
@@ -151,7 +151,7 @@
       "2010sDesc": "Dataanalys före investering. Produktionsoptimering. Kapacitetsplanering. Det rådgivande arbetet formaliserades i namngivna spår.",
       "todayYear": "Idag",
       "todayTitle": "Opti — digital performance",
-      "todayDesc": "Realtids maskindata omvandlade till de beslut som driver linjen. Där strategi och produktionsgolv möts."
+      "todayDesc": "Realtids maskindata omvandlas till de beslut som driver linjen. Där strategi och produktionsgolv möts."
     },
     "location": {
       "eyebrow": "Hitta oss",
@@ -229,7 +229,7 @@
     },
     "readingTime": "{minutes} min läsning",
     "allInsights": "Alla insikter",
-    "readInsight": "Läs insikt"
+    "readInsight": "Läs artikeln"
   },
   "services": {
     "meta": {
