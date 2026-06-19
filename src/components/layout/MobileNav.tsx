@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { primaryNav } from "@/lib/nav";
 import { LinkButton } from "@/components/ui/Button";
+import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -125,7 +126,8 @@ export function MobileNav() {
             })}
           </nav>
 
-          <div className="mt-8 border-t border-[var(--color-ink-300)]/30 pt-6">
+          <div className="mt-8 border-t border-[var(--color-ink-300)]/30 pt-6 space-y-4">
+            <LocaleSwitcher onSelect={() => setOpen(false)} />
             <LinkButton href="/contact" variant="primary" size="md" className="w-full" withArrow>
               {t("cta")}
             </LinkButton>

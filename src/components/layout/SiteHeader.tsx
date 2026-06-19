@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { LinkButton } from "@/components/ui/Button";
 import { MegaNav } from "@/components/layout/MegaNav";
 import { MobileNav } from "@/components/layout/MobileNav";
+import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 import { Container } from "@/components/layout/Container";
 
 export async function SiteHeader() {
@@ -31,6 +32,7 @@ export async function SiteHeader() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
+            <LocaleSwitcher />
             <LinkButton href="/contact" variant="primary" size="sm" withArrow>
               {t("cta")}
             </LinkButton>

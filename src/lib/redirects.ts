@@ -8,13 +8,6 @@ import type { Redirect } from "next/dist/lib/load-custom-routes";
  * each `source` against a real crawl before launch and add any missing slugs.
  */
 export const redirects: Redirect[] = [
-  // Locale prefixes → English root
-  { source: "/da", destination: "/", permanent: true },
-  { source: "/da/:path*", destination: "/:path*", permanent: true },
-  { source: "/sv/:path*", destination: "/:path*", permanent: true },
-  { source: "/et/:path*", destination: "/:path*", permanent: true },
-  { source: "/lt/:path*", destination: "/:path*", permanent: true },
-
   // Likely WP slugs → new IA. Add/remove after the crawl confirms what exists.
   { source: "/services/optimization", destination: "/services/production-optimization", permanent: true },
   { source: "/services/optimering", destination: "/services/production-optimization", permanent: true },
