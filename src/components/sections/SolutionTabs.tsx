@@ -16,7 +16,7 @@ const solutions = [
     blurb:
       "Align direction, sequence the right investments, plan capacity for the next five years.",
     href: "/services/business-development",
-    image: "/images/workshop/precision-machining.jpg",
+    image: "/images/top-view-boards-mdf-material-1-scaled-1.jpg",
   },
   {
     key: "production-optimization",
