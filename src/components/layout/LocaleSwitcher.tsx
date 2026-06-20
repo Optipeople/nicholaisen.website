@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Globe, ChevronDown } from "lucide-react";
-import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
@@ -15,9 +14,18 @@ const localeNames: Record<string, string> = {
   lt: "Lietuvių",
 };
 
-function buildLocalePath(pathname: string, currentLocale: string, nextLocale: string): string {
+function getLocaleFromPathname(pathname: string): string {
+  for (const locale of routing.locales) {
+    if (locale === routing.defaultLocale) continue;
+    if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
+      return locale;
+    }
+  }
+  return routing.defaultLocale;
+}
+
+function buildLocalePath(pathname: string, nextLocale: string): string {
   const prefixes = routing.locales.filter((l) => l !== routing.defaultLocale);
-  // strip current locale prefix if present
   let stripped = pathname;
   for (const p of prefixes) {
     if (pathname === `/${p}` || pathname.startsWith(`/${p}/`)) {
@@ -25,15 +33,14 @@ function buildLocalePath(pathname: string, currentLocale: string, nextLocale: st
       break;
     }
   }
-  // add new locale prefix (unless it's the default)
   if (nextLocale === routing.defaultLocale) return stripped;
   return `/${nextLocale}${stripped === "/" ? "" : stripped}`;
 }
 
 export function LocaleSwitcher({ onSelect }: { onSelect?: () => void } = {}) {
-  const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const locale = getLocaleFromPathname(pathname);
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -50,7 +57,7 @@ export function LocaleSwitcher({ onSelect }: { onSelect?: () => void } = {}) {
   function handleSelect(next: string) {
     setOpen(false);
     onSelect?.();
-    router.push(buildLocalePath(pathname, locale, next));
+    router.push(buildLocalePath(pathname, next));
   }
 
   return (
