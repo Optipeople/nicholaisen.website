@@ -150,7 +150,7 @@
       "2010sTitle": "Konsultācijas kļūst par disciplīnu",
       "2010sDesc": "Datu analīze pirms ieguldījuma. Ražošanas optimizācija. Jaudas plānošana. Konsultatīvais darbs formalizēts nosauktajos ceļos.",
       "todayYear": "Šodien",
-      "todayTitle": "Opti — digitālā veiktspēja",
+      "todayTitle": "Opti — Digital Performance",
       "todayDesc": "Reāllaika mašīnu dati pārvērsti lēmumos, kas virza līniju. Kur stratēģija un ražošanas cehs satiekas."
     },
     "location": {
@@ -209,13 +209,13 @@
       "title": "Reāli rezultāti no ražošanas cehiem.",
       "lede": "Projektu izlase — no vienas līnijas optimizācijas līdz kompleksām rūpnīcām."
     },
-    "readCase": "Lasīt gadījumu",
+    "readCase": "Lasīt projektu",
     "challenge": "Izaicinājums",
     "approach": "Pieeja",
     "outcome": "Rezultāts",
     "metrics": "Galvenie rādītāji",
     "relatedServices": "Saistītie pakalpojumi",
-    "allCases": "Visi gadījumi"
+    "allCases": "Visi projekti"
   },
   "insights": {
     "meta": {
@@ -234,7 +234,7 @@
   "services": {
     "meta": {
       "title": "Pakalpojumi",
-      "description": "Pieci pakalpojumu veidi, kas veidoti jūsu ražošanai — no stratēģijas līdz digitālajai veiktspējai."
+      "description": "Pieci pakalpojumu veidi, kas veidoti jūsu ražošanai — no stratēģijas līdz Digital Performance."
     },
     "hero": {
       "eyebrow": "Pakalpojumi",
@@ -242,7 +242,7 @@
       "lede": "No stratēģiskā virziena līdz reāllaika datiem no ražošanas cehiem — veidots jūsu darbībai."
     },
     "learnMore": "Lasīt vairāk",
-    "relatedCases": "Saistītie gadījumi",
+    "relatedCases": "Saistītie projekti",
     "allServices": "Visi pakalpojumi"
   },
   "industries": {
