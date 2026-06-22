@@ -25,10 +25,10 @@
       "projectSolutions": { "title": "Projektløsninger", "description": "Fra en enkelt linje til et komplet fabriksanlæg." },
       "customProductionLines": { "title": "Skræddersyede produktionslinjer", "description": "Bygget til dine forretningsmål." },
       "automationIntegration": { "title": "Automation & Integration", "description": "Forbind og skalér operationer." },
-      "turnkeyProjects": { "title": "Totalløsninger", "description": "Fra idé til eksekvering." },
+      "turnkeyProjects": { "title": "Totalløsninger", "description": "Fra idé til levering." },
       "digitalPerformance": { "title": "Digital Performance", "description": "Opti — realtidsindsigt fra produktionsgulvet." },
       "productionInsights": { "title": "Produktionsindsigt", "description": "Realtidssynlighed over performance." },
-      "predictiveMaintenance": { "title": "Præventiv vedligeholdelse", "description": "Forebyg nedetid, inden den sker." },
+      "predictiveMaintenance": { "title": "Prædiktiv vedligeholdelse", "description": "Forebyg nedetid, inden den sker." },
       "continuousOptimization": { "title": "Løbende optimering", "description": "Forbedre performance over tid." },
       "partnership": { "title": "Partnerskab", "description": "En langsigtet effektivitetspartner." },
       "capacityPlanning": { "title": "Kapacitetsplanlægning", "description": "Afstem strategi og investeringer." },
@@ -85,7 +85,7 @@
       "browseIndustry": "Gennemse efter branche",
       "talkEngineer": "Tal med en ingeniør",
       "scheduleTitle": "En 30-minutters samtale. Uden præsentation.",
-      "scheduleBody": "Fortæl os, hvad du kører, hvor du sidder fast, og hvad bedre ville se ud. Vi vender tilbage med, hvad vi ville kigge på først.",
+      "scheduleBody": "Fortæl os, hvad du kører, hvor du sidder fast, og hvad der ville se bedre ud. Vi vender tilbage med, hvad vi ville kigge på først.",
       "scheduleBtn": "Book et møde"
     },
     "infoCards": {
@@ -98,7 +98,7 @@
       "optimizeDesc": "Fra en enkelt flaskehals til et komplet fabriksanlæg. Fem servicelinjer bygget til din produktion.",
       "optimizeCta": "Udforsk vores ydelser",
       "optiTitle": "Brug for Opti-indsigt?",
-      "optiDesc": "Realtidssynlighed på produktionsgulvet med en vej til præventiv vedligeholdelse og løbende forbedring.",
+      "optiDesc": "Realtidssynlighed på produktionsgulvet med en vej til prædiktiv vedligeholdelse og løbende forbedring.",
       "optiCta": "Opdag Opti"
     },
     "cta": {
