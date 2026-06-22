@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { LinkButton } from "@/components/ui/Button";
@@ -5,6 +6,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 
 type CtaBandProps = {
   id?: string;
+  locale?: string;
   eyebrow?: string;
   title?: string;
   body?: string;
@@ -13,15 +15,32 @@ type CtaBandProps = {
   tone?: "navy" | "beige";
 };
 
-export function CtaBand({
+export async function CtaBand({
   id,
-  eyebrow = "Engineered precision, told quietly.",
-  title = "Tell us what you’re trying to make better.",
-  body = "Bring us the part of the line that frustrates you. We’ll come back with what we’d look at first.",
-  primary = { label: "Schedule a call", href: "/contact" },
-  secondary = { label: "Explore solutions", href: "/services" },
+  locale,
+  eyebrow,
+  title,
+  body,
+  primary,
+  secondary,
   tone = "navy",
 }: CtaBandProps = {}) {
+  const t = locale
+    ? await getTranslations({ locale, namespace: "home" })
+    : null;
+
+  const resolvedEyebrow = eyebrow ?? t?.("cta.eyebrow") ?? "Engineered precision, told quietly.";
+  const resolvedTitle = title ?? t?.("cta.title") ?? "Tell us what you're trying to make better.";
+  const resolvedBody = body ?? t?.("cta.body") ?? "Bring us the part of the line that frustrates you. We'll come back with what we'd look at first.";
+  const resolvedPrimary = primary ?? {
+    label: t?.("cta.primary") ?? "Schedule a call",
+    href: locale ? `/${locale}/contact` : "/contact",
+  };
+  const resolvedSecondary = secondary ?? {
+    label: t?.("cta.secondary") ?? "Explore solutions",
+    href: locale ? `/${locale}/services` : "/services",
+  };
+
   const isNavy = tone === "navy";
   return (
     <Section id={id} tone={isNavy ? "navy" : "beige"} size="md">
@@ -29,35 +48,35 @@ export function CtaBand({
         <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
           <div>
             <Eyebrow className={isNavy ? "text-[var(--color-tan-300)]" : undefined}>
-              {eyebrow}
+              {resolvedEyebrow}
             </Eyebrow>
             <h2
               className={`mt-5 text-display-2 text-balance ${
                 isNavy ? "text-[var(--color-cream-50)]" : "text-[var(--color-ink-900)]"
               }`}
             >
-              {title}
+              {resolvedTitle}
             </h2>
             <p
               className={`mt-6 max-w-2xl text-lede ${
                 isNavy ? "text-[var(--color-cream-50)]/80" : "text-[var(--color-ink-700)]"
               }`}
             >
-              {body}
+              {resolvedBody}
             </p>
           </div>
           <div className="flex flex-wrap gap-3 lg:justify-end">
             <LinkButton
-              href={primary.href}
+              href={resolvedPrimary.href}
               variant={isNavy ? "inverse" : "primary"}
               size="lg"
               withArrow
             >
-              {primary.label}
+              {resolvedPrimary.label}
             </LinkButton>
-            {secondary ? (
+            {resolvedSecondary ? (
               <LinkButton
-                href={secondary.href}
+                href={resolvedSecondary.href}
                 variant={isNavy ? "ghost" : "secondary"}
                 size="lg"
                 className={
@@ -66,7 +85,7 @@ export function CtaBand({
                     : undefined
                 }
               >
-                {secondary.label}
+                {resolvedSecondary.label}
               </LinkButton>
             ) : null}
           </div>

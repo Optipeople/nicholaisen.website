@@ -200,7 +200,7 @@ export default async function ServicePage({
         />
       ) : null}
 
-      <CtaBand id="contact" />
+      <CtaBand id="contact" locale={locale} />
     </>
   );
 }

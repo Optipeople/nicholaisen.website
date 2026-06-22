@@ -23,7 +23,7 @@ export default async function HomePage({
       <IndustryStrip locale={locale} />
       <CaseSpotlight locale={locale} />
       <InsightGrid locale={locale} />
-      <CtaBand />
+      <CtaBand locale={locale} />
     </>
   );
 }

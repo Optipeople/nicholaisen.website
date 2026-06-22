@@ -74,12 +74,7 @@ export default async function ServicesIndexPage({
         </Container>
       </Section>
 
-      <CtaBand
-        title="Not sure which track fits?"
-        body="Tell us what's frustrating you about the line. We'll suggest where we'd start."
-        primary={{ label: "Schedule a call", href: "/contact" }}
-        secondary={{ label: "See our cases", href: "/cases" }}
-      />
+      <CtaBand locale={locale} />
     </>
   );
 }

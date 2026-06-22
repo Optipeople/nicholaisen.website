@@ -83,10 +83,7 @@ export default async function CasesIndexPage({
         </Container>
       </Section>
 
-      <CtaBand
-        title="Could yours be the next one?"
-        body="If you've got a thesis you're trying to validate, we'll bring data."
-      />
+      <CtaBand locale={locale} />
     </>
   );
 }

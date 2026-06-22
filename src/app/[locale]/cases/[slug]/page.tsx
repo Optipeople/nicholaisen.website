@@ -161,10 +161,7 @@ export default async function CasePage({
         </Container>
       </Section>
 
-      <CtaBand
-        title="Have a similar challenge?"
-        body="No two lines are identical, but most problems rhyme. Tell us yours."
-      />
+      <CtaBand locale={locale} />
     </>
   );
 }

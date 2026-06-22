@@ -137,9 +137,7 @@ export default async function IndustryPage({
         locale={locale}
       />
 
-      <CtaBand
-        title={t("talkAboutLine", { title: fm.title.toLowerCase() })}
-      />
+      <CtaBand locale={locale} />
     </>
   );
 }

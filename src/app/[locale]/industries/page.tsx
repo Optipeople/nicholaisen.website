@@ -68,12 +68,7 @@ export default async function IndustriesIndexPage({
         </Container>
       </Section>
 
-      <CtaBand
-        title="Working in another wood-adjacent industry?"
-        body="We also serve plastics and aluminum manufacturers. Tell us what you're running."
-        primary={{ label: "Get in touch", href: "/contact" }}
-        secondary={{ label: "See our services", href: "/services" }}
-      />
+      <CtaBand locale={locale} />
     </>
   );
 }

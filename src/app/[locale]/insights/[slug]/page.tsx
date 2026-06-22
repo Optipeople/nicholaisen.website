@@ -167,10 +167,7 @@ export default async function InsightPage({
         </Section>
       ) : null}
 
-      <CtaBand
-        title="Talk to us about your line."
-        body="Reading is one thing. Walking the line is faster."
-      />
+      <CtaBand locale={locale} />
     </>
   );
 }
