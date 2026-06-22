@@ -22,10 +22,10 @@
       "flowOptimization": { "title": "Plūsmas optimizācija", "description": "Ātri novērsiet šaurās vietas." },
       "capacityImprovement": { "title": "Jaudas uzlabošana", "description": "Palieliniet produkciju bez kapitālieguldījumiem." },
       "oeeEfficiency": { "title": "OEE un efektivitāte", "description": "Samaziniet zudumus un dīkstāvi." },
-      "projectSolutions": { "title": "Projektu risinājumi", "description": "No vienas līnijas līdz atslēgas gatavai rūpnīcai." },
+      "projectSolutions": { "title": "Projektu risinājumi", "description": "No vienas līnijas līdz kompleksai rūpnīcai." },
       "customProductionLines": { "title": "Pielāgotas ražošanas līnijas", "description": "Veidotas jūsu biznesa mērķiem." },
       "automationIntegration": { "title": "Automatizācija un integrācija", "description": "Savienojiet un mērogojiet darbības." },
-      "turnkeyProjects": { "title": "Atslēgas gatavi projekti", "description": "No idejas līdz īstenošanai." },
+      "turnkeyProjects": { "title": "Kompleksi projekti", "description": "No idejas līdz īstenošanai." },
       "digitalPerformance": { "title": "Digital Performance", "description": "Opti — reāllaika ieskats no ražošanas cehiem." },
       "productionInsights": { "title": "Ražošanas ieskati", "description": "Ražošanas rezultātu reāllaika pārskats." },
       "predictiveMaintenance": { "title": "Prognozējamā apkope", "description": "Novērsiet dīkstāvi pirms tā iestāšanās." },
@@ -95,7 +95,7 @@
       "newToDesc": "Pārdošana, inženierpakalpojumi un konsultācijas koksnes, plastmasas un alumīnija nozarēm — vairāk nekā 50 gadus.",
       "newToCta": "Uzziniet, ko mēs darām",
       "optimizeTitle": "Gatavs optimizēt?",
-      "optimizeDesc": "No vienas šaurās vietas līdz atslēgas gatavai rūpnīcai. Pieci pakalpojumu veidi, kas veidoti jūsu ražošanas līnijai.",
+      "optimizeDesc": "No vienas šaurās vietas līdz kompleksai rūpnīcai. Pieci pakalpojumu veidi, kas veidoti jūsu ražošanas līnijai.",
       "optimizeCta": "Izpētīt mūsu pakalpojumus",
       "optiTitle": "Nepieciešami Opti ieskati?",
       "optiDesc": "Reāllaika redzamība ražošanas cehā ar ceļu uz prognozējamu apkopi un nepārtrauktu uzlabošanu.",
@@ -207,7 +207,7 @@
     "hero": {
       "eyebrow": "Projekti",
       "title": "Reāli rezultāti no ražošanas cehiem.",
-      "lede": "Projektu izlase — no vienas līnijas optimizācijas līdz atslēgas gatavām rūpnīcām."
+      "lede": "Projektu izlase — no vienas līnijas optimizācijas līdz kompleksām rūpnīcām."
     },
     "readCase": "Lasīt gadījumu",
     "challenge": "Izaicinājums",

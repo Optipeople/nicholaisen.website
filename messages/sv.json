@@ -14,22 +14,22 @@
       "link": "Utforska Opti"
     },
     "servicesMenu": {
-      "businessDevelopment": { "title": "Affärsutveckling", "description": "Samordna riktning, sekvensera investeringar, planera för tillväxt." },
-      "framingWorkshops": { "title": "Inramningsworkshops", "description": "Samordna riktning och prioriteringar." },
+      "businessDevelopment": { "title": "Affärsutveckling", "description": "Lägg fast riktningen, prioritera investeringar och skapa tillväxt." },
+      "framingWorkshops": { "title": "Strategiworkshops", "description": "Lägg fast riktning och prioriteringar." },
       "investmentAdvisory": { "title": "Investeringsrådgivning", "description": "Säkra ROI innan du investerar." },
       "strategicRoadmapping": { "title": "Strategisk Roadmap", "description": "Planera kapacitet och tillväxt." },
       "productionOptimization": { "title": "Produktionsoptimering", "description": "Genomflöde, kvalitet och drifttid — utan capex." },
       "flowOptimization": { "title": "Flödesoptimering", "description": "Ta bort flaskhalsar snabbt." },
       "capacityImprovement": { "title": "Kapacitetsförbättring", "description": "Öka output utan capex." },
       "oeeEfficiency": { "title": "OEE & Effektivitet", "description": "Minska slöseri och stillestånd." },
-      "projectSolutions": { "title": "Projektlösningar", "description": "Från en enda linje till en nyckelfärdig fabrik." },
-      "customProductionLines": { "title": "Skräddarsydda Produktionslinjer", "description": "Byggda för dina affärsmål." },
+      "projectSolutions": { "title": "Projektlösningar", "description": "Från en enda linje till en komplett fabriksanläggning." },
+      "customProductionLines": { "title": "Skräddarsydda produktionslinjer", "description": "Byggda för dina affärsmål." },
       "automationIntegration": { "title": "Automation & Integration", "description": "Koppla ihop och skala upp verksamheten." },
-      "turnkeyProjects": { "title": "Nyckelfärdiga Projekt", "description": "Från idé till genomförande." },
+      "turnkeyProjects": { "title": "Totallösningar", "description": "Från idé till genomförande." },
       "digitalPerformance": { "title": "Digital Performance", "description": "Opti — realtidsinsikt från produktionsgolvet." },
-      "productionInsights": { "title": "Produktionsinsikter", "description": "Realtidssynlighet av prestanda." },
-      "predictiveMaintenance": { "title": "Prediktivt Underhåll", "description": "Förebygg stillestånd innan det inträffar." },
-      "continuousOptimization": { "title": "Kontinuerlig Optimering", "description": "Förbättra prestanda över tid." },
+      "productionInsights": { "title": "Produktionsinsikter", "description": "Realtidsöverblick över prestanda." },
+      "predictiveMaintenance": { "title": "Prediktivt underhåll", "description": "Förebygg stillestånd innan det inträffar." },
+      "continuousOptimization": { "title": "Kontinuerlig optimering", "description": "Förbättra prestanda över tid." },
       "partnership": { "title": "Partnerskap", "description": "En långsiktig effektivitetspartner." },
       "capacityPlanning": { "title": "Kapacitetsplanering", "description": "Samordna strategi och investeringar." },
       "collaboration": { "title": "Samarbete", "description": "Arbeta med gemensamma mål." },
@@ -56,7 +56,7 @@
       "solutions": "Lösningar",
       "industries": "Branscher",
       "company": "Företag",
-      "legal": "Juridiskt"
+      "legal": "Juridisk"
     },
     "company": {
       "about": "Om oss",
@@ -93,9 +93,9 @@
       "title": "Tre vägar in.",
       "newToTitle": "Ny till Nicholaisen?",
       "newToDesc": "Försäljning, teknisk rådgivning och konsulttjänster för trä-, plast- och aluminiumindustrin — i över 50 år.",
-      "newToCta": "Lär dig vad vi gör",
+      "newToCta": "Se vad vi gör",
       "optimizeTitle": "Redo att optimera?",
-      "optimizeDesc": "Från en enda flaskhals till en nyckelfärdig fabrik. Fem tjänstespår byggda för din produktion.",
+      "optimizeDesc": "Från en enda flaskhals till en komplett fabriksanläggning. Fem tjänstespår byggda för din produktion.",
       "optimizeCta": "Utforska våra tjänster",
       "optiTitle": "Behöver du Opti-insikter?",
       "optiDesc": "Realtidssynlighet på produktionsgolvet med en väg till prediktivt underhåll och kontinuerlig förbättring.",
@@ -127,7 +127,7 @@
     },
     "how": {
       "eyebrow": "Hur vi arbetar",
-      "title": "Tre principer, tillämpade upprepade gånger."
+      "title": "Tre principer, tillämpade gång på gång."
     },
     "principles": {
       "dataTitle": "Data före åsikter",
@@ -135,19 +135,19 @@
       "specificTitle": "Konkret före imponerande",
       "specificDesc": "Vi lovar hellre en 6-minutersomställning än en digital transformation. Det konkreta kan testas.",
       "longTitle": "Långsiktigt före snabbt",
-      "longDesc": "Vi arbetar med våra kunder över investeringscykler, inte bara projekt. De goda resultaten förstärks."
+      "longDesc": "Vi arbetar med våra kunder genom hela investeringscykler, inte bara enstaka projekt. Goda resultat bygger på varandra."
     },
     "history": {
       "eyebrow": "Historia",
       "title": "Fem decennier, fyra vändpunkter.",
       "1972Year": "1972",
       "1972Title": "Grundades i Hørning",
-      "1972Desc": "Startade som försäljningsagent för träbearbetningsmaskiner. Den hårt förvärvade kunskapen från produktionsgolvet från den eran formar fortfarande hur vi arbetar.",
+      "1972Desc": "Startade som försäljningsagent för träbearbetningsmaskiner. Den erfarenhet vi förvärvade på produktionsgolvet formar fortfarande hur vi arbetar.",
       "1990sYear": "1990-talet",
-      "1990sTitle": "Teknik flyttas in",
-      "1990sDesc": "Kunderna bad om mer än utrustning — de ville ha layouter, integrationer, resultat. Teknik blev en del av erbjudandet.",
+      "1990sTitle": "Ingenjörstjänster tillkommer",
+      "1990sDesc": "Kunderna bad om mer än utrustning — de ville ha layouter, integrationer, resultat. Ingenjörstjänsterna blev en del av erbjudandet.",
       "2010sYear": "2010-talet",
-      "2010sTitle": "Konsultation blir en disciplin",
+      "2010sTitle": "Rådgivning etableras som disciplin",
       "2010sDesc": "Dataanalys före investering. Produktionsoptimering. Kapacitetsplanering. Det rådgivande arbetet formaliserades i namngivna spår.",
       "todayYear": "Idag",
       "todayTitle": "Opti — digital performance",
@@ -207,7 +207,7 @@
     "hero": {
       "eyebrow": "Cases",
       "title": "Verkliga resultat från produktionsgolvet.",
-      "lede": "Ett urval av projekt — från enlinjeoptimering till nyckelfärdiga fabriker."
+      "lede": "Ett urval av projekt — från enlinjeoptimering till kompletta fabriksanläggningar."
     },
     "readCase": "Läs case",
     "challenge": "Utmaning",
