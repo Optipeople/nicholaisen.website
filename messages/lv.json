@@ -2,7 +2,7 @@
   "nav": {
     "services": "Pakalpojumi",
     "industries": "Nozares",
-    "cases": "Gadījumi",
+    "cases": "Projekti",
     "insights": "Ieskati",
     "about": "Par mums",
     "contact": "Kontakti",
@@ -14,8 +14,8 @@
       "link": "Izpētīt Opti"
     },
     "servicesMenu": {
-      "businessDevelopment": { "title": "Biznesa attīstība", "description": "Saskaņojiet virzienu, plānojiet ieguldījumus, veidojiet izaugsmi." },
-      "framingWorkshops": { "title": "Ietvara darbnīcas", "description": "Saskaņojiet virzienu un prioritātes." },
+      "businessDevelopment": { "title": "Biznesa attīstība", "description": "Nosakiet virzienu, plānojiet ieguldījumus un veidojiet izaugsmi." },
+      "framingWorkshops": { "title": "Stratēģijas darbnīcas", "description": "Nosakiet virzienu un prioritātes." },
       "investmentAdvisory": { "title": "Ieguldījumu konsultācijas", "description": "Nodrošiniet ROI pirms ieguldīšanas." },
       "strategicRoadmapping": { "title": "Stratēģiskā ceļa karte", "description": "Plānojiet jaudu un izaugsmi." },
       "productionOptimization": { "title": "Ražošanas optimizācija", "description": "Caurlaidspēja, kvalitāte un darblaiks — bez kapitālieguldījumiem." },
@@ -26,8 +26,8 @@
       "customProductionLines": { "title": "Pielāgotas ražošanas līnijas", "description": "Veidotas jūsu biznesa mērķiem." },
       "automationIntegration": { "title": "Automatizācija un integrācija", "description": "Savienojiet un mērogojiet darbības." },
       "turnkeyProjects": { "title": "Atslēgas gatavi projekti", "description": "No idejas līdz īstenošanai." },
-      "digitalPerformance": { "title": "Digitālā veiktspēja", "description": "Opti — reāllaika ieskats no ražošanas cehiem." },
-      "productionInsights": { "title": "Ražošanas ieskati", "description": "Reāllaika veiktspējas redzamība." },
+      "digitalPerformance": { "title": "Digital Performance", "description": "Opti — reāllaika ieskats no ražošanas cehiem." },
+      "productionInsights": { "title": "Ražošanas ieskati", "description": "Ražošanas rezultātu reāllaika pārskats." },
       "predictiveMaintenance": { "title": "Prognozējamā apkope", "description": "Novērsiet dīkstāvi pirms tā iestāšanās." },
       "continuousOptimization": { "title": "Nepārtraukta optimizācija", "description": "Uzlabojiet veiktspēju laika gaitā." },
       "partnership": { "title": "Partnerība", "description": "Ilgtermiņa efektivitātes partneris." },
@@ -56,11 +56,11 @@
       "solutions": "Risinājumi",
       "industries": "Nozares",
       "company": "Uzņēmums",
-      "legal": "Juridiskais"
+      "legal": "Juridiskā informācija"
     },
     "company": {
       "about": "Par mums",
-      "cases": "Gadījumi",
+      "cases": "Projekti",
       "insights": "Ieskati",
       "contact": "Kontakti"
     },
@@ -90,7 +90,7 @@
     },
     "infoCards": {
       "eyebrow": "Kā sākt",
-      "title": "Trīs veidi, kā iekļūt.",
+      "title": "Trīs iespējas sākt.",
       "newToTitle": "Jauns Nicholaisen klients?",
       "newToDesc": "Pārdošana, inženierpakalpojumi un konsultācijas koksnes, plastmasas un alumīnija nozarēm — vairāk nekā 50 gadus.",
       "newToCta": "Uzziniet, ko mēs darām",
@@ -121,7 +121,7 @@
     },
     "what": {
       "eyebrow": "Ko mēs darām",
-      "title": "Kopā ar jums mēs analizējam un atklājam jūsu datus, stiprās puses un potenciālus.",
+      "title": "Kopā ar jums analizējam un atklājam jūsu datus, stiprās puses un potenciālu.",
       "body1": "Mēs nodrošinām pārdošanu, inženierpakalpojumus un konsultācijas par inovatīviem mašīnu risinājumiem un servisa konceptiem. Mēs sniedzam padomus par gudriem optimizācijas risinājumiem un ienesīgiem ieguldījumiem — no pirmās sarunas līdz ilgi pēc nodošanas ekspluatācijā.",
       "body2": "Lielākā daļa mūsu klientu paliek pie mums gadu desmitiem. Tas nav lojalitāte lojalitātes dēļ — tā ir praktiskā rezultāta sekas, strādājot ar partneri, kurš pārzina ražošanas līniju un parādās, kad kaut kas ir nepareizi."
     },
@@ -135,16 +135,16 @@
       "specificTitle": "Konkrēts pirms iespaidīga",
       "specificDesc": "Mēs labāk apsolīsim 6 minūšu pāreju nekā digitālo transformāciju. Konkrēto var pārbaudīt.",
       "longTitle": "Ilgtermiņs pirms ātruma",
-      "longDesc": "Mēs strādājam ar klientiem ieguldījumu ciklos, nevis tikai projektos. Labais rezultāts vairojas."
+      "longDesc": "Strādājam ar klientiem cauri ieguldījumu cikliem, ne tikai atsevišķos projektos. Labi rezultāti balstās cits uz cita."
     },
     "history": {
       "eyebrow": "Vēsture",
       "title": "Pieci gadu desmiti, četri pagrieziena punkti.",
       "1972Year": "1972",
       "1972Title": "Dibināts Hørningā",
-      "1972Desc": "Sākās kā koksnes apstrādes mašīnu tirdzniecības aģents. Grūti nopelnītās zināšanas no ražošanas cehiem no tā laika joprojām veido mūsu darba veidu.",
+      "1972Desc": "Sākās kā koksnes apstrādes mašīnu tirdzniecības aģents. Ražošanas cehos gūtā pieredze joprojām veido mūsu darba principus.",
       "1990sYear": "1990. gadi",
-      "1990sTitle": "Inženierpakalpojumi kļūst par mūsu piedāvājumu",
+      "1990sTitle": "Inženierpakalpojumi kļūst par piedāvājuma daļu",
       "1990sDesc": "Klienti lūdza vairāk nekā aprīkojumu — viņi gribēja izkārtojumus, integrācijas, rezultātus. Inženierpakalpojumi kļuva par piedāvājuma daļu.",
       "2010sYear": "2010. gadi",
       "2010sTitle": "Konsultācijas kļūst par disciplīnu",
@@ -189,23 +189,23 @@
         "businessDevelopment": "Biznesa attīstība",
         "productionOptimization": "Ražošanas optimizācija",
         "projectSolutions": "Projektu risinājumi",
-        "digitalPerformance": "Digitālā veiktspēja · Opti",
+        "digitalPerformance": "Digital Performance · Opti",
         "partnership": "Partnerība",
         "other": "Kaut kas cits"
       }
     },
     "team": {
       "eyebrow": "Jūsu kontaktpersonas",
-      "title": "Atrodiet savu kontaktpersonu."
+      "title": "Atrodiet savu tiešo kontaktu."
     }
   },
   "cases": {
     "meta": {
-      "title": "Gadījumi",
+      "title": "Projekti",
       "description": "Reāli projekti no ražošanas cehiem — kā Nicholaisen ir palīdzējis ražotājiem optimizēt, ieguldīt un veidot."
     },
     "hero": {
-      "eyebrow": "Gadījumi",
+      "eyebrow": "Projekti",
       "title": "Reāli rezultāti no ražošanas cehiem.",
       "lede": "Projektu izlase — no vienas līnijas optimizācijas līdz atslēgas gatavām rūpnīcām."
     },
@@ -247,7 +247,7 @@
   },
   "industries": {
     "relatedServices": "Pakalpojumi šai nozarei",
-    "relatedCases": "Gadījumi šajā nozarē"
+    "relatedCases": "Projekti šajā nozarē"
   },
   "legal": {
     "privacy": {

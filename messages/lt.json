@@ -2,20 +2,20 @@
   "nav": {
     "services": "Paslaugos",
     "industries": "Pramonės šakos",
-    "cases": "Atvejai",
+    "cases": "Projektai",
     "insights": "Įžvalgos",
     "about": "Apie mus",
     "contact": "Kontaktai",
-    "cta": "Užsisakyti skambutį",
+    "cta": "Susitarkite dėl skambučio",
     "featured": {
       "label": "Rekomenduojama",
       "title": "Opti — realaus laiko įžvalgos iš gamybos cecho",
-      "description": "Mūsų skaitmeninė platforma paverčia mašinų duomenis sprendimais, kurie stumia liniją į priekį.",
+      "description": "Mūsų skaitmeninė platforma paverčia mašinų duomenis sprendimais, kurie pagerina gamybos rezultatus.",
       "link": "Ištirti Opti"
     },
     "servicesMenu": {
       "businessDevelopment": { "title": "Verslo plėtra", "description": "Suderinkite kryptį, planuokite investicijas, kurkite augimą." },
-      "framingWorkshops": { "title": "Struktūrizavimo seminarai", "description": "Suderinkite kryptį ir prioritetus." },
+      "framingWorkshops": { "title": "Strateginiai seminarai", "description": "Suderinkite kryptį ir prioritetus." },
       "investmentAdvisory": { "title": "Investavimo konsultacijos", "description": "Užtikrinkite ROI prieš investuojant." },
       "strategicRoadmapping": { "title": "Strateginis planas", "description": "Planuokite pajėgumą ir augimą." },
       "productionOptimization": { "title": "Gamybos optimizavimas", "description": "Pralaidumas, kokybė ir veikimo laikas — be kapitalo išlaidų." },
@@ -26,9 +26,9 @@
       "customProductionLines": { "title": "Individualios gamybos linijos", "description": "Sukurtos jūsų verslo tikslams." },
       "automationIntegration": { "title": "Automatizavimas ir integracija", "description": "Sujunkite ir išplėskite operacijas." },
       "turnkeyProjects": { "title": "Raktų pavidalo projektai", "description": "Nuo idėjos iki vykdymo." },
-      "digitalPerformance": { "title": "Skaitmeninė veikla", "description": "Opti — realaus laiko įžvalgos iš gamybos cecho." },
+      "digitalPerformance": { "title": "Digital Performance", "description": "Opti — realaus laiko įžvalgos iš gamybos cecho." },
       "productionInsights": { "title": "Gamybos įžvalgos", "description": "Realaus laiko veiklos matomumas." },
-      "predictiveMaintenance": { "title": "Prognozuojama priežiūra", "description": "Užkirkite kelią prastovai prieš jai atsirandant." },
+      "predictiveMaintenance": { "title": "Prognozinė priežiūra", "description": "Užkirkite kelią prastovai prieš jai atsirandant." },
       "continuousOptimization": { "title": "Nuolatinis optimizavimas", "description": "Gerinkite veiklą laikui bėgant." },
       "partnership": { "title": "Partnerystė", "description": "Ilgalaikis efektyvumo partneris." },
       "capacityPlanning": { "title": "Pajėgumo planavimas", "description": "Suderinkite strategiją ir investicijas." },
@@ -56,11 +56,11 @@
       "solutions": "Sprendimai",
       "industries": "Pramonės šakos",
       "company": "Įmonė",
-      "legal": "Teisinis"
+      "legal": "Teisinė informacija"
     },
     "company": {
       "about": "Apie mus",
-      "cases": "Atvejai",
+      "cases": "Projektai",
       "insights": "Įžvalgos",
       "contact": "Kontaktai"
     },
@@ -98,7 +98,7 @@
       "optimizeDesc": "Nuo vienos kliūties iki raktų pavidalo gamyklos. Penki paslaugų takai, sukurti jūsų gamybos linijai.",
       "optimizeCta": "Ištirti mūsų paslaugas",
       "optiTitle": "Reikia Opti įžvalgų?",
-      "optiDesc": "Realaus laiko matomumas gamybos ceche su keliu į prognozuojamą priežiūrą ir nuolatinį gerinimą.",
+      "optiDesc": "Realaus laiko matomumas gamybos ceche su keliu į prognozinę priežiūrą ir nuolatinį gerinimą.",
       "optiCta": "Atrasti Opti"
     },
     "cta": {
@@ -135,23 +135,23 @@
       "specificTitle": "Konkretus prieš įspūdingą",
       "specificDesc": "Mes verčiau pažadame 6 minučių perjungimą nei skaitmeninę transformaciją. Konkretų galima išbandyti.",
       "longTitle": "Ilgalaikis prieš greitą",
-      "longDesc": "Dirbame su klientais per investicijų ciklus, o ne tik projektus. Geri rezultatai kaupiasi."
+      "longDesc": "Dirbame su klientais per investicijų ciklus, o ne tik projektus. Geri rezultatai kaupiasi vieni ant kitų."
     },
     "history": {
       "eyebrow": "Istorija",
       "title": "Penki dešimtmečiai, keturi lūžio taškai.",
       "1972Year": "1972",
       "1972Title": "Įkurta Hørning mieste",
-      "1972Desc": "Pradėjo kaip medžio apdirbimo mašinų pardavimo agentas. Sunkiai uždirbtos žinios iš gamybos cecho iš to laikotarpio vis dar formuoja mūsų darbo būdą.",
+      "1972Desc": "Pradėjo kaip medžio apdirbimo mašinų pardavimo agentas. Gamybos ceche įgyta patirtis vis dar formuoja mūsų darbo principus.",
       "1990sYear": "1990-ieji",
-      "1990sTitle": "Inžinerinės paslaugos tampa mūsų dalimi",
+      "1990sTitle": "Inžinerinės paslaugos tampa pasiūlymo dalimi",
       "1990sDesc": "Klientai prašė daugiau nei įrangos — jie norėjo išplanavimų, integracijų, rezultatų. Inžinerinės paslaugos tapo pasiūlymo dalimi.",
       "2010sYear": "2010-ieji",
       "2010sTitle": "Konsultavimas tampa disciplina",
       "2010sDesc": "Duomenų analizė prieš investiciją. Gamybos optimizavimas. Pajėgumo planavimas. Patariamasis darbas formalizuotas į pavadintas trasas.",
       "todayYear": "Šiandien",
-      "todayTitle": "Opti — skaitmeninė veikla",
-      "todayDesc": "Realaus laiko mašinų duomenys paversti sprendimais, kurie stumia liniją. Kur strategija ir gamybos cechas susitinka."
+      "todayTitle": "Opti — Digital Performance",
+      "todayDesc": "Realaus laiko mašinų duomenys paversti sprendimais, kurie veda liniją pirmyn. Kur strategija ir gamybos cechas susitinka."
     },
     "location": {
       "eyebrow": "Raskite mus",
@@ -177,7 +177,7 @@
       "interest": "Mane domina",
       "interestDefault": "Pasirinkite temą",
       "message": "Ką bandote pagerinti?",
-      "messagePlaceholder": "Kelios frazės pakanka.",
+      "messagePlaceholder": "Keletas sakinių užtenka.",
       "submit": "Siųsti žinutę",
       "submitting": "Siunčiama…",
       "replyTime": "Atsakome per vieną darbo dieną.",
@@ -189,7 +189,7 @@
         "businessDevelopment": "Verslo plėtra",
         "productionOptimization": "Gamybos optimizavimas",
         "projectSolutions": "Projektų sprendimai",
-        "digitalPerformance": "Skaitmeninė veikla · Opti",
+        "digitalPerformance": "Digital Performance · Opti",
         "partnership": "Partnerystė",
         "other": "Kažkas kita"
       }
@@ -201,21 +201,21 @@
   },
   "cases": {
     "meta": {
-      "title": "Atvejai",
+      "title": "Projektai",
       "description": "Realūs projektai iš gamybos cecho — kaip Nicholaisen padėjo gamintojams optimizuoti, investuoti ir kurti."
     },
     "hero": {
-      "eyebrow": "Atvejai",
+      "eyebrow": "Projektai",
       "title": "Realūs rezultatai iš gamybos cecho.",
       "lede": "Projektų atranka — nuo vienos linijos optimizavimo iki raktų pavidalo gamyklų."
     },
-    "readCase": "Skaityti atvejį",
+    "readCase": "Skaityti projektą",
     "challenge": "Iššūkis",
-    "approach": "Požiūris",
+    "approach": "Metodas",
     "outcome": "Rezultatas",
     "metrics": "Pagrindiniai rodikliai",
     "relatedServices": "Susijusios paslaugos",
-    "allCases": "Visi atvejai"
+    "allCases": "Visi projektai"
   },
   "insights": {
     "meta": {
@@ -234,7 +234,7 @@
   "services": {
     "meta": {
       "title": "Paslaugos",
-      "description": "Penki paslaugų takai, sukurti jūsų gamybai — nuo strategijos iki skaitmeninės veiklos."
+      "description": "Penki paslaugų takai, sukurti jūsų gamybai — nuo strategijos iki Digital Performance."
     },
     "hero": {
       "eyebrow": "Paslaugos",
@@ -242,12 +242,12 @@
       "lede": "Nuo strateginės krypties iki realaus laiko duomenų iš gamybos cecho — sukurta jūsų veiklai."
     },
     "learnMore": "Skaityti daugiau",
-    "relatedCases": "Susiję atvejai",
+    "relatedCases": "Susiję projektai",
     "allServices": "Visos paslaugos"
   },
   "industries": {
     "relatedServices": "Šios pramonės šakos paslaugos",
-    "relatedCases": "Atvejai šioje pramonės šakoje"
+    "relatedCases": "Projektai šioje pramonės šakoje"
   },
   "legal": {
     "privacy": {
