@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -11,29 +12,35 @@ import { listInsights } from "@/content/loader";
 import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 
-const categoryLabels: Record<string, string> = {
-  industry: "Industry",
-  optimization: "Optimization",
-  "opti-platform": "Opti",
-  company: "Company",
-};
-
 export const metadata: Metadata = buildMetadata({
   title: "Insights",
-  description: "Notes from the shop floor — observations, methods, and what we’re learning.",
+  description: "Notes from the shop floor — observations, methods, and what we're learning.",
   path: "/insights",
 });
 
-export default async function InsightsIndexPage() {
-  const insights = await listInsights();
+export default async function InsightsIndexPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "insights" });
+  const insights = await listInsights(locale);
   const [featured, ...rest] = insights;
+
+  const categoryLabels: Record<string, string> = {
+    industry: t("categoryIndustry"),
+    optimization: t("categoryOptimization"),
+    "opti-platform": t("categoryOptiPlatform"),
+    company: t("categoryCompany"),
+  };
 
   return (
     <>
       <PageHero
-        eyebrow="Insights"
-        title="Notes from the shop floor."
-        lede="Observations, methods, and what we’re learning. Written by the people doing the work."
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        lede={t("hero.lede")}
         align="wide"
       />
 
@@ -41,7 +48,7 @@ export default async function InsightsIndexPage() {
         <Section tone="paper" size="md">
           <Container>
             <Link
-              href={`/insights/${featured.frontmatter.slug}`}
+              href={`/${locale}/insights/${featured.frontmatter.slug}`}
               className="group grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[var(--color-paper-dark)]">
@@ -54,18 +61,18 @@ export default async function InsightsIndexPage() {
                 />
               </div>
               <div>
-                <Eyebrow>Featured</Eyebrow>
+                <Eyebrow>{t("featured")}</Eyebrow>
                 <p className="mt-4 text-eyebrow text-[var(--color-tan-500)]">
                   {categoryLabels[featured.frontmatter.category] ??
                     featured.frontmatter.category}{" "}
-                  · {formatDate(featured.frontmatter.publishedAt)} · {featured.readingTime} min
+                  · {formatDate(featured.frontmatter.publishedAt)} · {featured.readingTime} {t("minRead")}
                 </p>
                 <h2 className="mt-3 text-display-2 leading-[1.05] text-balance text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
                   {featured.frontmatter.title}
                 </h2>
                 <p className="mt-5 text-lede max-w-xl">{featured.frontmatter.excerpt}</p>
                 <span className="mt-8 inline-flex items-center gap-1.5 text-base font-medium text-[var(--color-navy-900)] group-hover:gap-2 transition-all">
-                  Read it <ArrowRight className="size-4" aria-hidden />
+                  {t("readIt")} <ArrowRight className="size-4" aria-hidden />
                 </span>
               </div>
             </Link>
@@ -79,7 +86,7 @@ export default async function InsightsIndexPage() {
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
               {rest.map((doc) => (
                 <article key={doc.frontmatter.slug}>
-                  <Link href={`/insights/${doc.frontmatter.slug}`} className="group block">
+                  <Link href={`/${locale}/insights/${doc.frontmatter.slug}`} className="group block">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
                       <Image
                         src={doc.frontmatter.heroImage}
@@ -96,7 +103,7 @@ export default async function InsightsIndexPage() {
                         {formatDate(doc.frontmatter.publishedAt)}
                       </time>
                       <span aria-hidden>·</span>
-                      <span>{doc.readingTime} min</span>
+                      <span>{doc.readingTime} {t("minRead")}</span>
                     </div>
                     <h3 className="mt-3 text-xl font-semibold leading-tight text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)] text-balance">
                       {doc.frontmatter.title}

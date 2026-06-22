@@ -215,7 +215,10 @@
     "outcome": "Resultat",
     "metrics": "Nyckeltal",
     "relatedServices": "Relaterade tjänster",
-    "allCases": "Alla cases"
+    "allCases": "Alla cases",
+    "results": "Resultat",
+    "servicesApplied": "Använda tjänster",
+    "client": "Kund"
   },
   "insights": {
     "meta": {
@@ -229,7 +232,16 @@
     },
     "readingTime": "{minutes} min läsning",
     "allInsights": "Alla insikter",
-    "readInsight": "Läs artikeln"
+    "readInsight": "Läs artikeln",
+    "featured": "Utvalt",
+    "readIt": "Läs den",
+    "keepReading": "Fortsätt läsa",
+    "by": "Av",
+    "minRead": "min läsning",
+    "categoryIndustry": "Bransch",
+    "categoryOptimization": "Optimering",
+    "categoryOptiPlatform": "Opti",
+    "categoryCompany": "Företag"
   },
   "services": {
     "meta": {
@@ -243,11 +255,20 @@
     },
     "learnMore": "Läs mer",
     "relatedCases": "Relaterade cases",
-    "allServices": "Alla tjänster"
+    "allServices": "Alla tjänster",
+    "talkToEngineer": "Prata med en ingenjör",
+    "backToCategory": "Tillbaka till kategorin",
+    "whatYouGet": "Vad du tar med dig"
   },
   "industries": {
     "relatedServices": "Tjänster för denna bransch",
-    "relatedCases": "Cases i denna bransch"
+    "relatedCases": "Cases i denna bransch",
+    "heroEyebrow": "Branscher",
+    "heroTitle": "Byggt för hur trä faktiskt tillverkas.",
+    "heroLede": "Tre produktionsverkligheter, tre uppsättningar begränsningar, tre distinkta vägar till bättre genomflöde.",
+    "whatWeHear": "Vad vi hör",
+    "mostRelevantServices": "Mest relevanta tjänster",
+    "exploreIndustry": "Utforska bransch"
   },
   "legal": {
     "privacy": {

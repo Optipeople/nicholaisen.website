@@ -215,7 +215,10 @@
     "outcome": "Rezultāts",
     "metrics": "Galvenie rādītāji",
     "relatedServices": "Saistītie pakalpojumi",
-    "allCases": "Visi projekti"
+    "allCases": "Visi projekti",
+    "results": "Rezultāti",
+    "servicesApplied": "Izmantotie pakalpojumi",
+    "client": "Klients"
   },
   "insights": {
     "meta": {
@@ -229,7 +232,16 @@
     },
     "readingTime": "{minutes} min lasīšana",
     "allInsights": "Visi ieskati",
-    "readInsight": "Lasīt ieskatu"
+    "readInsight": "Lasīt ieskatu",
+    "featured": "Izceltais",
+    "readIt": "Lasīt to",
+    "keepReading": "Turpināt lasīt",
+    "by": "Autors",
+    "minRead": "min lasīšana",
+    "categoryIndustry": "Nozare",
+    "categoryOptimization": "Optimizācija",
+    "categoryOptiPlatform": "Opti",
+    "categoryCompany": "Uzņēmums"
   },
   "services": {
     "meta": {
@@ -243,11 +255,20 @@
     },
     "learnMore": "Lasīt vairāk",
     "relatedCases": "Saistītie projekti",
-    "allServices": "Visi pakalpojumi"
+    "allServices": "Visi pakalpojumi",
+    "talkToEngineer": "Runājiet ar inženieri",
+    "backToCategory": "Atpakaļ uz kategoriju",
+    "whatYouGet": "Ko jūs iegūstat"
   },
   "industries": {
     "relatedServices": "Pakalpojumi šai nozarei",
-    "relatedCases": "Projekti šajā nozarē"
+    "relatedCases": "Projekti šajā nozarē",
+    "heroEyebrow": "Nozares",
+    "heroTitle": "Veidots atbilstoši tam, kā koks faktiski tiek ražots.",
+    "heroLede": "Trīs ražošanas realitātes, trīs ierobežojumu kopumi, trīs atšķirīgi ceļi uz labāku caurlaidspēju.",
+    "whatWeHear": "Ko mēs dzirdam",
+    "mostRelevantServices": "Visatbilstošākie pakalpojumi",
+    "exploreIndustry": "Izpētīt nozari"
   },
   "legal": {
     "privacy": {

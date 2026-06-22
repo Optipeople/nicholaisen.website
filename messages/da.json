@@ -215,7 +215,10 @@
     "outcome": "Resultat",
     "metrics": "Nøgletal",
     "relatedServices": "Relaterede ydelser",
-    "allCases": "Alle cases"
+    "allCases": "Alle cases",
+    "results": "Resultater",
+    "servicesApplied": "Anvendte ydelser",
+    "client": "Kunde"
   },
   "insights": {
     "meta": {
@@ -229,7 +232,16 @@
     },
     "readingTime": "{minutes} min læsetid",
     "allInsights": "Alle artikler",
-    "readInsight": "Læs artikel"
+    "readInsight": "Læs artikel",
+    "featured": "Fremhævet",
+    "readIt": "Læs den",
+    "keepReading": "Læs videre",
+    "by": "Af",
+    "minRead": "min læsning",
+    "categoryIndustry": "Branche",
+    "categoryOptimization": "Optimering",
+    "categoryOptiPlatform": "Opti",
+    "categoryCompany": "Virksomhed"
   },
   "services": {
     "meta": {
@@ -243,11 +255,20 @@
     },
     "learnMore": "Læs mere",
     "relatedCases": "Relaterede cases",
-    "allServices": "Alle ydelser"
+    "allServices": "Alle ydelser",
+    "talkToEngineer": "Tal med en ingeniør",
+    "backToCategory": "Tilbage til kategorien",
+    "whatYouGet": "Det du tager med dig"
   },
   "industries": {
     "relatedServices": "Ydelser til denne branche",
-    "relatedCases": "Cases i denne branche"
+    "relatedCases": "Cases i denne branche",
+    "heroEyebrow": "Brancher",
+    "heroTitle": "Bygget til, hvordan træ faktisk fremstilles.",
+    "heroLede": "Tre produktionsvirkeligheder, tre sæt betingelser, tre forskellige veje til bedre gennemløb.",
+    "whatWeHear": "Hvad vi hører",
+    "mostRelevantServices": "Mest relevante ydelser",
+    "exploreIndustry": "Udforsk branche"
   },
   "legal": {
     "privacy": {

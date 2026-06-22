@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -21,7 +22,7 @@ import {
 } from "@/content/loader";
 import { buildMetadata } from "@/lib/seo";
 
-type Params = { slug: string[] };
+type Params = { slug: string[]; locale: string };
 
 export async function generateStaticParams() {
   const services = await listServices();
@@ -52,14 +53,18 @@ export default async function ServicePage({
 }: {
   params: Promise<Params>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const fullSlug = slug.join("/");
-  const doc = await getService(fullSlug);
+  const [t, tc] = await Promise.all([
+    getTranslations({ locale, namespace: "services" }),
+    getTranslations({ locale, namespace: "common" }),
+  ]);
+  const doc = await getService(fullSlug, locale);
   if (!doc) notFound();
   const fm = doc.frontmatter;
   const isCategory = !fm.parent;
 
-  const subServices = isCategory ? await getServicesByCategory(fm.slug) : [];
+  const subServices = isCategory ? await getServicesByCategory(fm.slug, locale) : [];
 
   const anchors = [
     { id: "overview", label: "Overview" },
@@ -87,11 +92,11 @@ export default async function ServicePage({
       >
         <div className="flex flex-wrap gap-3">
           <LinkButton href="/contact" size="md" withArrow>
-            Talk to an engineer
+            {t("talkToEngineer")}
           </LinkButton>
           {!isCategory && fm.parent ? (
             <LinkButton href={`/services/${fm.parent}`} variant="ghost" size="md">
-              Back to category
+              {t("backToCategory")}
             </LinkButton>
           ) : null}
         </div>
@@ -105,7 +110,7 @@ export default async function ServicePage({
             <Mdx source={doc.body} />
             {fm.outcomes && fm.outcomes.length > 0 ? (
               <div className="mt-12 rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] p-8">
-                <p className="text-eyebrow">What you walk away with</p>
+                <p className="text-eyebrow">{t("whatYouGet")}</p>
                 <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                   {fm.outcomes.map((o) => (
                     <li
@@ -151,7 +156,7 @@ export default async function ServicePage({
                   </h3>
                   <p className="mt-3 text-sm text-[var(--color-ink-500)]">{s.lede}</p>
                   <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] group-hover:gap-2 transition-all">
-                    Learn more <ArrowRight className="size-3.5" aria-hidden />
+                    {tc("learnMore")} <ArrowRight className="size-3.5" aria-hidden />
                   </span>
                 </Link>
               ))}

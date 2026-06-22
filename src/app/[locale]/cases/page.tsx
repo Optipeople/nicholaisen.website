@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -16,15 +17,21 @@ export const metadata: Metadata = buildMetadata({
   path: "/cases",
 });
 
-export default async function CasesIndexPage() {
-  const cases = await listCases();
+export default async function CasesIndexPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "cases" });
+  const cases = await listCases(locale);
 
   return (
     <>
       <PageHero
-        eyebrow="Cases"
-        title="Selected work."
-        lede="Investments validated, factories built, lines optimized. Real numbers, not slogans."
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        lede={t("hero.lede")}
         align="wide"
       />
 
@@ -34,7 +41,7 @@ export default async function CasesIndexPage() {
             {cases.map(({ frontmatter: c }) => (
               <Link
                 key={c.slug}
-                href={`/cases/${c.slug}`}
+                href={`/${locale}/cases/${c.slug}`}
                 className="group block rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-[var(--color-paper-dark)]">
@@ -67,7 +74,7 @@ export default async function CasesIndexPage() {
                     </dl>
                   ) : null}
                   <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] group-hover:gap-2 transition-all">
-                    Read the case <ArrowRight className="size-3.5" aria-hidden />
+                    {t("readCase")} <ArrowRight className="size-3.5" aria-hidden />
                   </span>
                 </div>
               </Link>
@@ -78,7 +85,7 @@ export default async function CasesIndexPage() {
 
       <CtaBand
         title="Could yours be the next one?"
-        body="If you’ve got a thesis you’re trying to validate, we’ll bring data."
+        body="If you've got a thesis you're trying to validate, we'll bring data."
       />
     </>
   );

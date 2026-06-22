@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -12,14 +13,7 @@ import { getInsight, listInsights } from "@/content/loader";
 import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 
-const categoryLabels: Record<string, string> = {
-  industry: "Industry",
-  optimization: "Optimization",
-  "opti-platform": "Opti",
-  company: "Company",
-};
-
-type Params = { slug: string };
+type Params = { slug: string; locale: string };
 
 export async function generateStaticParams() {
   const insights = await listInsights();
@@ -53,12 +47,20 @@ export default async function InsightPage({
 }: {
   params: Promise<Params>;
 }) {
-  const { slug } = await params;
-  const doc = await getInsight(slug);
+  const { slug, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "insights" });
+  const doc = await getInsight(slug, locale);
   if (!doc) notFound();
   const fm = doc.frontmatter;
 
-  const all = await listInsights();
+  const categoryLabels: Record<string, string> = {
+    industry: t("categoryIndustry"),
+    optimization: t("categoryOptimization"),
+    "opti-platform": t("categoryOptiPlatform"),
+    company: t("categoryCompany"),
+  };
+
+  const all = await listInsights(locale);
   const related = all
     .filter((d) => d.frontmatter.slug !== fm.slug)
     .map((d) => ({
@@ -75,19 +77,19 @@ export default async function InsightPage({
       <section className="bg-[var(--color-cream-50)] pt-10 pb-12 lg:pt-16">
         <Container size="narrow">
           <Link
-            href="/insights"
+            href={`/${locale}/insights`}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink-500)] hover:text-[var(--color-navy-900)]"
           >
-            <ArrowLeft className="size-3.5" /> All insights
+            <ArrowLeft className="size-3.5" /> {t("allInsights")}
           </Link>
           <div className="mx-auto mt-8 max-w-3xl">
             <Eyebrow>
               {categoryLabels[fm.category] ?? fm.category} · {formatDate(fm.publishedAt)} ·{" "}
-              {doc.readingTime} min read
+              {doc.readingTime} {t("minRead")}
             </Eyebrow>
             <h1 className="mt-5 text-display-1 text-balance">{fm.title}</h1>
             <p className="mt-6 text-lede max-w-2xl">{fm.excerpt}</p>
-            <p className="mt-6 text-sm text-[var(--color-ink-500)]">By {fm.author}</p>
+            <p className="mt-6 text-sm text-[var(--color-ink-500)]">{t("by")} {fm.author}</p>
           </div>
         </Container>
       </section>
@@ -131,12 +133,12 @@ export default async function InsightPage({
       {related.length > 0 ? (
         <Section tone="paper" size="md">
           <Container>
-            <Eyebrow>Keep reading</Eyebrow>
+            <Eyebrow>{t("keepReading")}</Eyebrow>
             <div className="mt-8 grid gap-8 md:grid-cols-3">
               {related.map(({ doc: r }) => (
                 <Link
                   key={r.frontmatter.slug}
-                  href={`/insights/${r.frontmatter.slug}`}
+                  href={`/${locale}/insights/${r.frontmatter.slug}`}
                   className="group block"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
@@ -156,7 +158,7 @@ export default async function InsightPage({
                     {r.frontmatter.title}
                   </h3>
                   <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] group-hover:gap-2 transition-all">
-                    Read it <ArrowRight className="size-3.5" aria-hidden />
+                    {t("readIt")} <ArrowRight className="size-3.5" aria-hidden />
                   </span>
                 </Link>
               ))}

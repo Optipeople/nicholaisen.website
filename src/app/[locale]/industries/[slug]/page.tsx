@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -12,7 +13,7 @@ import { Mdx } from "@/components/mdx/Mdx";
 import { getIndustry, listIndustries, listServices } from "@/content/loader";
 import { buildMetadata } from "@/lib/seo";
 
-type Params = { slug: string };
+type Params = { slug: string; locale: string };
 
 export async function generateStaticParams() {
   const industries = await listIndustries();
@@ -41,12 +42,16 @@ export default async function IndustryPage({
 }: {
   params: Promise<Params>;
 }) {
-  const { slug } = await params;
-  const doc = await getIndustry(slug);
+  const { slug, locale } = await params;
+  const [t, ts] = await Promise.all([
+    getTranslations({ locale, namespace: "industries" }),
+    getTranslations({ locale, namespace: "common" }),
+  ]);
+  const doc = await getIndustry(slug, locale);
   if (!doc) notFound();
   const fm = doc.frontmatter;
 
-  const services = await listServices();
+  const services = await listServices(locale);
   const relevant = (fm.relevantServices ?? [])
     .map((s) => services.find((x) => x.frontmatter.slug === s))
     .filter(Boolean);
@@ -72,7 +77,7 @@ export default async function IndustryPage({
         <Section tone="paper" size="md">
           <Container>
             <div className="max-w-2xl">
-              <Eyebrow>What we hear</Eyebrow>
+              <Eyebrow>{t("whatWeHear")}</Eyebrow>
               <h2 className="mt-4 text-display-3 text-balance">
                 The recurring problems in {fm.title.toLowerCase()}.
               </h2>
@@ -95,7 +100,7 @@ export default async function IndustryPage({
         <Section tone="cream" size="md">
           <Container>
             <div className="max-w-2xl">
-              <Eyebrow>Most relevant services</Eyebrow>
+              <Eyebrow>{t("mostRelevantServices")}</Eyebrow>
               <h2 className="mt-4 text-display-3 text-balance">
                 Where to start in {fm.title.toLowerCase()}.
               </h2>
@@ -104,7 +109,7 @@ export default async function IndustryPage({
               {relevant.map((d) => (
                 <Link
                   key={d!.frontmatter.slug}
-                  href={`/services/${d!.frontmatter.slug}`}
+                  href={`/${locale}/services/${d!.frontmatter.slug}`}
                   className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
                 >
                   <Eyebrow>{d!.frontmatter.eyebrow}</Eyebrow>
@@ -115,7 +120,7 @@ export default async function IndustryPage({
                     {d!.frontmatter.lede}
                   </p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] group-hover:gap-2 transition-all">
-                    Learn more <ArrowRight className="size-3.5" aria-hidden />
+                    {ts("learnMore")} <ArrowRight className="size-3.5" aria-hidden />
                   </span>
                 </Link>
               ))}
