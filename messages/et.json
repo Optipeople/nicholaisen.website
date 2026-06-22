@@ -215,7 +215,10 @@
     "outcome": "Tulemus",
     "metrics": "Põhinäitajad",
     "relatedServices": "Seotud teenused",
-    "allCases": "Kõik juhtumid"
+    "allCases": "Kõik juhtumid",
+    "results": "Tulemused",
+    "servicesApplied": "Rakendatud teenused",
+    "client": "Klient"
   },
   "insights": {
     "meta": {
@@ -229,7 +232,16 @@
     },
     "readingTime": "{minutes} min lugemine",
     "allInsights": "Kõik ülevaated",
-    "readInsight": "Loe ülevaadet"
+    "readInsight": "Loe ülevaadet",
+    "featured": "Esiletõstetud",
+    "readIt": "Loe seda",
+    "keepReading": "Jätka lugemist",
+    "by": "Autor",
+    "minRead": "min lugemine",
+    "categoryIndustry": "Tööstus",
+    "categoryOptimization": "Optimeerimine",
+    "categoryOptiPlatform": "Opti",
+    "categoryCompany": "Ettevõte"
   },
   "services": {
     "meta": {
@@ -243,11 +255,20 @@
     },
     "learnMore": "Loe rohkem",
     "relatedCases": "Seotud juhtumid",
-    "allServices": "Kõik teenused"
+    "allServices": "Kõik teenused",
+    "talkToEngineer": "Rääkige inseneriga",
+    "backToCategory": "Tagasi kategooriasse",
+    "whatYouGet": "Mida saate kaasa"
   },
   "industries": {
     "relatedServices": "Selle tööstusharu teenused",
-    "relatedCases": "Selle tööstusharu juhtumid"
+    "relatedCases": "Selle tööstusharu juhtumid",
+    "heroEyebrow": "Tööstusharud",
+    "heroTitle": "Ehitatud selle järgi, kuidas puitu tegelikult toodetakse.",
+    "heroLede": "Kolm tootmisreaalsust, kolm piirangute kogumit, kolm erinevat teed parema läbilaskevõimeni.",
+    "whatWeHear": "Mida me kuuleme",
+    "mostRelevantServices": "Kõige asjakohasemad teenused",
+    "exploreIndustry": "Avasta tööstusharu"
   },
   "legal": {
     "privacy": {

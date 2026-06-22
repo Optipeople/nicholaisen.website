@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -16,15 +17,21 @@ export const metadata: Metadata = buildMetadata({
   path: "/industries",
 });
 
-export default async function IndustriesIndexPage() {
-  const industries = await listIndustries();
+export default async function IndustriesIndexPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "industries" });
+  const industries = await listIndustries(locale);
 
   return (
     <>
       <PageHero
-        eyebrow="Industries"
-        title="Built for how wood is actually made."
-        lede="Three production realities, three sets of constraints, three distinct paths to better throughput."
+        eyebrow={t("heroEyebrow")}
+        title={t("heroTitle")}
+        lede={t("heroLede")}
         align="wide"
       />
 
@@ -34,7 +41,7 @@ export default async function IndustriesIndexPage() {
             {industries.map(({ frontmatter: i }) => (
               <Link
                 key={i.slug}
-                href={`/industries/${i.slug}`}
+                href={`/${locale}/industries/${i.slug}`}
                 className="group relative block aspect-[4/5] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]"
               >
                 <Image
@@ -52,7 +59,7 @@ export default async function IndustriesIndexPage() {
                   </h2>
                   <p className="mt-2 text-sm text-[var(--color-cream-50)]/80">{i.lede}</p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-cream-50)]">
-                    Explore industry <ArrowRight className="size-3.5" aria-hidden />
+                    {t("exploreIndustry")} <ArrowRight className="size-3.5" aria-hidden />
                   </span>
                 </div>
               </Link>
@@ -63,7 +70,7 @@ export default async function IndustriesIndexPage() {
 
       <CtaBand
         title="Working in another wood-adjacent industry?"
-        body="We also serve plastics and aluminum manufacturers. Tell us what you’re running."
+        body="We also serve plastics and aluminum manufacturers. Tell us what you're running."
         primary={{ label: "Get in touch", href: "/contact" }}
         secondary={{ label: "See our services", href: "/services" }}
       />

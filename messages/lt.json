@@ -215,7 +215,10 @@
     "outcome": "Rezultatas",
     "metrics": "Pagrindiniai rodikliai",
     "relatedServices": "Susijusios paslaugos",
-    "allCases": "Visi projektai"
+    "allCases": "Visi projektai",
+    "results": "Rezultatai",
+    "servicesApplied": "Taikytos paslaugos",
+    "client": "Klientas"
   },
   "insights": {
     "meta": {
@@ -229,7 +232,16 @@
     },
     "readingTime": "{minutes} min skaitymas",
     "allInsights": "Visos įžvalgos",
-    "readInsight": "Skaityti įžvalgą"
+    "readInsight": "Skaityti įžvalgą",
+    "featured": "Rekomenduojama",
+    "readIt": "Skaityti",
+    "keepReading": "Tęsti skaitymą",
+    "by": "Autorius",
+    "minRead": "min skaitymas",
+    "categoryIndustry": "Pramonė",
+    "categoryOptimization": "Optimizavimas",
+    "categoryOptiPlatform": "Opti",
+    "categoryCompany": "Įmonė"
   },
   "services": {
     "meta": {
@@ -243,11 +255,20 @@
     },
     "learnMore": "Skaityti daugiau",
     "relatedCases": "Susiję projektai",
-    "allServices": "Visos paslaugos"
+    "allServices": "Visos paslaugos",
+    "talkToEngineer": "Kalbėkite su inžinieriumi",
+    "backToCategory": "Atgal į kategoriją",
+    "whatYouGet": "Ką gausite"
   },
   "industries": {
     "relatedServices": "Šios pramonės šakos paslaugos",
-    "relatedCases": "Projektai šioje pramonės šakoje"
+    "relatedCases": "Projektai šioje pramonės šakoje",
+    "heroEyebrow": "Pramonės šakos",
+    "heroTitle": "Sukurta pagal tai, kaip mediena iš tikrųjų gaminama.",
+    "heroLede": "Trys gamybos realybės, trys apribojimų rinkiniai, trys skirtingi keliai į geresnį pralaidumą.",
+    "whatWeHear": "Ką mes girdime",
+    "mostRelevantServices": "Labiausiai tinkamos paslaugos",
+    "exploreIndustry": "Ištirti pramonės šaką"
   },
   "legal": {
     "privacy": {

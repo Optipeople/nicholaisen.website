@@ -215,7 +215,10 @@
     "outcome": "Outcome",
     "metrics": "Key metrics",
     "relatedServices": "Related services",
-    "allCases": "All cases"
+    "allCases": "All cases",
+    "results": "Results",
+    "servicesApplied": "Services applied",
+    "client": "Client"
   },
   "insights": {
     "meta": {
@@ -229,7 +232,16 @@
     },
     "readingTime": "{minutes} min read",
     "allInsights": "All insights",
-    "readInsight": "Read insight"
+    "readInsight": "Read insight",
+    "featured": "Featured",
+    "readIt": "Read it",
+    "keepReading": "Keep reading",
+    "by": "By",
+    "minRead": "min read",
+    "categoryIndustry": "Industry",
+    "categoryOptimization": "Optimization",
+    "categoryOptiPlatform": "Opti",
+    "categoryCompany": "Company"
   },
   "services": {
     "meta": {
@@ -243,11 +255,20 @@
     },
     "learnMore": "Learn more",
     "relatedCases": "Related cases",
-    "allServices": "All services"
+    "allServices": "All services",
+    "talkToEngineer": "Talk to an engineer",
+    "backToCategory": "Back to category",
+    "whatYouGet": "What you walk away with"
   },
   "industries": {
     "relatedServices": "Services for this industry",
-    "relatedCases": "Cases in this industry"
+    "relatedCases": "Cases in this industry",
+    "heroEyebrow": "Industries",
+    "heroTitle": "Built for how wood is actually made.",
+    "heroLede": "Three production realities, three sets of constraints, three distinct paths to better throughput.",
+    "whatWeHear": "What we hear",
+    "mostRelevantServices": "Most relevant services",
+    "exploreIndustry": "Explore industry"
   },
   "legal": {
     "privacy": {

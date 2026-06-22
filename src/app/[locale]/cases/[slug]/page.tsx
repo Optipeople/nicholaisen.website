@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -12,7 +13,7 @@ import { getCase, listCases, listServices } from "@/content/loader";
 import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 
-type Params = { slug: string };
+type Params = { slug: string; locale: string };
 
 export async function generateStaticParams() {
   const cases = await listCases();
@@ -41,12 +42,13 @@ export default async function CasePage({
 }: {
   params: Promise<Params>;
 }) {
-  const { slug } = await params;
-  const doc = await getCase(slug);
+  const { slug, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "cases" });
+  const doc = await getCase(slug, locale);
   if (!doc) notFound();
   const fm = doc.frontmatter;
 
-  const allServices = await listServices();
+  const allServices = await listServices(locale);
   const linkedServices = fm.services
     .map((s) => allServices.find((x) => x.frontmatter.slug === s))
     .filter(Boolean);
@@ -56,10 +58,10 @@ export default async function CasePage({
       <section className="bg-[var(--color-cream-50)] pt-10 pb-12 lg:pt-16">
         <Container size="narrow">
           <Link
-            href="/cases"
+            href={`/${locale}/cases`}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink-500)] hover:text-[var(--color-navy-900)]"
           >
-            <ArrowLeft className="size-3.5" /> All cases
+            <ArrowLeft className="size-3.5" /> {t("allCases")}
           </Link>
           <div className="mt-8">
             <Eyebrow>
@@ -68,7 +70,7 @@ export default async function CasePage({
             <h1 className="mt-5 text-display-1 text-balance">{fm.title}</h1>
             {fm.client ? (
               <p className="mt-4 text-sm text-[var(--color-ink-500)]">
-                Client: {fm.client}
+                {t("client")}: {fm.client}
               </p>
             ) : null}
             <p className="mt-6 text-lede max-w-3xl">{fm.excerpt}</p>
@@ -96,15 +98,15 @@ export default async function CasePage({
           <div className="grid gap-12 lg:grid-cols-3 lg:gap-16">
             <div className="lg:col-span-2">
               <div>
-                <h2 className="text-eyebrow text-[var(--color-tan-500)]">Challenge</h2>
+                <h2 className="text-eyebrow text-[var(--color-tan-500)]">{t("challenge")}</h2>
                 <p className="mt-3 text-lede">{fm.challenge}</p>
               </div>
               <div className="mt-12">
-                <h2 className="text-eyebrow text-[var(--color-tan-500)]">Approach</h2>
+                <h2 className="text-eyebrow text-[var(--color-tan-500)]">{t("approach")}</h2>
                 <p className="mt-3 text-lede">{fm.approach}</p>
               </div>
               <div className="mt-12">
-                <h2 className="text-eyebrow text-[var(--color-tan-500)]">Outcome</h2>
+                <h2 className="text-eyebrow text-[var(--color-tan-500)]">{t("outcome")}</h2>
                 <p className="mt-3 text-lede">{fm.outcome}</p>
               </div>
             </div>
@@ -113,7 +115,7 @@ export default async function CasePage({
               <div className="sticky top-32 rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] p-6">
                 {fm.metrics.length > 0 ? (
                   <>
-                    <p className="text-eyebrow">Results</p>
+                    <p className="text-eyebrow">{t("results")}</p>
                     <dl className="mt-4 space-y-5">
                       {fm.metrics.map((m) => (
                         <div
@@ -133,12 +135,12 @@ export default async function CasePage({
                 ) : null}
                 {linkedServices.length > 0 ? (
                   <div className="mt-8 border-t border-[var(--color-ink-300)]/30 pt-6">
-                    <p className="text-eyebrow">Services applied</p>
+                    <p className="text-eyebrow">{t("servicesApplied")}</p>
                     <ul className="mt-3 space-y-1.5">
                       {linkedServices.map((d) => (
                         <li key={d!.frontmatter.slug}>
                           <Link
-                            href={`/services/${d!.frontmatter.slug}`}
+                            href={`/${locale}/services/${d!.frontmatter.slug}`}
                             className="inline-flex items-center gap-1 text-sm text-[var(--color-navy-900)] hover:underline"
                           >
                             {d!.frontmatter.title}
