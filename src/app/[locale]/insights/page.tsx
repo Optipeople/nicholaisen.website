@@ -119,12 +119,7 @@ export default async function InsightsIndexPage({
         </Section>
       ) : null}
 
-      <CtaBand
-        title="Want these in your inbox?"
-        body="A short note when something genuinely useful goes up. No filler."
-        primary={{ label: "Get in touch", href: "/contact" }}
-        secondary={{ label: "RSS feed", href: "/insights/rss.xml" }}
-      />
+      <CtaBand locale={locale} />
     </>
   );
 }

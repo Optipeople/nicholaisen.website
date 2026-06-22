@@ -19,8 +19,13 @@ export async function generateMetadata({
   return buildMetadata({ title: t("title"), description: t("description"), path: "/about" });
 }
 
-export default async function AboutPage() {
-  const t = await getTranslations("about");
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
 
   const milestones = [
     { year: t("history.1972Year"), title: t("history.1972Title"), description: t("history.1972Desc") },
@@ -117,7 +122,7 @@ export default async function AboutPage() {
         </Container>
       </Section>
 
-      <CtaBand />
+      <CtaBand locale={locale} />
     </>
   );
 }
