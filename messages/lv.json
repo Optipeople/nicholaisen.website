@@ -258,7 +258,21 @@
     "allServices": "Visi pakalpojumi",
     "talkToEngineer": "Runājiet ar inženieri",
     "backToCategory": "Atpakaļ uz kategoriju",
-    "whatYouGet": "Ko jūs iegūstat"
+    "whatYouGet": "Ko jūs iegūstat",
+    "anchorOverview": "Pārskats",
+    "anchorHowItWorks": "Kā tas darbojas",
+    "anchorCapabilities": "Iespējas",
+    "anchorDetail": "Detaļas",
+    "anchorCases": "Projekti",
+    "anchorContact": "Kontakts",
+    "howEngagementRuns": "Kā notiek {title} sadarbība.",
+    "within": "{title} ietvaros",
+    "threeWaysDeliver": "Trīs veidi, kā mēs to piegādājam.",
+    "wherePaidOff": "Kur {title} ir atdevusi rezultātus.",
+    "selectedCases": "Atlasītie projekti",
+    "casesBeingPrepared": "Šī pakalpojuma projekti tiek sagatavoti. Pagaidām apskatiet visus mūsu darbus.",
+    "related": "Saistītais",
+    "moreWithin": "Vairāk {title} ietvaros."
   },
   "industries": {
     "relatedServices": "Pakalpojumi šai nozarei",
@@ -268,7 +282,13 @@
     "heroLede": "Trīs ražošanas realitātes, trīs ierobežojumu kopumi, trīs atšķirīgi ceļi uz labāku caurlaidspēju.",
     "whatWeHear": "Ko mēs dzirdam",
     "mostRelevantServices": "Visatbilstošākie pakalpojumi",
-    "exploreIndustry": "Izpētīt nozari"
+    "exploreIndustry": "Izpētīt nozari",
+    "recurringProblems": "Atkārtotās problēmas {title} nozarē.",
+    "whereToStart": "No kurienes sākt {title} nozarē.",
+    "ourWork": "Mūsu darbs {title} nozarē.",
+    "casesComing": "Šīs nozares projekti drīzumā.",
+    "casesEyebrow": "Projekti",
+    "talkAboutLine": "Parunāsim par jūsu {title} ražošanas līniju."
   },
   "legal": {
     "privacy": {

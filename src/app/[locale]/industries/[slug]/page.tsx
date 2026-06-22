@@ -79,7 +79,7 @@ export default async function IndustryPage({
             <div className="max-w-2xl">
               <Eyebrow>{t("whatWeHear")}</Eyebrow>
               <h2 className="mt-4 text-display-3 text-balance">
-                The recurring problems in {fm.title.toLowerCase()}.
+                {t("recurringProblems", { title: fm.title.toLowerCase() })}
               </h2>
             </div>
             <ul className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -102,7 +102,7 @@ export default async function IndustryPage({
             <div className="max-w-2xl">
               <Eyebrow>{t("mostRelevantServices")}</Eyebrow>
               <h2 className="mt-4 text-display-3 text-balance">
-                Where to start in {fm.title.toLowerCase()}.
+                {t("whereToStart", { title: fm.title.toLowerCase() })}
               </h2>
             </div>
             <div className="mt-12 grid gap-4 md:grid-cols-3">
@@ -131,13 +131,14 @@ export default async function IndustryPage({
 
       <CaseList
         filterByIndustry={fm.slug}
-        title={`Our work in ${fm.title.toLowerCase()}.`}
-        eyebrow="Cases"
-        emptyMessage="Selected cases for this industry coming soon."
+        title={t("ourWork", { title: fm.title.toLowerCase() })}
+        eyebrow={t("casesEyebrow")}
+        emptyMessage={t("casesComing")}
+        locale={locale}
       />
 
       <CtaBand
-        title={`Talk to us about your ${fm.title.toLowerCase()} line.`}
+        title={t("talkAboutLine", { title: fm.title.toLowerCase() })}
       />
     </>
   );

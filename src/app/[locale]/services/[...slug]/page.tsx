@@ -66,19 +66,29 @@ export default async function ServicePage({
 
   const subServices = isCategory ? await getServicesByCategory(fm.slug, locale) : [];
 
+  // Beregn sibling-services og parent title til RelatedServices
+  const siblingServices = !isCategory && fm.parent
+    ? (await getServicesByCategory(fm.parent, locale)).filter(
+        (s) => s.frontmatter.slug !== fm.slug
+      )
+    : [];
+  const parentDoc = !isCategory && fm.parent
+    ? await getService(fm.parent, locale)
+    : null;
+
   const anchors = [
-    { id: "overview", label: "Overview" },
+    { id: "overview", label: t("anchorOverview") },
     ...(fm.process && fm.process.length > 0
-      ? [{ id: "how-it-works", label: "How it works" }]
+      ? [{ id: "how-it-works", label: t("anchorHowItWorks") }]
       : []),
     ...(fm.capabilities && fm.capabilities.length > 0
-      ? [{ id: "capabilities", label: "Capabilities" }]
+      ? [{ id: "capabilities", label: t("anchorCapabilities") }]
       : []),
     ...(isCategory && subServices.length > 0
-      ? [{ id: "sub-services", label: "Detail" }]
+      ? [{ id: "sub-services", label: t("anchorDetail") }]
       : []),
-    { id: "cases", label: "Cases" },
-    { id: "contact", label: "Contact" },
+    { id: "cases", label: t("anchorCases") },
+    { id: "contact", label: t("anchorContact") },
   ];
 
   return (
@@ -91,11 +101,11 @@ export default async function ServicePage({
         align="split"
       >
         <div className="flex flex-wrap gap-3">
-          <LinkButton href="/contact" size="md" withArrow>
+          <LinkButton href={`/${locale}/contact`} size="md" withArrow>
             {t("talkToEngineer")}
           </LinkButton>
           {!isCategory && fm.parent ? (
-            <LinkButton href={`/services/${fm.parent}`} variant="ghost" size="md">
+            <LinkButton href={`/${locale}/services/${fm.parent}`} variant="ghost" size="md">
               {t("backToCategory")}
             </LinkButton>
           ) : null}
@@ -131,7 +141,7 @@ export default async function ServicePage({
       {fm.process && fm.process.length > 0 ? (
         <ProcessSteps
           id="how-it-works"
-          title={`How a ${fm.title.toLowerCase()} engagement runs.`}
+          title={t("howEngagementRuns", { title: fm.title.toLowerCase() })}
           steps={fm.process}
         />
       ) : null}
@@ -140,14 +150,14 @@ export default async function ServicePage({
         <Section tone="paper" size="md" id="sub-services">
           <Container>
             <div className="max-w-2xl">
-              <Eyebrow>Within {fm.title}</Eyebrow>
-              <h2 className="mt-4 text-display-3 text-balance">Three ways we deliver this.</h2>
+              <Eyebrow>{t("within", { title: fm.title })}</Eyebrow>
+              <h2 className="mt-4 text-display-3 text-balance">{t("threeWaysDeliver")}</h2>
             </div>
             <div className="mt-12 grid gap-4 md:grid-cols-3">
               {subServices.map(({ frontmatter: s }) => (
                 <Link
                   key={s.slug}
-                  href={`/services/${s.slug}`}
+                  href={`/${locale}/services/${s.slug}`}
                   className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-7 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
                 >
                   <Eyebrow>{s.eyebrow}</Eyebrow>
@@ -176,15 +186,17 @@ export default async function ServicePage({
       <CaseList
         id="cases"
         filterBySlug={fm.relatedCases}
-        title={`Where ${fm.title} has paid off.`}
-        eyebrow="Selected cases"
-        emptyMessage="Selected cases for this service are being prepared. In the meantime, see all our work."
+        title={t("wherePaidOff", { title: fm.title })}
+        eyebrow={t("selectedCases")}
+        emptyMessage={t("casesBeingPrepared")}
+        locale={locale}
       />
 
       {!isCategory && fm.parent ? (
         <RelatedServices
-          currentSlug={fm.slug.split("/").pop() ?? ""}
-          parentCategory={fm.parent}
+          siblings={siblingServices}
+          parentTitle={parentDoc?.frontmatter.title ?? fm.parent}
+          locale={locale}
         />
       ) : null}
 

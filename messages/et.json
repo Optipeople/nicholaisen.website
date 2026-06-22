@@ -258,7 +258,21 @@
     "allServices": "Kõik teenused",
     "talkToEngineer": "Rääkige inseneriga",
     "backToCategory": "Tagasi kategooriasse",
-    "whatYouGet": "Mida saate kaasa"
+    "whatYouGet": "Mida saate kaasa",
+    "anchorOverview": "Ülevaade",
+    "anchorHowItWorks": "Kuidas see toimib",
+    "anchorCapabilities": "Võimalused",
+    "anchorDetail": "Detailid",
+    "anchorCases": "Projektid",
+    "anchorContact": "Kontakt",
+    "howEngagementRuns": "Kuidas {title} koostöö toimib.",
+    "within": "{title} sees",
+    "threeWaysDeliver": "Kolm viisi, kuidas me seda teeme.",
+    "wherePaidOff": "Kus {title} on tulemusi andnud.",
+    "selectedCases": "Valitud projektid",
+    "casesBeingPrepared": "Selle teenuse projektid on valmimas. Vahepeal vaadake kõiki meie töid.",
+    "related": "Seotud",
+    "moreWithin": "Rohkem {title} sees."
   },
   "industries": {
     "relatedServices": "Selle tööstusharu teenused",
@@ -268,7 +282,13 @@
     "heroLede": "Kolm tootmisreaalsust, kolm piirangute kogumit, kolm erinevat teed parema läbilaskevõimeni.",
     "whatWeHear": "Mida me kuuleme",
     "mostRelevantServices": "Kõige asjakohasemad teenused",
-    "exploreIndustry": "Avasta tööstusharu"
+    "exploreIndustry": "Avasta tööstusharu",
+    "recurringProblems": "Korduvad probleemid {title} valdkonnas.",
+    "whereToStart": "Kust alustada {title} valdkonnas.",
+    "ourWork": "Meie töö {title} valdkonnas.",
+    "casesComing": "Projektid selle tööstusharu jaoks on varsti saadaval.",
+    "casesEyebrow": "Projektid",
+    "talkAboutLine": "Rääkime teie {title} tootmisliinist."
   },
   "legal": {
     "privacy": {

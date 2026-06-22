@@ -1,49 +1,49 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { services as servicesNav } from "@/lib/nav";
+import type { ServiceDoc } from "@/content/types";
 
-export function RelatedServices({
-  currentSlug,
-  parentCategory,
+export async function RelatedServices({
+  siblings,
+  parentTitle,
+  locale = "en",
   id,
 }: {
-  currentSlug: string;
-  parentCategory?: string;
+  siblings: ServiceDoc[];
+  parentTitle: string;
+  locale?: string;
   id?: string;
 }) {
-  // Find sibling sub-services within the same parent category
-  const category = parentCategory
-    ? servicesNav.find((s) => s.href === `/services/${parentCategory}`)
-    : null;
-
-  const siblings = category?.items.filter((item) => !item.href.endsWith(`/${currentSlug}`)) ?? [];
   if (siblings.length === 0) return null;
+  const t = await getTranslations({ locale, namespace: "services" });
 
   return (
     <Section tone="paper" size="sm" id={id}>
       <Container>
         <div className="max-w-2xl">
-          <Eyebrow>Related</Eyebrow>
-          <h2 className="mt-4 text-display-3 text-balance">More within {category?.title}.</h2>
+          <Eyebrow>{t("related")}</Eyebrow>
+          <h2 className="mt-4 text-display-3 text-balance">
+            {t("moreWithin", { title: parentTitle })}
+          </h2>
         </div>
         <div className="mt-10 grid gap-3 md:grid-cols-3">
           {siblings.map((s) => (
             <Link
-              key={s.href}
-              href={s.href}
+              key={s.frontmatter.slug}
+              href={`/${locale}/services/${s.frontmatter.slug}`}
               className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
             >
               <h3 className="text-base font-semibold text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
-                {s.title}
+                {s.frontmatter.title}
               </h3>
-              {s.description ? (
-                <p className="mt-2 text-sm text-[var(--color-ink-500)]">{s.description}</p>
+              {s.frontmatter.lede ? (
+                <p className="mt-2 text-sm text-[var(--color-ink-500)]">{s.frontmatter.lede}</p>
               ) : null}
               <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] group-hover:gap-2 transition-all">
-                Learn more <ArrowRight className="size-3.5" aria-hidden />
+                {t("learnMore")} <ArrowRight className="size-3.5" aria-hidden />
               </span>
             </Link>
           ))}

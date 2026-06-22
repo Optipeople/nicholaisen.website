@@ -258,7 +258,21 @@
     "allServices": "All services",
     "talkToEngineer": "Talk to an engineer",
     "backToCategory": "Back to category",
-    "whatYouGet": "What you walk away with"
+    "whatYouGet": "What you walk away with",
+    "anchorOverview": "Overview",
+    "anchorHowItWorks": "How it works",
+    "anchorCapabilities": "Capabilities",
+    "anchorDetail": "Detail",
+    "anchorCases": "Cases",
+    "anchorContact": "Contact",
+    "howEngagementRuns": "How a {title} engagement runs.",
+    "within": "Within {title}",
+    "threeWaysDeliver": "Three ways we deliver this.",
+    "wherePaidOff": "Where {title} has paid off.",
+    "selectedCases": "Selected cases",
+    "casesBeingPrepared": "Cases for this service coming soon. In the meantime, see all our work.",
+    "related": "Related",
+    "moreWithin": "More within {title}."
   },
   "industries": {
     "relatedServices": "Services for this industry",
@@ -268,7 +282,13 @@
     "heroLede": "Three production realities, three sets of constraints, three distinct paths to better throughput.",
     "whatWeHear": "What we hear",
     "mostRelevantServices": "Most relevant services",
-    "exploreIndustry": "Explore industry"
+    "exploreIndustry": "Explore industry",
+    "recurringProblems": "The recurring problems in {title}.",
+    "whereToStart": "Where to start in {title}.",
+    "ourWork": "Our work in {title}.",
+    "casesComing": "Cases for this industry coming soon.",
+    "casesEyebrow": "Cases",
+    "talkAboutLine": "Talk to us about your {title} line."
   },
   "legal": {
     "privacy": {

@@ -258,7 +258,21 @@
     "allServices": "Visos paslaugos",
     "talkToEngineer": "Kalbėkite su inžinieriumi",
     "backToCategory": "Atgal į kategoriją",
-    "whatYouGet": "Ką gausite"
+    "whatYouGet": "Ką gausite",
+    "anchorOverview": "Apžvalga",
+    "anchorHowItWorks": "Kaip tai veikia",
+    "anchorCapabilities": "Galimybės",
+    "anchorDetail": "Detalės",
+    "anchorCases": "Projektai",
+    "anchorContact": "Kontaktas",
+    "howEngagementRuns": "Kaip vyksta {title} bendradarbiavimas.",
+    "within": "{title} srityje",
+    "threeWaysDeliver": "Trys būdai, kaip mes tai pristatome.",
+    "wherePaidOff": "Kur {title} davė rezultatų.",
+    "selectedCases": "Atrinkti projektai",
+    "casesBeingPrepared": "Šios paslaugos projektai netrukus. Tuo tarpu peržiūrėkite visus mūsų darbus.",
+    "related": "Susiję",
+    "moreWithin": "Daugiau {title} srityje."
   },
   "industries": {
     "relatedServices": "Šios pramonės šakos paslaugos",
@@ -268,7 +282,13 @@
     "heroLede": "Trys gamybos realybės, trys apribojimų rinkiniai, trys skirtingi keliai į geresnį pralaidumą.",
     "whatWeHear": "Ką mes girdime",
     "mostRelevantServices": "Labiausiai tinkamos paslaugos",
-    "exploreIndustry": "Ištirti pramonės šaką"
+    "exploreIndustry": "Ištirti pramonės šaką",
+    "recurringProblems": "Pasikartojančios problemos {title} sektoriuje.",
+    "whereToStart": "Nuo ko pradėti {title} sektoriuje.",
+    "ourWork": "Mūsų darbas {title} sektoriuje.",
+    "casesComing": "Šios pramonės šakos projektai netrukus.",
+    "casesEyebrow": "Projektai",
+    "talkAboutLine": "Pakalbėkime apie jūsų {title} gamybos liniją."
   },
   "legal": {
     "privacy": {
