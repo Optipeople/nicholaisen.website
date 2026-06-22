@@ -107,6 +107,22 @@
       "body": "Ta med oss den del av linjen som frustrerar dig. Vi återkommer med vad vi skulle titta på först.",
       "primary": "Boka samtal",
       "secondary": "Utforska lösningar"
+    },
+    "solutions": {
+      "eyebrow": "Lösningar",
+      "title": "Fem spår. En effektivitetspartner.",
+      "allSolutions": "Alla lösningar"
+    },
+    "industriesStrip": {
+      "eyebrow": "Per bransch",
+      "industryLabel": "Bransch"
+    },
+    "featuredCase": {
+      "eyebrow": "Utvalt case"
+    },
+    "latestInsights": {
+      "eyebrow": "Senaste insikter",
+      "title": "Anteckningar från produktionsgolvet."
     }
   },
   "about": {

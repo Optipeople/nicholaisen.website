@@ -4,56 +4,33 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { cn } from "@/lib/cn";
 
-const solutions = [
-  {
-    key: "business-development",
-    title: "Business Development",
-    blurb:
-      "Align direction, sequence the right investments, plan capacity for the next five years.",
-    href: "/services/business-development",
-    image: "/images/top-view-boards-mdf-material-1-scaled-1.jpg",
-  },
-  {
-    key: "production-optimization",
-    title: "Production Optimization",
-    blurb:
-      "Throughput, quality, and uptime. Most of it without capex — just better flow and fewer changeovers.",
-    href: "/services/production-optimization",
-    image: "/images/workshop/panel-saw.png",
-  },
-  {
-    key: "project-solutions",
-    title: "Project Solutions",
-    blurb:
-      "From a single line to a turnkey factory. Specified, sourced, installed, signed off.",
-    href: "/services/project-solutions",
-    image: "/images/workshop/cnc-machining.jpg",
-  },
-  {
-    key: "digital-performance",
-    title: "Digital Performance · Opti",
-    blurb:
-      "Real-time machine data turned into the decisions that move the line. Insights, predictive maintenance, continuous improvement.",
-    href: "/services/digital-performance",
-    image: "/images/workshop/six-sided-drilling.jpg",
-  },
-  {
-    key: "partnership",
-    title: "Partnership",
-    blurb:
-      "A long-term efficiency partner — not a transactional vendor. Capacity planning, shared goals, sustained results.",
-    href: "/services/partnership",
-    image: "/images/workshop/nesting.jpg",
-  },
+const solutionKeys = [
+  { key: "businessDevelopment", slug: "business-development", image: "/images/top-view-boards-mdf-material-1-scaled-1.jpg" },
+  { key: "productionOptimization", slug: "production-optimization", image: "/images/workshop/panel-saw.png" },
+  { key: "projectSolutions", slug: "project-solutions", image: "/images/workshop/cnc-machining.jpg" },
+  { key: "digitalPerformance", slug: "digital-performance", image: "/images/workshop/six-sided-drilling.jpg" },
+  { key: "partnership", slug: "partnership", image: "/images/workshop/nesting.jpg" },
 ] as const;
 
-export function SolutionTabs() {
+export function SolutionTabs({ locale }: { locale: string }) {
   const [active, setActive] = useState(0);
+  const t = useTranslations("home");
+  const tn = useTranslations("nav");
+  const tc = useTranslations("common");
+
+  const solutions = solutionKeys.map((s) => ({
+    ...s,
+    title: tn(`servicesMenu.${s.key}.title`),
+    blurb: tn(`servicesMenu.${s.key}.description`),
+    href: `/${locale}/services/${s.slug}`,
+  }));
+
   const current = solutions[active]!;
 
   return (
@@ -61,22 +38,22 @@ export function SolutionTabs() {
       <Container>
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <Eyebrow>Solutions</Eyebrow>
+            <Eyebrow>{t("solutions.eyebrow")}</Eyebrow>
             <h2 className="mt-4 text-display-3 text-balance">
-              Five tracks. One efficiency partner.
+              {t("solutions.title")}
             </h2>
           </div>
           <Link
-            href="/services"
+            href={`/${locale}/services`}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] hover:gap-2 transition-all"
           >
-            All solutions <ArrowRight className="size-3.5" aria-hidden />
+            {t("solutions.allSolutions")} <ArrowRight className="size-3.5" aria-hidden />
           </Link>
         </div>
 
         <div
           role="tablist"
-          aria-label="Solution categories"
+          aria-label={t("solutions.eyebrow")}
           className="mt-10 flex flex-wrap gap-1 border-b border-[var(--color-ink-300)]/30"
         >
           {solutions.map((s, i) => (
@@ -115,7 +92,7 @@ export function SolutionTabs() {
               href={current.href}
               className="mt-8 inline-flex items-center gap-1.5 text-base font-medium text-[var(--color-navy-900)] hover:gap-2 transition-all"
             >
-              Learn more <ArrowRight className="size-4" aria-hidden />
+              {tc("learnMore")} <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>
         </div>

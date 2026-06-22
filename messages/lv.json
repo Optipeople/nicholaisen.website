@@ -107,6 +107,22 @@
       "body": "Atnesiet mums to ražošanas līnijas daļu, kas jūs kaitina. Mēs atgriezīsimies ar to, ko aplūkotu vispirms.",
       "primary": "Rezervēt zvanu",
       "secondary": "Izpētīt risinājumus"
+    },
+    "solutions": {
+      "eyebrow": "Risinājumi",
+      "title": "Pieci ceļi. Viens efektivitātes partneris.",
+      "allSolutions": "Visi risinājumi"
+    },
+    "industriesStrip": {
+      "eyebrow": "Pēc nozares",
+      "industryLabel": "Nozare"
+    },
+    "featuredCase": {
+      "eyebrow": "Izceltais projekts"
+    },
+    "latestInsights": {
+      "eyebrow": "Jaunākie ieskati",
+      "title": "Piezīmes no ražošanas ceha."
     }
   },
   "about": {
