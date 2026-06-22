@@ -22,10 +22,10 @@
       "flowOptimization": { "title": "Srauto optimizavimas", "description": "Greitai pašalinkite kliūtis." },
       "capacityImprovement": { "title": "Pajėgumo gerinimas", "description": "Padidinkite produkciją be kapitalo išlaidų." },
       "oeeEfficiency": { "title": "OEE ir efektyvumas", "description": "Sumažinkite atliekas ir prastovą." },
-      "projectSolutions": { "title": "Projektų sprendimai", "description": "Nuo vienos linijos iki raktų pavidalo gamyklos." },
+      "projectSolutions": { "title": "Projektų sprendimai", "description": "Nuo vienos linijos iki kompleksinės gamyklos." },
       "customProductionLines": { "title": "Individualios gamybos linijos", "description": "Sukurtos jūsų verslo tikslams." },
       "automationIntegration": { "title": "Automatizavimas ir integracija", "description": "Sujunkite ir išplėskite operacijas." },
-      "turnkeyProjects": { "title": "Raktų pavidalo projektai", "description": "Nuo idėjos iki vykdymo." },
+      "turnkeyProjects": { "title": "Kompleksiniai sprendimai", "description": "Nuo idėjos iki vykdymo." },
       "digitalPerformance": { "title": "Digital Performance", "description": "Opti — realaus laiko įžvalgos iš gamybos cecho." },
       "productionInsights": { "title": "Gamybos įžvalgos", "description": "Realaus laiko veiklos matomumas." },
       "predictiveMaintenance": { "title": "Prognozinė priežiūra", "description": "Užkirkite kelią prastovai prieš jai atsirandant." },
@@ -95,7 +95,7 @@
       "newToDesc": "Pardavimas, inžinerinės paslaugos ir konsultacijos medienos, plastiko ir aliuminio pramonės šakoms — daugiau nei 50 metų.",
       "newToCta": "Sužinokite, ką mes darome",
       "optimizeTitle": "Pasiruošę optimizuoti?",
-      "optimizeDesc": "Nuo vienos kliūties iki raktų pavidalo gamyklos. Penki paslaugų takai, sukurti jūsų gamybos linijai.",
+      "optimizeDesc": "Nuo vienos kliūties iki kompleksinės gamyklos. Penki paslaugų takai, sukurti jūsų gamybos linijai.",
       "optimizeCta": "Ištirti mūsų paslaugas",
       "optiTitle": "Reikia Opti įžvalgų?",
       "optiDesc": "Realaus laiko matomumas gamybos ceche su keliu į prognozinę priežiūrą ir nuolatinį gerinimą.",
@@ -207,7 +207,7 @@
     "hero": {
       "eyebrow": "Projektai",
       "title": "Realūs rezultatai iš gamybos cecho.",
-      "lede": "Projektų atranka — nuo vienos linijos optimizavimo iki raktų pavidalo gamyklų."
+      "lede": "Projektų atranka — nuo vienos linijos optimizavimo iki kompleksinių gamyklų."
     },
     "readCase": "Skaityti projektą",
     "challenge": "Iššūkis",

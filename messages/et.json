@@ -2,7 +2,7 @@
   "nav": {
     "services": "Teenused",
     "industries": "Tööstusharud",
-    "cases": "Juhtumid",
+    "cases": "Projektid",
     "insights": "Ülevaated",
     "about": "Meist",
     "contact": "Kontakt",
@@ -14,26 +14,26 @@
       "link": "Avasta Opti"
     },
     "servicesMenu": {
-      "businessDevelopment": { "title": "Äri arendamine", "description": "Seadke suund paika, planeerige investeeringuid, looge kasvuplaanid." },
-      "framingWorkshops": { "title": "Raamistamise töötoad", "description": "Kooskõlastage suund ja prioriteedid." },
+      "businessDevelopment": { "title": "Äri arendus", "description": "Määrake suund, planeerige investeeringuid ja looge kasvuplaan." },
+      "framingWorkshops": { "title": "Strateegiaseminarid", "description": "Lepige kokku suund ja prioriteedid." },
       "investmentAdvisory": { "title": "Investeerimisnõustamine", "description": "Kindlustage ROI enne investeerimist." },
       "strategicRoadmapping": { "title": "Strateegiline teekaart", "description": "Planeerige võimsust ja kasvu." },
       "productionOptimization": { "title": "Tootmise optimeerimine", "description": "Läbilaskevõime, kvaliteet ja tööaeg — ilma kapitalkuludeta." },
       "flowOptimization": { "title": "Voo optimeerimine", "description": "Kõrvaldage kitsaskohad kiiresti." },
       "capacityImprovement": { "title": "Võimsuse parandamine", "description": "Suurendage toodangut ilma kapitalkuludeta." },
       "oeeEfficiency": { "title": "OEE ja efektiivsus", "description": "Vähendage raiskamist ja seisakuid." },
-      "projectSolutions": { "title": "Projektilahendused", "description": "Ühest liinist võtmevalmis tehaseni." },
+      "projectSolutions": { "title": "Projektilahendused", "description": "Ühest liinist tervikliku tehaseni." },
       "customProductionLines": { "title": "Kohandatud tootmisliinid", "description": "Ehitatud teie äri-eesmärkide jaoks." },
       "automationIntegration": { "title": "Automatiseerimine ja integreerimine", "description": "Ühendage ja laiendage tegevust." },
-      "turnkeyProjects": { "title": "Võtmevalmis projektid", "description": "Ideest teostuseni." },
-      "digitalPerformance": { "title": "Digitaalne jõudlus", "description": "Opti — reaalajas ülevaade tootmispõrandalt." },
+      "turnkeyProjects": { "title": "Terviklahendused", "description": "Ideest teostuseni." },
+      "digitalPerformance": { "title": "Digital Performance", "description": "Opti — reaalajas ülevaade tootmispõrandalt." },
       "productionInsights": { "title": "Tootmisülevaated", "description": "Reaalajas jõudluse nähtavus." },
       "predictiveMaintenance": { "title": "Ennustav hooldus", "description": "Hoidke seisakuid ära enne nende tekkimist." },
       "continuousOptimization": { "title": "Pidev optimeerimine", "description": "Parandage jõudlust aja jooksul." },
       "partnership": { "title": "Partnerlus", "description": "Pikaajaline efektiivsuspartner." },
       "capacityPlanning": { "title": "Võimsuse planeerimine", "description": "Kooskõlastage strateegia ja investeeringud." },
       "collaboration": { "title": "Koostöö", "description": "Töötage ühiste eesmärkide nimel." },
-      "partnershipBd": { "title": "Äri arendamine", "description": "Tugevdage konkurentsivõimet." }
+      "partnershipBd": { "title": "Äri arendus", "description": "Tugevdage konkurentsivõimet." }
     },
     "industriesMenu": {
       "doorsWindows": { "title": "Uksed ja aknad", "description": "Täpsuspuusepatöö suures mahus." },
@@ -44,7 +44,7 @@
   "common": {
     "readMore": "Loe rohkem",
     "viewAll": "Vaata kõiki",
-    "getInTouch": "Võtke ühendust",
+    "getInTouch": "Võtke meiega ühendust",
     "scheduleCall": "Broneeri kõne",
     "exploreSolutions": "Avasta lahendused",
     "learnMore": "Loe rohkem",
@@ -56,11 +56,11 @@
       "solutions": "Lahendused",
       "industries": "Tööstusharud",
       "company": "Ettevõte",
-      "legal": "Õiguslik"
+      "legal": "Juriidiline"
     },
     "company": {
       "about": "Meist",
-      "cases": "Juhtumid",
+      "cases": "Projektid",
       "insights": "Ülevaated",
       "contact": "Kontakt"
     },
@@ -85,7 +85,7 @@
       "browseIndustry": "Sirvige tööstusharu järgi",
       "talkEngineer": "Rääkige inseneriga",
       "scheduleTitle": "30-minutiline vestlus. Ilma esitluseta.",
-      "scheduleBody": "Rääkige meile, mida te toodate, kus takerdute ja milline oleks parem tulemus. Me tuleme tagasi sellega, mida vaataksime esmalt.",
+      "scheduleBody": "Rääkige meile, mida toodate, kus takerdute ja milline näeks välja parem tulemus. Tuleme tagasi sellega, mida vaataksime esmalt.",
       "scheduleBtn": "Broneeri kõne"
     },
     "infoCards": {
@@ -95,7 +95,7 @@
       "newToDesc": "Müük, inseneriteenused ja nõustamine puidu-, plasti- ja alumiiniumitööstusele — üle 50 aasta.",
       "newToCta": "Tutvu meie tegevusega",
       "optimizeTitle": "Valmis optimeerima?",
-      "optimizeDesc": "Ühest kitsaskohast võtmevalmis tehaseni. Viis teenuserada, mis on ehitatud teie tootmisliini ümber.",
+      "optimizeDesc": "Ühest kitsaskohast tervikliku tehaseni. Viis teenuserada, mis on ehitatud teie tootmisliini ümber.",
       "optimizeCta": "Avasta meie teenused",
       "optiTitle": "Vajate Opti ülevaateid?",
       "optiDesc": "Reaalajas nähtavus tootmispõrandal koos teega ennustava hoolduse ja pideva parandamiseni.",
@@ -121,7 +121,7 @@
     },
     "what": {
       "eyebrow": "Mida me teeme",
-      "title": "Koos teiega analüüsime ja toome esile teie andmed, tugevused ja potentsiaalid.",
+      "title": "Koos teiega analüüsime ja toome esile teie andmed, tugevused ja potentsiaal.",
       "body1": "Pakume müüki, inseneriteenuseid ja nõustamist innovaatiliste masinalahenduste ja teenuskontseptsioonide osas. Nõustame aruka optimeerimise ja kasumlike investeeringute osas — esimesest vestlusest kuni kaua pärast kasutuselevõttu.",
       "body2": "Enamik meie kliente jääb meiega aastakümneid. See ei ole lojaalsus lojaalsuse pärast — see on praktilise koostöö tulemus partneriga, kes tunneb tootmisliini ja ilmub kohale, kui midagi läheb valesti."
     },
@@ -135,16 +135,16 @@
       "specificTitle": "Konkreetne enne muljetavaldavat",
       "specificDesc": "Pigem lubame 6-minutilist vahetust kui digitaalset transformatsiooni. Konkreetset saab testida.",
       "longTitle": "Pikaajaline enne kiiret",
-      "longDesc": "Töötame klientidega üle investeerimistsüklite, mitte ainult projektide. Head tulemused kasvavad."
+      "longDesc": "Töötame klientidega läbi investeerimistsüklite, mitte ainult üksikute projektide. Head tulemused täiendavad üksteist."
     },
     "history": {
       "eyebrow": "Ajalugu",
       "title": "Viis aastakümmet, neli pöördepunkti.",
       "1972Year": "1972",
       "1972Title": "Asutatud Hørningis",
-      "1972Desc": "Alustas puidutöötlemismasinate müügiagendina. Tootmispõrandalt saadud raske teenitud teadmised kujundavad endiselt meie tööviisi.",
+      "1972Desc": "Alustas puidutöötlemismasinate müügiagendina. Tootmispõrandalt saadud kogemused kujundavad endiselt meie tööviisi.",
       "1990sYear": "1990ndad",
-      "1990sTitle": "Inseneriteenused tuuakse sisse",
+      "1990sTitle": "Inseneriteenused liituvad pakkumisega",
       "1990sDesc": "Kliendid palusid rohkem kui seadmeid — nad tahtsid planeeringuid, integratsioone, tulemusi. Inseneriteenustest sai osa pakkumisest.",
       "2010sYear": "2010ndad",
       "2010sTitle": "Nõustamine saab distsipliiniks",
@@ -186,10 +186,10 @@
       "successLabel": "Aitäh",
       "interests": {
         "ligna": "Ligna 2026 — eelbroneeri kohtumine",
-        "businessDevelopment": "Äri arendamine",
+        "businessDevelopment": "Äri arendus",
         "productionOptimization": "Tootmise optimeerimine",
         "projectSolutions": "Projektilahendused",
-        "digitalPerformance": "Digitaalne jõudlus · Opti",
+        "digitalPerformance": "Digital Performance · Opti",
         "partnership": "Partnerlus",
         "other": "Midagi muud"
       }
@@ -201,11 +201,11 @@
   },
   "cases": {
     "meta": {
-      "title": "Juhtumid",
+      "title": "Projektid",
       "description": "Tegelikud projektid tootmispõrandalt — kuidas Nicholaisen on aidanud tootjatel optimeerida, investeerida ja ehitada."
     },
     "hero": {
-      "eyebrow": "Juhtumid",
+      "eyebrow": "Projektid",
       "title": "Tegelikud tulemused tootmispõrandalt.",
       "lede": "Valik projekte — ühe liini optimeerimisest võtmevalmis tehasteni."
     },
