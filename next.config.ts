@@ -13,6 +13,9 @@ const config: NextConfig = {
   async redirects() {
     return wpRedirects;
   },
+  outputFileTracingIncludes: {
+    "/**": ["./content/**/*"],
+  },
 };
 
 export default withNextIntl(config);
