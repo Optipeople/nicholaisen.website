@@ -258,7 +258,21 @@
     "allServices": "Alla tjänster",
     "talkToEngineer": "Prata med en ingenjör",
     "backToCategory": "Tillbaka till kategorin",
-    "whatYouGet": "Vad du tar med dig"
+    "whatYouGet": "Vad du tar med dig",
+    "anchorOverview": "Översikt",
+    "anchorHowItWorks": "Hur det fungerar",
+    "anchorCapabilities": "Kapaciteter",
+    "anchorDetail": "Detaljer",
+    "anchorCases": "Cases",
+    "anchorContact": "Kontakt",
+    "howEngagementRuns": "Hur ett {title} uppdrag går till.",
+    "within": "Inom {title}",
+    "threeWaysDeliver": "Tre sätt vi levererar detta.",
+    "wherePaidOff": "Var {title} har gett resultat.",
+    "selectedCases": "Utvalda cases",
+    "casesBeingPrepared": "Cases för detta uppdrag förbereds. Se under tiden allt vårt arbete.",
+    "related": "Relaterat",
+    "moreWithin": "Mer inom {title}."
   },
   "industries": {
     "relatedServices": "Tjänster för denna bransch",
@@ -268,7 +282,13 @@
     "heroLede": "Tre produktionsverkligheter, tre uppsättningar begränsningar, tre distinkta vägar till bättre genomflöde.",
     "whatWeHear": "Vad vi hör",
     "mostRelevantServices": "Mest relevanta tjänster",
-    "exploreIndustry": "Utforska bransch"
+    "exploreIndustry": "Utforska bransch",
+    "recurringProblems": "De återkommande problemen inom {title}.",
+    "whereToStart": "Var man börjar inom {title}.",
+    "ourWork": "Vårt arbete inom {title}.",
+    "casesComing": "Cases för denna bransch kommer snart.",
+    "casesEyebrow": "Cases",
+    "talkAboutLine": "Låt oss prata om din {title} produktion."
   },
   "legal": {
     "privacy": {

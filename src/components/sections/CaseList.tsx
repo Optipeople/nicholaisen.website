@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -14,6 +15,7 @@ export async function CaseList({
   title = "Case studies",
   eyebrow = "Cases",
   emptyMessage = "Selected cases coming soon.",
+  locale = "en",
 }: {
   id?: string;
   filterBySlug?: string[];
@@ -22,8 +24,10 @@ export async function CaseList({
   title?: string;
   eyebrow?: string;
   emptyMessage?: string;
+  locale?: string;
 }) {
-  let cases = await listCases();
+  const t = await getTranslations({ locale, namespace: "cases" });
+  let cases = await listCases(locale);
   if (filterBySlug && filterBySlug.length > 0) {
     cases = cases.filter((c) => filterBySlug.includes(c.frontmatter.slug));
   }
@@ -45,7 +49,7 @@ export async function CaseList({
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {cases.map(({ frontmatter: fm }) => (
               <article key={fm.slug}>
-                <Link href={`/cases/${fm.slug}`} className="group block">
+                <Link href={`/${locale}/cases/${fm.slug}`} className="group block">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
                     <Image
                       src={fm.heroImage}
@@ -61,7 +65,7 @@ export async function CaseList({
                   </h3>
                   <p className="mt-3 text-[0.95rem] text-[var(--color-ink-500)]">{fm.excerpt}</p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] group-hover:gap-2 transition-all">
-                    Read the case <ArrowRight className="size-3.5" aria-hidden />
+                    {t("readCase")} <ArrowRight className="size-3.5" aria-hidden />
                   </span>
                 </Link>
               </article>
