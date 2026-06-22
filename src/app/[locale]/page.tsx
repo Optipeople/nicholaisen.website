@@ -7,16 +7,22 @@ import { CaseSpotlight } from "@/components/sections/CaseSpotlight";
 import { InsightGrid } from "@/components/sections/InsightGrid";
 import { CtaBand } from "@/components/sections/CtaBand";
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
   return (
     <>
       <HeroSplit />
       <EntryTabs />
       <InfoCardRow />
-      <SolutionTabs />
-      <IndustryStrip />
-      <CaseSpotlight />
-      <InsightGrid />
+      <SolutionTabs locale={locale} />
+      <IndustryStrip locale={locale} />
+      <CaseSpotlight locale={locale} />
+      <InsightGrid locale={locale} />
       <CtaBand />
     </>
   );

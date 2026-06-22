@@ -107,6 +107,22 @@
       "body": "Bring us the part of the line that frustrates you. We'll come back with what we'd look at first.",
       "primary": "Schedule a call",
       "secondary": "Explore solutions"
+    },
+    "solutions": {
+      "eyebrow": "Solutions",
+      "title": "Five tracks. One efficiency partner.",
+      "allSolutions": "All solutions"
+    },
+    "industriesStrip": {
+      "eyebrow": "By industry",
+      "industryLabel": "Industry"
+    },
+    "featuredCase": {
+      "eyebrow": "Featured case"
+    },
+    "latestInsights": {
+      "eyebrow": "Latest insights",
+      "title": "Notes from the shop floor."
     }
   },
   "about": {

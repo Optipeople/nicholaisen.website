@@ -107,6 +107,22 @@
       "body": "Tooge meile see osa liinist, mis teid frustreerib. Me tuleme tagasi sellega, mida vaataksime esmalt.",
       "primary": "Broneeri kõne",
       "secondary": "Avasta lahendused"
+    },
+    "solutions": {
+      "eyebrow": "Lahendused",
+      "title": "Viis rada. Üks efektiivsuspartner.",
+      "allSolutions": "Kõik lahendused"
+    },
+    "industriesStrip": {
+      "eyebrow": "Tööstusharu järgi",
+      "industryLabel": "Tööstusharu"
+    },
+    "featuredCase": {
+      "eyebrow": "Esiletõstetud projekt"
+    },
+    "latestInsights": {
+      "eyebrow": "Viimased ülevaated",
+      "title": "Märkmed tootmispõrandalt."
     }
   },
   "about": {

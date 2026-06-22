@@ -107,6 +107,22 @@
       "body": "Bring os den del af linjen, der frustrerer dig. Vi vender tilbage med, hvad vi ville kigge på først.",
       "primary": "Book et møde",
       "secondary": "Udforsk løsninger"
+    },
+    "solutions": {
+      "eyebrow": "Løsninger",
+      "title": "Fem spor. Én effektivitetspartner.",
+      "allSolutions": "Alle løsninger"
+    },
+    "industriesStrip": {
+      "eyebrow": "Efter branche",
+      "industryLabel": "Branche"
+    },
+    "featuredCase": {
+      "eyebrow": "Fremhævet case"
+    },
+    "latestInsights": {
+      "eyebrow": "Seneste indsigt",
+      "title": "Noter fra produktionsgulvet."
     }
   },
   "about": {

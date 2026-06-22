@@ -107,6 +107,22 @@
       "body": "Atneškite mums tą gamybos linijos dalį, kuri jus erzina. Grįšime su tuo, ką peržiūrėtume pirmiausia.",
       "primary": "Užsisakyti skambutį",
       "secondary": "Ištirti sprendimus"
+    },
+    "solutions": {
+      "eyebrow": "Sprendimai",
+      "title": "Penki takai. Vienas efektyvumo partneris.",
+      "allSolutions": "Visi sprendimai"
+    },
+    "industriesStrip": {
+      "eyebrow": "Pagal pramonės šaką",
+      "industryLabel": "Pramonės šaka"
+    },
+    "featuredCase": {
+      "eyebrow": "Rekomenduojamas projektas"
+    },
+    "latestInsights": {
+      "eyebrow": "Naujausios įžvalgos",
+      "title": "Užrašai iš gamybos cecho."
     }
   },
   "about": {

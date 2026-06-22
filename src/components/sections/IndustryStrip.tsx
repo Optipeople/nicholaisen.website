@@ -1,34 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { industries } from "@/lib/nav";
 
-const industryImages: Record<string, string> = {
-  "/industries/doors-windows": "/images/industries/doors-windows.jpg",
-  "/industries/panel-furniture": "/images/industries/panel-furniture.jpg",
-  "/industries/solid-wood": "/images/industries/solid-wood.jpg",
-};
+const industryData = [
+  { key: "doorsWindows", slug: "doors-windows", image: "/images/industries/doors-windows.jpg" },
+  { key: "panelFurniture", slug: "panel-furniture", image: "/images/industries/panel-furniture.jpg" },
+  { key: "solidWood", slug: "solid-wood", image: "/images/industries/solid-wood.jpg" },
+] as const;
 
-export function IndustryStrip() {
+export async function IndustryStrip({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "home" });
+  const tn = await getTranslations({ locale, namespace: "nav" });
+  const ti = await getTranslations({ locale, namespace: "industries" });
+
   return (
     <Section tone="cream" size="md">
       <Container>
         <div className="max-w-2xl">
-          <Eyebrow>By industry</Eyebrow>
-          <h2 className="mt-4 text-display-3 text-balance">Built for how wood is actually made.</h2>
+          <Eyebrow>{t("industriesStrip.eyebrow")}</Eyebrow>
+          <h2 className="mt-4 text-display-3 text-balance">{ti("heroTitle")}</h2>
         </div>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {industries.map((i) => (
+          {industryData.map((i) => (
             <Link
-              key={i.href}
-              href={i.href}
+              key={i.key}
+              href={`/${locale}/industries/${i.slug}`}
               className="group relative block aspect-[4/5] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]"
             >
               <Image
-                src={industryImages[i.href] ?? "/images/industries/panel-furniture.jpg"}
+                src={i.image}
                 alt=""
                 fill
                 sizes="(min-width: 768px) 33vw, 100vw"
@@ -38,12 +42,12 @@ export function IndustryStrip() {
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <div className="flex items-end justify-between gap-4">
                   <div>
-                    <p className="text-eyebrow text-[var(--color-tan-300)]">Industry</p>
+                    <p className="text-eyebrow text-[var(--color-tan-300)]">{t("industriesStrip.industryLabel")}</p>
                     <h3 className="mt-2 text-2xl font-semibold text-[var(--color-cream-50)]">
-                      {i.title}
+                      {tn(`industriesMenu.${i.key}.title`)}
                     </h3>
                     <p className="mt-1 text-sm text-[var(--color-cream-50)]/80">
-                      {i.description}
+                      {tn(`industriesMenu.${i.key}.description`)}
                     </p>
                   </div>
                   <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-cream-50)] text-[var(--color-navy-900)] transition-transform group-hover:rotate-12">
