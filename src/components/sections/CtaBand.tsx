@@ -34,11 +34,11 @@ export async function CtaBand({
   const resolvedBody = body ?? t?.("cta.body") ?? "Bring us the part of the line that frustrates you. We'll come back with what we'd look at first.";
   const resolvedPrimary = primary ?? {
     label: t?.("cta.primary") ?? "Schedule a call",
-    href: locale ? `/${locale}/contact` : "/contact",
+    href: "/contact",
   };
   const resolvedSecondary = secondary ?? {
     label: t?.("cta.secondary") ?? "Explore solutions",
-    href: locale ? `/${locale}/services` : "/services",
+    href: "/services",
   };
 
   const isNavy = tone === "navy";
