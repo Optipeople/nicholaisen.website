@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/Container";
@@ -28,7 +28,7 @@ export function SolutionTabs({ locale }: { locale: string }) {
     ...s,
     title: tn(`servicesMenu.${s.key}.title`),
     blurb: tn(`servicesMenu.${s.key}.description`),
-    href: `/${locale}/services/${s.slug}`,
+    href: `/services/${s.slug}`,
   }));
 
   const current = solutions[active]!;
@@ -44,7 +44,7 @@ export function SolutionTabs({ locale }: { locale: string }) {
             </h2>
           </div>
           <Link
-            href={`/${locale}/services`}
+            href="/services"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] hover:gap-2 transition-all"
           >
             {t("solutions.allSolutions")} <ArrowRight className="size-3.5" aria-hidden />

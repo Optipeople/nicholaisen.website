@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -32,7 +32,7 @@ export async function InsightGrid({ locale, limit = 3 }: { locale: string; limit
             </h2>
           </div>
           <Link
-            href={`/${locale}/insights`}
+            href="/insights"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] hover:gap-2 transition-all"
           >
             {ti("allInsights")} <ArrowRight className="size-3.5" aria-hidden />
@@ -44,7 +44,7 @@ export async function InsightGrid({ locale, limit = 3 }: { locale: string; limit
             const fm = doc.frontmatter;
             return (
               <article key={fm.slug}>
-                <Link href={`/${locale}/insights/${fm.slug}`} className="group block">
+                <Link href={`/insights/${fm.slug}`} className="group block">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
                     <Image
                       src={fm.heroImage}
