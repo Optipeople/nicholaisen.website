@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import { forwardRef, type ButtonHTMLAttributes } from "react";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/cn";
 
