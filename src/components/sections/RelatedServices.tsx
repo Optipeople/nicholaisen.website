@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -33,7 +33,7 @@ export async function RelatedServices({
           {siblings.map((s) => (
             <Link
               key={s.frontmatter.slug}
-              href={`/${locale}/services/${s.frontmatter.slug}`}
+              href={`/services/${s.frontmatter.slug}`}
               className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
             >
               <h3 className="text-base font-semibold text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">

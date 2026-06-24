@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
@@ -41,7 +41,7 @@ export default async function IndustriesIndexPage({
             {industries.map(({ frontmatter: i }) => (
               <Link
                 key={i.slug}
-                href={`/${locale}/industries/${i.slug}`}
+                href={`/industries/${i.slug}`}
                 className="group relative block aspect-[4/5] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]"
               >
                 <Image

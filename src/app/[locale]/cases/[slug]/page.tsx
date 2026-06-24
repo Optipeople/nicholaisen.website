@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -58,7 +58,7 @@ export default async function CasePage({
       <section className="bg-[var(--color-cream-50)] pt-10 pb-12 lg:pt-16">
         <Container size="narrow">
           <Link
-            href={`/${locale}/cases`}
+            href="/cases"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink-500)] hover:text-[var(--color-navy-900)]"
           >
             <ArrowLeft className="size-3.5" /> {t("allCases")}
@@ -140,7 +140,7 @@ export default async function CasePage({
                       {linkedServices.map((d) => (
                         <li key={d!.frontmatter.slug}>
                           <Link
-                            href={`/${locale}/services/${d!.frontmatter.slug}`}
+                            href={`/services/${d!.frontmatter.slug}`}
                             className="inline-flex items-center gap-1 text-sm text-[var(--color-navy-900)] hover:underline"
                           >
                             {d!.frontmatter.title}

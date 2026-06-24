@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -101,11 +101,11 @@ export default async function ServicePage({
         align="split"
       >
         <div className="flex flex-wrap gap-3">
-          <LinkButton href={`/${locale}/contact`} size="md" withArrow>
+          <LinkButton href="/contact" size="md" withArrow>
             {t("talkToEngineer")}
           </LinkButton>
           {!isCategory && fm.parent ? (
-            <LinkButton href={`/${locale}/services/${fm.parent}`} variant="ghost" size="md">
+            <LinkButton href={`/services/${fm.parent}`} variant="ghost" size="md">
               {t("backToCategory")}
             </LinkButton>
           ) : null}
@@ -157,7 +157,7 @@ export default async function ServicePage({
               {subServices.map(({ frontmatter: s }) => (
                 <Link
                   key={s.slug}
-                  href={`/${locale}/services/${s.slug}`}
+                  href={`/services/${s.slug}`}
                   className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-7 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
                 >
                   <Eyebrow>{s.eyebrow}</Eyebrow>
