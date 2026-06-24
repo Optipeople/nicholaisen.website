@@ -200,6 +200,7 @@
       "successTitle": "Vi vender tilbage inden for én arbejdsdag.",
       "successBody": "For hastesager kan du nå os direkte på",
       "successLabel": "Tak",
+      "optional": "valgfri",
       "interests": {
         "ligna": "Ligna 2026 — forbooking af møde",
         "businessDevelopment": "Forretningsudvikling",
@@ -213,12 +214,24 @@
     "info": {
       "callUs": "Ring til os",
       "emailLabel": "E-mail",
-      "visit": "Besøg os"
+      "visit": "Besøg os",
+      "serviceLabel": "Service"
     },
     "team": {
       "eyebrow": "Dine kontaktpersoner",
       "title": "Find din direkte linje.",
       "lede": "Kontakt den person der dækker dit område direkte. Alle du kontakter udfører det faktiske arbejde."
+    },
+    "sections": {
+      "leadership": "Ledelse",
+      "administration": "Administration",
+      "salesDenmark": "Salg – Danmark",
+      "salesBaltic": "Salg – Baltikum",
+      "salesSweden": "Salg – Sverige",
+      "innovation": "Innovation & Effektivisering",
+      "service": "Service & Reservedele",
+      "marketing": "Marketing",
+      "finance": "Økonomi"
     }
   },
   "cases": {

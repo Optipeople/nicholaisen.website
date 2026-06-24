@@ -46,7 +46,7 @@ export default async function ContactPage({
                     {site.phone}
                   </a>
                   <br />
-                  <span className="text-[var(--color-ink-500)]">Service: </span>
+                  <span className="text-[var(--color-ink-500)]">{t("info.serviceLabel")}: </span>
                   <a
                     href={`tel:${site.phoneService.replace(/\s+/g, "")}`}
                     className="hover:text-[var(--color-navy-900)]"
@@ -87,15 +87,15 @@ export default async function ContactPage({
             {t("team.lede")}
           </p>
 
-          <TeamSection label="Leadership" people={management} />
-          <TeamSection label="Administration" people={administration} />
-          <TeamSection label="Sales – Denmark" people={salesDenmark} />
-          <TeamSection label="Sales – Baltic" people={baltic} usePhone />
-          <TeamSection label="Sales – Sweden" people={sweden} usePhone />
-          <TeamSection label="Innovation & Efficiency" people={innovation} />
-          <TeamSection label="Service & Spare Parts" people={service} />
-          <TeamSection label="Marketing" people={marketing} />
-          <TeamSection label="Finance" people={finance} />
+          <TeamSection label={t("sections.leadership")} people={management} />
+          <TeamSection label={t("sections.administration")} people={administration} />
+          <TeamSection label={t("sections.salesDenmark")} people={salesDenmark} />
+          <TeamSection label={t("sections.salesBaltic")} people={baltic} usePhone />
+          <TeamSection label={t("sections.salesSweden")} people={sweden} usePhone />
+          <TeamSection label={t("sections.innovation")} people={innovation} />
+          <TeamSection label={t("sections.service")} people={service} />
+          <TeamSection label={t("sections.marketing")} people={marketing} />
+          <TeamSection label={t("sections.finance")} people={finance} />
         </Container>
       </Section>
     </>
