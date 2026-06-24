@@ -1,13 +1,15 @@
-import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+﻿import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { listCases } from "@/content/loader";
 
 export async function CaseSpotlight({ locale }: { locale: string }) {
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "home" });
   const tc = await getTranslations({ locale, namespace: "cases" });
   const cases = await listCases(locale);
@@ -44,7 +46,7 @@ export async function CaseSpotlight({ locale }: { locale: string }) {
             ) : null}
 
             <Link
-              href={`/cases/${fm.slug}`}
+              href={lp(`/cases/${fm.slug}`)}
               className="mt-10 inline-flex items-center gap-1.5 text-base font-medium text-[var(--color-cream-50)] hover:gap-2 transition-all"
             >
               {tc("readCase")} <ArrowRight className="size-4" aria-hidden />

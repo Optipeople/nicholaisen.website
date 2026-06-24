@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -54,6 +55,7 @@ export default async function ServicePage({
   params: Promise<Params>;
 }) {
   const { slug, locale } = await params;
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const fullSlug = slug.join("/");
   const [t, tc] = await Promise.all([
     getTranslations({ locale, namespace: "services" }),
@@ -157,7 +159,7 @@ export default async function ServicePage({
               {subServices.map(({ frontmatter: s }) => (
                 <Link
                   key={s.slug}
-                  href={`/services/${s.slug}`}
+                  href={lp(`/services/${s.slug}`)}
                   className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-7 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
                 >
                   <Eyebrow>{s.eyebrow}</Eyebrow>

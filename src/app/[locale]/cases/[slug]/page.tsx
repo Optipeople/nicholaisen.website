@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+import Link from "next/link";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -10,6 +10,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { Mdx } from "@/components/mdx/Mdx";
 import { getCase, listCases, listServices } from "@/content/loader";
+import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 
@@ -43,6 +44,7 @@ export default async function CasePage({
   params: Promise<Params>;
 }) {
   const { slug, locale } = await params;
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "cases" });
   const doc = await getCase(slug, locale);
   if (!doc) notFound();
@@ -58,7 +60,7 @@ export default async function CasePage({
       <section className="bg-[var(--color-cream-50)] pt-10 pb-12 lg:pt-16">
         <Container size="narrow">
           <Link
-            href="/cases"
+            href={lp("/cases")}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink-500)] hover:text-[var(--color-navy-900)]"
           >
             <ArrowLeft className="size-3.5" /> {t("allCases")}
@@ -140,7 +142,7 @@ export default async function CasePage({
                       {linkedServices.map((d) => (
                         <li key={d!.frontmatter.slug}>
                           <Link
-                            href={`/services/${d!.frontmatter.slug}`}
+                            href={lp(`/services/${d!.frontmatter.slug}`)}
                             className="inline-flex items-center gap-1 text-sm text-[var(--color-navy-900)] hover:underline"
                           >
                             {d!.frontmatter.title}

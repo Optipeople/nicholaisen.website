@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+﻿import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
@@ -9,6 +9,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PageHero } from "@/components/sections/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { listCases } from "@/content/loader";
+import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +24,7 @@ export default async function CasesIndexPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "cases" });
   const cases = await listCases(locale);
 
@@ -41,7 +43,7 @@ export default async function CasesIndexPage({
             {cases.map(({ frontmatter: c }) => (
               <Link
                 key={c.slug}
-                href={`/cases/${c.slug}`}
+                href={lp(`/cases/${c.slug}`)}
                 className="group block rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-[var(--color-paper-dark)]">

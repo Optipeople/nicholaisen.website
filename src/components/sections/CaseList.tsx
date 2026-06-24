@@ -1,11 +1,12 @@
-import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+﻿import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { listCases } from "@/content/loader";
+import { routing } from "@/i18n/routing";
 
 export async function CaseList({
   id,
@@ -26,6 +27,7 @@ export async function CaseList({
   emptyMessage?: string;
   locale?: string;
 }) {
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "cases" });
   let cases = await listCases(locale);
   if (filterBySlug && filterBySlug.length > 0) {
@@ -49,7 +51,7 @@ export async function CaseList({
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {cases.map(({ frontmatter: fm }) => (
               <article key={fm.slug}>
-                <Link href={`/cases/${fm.slug}`} className="group block">
+                <Link href={lp(`/cases/${fm.slug}`)} className="group block">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
                     <Image
                       src={fm.heroImage}

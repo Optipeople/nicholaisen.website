@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -11,6 +11,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { CaseList } from "@/components/sections/CaseList";
 import { Mdx } from "@/components/mdx/Mdx";
 import { getIndustry, listIndustries, listServices } from "@/content/loader";
+import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
 
 type Params = { slug: string; locale: string };
@@ -43,6 +44,7 @@ export default async function IndustryPage({
   params: Promise<Params>;
 }) {
   const { slug, locale } = await params;
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const [t, ts] = await Promise.all([
     getTranslations({ locale, namespace: "industries" }),
     getTranslations({ locale, namespace: "common" }),
@@ -109,7 +111,7 @@ export default async function IndustryPage({
               {relevant.map((d) => (
                 <Link
                   key={d!.frontmatter.slug}
-                  href={`/services/${d!.frontmatter.slug}`}
+                  href={lp(`/services/${d!.frontmatter.slug}`)}
                   className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
                 >
                   <Eyebrow>{d!.frontmatter.eyebrow}</Eyebrow>

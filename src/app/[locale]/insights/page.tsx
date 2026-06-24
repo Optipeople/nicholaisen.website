@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+﻿import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
@@ -9,6 +9,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PageHero } from "@/components/sections/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { listInsights } from "@/content/loader";
+import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 
@@ -24,6 +25,7 @@ export default async function InsightsIndexPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "insights" });
   const insights = await listInsights(locale);
   const [featured, ...rest] = insights;
@@ -48,7 +50,7 @@ export default async function InsightsIndexPage({
         <Section tone="paper" size="md">
           <Container>
             <Link
-              href={`/insights/${featured.frontmatter.slug}`}
+              href={lp(`/insights/${featured.frontmatter.slug}`)}
               className="group grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[var(--color-paper-dark)]">
@@ -86,7 +88,7 @@ export default async function InsightsIndexPage({
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
               {rest.map((doc) => (
                 <article key={doc.frontmatter.slug}>
-                  <Link href={`/insights/${doc.frontmatter.slug}`} className="group block">
+                  <Link href={lp(`/insights/${doc.frontmatter.slug}`)} className="group block">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
                       <Image
                         src={doc.frontmatter.heroImage}
