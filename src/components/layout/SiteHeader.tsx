@@ -7,8 +7,8 @@ import { MobileNav } from "@/components/layout/MobileNav";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 import { Container } from "@/components/layout/Container";
 
-export async function SiteHeader() {
-  const t = await getTranslations("nav");
+export async function SiteHeader({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "nav" });
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)]/85 backdrop-blur supports-[backdrop-filter]:bg-[var(--color-cream-50)]/70">
       <Container>
