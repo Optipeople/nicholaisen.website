@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -44,7 +44,7 @@ export async function CaseSpotlight({ locale }: { locale: string }) {
             ) : null}
 
             <Link
-              href={`/${locale}/cases/${fm.slug}`}
+              href={`/cases/${fm.slug}`}
               className="mt-10 inline-flex items-center gap-1.5 text-base font-medium text-[var(--color-cream-50)] hover:gap-2 transition-all"
             >
               {tc("readCase")} <ArrowRight className="size-4" aria-hidden />
