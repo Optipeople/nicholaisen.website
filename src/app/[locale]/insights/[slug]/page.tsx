@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -10,6 +10,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { Mdx } from "@/components/mdx/Mdx";
 import { getInsight, listInsights } from "@/content/loader";
+import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 
@@ -48,6 +49,7 @@ export default async function InsightPage({
   params: Promise<Params>;
 }) {
   const { slug, locale } = await params;
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "insights" });
   const doc = await getInsight(slug, locale);
   if (!doc) notFound();
@@ -77,7 +79,7 @@ export default async function InsightPage({
       <section className="bg-[var(--color-cream-50)] pt-10 pb-12 lg:pt-16">
         <Container size="narrow">
           <Link
-            href="/insights"
+            href={lp("/insights")}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink-500)] hover:text-[var(--color-navy-900)]"
           >
             <ArrowLeft className="size-3.5" /> {t("allInsights")}
@@ -138,7 +140,7 @@ export default async function InsightPage({
               {related.map(({ doc: r }) => (
                 <Link
                   key={r.frontmatter.slug}
-                  href={`/insights/${r.frontmatter.slug}`}
+                  href={lp(`/insights/${r.frontmatter.slug}`)}
                   className="group block"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">

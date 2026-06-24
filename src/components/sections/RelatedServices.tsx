@@ -1,6 +1,7 @@
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+﻿import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -18,6 +19,7 @@ export async function RelatedServices({
   id?: string;
 }) {
   if (siblings.length === 0) return null;
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "services" });
 
   return (
@@ -33,7 +35,7 @@ export async function RelatedServices({
           {siblings.map((s) => (
             <Link
               key={s.frontmatter.slug}
-              href={`/services/${s.frontmatter.slug}`}
+              href={lp(`/services/${s.frontmatter.slug}`)}
               className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
             >
               <h3 className="text-base font-semibold text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">

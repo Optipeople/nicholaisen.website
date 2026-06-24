@@ -1,10 +1,11 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { routing } from "@/i18n/routing";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -20,6 +21,7 @@ const solutionKeys = [
 
 export function SolutionTabs({ locale }: { locale: string }) {
   const [active, setActive] = useState(0);
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = useTranslations("home");
   const tn = useTranslations("nav");
   const tc = useTranslations("common");
@@ -28,7 +30,7 @@ export function SolutionTabs({ locale }: { locale: string }) {
     ...s,
     title: tn(`servicesMenu.${s.key}.title`),
     blurb: tn(`servicesMenu.${s.key}.description`),
-    href: `/services/${s.slug}`,
+    href: lp(`/services/${s.slug}`),
   }));
 
   const current = solutions[active]!;
@@ -44,7 +46,7 @@ export function SolutionTabs({ locale }: { locale: string }) {
             </h2>
           </div>
           <Link
-            href="/services"
+            href={lp("/services")}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] hover:gap-2 transition-all"
           >
             {t("solutions.allSolutions")} <ArrowRight className="size-3.5" aria-hidden />

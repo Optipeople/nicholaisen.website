@@ -1,7 +1,8 @@
-import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+﻿import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -13,6 +14,7 @@ const industryData = [
 ] as const;
 
 export async function IndustryStrip({ locale }: { locale: string }) {
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "home" });
   const tn = await getTranslations({ locale, namespace: "nav" });
   const ti = await getTranslations({ locale, namespace: "industries" });
@@ -28,7 +30,7 @@ export async function IndustryStrip({ locale }: { locale: string }) {
           {industryData.map((i) => (
             <Link
               key={i.key}
-              href={`/industries/${i.slug}`}
+              href={lp(`/industries/${i.slug}`)}
               className="group relative block aspect-[4/5] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]"
             >
               <Image

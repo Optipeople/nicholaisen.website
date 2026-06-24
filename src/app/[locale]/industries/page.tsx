@@ -1,4 +1,4 @@
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+﻿import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
@@ -9,6 +9,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PageHero } from "@/components/sections/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { listIndustries } from "@/content/loader";
+import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +24,7 @@ export default async function IndustriesIndexPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const t = await getTranslations({ locale, namespace: "industries" });
   const industries = await listIndustries(locale);
 
@@ -41,7 +43,7 @@ export default async function IndustriesIndexPage({
             {industries.map(({ frontmatter: i }) => (
               <Link
                 key={i.slug}
-                href={`/industries/${i.slug}`}
+                href={lp(`/industries/${i.slug}`)}
                 className="group relative block aspect-[4/5] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]"
               >
                 <Image
