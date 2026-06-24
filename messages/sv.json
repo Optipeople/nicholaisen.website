@@ -210,9 +210,15 @@
         "other": "Något annat"
       }
     },
+    "info": {
+      "callUs": "Ring oss",
+      "emailLabel": "E-post",
+      "visit": "Besök oss"
+    },
     "team": {
       "eyebrow": "Dina kontaktpersoner",
-      "title": "Hitta din direktlinje."
+      "title": "Hitta din direktlinje.",
+      "lede": "Kontakta personen som täcker ditt område direkt. Alla du kontaktar utför det faktiska arbetet."
     }
   },
   "cases": {

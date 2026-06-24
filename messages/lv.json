@@ -210,9 +210,15 @@
         "other": "Kaut kas cits"
       }
     },
+    "info": {
+      "callUs": "Zvaniet mums",
+      "emailLabel": "E-pasts",
+      "visit": "Apmeklējiet mūs"
+    },
     "team": {
       "eyebrow": "Jūsu kontaktpersonas",
-      "title": "Atrodiet savu tiešo kontaktu."
+      "title": "Atrodiet savu tiešo kontaktu.",
+      "lede": "Sazinieties tieši ar personu, kas apkalpo jūsu reģionu. Visi, ar kuriem sazināties, veic faktisko darbu."
     }
   },
   "cases": {

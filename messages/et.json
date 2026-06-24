@@ -210,9 +210,15 @@
         "other": "Midagi muud"
       }
     },
+    "info": {
+      "callUs": "Helistage meile",
+      "emailLabel": "E-post",
+      "visit": "Külastage meid"
+    },
     "team": {
       "eyebrow": "Teie kontaktisikud",
-      "title": "Leidke oma otsejoon."
+      "title": "Leidke oma otsejoon.",
+      "lede": "Pöörduge otse isiku poole, kes teie piirkonda katab. Kõik, kellega võtate ühendust, teevad tegelikku tööd."
     }
   },
   "cases": {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
@@ -12,6 +13,7 @@ const fieldClasses =
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const t = useTranslations("contact.form");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -40,12 +42,12 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="rounded-xl border border-[var(--color-navy-900)]/15 bg-[var(--color-paper)] p-8">
-        <p className="text-eyebrow">Thank you</p>
+        <p className="text-eyebrow">{t("successLabel")}</p>
         <h3 className="mt-3 text-2xl font-semibold text-[var(--color-ink-900)]">
-          We’ll be in touch within one business day.
+          {t("successTitle")}
         </h3>
         <p className="mt-3 text-[0.95rem] text-[var(--color-ink-500)]">
-          For anything urgent, you can reach us directly at{" "}
+          {t("successBody")}{" "}
           <a className="underline" href="tel:+4586924711">
             +45 8692 4711
           </a>
@@ -60,38 +62,38 @@ export function ContactForm() {
       {/* Honeypot — bots fill this; humans don't */}
       <div className="hidden" aria-hidden>
         <label>
-          Don’t fill this out: <input name="website" tabIndex={-1} autoComplete="off" />
+          Don't fill this out: <input name="website" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Name" name="name" type="text" required />
-        <Field label="Company" name="company" type="text" required />
+        <Field label={t("name")} name="name" type="text" required />
+        <Field label={t("company")} name="company" type="text" required />
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Email" name="email" type="email" required />
-        <Field label="Role" name="role" type="text" />
+        <Field label={t("email")} name="email" type="email" required />
+        <Field label={t("role")} name="role" type="text" />
       </div>
       <div>
         <label className="text-eyebrow" htmlFor="interest">
-          I’m interested in
+          {t("interest")}
         </label>
         <select id="interest" name="interest" className={cn(fieldClasses, "mt-2")} defaultValue="">
           <option value="" disabled>
-            Choose a topic
+            {t("interestDefault")}
           </option>
-          <option value="ligna-2026">Ligna 2026 — pre-book a meeting</option>
-          <option value="business-development">Business Development</option>
-          <option value="production-optimization">Production Optimization</option>
-          <option value="project-solutions">Project Solutions</option>
-          <option value="digital-performance">Digital Performance · Opti</option>
-          <option value="partnership">Partnership</option>
-          <option value="other">Something else</option>
+          <option value="ligna-2026">{t("interests.ligna")}</option>
+          <option value="business-development">{t("interests.businessDevelopment")}</option>
+          <option value="production-optimization">{t("interests.productionOptimization")}</option>
+          <option value="project-solutions">{t("interests.projectSolutions")}</option>
+          <option value="digital-performance">{t("interests.digitalPerformance")}</option>
+          <option value="partnership">{t("interests.partnership")}</option>
+          <option value="other">{t("interests.other")}</option>
         </select>
       </div>
       <div>
         <label className="text-eyebrow" htmlFor="message">
-          What are you trying to make better?
+          {t("message")}
         </label>
         <textarea
           id="message"
@@ -99,7 +101,7 @@ export function ContactForm() {
           required
           rows={5}
           className={cn(fieldClasses, "mt-2 resize-y")}
-          placeholder="A few sentences is plenty."
+          placeholder={t("messagePlaceholder")}
         />
       </div>
 
@@ -109,10 +111,10 @@ export function ContactForm() {
 
       <div>
         <Button type="submit" size="lg" disabled={status === "submitting"} withArrow>
-          {status === "submitting" ? "Sending…" : "Send message"}
+          {status === "submitting" ? t("submitting") : t("submit")}
         </Button>
         <p className="mt-3 text-xs text-[var(--color-ink-500)]">
-          We reply within one business day.
+          {t("replyTime")}
         </p>
       </div>
     </form>

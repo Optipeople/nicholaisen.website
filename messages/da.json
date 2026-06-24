@@ -210,9 +210,15 @@
         "other": "Noget andet"
       }
     },
+    "info": {
+      "callUs": "Ring til os",
+      "emailLabel": "E-mail",
+      "visit": "Besøg os"
+    },
     "team": {
       "eyebrow": "Dine kontaktpersoner",
-      "title": "Find din direkte linje."
+      "title": "Find din direkte linje.",
+      "lede": "Kontakt den person der dækker dit område direkte. Alle du kontakter udfører det faktiske arbejde."
     }
   },
   "cases": {
