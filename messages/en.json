@@ -200,6 +200,7 @@
       "successTitle": "We'll be in touch within one business day.",
       "successBody": "For anything urgent, you can reach us directly at",
       "successLabel": "Thank you",
+      "optional": "optional",
       "interests": {
         "ligna": "Ligna 2026 — pre-book a meeting",
         "businessDevelopment": "Business Development",
@@ -213,12 +214,24 @@
     "info": {
       "callUs": "Call us",
       "emailLabel": "Email",
-      "visit": "Visit"
+      "visit": "Visit",
+      "serviceLabel": "Service"
     },
     "team": {
       "eyebrow": "Your contact people",
       "title": "Find your direct line.",
       "lede": "Reach out directly to the person who covers your area. Everyone you contact does the actual work."
+    },
+    "sections": {
+      "leadership": "Leadership",
+      "administration": "Administration",
+      "salesDenmark": "Sales – Denmark",
+      "salesBaltic": "Sales – Baltic",
+      "salesSweden": "Sales – Sweden",
+      "innovation": "Innovation & Efficiency",
+      "service": "Service & Spare Parts",
+      "marketing": "Marketing",
+      "finance": "Finance"
     }
   },
   "cases": {

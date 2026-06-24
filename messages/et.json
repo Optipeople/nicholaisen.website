@@ -200,6 +200,7 @@
       "successTitle": "Võtame teiega ühendust ühe tööpäeva jooksul.",
       "successBody": "Kiireloomuliste küsimuste korral saate meiega otse ühendust võtta",
       "successLabel": "Aitäh",
+      "optional": "valikuline",
       "interests": {
         "ligna": "Ligna 2026 — eelbroneeri kohtumine",
         "businessDevelopment": "Äri arendus",
@@ -213,12 +214,24 @@
     "info": {
       "callUs": "Helistage meile",
       "emailLabel": "E-post",
-      "visit": "Külastage meid"
+      "visit": "Külastage meid",
+      "serviceLabel": "Teenindus"
     },
     "team": {
       "eyebrow": "Teie kontaktisikud",
       "title": "Leidke oma otsejoon.",
       "lede": "Pöörduge otse isiku poole, kes teie piirkonda katab. Kõik, kellega võtate ühendust, teevad tegelikku tööd."
+    },
+    "sections": {
+      "leadership": "Juhtkond",
+      "administration": "Administratsioon",
+      "salesDenmark": "Müük – Taani",
+      "salesBaltic": "Müük – Baltikum",
+      "salesSweden": "Müük – Rootsi",
+      "innovation": "Innovatsioon & Efektiivsus",
+      "service": "Teenindus & Varuosad",
+      "marketing": "Turundus",
+      "finance": "Finants"
     }
   },
   "cases": {

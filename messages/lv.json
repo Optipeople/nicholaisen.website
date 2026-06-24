@@ -200,6 +200,7 @@
       "successTitle": "Sazināsimies ar jums vienas darba dienas laikā.",
       "successBody": "Steidzamos gadījumos varat sazināties ar mums tieši",
       "successLabel": "Paldies",
+      "optional": "neobligāts",
       "interests": {
         "ligna": "Ligna 2026 — iepriekšrezervēt tikšanos",
         "businessDevelopment": "Biznesa attīstība",
@@ -213,12 +214,24 @@
     "info": {
       "callUs": "Zvaniet mums",
       "emailLabel": "E-pasts",
-      "visit": "Apmeklējiet mūs"
+      "visit": "Apmeklējiet mūs",
+      "serviceLabel": "Serviss"
     },
     "team": {
       "eyebrow": "Jūsu kontaktpersonas",
       "title": "Atrodiet savu tiešo kontaktu.",
       "lede": "Sazinieties tieši ar personu, kas apkalpo jūsu reģionu. Visi, ar kuriem sazināties, veic faktisko darbu."
+    },
+    "sections": {
+      "leadership": "Vadība",
+      "administration": "Administrācija",
+      "salesDenmark": "Pārdošana – Dānija",
+      "salesBaltic": "Pārdošana – Baltija",
+      "salesSweden": "Pārdošana – Zviedrija",
+      "innovation": "Inovācija & Efektivitāte",
+      "service": "Serviss & Rezerves daļas",
+      "marketing": "Mārketings",
+      "finance": "Finanses"
     }
   },
   "cases": {

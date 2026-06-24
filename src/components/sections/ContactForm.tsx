@@ -72,7 +72,7 @@ export function ContactForm() {
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label={t("email")} name="email" type="email" required />
-        <Field label={t("role")} name="role" type="text" />
+        <Field label={t("role")} name="role" type="text" optionalLabel={t("optional")} />
       </div>
       <div>
         <label className="text-eyebrow" htmlFor="interest">
@@ -126,17 +126,19 @@ function Field({
   name,
   type,
   required,
+  optionalLabel = "optional",
 }: {
   label: string;
   name: string;
   type: "text" | "email";
   required?: boolean;
+  optionalLabel?: string;
 }) {
   return (
     <div>
       <label className="text-eyebrow" htmlFor={name}>
         {label}
-        {required ? "" : <span className="ml-1 normal-case text-[var(--color-ink-300)]">(optional)</span>}
+        {required ? "" : <span className="ml-1 normal-case text-[var(--color-ink-300)]">({optionalLabel})</span>}
       </label>
       <input
         id={name}

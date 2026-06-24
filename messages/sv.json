@@ -200,6 +200,7 @@
       "successTitle": "Vi hör av oss inom en arbetsdag.",
       "successBody": "För brådskande ärenden kan du nå oss direkt på",
       "successLabel": "Tack",
+      "optional": "valfritt",
       "interests": {
         "ligna": "Ligna 2026 — förboka ett möte",
         "businessDevelopment": "Affärsutveckling",
@@ -213,12 +214,24 @@
     "info": {
       "callUs": "Ring oss",
       "emailLabel": "E-post",
-      "visit": "Besök oss"
+      "visit": "Besök oss",
+      "serviceLabel": "Service"
     },
     "team": {
       "eyebrow": "Dina kontaktpersoner",
       "title": "Hitta din direktlinje.",
       "lede": "Kontakta personen som täcker ditt område direkt. Alla du kontaktar utför det faktiska arbetet."
+    },
+    "sections": {
+      "leadership": "Ledning",
+      "administration": "Administration",
+      "salesDenmark": "Försäljning – Danmark",
+      "salesBaltic": "Försäljning – Baltikum",
+      "salesSweden": "Försäljning – Sverige",
+      "innovation": "Innovation & Effektivitet",
+      "service": "Service & Reservdelar",
+      "marketing": "Marknadsföring",
+      "finance": "Ekonomi"
     }
   },
   "cases": {

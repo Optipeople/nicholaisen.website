@@ -200,6 +200,7 @@
       "successTitle": "Susisieksime su jumis per vieną darbo dieną.",
       "successBody": "Skubiems klausimams galite susisiekti su mumis tiesiogiai",
       "successLabel": "Ačiū",
+      "optional": "neprivaloma",
       "interests": {
         "ligna": "Ligna 2026 — iš anksto rezervuoti susitikimą",
         "businessDevelopment": "Verslo plėtra",
@@ -213,12 +214,24 @@
     "info": {
       "callUs": "Skambinkite mums",
       "emailLabel": "El. paštas",
-      "visit": "Aplankykite mus"
+      "visit": "Aplankykite mus",
+      "serviceLabel": "Servisas"
     },
     "team": {
       "eyebrow": "Jūsų kontaktai",
       "title": "Raskite savo kontaktą.",
       "lede": "Kreipkitės tiesiogiai į asmenį, kuris apkalpo jūsų regioną. Visi, su kuriais susisiekiate, atlieka realų darbą."
+    },
+    "sections": {
+      "leadership": "Vadovybė",
+      "administration": "Administracija",
+      "salesDenmark": "Pardavimai – Danija",
+      "salesBaltic": "Pardavimai – Baltija",
+      "salesSweden": "Pardavimai – Švedija",
+      "innovation": "Inovacijos & Efektyvumas",
+      "service": "Servisas & Atsarginės dalys",
+      "marketing": "Rinkodara",
+      "finance": "Finansai"
     }
   },
   "cases": {
