@@ -210,9 +210,15 @@
         "other": "Something else"
       }
     },
+    "info": {
+      "callUs": "Call us",
+      "emailLabel": "Email",
+      "visit": "Visit"
+    },
     "team": {
       "eyebrow": "Your contact people",
-      "title": "Find your direct line."
+      "title": "Find your direct line.",
+      "lede": "Reach out directly to the person who covers your area. Everyone you contact does the actual work."
     }
   },
   "cases": {

@@ -210,9 +210,15 @@
         "other": "Kažkas kita"
       }
     },
+    "info": {
+      "callUs": "Skambinkite mums",
+      "emailLabel": "El. paštas",
+      "visit": "Aplankykite mus"
+    },
     "team": {
       "eyebrow": "Jūsų kontaktai",
-      "title": "Raskite savo kontaktą."
+      "title": "Raskite savo kontaktą.",
+      "lede": "Kreipkitės tiesiogiai į asmenį, kuris apkalpo jūsų regioną. Visi, su kuriais susisiekiate, atlieka realų darbą."
     }
   },
   "cases": {
