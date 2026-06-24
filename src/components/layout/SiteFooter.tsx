@@ -5,8 +5,8 @@ import { Container } from "@/components/layout/Container";
 import { services, industries } from "@/lib/nav";
 import { site } from "@/lib/site";
 
-export async function SiteFooter() {
-  const t = await getTranslations();
+export async function SiteFooter({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale });
 
   const footerNav = {
     [t("footer.sections.solutions")]: services.map((s) => ({

@@ -16,6 +16,8 @@ const interTight = Inter_Tight({
   weight: ["400", "500", "600", "700"],
 });
 
+export const dynamic = "force-dynamic";
+
 export const viewport: Viewport = {
   themeColor: "#0e2238",
   width: "device-width",
@@ -58,7 +60,7 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} className={interTight.variable}>
@@ -70,9 +72,9 @@ export default async function LocaleLayout({
           >
             Skip to content
           </a>
-          <SiteHeader />
+          <SiteHeader locale={locale} />
           <main id="main">{children}</main>
-          <SiteFooter />
+          <SiteFooter locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
