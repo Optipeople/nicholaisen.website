@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -49,7 +49,7 @@ export async function CaseList({
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {cases.map(({ frontmatter: fm }) => (
               <article key={fm.slug}>
-                <Link href={`/${locale}/cases/${fm.slug}`} className="group block">
+                <Link href={`/cases/${fm.slug}`} className="group block">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
                     <Image
                       src={fm.heroImage}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
@@ -77,7 +77,7 @@ export default async function InsightPage({
       <section className="bg-[var(--color-cream-50)] pt-10 pb-12 lg:pt-16">
         <Container size="narrow">
           <Link
-            href={`/${locale}/insights`}
+            href="/insights"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink-500)] hover:text-[var(--color-navy-900)]"
           >
             <ArrowLeft className="size-3.5" /> {t("allInsights")}
@@ -138,7 +138,7 @@ export default async function InsightPage({
               {related.map(({ doc: r }) => (
                 <Link
                   key={r.frontmatter.slug}
-                  href={`/${locale}/insights/${r.frontmatter.slug}`}
+                  href={`/insights/${r.frontmatter.slug}`}
                   className="group block"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">

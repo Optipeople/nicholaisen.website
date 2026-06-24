@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
@@ -41,7 +41,7 @@ export default async function CasesIndexPage({
             {cases.map(({ frontmatter: c }) => (
               <Link
                 key={c.slug}
-                href={`/${locale}/cases/${c.slug}`}
+                href={`/cases/${c.slug}`}
                 className="group block rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-[var(--color-paper-dark)]">

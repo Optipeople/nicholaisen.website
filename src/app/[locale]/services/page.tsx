@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
@@ -46,7 +46,7 @@ export default async function ServicesIndexPage({
             {categories.map(({ frontmatter: cat }) => (
               <Link
                 key={cat.slug}
-                href={`/${locale}/services/${cat.slug}`}
+                href={`/services/${cat.slug}`}
                 className="group grid gap-6 rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-7 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] sm:grid-cols-[1fr_1.2fr]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-[var(--color-paper-dark)]">

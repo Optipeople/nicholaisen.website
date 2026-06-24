@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
@@ -48,7 +48,7 @@ export default async function InsightsIndexPage({
         <Section tone="paper" size="md">
           <Container>
             <Link
-              href={`/${locale}/insights/${featured.frontmatter.slug}`}
+              href={`/insights/${featured.frontmatter.slug}`}
               className="group grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[var(--color-paper-dark)]">
@@ -86,7 +86,7 @@ export default async function InsightsIndexPage({
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
               {rest.map((doc) => (
                 <article key={doc.frontmatter.slug}>
-                  <Link href={`/${locale}/insights/${doc.frontmatter.slug}`} className="group block">
+                  <Link href={`/insights/${doc.frontmatter.slug}`} className="group block">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
                       <Image
                         src={doc.frontmatter.heroImage}
