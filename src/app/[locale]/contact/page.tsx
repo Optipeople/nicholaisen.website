@@ -164,61 +164,61 @@ function TeamSection({
 }
 
 const management: Person[] = [
-  { name: "Thomas Biehl", title: "CEO", email: "tb@nicholaisen.dk", image: "/images/Medarbejder/Thomas%20Biehl.jpeg" },
-  { name: "Henrik Ibsen", title: "COO", email: "hib@nicholaisen.dk", image: "/images/Medarbejder/Henrik%20Ibsen.jpg" },
-  { name: "Lars Sommer", title: "CFO", email: "ls@nicholaisen.dk", image: "/images/Medarbejder/Lars%20Sommer.jpeg" },
+  { name: "Thomas Biehl", title: "CEO", email: "tb@nicholaisen.dk", image: "/images/Medarbejder/Thomas Biehl.jpeg" },
+  { name: "Henrik Ibsen", title: "COO", email: "hib@nicholaisen.dk", image: "/images/Medarbejder/Henrik Ibsen.jpg" },
+  { name: "Lars Sommer", title: "CFO", email: "ls@nicholaisen.dk", image: "/images/Medarbejder/Lars Sommer.jpeg" },
 ];
 
 const administration: Person[] = [
-  { name: "Kathrine Hovesen", title: "PA to CEO", email: "kh@nicholaisen.dk", image: "/images/Medarbejder/Kathrine%20Hovesen.jpeg" },
-  { name: "Svenja Hartmann", title: "Project Coordinator", email: "sh@nicholaisen.dk", image: "/images/Medarbejder/Svenja%20Hartmann.jpeg" },
-  { name: "Gitte Sandholm", title: "Office Assistant", email: "gis@nicholaisen.dk", image: "/images/Medarbejder/Gitte%20Sandholm.jpeg" },
+  { name: "Kathrine Hovesen", title: "PA to CEO", email: "kh@nicholaisen.dk", image: "/images/Medarbejder/Kathrine Hovesen.jpeg" },
+  { name: "Svenja Hartmann", title: "Project Coordinator", email: "sh@nicholaisen.dk", image: "/images/Medarbejder/Svenja Hartmann.jpeg" },
+  { name: "Gitte Sandholm", title: "Office Assistant", email: "gis@nicholaisen.dk", image: "/images/Medarbejder/Gitte Sandholm.jpeg" },
 ];
 
 const salesDenmark: Person[] = [
-  { name: "Bo Bruun Holm", title: "Sales – Plate & Furniture Industry", email: "bbh@nicholaisen.dk", phone: "+45 40 54 47 64", image: "/images/Medarbejder/Bo%20Holm.jpeg" },
-  { name: "Mark Dige Høgh", title: "Sales – Plate & Furniture Industry", email: "mdh@nicholaisen.dk", phone: "+45 26 16 92 80", image: "/images/Medarbejder/Mark%20Dige.jpg" },
-  { name: "Bo Rasmussen", title: "Sales – Door & Window Industry", email: "br@nicholaisen.dk", phone: "+45 40 82 55 45", image: "/images/Medarbejder/Bo%20Rasmusen.png" },
-  { name: "Peter Haahr Larsen", title: "Sales – Door & Window Industry", email: "phrl@nicholaisen.dk", phone: "+45 40 96 47 11", image: "/images/Medarbejder/Peter%20Haahr.jpeg" },
-  { name: "Jørn Biehl", title: "Sales – Wood Drying", image: "/images/Medarbejder/J%C3%B8rn%20Biehl.jpeg" },
-  { name: "Claus Capion", title: "Sales – Automation", email: "cca@nicholaisen.dk", phone: "+45 40 88 00 61", image: "/images/Medarbejder/Claus%20Capion.jpeg" },
-  { name: "René Beldam", title: "Sales – NichoMachines", email: "rb@nicholaisen.dk", phone: "+45 24 59 03 50", image: "/images/Medarbejder/Ren%C3%A9%20Beldam.jpeg" },
+  { name: "Bo Bruun Holm", title: "Sales – Plate & Furniture Industry", email: "bbh@nicholaisen.dk", phone: "+45 40 54 47 64", image: "/images/Medarbejder/Bo Holm.jpeg" },
+  { name: "Mark Dige Høgh", title: "Sales – Plate & Furniture Industry", email: "mdh@nicholaisen.dk", phone: "+45 26 16 92 80", image: "/images/Medarbejder/Mark Dige.jpg" },
+  { name: "Bo Rasmussen", title: "Sales – Door & Window Industry", email: "br@nicholaisen.dk", phone: "+45 40 82 55 45", image: "/images/Medarbejder/Bo Rasmusen.png" },
+  { name: "Peter Haahr Larsen", title: "Sales – Door & Window Industry", email: "phrl@nicholaisen.dk", phone: "+45 40 96 47 11", image: "/images/Medarbejder/Peter Haahr.jpeg" },
+  { name: "Jørn Biehl", title: "Sales – Wood Drying", image: "/images/Medarbejder/Jørn Biehl.jpeg" },
+  { name: "Claus Capion", title: "Sales – Automation", email: "cca@nicholaisen.dk", phone: "+45 40 88 00 61", image: "/images/Medarbejder/Claus Capion.jpeg" },
+  { name: "René Beldam", title: "Sales – NichoMachines", email: "rb@nicholaisen.dk", phone: "+45 24 59 03 50", image: "/images/Medarbejder/René Beldam.jpeg" },
 ];
 
 const baltic: Person[] = [
-  { name: "Siim Türk", title: "Sales Manager", phone: "+372 5867 6119", image: "/images/Medarbejder/Siim%20T%C3%BCrk.jpg" },
-  { name: "Søren Jørgensen", title: "Business Development Manager", phone: "+372 509 6780", image: "/images/Medarbejder/S%C3%B8ren%20J%C3%B8rgensen.jpeg" },
-  { name: "John Tøttrup Christensen", title: "Sales", phone: "+372 510 9486", image: "/images/Medarbejder/John%20T%C3%B8ttrup%20Christensen.jpg" },
-  { name: "Andrejus Petrusovas", title: "Sales", phone: "+370 605 79720", image: "/images/Medarbejder/Andrejus%20Petrusovas.jpg" },
+  { name: "Siim Türk", title: "Sales Manager", phone: "+372 5867 6119", image: "/images/Medarbejder/Siim Türk.jpg" },
+  { name: "Søren Jørgensen", title: "Business Development Manager", phone: "+372 509 6780", image: "/images/Medarbejder/Søren Jørgensen.jpeg" },
+  { name: "John Tøttrup Christensen", title: "Sales", phone: "+372 510 9486", image: "/images/Medarbejder/John Tøttrup Christensen.jpg" },
+  { name: "Andrejus Petrusovas", title: "Sales", phone: "+370 605 79720", image: "/images/Medarbejder/Andrejus Petrusovas.jpg" },
 ];
 
 const sweden: Person[] = [
-  { name: "Erik Nord", title: "Sales", phone: "+46 72 70 17 300", image: "/images/Medarbejder/Erik%20Nord.jpg" },
+  { name: "Erik Nord", title: "Sales", phone: "+46 72 70 17 300", image: "/images/Medarbejder/Erik Nord.jpg" },
 ];
 
 
 const innovation: Person[] = [
-  { name: "Kenneth Bech Sørensen", title: "Project Manager – Data", email: "kbs@nicholaisen.dk", image: "/images/Medarbejder/Kenneth%20Bech%20S%C3%B8rensen.jpeg" },
-  { name: "Henrik Risgaard Lundfold", title: "Project Manager", email: "hrl@nicholaisen.dk", image: "/images/Medarbejder/Henrik%20Risgaard%20Lundfold.jpg" },
+  { name: "Kenneth Bech Sørensen", title: "Project Manager – Data", email: "kbs@nicholaisen.dk", image: "/images/Medarbejder/Kenneth Bech Sørensen.jpeg" },
+  { name: "Henrik Risgaard Lundfold", title: "Project Manager", email: "hrl@nicholaisen.dk", image: "/images/Medarbejder/Henrik Risgaard Lundfold.jpg" },
 ];
 
 const service: Person[] = [
-  { name: "Tobias Kjærgaard", title: "Service Manager", email: "tk@nicholaisen.dk", image: "/images/Medarbejder/Tobias%20Kj%C3%A6rgaard.jpeg" },
-  { name: "Lars Skaarup Petersen", title: "Spare Parts Manager", email: "lsp@nicholaisen.dk", image: "/images/Medarbejder/Lars%20Skaarup%20Petersen.jpeg" },
-  { name: "Søren Solhaug Madsen", title: "Consultant – Business Development", email: "ssm@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Solhaug%20Madsen.jpeg" },
-  { name: "Johnny B. Kristensen", title: "Service Technician", email: "jbk@nicholaisen.dk", image: "/images/Medarbejder/Johnny%20B.%20Kristensen.jpeg" },
-  { name: "Søren Baldtzar Rasmussen", title: "Service Technician", email: "sbr@nicholaisen.dk", image: "/images/Medarbejder/S%C3%B8ren%20Baldtzer%20Rasmussen.jpg" },
+  { name: "Tobias Kjærgaard", title: "Service Manager", email: "tk@nicholaisen.dk", image: "/images/Medarbejder/Tobias Kjærgaard.jpeg" },
+  { name: "Lars Skaarup Petersen", title: "Spare Parts Manager", email: "lsp@nicholaisen.dk", image: "/images/Medarbejder/Lars Skaarup Petersen.jpeg" },
+  { name: "Søren Solhaug Madsen", title: "Consultant – Business Development", email: "ssm@nicholaisen.dk", image: "/images/Medarbejder/Søren Solhaug Madsen.jpeg" },
+  { name: "Johnny B. Kristensen", title: "Service Technician", email: "jbk@nicholaisen.dk", image: "/images/Medarbejder/Johnny B. Kristensen.jpeg" },
+  { name: "Søren Baldtzar Rasmussen", title: "Service Technician", email: "sbr@nicholaisen.dk", image: "/images/Medarbejder/Søren Baldtzer Rasmussen.jpg" },
 ];
 
 const marketing: Person[] = [
-  { name: "Jacob Vedsø", title: "Communications & Marketing Manager", email: "jv@nicholaisen.dk", image: "/images/Medarbejder/Jacob%20Vedsø.jpg" },
-  { name: "Simone Jørgensen", title: "Marketing Coordinator", email: "simone@nicholaisen.dk", image: "/images/Medarbejder/Simone%20J%C3%B8rgensen.jpg" },
-  { name: "Dennis Harløv Madsen", title: "Market Manager – Telemarketing", email: "dhm@nicholaisen.dk", image: "/images/Medarbejder/Dennis%20Harl%C3%B8v%20Madsen.jpg" },
+  { name: "Jacob Vedsø", title: "Communications & Marketing Manager", email: "jv@nicholaisen.dk", image: "/images/Medarbejder/Jacob Vedsø.jpg" },
+  { name: "Simone Jørgensen", title: "Marketing Coordinator", email: "simone@nicholaisen.dk", image: "/images/Medarbejder/Simone Jørgensen.jpg" },
+  { name: "Dennis Harløv Madsen", title: "Market Manager – Telemarketing", email: "dhm@nicholaisen.dk", image: "/images/Medarbejder/Dennis Harløv Madsen.jpg" },
 ];
 
 const finance: Person[] = [
-  { name: "Ole Faurholt Rasmussen", title: "Accountant", email: "or@nicholaisen.dk", image: "/images/Medarbejder/Ole%20Faurholt%20Rasmussen.jpeg" },
-  { name: "Andreas Wrona", title: "Financial Controller", email: "aw@nicholaisen.dk", image: "/images/Medarbejder/Andreas%20Wrona.jpg" },
+  { name: "Ole Faurholt Rasmussen", title: "Accountant", email: "or@nicholaisen.dk", image: "/images/Medarbejder/Ole Faurholt Rasmussen.jpeg" },
+  { name: "Andreas Wrona", title: "Financial Controller", email: "aw@nicholaisen.dk", image: "/images/Medarbejder/Andreas Wrona.jpg" },
 ];
 
 function ContactRow({
