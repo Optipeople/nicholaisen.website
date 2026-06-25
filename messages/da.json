@@ -202,11 +202,10 @@
       "successLabel": "Tak",
       "optional": "valgfri",
       "interests": {
-        "ligna": "Ligna 2026 — forbooking af møde",
         "businessDevelopment": "Forretningsudvikling",
         "productionOptimization": "Produktionsoptimering",
         "projectSolutions": "Projektløsninger",
-        "digitalPerformance": "Digital Performance · Opti",
+        "digitalPerformance": "Digital Performance",
         "partnership": "Partnerskab",
         "other": "Noget andet"
       }

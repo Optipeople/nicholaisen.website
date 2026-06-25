@@ -202,11 +202,10 @@
       "successLabel": "Ačiū",
       "optional": "neprivaloma",
       "interests": {
-        "ligna": "Ligna 2026 — iš anksto rezervuoti susitikimą",
         "businessDevelopment": "Verslo plėtra",
         "productionOptimization": "Gamybos optimizavimas",
         "projectSolutions": "Projektų sprendimai",
-        "digitalPerformance": "Digital Performance · Opti",
+        "digitalPerformance": "Digital Performance",
         "partnership": "Partnerystė",
         "other": "Kažkas kita"
       }

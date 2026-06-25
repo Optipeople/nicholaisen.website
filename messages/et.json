@@ -202,11 +202,10 @@
       "successLabel": "Aitäh",
       "optional": "valikuline",
       "interests": {
-        "ligna": "Ligna 2026 — eelbroneeri kohtumine",
         "businessDevelopment": "Äri arendus",
         "productionOptimization": "Tootmise optimeerimine",
         "projectSolutions": "Projektilahendused",
-        "digitalPerformance": "Digital Performance · Opti",
+        "digitalPerformance": "Digital Performance",
         "partnership": "Partnerlus",
         "other": "Midagi muud"
       }

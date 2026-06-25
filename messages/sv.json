@@ -202,11 +202,10 @@
       "successLabel": "Tack",
       "optional": "valfritt",
       "interests": {
-        "ligna": "Ligna 2026 — förboka ett möte",
         "businessDevelopment": "Affärsutveckling",
         "productionOptimization": "Produktionsoptimering",
         "projectSolutions": "Projektlösningar",
-        "digitalPerformance": "Digital Performance · Opti",
+        "digitalPerformance": "Digital Performance",
         "partnership": "Partnerskap",
         "other": "Något annat"
       }

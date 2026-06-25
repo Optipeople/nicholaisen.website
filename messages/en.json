@@ -202,11 +202,10 @@
       "successLabel": "Thank you",
       "optional": "optional",
       "interests": {
-        "ligna": "Ligna 2026 — pre-book a meeting",
         "businessDevelopment": "Business Development",
         "productionOptimization": "Production Optimization",
         "projectSolutions": "Project Solutions",
-        "digitalPerformance": "Digital Performance · Opti",
+        "digitalPerformance": "Digital Performance",
         "partnership": "Partnership",
         "other": "Something else"
       }

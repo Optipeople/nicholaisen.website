@@ -202,11 +202,10 @@
       "successLabel": "Paldies",
       "optional": "neobligāts",
       "interests": {
-        "ligna": "Ligna 2026 — iepriekšrezervēt tikšanos",
         "businessDevelopment": "Biznesa attīstība",
         "productionOptimization": "Ražošanas optimizācija",
         "projectSolutions": "Projektu risinājumi",
-        "digitalPerformance": "Digital Performance · Opti",
+        "digitalPerformance": "Digital Performance",
         "partnership": "Partnerība",
         "other": "Kaut kas cits"
       }

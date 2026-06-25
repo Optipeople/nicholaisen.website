@@ -82,7 +82,6 @@ export function ContactForm() {
           <option value="" disabled>
             {t("interestDefault")}
           </option>
-          <option value="ligna-2026">{t("interests.ligna")}</option>
           <option value="business-development">{t("interests.businessDevelopment")}</option>
           <option value="production-optimization">{t("interests.productionOptimization")}</option>
           <option value="project-solutions">{t("interests.projectSolutions")}</option>
