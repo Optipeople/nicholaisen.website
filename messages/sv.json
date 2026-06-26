@@ -306,6 +306,7 @@
     "selectedCases": "Utvalda cases",
     "casesBeingPrepared": "Cases för detta uppdrag förbereds. Se under tiden allt vårt arbete.",
     "related": "Relaterat",
+    "whatCovers": "Vad {title} täcker.",
     "moreWithin": "Mer inom {title}."
   },
   "industries": {

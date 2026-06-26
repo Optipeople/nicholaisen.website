@@ -306,6 +306,7 @@
     "selectedCases": "Valitud projektid",
     "casesBeingPrepared": "Selle teenuse projektid on valmimas. Vahepeal vaadake kõiki meie töid.",
     "related": "Seotud",
+    "whatCovers": "Mida {title} hõlmab.",
     "moreWithin": "Rohkem {title} sees."
   },
   "industries": {

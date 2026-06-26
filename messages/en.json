@@ -306,6 +306,7 @@
     "selectedCases": "Selected cases",
     "casesBeingPrepared": "Cases for this service coming soon. In the meantime, see all our work.",
     "related": "Related",
+    "whatCovers": "What {title} covers.",
     "moreWithin": "More within {title}."
   },
   "industries": {

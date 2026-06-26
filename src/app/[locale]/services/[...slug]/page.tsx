@@ -180,7 +180,7 @@ export default async function ServicePage({
       {fm.capabilities && fm.capabilities.length > 0 ? (
         <CapabilityGrid
           id="capabilities"
-          title={`What ${fm.title} covers.`}
+          title={t("whatCovers", { title: fm.title })}
           items={fm.capabilities}
         />
       ) : null}

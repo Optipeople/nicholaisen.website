@@ -306,6 +306,7 @@
     "selectedCases": "Udvalgte cases",
     "casesBeingPrepared": "Cases for dette forløb er ved at blive klargjort. Se i mellemtiden alt vores arbejde.",
     "related": "Relateret",
+    "whatCovers": "Hvad {title} dækker.",
     "moreWithin": "Mere inden for {title}."
   },
   "industries": {
