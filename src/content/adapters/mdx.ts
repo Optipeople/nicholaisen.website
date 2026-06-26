@@ -57,14 +57,17 @@ function contentDir(type: string, locale = "en"): string {
 
 /** Merges locale-specific files with English fallback (locale wins on same slug). */
 async function mergedMdxFiles(type: string, locale: string): Promise<string[]> {
-  const enFiles = await listMdxFiles(path.join(CONTENT_ROOT, type));
+  const enRoot = path.join(CONTENT_ROOT, type);
+  const enFiles = await listMdxFiles(enRoot);
   if (locale === "en") return enFiles;
-  const localeFiles = await listMdxFiles(path.join(CONTENT_ROOT, locale, type));
+  const localeRoot = path.join(CONTENT_ROOT, locale, type);
+  const localeFiles = await listMdxFiles(localeRoot);
   if (localeFiles.length === 0) return enFiles;
-  // Build slug→path map: locale overrides English
+  // Use relative path as key so e.g. business-development.mdx and
+  // partnership/business-development.mdx don't clobber each other.
   const bySlug = new Map<string, string>();
-  for (const f of enFiles) bySlug.set(path.basename(f), f);
-  for (const f of localeFiles) bySlug.set(path.basename(f), f);
+  for (const f of enFiles) bySlug.set(path.relative(enRoot, f), f);
+  for (const f of localeFiles) bySlug.set(path.relative(localeRoot, f), f);
   return Array.from(bySlug.values());
 }
 

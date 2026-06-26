@@ -143,6 +143,7 @@ export default async function ServicePage({
       {fm.process && fm.process.length > 0 ? (
         <ProcessSteps
           id="how-it-works"
+          eyebrow={t("anchorHowItWorks")}
           title={t("howEngagementRuns", { title: fm.title.toLowerCase() })}
           steps={fm.process}
         />
@@ -180,6 +181,7 @@ export default async function ServicePage({
       {fm.capabilities && fm.capabilities.length > 0 ? (
         <CapabilityGrid
           id="capabilities"
+          eyebrow={t("anchorCapabilities")}
           title={t("whatCovers", { title: fm.title })}
           items={fm.capabilities}
         />
