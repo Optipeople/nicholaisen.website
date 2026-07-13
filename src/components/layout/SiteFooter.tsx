@@ -9,10 +9,13 @@ export async function SiteFooter({ locale }: { locale: string }) {
   const t = await getTranslations({ locale });
 
   const footerNav = {
-    [t("footer.sections.solutions")]: services.map((s) => ({
-      title: t(`nav.servicesMenu.${s.key}.title` as any),
-      href: s.href,
-    })),
+    [t("footer.sections.solutions")]: [
+      ...services.map((s) => ({
+        title: t(`nav.servicesMenu.${s.key}.title` as any),
+        href: s.href,
+      })),
+      { title: "Opticloud", href: "/opticloud" },
+    ],
     [t("footer.sections.industries")]: industries.map((i) => ({
       title: t(`nav.industriesMenu.${i.key}.title` as any),
       href: i.href,
