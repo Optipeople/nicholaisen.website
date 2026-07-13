@@ -14,100 +14,31 @@
       "link": "Avasta Opti"
     },
     "servicesMenu": {
-      "businessDevelopment": {
-        "title": "Äri arendus",
-        "description": "Määrake suund, planeerige investeeringuid ja looge kasvuplaan."
-      },
-      "framingWorkshops": {
-        "title": "Strateegiaseminarid",
-        "description": "Lepige kokku suund ja prioriteedid."
-      },
-      "investmentAdvisory": {
-        "title": "Investeerimisnõustamine",
-        "description": "Kindlustage ROI enne investeerimist."
-      },
-      "strategicRoadmapping": {
-        "title": "Strateegiline teekaart",
-        "description": "Planeerige võimsust ja kasvu."
-      },
-      "productionOptimization": {
-        "title": "Tootmise optimeerimine",
-        "description": "Läbilaskevõime, kvaliteet ja tööaeg — ilma kapitalkuludeta."
-      },
-      "flowOptimization": {
-        "title": "Voo optimeerimine",
-        "description": "Kõrvaldage kitsaskohad kiiresti."
-      },
-      "capacityImprovement": {
-        "title": "Võimsuse parandamine",
-        "description": "Suurendage toodangut ilma kapitalkuludeta."
-      },
-      "oeeEfficiency": {
-        "title": "OEE ja efektiivsus",
-        "description": "Vähendage raiskamist ja seisakuid."
-      },
-      "projectSolutions": {
-        "title": "Projektilahendused",
-        "description": "Ühest liinist tervikliku tehaseni."
-      },
-      "customProductionLines": {
-        "title": "Kohandatud tootmisliinid",
-        "description": "Ehitatud teie äri-eesmärkide jaoks."
-      },
-      "automationIntegration": {
-        "title": "Automatiseerimine ja integreerimine",
-        "description": "Ühendage ja laiendage tegevust."
-      },
-      "turnkeyProjects": {
-        "title": "Terviklahendused",
-        "description": "Ideest teostuseni."
-      },
-      "digitalPerformance": {
-        "title": "Digital Performance",
-        "description": "Opti — reaalajas ülevaade tootmispõrandalt."
-      },
-      "productionInsights": {
-        "title": "Tootmisülevaated",
-        "description": "Reaalajas jõudluse nähtavus."
-      },
-      "predictiveMaintenance": {
-        "title": "Ennustav hooldus",
-        "description": "Hoidke seisakuid ära enne nende tekkimist."
-      },
-      "continuousOptimization": {
-        "title": "Pidev optimeerimine",
-        "description": "Parandage jõudlust aja jooksul."
-      },
-      "partnership": {
-        "title": "Partnerlus",
-        "description": "Pikaajaline efektiivsuspartner."
-      },
-      "capacityPlanning": {
-        "title": "Võimsuse planeerimine",
-        "description": "Kooskõlastage strateegia ja investeeringud."
-      },
-      "collaboration": {
-        "title": "Koostöö",
-        "description": "Töötage ühiste eesmärkide nimel."
-      },
-      "partnershipBd": {
-        "title": "Äri arendus",
-        "description": "Tugevdage konkurentsivõimet."
-      }
+      "businessDevelopment": { "title": "Äri arendus", "description": "Määrake suund, planeerige investeeringuid ja looge kasvuplaan." },
+      "framingWorkshops": { "title": "Strateegiaseminarid", "description": "Lepige kokku suund ja prioriteedid." },
+      "investmentAdvisory": { "title": "Investeerimisnõustamine", "description": "Kindlustage ROI enne investeerimist." },
+      "strategicRoadmapping": { "title": "Strateegiline teekaart", "description": "Planeerige võimsust ja kasvu." },
+      "productionOptimization": { "title": "Tootmise optimeerimine", "description": "Läbilaskevõime, kvaliteet ja tööaeg — ilma kapitalkuludeta." },
+      "flowOptimization": { "title": "Voo optimeerimine", "description": "Kõrvaldage kitsaskohad kiiresti." },
+      "capacityImprovement": { "title": "Võimsuse parandamine", "description": "Suurendage toodangut ilma kapitalkuludeta." },
+      "oeeEfficiency": { "title": "OEE ja efektiivsus", "description": "Vähendage raiskamist ja seisakuid." },
+      "projectSolutions": { "title": "Projektilahendused", "description": "Ühest liinist tervikliku tehaseni." },
+      "customProductionLines": { "title": "Kohandatud tootmisliinid", "description": "Ehitatud teie äri-eesmärkide jaoks." },
+      "automationIntegration": { "title": "Automatiseerimine ja integreerimine", "description": "Ühendage ja laiendage tegevust." },
+      "turnkeyProjects": { "title": "Terviklahendused", "description": "Ideest teostuseni." },
+      "digitalPerformance": { "title": "Digital Performance", "description": "Opti — reaalajas ülevaade tootmispõrandalt." },
+      "productionInsights": { "title": "Tootmisülevaated", "description": "Reaalajas jõudluse nähtavus." },
+      "predictiveMaintenance": { "title": "Ennustav hooldus", "description": "Hoidke seisakuid ära enne nende tekkimist." },
+      "continuousOptimization": { "title": "Pidev optimeerimine", "description": "Parandage jõudlust aja jooksul." },
+      "partnership": { "title": "Partnerlus", "description": "Pikaajaline efektiivsuspartner." },
+      "capacityPlanning": { "title": "Võimsuse planeerimine", "description": "Kooskõlastage strateegia ja investeeringud." },
+      "collaboration": { "title": "Koostöö", "description": "Töötage ühiste eesmärkide nimel." },
+      "partnershipBd": { "title": "Äri arendus", "description": "Tugevdage konkurentsivõimet." }
     },
     "industriesMenu": {
-      "doorsWindows": {
-        "title": "Uksed ja aknad",
-        "description": "Täpsuspuusepatöö suures mahus."
-      },
-      "panelFurniture": {
-        "title": "Paneelid ja mööbel",
-        "description": "Plaatmaterjali läbilaskevõime ja viimistlus."
-      },
-      "solidWood": {
-        "title": "Massivpuit",
-        "description": "Kõvapuidu kuivatamisest koostamiseni."
-      }
+      "doorsWindows": { "title": "Uksed ja aknad", "description": "Täpsuspuusepatöö suures mahus." },
+      "panelFurniture": { "title": "Paneelid ja mööbel", "description": "Plaatmaterjali läbilaskevõime ja viimistlus." },
+      "solidWood": { "title": "Massivpuit", "description": "Kõvapuidu kuivatamisest koostamiseni." }
     }
   },
   "common": {
@@ -402,72 +333,6 @@
     "cookies": {
       "title": "Küpsiste poliitika",
       "description": "Kuidas Nicholaisen kasutab küpsiseid sellel veebisaidil."
-    }
-  },
-  "opticloud": {
-    "meta": {
-      "title": "Opticloud — Data & AI Platform for the Whole Factory",
-      "description": "Opticloud is the joint production platform from Nicholaisen and OptiPeople. Connect machines, orders, shifts and energy into one data layer — then act on it."
-    },
-    "hero": {
-      "eyebrow": "Opticloud · Production Platform",
-      "title": "See the whole factory. Not just one machine.",
-      "lede": "Opticloud is the shared data layer built by Nicholaisen and OptiPeople. It connects machines, orders, shifts, energy and operators — and turns that into decisions that move things.",
-      "cta": "Talk to us about Opticloud"
-    },
-    "diagram": {
-      "eyebrow": "The difference",
-      "title": "From machine case to factory platform.",
-      "modeMachine": "Machine case",
-      "modeFactory": "Factory platform",
-      "machineSub": "You see one machine. The value is priced as one machine.",
-      "factorySub": "You see the whole factory. The conversation changes.",
-      "labelSaw": "Panel saw",
-      "labelPanel": "Panel line",
-      "labelRouter": "CNC router",
-      "labelCnc": "Machining",
-      "labelOrders": "Orders",
-      "labelShifts": "Shifts",
-      "labelEnergy": "Energy",
-      "labelStops": "Stop causes"
-    },
-    "pipeline": {
-      "eyebrow": "Architecture",
-      "title": "From machine to management decision.",
-      "stage1Title": "Physical production",
-      "stage1Sub": "Machines, lines, operators",
-      "stage2Title": "Data capture",
-      "stage2Sub": "Controllers, tablets, sensors",
-      "stage3Title": "Opticloud",
-      "stage3Sub": "Orders, shifts, energy, context",
-      "stage4Title": "AI and analysis",
-      "stage4Sub": "Patterns, deviations, recommendations",
-      "stage5Title": "Management decision",
-      "stage5Sub": "Priorities, investments, improvements"
-    },
-    "personas": {
-      "eyebrow": "Who uses it",
-      "title": "Three problems it solves.",
-      "tab1": "Maintenance",
-      "tab2": "Quality and process",
-      "tab3": "Operations and investment",
-      "p1Problem": "Unplanned stoppages that are hard to predict and expensive to fix. Maintenance reacts rather than prevents.",
-      "p1Evidence": "60% reduction in unplanned stoppages within six months. Cost per stoppage is visible — so priority becomes automatic.",
-      "p2Problem": "Manual registrations, inconsistent quality and weak traceability across orders.",
-      "p2Evidence": "Defect rate halved when order context and process data were linked. Full traceability from machine to delivery note.",
-      "p3Problem": "Decisions based on gut feel. Capacity and energy investments made without evidence.",
-      "p3Evidence": "Energy cost per unit. Cost-to-produce per product family. A factual basis for the investments that actually move things.",
-      "problemLabel": "The problem",
-      "evidenceLabel": "What Opticloud delivers"
-    },
-    "partnership": {
-      "eyebrow": "Built together",
-      "title": "OptiPeople and Nicholaisen. Jointly owned. One data layer.",
-      "body": "Opticloud is not a third-party tool we bolted on. OptiPeople and Nicholaisen are jointly owned brands that built the platform together — so it speaks the same language as the rest of your factory.",
-      "body2": "That means integration without translation layers, support from people who know both the machine and the data side, and a roadmap shaped by real production environments."
-    },
-    "quote": {
-      "text": "The companies that win the next ten years will not be the ones with the most data — but the ones that learn from it."
     }
   }
 }
