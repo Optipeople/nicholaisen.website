@@ -55,7 +55,7 @@ export default async function OpticloudPage({
 
   const pipeline = [
     {
-      icon: "⚙",
+      icon: "⬡",
       title: t("pipeline.stage1Title"),
       sub: t("pipeline.stage1Sub"),
       hub: false,
