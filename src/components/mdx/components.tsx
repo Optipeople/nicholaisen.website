@@ -3,6 +3,113 @@ import Link from "next/link";
 import type { ImgHTMLAttributes } from "react";
 import { cn } from "@/lib/cn";
 
+function CompareBlock({
+  leftLabel,
+  leftTitle,
+  leftItems,
+  rightLabel,
+  rightTitle,
+  rightItems,
+  quote,
+}: {
+  leftLabel: string;
+  leftTitle: string;
+  leftItems: string;
+  rightLabel: string;
+  rightTitle: string;
+  rightItems: string;
+  quote?: string;
+}) {
+  const left = leftItems.split(";").map((s) => s.trim()).filter(Boolean);
+  const right = rightItems.split(";").map((s) => s.trim()).filter(Boolean);
+  return (
+    <div className="my-10 not-prose">
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div className="rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] p-6">
+          <p className="text-eyebrow text-[var(--color-ink-400)] mb-2">{leftLabel}</p>
+          <h4 className="text-base font-semibold text-[var(--color-ink-900)] mb-4">{leftTitle}</h4>
+          <ul className="space-y-2">
+            {left.map((item, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-[var(--color-ink-600)]">
+                <span className="mt-0.5 shrink-0 text-[var(--color-ink-400)]">—</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="rounded-xl bg-[var(--color-navy-900)] p-6">
+          <p className="text-eyebrow text-[var(--color-tan-300)] mb-2">{rightLabel}</p>
+          <h4 className="text-base font-semibold text-[var(--color-cream-50)] mb-4">{rightTitle}</h4>
+          <ul className="space-y-2">
+            {right.map((item, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-[var(--color-cream-50)]/80">
+                <span className="mt-0.5 shrink-0 text-[var(--color-tan-300)]">▸</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {quote ? (
+        <p className="mt-6 text-[1rem] italic text-center text-[var(--color-ink-700)] leading-relaxed">
+          &ldquo;{quote}&rdquo;
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+function DataPipeline({
+  s1Label, s1Title, s1Desc,
+  s2Label, s2Title, s2Desc,
+  s3Label, s3Title, s3Desc,
+  s4Label, s4Title, s4Desc,
+  s5Label, s5Title, s5Desc,
+}: {
+  s1Label: string; s1Title: string; s1Desc: string;
+  s2Label: string; s2Title: string; s2Desc: string;
+  s3Label: string; s3Title: string; s3Desc: string;
+  s4Label: string; s4Title: string; s4Desc: string;
+  s5Label: string; s5Title: string; s5Desc: string;
+}) {
+  const stages = [
+    { icon: "⬡", label: s1Label, title: s1Title, desc: s1Desc, hub: false },
+    { icon: "◱", label: s2Label, title: s2Title, desc: s2Desc, hub: false },
+    { icon: "◈", label: s3Label, title: s3Title, desc: s3Desc, hub: true },
+    { icon: "✺", label: s4Label, title: s4Title, desc: s4Desc, hub: false },
+    { icon: "◉", label: s5Label, title: s5Title, desc: s5Desc, hub: false },
+  ];
+  return (
+    <div className="my-10 not-prose">
+      <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
+        {stages.map((stage, i) => (
+          <div
+            key={i}
+            className={`flex flex-col items-center text-center p-4 rounded-xl ${
+              stage.hub
+                ? "bg-[var(--color-tan-500)]"
+                : "bg-[var(--color-paper-dark)]"
+            }`}
+          >
+            <p className={`text-eyebrow mb-2 ${stage.hub ? "text-white/70" : "text-[var(--color-ink-400)]"}`}>
+              {stage.label}
+            </p>
+            <div className={`text-2xl mb-2 ${stage.hub ? "text-white" : "text-[var(--color-navy-900)]"}`}>
+              {stage.icon}
+            </div>
+            <h4 className={`text-xs font-semibold mb-1 ${stage.hub ? "text-white" : "text-[var(--color-ink-900)]"}`}>
+              {stage.title}
+            </h4>
+            <p className={`text-xs leading-relaxed ${stage.hub ? "text-white/80" : "text-[var(--color-ink-500)]"}`}>
+              {stage.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export const mdxComponents = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
@@ -106,6 +213,8 @@ export const mdxComponents = {
   Figure,
   PullQuote,
   MetricRow,
+  CompareBlock,
+  DataPipeline,
 };
 
 function Callout({
