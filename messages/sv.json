@@ -14,31 +14,100 @@
       "link": "Utforska Opti"
     },
     "servicesMenu": {
-      "businessDevelopment": { "title": "Affärsutveckling", "description": "Lägg fast riktningen, prioritera investeringar och skapa tillväxt." },
-      "framingWorkshops": { "title": "Strategiworkshops", "description": "Lägg fast riktning och prioriteringar." },
-      "investmentAdvisory": { "title": "Investeringsrådgivning", "description": "Säkra ROI innan du investerar." },
-      "strategicRoadmapping": { "title": "Strategisk Roadmap", "description": "Planera kapacitet och tillväxt." },
-      "productionOptimization": { "title": "Produktionsoptimering", "description": "Genomflöde, kvalitet och drifttid — utan capex." },
-      "flowOptimization": { "title": "Flödesoptimering", "description": "Ta bort flaskhalsar snabbt." },
-      "capacityImprovement": { "title": "Kapacitetsförbättring", "description": "Öka output utan capex." },
-      "oeeEfficiency": { "title": "OEE & Effektivitet", "description": "Minska slöseri och stillestånd." },
-      "projectSolutions": { "title": "Projektlösningar", "description": "Från en enda linje till en komplett fabriksanläggning." },
-      "customProductionLines": { "title": "Skräddarsydda produktionslinjer", "description": "Byggda för dina affärsmål." },
-      "automationIntegration": { "title": "Automation & Integration", "description": "Koppla ihop och skala upp verksamheten." },
-      "turnkeyProjects": { "title": "Totallösningar", "description": "Från idé till genomförande." },
-      "digitalPerformance": { "title": "Digital Performance", "description": "Opti — realtidsinsikt från produktionsgolvet." },
-      "productionInsights": { "title": "Produktionsinsikter", "description": "Realtidsöverblick över prestanda." },
-      "predictiveMaintenance": { "title": "Prediktivt underhåll", "description": "Förebygg stillestånd innan det inträffar." },
-      "continuousOptimization": { "title": "Kontinuerlig optimering", "description": "Förbättra prestanda över tid." },
-      "partnership": { "title": "Partnerskap", "description": "En långsiktig effektivitetspartner." },
-      "capacityPlanning": { "title": "Kapacitetsplanering", "description": "Samordna strategi och investeringar." },
-      "collaboration": { "title": "Samarbete", "description": "Arbeta med gemensamma mål." },
-      "partnershipBd": { "title": "Affärsutveckling", "description": "Stärk konkurrenskraften." }
+      "businessDevelopment": {
+        "title": "Affärsutveckling",
+        "description": "Lägg fast riktningen, prioritera investeringar och skapa tillväxt."
+      },
+      "framingWorkshops": {
+        "title": "Strategiworkshops",
+        "description": "Lägg fast riktning och prioriteringar."
+      },
+      "investmentAdvisory": {
+        "title": "Investeringsrådgivning",
+        "description": "Säkra ROI innan du investerar."
+      },
+      "strategicRoadmapping": {
+        "title": "Strategisk Roadmap",
+        "description": "Planera kapacitet och tillväxt."
+      },
+      "productionOptimization": {
+        "title": "Produktionsoptimering",
+        "description": "Genomflöde, kvalitet och drifttid — utan capex."
+      },
+      "flowOptimization": {
+        "title": "Flödesoptimering",
+        "description": "Ta bort flaskhalsar snabbt."
+      },
+      "capacityImprovement": {
+        "title": "Kapacitetsförbättring",
+        "description": "Öka output utan capex."
+      },
+      "oeeEfficiency": {
+        "title": "OEE & Effektivitet",
+        "description": "Minska slöseri och stillestånd."
+      },
+      "projectSolutions": {
+        "title": "Projektlösningar",
+        "description": "Från en enda linje till en komplett fabriksanläggning."
+      },
+      "customProductionLines": {
+        "title": "Skräddarsydda produktionslinjer",
+        "description": "Byggda för dina affärsmål."
+      },
+      "automationIntegration": {
+        "title": "Automation & Integration",
+        "description": "Koppla ihop och skala upp verksamheten."
+      },
+      "turnkeyProjects": {
+        "title": "Totallösningar",
+        "description": "Från idé till genomförande."
+      },
+      "digitalPerformance": {
+        "title": "Digital Performance",
+        "description": "Opti — realtidsinsikt från produktionsgolvet."
+      },
+      "productionInsights": {
+        "title": "Produktionsinsikter",
+        "description": "Realtidsöverblick över prestanda."
+      },
+      "predictiveMaintenance": {
+        "title": "Prediktivt underhåll",
+        "description": "Förebygg stillestånd innan det inträffar."
+      },
+      "continuousOptimization": {
+        "title": "Kontinuerlig optimering",
+        "description": "Förbättra prestanda över tid."
+      },
+      "partnership": {
+        "title": "Partnerskap",
+        "description": "En långsiktig effektivitetspartner."
+      },
+      "capacityPlanning": {
+        "title": "Kapacitetsplanering",
+        "description": "Samordna strategi och investeringar."
+      },
+      "collaboration": {
+        "title": "Samarbete",
+        "description": "Arbeta med gemensamma mål."
+      },
+      "partnershipBd": {
+        "title": "Affärsutveckling",
+        "description": "Stärk konkurrenskraften."
+      }
     },
     "industriesMenu": {
-      "doorsWindows": { "title": "Dörrar & Fönster", "description": "Precisionssnickerier i stor skala." },
-      "panelFurniture": { "title": "Skivor & Möbler", "description": "Genomflöde och finish för skivmaterial." },
-      "solidWood": { "title": "Massivträ", "description": "Från torkning av hårdträ till montering." }
+      "doorsWindows": {
+        "title": "Dörrar & Fönster",
+        "description": "Precisionssnickerier i stor skala."
+      },
+      "panelFurniture": {
+        "title": "Skivor & Möbler",
+        "description": "Genomflöde och finish för skivmaterial."
+      },
+      "solidWood": {
+        "title": "Massivträ",
+        "description": "Från torkning av hårdträ till montering."
+      }
     }
   },
   "common": {
@@ -333,6 +402,72 @@
     "cookies": {
       "title": "Cookiepolicy",
       "description": "Hur Nicholaisen använder cookies på denna webbplats."
+    }
+  },
+  "opticloud": {
+    "meta": {
+      "title": "Opticloud — Data & AI Platform for the Whole Factory",
+      "description": "Opticloud is the joint production platform from Nicholaisen and OptiPeople. Connect machines, orders, shifts and energy into one data layer — then act on it."
+    },
+    "hero": {
+      "eyebrow": "Opticloud · Production Platform",
+      "title": "See the whole factory. Not just one machine.",
+      "lede": "Opticloud is the shared data layer built by Nicholaisen and OptiPeople. It connects machines, orders, shifts, energy and operators — and turns that into decisions that move things.",
+      "cta": "Talk to us about Opticloud"
+    },
+    "diagram": {
+      "eyebrow": "The difference",
+      "title": "From machine case to factory platform.",
+      "modeMachine": "Machine case",
+      "modeFactory": "Factory platform",
+      "machineSub": "You see one machine. The value is priced as one machine.",
+      "factorySub": "You see the whole factory. The conversation changes.",
+      "labelSaw": "Panel saw",
+      "labelPanel": "Panel line",
+      "labelRouter": "CNC router",
+      "labelCnc": "Machining",
+      "labelOrders": "Orders",
+      "labelShifts": "Shifts",
+      "labelEnergy": "Energy",
+      "labelStops": "Stop causes"
+    },
+    "pipeline": {
+      "eyebrow": "Architecture",
+      "title": "From machine to management decision.",
+      "stage1Title": "Physical production",
+      "stage1Sub": "Machines, lines, operators",
+      "stage2Title": "Data capture",
+      "stage2Sub": "Controllers, tablets, sensors",
+      "stage3Title": "Opticloud",
+      "stage3Sub": "Orders, shifts, energy, context",
+      "stage4Title": "AI and analysis",
+      "stage4Sub": "Patterns, deviations, recommendations",
+      "stage5Title": "Management decision",
+      "stage5Sub": "Priorities, investments, improvements"
+    },
+    "personas": {
+      "eyebrow": "Who uses it",
+      "title": "Three problems it solves.",
+      "tab1": "Maintenance",
+      "tab2": "Quality and process",
+      "tab3": "Operations and investment",
+      "p1Problem": "Unplanned stoppages that are hard to predict and expensive to fix. Maintenance reacts rather than prevents.",
+      "p1Evidence": "60% reduction in unplanned stoppages within six months. Cost per stoppage is visible — so priority becomes automatic.",
+      "p2Problem": "Manual registrations, inconsistent quality and weak traceability across orders.",
+      "p2Evidence": "Defect rate halved when order context and process data were linked. Full traceability from machine to delivery note.",
+      "p3Problem": "Decisions based on gut feel. Capacity and energy investments made without evidence.",
+      "p3Evidence": "Energy cost per unit. Cost-to-produce per product family. A factual basis for the investments that actually move things.",
+      "problemLabel": "The problem",
+      "evidenceLabel": "What Opticloud delivers"
+    },
+    "partnership": {
+      "eyebrow": "Built together",
+      "title": "OptiPeople and Nicholaisen. Jointly owned. One data layer.",
+      "body": "Opticloud is not a third-party tool we bolted on. OptiPeople and Nicholaisen are jointly owned brands that built the platform together — so it speaks the same language as the rest of your factory.",
+      "body2": "That means integration without translation layers, support from people who know both the machine and the data side, and a roadmap shaped by real production environments."
+    },
+    "quote": {
+      "text": "The companies that win the next ten years will not be the ones with the most data — but the ones that learn from it."
     }
   }
 }
