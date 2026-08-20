@@ -202,11 +202,9 @@
       "successLabel": "Tak",
       "optional": "valgfri",
       "interests": {
-        "businessDevelopment": "Forretningsudvikling",
-        "productionOptimization": "Produktionsoptimering",
-        "projectSolutions": "Projektløsninger",
-        "digitalPerformance": "Digital Performance",
-        "partnership": "Partnerskab",
+        "solidWood": "Massivtræ",
+        "panelFurniture": "Plade og møbler",
+        "doorsWindows": "Døre og vinduer",
         "other": "Noget andet"
       }
     },

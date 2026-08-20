@@ -82,11 +82,9 @@ export function ContactForm() {
           <option value="" disabled>
             {t("interestDefault")}
           </option>
-          <option value="business-development">{t("interests.businessDevelopment")}</option>
-          <option value="production-optimization">{t("interests.productionOptimization")}</option>
-          <option value="project-solutions">{t("interests.projectSolutions")}</option>
-          <option value="digital-performance">{t("interests.digitalPerformance")}</option>
-          <option value="partnership">{t("interests.partnership")}</option>
+          <option value="solid-wood">{t("interests.solidWood")}</option>
+          <option value="panel-furniture">{t("interests.panelFurniture")}</option>
+          <option value="doors-windows">{t("interests.doorsWindows")}</option>
           <option value="other">{t("interests.other")}</option>
         </select>
       </div>

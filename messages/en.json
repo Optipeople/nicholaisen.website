@@ -202,11 +202,9 @@
       "successLabel": "Thank you",
       "optional": "optional",
       "interests": {
-        "businessDevelopment": "Business Development",
-        "productionOptimization": "Production Optimization",
-        "projectSolutions": "Project Solutions",
-        "digitalPerformance": "Digital Performance",
-        "partnership": "Partnership",
+        "solidWood": "Solid Wood",
+        "panelFurniture": "Panel and Furniture",
+        "doorsWindows": "Doors and Windows",
         "other": "Something else"
       }
     },
