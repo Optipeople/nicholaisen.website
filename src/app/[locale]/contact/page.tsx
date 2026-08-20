@@ -199,7 +199,6 @@ const sweden: Person[] = [
 
 const innovation: Person[] = [
   { name: "Kenneth Bech Sørensen", title: "Project Manager – Data", email: "kbs@nicholaisen.dk", image: "/images/Medarbejder/Kenneth Bech Sørensen.jpeg" },
-  { name: "Henrik Risgaard Lundfold", title: "Project Manager", email: "hrl@nicholaisen.dk", image: "/images/Medarbejder/Henrik Risgaard Lundfold.jpg" },
 ];
 
 const service: Person[] = [
