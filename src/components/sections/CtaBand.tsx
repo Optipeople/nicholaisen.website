@@ -42,7 +42,7 @@ export async function CtaBand({
     <section
       id={id}
       style={{
-        background: "linear-gradient(160deg, var(--color-accent) 0%, var(--color-accent-900) 100%)",
+        background: "linear-gradient(160deg, var(--color-navy-900) 0%, #001e30 100%)",
         color: "#fff",
         padding: "72px clamp(20px, 5vw, 64px) 72px",
       }}
@@ -65,7 +65,7 @@ export async function CtaBand({
               fontWeight: 600,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
-              color: "var(--color-accent-300)",
+              color: "var(--color-navy-300)",
               marginBottom: "16px",
             }}
           >
@@ -88,7 +88,7 @@ export async function CtaBand({
               fontSize: "18px",
               lineHeight: 1.6,
               margin: 0,
-              color: "var(--color-accent-300)",
+              color: "var(--color-navy-300)",
               maxWidth: "56ch",
             }}
           >
@@ -111,7 +111,7 @@ export async function CtaBand({
               alignItems: "center",
               padding: "14px 26px",
               background: "#fff",
-              color: "var(--color-accent)",
+              color: "var(--color-navy-900)",
               borderRadius: "4px",
               fontSize: "17px",
               fontWeight: 500,

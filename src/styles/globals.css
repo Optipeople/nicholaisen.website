@@ -1,40 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  /* Core palette */
-  --color-bg: #f3f2f2;
-  --color-surface: #eae9e9;
-  --color-text: #201e1d;
-  --color-accent: #ec3013;
-  --color-accent-2: #e15b47;
-  --color-divider: color-mix(in srgb, #201e1d 40%, transparent);
+  /* ── Brand palette (Brand Book & Visual Identity) ── */
 
-  /* Neutral ramp */
-  --color-neutral-100: #f8f4f4;
-  --color-neutral-200: #eae7e7;
-  --color-neutral-300: #d7d3d3;
-  --color-neutral-400: #bab6b6;
-  --color-neutral-500: #9b9797;
-  --color-neutral-600: #7d7979;
-  --color-neutral-700: #605d5d;
-  --color-neutral-800: #444141;
-  --color-neutral-900: #2d2b2b;
+  /* Backgrounds & surfaces */
+  --color-bg: #eeeae1;          /* Off White */
+  --color-surface: #dcd5c2;     /* Warm Tan */
+  --color-surface-2: #f5f3ee;   /* Lighter off-white for cards on tan bg */
 
-  /* Accent ramp */
-  --color-accent-100: #fff2ef;
-  --color-accent-200: #ffe0d9;
-  --color-accent-300: #ffc4b8;
-  --color-accent-400: #ff9783;
-  --color-accent-500: #ff563c;
-  --color-accent-600: #dd2b0f;
-  --color-accent-700: #ae1800;
-  --color-accent-800: #7c1405;
-  --color-accent-900: #4d170e;
+  /* Text */
+  --color-text: #003050;        /* Deep Navy */
+  --color-text-muted: #436384;  /* Steel Blue */
+  --color-divider: color-mix(in srgb, #003050 20%, transparent);
 
-  /* Typography */
-  --font-sans: var(--font-archivo), "Archivo", system-ui, sans-serif;
-  --font-display: var(--font-archivo), "Archivo", system-ui, sans-serif;
-  --font-heading-weight: 800;
+  /* Navy ramp (PRIMARY) */
+  --color-navy-900: #003050;    /* Deep Navy */
+  --color-navy-700: #436384;    /* Steel Blue */
+  --color-navy-500: #7997b4;    /* Mid Blue */
+  --color-navy-300: #beccda;    /* Light Blue */
+  --color-navy-100: #e8eff5;    /* Very light blue */
+
+  /* Accent — Orange (SPOT color per brand book) */
+  --color-accent: #c0601a;      /* Orange */
+  --color-accent-900: #5c2e0a;
+  --color-accent-700: #8c4712;
+  --color-accent-500: #c0601a;
+  --color-accent-300: #e8a06a;
+  --color-accent-200: #f2c8a0;
+  --color-accent-100: #faf0e6;
+
+  /* Warm neutrals */
+  --color-tan: #dcd5c2;
+  --color-tan-dark: #c8bfa8;
+  --color-offwhite: #eeeae1;
+  --color-white: #ffffff;
+
+  /* Typography — Inter (brand typeface) */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-heading-weight: 700;
 
   /* Spacing */
   --space-1: 4px;
@@ -44,7 +48,7 @@
   --space-6: 24px;
   --space-8: 32px;
 
-  /* Radius — sharp */
+  /* Radius — sharp per design */
   --radius-xs: 0px;
   --radius-sm: 0px;
   --radius-md: 0px;
@@ -52,9 +56,9 @@
   --radius-xl: 4px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px color-mix(in srgb, #2d2b2b 14%, transparent);
-  --shadow-md: 0 3px 10px color-mix(in srgb, #2d2b2b 16%, transparent);
-  --shadow-lg: 0 12px 32px color-mix(in srgb, #2d2b2b 22%, transparent);
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #003050 10%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #003050 12%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #003050 18%, transparent);
   --shadow-card: var(--shadow-md);
   --shadow-lift: var(--shadow-lg);
 
@@ -63,22 +67,19 @@
   --container-default: 82.5rem;
   --container-wide: 90rem;
 
-  /* Legacy aliases used in existing components */
-  --color-navy-950: #0a1a2e;
-  --color-navy-900: #1a1816;
-  --color-navy-700: #2d2b2b;
-  --color-navy-500: #605d5d;
-  --color-slate-500: #9b9797;
-  --color-tan-500: #ec3013;
-  --color-tan-300: #ffc4b8;
-  --color-beige-200: #ffe0d9;
-  --color-cream-50: #f3f2f2;
-  --color-paper: #eae9e9;
-  --color-paper-dark: #d7d3d3;
-  --color-ink-900: #201e1d;
-  --color-ink-700: #2d2b2b;
-  --color-ink-500: #605d5d;
-  --color-ink-300: #bab6b6;
+  /* Legacy aliases for existing components */
+  --color-navy-950: #001e30;
+  --color-slate-500: #7997b4;
+  --color-tan-500: #c0601a;
+  --color-tan-300: #e8a06a;
+  --color-beige-200: #f2c8a0;
+  --color-cream-50: #eeeae1;
+  --color-paper: #dcd5c2;
+  --color-paper-dark: #c8bfa8;
+  --color-ink-900: #003050;
+  --color-ink-700: #436384;
+  --color-ink-500: #7997b4;
+  --color-ink-300: #beccda;
 }
 
 @layer base {
@@ -96,22 +97,21 @@
   body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: var(--font-sans);
+    font-family: var(--font-inter), "Inter", system-ui, sans-serif;
     font-size: 15px;
     line-height: 1.55;
   }
 
   ::selection {
-    background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+    background-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    font-weight: 800;
+    font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+    font-weight: 700;
     line-height: 1.12;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
     margin: 0 0 var(--space-2);
-    color: var(--color-text);
   }
 
   h1 { font-size: clamp(2rem, 4vw, 2.625rem); }
@@ -143,21 +143,21 @@
     font-size: clamp(2.5rem, 5.4vw, 4.75rem);
     line-height: 1.08;
     letter-spacing: -0.025em;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .text-display-2 {
     font-size: clamp(2.125rem, 4vw, 3.5rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .text-display-3 {
     font-size: clamp(1.875rem, 3.4vw, 2.875rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .text-lede {
@@ -170,13 +170,33 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--color-accent-500);
+    color: var(--color-accent);
   }
 
   .divider-hairline {
     height: 2px;
     background: var(--color-divider);
   }
+}
+
+/* SiteHeader responsive layout */
+.site-header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+  display: flex;
+  height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.site-header-nav { display: none; }
+.site-header-desktop { display: none; }
+.site-header-mobile { display: flex; }
+@media (min-width: 1024px) {
+  .site-header-nav { display: flex; flex: 1; justify-content: center; }
+  .site-header-desktop { display: flex; align-items: center; gap: 16px; }
+  .site-header-mobile { display: none; }
 }
 
 @keyframes fadeUp {

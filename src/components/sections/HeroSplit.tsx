@@ -12,6 +12,8 @@ export async function HeroSplit() {
         display: "flex",
         alignItems: "flex-end",
         color: "#fff",
+        overflow: "hidden",
+        background: "var(--color-accent)",
       }}
     >
       <Image
@@ -95,11 +97,11 @@ export async function HeroSplit() {
               display: "inline-flex",
               alignItems: "center",
               padding: "14px 26px",
-              background: "#fff",
-              color: "var(--color-accent)",
+              background: "var(--color-offwhite)",
+              color: "var(--color-navy-900)",
               borderRadius: "4px",
               fontSize: "17px",
-              fontWeight: 500,
+              fontWeight: 600,
               textDecoration: "none",
             }}
           >

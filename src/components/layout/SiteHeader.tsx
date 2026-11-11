@@ -13,25 +13,14 @@ export async function SiteHeader({ locale }: { locale: string }) {
         position: "sticky",
         top: 0,
         zIndex: 40,
-        background: "#fff",
-        borderBottom: "2px solid var(--color-divider)",
+        background: "var(--color-offwhite)",
+        borderBottom: "1px solid var(--color-divider)",
       }}
     >
-      <div
-        style={{
-          maxWidth: "1320px",
-          margin: "0 auto",
-          padding: "0 clamp(20px, 5vw, 64px)",
-          display: "flex",
-          height: "64px",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "24px",
-        }}
-      >
+      <div className="site-header-inner">
         <Link
           href="/"
-          style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}
+          style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", flexShrink: 0 }}
           aria-label="Nicholaisen — Home"
         >
           <Image
@@ -44,8 +33,8 @@ export async function SiteHeader({ locale }: { locale: string }) {
           />
           <span
             style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 800,
+              fontFamily: "var(--font-inter), Inter, system-ui, sans-serif",
+              fontWeight: 700,
               fontSize: "18px",
               color: "var(--color-text)",
               letterSpacing: "-0.015em",
@@ -55,11 +44,11 @@ export async function SiteHeader({ locale }: { locale: string }) {
           </span>
         </Link>
 
-        <div className="hidden lg:flex" style={{ flex: 1, justifyContent: "center" }}>
+        <div className="site-header-nav">
           <MegaNav />
         </div>
 
-        <div className="hidden lg:flex" style={{ alignItems: "center", gap: "16px" }}>
+        <div className="site-header-desktop">
           <LocaleSwitcher />
           <Link
             href="/contact"
@@ -73,13 +62,14 @@ export async function SiteHeader({ locale }: { locale: string }) {
               fontSize: "15px",
               fontWeight: 500,
               textDecoration: "none",
+              whiteSpace: "nowrap",
             }}
           >
             {t("cta")}
           </Link>
         </div>
 
-        <div className="lg:hidden">
+        <div className="site-header-mobile">
           <MobileNav />
         </div>
       </div>
