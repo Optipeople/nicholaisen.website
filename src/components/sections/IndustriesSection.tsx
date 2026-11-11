@@ -74,7 +74,7 @@ export function IndustriesSection() {
         </div>
         <Link
           href="/industries"
-          style={{ fontSize: "16px", fontWeight: 500, color: "var(--color-accent)", textDecoration: "none" }}
+          style={{ fontSize: "16px", fontWeight: 500, color: "var(--color-spot)", textDecoration: "none" }}
         >
           All industries →
         </Link>

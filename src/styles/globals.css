@@ -3,15 +3,15 @@
 @theme {
   /* ── Brand palette (Brand Book & Visual Identity) ── */
 
-  /* Backgrounds & surfaces */
-  --color-bg: #eeeae1;          /* Off White */
-  --color-surface: #dcd5c2;     /* Warm Tan */
-  --color-surface-2: #f5f3ee;   /* Lighter off-white for cards on tan bg */
+  /* Backgrounds & surfaces (matches bundle) */
+  --color-bg: #ffffff;          /* White — base page background */
+  --color-surface: #EEEAE1;     /* Off White — card/section surface */
+  --color-surface-2: #DCD5C2;   /* Warm Tan — deeper surface */
 
   /* Text */
   --color-text: #003050;        /* Deep Navy */
   --color-text-muted: #436384;  /* Steel Blue */
-  --color-divider: color-mix(in srgb, #003050 20%, transparent);
+  --color-divider: #BECCDA;
 
   /* Navy ramp (PRIMARY) */
   --color-navy-900: #003050;    /* Deep Navy */
@@ -20,21 +20,21 @@
   --color-navy-300: #beccda;    /* Light Blue */
   --color-navy-100: #e8eff5;    /* Very light blue */
 
-  /* Accent — Orange (SPOT color per brand book) */
-  --color-accent: #c0601a;      /* Orange — CTAs and spot highlights */
-  --color-accent-900: #5c2e0a;  /* Very dark orange */
-  --color-accent-700: #8c4712;  /* Dark orange */
-  --color-accent-600: #a35316;  /* Hover orange (darker) */
-
-  /* Steel blue tones — used for muted text and borders (matches bundle var(--color-accent-N) usage) */
+  /* Accent ramp — Navy (PRIMARY, matches bundle var(--color-accent)) */
+  --color-accent: #003050;      /* Deep Navy — primary accent */
+  --color-accent-900: #001a2c;
+  --color-accent-800: #00253e;
+  --color-accent-700: #003050;  /* Deep Navy */
+  --color-accent-600: #1f4868;
   --color-accent-500: #436384;  /* Steel Blue — muted secondary text */
-  --color-accent-400: #7997b4;  /* Mid blue — light borders, dividers */
-  --color-accent-300: #beccda;  /* Light blue — form borders, subtle dividers */
-  --color-accent-200: #dce5ed;  /* Very light blue — card backgrounds */
-  --color-accent-100: #f0f4f7;  /* Near white — hover backgrounds */
+  --color-accent-400: #7997b4;  /* Mid blue — light borders */
+  --color-accent-300: #beccda;  /* Light blue — form borders */
+  --color-accent-200: #dde5ec;  /* Very light blue — card backgrounds */
+  --color-accent-100: #eef2f6;  /* Near white — hover backgrounds */
 
-  /* Spot alias for orange (matches bundle's var(--color-spot)) */
+  /* Spot — Orange CTA color (matches bundle's var(--color-spot)) */
   --color-spot: #c0601a;
+  --color-spot-hover: #a35316;
 
   /* Warm neutrals */
   --color-tan: #dcd5c2;
@@ -45,7 +45,7 @@
   /* Typography — Inter (brand typeface) */
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Inter", system-ui, sans-serif;
-  --font-heading-weight: 700;
+  --font-heading-weight: 400;
 
   /* Spacing */
   --space-1: 4px;

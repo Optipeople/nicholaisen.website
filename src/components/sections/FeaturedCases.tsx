@@ -107,7 +107,7 @@ export function FeaturedCases() {
         </div>
         <Link
           href="/cases"
-          style={{ fontSize: "16px", fontWeight: 500, color: "var(--color-accent)", textDecoration: "none" }}
+          style={{ fontSize: "16px", fontWeight: 500, color: "var(--color-spot)", textDecoration: "none" }}
         >
           All cases →
         </Link>

@@ -93,7 +93,7 @@ export function ScaleTiles() {
               fontSize: "clamp(56px,6vw,88px)",
               lineHeight: 1,
               letterSpacing: "-0.04em",
-              color: "var(--color-accent)",
+              color: "var(--color-spot)",
               fontVariantNumeric: "tabular-nums",
             }}
           >
@@ -172,7 +172,7 @@ export function ScaleTiles() {
                   style={{
                     alignSelf: "flex-start",
                     padding: "10px 18px",
-                    background: "var(--color-accent)",
+                    background: "var(--color-spot)",
                     color: "#fff",
                     borderRadius: "4px",
                     fontSize: "14px",

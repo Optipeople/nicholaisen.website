@@ -310,7 +310,7 @@ export default async function ContactPage({
                 type="submit"
                 style={{
                   padding: "14px 24px",
-                  background: "var(--color-accent)",
+                  background: "var(--color-spot)",
                   color: "#fff",
                   border: "none",
                   borderRadius: "6px",
@@ -410,13 +410,13 @@ export default async function ContactPage({
                       flex: "0 0 44px",
                       height: "44px",
                       borderRadius: "50%",
-                      border: "2px solid var(--color-accent)",
+                      border: "2px solid var(--color-spot)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       fontSize: "13px",
                       fontWeight: 700,
-                      color: "var(--color-accent)",
+                      color: "var(--color-spot)",
                       letterSpacing: "0.04em",
                     }}
                   >

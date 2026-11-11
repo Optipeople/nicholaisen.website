@@ -125,7 +125,7 @@ export default async function AboutPage({
                 display: "inline-flex",
                 alignItems: "center",
                 padding: "13px 22px",
-                background: "var(--color-accent)",
+                background: "var(--color-spot)",
                 color: "#fff",
                 borderRadius: "4px",
                 fontSize: "16px",
@@ -242,7 +242,7 @@ export default async function AboutPage({
                 display: "inline-flex",
                 alignItems: "center",
                 padding: "13px 22px",
-                background: "var(--color-accent)",
+                background: "var(--color-spot)",
                 color: "#fff",
                 borderRadius: "4px",
                 fontSize: "16px",
@@ -289,7 +289,7 @@ export default async function AboutPage({
                   fontSize: "clamp(40px,4vw,56px)",
                   lineHeight: 1,
                   letterSpacing: "-0.04em",
-                  color: "var(--color-accent)",
+                  color: "var(--color-spot)",
                   fontVariantNumeric: "tabular-nums",
                 }}
               >
@@ -352,7 +352,7 @@ export default async function AboutPage({
                 flexDirection: "column",
                 gap: "10px",
                 paddingTop: "20px",
-                borderTop: `2px solid ${co.hq ? "var(--color-accent)" : "var(--color-accent-300)"}`,
+                borderTop: `2px solid ${co.hq ? "var(--color-spot)" : "var(--color-accent-300)"}`,
               }}
             >
               <span
@@ -376,7 +376,7 @@ export default async function AboutPage({
                       letterSpacing: "0.08em",
                       padding: "3px 8px",
                       borderRadius: "3px",
-                      background: "var(--color-accent)",
+                      background: "var(--color-spot)",
                       color: "#fff",
                     }}
                   >
@@ -463,7 +463,7 @@ export default async function AboutPage({
                 alignSelf: "flex-start",
                 marginTop: "8px",
                 padding: "13px 22px",
-                background: "var(--color-accent)",
+                background: "var(--color-spot)",
                 color: "#fff",
                 borderRadius: "4px",
                 fontSize: "16px",

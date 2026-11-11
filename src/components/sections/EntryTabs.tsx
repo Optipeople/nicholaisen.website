@@ -69,7 +69,7 @@ export function EntryTabs() {
                 fontSize: "17px",
                 fontWeight: tab === key ? 500 : 400,
                 color: tab === key ? "var(--color-text)" : "var(--color-accent-500)",
-                borderBottom: `3px solid ${tab === key ? "var(--color-accent)" : "transparent"}`,
+                borderBottom: `3px solid ${tab === key ? "var(--color-spot)" : "transparent"}`,
                 padding: "20px 14px 17px",
                 marginBottom: "-1px",
               }}

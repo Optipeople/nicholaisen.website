@@ -13,7 +13,7 @@ export async function HeroSplit() {
         alignItems: "flex-end",
         color: "#fff",
         overflow: "hidden",
-        background: "var(--color-accent)",
+        background: "var(--color-spot)",
       }}
     >
       <Image
@@ -60,7 +60,7 @@ export async function HeroSplit() {
           }}
         >
           <span
-            style={{ width: "28px", height: "2px", background: "var(--color-accent)", display: "block" }}
+            style={{ width: "28px", height: "2px", background: "var(--color-spot)", display: "block" }}
           />
           {t("eyebrow")}
         </span>

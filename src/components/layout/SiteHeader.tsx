@@ -56,7 +56,7 @@ export async function SiteHeader({ locale }: { locale: string }) {
               display: "inline-flex",
               alignItems: "center",
               padding: "10px 22px",
-              background: "var(--color-accent)",
+              background: "var(--color-spot)",
               color: "#fff",
               borderRadius: "4px",
               fontSize: "15px",
