@@ -17,7 +17,7 @@ export async function HeroSplit() {
       }}
     >
       <Image
-        src="/images/hero-workshop.jpg"
+        src="/images/02795d5e-8c61-4cb2-a658-ea128715c541.png"
         alt="Wood, furniture, windows and aluminium profiles in production"
         fill
         priority
