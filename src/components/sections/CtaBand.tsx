@@ -1,8 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
-import { LinkButton } from "@/components/ui/Button";
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 
 type CtaBandProps = {
   id?: string;
@@ -41,56 +38,107 @@ export async function CtaBand({
     href: "/services",
   };
 
-  const isNavy = tone === "navy";
   return (
-    <Section id={id} tone={isNavy ? "navy" : "beige"} size="md">
-      <Container>
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
-          <div>
-            <Eyebrow className={isNavy ? "text-[var(--color-tan-300)]" : undefined}>
-              {resolvedEyebrow}
-            </Eyebrow>
-            <h2
-              className={`mt-5 text-display-2 text-balance ${
-                isNavy ? "text-[var(--color-cream-50)]" : "text-[var(--color-ink-900)]"
-              }`}
-            >
-              {resolvedTitle}
-            </h2>
-            <p
-              className={`mt-6 max-w-2xl text-lede ${
-                isNavy ? "text-[var(--color-cream-50)]/80" : "text-[var(--color-ink-700)]"
-              }`}
-            >
-              {resolvedBody}
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3 lg:justify-end">
-            <LinkButton
-              href={resolvedPrimary.href}
-              variant={isNavy ? "inverse" : "primary"}
-              size="lg"
-              withArrow
-            >
-              {resolvedPrimary.label}
-            </LinkButton>
-            {resolvedSecondary ? (
-              <LinkButton
-                href={resolvedSecondary.href}
-                variant={isNavy ? "ghost" : "secondary"}
-                size="lg"
-                className={
-                  isNavy
-                    ? "text-[var(--color-cream-50)] hover:bg-[var(--color-navy-700)]"
-                    : undefined
-                }
-              >
-                {resolvedSecondary.label}
-              </LinkButton>
-            ) : null}
-          </div>
+    <section
+      id={id}
+      style={{
+        background: "linear-gradient(160deg, var(--color-accent) 0%, var(--color-accent-900) 100%)",
+        color: "#fff",
+        padding: "72px clamp(20px, 5vw, 64px) 72px",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1320px",
+          margin: "0 auto",
+          display: "grid",
+          gap: "32px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))",
+          alignItems: "center",
+        }}
+      >
+        <div>
+          <span
+            style={{
+              display: "block",
+              fontSize: "13px",
+              fontWeight: 600,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "var(--color-accent-300)",
+              marginBottom: "16px",
+            }}
+          >
+            {resolvedEyebrow}
+          </span>
+          <h2
+            style={{
+              fontWeight: 500,
+              fontSize: "clamp(30px, 3.4vw, 46px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.025em",
+              margin: "0 0 16px",
+              color: "#fff",
+            }}
+          >
+            {resolvedTitle}
+          </h2>
+          <p
+            style={{
+              fontSize: "18px",
+              lineHeight: 1.6,
+              margin: 0,
+              color: "var(--color-accent-300)",
+              maxWidth: "56ch",
+            }}
+          >
+            {resolvedBody}
+          </p>
         </div>
-      </Container>
-    </Section>
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "16px",
+            justifyContent: "flex-start",
+          }}
+        >
+          <Link
+            href={resolvedPrimary.href as "/"}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "14px 26px",
+              background: "#fff",
+              color: "var(--color-accent)",
+              borderRadius: "4px",
+              fontSize: "17px",
+              fontWeight: 500,
+              textDecoration: "none",
+            }}
+          >
+            {resolvedPrimary.label}
+          </Link>
+          {resolvedSecondary && (
+            <Link
+              href={resolvedSecondary.href as "/"}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                padding: "14px 26px",
+                border: "1px solid rgba(255,255,255,0.5)",
+                color: "#fff",
+                borderRadius: "4px",
+                fontSize: "17px",
+                textDecoration: "none",
+              }}
+            >
+              {resolvedSecondary.label}
+            </Link>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }

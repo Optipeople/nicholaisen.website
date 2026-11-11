@@ -1,17 +1,29 @@
 "use client";
 
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { ChevronDown, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { services, industries, primaryNav, type NavSection } from "@/lib/nav";
-import { cn } from "@/lib/cn";
+
+const ChevronDown = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m6 9 6 6 6-6" />
+  </svg>
+);
+
+const ArrowRight = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" style={{ flexShrink: 0 }}>
+    <path d="M4 12h16M14 6l6 6-6 6" />
+  </svg>
+);
 
 export function MegaNav() {
   const t = useTranslations("nav");
   return (
-    <NavigationMenu.Root className="relative">
-      <NavigationMenu.List className="flex items-center gap-1">
+    <NavigationMenu.Root style={{ position: "relative" }}>
+      <NavigationMenu.List
+        style={{ display: "flex", alignItems: "center", gap: "clamp(20px, 2.6vw, 36px)", flexWrap: "wrap", listStyle: "none", margin: 0, padding: 0 }}
+      >
         {primaryNav.map((section) => (
           <NavigationMenu.Item key={section.href}>
             {section.categories ? (
@@ -22,7 +34,7 @@ export function MegaNav() {
               <NavigationMenu.Link asChild>
                 <Link
                   href={section.href as "/"}
-                  className="px-3 py-2 text-sm font-medium text-[var(--color-ink-700)] hover:text-[var(--color-navy-900)] transition-colors"
+                  style={{ color: "var(--color-text)", fontSize: "16px", textDecoration: "none", padding: "8px 0", borderBottom: "2px solid transparent" }}
                 >
                   {section.href === "/cases"
                     ? t("cases")
@@ -38,16 +50,50 @@ export function MegaNav() {
         ))}
       </NavigationMenu.List>
 
-      <div className="absolute left-1/2 top-full -translate-x-1/2 flex justify-center">
+      <div style={{ position: "absolute", left: "50%", top: "100%", transform: "translateX(-50%)", display: "flex", justifyContent: "center" }}>
         <NavigationMenu.Viewport
-          className={cn(
-            "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-            "relative mt-3 origin-top overflow-hidden rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] shadow-[var(--shadow-lift)]",
-            "h-[var(--radix-navigation-menu-viewport-height)] w-[var(--radix-navigation-menu-viewport-width)] transition-[width,height] duration-200",
-          )}
+          style={{
+            position: "relative",
+            marginTop: "14px",
+            overflow: "hidden",
+            borderRadius: "10px",
+            border: "1px solid var(--color-divider)",
+            background: "#fff",
+            color: "var(--color-text)",
+            boxShadow: "0 16px 40px color-mix(in srgb, #003050 16%, transparent)",
+            height: "var(--radix-navigation-menu-viewport-height)",
+            width: "var(--radix-navigation-menu-viewport-width)",
+            transition: "width 200ms, height 200ms",
+          }}
         />
       </div>
     </NavigationMenu.Root>
+  );
+}
+
+function NavMenuLink({ href, title, description }: { href: string; title: string; description: string }) {
+  return (
+    <NavigationMenu.Link asChild>
+      <Link
+        href={href as "/"}
+        style={{
+          color: "var(--color-text)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "16px",
+          padding: "14px 0",
+          borderBottom: "1px solid var(--color-accent-200)",
+          textDecoration: "none",
+        }}
+      >
+        <span style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+          <strong style={{ fontSize: "18px", fontWeight: 600 }}>{title}</strong>
+          <span style={{ fontSize: "15px", color: "var(--color-accent-500)" }}>{description}</span>
+        </span>
+        <ArrowRight />
+      </Link>
+    </NavigationMenu.Link>
   );
 }
 
@@ -55,70 +101,54 @@ function ServicesTrigger({ section }: { section: NavSection }) {
   const t = useTranslations("nav");
   return (
     <>
-      <NavigationMenu.Trigger className="group inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-[var(--color-ink-700)] hover:text-[var(--color-navy-900)] transition-colors">
+      <NavigationMenu.Trigger
+        style={{
+          all: "unset",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: "6px",
+          color: "var(--color-text)",
+          fontSize: "16px",
+          padding: "8px 0",
+          borderBottom: "2px solid transparent",
+        }}
+      >
         {t("services")}
-        <ChevronDown
-          className="size-3.5 transition-transform group-data-[state=open]:rotate-180"
-          aria-hidden
-        />
+        <ChevronDown />
       </NavigationMenu.Trigger>
-      <NavigationMenu.Content className="absolute left-0 top-0 w-[860px] p-8">
-        <div className="grid grid-cols-[2fr_1fr] gap-10">
-          <div className="grid grid-cols-2 gap-x-8 gap-y-6">
-            {section.categories?.map((cat) => (
-              <div key={cat.href}>
-                <Link
-                  href={cat.href as "/"}
-                  className="text-sm font-semibold text-[var(--color-navy-900)] hover:underline"
-                >
-                  {cat.key
-                    ? t(`servicesMenu.${cat.key}.title` as any)
-                    : cat.title}
-                </Link>
-                <p className="mt-1 text-xs text-[var(--color-ink-500)]">
-                  {cat.key
-                    ? t(`servicesMenu.${cat.key}.description` as any)
-                    : cat.description}
-                </p>
-                <ul className="mt-3 space-y-2">
-                  {cat.items.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href as "/"}
-                        className="group block rounded-md px-2 py-1.5 -mx-2 hover:bg-[var(--color-paper-dark)] transition-colors"
-                      >
-                        <span className="block text-sm text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
-                          {item.key
-                            ? t(`servicesMenu.${item.key}.title` as any)
-                            : item.title}
-                        </span>
-                        <span className="block text-xs text-[var(--color-ink-500)]">
-                          {item.key
-                            ? t(`servicesMenu.${item.key}.description` as any)
-                            : item.description}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <aside className="rounded-lg bg-[var(--color-navy-900)] p-6 text-[var(--color-cream-50)]">
-            <p className="text-eyebrow text-[var(--color-tan-300)]">{t("featured.label")}</p>
-            <h4 className="mt-2 text-lg font-semibold leading-tight text-[var(--color-cream-50)]">
-              {t("featured.title")}
-            </h4>
-            <p className="mt-2 text-sm text-[var(--color-cream-50)]/80">
-              {t("featured.description")}
-            </p>
-            <Link
-              href="/services/digital-performance"
-              className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium hover:gap-2 transition-all"
-            >
-              {t("featured.link")} <ArrowRight className="size-3.5" aria-hidden />
-            </Link>
-          </aside>
+      <NavigationMenu.Content
+        style={{
+          position: "absolute",
+          left: 0,
+          top: 0,
+          width: "720px",
+          maxWidth: "calc(100vw - 40px)",
+          padding: "28px 32px 32px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "14px",
+          boxSizing: "border-box",
+        }}
+      >
+        <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
+          {t("services")}
+        </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+            gap: "0 40px",
+          }}
+        >
+          {services.map((s) => (
+            <NavMenuLink
+              key={s.href}
+              href={s.href}
+              title={s.key ? t(`servicesMenu.${s.key}.title` as any) : s.title}
+              description={s.key ? t(`servicesMenu.${s.key}.description` as any) : (s.description ?? "")}
+            />
+          ))}
         </div>
       </NavigationMenu.Content>
     </>
@@ -129,35 +159,49 @@ function FlatTrigger({ section }: { section: NavSection }) {
   const t = useTranslations("nav");
   return (
     <>
-      <NavigationMenu.Trigger className="group inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-[var(--color-ink-700)] hover:text-[var(--color-navy-900)] transition-colors">
+      <NavigationMenu.Trigger
+        style={{
+          all: "unset",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: "6px",
+          color: "var(--color-text)",
+          fontSize: "16px",
+          padding: "8px 0",
+          borderBottom: "2px solid transparent",
+        }}
+      >
         {t("industries")}
-        <ChevronDown
-          className="size-3.5 transition-transform group-data-[state=open]:rotate-180"
-          aria-hidden
-        />
+        <ChevronDown />
       </NavigationMenu.Trigger>
-      <NavigationMenu.Content className="absolute left-0 top-0 w-[420px] p-6">
-        <ul className="space-y-1">
+      <NavigationMenu.Content
+        style={{
+          position: "absolute",
+          left: 0,
+          top: 0,
+          width: "480px",
+          maxWidth: "calc(100vw - 40px)",
+          padding: "28px 32px 32px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "14px",
+          boxSizing: "border-box",
+        }}
+      >
+        <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
+          {t("industries")}
+        </p>
+        <div style={{ display: "flex", flexDirection: "column" }}>
           {section.items?.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href as "/"}
-                className="group block rounded-md p-3 hover:bg-[var(--color-paper-dark)] transition-colors"
-              >
-                <span className="block text-sm font-medium text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
-                  {item.key
-                    ? t(`industriesMenu.${item.key}.title` as any)
-                    : item.title}
-                </span>
-                <span className="block text-xs text-[var(--color-ink-500)] mt-0.5">
-                  {item.key
-                    ? t(`industriesMenu.${item.key}.description` as any)
-                    : item.description}
-                </span>
-              </Link>
-            </li>
+            <NavMenuLink
+              key={item.href}
+              href={item.href}
+              title={item.key ? t(`industriesMenu.${item.key}.title` as any) : item.title}
+              description={item.key ? t(`industriesMenu.${item.key}.description` as any) : (item.description ?? "")}
+            />
           ))}
-        </ul>
+        </div>
       </NavigationMenu.Content>
     </>
   );

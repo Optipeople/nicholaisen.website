@@ -1,70 +1,124 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Briefcase, Factory, CalendarCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { services, industries } from "@/lib/nav";
-import { Container } from "@/components/layout/Container";
-import { LinkButton } from "@/components/ui/Button";
-import { cn } from "@/lib/cn";
 
 type Tab = "services" | "industries" | "schedule";
+
+const ArrowRight = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" style={{ flexShrink: 0 }}>
+    <path d="M4 12h16M14 6l6 6-6 6" />
+  </svg>
+);
 
 export function EntryTabs() {
   const [tab, setTab] = useState<Tab>("services");
   const t = useTranslations("home.entry");
   const tn = useTranslations("nav");
 
+  const tabs: { key: Tab; label: string }[] = [
+    { key: "services", label: t("services") },
+    { key: "industries", label: t("industries") },
+    { key: "schedule", label: t("schedule") },
+  ];
+
   return (
-    <Container>
-      <div className="-mt-16 lg:-mt-20 relative z-10">
-        <div className="rounded-2xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] shadow-[var(--shadow-lift)]">
-          <div className="flex flex-wrap gap-1 border-b border-[var(--color-ink-300)]/30 px-3 pt-3">
-            <TabButton active={tab === "services"} onClick={() => setTab("services")}>
-              <Briefcase className="size-4" /> {t("services")}
-            </TabButton>
-            <TabButton active={tab === "industries"} onClick={() => setTab("industries")}>
-              <Factory className="size-4" /> {t("industries")}
-            </TabButton>
-            <TabButton active={tab === "schedule"} onClick={() => setTab("schedule")}>
-              <CalendarCheck className="size-4" /> {t("schedule")}
-            </TabButton>
-          </div>
-          <div className="p-6 sm:p-8">
-            {tab === "services" && <ServicesPanel />}
-            {tab === "industries" && <IndustriesPanel />}
-            {tab === "schedule" && <SchedulePanel />}
-          </div>
+    <div
+      style={{
+        maxWidth: "1320px",
+        width: "100%",
+        margin: "-96px auto 0",
+        padding: "0 clamp(20px, 5vw, 64px)",
+        boxSizing: "border-box",
+        position: "relative",
+        zIndex: 2,
+      }}
+    >
+      <div
+        style={{
+          background: "#fff",
+          border: "1px solid var(--color-accent-200)",
+          borderRadius: "12px",
+          boxShadow: "0 10px 32px color-mix(in srgb, #003050 14%, transparent)",
+        }}
+      >
+        {/* Tab bar */}
+        <div
+          role="tablist"
+          aria-label={t("services")}
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "8px",
+            padding: "0 28px",
+            borderBottom: "1px solid var(--color-accent-200)",
+          }}
+        >
+          {tabs.map(({ key, label }) => (
+            <button
+              key={key}
+              type="button"
+              role="tab"
+              aria-selected={tab === key}
+              onClick={() => setTab(key)}
+              style={{
+                all: "unset",
+                cursor: "pointer",
+                fontSize: "17px",
+                fontWeight: tab === key ? 500 : 400,
+                color: tab === key ? "var(--color-text)" : "var(--color-accent-500)",
+                borderBottom: `3px solid ${tab === key ? "var(--color-accent)" : "transparent"}`,
+                padding: "20px 14px 17px",
+                marginBottom: "-1px",
+              }}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {/* Tab content */}
+        <div style={{ padding: "32px clamp(20px, 4vw, 44px) 36px" }}>
+          {tab === "services" && <ServicesPanel />}
+          {tab === "industries" && <IndustriesPanel />}
+          {tab === "schedule" && <SchedulePanel />}
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
 
-function TabButton({
-  active,
-  onClick,
-  children,
+function NavItem({
+  href,
+  title,
+  description,
 }: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
+  href: string;
+  title: string;
+  description: string;
 }) {
   return (
-    <button
-      onClick={onClick}
-      className={cn(
-        "inline-flex items-center gap-2 rounded-t-md px-4 py-3 text-sm font-medium transition-colors",
-        active
-          ? "bg-[var(--color-paper)] text-[var(--color-navy-900)]"
-          : "text-[var(--color-ink-500)] hover:text-[var(--color-ink-900)]",
-      )}
-      role="tab"
-      aria-selected={active}
+    <Link
+      href={href as "/"}
+      style={{
+        color: "var(--color-text)",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        gap: "16px",
+        padding: "14px 0",
+        borderBottom: "1px solid var(--color-accent-200)",
+        textDecoration: "none",
+      }}
     >
-      {children}
-    </button>
+      <span style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+        <strong style={{ fontSize: "18px", fontWeight: 600 }}>{title}</strong>
+        <span style={{ fontSize: "15px", color: "var(--color-accent-500)" }}>{description}</span>
+      </span>
+      <ArrowRight />
+    </Link>
   );
 }
 
@@ -73,24 +127,24 @@ function ServicesPanel() {
   const tn = useTranslations("nav");
   return (
     <div>
-      <p className="text-eyebrow">{t("findService")}</p>
-      <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
+        {t("findService")}
+      </p>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
+          gap: "0 40px",
+          marginTop: "14px",
+        }}
+      >
         {services.map((s) => (
-          <Link
+          <NavItem
             key={s.href}
-            href={s.href as "/"}
-            className="group flex items-start justify-between gap-3 rounded-md border border-transparent p-3 hover:border-[var(--color-ink-300)]/40 hover:bg-[var(--color-paper-dark)] transition-colors"
-          >
-            <div>
-              <p className="text-sm font-semibold text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
-                {s.key ? tn(`servicesMenu.${s.key}.title` as any) : s.title}
-              </p>
-              <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">
-                {s.key ? tn(`servicesMenu.${s.key}.description` as any) : s.description}
-              </p>
-            </div>
-            <ArrowRight className="mt-0.5 size-4 shrink-0 text-[var(--color-ink-500)] transition-transform group-hover:translate-x-0.5 group-hover:text-[var(--color-navy-900)]" />
-          </Link>
+            href={s.href}
+            title={s.key ? tn(`servicesMenu.${s.key}.title` as any) : s.title}
+            description={s.key ? tn(`servicesMenu.${s.key}.description` as any) : (s.description ?? "")}
+          />
         ))}
       </div>
     </div>
@@ -102,24 +156,24 @@ function IndustriesPanel() {
   const tn = useTranslations("nav");
   return (
     <div>
-      <p className="text-eyebrow">{t("browseIndustry")}</p>
-      <div className="mt-3 grid gap-2 sm:grid-cols-3">
+      <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
+        {t("browseIndustry")}
+      </p>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
+          gap: "0 40px",
+          marginTop: "14px",
+        }}
+      >
         {industries.map((i) => (
-          <Link
+          <NavItem
             key={i.href}
-            href={i.href as "/"}
-            className="group flex items-start justify-between gap-3 rounded-md border border-transparent p-3 hover:border-[var(--color-ink-300)]/40 hover:bg-[var(--color-paper-dark)] transition-colors"
-          >
-            <div>
-              <p className="text-sm font-semibold text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
-                {i.key ? tn(`industriesMenu.${i.key}.title` as any) : i.title}
-              </p>
-              <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">
-                {i.key ? tn(`industriesMenu.${i.key}.description` as any) : i.description}
-              </p>
-            </div>
-            <ArrowRight className="mt-0.5 size-4 shrink-0 text-[var(--color-ink-500)] transition-transform group-hover:translate-x-0.5 group-hover:text-[var(--color-navy-900)]" />
-          </Link>
+            href={i.href}
+            title={i.key ? tn(`industriesMenu.${i.key}.title` as any) : i.title}
+            description={i.key ? tn(`industriesMenu.${i.key}.description` as any) : (i.description ?? "")}
+          />
         ))}
       </div>
     </div>
@@ -129,15 +183,24 @@ function IndustriesPanel() {
 function SchedulePanel() {
   const t = useTranslations("home.entry");
   return (
-    <div className="grid gap-6 sm:grid-cols-[2fr_1fr] sm:items-end">
-      <div>
-        <p className="text-eyebrow">{t("talkEngineer")}</p>
-        <h3 className="mt-2 text-xl font-semibold text-[var(--color-ink-900)]">{t("scheduleTitle")}</h3>
-        <p className="mt-2 text-sm text-[var(--color-ink-500)]">{t("scheduleBody")}</p>
+    <div>
+      <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
+        {t("talkEngineer")}
+      </p>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
+          gap: "0 40px",
+          marginTop: "14px",
+        }}
+      >
+        <NavItem
+          href="/contact"
+          title={t("scheduleTitle")}
+          description={t("scheduleBody")}
+        />
       </div>
-      <LinkButton href="/contact" size="md" withArrow>
-        {t("scheduleBtn")}
-      </LinkButton>
     </div>
   );
 }
