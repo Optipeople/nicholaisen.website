@@ -29,16 +29,16 @@ export function SiteHeader({ locale }: { locale: string }) {
       <div className="site-header-inner">
         <Link
           href="/"
-          style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", flexShrink: 0 }}
+          style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}
           aria-label="Nicholaisen — Home"
         >
           <Image
-            src="/brand/nicholaisen-logo.png"
-            alt=""
-            width={48}
-            height={48}
+            src={transparent ? "/brand/logo-white.png" : "/brand/logo-navy.png"}
+            alt="Nicholaisen"
+            width={472}
+            height={190}
             priority
-            style={{ width: "48px", height: "48px", display: "block" }}
+            style={{ height: "32px", width: "auto", display: "block" }}
           />
         </Link>
 
