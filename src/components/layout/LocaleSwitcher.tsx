@@ -37,7 +37,7 @@ function buildLocalePath(pathname: string, nextLocale: string): string {
   return `/${nextLocale}${stripped === "/" ? "" : stripped}`;
 }
 
-export function LocaleSwitcher({ onSelect }: { onSelect?: () => void } = {}) {
+export function LocaleSwitcher({ onSelect, transparent }: { onSelect?: () => void; transparent?: boolean } = {}) {
   const pathname = usePathname();
   const router = useRouter();
   const locale = getLocaleFromPathname(pathname);
@@ -64,13 +64,21 @@ export function LocaleSwitcher({ onSelect }: { onSelect?: () => void } = {}) {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-sm font-medium text-[var(--color-ink-700)] hover:bg-[var(--color-paper-dark)] transition-colors"
+        style={{
+          all: "unset",
+          cursor: "pointer",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "6px",
+          color: transparent ? "#fff" : "var(--color-text)",
+          fontSize: "15px",
+        }}
         aria-label="Switch language"
         aria-expanded={open}
       >
-        <Globe className="size-4" />
-        <span className="uppercase">{locale}</span>
-        <ChevronDown className={`size-3.5 transition-transform ${open ? "rotate-180" : ""}`} />
+        <Globe style={{ width: "16px", height: "16px" }} />
+        <span style={{ textTransform: "uppercase" as const }}>{locale}</span>
+        <ChevronDown style={{ width: "12px", height: "12px", transition: "transform 200ms", transform: open ? "rotate(180deg)" : "none" }} />
       </button>
 
       {open && (

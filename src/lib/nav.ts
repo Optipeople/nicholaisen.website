@@ -84,12 +84,23 @@ export const industries: NavLeaf[] = [
   { title: "Solid Wood", href: "/industries/solid-wood", key: "solidWood", description: "Hardwood drying through to assembly." },
 ];
 
+export const solutions: NavLeaf[] = [
+  { title: "Business Development", href: "/services/business-development", description: "Strategy, investments & growth" },
+  { title: "Production Optimization", href: "/services/production-optimization", description: "Improve capacity, efficiency & reduce TCO" },
+  { title: "Machines", href: "/services/machines", description: "Standard machines, custom machines & upgrades" },
+  { title: "Project Solutions", href: "/services/project-solutions", description: "Production lines, automation & turnkey projects" },
+  { title: "Digital Performance", href: "/services/digital-performance", description: "Production insights, AI & optimization" },
+];
+
+export const companyItems: NavLeaf[] = [
+  { title: "About us", href: "/about" },
+  { title: "The team", href: "/team" },
+];
+
 export const primaryNav: NavSection[] = [
-  { title: "Services", href: "/services", categories: services },
-  { title: "Industries", href: "/industries", items: industries },
+  { title: "Solutions", href: "/services", items: solutions },
   { title: "Cases", href: "/cases" },
-  { title: "Insights", href: "/insights" },
-  { title: "About", href: "/about" },
+  { title: "Company", href: "/about", items: companyItems },
 ];
 
 export const footerNav = {

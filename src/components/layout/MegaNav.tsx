@@ -1,9 +1,8 @@
 "use client";
 
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { useTranslations } from "next-intl";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import { services, industries, primaryNav, type NavSection } from "@/lib/nav";
+import { solutions, companyItems } from "@/lib/nav";
 
 const ChevronDown = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -17,37 +16,121 @@ const ArrowRight = () => (
   </svg>
 );
 
-export function MegaNav() {
-  const t = useTranslations("nav");
+export function MegaNav({ transparent = false }: { transparent?: boolean }) {
+  const ink = transparent ? "#fff" : "var(--color-text)";
+  const triggerStyle = {
+    all: "unset" as const,
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    gap: "6px",
+    color: ink,
+    fontSize: "16px",
+    padding: "8px 0",
+  };
+
   return (
     <NavigationMenu.Root style={{ position: "relative" }}>
       <NavigationMenu.List
         style={{ display: "flex", alignItems: "center", gap: "clamp(20px, 2.6vw, 36px)", flexWrap: "wrap", listStyle: "none", margin: 0, padding: 0 }}
       >
-        {primaryNav.map((section) => (
-          <NavigationMenu.Item key={section.href}>
-            {section.categories ? (
-              <ServicesTrigger section={section} />
-            ) : section.items ? (
-              <FlatTrigger section={section} />
-            ) : (
-              <NavigationMenu.Link asChild>
+        {/* Solutions */}
+        <NavigationMenu.Item>
+          <NavigationMenu.Trigger style={triggerStyle}>
+            Solutions <ChevronDown />
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "720px",
+              maxWidth: "calc(100vw - 40px)",
+              padding: "28px 32px 32px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "14px",
+              boxSizing: "border-box",
+            }}
+          >
+            <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
+              Find a service
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "0 40px" }}>
+              {solutions.map((s) => (
+                <NavigationMenu.Link key={s.href} asChild>
+                  <Link
+                    href={s.href as "/"}
+                    style={{
+                      color: "var(--color-text)",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: "16px",
+                      padding: "14px 0",
+                      borderBottom: "1px solid var(--color-accent-200)",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <span style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                      <strong style={{ fontSize: "18px", fontWeight: 600 }}>{s.title}</strong>
+                      <span style={{ fontSize: "15px", color: "var(--color-accent-500)" }}>{s.description}</span>
+                    </span>
+                    <ArrowRight />
+                  </Link>
+                </NavigationMenu.Link>
+              ))}
+            </div>
+          </NavigationMenu.Content>
+        </NavigationMenu.Item>
+
+        {/* Cases */}
+        <NavigationMenu.Item>
+          <NavigationMenu.Link asChild>
+            <Link href="/cases" style={{ color: ink, fontSize: "16px", textDecoration: "none", padding: "8px 0" }}>
+              Cases
+            </Link>
+          </NavigationMenu.Link>
+        </NavigationMenu.Item>
+
+        {/* Company */}
+        <NavigationMenu.Item>
+          <NavigationMenu.Trigger style={triggerStyle}>
+            Company <ChevronDown />
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "280px",
+              padding: "8px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "2px",
+              boxSizing: "border-box",
+            }}
+          >
+            {companyItems.map((item) => (
+              <NavigationMenu.Link key={item.href} asChild>
                 <Link
-                  href={section.href as "/"}
-                  style={{ color: "var(--color-text)", fontSize: "16px", textDecoration: "none", padding: "8px 0", borderBottom: "2px solid transparent" }}
+                  href={item.href as "/"}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "4px",
+                    padding: "14px 16px",
+                    borderRadius: "6px",
+                    color: "var(--color-text)",
+                    textDecoration: "none",
+                  }}
                 >
-                  {section.href === "/cases"
-                    ? t("cases")
-                    : section.href === "/insights"
-                      ? t("insights")
-                      : section.href === "/about"
-                        ? t("about")
-                        : section.title}
+                  <span style={{ fontSize: "16px", fontWeight: 500 }}>{item.title}</span>
                 </Link>
               </NavigationMenu.Link>
-            )}
-          </NavigationMenu.Item>
-        ))}
+            ))}
+          </NavigationMenu.Content>
+        </NavigationMenu.Item>
       </NavigationMenu.List>
 
       <div style={{ position: "absolute", left: "50%", top: "100%", transform: "translateX(-50%)", display: "flex", justifyContent: "center" }}>
@@ -68,141 +151,5 @@ export function MegaNav() {
         />
       </div>
     </NavigationMenu.Root>
-  );
-}
-
-function NavMenuLink({ href, title, description }: { href: string; title: string; description: string }) {
-  return (
-    <NavigationMenu.Link asChild>
-      <Link
-        href={href as "/"}
-        style={{
-          color: "var(--color-text)",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "16px",
-          padding: "14px 0",
-          borderBottom: "1px solid var(--color-accent-200)",
-          textDecoration: "none",
-        }}
-      >
-        <span style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-          <strong style={{ fontSize: "18px", fontWeight: 600 }}>{title}</strong>
-          <span style={{ fontSize: "15px", color: "var(--color-accent-500)" }}>{description}</span>
-        </span>
-        <ArrowRight />
-      </Link>
-    </NavigationMenu.Link>
-  );
-}
-
-function ServicesTrigger({ section }: { section: NavSection }) {
-  const t = useTranslations("nav");
-  return (
-    <>
-      <NavigationMenu.Trigger
-        style={{
-          all: "unset",
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          gap: "6px",
-          color: "var(--color-text)",
-          fontSize: "16px",
-          padding: "8px 0",
-          borderBottom: "2px solid transparent",
-        }}
-      >
-        {t("services")}
-        <ChevronDown />
-      </NavigationMenu.Trigger>
-      <NavigationMenu.Content
-        style={{
-          position: "absolute",
-          left: 0,
-          top: 0,
-          width: "720px",
-          maxWidth: "calc(100vw - 40px)",
-          padding: "28px 32px 32px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "14px",
-          boxSizing: "border-box",
-        }}
-      >
-        <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
-          {t("services")}
-        </p>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
-            gap: "0 40px",
-          }}
-        >
-          {services.map((s) => (
-            <NavMenuLink
-              key={s.href}
-              href={s.href}
-              title={s.key ? t(`servicesMenu.${s.key}.title` as any) : s.title}
-              description={s.key ? t(`servicesMenu.${s.key}.description` as any) : (s.description ?? "")}
-            />
-          ))}
-        </div>
-      </NavigationMenu.Content>
-    </>
-  );
-}
-
-function FlatTrigger({ section }: { section: NavSection }) {
-  const t = useTranslations("nav");
-  return (
-    <>
-      <NavigationMenu.Trigger
-        style={{
-          all: "unset",
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          gap: "6px",
-          color: "var(--color-text)",
-          fontSize: "16px",
-          padding: "8px 0",
-          borderBottom: "2px solid transparent",
-        }}
-      >
-        {t("industries")}
-        <ChevronDown />
-      </NavigationMenu.Trigger>
-      <NavigationMenu.Content
-        style={{
-          position: "absolute",
-          left: 0,
-          top: 0,
-          width: "480px",
-          maxWidth: "calc(100vw - 40px)",
-          padding: "28px 32px 32px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "14px",
-          boxSizing: "border-box",
-        }}
-      >
-        <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
-          {t("industries")}
-        </p>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          {section.items?.map((item) => (
-            <NavMenuLink
-              key={item.href}
-              href={item.href}
-              title={item.key ? t(`industriesMenu.${item.key}.title` as any) : item.title}
-              description={item.key ? t(`industriesMenu.${item.key}.description` as any) : (item.description ?? "")}
-            />
-          ))}
-        </div>
-      </NavigationMenu.Content>
-    </>
   );
 }

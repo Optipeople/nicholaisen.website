@@ -1,20 +1,29 @@
+"use client";
+
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { usePathname } from "next/navigation";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { MegaNav } from "@/components/layout/MegaNav";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 
-export async function SiteHeader({ locale }: { locale: string }) {
-  const t = await getTranslations({ locale, namespace: "nav" });
+export function SiteHeader({ locale }: { locale: string }) {
+  const pathname = usePathname();
+  // Home page: /<locale> or / (default locale)
+  const isHome = pathname === `/${locale}` || pathname === "/";
+  const transparent = isHome;
+
   return (
     <header
       style={{
-        position: "sticky",
+        position: transparent ? "absolute" : "sticky",
         top: 0,
+        left: transparent ? 0 : undefined,
+        right: transparent ? 0 : undefined,
         zIndex: 40,
-        background: "var(--color-offwhite)",
-        borderBottom: "1px solid var(--color-divider)",
+        background: transparent ? "transparent" : "var(--color-offwhite)",
+        borderBottom: transparent ? "none" : "1px solid var(--color-divider)",
+        color: transparent ? "#fff" : "var(--color-text)",
       }}
     >
       <div className="site-header-inner">
@@ -26,38 +35,27 @@ export async function SiteHeader({ locale }: { locale: string }) {
           <Image
             src="/brand/nicholaisen-logo.png"
             alt=""
-            width={32}
-            height={32}
+            width={48}
+            height={48}
             priority
-            style={{ width: "32px", height: "32px" }}
+            style={{ width: "48px", height: "48px", display: "block" }}
           />
-          <span
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, sans-serif",
-              fontWeight: 700,
-              fontSize: "18px",
-              color: "var(--color-text)",
-              letterSpacing: "-0.015em",
-            }}
-          >
-            Nicholaisen
-          </span>
         </Link>
 
         <div className="site-header-nav">
-          <MegaNav />
+          <MegaNav transparent={transparent} />
         </div>
 
         <div className="site-header-desktop">
-          <LocaleSwitcher />
+          <LocaleSwitcher transparent={transparent} />
           <Link
             href="/contact"
             style={{
               display: "inline-flex",
               alignItems: "center",
-              padding: "10px 22px",
-              background: "var(--color-spot)",
-              color: "#fff",
+              padding: "11px 20px",
+              background: transparent ? "#fff" : "var(--color-spot)",
+              color: transparent ? "var(--color-accent)" : "#fff",
               borderRadius: "4px",
               fontSize: "15px",
               fontWeight: 500,
@@ -65,7 +63,7 @@ export async function SiteHeader({ locale }: { locale: string }) {
               whiteSpace: "nowrap",
             }}
           >
-            {t("cta")}
+            Contact us
           </Link>
         </div>
 
