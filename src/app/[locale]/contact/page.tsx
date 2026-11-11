@@ -1,19 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { ContactForm } from "@/components/sections/ContactForm";
 import { site } from "@/lib/site";
-import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Contact",
+export const metadata: Metadata = {
+  title: "Contact Nicholaisen — Get in touch",
   description: "Tell us what you're trying to make better. We reply within one business day.",
-  path: "/contact",
-});
+};
 
 export default async function ContactPage({
   params,
@@ -21,223 +12,444 @@ export default async function ContactPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "contact" });
 
   return (
-    <>
-      <Section tone="cream" size="md">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
-            <div>
-              <Eyebrow>{t("hero.eyebrow")}</Eyebrow>
-              <h1 className="mt-4 text-display-1 text-balance">
-                {t("hero.title")}
-              </h1>
-              <p className="mt-6 text-lede max-w-xl">
-                {t("hero.lede")}
-              </p>
+    <main>
+      {/* Hero contact strip */}
+      <section
+        style={{
+          background: "var(--color-navy-900)",
+          color: "#fff",
+          padding: "clamp(80px,10vw,140px) clamp(20px,5vw,64px) 0",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1320px",
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,340px),1fr))",
+            gap: "64px clamp(40px,7vw,112px)",
+            alignItems: "start",
+          }}
+        >
+          {/* Left: info */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "24px", paddingBottom: "80px" }}>
+            <span
+              style={{
+                fontSize: "13px",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                color: "var(--color-spot)",
+                textTransform: "uppercase" as const,
+              }}
+            >
+              Contact
+            </span>
+            <h1
+              style={{
+                fontWeight: 500,
+                fontSize: "clamp(36px,4.5vw,64px)",
+                lineHeight: 1.08,
+                letterSpacing: "-0.025em",
+                margin: 0,
+              }}
+            >
+              Let&apos;s talk about your production
+            </h1>
+            <p
+              style={{
+                fontSize: "19px",
+                lineHeight: 1.6,
+                color: "rgba(255,255,255,0.75)",
+                margin: 0,
+                maxWidth: "44ch",
+              }}
+            >
+              Tell us what you are trying to make better. We will get back to you within one business day.
+            </p>
 
-              <div className="mt-12 space-y-6">
-                <ContactRow icon={<Phone className="size-4" aria-hidden />} label={t("info.callUs")}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+                marginTop: "16px",
+                paddingTop: "32px",
+                borderTop: "1px solid rgba(255,255,255,0.15)",
+              }}
+            >
+              <div style={{ display: "flex", gap: "14px", alignItems: "flex-start" }}>
+                <div
+                  style={{
+                    flex: "0 0 40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.53 3.47 2 2 0 0 1 3.5 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.09-1.09a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", marginBottom: "2px" }}>Phone</div>
                   <a
                     href={`tel:${site.phone.replace(/\s+/g, "")}`}
-                    className="hover:text-[var(--color-navy-900)]"
+                    style={{ fontSize: "17px", color: "#fff", textDecoration: "none" }}
                   >
                     {site.phone}
                   </a>
-                  <br />
-                  <span className="text-[var(--color-ink-500)]">{t("info.serviceLabel")}: </span>
-                  <a
-                    href={`tel:${site.phoneService.replace(/\s+/g, "")}`}
-                    className="hover:text-[var(--color-navy-900)]"
-                  >
-                    {site.phoneService}
-                  </a>
-                </ContactRow>
-                <ContactRow icon={<Mail className="size-4" aria-hidden />} label={t("info.emailLabel")}>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: "14px", alignItems: "flex-start" }}>
+                <div
+                  style={{
+                    flex: "0 0 40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", marginBottom: "2px" }}>Email</div>
                   <a
                     href={`mailto:${site.email}`}
-                    className="hover:text-[var(--color-navy-900)]"
+                    style={{ fontSize: "17px", color: "#fff", textDecoration: "none" }}
                   >
                     {site.email}
                   </a>
-                </ContactRow>
-                <ContactRow icon={<MapPin className="size-4" aria-hidden />} label={t("info.visit")}>
-                  {site.address.street}
-                  <br />
-                  {site.address.postal} {site.address.city}, {site.address.country}
-                </ContactRow>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: "14px", alignItems: "flex-start" }}>
+                <div
+                  style={{
+                    flex: "0 0 40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", marginBottom: "2px" }}>Address</div>
+                  <span style={{ fontSize: "17px", color: "#fff" }}>
+                    {site.address.street}<br />
+                    {site.address.postal} {site.address.city}, {site.address.country}
+                  </span>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div className="rounded-2xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] p-6 sm:p-10">
-              <ContactForm />
+          {/* Right: form card */}
+          <div
+            style={{
+              background: "#fff",
+              borderRadius: "16px 16px 0 0",
+              padding: "40px clamp(24px,3vw,48px)",
+              color: "var(--color-navy-900)",
+              boxSizing: "border-box",
+            }}
+          >
+            <h2
+              style={{
+                fontWeight: 500,
+                fontSize: "clamp(22px,2.4vw,32px)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.015em",
+                margin: "0 0 6px",
+              }}
+            >
+              Send us a message
+            </h2>
+            <p
+              style={{
+                fontSize: "15px",
+                color: "var(--color-accent-500)",
+                margin: "0 0 28px",
+              }}
+            >
+              We&apos;ll reply within one business day.
+            </p>
+
+            <form
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "16px",
+              }}
+            >
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "16px",
+                }}
+              >
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                  <label style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.04em", color: "var(--color-accent-500)" }}>
+                    First name
+                  </label>
+                  <input
+                    name="firstName"
+                    placeholder="Anders"
+                    style={{
+                      padding: "11px 14px",
+                      border: "1px solid var(--color-accent-300)",
+                      borderRadius: "6px",
+                      fontSize: "15px",
+                      outline: "none",
+                      boxSizing: "border-box",
+                      width: "100%",
+                    }}
+                  />
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                  <label style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.04em", color: "var(--color-accent-500)" }}>
+                    Last name
+                  </label>
+                  <input
+                    name="lastName"
+                    placeholder="Madsen"
+                    style={{
+                      padding: "11px 14px",
+                      border: "1px solid var(--color-accent-300)",
+                      borderRadius: "6px",
+                      fontSize: "15px",
+                      outline: "none",
+                      boxSizing: "border-box",
+                      width: "100%",
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                <label style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.04em", color: "var(--color-accent-500)" }}>
+                  Company
+                </label>
+                <input
+                  name="company"
+                  placeholder="Acme Furniture A/S"
+                  style={{
+                    padding: "11px 14px",
+                    border: "1px solid var(--color-accent-300)",
+                    borderRadius: "6px",
+                    fontSize: "15px",
+                    outline: "none",
+                    boxSizing: "border-box",
+                    width: "100%",
+                  }}
+                />
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                <label style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.04em", color: "var(--color-accent-500)" }}>
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="anders@acmefurniture.dk"
+                  style={{
+                    padding: "11px 14px",
+                    border: "1px solid var(--color-accent-300)",
+                    borderRadius: "6px",
+                    fontSize: "15px",
+                    outline: "none",
+                    boxSizing: "border-box",
+                    width: "100%",
+                  }}
+                />
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                <label style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.04em", color: "var(--color-accent-500)" }}>
+                  What are you trying to improve?
+                </label>
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="Briefly describe your situation — no need to have everything figured out"
+                  style={{
+                    padding: "11px 14px",
+                    border: "1px solid var(--color-accent-300)",
+                    borderRadius: "6px",
+                    fontSize: "15px",
+                    outline: "none",
+                    resize: "vertical",
+                    boxSizing: "border-box",
+                    width: "100%",
+                    fontFamily: "inherit",
+                  }}
+                />
+              </div>
+
+              <button
+                type="submit"
+                style={{
+                  padding: "14px 24px",
+                  background: "var(--color-accent)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: "6px",
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  cursor: "pointer",
+                  fontFamily: "inherit",
+                  marginTop: "4px",
+                }}
+              >
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* What happens next */}
+      <section
+        style={{
+          background: "#fff",
+          padding: "96px clamp(20px,5vw,64px)",
+          boxSizing: "border-box",
+        }}
+      >
+        <div style={{ maxWidth: "1320px", margin: "0 auto" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,340px),1fr))",
+              gap: "48px clamp(32px,8vw,120px)",
+              alignItems: "start",
+            }}
+          >
+            <div>
+              <span
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase" as const,
+                  color: "var(--color-accent-500)",
+                  marginBottom: "20px",
+                }}
+              >
+                <span style={{ flex: "0 0 24px", height: "2px", background: "var(--color-spot)", display: "block" }} />
+                What happens next
+              </span>
+              <h2
+                style={{
+                  fontWeight: 500,
+                  fontSize: "clamp(30px,3.4vw,48px)",
+                  lineHeight: 1.1,
+                  letterSpacing: "-0.02em",
+                  margin: "0 0 16px",
+                }}
+              >
+                How we work together
+              </h2>
+              <p
+                style={{
+                  fontSize: "17px",
+                  lineHeight: 1.65,
+                  color: "var(--color-accent-500)",
+                  margin: 0,
+                  maxWidth: "44ch",
+                }}
+              >
+                No long sales cycles. We start by understanding your situation, then we figure out if — and how — we can help.
+              </p>
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
+              {[
+                {
+                  step: "01",
+                  title: "We review your message",
+                  desc: "Within one business day, the right person at Nicholaisen will read your message and prepare a relevant response.",
+                },
+                {
+                  step: "02",
+                  title: "A short first conversation",
+                  desc: "We call or write to understand your situation. No long qualification process — just a direct exchange about what you're trying to solve.",
+                },
+                {
+                  step: "03",
+                  title: "A concrete next step",
+                  desc: "If there's a fit, we propose something specific: a site visit, an analysis, a machine review — whatever makes most sense for your situation.",
+                },
+              ].map((item) => (
+                <div key={item.step} style={{ display: "flex", gap: "24px", alignItems: "flex-start" }}>
+                  <div
+                    style={{
+                      flex: "0 0 44px",
+                      height: "44px",
+                      borderRadius: "50%",
+                      border: "2px solid var(--color-accent)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      color: "var(--color-accent)",
+                      letterSpacing: "0.04em",
+                    }}
+                  >
+                    {item.step}
+                  </div>
+                  <div>
+                    <h3
+                      style={{
+                        fontWeight: 600,
+                        fontSize: "17px",
+                        margin: "0 0 6px",
+                        letterSpacing: "-0.01em",
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "15.5px",
+                        lineHeight: 1.6,
+                        color: "var(--color-accent-500)",
+                        margin: 0,
+                      }}
+                    >
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </Container>
-      </Section>
-
-      <Section tone="paper" size="md">
-        <Container>
-          <Eyebrow>{t("team.eyebrow")}</Eyebrow>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink-900)]">
-            {t("team.title")}
-          </h2>
-          <p className="mt-4 text-[1.0625rem] leading-relaxed text-[var(--color-ink-500)] max-w-xl">
-            {t("team.lede")}
-          </p>
-
-          <TeamSection label={t("sections.leadership")} people={management} />
-          <TeamSection label={t("sections.administration")} people={administration} />
-          <TeamSection label={t("sections.salesDenmark")} people={salesDenmark} />
-          <TeamSection label={t("sections.salesBaltic")} people={baltic} usePhone />
-          <TeamSection label={t("sections.salesSweden")} people={sweden} usePhone />
-          <TeamSection label={t("sections.innovation")} people={innovation} />
-          <TeamSection label={t("sections.service")} people={service} />
-          <TeamSection label={t("sections.marketing")} people={marketing} />
-          <TeamSection label={t("sections.finance")} people={finance} />
-        </Container>
-      </Section>
-    </>
-  );
-}
-
-type Person = {
-  name: string;
-  title: string;
-  email?: string;
-  phone?: string;
-  image: string;
-};
-
-function TeamSection({
-  label,
-  people,
-  usePhone = false,
-}: {
-  label: string;
-  people: Person[];
-  usePhone?: boolean;
-}) {
-  return (
-    <div className="mt-12 border-t border-[var(--color-ink-300)]/20 pt-10 first:border-t-0 first:pt-0 first:mt-12">
-      <p className="text-eyebrow text-[var(--color-ink-500)]">{label}</p>
-      <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-        {people.map((person) => (
-          <div key={person.name}>
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-[var(--color-beige-200)]">
-              <Image
-                src={person.image}
-                alt={person.name}
-                fill
-                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                className="object-cover object-top"
-              />
-            </div>
-            <div className="mt-3">
-              <p className="text-sm font-semibold text-[var(--color-ink-900)]">{person.name}</p>
-              <p className="mt-0.5 text-xs text-[var(--color-ink-500)]">{person.title}</p>
-              {person.email && (
-                <a
-                  href={`mailto:${person.email}`}
-                  className="mt-1.5 flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                >
-                  <Mail className="size-3" aria-hidden />
-                  {person.email}
-                </a>
-              )}
-              {person.phone && (
-                <a
-                  href={`tel:${person.phone.replace(/\s+/g, "")}`}
-                  className="mt-1 flex items-center gap-1 text-xs text-[var(--color-slate-500)] hover:text-[var(--color-navy-900)] transition-colors"
-                >
-                  <Phone className="size-3" aria-hidden />
-                  {person.phone}
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-const management: Person[] = [
-  { name: "Thomas Biehl", title: "CEO", email: "tb@nicholaisen.dk", image: "/images/Medarbejder/Thomas Biehl.jpeg" },
-  { name: "Henrik Ibsen", title: "COO", email: "hib@nicholaisen.dk", image: "/images/Medarbejder/Henrik Ibsen.jpg" },
-  { name: "Lars Sommer", title: "CFO", email: "ls@nicholaisen.dk", image: "/images/Medarbejder/Lars Sommer.jpeg" },
-];
-
-const administration: Person[] = [
-  { name: "Kathrine Hovesen", title: "PA to CEO", email: "kh@nicholaisen.dk", image: "/images/Medarbejder/Kathrine Hovesen.jpeg" },
-  { name: "Svenja Hartmann", title: "Project Coordinator", email: "sh@nicholaisen.dk", image: "/images/Medarbejder/Svenja Hartmann.jpeg" },
-  { name: "Gitte Sandholm", title: "Office Assistant", email: "gis@nicholaisen.dk", image: "/images/Medarbejder/Gitte Sandholm.jpeg" },
-];
-
-const salesDenmark: Person[] = [
-  { name: "Bo Bruun Holm", title: "Sales – Plate & Furniture Industry", email: "bbh@nicholaisen.dk", phone: "+45 40 54 47 64", image: "/images/Medarbejder/Bo Holm.jpeg" },
-  { name: "Mark Dige Høgh", title: "Sales – Plate & Furniture Industry", email: "mdh@nicholaisen.dk", phone: "+45 26 16 92 80", image: "/images/Medarbejder/Mark Dige.jpg" },
-  { name: "Bo Rasmussen", title: "Sales – Door & Window Industry", email: "br@nicholaisen.dk", phone: "+45 40 82 55 45", image: "/images/Medarbejder/Bo Rasmusen.png" },
-  { name: "Peter Haahr Larsen", title: "Sales – Door & Window Industry", email: "phrl@nicholaisen.dk", phone: "+45 40 96 47 11", image: "/images/Medarbejder/Peter Haahr.jpeg" },
-  { name: "Jørn Biehl", title: "Sales – Wood Drying", image: "/images/Medarbejder/Jørn Biehl.jpeg" },
-  { name: "Claus Capion", title: "Sales – Automation", email: "cca@nicholaisen.dk", phone: "+45 40 88 00 61", image: "/images/Medarbejder/Claus Capion.jpeg" },
-  { name: "René Beldam", title: "Sales – NichoMachines", email: "rb@nicholaisen.dk", phone: "+45 24 59 03 50", image: "/images/Medarbejder/René Beldam.jpeg" },
-];
-
-const baltic: Person[] = [
-  { name: "Siim Türk", title: "Sales Manager", phone: "+372 5867 6119", image: "/images/Medarbejder/Siim Türk.jpg" },
-  { name: "Søren Jørgensen", title: "Business Development Manager", phone: "+372 509 6780", image: "/images/Medarbejder/Søren Jørgensen.jpeg" },
-  { name: "John Tøttrup Christensen", title: "Sales", phone: "+372 510 9486", image: "/images/Medarbejder/John Tøttrup Christensen.jpg" },
-  { name: "Andrejus Petrusovas", title: "Sales", phone: "+370 605 79720", image: "/images/Medarbejder/Andrejus Petrusovas.jpg" },
-];
-
-const sweden: Person[] = [
-  { name: "Erik Nord", title: "Sales", phone: "+46 72 70 17 300", image: "/images/Medarbejder/Erik Nord.jpg" },
-];
-
-
-const innovation: Person[] = [
-  { name: "Kenneth Bech Sørensen", title: "Project Manager – Data", email: "kbs@nicholaisen.dk", image: "/images/Medarbejder/Kenneth Bech Sørensen.jpeg" },
-];
-
-const service: Person[] = [
-  { name: "Tobias Kjærgaard", title: "Service Manager", email: "tk@nicholaisen.dk", image: "/images/Medarbejder/Tobias Kjærgaard.jpeg" },
-  { name: "Lars Skaarup Petersen", title: "Spare Parts Manager", email: "lsp@nicholaisen.dk", image: "/images/Medarbejder/Lars Skaarup Petersen.jpeg" },
-  { name: "Søren Solhaug Madsen", title: "Consultant – Business Development", email: "ssm@nicholaisen.dk", image: "/images/Medarbejder/Søren Solhaug Madsen.jpeg" },
-  { name: "Johnny B. Kristensen", title: "Service Technician", email: "jbk@nicholaisen.dk", image: "/images/Medarbejder/Johnny B. Kristensen.jpeg" },
-  { name: "Søren Baldtzar Rasmussen", title: "Service Technician", email: "sbr@nicholaisen.dk", image: "/images/Medarbejder/Søren Baldtzer Rasmussen.jpg" },
-];
-
-const marketing: Person[] = [
-  { name: "Jacob Vedsø", title: "Communications & Marketing Manager", email: "jv@nicholaisen.dk", image: "/images/Medarbejder/Jacob Vedsø.jpg" },
-  { name: "Simone Jørgensen", title: "Marketing Coordinator", email: "simone@nicholaisen.dk", image: "/images/Medarbejder/Simone Jørgensen.jpg" },
-  { name: "Dennis Harløv Madsen", title: "Market Manager – Telemarketing", email: "dhm@nicholaisen.dk", image: "/images/Medarbejder/Dennis Harløv Madsen.jpg" },
-];
-
-const finance: Person[] = [
-  { name: "Ole Faurholt Rasmussen", title: "Accountant", email: "or@nicholaisen.dk", image: "/images/Medarbejder/Ole Faurholt Rasmussen.jpeg" },
-  { name: "Andreas Wrona", title: "Financial Controller", email: "aw@nicholaisen.dk", image: "/images/Medarbejder/Andreas Wrona.jpg" },
-];
-
-function ContactRow({
-  icon,
-  label,
-  children,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="flex items-start gap-4">
-      <span className="mt-1 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-paper)] text-[var(--color-navy-900)]">
-        {icon}
-      </span>
-      <div>
-        <p className="text-eyebrow">{label}</p>
-        <p className="mt-1 text-[1rem] leading-snug text-[var(--color-ink-700)]">{children}</p>
-      </div>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }

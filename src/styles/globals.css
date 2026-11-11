@@ -21,13 +21,20 @@
   --color-navy-100: #e8eff5;    /* Very light blue */
 
   /* Accent — Orange (SPOT color per brand book) */
-  --color-accent: #c0601a;      /* Orange */
-  --color-accent-900: #5c2e0a;
-  --color-accent-700: #8c4712;
-  --color-accent-500: #c0601a;
-  --color-accent-300: #e8a06a;
-  --color-accent-200: #f2c8a0;
-  --color-accent-100: #faf0e6;
+  --color-accent: #c0601a;      /* Orange — CTAs and spot highlights */
+  --color-accent-900: #5c2e0a;  /* Very dark orange */
+  --color-accent-700: #8c4712;  /* Dark orange */
+  --color-accent-600: #a35316;  /* Hover orange (darker) */
+
+  /* Steel blue tones — used for muted text and borders (matches bundle var(--color-accent-N) usage) */
+  --color-accent-500: #436384;  /* Steel Blue — muted secondary text */
+  --color-accent-400: #7997b4;  /* Mid blue — light borders, dividers */
+  --color-accent-300: #beccda;  /* Light blue — form borders, subtle dividers */
+  --color-accent-200: #dce5ed;  /* Very light blue — card backgrounds */
+  --color-accent-100: #f0f4f7;  /* Near white — hover backgrounds */
+
+  /* Spot alias for orange (matches bundle's var(--color-spot)) */
+  --color-spot: #c0601a;
 
   /* Warm neutrals */
   --color-tan: #dcd5c2;

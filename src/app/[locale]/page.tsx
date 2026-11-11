@@ -1,11 +1,10 @@
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { EntryTabs } from "@/components/sections/EntryTabs";
-import { InfoCardRow } from "@/components/sections/InfoCardRow";
-import { SolutionTabs } from "@/components/sections/SolutionTabs";
-import { IndustryStrip } from "@/components/sections/IndustryStrip";
-import { CaseSpotlight } from "@/components/sections/CaseSpotlight";
-import { InsightGrid } from "@/components/sections/InsightGrid";
-import { CtaBand } from "@/components/sections/CtaBand";
+import { TracksCarousel } from "@/components/sections/TracksCarousel";
+import { IndustriesSection } from "@/components/sections/IndustriesSection";
+import { ScaleTiles } from "@/components/sections/ScaleTiles";
+import { FeaturedCases } from "@/components/sections/FeaturedCases";
+import { TimelineSection } from "@/components/sections/TimelineSection";
 
 export default async function HomePage({
   params,
@@ -18,12 +17,11 @@ export default async function HomePage({
     <>
       <HeroSplit />
       <EntryTabs />
-      <InfoCardRow />
-      <SolutionTabs locale={locale} />
-      <IndustryStrip locale={locale} />
-      <CaseSpotlight locale={locale} />
-      <InsightGrid locale={locale} />
-      <CtaBand locale={locale} />
+      <TracksCarousel />
+      <IndustriesSection />
+      <ScaleTiles />
+      <FeaturedCases />
+      <TimelineSection />
     </>
   );
 }

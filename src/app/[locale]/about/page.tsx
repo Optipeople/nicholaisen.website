@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
-import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { PageHero } from "@/components/sections/PageHero";
-import { CtaBand } from "@/components/sections/CtaBand";
-import { site } from "@/lib/site";
-import { buildMetadata } from "@/lib/seo";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+import { TimelineSection } from "@/components/sections/TimelineSection";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "about.meta" });
-  return buildMetadata({ title: t("title"), description: t("description"), path: "/about" });
-}
+export const metadata: Metadata = {
+  title: "About Nicholaisen — 33 years on the customer's side",
+  description: "Independent of brands, responsible for the result. Helping manufacturers produce more for less since 1993.",
+};
 
 export default async function AboutPage({
   params,
@@ -25,104 +14,467 @@ export default async function AboutPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "about" });
-
-  const milestones = [
-    { year: t("history.1972Year"), title: t("history.1972Title"), description: t("history.1972Desc") },
-    { year: t("history.1990sYear"), title: t("history.1990sTitle"), description: t("history.1990sDesc") },
-    { year: t("history.2010sYear"), title: t("history.2010sTitle"), description: t("history.2010sDesc") },
-    { year: t("history.todayYear"), title: t("history.todayTitle"), description: t("history.todayDesc") },
-  ];
-
-  const principles = [
-    { title: t("principles.dataTitle"), description: t("principles.dataDesc") },
-    { title: t("principles.specificTitle"), description: t("principles.specificDesc") },
-    { title: t("principles.longTitle"), description: t("principles.longDesc") },
-  ];
 
   return (
-    <>
-      <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} lede={t("hero.lede")} align="wide" />
+    <main>
+      {/* Hero */}
+      <section style={{ position: "relative", color: "#fff", textAlign: "center", minHeight: "480px", display: "flex", alignItems: "center" }}>
+        <div style={{ position: "absolute", inset: 0 }}>
+          <Image
+            src="/images/cd0e2bbe-815b-4ab6-adfd-8b1fd54514c3.png"
+            alt="The Nicholaisen team"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: "cover", objectPosition: "60% 40%" }}
+          />
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "color-mix(in srgb, #003050 62%, transparent)",
+            pointerEvents: "none",
+          }}
+        />
+        <div
+          style={{
+            position: "relative",
+            maxWidth: "1320px",
+            width: "100%",
+            margin: "0 auto",
+            padding: "clamp(80px,11vw,150px) clamp(20px,5vw,64px) clamp(64px,7vw,96px)",
+            boxSizing: "border-box",
+          }}
+        >
+          <h1
+            style={{
+              fontWeight: 500,
+              fontSize: "clamp(40px,5.6vw,80px)",
+              lineHeight: 1.06,
+              letterSpacing: "-0.025em",
+              margin: "0 auto",
+              maxWidth: "18ch",
+            }}
+          >
+            33 years on the customer&apos;s side
+          </h1>
+          <p
+            style={{
+              fontSize: "clamp(17px,1.5vw,21px)",
+              lineHeight: 1.55,
+              maxWidth: "58ch",
+              margin: "20px auto 0",
+            }}
+          >
+            Independent of brands, responsible for the result — helping manufacturers produce more for less, from the first machine to a complete factory.
+          </p>
+        </div>
+      </section>
 
-      <Section tone="paper" size="md">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center lg:gap-20">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[var(--color-paper-dark)]">
-              <Image src="/images/hero-mdf.jpg" alt="" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+      {/* About us */}
+      <section
+        style={{
+          maxWidth: "1320px",
+          margin: "0 auto",
+          padding: "112px clamp(20px,5vw,64px) 0",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,340px),1fr))",
+          gap: "48px clamp(32px,5vw,96px)",
+          alignItems: "center",
+          boxSizing: "border-box",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              fontSize: "13px",
+              fontWeight: 600,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase" as const,
+              color: "var(--color-accent-500)",
+            }}
+          >
+            <span style={{ flex: "0 0 24px", height: "2px", background: "var(--color-spot)", display: "block" }} />
+            About us
+          </span>
+          <h2
+            style={{
+              fontWeight: 500,
+              fontSize: "clamp(34px,4vw,56px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              margin: 0,
+            }}
+          >
+            We answer for the result — not the machine
+          </h2>
+          <p style={{ fontSize: "18px", lineHeight: 1.65, margin: 0 }}>
+            Since 1993 Nicholaisen has helped manufacturers in wood, panel furniture and doors &amp; windows produce more for less. We are not tied to one brand, so every recommendation starts from your product, your process and your business.
+          </p>
+          <p style={{ fontSize: "18px", lineHeight: 1.65, margin: 0 }}>
+            From strategy and investment decisions to machines, complete production lines and the data that keeps them performing — one partner, responsible all the way through.
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "12px" }}>
+            <Link
+              href="/services"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                padding: "13px 22px",
+                background: "var(--color-accent)",
+                color: "#fff",
+                borderRadius: "4px",
+                fontSize: "16px",
+                textDecoration: "none",
+              }}
+            >
+              Our solutions
+            </Link>
+            <Link
+              href="/cases"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                padding: "12px 22px",
+                border: "1px solid var(--color-accent-300)",
+                borderRadius: "4px",
+                fontSize: "16px",
+                textDecoration: "none",
+              }}
+            >
+              See our cases
+            </Link>
+          </div>
+        </div>
+        <div
+          style={{
+            aspectRatio: "16/10",
+            borderRadius: "16px",
+            overflow: "hidden",
+            background: "var(--color-accent-200)",
+            position: "relative",
+          }}
+        >
+          <Image
+            src="/images/b7866c3e-d6f5-4b27-bc78-a330425c278f.jpg"
+            alt="Wood frames in production"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </section>
+
+      {/* Values */}
+      <section
+        style={{
+          maxWidth: "1320px",
+          margin: "0 auto",
+          padding: "112px clamp(20px,5vw,64px) 0",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,340px),1fr))",
+          gap: "48px clamp(32px,5vw,96px)",
+          alignItems: "center",
+          boxSizing: "border-box",
+        }}
+      >
+        <div
+          style={{
+            aspectRatio: "16/10",
+            borderRadius: "16px",
+            overflow: "hidden",
+            background: "var(--color-accent-200)",
+            position: "relative",
+          }}
+        >
+          <Image
+            src="/images/61e50172-53f0-4f2c-9750-01df24c5286f.jpg"
+            alt="Nicholaisen technician on the shop floor"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            style={{ objectFit: "cover", objectPosition: "60% 50%" }}
+          />
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              fontSize: "13px",
+              fontWeight: 600,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase" as const,
+              color: "var(--color-accent-500)",
+            }}
+          >
+            <span style={{ flex: "0 0 24px", height: "2px", background: "var(--color-spot)", display: "block" }} />
+            Our values
+          </span>
+          <h2
+            style={{
+              fontWeight: 500,
+              fontSize: "clamp(34px,4vw,56px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              margin: 0,
+            }}
+          >
+            Three principles guide every project
+          </h2>
+          <p style={{ fontSize: "18px", lineHeight: 1.65, margin: 0 }}>
+            <strong style={{ fontWeight: 600 }}>Free choice of supplier.</strong> We pick the best machine for each part of the job.
+          </p>
+          <p style={{ fontSize: "18px", lineHeight: 1.65, margin: 0 }}>
+            <strong style={{ fontWeight: 600 }}>Measured, not estimated.</strong> Every decision rests on your own numbers.
+          </p>
+          <p style={{ fontSize: "18px", lineHeight: 1.65, margin: 0 }}>
+            <strong style={{ fontWeight: 600 }}>One partner responsible.</strong> From the first calculation to the machine running at spec — and after.
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "12px" }}>
+            <Link
+              href="/contact"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                padding: "13px 22px",
+                background: "var(--color-accent)",
+                color: "#fff",
+                borderRadius: "4px",
+                fontSize: "16px",
+                textDecoration: "none",
+              }}
+            >
+              Get in touch
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <TimelineSection />
+
+      {/* Stats + Group */}
+      <section
+        style={{
+          maxWidth: "1320px",
+          margin: "0 auto",
+          padding: "112px clamp(20px,5vw,64px) 0",
+          boxSizing: "border-box",
+        }}
+      >
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,160px),1fr))",
+            gap: "40px",
+            padding: "40px 0",
+            borderTop: "1px solid var(--color-divider)",
+            borderBottom: "1px solid var(--color-divider)",
+          }}
+        >
+          {[
+            { num: "1993", label: "Founded" },
+            { num: "33 yrs", label: "On the customer's side" },
+            { num: "3", label: "Companies in the group" },
+          ].map((stat) => (
+            <div key={stat.label} style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+              <span
+                style={{
+                  fontWeight: 200,
+                  fontSize: "clamp(40px,4vw,56px)",
+                  lineHeight: 1,
+                  letterSpacing: "-0.04em",
+                  color: "var(--color-accent)",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                {stat.num}
+              </span>
+              <span style={{ fontSize: "15px", color: "var(--color-accent-500)" }}>{stat.label}</span>
             </div>
-            <div>
-              <Eyebrow>{t("what.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 text-display-2 text-balance">{t("what.title")}</h2>
-              <p className="mt-6 text-lede max-w-2xl">{t("what.body1")}</p>
-              <p className="mt-4 text-[1rem] leading-relaxed text-[var(--color-ink-700)] max-w-2xl">{t("what.body2")}</p>
+          ))}
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,340px),1fr))",
+            gap: "24px clamp(32px,6vw,96px)",
+            alignItems: "end",
+            margin: "88px 0 40px",
+          }}
+        >
+          <h2
+            style={{
+              fontWeight: 500,
+              fontSize: "clamp(30px,3.4vw,48px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              margin: 0,
+            }}
+          >
+            The Nicholaisen group
+          </h2>
+          <p
+            style={{
+              fontSize: "18px",
+              lineHeight: 1.6,
+              margin: 0,
+              color: "var(--color-accent-500)",
+              maxWidth: "48ch",
+            }}
+          >
+            Three companies, one partner — close to our customers across Scandinavia and the Baltics.
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,240px),1fr))",
+            gap: "32px 40px",
+          }}
+        >
+          {[
+            { country: "Denmark", name: "Nicholaisen A/S", desc: "Headquarters\nSønderskovvej 17, 8362 Hørning", hq: true },
+            { country: "Sweden", name: "Nicholaisen Sweden AB", desc: "Sales & service", hq: false },
+            { country: "Baltics", name: "Nicholaisen Baltic OÜ", desc: "Sales & service", hq: false },
+          ].map((co) => (
+            <div
+              key={co.name}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                paddingTop: "20px",
+                borderTop: `2px solid ${co.hq ? "var(--color-accent)" : "var(--color-accent-300)"}`,
+              }}
+            >
+              <span
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase" as const,
+                  color: "var(--color-accent-500)",
+                }}
+              >
+                {co.country}
+                {co.hq && (
+                  <span
+                    style={{
+                      fontSize: "11px",
+                      fontWeight: 600,
+                      letterSpacing: "0.08em",
+                      padding: "3px 8px",
+                      borderRadius: "3px",
+                      background: "var(--color-accent)",
+                      color: "#fff",
+                    }}
+                  >
+                    HQ
+                  </span>
+                )}
+              </span>
+              <span style={{ fontSize: "22px", fontWeight: 500, letterSpacing: "-0.01em" }}>{co.name}</span>
+              <span style={{ fontSize: "15.5px", lineHeight: 1.55, color: "var(--color-accent-500)", whiteSpace: "pre-line" as const }}>
+                {co.desc}
+              </span>
             </div>
-          </div>
-        </Container>
-      </Section>
+          ))}
+        </div>
+      </section>
 
-      <Section tone="cream" size="md">
-        <Container>
-          <div className="max-w-2xl">
-            <Eyebrow>{t("how.eyebrow")}</Eyebrow>
-            <h2 className="mt-4 text-display-3 text-balance">{t("how.title")}</h2>
+      {/* Team teaser */}
+      <section
+        style={{
+          maxWidth: "1320px",
+          margin: "0 auto",
+          padding: "112px clamp(20px,5vw,64px)",
+          boxSizing: "border-box",
+        }}
+      >
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,340px),1fr))",
+            gap: "32px clamp(32px,6vw,96px)",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              aspectRatio: "16/10",
+              borderRadius: "16px",
+              overflow: "hidden",
+              background: "var(--color-accent-200)",
+              position: "relative",
+            }}
+          >
+            <Image
+              src="/images/team-nicholaisen.png"
+              alt="The Nicholaisen team"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              style={{ objectFit: "cover", objectPosition: "60% 40%" }}
+            />
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {principles.map((p) => (
-              <div key={p.title} className="rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] p-7">
-                <h3 className="text-lg font-semibold text-[var(--color-ink-900)]">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--color-ink-500)]">{p.description}</p>
-              </div>
-            ))}
+          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+            <span
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                fontSize: "13px",
+                fontWeight: 600,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase" as const,
+                color: "var(--color-accent-500)",
+              }}
+            >
+              <span style={{ flex: "0 0 24px", height: "2px", background: "var(--color-spot)", display: "block" }} />
+              The team
+            </span>
+            <h2
+              style={{
+                fontWeight: 500,
+                fontSize: "clamp(34px,4vw,56px)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.02em",
+                margin: 0,
+              }}
+            >
+              The team behind Nicholaisen
+            </h2>
+            <p style={{ fontSize: "18px", lineHeight: 1.65, margin: 0, color: "var(--color-accent-500)" }}>
+              Specialists in sales, service, data and project management across Denmark, Sweden and the Baltics.
+            </p>
+            <Link
+              href="/contact"
+              style={{
+                alignSelf: "flex-start",
+                marginTop: "8px",
+                padding: "13px 22px",
+                background: "var(--color-accent)",
+                color: "#fff",
+                borderRadius: "4px",
+                fontSize: "16px",
+                textDecoration: "none",
+              }}
+            >
+              Meet the team →
+            </Link>
           </div>
-        </Container>
-      </Section>
-
-      <Section tone="paper" size="md">
-        <Container>
-          <div className="max-w-2xl">
-            <Eyebrow>{t("history.eyebrow")}</Eyebrow>
-            <h2 className="mt-4 text-display-3 text-balance">{t("history.title")}</h2>
-          </div>
-          <ol className="mt-12 grid gap-x-12 gap-y-10 lg:grid-cols-2">
-            {milestones.map((m) => (
-              <li key={m.year} className="grid grid-cols-[auto_1fr] gap-6">
-                <div className="text-eyebrow text-[var(--color-tan-500)]">{m.year}</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-[var(--color-ink-900)]">{m.title}</h3>
-                  <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--color-ink-500)]">{m.description}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </Container>
-      </Section>
-
-      <Section tone="cream" size="md">
-        <Container>
-          <div className="grid gap-12 md:grid-cols-2 lg:gap-20">
-            <div>
-              <Eyebrow>{t("location.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 text-display-3 text-balance">{t("location.title")}</h2>
-              <address className="mt-6 not-italic text-lede leading-relaxed">
-                {site.address.street}<br />
-                {site.address.postal} {site.address.city}<br />
-                {site.address.country}
-              </address>
-              <p className="mt-6 text-base text-[var(--color-ink-700)]">
-                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="hover:text-[var(--color-navy-900)]">{site.phone}</a>
-                <br />
-                <a href={`mailto:${site.email}`} className="hover:text-[var(--color-navy-900)]">{site.email}</a>
-              </p>
-              <p className="mt-6 text-xs text-[var(--color-ink-500)]">CVR {site.cvr}</p>
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-paper-dark)]">
-              <Image src="/images/hero-workshop.jpg" alt="" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <CtaBand locale={locale} />
-    </>
+        </div>
+      </section>
+    </main>
   );
 }
