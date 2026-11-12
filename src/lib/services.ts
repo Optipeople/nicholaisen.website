@@ -91,6 +91,8 @@ export type MdxServicePage = {
 };
 
 export const mdxServicePages: MdxServicePage[] = [
+  // Flow & bottleneck analysis → the Flow Optimization page.
+  { track: "optimization", index: 0, slug: "flow-optimization", mdxSlug: "production-optimization/flow-optimization", image2: "/images/workshop/panel-saw-2.jpg" },
   { track: "projects", index: 0, slug: "custom-production-lines", mdxSlug: "project-solutions/custom-production-lines", image2: "/images/v3/robot-line.png" },
   { track: "projects", index: 1, slug: "automation-integration", mdxSlug: "project-solutions/automation-integration", image2: "/images/v3/robot-sorting.png" },
   { track: "projects", index: 2, slug: "turnkey-projects", mdxSlug: "project-solutions/turnkey-projects", image2: "/images/v3/complete-factory.png" },

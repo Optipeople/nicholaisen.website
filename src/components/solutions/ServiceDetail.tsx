@@ -8,12 +8,13 @@ import { Kicker } from "@/components/ui/Kicker";
 import { LinkButton } from "@/components/ui/Button";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ChartLineIcon, PackageIcon, PlayCircleIcon } from "@/components/ui/icons";
-import { trackHref, type TrackKey } from "@/lib/tracks";
+import { trackHref, tracks, type TrackKey } from "@/lib/tracks";
 import {
   mdxServiceHref,
   mdxServicePages,
   serviceHref,
   servicePageByKey,
+  subPageHref,
   type MdxServicePage,
   type ServicePage,
 } from "@/lib/services";
@@ -250,7 +251,13 @@ export async function ServiceDetail({ page }: { page: ServicePage }) {
         };
       }
       const s = await trackService(r.track, r.index);
-      return { href: trackHref(r.track), image: "/images/v3/cnc-technician.jpg", area: tt(`${r.track}.title`), title: s.title, text: s.copy };
+      return {
+        href: subPageHref(r.track, r.index) ?? trackHref(r.track),
+        image: tracks.find((x) => x.key === r.track)?.services[r.index]?.image ?? "/images/v3/cnc-technician.jpg",
+        area: tt(`${r.track}.title`),
+        title: s.title,
+        text: s.copy,
+      };
     }),
   );
 
@@ -306,17 +313,21 @@ export async function MdxServiceDetail({ page, locale }: { page: MdxServicePage;
   // Proof: the first related case's summary and figures.
   const caseDoc = fm.relatedCases?.[0] ? await getCase(fm.relatedCases[0], locale) : null;
 
-  // Related: the track's other sub-pages, described by their own card copy.
+  // Related: the track's other services, described by their own card copy.
+  // Those with a sub-page link to it; the rest link to the track page.
+  const trackServices = tracks.find((x) => x.key === page.track)!.services;
   const related = await Promise.all(
-    mdxServicePages
-      .filter((p) => p.track === page.track && p !== page)
-      .map(async (p): Promise<Related> => {
-        const s = await trackService(p.track, p.index);
-        const other = await getService(p.mdxSlug, locale);
+    trackServices
+      .map((svc, index) => ({ svc, index }))
+      .filter(({ index }) => index !== page.index)
+      .map(async ({ svc, index }): Promise<Related> => {
+        const s = await trackService(page.track, index);
+        const p = mdxServicePages.find((x) => x.track === page.track && x.index === index);
+        const other = p ? await getService(p.mdxSlug, locale) : null;
         return {
-          href: mdxServiceHref(p),
-          image: p.image ?? other?.frontmatter.heroImage ?? fm.heroImage,
-          area: tt(`${p.track}.title`),
+          href: subPageHref(page.track, index) ?? trackHref(page.track),
+          image: p?.image ?? other?.frontmatter.heroImage ?? svc.image ?? fm.heroImage,
+          area: tt(`${page.track}.title`),
           title: s.title,
           text: s.copy,
         };
@@ -354,7 +365,8 @@ export async function MdxServiceDetail({ page, locale }: { page: MdxServicePage;
           ? { href: `/cases/${caseDoc.frontmatter.slug}`, label: `${tc("read")} →` }
           : { href: "/cases", label: tc("all") },
         related,
-        closing: (tSol.raw(`${page.track}.statement`) as { title: string }).title,
+        // Tracks without a closing statement use their subtitle.
+        closing: tSol.has(`${page.track}.statement.title`) ? tSol(`${page.track}.statement.title`) : tt(`${page.track}.subtitle`),
       }}
     />
   );

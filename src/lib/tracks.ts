@@ -52,7 +52,6 @@ export const tracks: Track[] = [
     { image: "/images/v3/edgebander.jpg", digital: true },
     { image: "/images/v3/saw-blade-shavings.jpg", digital: true },
     { image: "/images/v3/cnc-tool-closeup.jpg" },
-    { image: "/images/v3/cnc-technician.jpg" },
   ]),
   track("machines", "machines", "/images/v3/machine-nkb2812.jpg", "build", [{}, {}, {}, { digital: true }]),
   // Photos from each service's own page (content/services/project-solutions).
