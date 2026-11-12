@@ -257,14 +257,17 @@
       "tiles": {
         "standalone": {
           "title": "Én maskine",
+          "description": "Standard- og specialmaskiner, installeret og forbundet",
           "alt": "Enkeltstående gennemløbs-CNC-maskine"
         },
         "machineRobot": {
           "title": "Maskine med robotcelle",
+          "description": "Automation og robotceller omkring jeres linje",
           "alt": "Robotcelle der sorterer emner i lagerreoler"
         },
         "factory": {
           "title": "En komplet fabrik",
+          "description": "Fra investeringscase og layout til en kørende fabrik",
           "alt": "Team på gulvet i en komplet ny fabrik"
         }
       },

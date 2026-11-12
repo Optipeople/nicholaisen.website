@@ -257,14 +257,17 @@
       "tiles": {
         "standalone": {
           "title": "Viena staklė",
+          "description": "Standartinės ir specialios staklės, sumontuotos ir prijungtos",
           "alt": "Atskiros pratekamosios CNC staklės"
         },
         "machineRobot": {
           "title": "Staklė su robotų cele",
+          "description": "Automatizavimas ir robotų celės aplink jūsų liniją",
           "alt": "Roboto celė rūšiuoja detales į sandėliavimo stelažus"
         },
         "factory": {
           "title": "Visa gamykla",
+          "description": "Nuo investicijų skaičiavimo ir išdėstymo iki veikiančios gamyklos",
           "alt": "Komanda naujos gamyklos ceche"
         }
       },

@@ -257,14 +257,17 @@
       "tiles": {
         "standalone": {
           "title": "One machine",
+          "description": "Standard and custom machines, installed and connected",
           "alt": "Standalone through-feed CNC machine"
         },
         "machineRobot": {
           "title": "Machine with a robot cell",
+          "description": "Automation and robot cells around your line",
           "alt": "Robot cell sorting parts into storage racks"
         },
         "factory": {
           "title": "A complete factory",
+          "description": "From investment case and layout to a running plant",
           "alt": "Team on the floor of a complete new factory"
         }
       },

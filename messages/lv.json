@@ -257,14 +257,17 @@
       "tiles": {
         "standalone": {
           "title": "Viena iekārta",
+          "description": "Standarta un speciālās iekārtas, uzstādītas un pieslēgtas",
           "alt": "Atsevišķa caurplūdes CNC iekārta"
         },
         "machineRobot": {
           "title": "Iekārta ar robotu šūnu",
+          "description": "Automatizācija un robotu šūnas ap jūsu līniju",
           "alt": "Robotu šūna šķiro detaļas noliktavas plauktos"
         },
         "factory": {
           "title": "Visa rūpnīca",
+          "description": "No investīciju aprēķina un izkārtojuma līdz strādājošai rūpnīcai",
           "alt": "Komanda jaunas rūpnīcas cehā"
         }
       },

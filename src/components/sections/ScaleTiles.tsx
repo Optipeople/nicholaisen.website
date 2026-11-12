@@ -26,6 +26,7 @@ export async function ScaleTiles() {
             image={tile.image}
             alt={t(`tiles.${tile.key}.alt`)}
             title={t(`tiles.${tile.key}.title`)}
+            description={t(`tiles.${tile.key}.description`)}
             objectPosition={tile.position}
           />
         ))}

@@ -257,14 +257,17 @@
       "tiles": {
         "standalone": {
           "title": "Üks masin",
+          "description": "Standard- ja eritellimusmasinad, paigaldatud ja ühendatud",
           "alt": "Eraldiseisev läbiviigu-CNC-masin"
         },
         "machineRobot": {
           "title": "Masin koos robotrakuga",
+          "description": "Automaatika ja robotrakud teie liini ümber",
           "alt": "Robotrakk sorteerib detaile laoriiulitesse"
         },
         "factory": {
           "title": "Terve tehas",
+          "description": "Investeeringuarvutusest ja paigutusest töötava tehaseni",
           "alt": "Meeskond uue tehase põrandal"
         }
       },

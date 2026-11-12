@@ -257,14 +257,17 @@
       "tiles": {
         "standalone": {
           "title": "En enskild maskin",
+          "description": "Standard- och specialmaskiner, installerade och uppkopplade",
           "alt": "Fristående genommatnings-CNC-maskin"
         },
         "machineRobot": {
           "title": "Maskin med robotcell",
+          "description": "Automation och robotceller runt er linje",
           "alt": "Robotcell som sorterar detaljer i lagerställ"
         },
         "factory": {
           "title": "En komplett fabrik",
+          "description": "Från investeringskalkyl och layout till en fabrik i drift",
           "alt": "Team på golvet i en komplett ny fabrik"
         }
       },
