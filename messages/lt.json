@@ -1,5 +1,14 @@
 {
   "nav": {
+    "menu": {
+      "solutions": "Sprendimai",
+      "cases": "Atvejai",
+      "company": "Įmonė",
+      "contact": "Susisiekite",
+      "open": "Atidaryti meniu",
+      "close": "Uždaryti meniu",
+      "title": "Meniu"
+    },
     "companyMenu": {
       "about": "Apie mus",
       "team": "Komanda",

@@ -1,5 +1,14 @@
 {
   "nav": {
+    "menu": {
+      "solutions": "Lahendused",
+      "cases": "Juhtumid",
+      "company": "Ettevõte",
+      "contact": "Võtke ühendust",
+      "open": "Ava menüü",
+      "close": "Sulge menüü",
+      "title": "Menüü"
+    },
     "companyMenu": {
       "about": "Meist",
       "team": "Meeskond",

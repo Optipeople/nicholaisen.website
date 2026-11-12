@@ -37,7 +37,11 @@ function buildLocalePath(pathname: string, nextLocale: string): string {
   return `/${nextLocale}${stripped === "/" ? "" : stripped}`;
 }
 
-export function LocaleSwitcher({ onSelect, transparent }: { onSelect?: () => void; transparent?: boolean } = {}) {
+export function LocaleSwitcher({
+  onSelect,
+  transparent,
+  dropUp = false,
+}: { onSelect?: () => void; transparent?: boolean; /** Open the list above the button (bottom of the mobile menu). */ dropUp?: boolean } = {}) {
   const pathname = usePathname();
   const router = useRouter();
   const locale = getLocaleFromPathname(pathname);
@@ -81,7 +85,7 @@ export function LocaleSwitcher({ onSelect, transparent }: { onSelect?: () => voi
       </button>
 
       {open && (
-        <div className="absolute top-full right-[-12px] z-50 pt-3">
+        <div className={dropUp ? "absolute bottom-full left-[-12px] z-50 pb-3" : "absolute top-full right-[-12px] z-50 pt-3"}>
           <div className="flex min-w-[180px] flex-col gap-0.5 rounded-[8px] border border-[var(--color-divider)] bg-white p-1.5 text-[var(--color-text)] shadow-[0_16px_40px_color-mix(in_srgb,#003050_16%,transparent)]">
             {routing.locales.map((l) => (
               <button

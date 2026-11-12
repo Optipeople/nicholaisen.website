@@ -1,146 +1,129 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Menu, X, ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import { primaryNav } from "@/lib/nav";
-import { tracks } from "@/lib/tracks";
+import { LinkRow } from "@/components/ui/LinkRow";
 import { LinkButton } from "@/components/ui/Button";
+import { ChevronDownIcon } from "@/components/ui/icons";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
+import { companyItems } from "@/lib/nav";
+import { tracks } from "@/lib/tracks";
+import { cn } from "@/lib/cn";
 
-export function MobileNav() {
+const rowClass =
+  "flex w-full cursor-pointer items-center justify-between border-b border-[var(--color-divider)] py-4 text-left text-[18px] leading-[1.55] font-medium text-[var(--color-text)]";
+
+/**
+ * Menu for narrow screens (below 900px): a white panel with the same items,
+ * rows and button as the desktop header and its dropdowns.
+ */
+export function MobileNav({ transparent = false }: { transparent?: boolean }) {
   const [open, setOpen] = useState(false);
-  const t = useTranslations("nav");
+  const [section, setSection] = useState<"solutions" | "company" | null>("solutions");
+  const t = useTranslations("nav.menu");
+  const tc = useTranslations("nav.companyMenu");
   const tt = useTranslations("home.tracks.items");
-  const trackKeyOf = (href: string) => tracks.find((tr) => tr.href === href)?.key;
-
-  const navLabel = (section: { href: string; title: string }) => {
-    if (section.title === "Solutions") return t("services");
-    if (section.href === "/industries") return t("industries");
-    if (section.href === "/cases") return t("cases");
-    if (section.href === "/insights") return t("insights");
-    if (section.title === "Company") return t("about");
-    return section.title;
-  };
+  const te = useTranslations("home.entry");
+  const pathname = usePathname();
+  const onCases = /^(\/[a-z]{2})?\/cases(\/|$)/.test(pathname);
+  const close = () => setOpen(false);
+  const toggle = (s: "solutions" | "company") => setSection((cur) => (cur === s ? null : s));
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger
-        className="inline-flex size-10 items-center justify-center rounded-md text-[var(--color-navy-900)] hover:bg-[var(--color-paper-dark)] transition-colors"
-        aria-label="Open menu"
+        aria-label={t("open")}
+        className="inline-flex size-11 cursor-pointer items-center justify-center"
+        style={{ color: transparent ? "#fff" : "var(--color-text)" }}
       >
-        <Menu className="size-5" />
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden>
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-50 bg-[var(--color-navy-950)]/40 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
-        <Dialog.Content className="fixed inset-y-0 right-0 z-50 w-full max-w-md overflow-y-auto bg-[var(--color-cream-50)] p-6 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right">
-          <div className="flex items-center justify-between">
-            <Dialog.Title className="text-lg font-semibold text-[var(--color-navy-900)]">
-              Menu
-            </Dialog.Title>
-            <Dialog.Close
-              className="inline-flex size-10 items-center justify-center rounded-md text-[var(--color-navy-900)] hover:bg-[var(--color-paper-dark)]"
-              aria-label="Close menu"
-            >
-              <X className="size-5" />
+        <Dialog.Overlay className="fixed inset-0 z-50" style={{ background: "color-mix(in srgb, #003050 40%, transparent)" }} />
+        <Dialog.Content
+          aria-describedby={undefined}
+          className="fixed inset-y-0 right-0 z-50 flex w-full max-w-[420px] flex-col overflow-y-auto bg-white text-[var(--color-text)] shadow-[0_16px_40px_color-mix(in_srgb,#003050_16%,transparent)]"
+        >
+          <Dialog.Title className="sr-only">{t("title")}</Dialog.Title>
+
+          {/* Same top row as the header */}
+          <div className="flex items-center justify-between border-b border-[var(--color-divider)] px-[clamp(20px,5vw,32px)] py-[22px]">
+            <Link href="/" onClick={close} aria-label="Nicholaisen" className="block">
+              <Image src="/brand/logo-navy.png" alt="Nicholaisen" width={472} height={190} style={{ height: "48px", width: "auto" }} />
+            </Link>
+            <Dialog.Close aria-label={t("close")} className="inline-flex size-11 cursor-pointer items-center justify-center text-[var(--color-text)]">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden>
+                <path d="M6 6l12 12M18 6 6 18" />
+              </svg>
             </Dialog.Close>
           </div>
 
-          <nav className="mt-8 space-y-2">
-            {primaryNav.map((section) => {
-              const sub = section.categories
-                ? section.categories.flatMap((c) => c.items)
-                : section.items;
+          <nav className="flex flex-col px-[clamp(20px,5vw,32px)] pt-2">
+            {/* Solutions — same rows as the desktop "Find a service" dropdown */}
+            <button type="button" aria-expanded={section === "solutions"} onClick={() => toggle("solutions")} className={rowClass}>
+              {t("solutions")}
+              <Chevron open={section === "solutions"} />
+            </button>
+            {section === "solutions" ? (
+              <div onClick={close} className="flex flex-col gap-1 pt-5 pb-3">
+                <p className="text-eyebrow m-0">{te("findService")}</p>
+                <div className="flex flex-col">
+                  {tracks.map((track) => (
+                    <LinkRow key={track.key} href={track.href} title={tt(`${track.key}.title`)} description={tt(`${track.key}.subtitle`)} />
+                  ))}
+                </div>
+              </div>
+            ) : null}
 
-              if (!sub || sub.length === 0) {
-                return (
+            <Link href="/cases" onClick={close} className={rowClass}>
+              <span className="border-b-2 pb-0.5" style={{ borderColor: onCases ? "var(--color-spot)" : "transparent" }}>
+                {t("cases")}
+              </span>
+            </Link>
+
+            {/* Company — same items as the desktop dropdown */}
+            <button type="button" aria-expanded={section === "company"} onClick={() => toggle("company")} className={rowClass}>
+              {t("company")}
+              <Chevron open={section === "company"} />
+            </button>
+            {section === "company" ? (
+              <div className="flex flex-col gap-0.5 py-2">
+                {companyItems.map((item) => (
                   <Link
-                    key={section.href}
-                    href={section.href as "/"}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-md px-4 py-3 text-base font-medium text-[var(--color-ink-900)] hover:bg-[var(--color-paper-dark)]"
+                    key={item.href}
+                    href={item.href}
+                    onClick={close}
+                    className="rounded-[6px] px-4 py-3.5 text-[16px] font-medium text-[var(--color-text)] hover:bg-[var(--color-accent-100)] hover:text-[var(--color-text)]"
                   >
-                    {navLabel(section)}
+                    {item.key ? tc(item.key) : item.title}
                   </Link>
-                );
-              }
-
-              return (
-                <details key={section.href} className="group rounded-md">
-                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 text-base font-medium text-[var(--color-ink-900)] hover:bg-[var(--color-paper-dark)]">
-                    <Link
-                      href={section.href as "/"}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setOpen(false);
-                      }}
-                    >
-                      {navLabel(section)}
-                    </Link>
-                    <ChevronDown className="size-4 transition-transform group-open:rotate-180" />
-                  </summary>
-                  <div className="space-y-1 px-2 pb-2">
-                    {section.categories
-                      ? section.categories.map((cat) => (
-                          <div key={cat.href} className="mt-2">
-                            <Link
-                              href={cat.href as "/"}
-                              onClick={() => setOpen(false)}
-                              className="block rounded-md px-3 py-2 text-sm font-semibold text-[var(--color-navy-900)]"
-                            >
-                              {cat.key
-                                ? t(`servicesMenu.${cat.key}.title` as any)
-                                : cat.title}
-                            </Link>
-                            <ul className="space-y-0.5">
-                              {cat.items.map((item) => (
-                                <li key={item.href}>
-                                  <Link
-                                    href={item.href as "/"}
-                                    onClick={() => setOpen(false)}
-                                    className="block rounded-md px-5 py-2 text-sm text-[var(--color-ink-700)] hover:bg-[var(--color-paper-dark)]"
-                                  >
-                                    {item.key
-                                      ? t(`servicesMenu.${item.key}.title` as any)
-                                      : item.title}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))
-                      : sub.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href as "/"}
-                            onClick={() => setOpen(false)}
-                            className="block rounded-md px-4 py-2 text-sm text-[var(--color-ink-700)] hover:bg-[var(--color-paper-dark)]"
-                          >
-                            {trackKeyOf(item.href)
-                              ? tt(`${trackKeyOf(item.href)}.title`)
-                              : section.title === "Company" && item.key
-                                ? t(`companyMenu.${item.key}` as any)
-                                : (item as any).key
-                                ? t(`industriesMenu.${(item as any).key}.title` as any)
-                                : item.title}
-                          </Link>
-                        ))}
-                  </div>
-                </details>
-              );
-            })}
+                ))}
+              </div>
+            ) : null}
           </nav>
 
-          <div className="mt-8 border-t border-[var(--color-ink-300)]/30 pt-6 space-y-4">
-            <LocaleSwitcher onSelect={() => setOpen(false)} />
-            <LinkButton href="/contact" variant="primary" size="md" className="w-full" withArrow>
-              {t("cta")}
+          <div className="mt-auto flex items-center justify-between gap-5 border-t border-[var(--color-divider)] px-[clamp(20px,5vw,32px)] py-6">
+            <LocaleSwitcher onSelect={close} dropUp />
+            <LinkButton href="/contact" variant="solid" size="panel" className="px-5 text-[15px] font-medium">
+              {t("contact")}
             </LinkButton>
           </div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
+  );
+}
+
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <span aria-hidden className={cn("flex text-[var(--color-accent)] transition-transform duration-200", open && "rotate-180")}>
+      <ChevronDownIcon size={18} strokeWidth={1.75} />
+    </span>
   );
 }

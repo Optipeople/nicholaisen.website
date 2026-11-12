@@ -26,6 +26,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
   const tt = useTranslations("home.tracks.items");
   const te = useTranslations("home.entry");
   const tn = useTranslations("nav.companyMenu");
+  const tm = useTranslations("nav.menu");
   const pathname = usePathname();
   // Underline "Solutions" while on a track page, as in the design.
   const onTrack = tracks.some((t) => pathname === t.href || pathname.endsWith(t.href));
@@ -64,7 +65,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
             }}
             style={triggerStyle("solutions")}
           >
-            Solutions <ChevronDown />
+            {tm("solutions")} <ChevronDown />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content
             style={{
@@ -125,7 +126,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
                 borderBottom: `2px solid ${onCases ? "var(--color-spot)" : "transparent"}`,
               }}
             >
-              Cases
+              {tm("cases")}
             </Link>
           </NavigationMenu.Link>
         </NavigationMenu.Item>
@@ -138,7 +139,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
             }}
             style={triggerStyle("company")}
           >
-            Company <ChevronDown />
+            {tm("company")} <ChevronDown />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content
             style={{

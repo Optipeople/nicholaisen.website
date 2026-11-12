@@ -1,5 +1,14 @@
 {
   "nav": {
+    "menu": {
+      "solutions": "Lösningar",
+      "cases": "Case",
+      "company": "Företaget",
+      "contact": "Kontakta oss",
+      "open": "Öppna menyn",
+      "close": "Stäng menyn",
+      "title": "Meny"
+    },
     "companyMenu": {
       "about": "Om oss",
       "team": "Teamet",

@@ -26,7 +26,13 @@ export type Track = {
   services: TrackService[];
 };
 
-const track = (key: TrackKey, slug: string, image: string, stage: Track["stage"], services: TrackService[]): Track => ({
+const track = (
+  key: TrackKey,
+  slug: string,
+  image: string,
+  stage: Track["stage"],
+  services: TrackService[],
+): Track => ({
   key,
   slug,
   href: `/services/${slug}`,
@@ -43,10 +49,10 @@ export const tracks: Track[] = [
     { image: "/images/v3/saw-blade-shavings.jpg" },
   ]),
   track("optimization", "production-optimization", "/images/v3/line-signal.avif", "optimize", [
-    { digital: true },
-    { digital: true },
-    {},
-    {},
+    { image: "/images/v3/edgebander.jpg", digital: true },
+    { image: "/images/v3/saw-blade-shavings.jpg", digital: true },
+    { image: "/images/v3/cnc-tool-closeup.jpg" },
+    { image: "/images/v3/cnc-technician.jpg" },
   ]),
   track("machines", "machines", "/images/v3/machine-nkb2812.jpg", "build", [{}, {}, {}, { digital: true }]),
   track("projects", "project-solutions", "/images/v3/robot-line.png", "build", [{}, {}, { digital: true }]),

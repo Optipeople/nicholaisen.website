@@ -1,5 +1,14 @@
 {
   "nav": {
+    "menu": {
+      "solutions": "Risinājumi",
+      "cases": "Klientu stāsti",
+      "company": "Uzņēmums",
+      "contact": "Sazināties",
+      "open": "Atvērt izvēlni",
+      "close": "Aizvērt izvēlni",
+      "title": "Izvēlne"
+    },
     "companyMenu": {
       "about": "Par mums",
       "team": "Komanda",

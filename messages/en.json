@@ -1,5 +1,14 @@
 {
   "nav": {
+    "menu": {
+      "solutions": "Solutions",
+      "cases": "Cases",
+      "company": "Company",
+      "contact": "Contact us",
+      "open": "Open menu",
+      "close": "Close menu",
+      "title": "Menu"
+    },
     "companyMenu": {
       "about": "About us",
       "team": "The team",

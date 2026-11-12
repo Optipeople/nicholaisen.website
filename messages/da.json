@@ -1,5 +1,14 @@
 {
   "nav": {
+    "menu": {
+      "solutions": "Løsninger",
+      "cases": "Cases",
+      "company": "Virksomheden",
+      "contact": "Kontakt os",
+      "open": "Åbn menu",
+      "close": "Luk menu",
+      "title": "Menu"
+    },
     "companyMenu": {
       "about": "Om os",
       "team": "Teamet",

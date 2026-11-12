@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { MegaNav } from "@/components/layout/MegaNav";
 import { MobileNav } from "@/components/layout/MobileNav";
@@ -12,6 +13,7 @@ export function SiteHeader({ locale }: { locale: string }) {
   // Home page: /<locale> or / (default locale)
   const isHome = pathname === `/${locale}` || pathname === "/";
   const transparent = isHome;
+  const t = useTranslations("nav.menu");
 
   return (
     <header
@@ -65,12 +67,12 @@ export function SiteHeader({ locale }: { locale: string }) {
               whiteSpace: "nowrap",
             }}
           >
-            Contact us
+            {t("contact")}
           </Link>
         </div>
 
         <div className="site-header-mobile">
-          <MobileNav />
+          <MobileNav transparent={transparent} />
         </div>
       </div>
     </header>
