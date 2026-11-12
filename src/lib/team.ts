@@ -47,15 +47,15 @@ export const departments: Department[] = [
   {
     key: "salesBaltic",
     people: [
-      { name: "Siim Türk", role: "salesManager", phone: "+372 5867 6119", photo: "Siim Türk.jpg" },
-      { name: "Søren Jørgensen", role: "businessDevelopmentManager", phone: "+372 509 6780", photo: "Søren Jørgensen.jpeg" },
+      { name: "Siim Türk", role: "salesManager", email: "sit", phone: "+372 5867 6119", photo: "Siim Türk.jpg" },
+      { name: "Søren Jørgensen", role: "businessDevelopmentManager", email: "srj", phone: "+372 509 6780", photo: "Søren Jørgensen.jpeg" },
       { name: "John Tøttrup Christensen", role: "sales", phone: "+372 510 9486", photo: "John Tøttrup Christensen.jpg" },
-      { name: "Andrejus Petrusovas", role: "sales", phone: "+370 605 79720", photo: "Andrejus Petrusovas.jpg" },
+      { name: "Andrejus Petrusovas", role: "sales", email: "anp", phone: "+370 605 79720", photo: "Andrejus Petrusovas.jpg" },
     ],
   },
   {
     key: "salesSweden",
-    people: [{ name: "Erik Nord", role: "sales", phone: "+46 72 70 17 300", photo: "Erik Nord.jpg" }],
+    people: [{ name: "Erik Nord", role: "sales", email: "erik", phone: "+46 72 70 17 300", photo: "Erik Nord.jpg" }],
   },
   {
     key: "innovation",

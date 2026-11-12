@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { tracks } from "@/lib/tracks";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { NewsletterSignup } from "@/components/layout/NewsletterSignup";
+import { FooterShell } from "@/components/layout/FooterShell";
 
 const group = [
   { title: "Nicholaisen A/S", href: "/about/group#denmark" },
@@ -13,10 +14,11 @@ const group = [
 ];
 
 const heading = "mb-2 text-[13px] font-semibold tracking-[0.08em] text-[var(--color-accent-400)] uppercase";
-const columnLink = "text-white/80 hover:text-white";
+const columnLink = "text-white/80 hover:text-white group-data-[light]:text-[var(--color-text)] group-data-[light]:hover:text-[var(--color-accent-500)]";
 
 /** Round outline badge for a social icon. */
-const social = "flex size-10 items-center justify-center rounded-full border border-white/30 text-white";
+const social =
+  "flex size-10 items-center justify-center rounded-full border border-white/30 text-white group-data-[light]:border-[var(--color-accent-300)] group-data-[light]:text-[var(--color-accent)]";
 
 /**
  * Footer: newsletter sign-up, then on desktop the four link columns (brand and
@@ -42,7 +44,8 @@ export async function SiteFooter({ locale }: { locale: string }) {
   ];
   const logo = (
     <Link href="/" aria-label="Nicholaisen — Home" className="block">
-      <Image src="/brand/logo-white.png" alt="Nicholaisen" width={140} height={48} className="block h-12 w-auto" />
+      <Image src="/brand/logo-white.png" alt="Nicholaisen" width={140} height={48} className="block h-12 w-auto group-data-[light]:hidden" />
+      <Image src="/brand/logo-navy.png" alt="Nicholaisen" width={472} height={190} className="hidden h-12 w-auto group-data-[light]:block" />
     </Link>
   );
   const links = [
@@ -56,7 +59,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
     <>
       <FooterCta />
 
-      <footer className="bg-[var(--color-navy-900)] text-white">
+      <FooterShell>
         <div className="site-container pt-[72px] pb-8">
           <NewsletterSignup />
 
@@ -64,16 +67,16 @@ export async function SiteFooter({ locale }: { locale: string }) {
           <div className="mt-14 hidden grid-cols-4 gap-8 text-[15px] leading-[2] md:grid">
             <div>
               <div className="mb-3">{logo}</div>
-              <div className="text-[14px] leading-[1.7] text-[var(--color-accent-300)]">
+              <div className="text-[14px] leading-[1.7] text-[var(--color-accent-300)] group-data-[light]:text-[var(--color-accent-500)]">
                 {site.address.street}
                 <br />
                 {site.address.postal} {site.address.city}, {tc("country")}
                 <br />
-                <a href={`mailto:${site.email}`} className="text-inherit hover:text-white">
+                <a href={`mailto:${site.email}`} className="text-inherit hover:text-white group-data-[light]:hover:text-[var(--color-text)]">
                   {site.email}
                 </a>
                 <br />
-                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="text-inherit hover:text-white">
+                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="text-inherit hover:text-white group-data-[light]:hover:text-[var(--color-text)]">
                   {site.phone}
                 </a>
               </div>
@@ -108,14 +111,14 @@ export async function SiteFooter({ locale }: { locale: string }) {
           <div className="mt-12 flex flex-wrap items-end justify-between gap-x-12 gap-y-8 md:hidden">
             <div className="flex flex-col gap-3">
               {logo}
-              <p className="m-0 text-[14px] leading-[1.7] text-[var(--color-accent-300)]">
+              <p className="m-0 text-[14px] leading-[1.7] text-[var(--color-accent-300)] group-data-[light]:text-[var(--color-accent-500)]">
                 {site.address.street}, {site.address.postal} {site.address.city}, {tc("country")}
                 <br />
-                <a href={`mailto:${site.email}`} className="text-inherit hover:text-white">
+                <a href={`mailto:${site.email}`} className="text-inherit hover:text-white group-data-[light]:hover:text-[var(--color-text)]">
                   {site.email}
                 </a>
                 {" · "}
-                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="text-inherit hover:text-white">
+                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="text-inherit hover:text-white group-data-[light]:hover:text-[var(--color-text)]">
                   {site.phone}
                 </a>
               </p>
@@ -123,7 +126,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
 
             <nav aria-label={tf("sections.company")} className="flex flex-wrap gap-x-7 gap-y-2 text-[15px]">
               {links.map((l) => (
-                <Link key={l.href} href={l.href} className="text-white/80 hover:text-white">
+                <Link key={l.href} href={l.href} className={columnLink}>
                   {l.title}
                 </Link>
               ))}
@@ -131,7 +134,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t md:mt-14 border-white/15 pt-5 text-[14px] text-[var(--color-accent-300)]">
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t md:mt-14 border-white/15 pt-5 text-[14px] text-[var(--color-accent-300)] group-data-[light]:text-[var(--color-accent-500)]">
             <span>
               © {new Date().getFullYear()} Nicholaisen A/S · CVR {site.cvr}
             </span>
@@ -159,7 +162,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
             </div>
           </div>
         </div>
-      </footer>
+      </FooterShell>
     </>
   );
 }

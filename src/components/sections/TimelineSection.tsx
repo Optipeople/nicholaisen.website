@@ -74,7 +74,7 @@ export function TimelineSection({ className }: { className?: string }) {
       className={cn("overflow-hidden text-white", className)}
       style={{ background: "linear-gradient(160deg, var(--color-accent) 0%, var(--color-accent-900) 100%)" }}
     >
-      <div className="site-container pt-[72px] pb-14">
+      <div className="site-container pt-14 pb-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <span className="mb-4 block text-[14px] font-bold tracking-[0.14em] text-[var(--color-spot)]">
@@ -93,14 +93,19 @@ export function TimelineSection({ className }: { className?: string }) {
         </div>
 
         <div
-          className="mt-2 overflow-x-auto px-[clamp(20px,5vw,64px)] pt-[88px] pb-10"
-          style={{ marginInline: "calc(-1 * clamp(20px, 5vw, 64px))", scrollbarWidth: "thin" }}
+          className="mt-2 overflow-x-auto px-[clamp(20px,5vw,64px)]"
+          style={{
+            marginInline: "calc(-1 * clamp(20px, 5vw, 64px))",
+            scrollbarWidth: "thin",
+            // Room for the labels above and below the path: they wrap onto more lines on narrower screens.
+            paddingBlock: "max(92px, calc(140px - 3.5vw))",
+          }}
         >
           <div
-            className="relative mx-auto aspect-[1640/640] w-full min-w-[640px] [container-type:inline-size]"
-            style={{ maxWidth: "max(900px, calc((100vh - 360px) * 2.5625))" }}
+            // Only the band around the path (y 140–500 of the drawing); labels sit in the padding above and below.
+            className="relative mx-auto aspect-[1640/360] w-full max-w-[1040px] min-w-[640px] [container-type:inline-size]"
           >
-            <svg viewBox="0 0 1640 640" className="absolute inset-0 h-full w-full overflow-visible" aria-hidden>
+            <svg viewBox="0 140 1640 360" className="absolute inset-0 h-full w-full overflow-visible" aria-hidden>
               <path d={PATH_D} fill="none" stroke="var(--color-accent-600)" strokeWidth="3" strokeLinejoin="round" />
               <path
                 ref={pathRef}
@@ -157,7 +162,8 @@ export function TimelineSection({ className }: { className?: string }) {
                   className="absolute w-[20cqw] text-center"
                   style={{
                     left: `${((cx / 1640) * 100).toFixed(3)}%`,
-                    ...(up ? { bottom: "74.375%" } : { top: "74.375%" }),
+                    // Just above the upper circles / below the lower ones (y 164 and 476 of the drawing).
+                    ...(up ? { bottom: "93.333%" } : { top: "93.333%" }),
                     transform: `translateX(-50%) ${on ? "translateY(0)" : up ? "translateY(10px)" : "translateY(-10px)"}`,
                     opacity: on ? 1 : 0.12,
                     transition: "opacity 500ms ease, transform 500ms ease",

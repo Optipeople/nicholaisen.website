@@ -7,6 +7,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 /**
  * Newsletter sign-up at the top of the footer: an e-mail field and a button.
+ * In the white homepage footer it sits in its own navy box.
  * Posts to /api/contact, which e-mails the address to us.
  */
 export function NewsletterSignup() {
@@ -33,7 +34,7 @@ export function NewsletterSignup() {
   };
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] items-center gap-x-12 gap-y-6 border-b border-white/15 pb-12">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] items-center gap-x-12 gap-y-6 border-b border-white/15 pb-12 group-data-[light]:rounded-[12px] group-data-[light]:border-b-0 group-data-[light]:bg-[var(--color-navy-900)] group-data-[light]:px-[clamp(24px,4vw,48px)] group-data-[light]:py-[clamp(28px,4vw,44px)]">
       <div className="flex flex-col gap-2">
         <span className="text-[13px] font-semibold tracking-[0.08em] text-[var(--color-accent-400)] uppercase">{t("title")}</span>
         <p className="m-0 text-[18px] leading-[1.5] text-white">{t("text")}</p>
