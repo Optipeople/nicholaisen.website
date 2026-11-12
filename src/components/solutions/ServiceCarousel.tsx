@@ -37,7 +37,8 @@ export function ServiceCarousel({
     const measure = () => {
       const el = scroller.current;
       if (!el) return;
-      const perView = Math.max(1, Math.round((el.clientWidth + GAP) / step()));
+      // Only whole cards count as in view, so a cut-off card keeps the controls.
+      const perView = Math.max(1, Math.floor((el.clientWidth + GAP) / step() + 0.02));
       setPages(Math.max(1, cards.length - perView + 1));
     };
     measure();
@@ -88,8 +89,8 @@ export function ServiceCarousel({
         ))}
       </div>
 
-      {/* Nothing to scroll when every card fits. */}
-      {pages > 1 ? (
+      {/* A single card has nothing to scroll to. */}
+      {cards.length > 1 ? (
       <div className="mt-10 grid grid-cols-[1fr_auto_1fr] items-center">
         <span />
         <div className="flex items-center gap-2.5">
@@ -128,7 +129,10 @@ export function ServiceCarousel({
           </button>
         </div>
       </div>
-      ) : null}
+      ) : (
+        // Keep the section's spacing without the controls.
+        <div aria-hidden className="mt-10 h-14" />
+      )}
     </>
   );
 }

@@ -341,7 +341,8 @@ export async function MdxServiceDetail({ page, locale }: { page: MdxServicePage;
       data={{
         image: page.image ?? fm.heroImage,
         image2: page.image2,
-        kicker: self.title,
+        // Above a headline with the same name, show the area instead.
+        kicker: self.title.toLowerCase() === fm.title.toLowerCase() ? tt(`${page.track}.title`) : self.title,
         area: tt(`${page.track}.title`),
         areaHref: trackHref(page.track),
         headline: fm.title,

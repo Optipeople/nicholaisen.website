@@ -651,7 +651,7 @@
         },
         "services": [
           {
-            "title": "Flow & bottleneck analysis",
+            "title": "Flow optimization",
             "copy": "Measured on the line, so you know whether to cut costs or remove a bottleneck."
           }
         ]
