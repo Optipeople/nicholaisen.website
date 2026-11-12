@@ -24,7 +24,8 @@ type TabKey = "services" | "industries" | "call";
 
 /**
  * "Start here" card overlapping the bottom of the homepage hero. Services is open
- * at first; clicking another tab switches to it, clicking the open tab closes it.
+ * at first on wider screens (closed on phones); clicking another tab switches to
+ * it, clicking the open tab closes it.
  */
 export function EntryTabs() {
   const t = useTranslations("home.entry");
@@ -34,6 +35,14 @@ export function EntryTabs() {
   const [open, setOpen] = useState<TabKey | null>("services");
   // The last open tab stays rendered while its options slide shut.
   const [shown, setShown] = useState<TabKey>("services");
+  // Phones start with the box closed. Animations switch on only after that
+  // first adjustment, so the box doesn't visibly fold shut on load.
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 639px)").matches) setOpen(null);
+    const id = requestAnimationFrame(() => setAnimate(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
   const toggle = (value: TabKey) => {
     setOpen((cur) => (cur === value ? null : value));
     setShown(value);
@@ -81,7 +90,7 @@ export function EntryTabs() {
         style={{
           maxWidth: open || fitWidth === null ? "100%" : `${fitWidth}px`,
           // Opening: widen while the options slide down. Closing: fold the options away, then narrow.
-          transition: `max-width 450ms cubic-bezier(0.4, 0, 0.2, 1) ${open ? "0ms" : "300ms"}`,
+          transition: animate ? `max-width 450ms cubic-bezier(0.4, 0, 0.2, 1) ${open ? "0ms" : "300ms"}` : "none",
         }}
       >
         <div
@@ -122,7 +131,7 @@ export function EntryTabs() {
         {/* Options slide open and shut (grid rows 0fr ↔ 1fr). */}
         <div
           inert={!open}
-          className="grid transition-[grid-template-rows,opacity] duration-[450ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+          className={cn("grid", animate && "transition-[grid-template-rows,opacity] duration-[450ms] ease-[cubic-bezier(0.4,0,0.2,1)]")}
           style={{ gridTemplateRows: open ? "1fr" : "0fr", opacity: open ? 1 : 0 }}
         >
           <div className="min-h-0 overflow-hidden">
