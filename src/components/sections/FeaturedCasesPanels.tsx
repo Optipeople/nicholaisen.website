@@ -26,13 +26,14 @@ export function FeaturedCasesPanels({ cases, readLabel }: { cases: FeaturedCase[
     alt: c.title,
     short: String(i + 1).padStart(2, "0"),
     closedTitle: c.shortTitle,
+    // Industry and date sit at the top of the open box.
+    top: <span className="text-panel-kicker">{c.meta}</span>,
     content: (
       <>
-        <span className="text-panel-kicker">{c.meta}</span>
         <h3 className="text-heading-1 m-0">{c.title}</h3>
-        <p className="text-body m-0 line-clamp-3 max-w-[56ch] text-pretty">{c.summary}</p>
+        {/* Kept short: title and two key figures; the full story is on the case page. */}
         <div className="mt-1 flex flex-wrap gap-x-9 gap-y-3">
-          {c.metrics.map((m) => (
+          {c.metrics.slice(0, 2).map((m) => (
             <div key={m.label} className="flex flex-col gap-1">
               <span className="text-[12.5px] leading-[1.55] font-medium tracking-[0.1em] text-[var(--color-accent-300)] uppercase">
                 {m.label}

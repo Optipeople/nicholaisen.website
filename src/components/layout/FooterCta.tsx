@@ -4,11 +4,26 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { LinkButton } from "@/components/ui/Button";
 
-/** Closing call-to-action above the footer. Hidden on the contact page itself, as in the design. */
+/**
+ * Pages that already end with their own call to action, so the shared one
+ * would repeat it: contact, industries, insights, the services overview,
+ * every service sub-page (/services/<track>/<service>) and the LIGNA page.
+ */
+const OWN_CTA = [
+  /^\/contact\/?$/,
+  /^\/industries(\/|$)/,
+  /^\/insights(\/|$)/,
+  /^\/services\/?$/,
+  /^\/services\/[^/]+\/[^/]+\/?$/,
+  /^\/ligna-2026\/?$/,
+];
+
+/** Closing call-to-action above the footer, unless the page ends with its own. */
 export function FooterCta() {
   const t = useTranslations("footerCta");
   const pathname = usePathname();
-  if (/^(\/[a-z]{2})?\/contact\/?$/.test(pathname)) return null;
+  const path = pathname.replace(/^\/(da|sv|et|lt|lv|en)(?=\/|$)/, "") || "/";
+  if (OWN_CTA.some((re) => re.test(path))) return null;
 
   return (
     <section className="bg-white">

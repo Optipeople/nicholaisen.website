@@ -6,34 +6,30 @@ import { tracks } from "@/lib/tracks";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { NewsletterSignup } from "@/components/layout/NewsletterSignup";
 
-
 const group = [
   { title: "Nicholaisen A/S", href: "/about/group#denmark" },
   { title: "Nicholaisen Sweden AB", href: "/about/group#sweden" },
   { title: "Nicholaisen Baltic OÜ", href: "/about/group#baltics" },
 ];
 
+const heading = "mb-2 text-[13px] font-semibold tracking-[0.08em] text-[var(--color-accent-400)] uppercase";
+const columnLink = "text-white/80 hover:text-white";
 
-/** Round outline badge for a social icon (as the LinkedIn link). */
-const socialStyle: React.CSSProperties = {
-  width: "40px",
-  height: "40px",
-  borderRadius: "50%",
-  border: "1px solid rgba(255,255,255,0.3)",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "#fff",
-  textDecoration: "none",
-};
+/** Round outline badge for a social icon. */
+const social = "flex size-10 items-center justify-center rounded-full border border-white/30 text-white";
 
+/**
+ * Footer: newsletter sign-up, then on desktop the four link columns (brand and
+ * contact, solutions, group, company); on phones a compact version (logo,
+ * contact details and four key links). Copyright and social icons below.
+ */
 export async function SiteFooter({ locale }: { locale: string }) {
-  const [tf, tt, tn, tm, tc] = await Promise.all([
+  const [tf, tm, tc, tt, tn] = await Promise.all([
     getTranslations({ locale, namespace: "footer" }),
-    getTranslations({ locale, namespace: "home.tracks.items" }),
-    getTranslations({ locale, namespace: "nav.companyMenu" }),
     getTranslations({ locale, namespace: "nav.menu" }),
     getTranslations({ locale, namespace: "contact.info" }),
+    getTranslations({ locale, namespace: "home.tracks.items" }),
+    getTranslations({ locale, namespace: "nav.companyMenu" }),
   ]);
   const solutions = tracks.map((tr) => ({ title: tt(`${tr.key}.title`), href: tr.href }));
   const company = [
@@ -44,154 +40,118 @@ export async function SiteFooter({ locale }: { locale: string }) {
     { title: tf("company.contact"), href: "/contact" },
     { title: tf("legal.privacy"), href: "/legal/privacy" },
   ];
+  const logo = (
+    <Link href="/" aria-label="Nicholaisen — Home" className="block">
+      <Image src="/brand/logo-white.png" alt="Nicholaisen" width={140} height={48} className="block h-12 w-auto" />
+    </Link>
+  );
+  const links = [
+    { title: tf("company.about"), href: "/about" },
+    { title: tm("cases"), href: "/cases" },
+    { title: tf("company.contact"), href: "/contact" },
+    { title: tf("legal.privacy"), href: "/legal/privacy" },
+  ];
+
   return (
     <>
       <FooterCta />
 
-      {/* Footer */}
-      <footer style={{ background: "var(--color-navy-900)", color: "#fff" }}>
-        <div
-          style={{
-            maxWidth: "1320px",
-            margin: "0 auto",
-            padding: "72px clamp(20px,5vw,64px) 32px",
-          }}
-        >
+      <footer className="bg-[var(--color-navy-900)] text-white">
+        <div className="site-container pt-[72px] pb-8">
           <NewsletterSignup />
 
-          <div
-            style={{
-              marginTop: "56px",
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,200px),1fr))",
-              gap: "32px",
-              fontSize: "15px",
-              lineHeight: 2,
-            }}
-          >
-            {/* Brand column */}
+          {/* Desktop: the four link columns */}
+          <div className="mt-14 hidden grid-cols-4 gap-8 text-[15px] leading-[2] md:grid">
             <div>
-              <Link href="/" aria-label="Nicholaisen — Home" style={{ textDecoration: "none" }}>
-                <Image
-                  src="/brand/logo-white.png"
-                  alt="Nicholaisen"
-                  width={140}
-                  height={48}
-                  style={{ height: "48px", width: "auto", display: "block", marginBottom: "12px" }}
-                />
-              </Link>
-              <div style={{ color: "var(--color-accent-300)", fontSize: "14px", lineHeight: 1.7 }}>
-                {site.address.street}<br />
-                {site.address.postal} {site.address.city}, {tc("country")}<br />
-                <a href={`mailto:${site.email}`} style={{ color: "inherit" }}>{site.email}</a><br />
-                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} style={{ color: "inherit" }}>{site.phone}</a>
+              <div className="mb-3">{logo}</div>
+              <div className="text-[14px] leading-[1.7] text-[var(--color-accent-300)]">
+                {site.address.street}
+                <br />
+                {site.address.postal} {site.address.city}, {tc("country")}
+                <br />
+                <a href={`mailto:${site.email}`} className="text-inherit hover:text-white">
+                  {site.email}
+                </a>
+                <br />
+                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="text-inherit hover:text-white">
+                  {site.phone}
+                </a>
               </div>
             </div>
-
-            {/* Solutions */}
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <span
-                style={{
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  letterSpacing: "0.08em",
-                  color: "var(--color-accent-400)",
-                  marginBottom: "8px",
-                  textTransform: "uppercase",
-                }}
-              >
-                {tf("sections.solutions")}
-              </span>
-              {solutions.map((s) => (
-                <Link key={s.href} href={s.href as "/"} style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}>
-                  {s.title}
+            <div className="flex flex-col">
+              <span className={heading}>{tf("sections.solutions")}</span>
+              {solutions.map((l) => (
+                <Link key={l.href} href={l.href} className={columnLink}>
+                  {l.title}
                 </Link>
               ))}
             </div>
-
-            {/* Group */}
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <span
-                style={{
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  letterSpacing: "0.08em",
-                  color: "var(--color-accent-400)",
-                  marginBottom: "8px",
-                  textTransform: "uppercase",
-                }}
-              >
-                {tf("sections.group")}
-              </span>
-              {group.map((g) => (
-                <Link key={g.title} href={g.href} style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}>
-                  {g.title}
+            <div className="flex flex-col">
+              <span className={heading}>{tf("sections.group")}</span>
+              {group.map((l) => (
+                <Link key={l.title} href={l.href} className={columnLink}>
+                  {l.title}
                 </Link>
               ))}
             </div>
-
-            {/* Company */}
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <span
-                style={{
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  letterSpacing: "0.08em",
-                  color: "var(--color-accent-400)",
-                  marginBottom: "8px",
-                  textTransform: "uppercase",
-                }}
-              >
-                {tf("sections.company")}
-              </span>
-              {company.map((c) => (
-                <Link key={c.title} href={(c.href || "#") as "/"} style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}>
-                  {c.title}
+            <div className="flex flex-col">
+              <span className={heading}>{tf("sections.company")}</span>
+              {company.map((l) => (
+                <Link key={l.href} href={l.href} className={columnLink}>
+                  {l.title}
                 </Link>
               ))}
             </div>
           </div>
 
+          {/* Phones: logo and contact details, key links */}
+          <div className="mt-12 flex flex-wrap items-end justify-between gap-x-12 gap-y-8 md:hidden">
+            <div className="flex flex-col gap-3">
+              {logo}
+              <p className="m-0 text-[14px] leading-[1.7] text-[var(--color-accent-300)]">
+                {site.address.street}, {site.address.postal} {site.address.city}, {tc("country")}
+                <br />
+                <a href={`mailto:${site.email}`} className="text-inherit hover:text-white">
+                  {site.email}
+                </a>
+                {" · "}
+                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="text-inherit hover:text-white">
+                  {site.phone}
+                </a>
+              </p>
+            </div>
+
+            <nav aria-label={tf("sections.company")} className="flex flex-wrap gap-x-7 gap-y-2 text-[15px]">
+              {links.map((l) => (
+                <Link key={l.href} href={l.href} className="text-white/80 hover:text-white">
+                  {l.title}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
           {/* Bottom bar */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              gap: "16px",
-              flexWrap: "wrap",
-              marginTop: "56px",
-              paddingTop: "20px",
-              borderTop: "1px solid rgba(255,255,255,0.15)",
-              fontSize: "14px",
-              color: "var(--color-accent-300)",
-            }}
-          >
-            <span>© {new Date().getFullYear()} Nicholaisen A/S · CVR {site.cvr}</span>
-            {/* Social links */}
-            <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-              <a
-                href="https://www.linkedin.com/company/nicholaisen"
-                aria-label="LinkedIn"
-                rel="noopener noreferrer"
-                target="_blank"
-                style={socialStyle}
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t md:mt-14 border-white/15 pt-5 text-[14px] text-[var(--color-accent-300)]">
+            <span>
+              © {new Date().getFullYear()} Nicholaisen A/S · CVR {site.cvr}
+            </span>
+            <div className="flex items-center gap-2.5">
+              <a href="https://www.linkedin.com/company/nicholaisen" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank" className={social}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect width="4" height="12" x="2" y="9" />
                   <circle cx="4" cy="4" r="2" />
                 </svg>
               </a>
               {/* Instagram and Facebook: not linked yet. */}
-              <span role="img" aria-label="Instagram" style={socialStyle}>
+              <span role="img" aria-label="Instagram" className={social}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                 </svg>
               </span>
-              <span role="img" aria-label="Facebook" style={socialStyle}>
+              <span role="img" aria-label="Facebook" className={social}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>

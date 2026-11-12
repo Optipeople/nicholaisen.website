@@ -31,6 +31,8 @@ export type ExpandingPanel = {
   closedTitle: string;
   /** Content shown at the bottom of an open panel. */
   content: React.ReactNode;
+  /** Optional line at the top of an open panel (e.g. a case's industry and date). */
+  top?: React.ReactNode;
 };
 
 const EASE = "cubic-bezier(.2,.7,.2,1)";
@@ -62,10 +64,12 @@ export function ExpandingPanels({
   const stacked = useStacked();
   // Stacked open panels are as tall as their text needs (measured, so the height can animate).
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const topRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [heights, setHeights] = useState<number[]>([]);
   useEffect(() => {
     if (!stacked) return;
-    const measure = () => setHeights(contentRefs.current.map((el) => Math.max(OPEN_MIN, el?.offsetHeight ?? 0)));
+    const measure = () =>
+      setHeights(contentRefs.current.map((el, i) => Math.max(OPEN_MIN, (el?.offsetHeight ?? 0) + (topRefs.current[i]?.offsetHeight ?? 0))));
     measure();
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
@@ -109,6 +113,27 @@ export function ExpandingPanels({
                     transition: "background 400ms",
                   }}
                 />
+
+                {/* Open state: optional top line */}
+                {panel.top ? (
+                  <div
+                    ref={(el) => {
+                      topRefs.current[i] = el;
+                    }}
+                    aria-hidden={!open}
+                    className={cn(
+                      "absolute top-0 left-0 box-border",
+                      stacked ? "px-5 pt-6" : "px-[clamp(24px,3vw,44px)] pt-[clamp(28px,3vw,44px)]",
+                    )}
+                    style={{
+                      width: stacked ? "100%" : openContentWidth,
+                      opacity: open ? 1 : 0,
+                      transition: `opacity 450ms ease ${open ? "220ms" : "0ms"}`,
+                    }}
+                  >
+                    {panel.top}
+                  </div>
+                ) : null}
 
                 {/* Open state */}
                 <div
