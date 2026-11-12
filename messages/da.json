@@ -781,11 +781,11 @@
             "copy": "Driftstimer, komponenttilstand og effektivitet, per maskine."
           },
           {
-            "title": "Tidlig varsling",
+            "title": "Prædiktiv vedligeholdelse",
             "copy": "Vi reagerer, når effektiviteten begynder at falde — før det bliver til stilstand."
           },
           {
-            "title": "Lavt spild",
+            "title": "Løbende optimering",
             "copy": "Optimeringssoftware på alle maskiner."
           }
         ],

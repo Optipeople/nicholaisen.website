@@ -781,11 +781,11 @@
             "copy": "Running hours, component health and efficiency, per machine."
           },
           {
-            "title": "Early warning",
+            "title": "Predictive maintenance",
             "copy": "We react when efficiency starts to slide — before it becomes standstill."
           },
           {
-            "title": "Low scrap",
+            "title": "Continuous optimization",
             "copy": "Optimisation software on every machine."
           }
         ],
