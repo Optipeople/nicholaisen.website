@@ -1,4 +1,4 @@
-import { DoorIcon, LayersIcon, LogIcon } from "@/components/ui/icons";
+import { DoorIcon, GridIcon, LayersIcon, LogIcon } from "@/components/ui/icons";
 
 /** Industry pages in display order, with their switcher icon. Content lives in content/industries. */
 export const industryPages = [
@@ -6,6 +6,22 @@ export const industryPages = [
   { slug: "panel-furniture", Icon: LayersIcon },
   { slug: "doors-windows", Icon: DoorIcon },
 ] as const;
+
+/**
+ * The four industries shown on the homepage and the industries overview,
+ * with photos; text in messages under `home.industries.items.<key>`.
+ * Plastics & aluminium has no page yet (no `href`).
+ */
+export const industryTiles = [
+  { key: "solidWood", href: "/industries/solid-wood", image: "/images/v3/industry-solid-wood.avif", position: "50% 50%", Icon: LogIcon },
+  { key: "panelFurniture", href: "/industries/panel-furniture", image: "/images/v3/industry-panel-furniture.avif", position: "50% 50%", Icon: LayersIcon },
+  { key: "doorsWindows", href: "/industries/doors-windows", image: "/images/v3/industry-doors-windows.jpg", position: "35% 50%", Icon: DoorIcon },
+  { key: "plasticsAluminium", href: undefined, image: "/images/v3/industry-plastics-aluminium.avif", position: "50% 50%", Icon: GridIcon },
+] as const;
+
+/** Where an industry links: its page, or (no page yet) the contact form with the industry filled in. */
+export const industryHref = (href: string | undefined, title: string) =>
+  href ?? `/contact?topic=other&choice=${encodeURIComponent(title)}`;
 
 export type IndustrySlug = (typeof industryPages)[number]["slug"];
 

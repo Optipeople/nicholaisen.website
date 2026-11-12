@@ -30,6 +30,7 @@ export function MobileNav({ transparent = false }: { transparent?: boolean }) {
   const te = useTranslations("home.entry");
   const pathname = usePathname();
   const onCases = /^(\/[a-z]{2})?\/cases(\/|$)/.test(pathname);
+  const onIndustries = /^(\/[a-z]{2})?\/industries(\/|$)/.test(pathname);
   const close = () => setOpen(false);
   const toggle = (s: "solutions" | "company") => setSection((cur) => (cur === s ? null : s));
 
@@ -81,11 +82,16 @@ export function MobileNav({ transparent = false }: { transparent?: boolean }) {
               </div>
             ) : null}
 
-            <Link href="/cases" onClick={close} className={rowClass}>
-              <span className="border-b-2 pb-0.5" style={{ borderColor: onCases ? "var(--color-spot)" : "transparent" }}>
-                {t("cases")}
-              </span>
-            </Link>
+            {[
+              { href: "/industries", label: te("industries"), active: onIndustries },
+              { href: "/cases", label: t("cases"), active: onCases },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} onClick={close} className={rowClass}>
+                <span className="border-b-2 pb-0.5" style={{ borderColor: item.active ? "var(--color-spot)" : "transparent" }}>
+                  {item.label}
+                </span>
+              </Link>
+            ))}
 
             {/* Company — same items as the desktop dropdown */}
             <button type="button" aria-expanded={section === "company"} onClick={() => toggle("company")} className={rowClass}>

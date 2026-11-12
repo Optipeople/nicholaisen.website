@@ -32,6 +32,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
   const onTrack = tracks.some((t) => pathname === t.href || pathname.endsWith(t.href));
   // Likewise "Cases" on case pages and "Company" on about, team and group.
   const onCases = /^(\/[a-z]{2})?\/cases(\/|$)/.test(pathname);
+  const onIndustries = /^(\/[a-z]{2})?\/industries(\/|$)/.test(pathname);
   const onCompany = /^(\/[a-z]{2})?\/about(\/|$)/.test(pathname);
   const triggers = useRef<Record<string, HTMLButtonElement | null>>({});
   // Open each dropdown under its own trigger, 16px to the left (as in the design).
@@ -112,24 +113,29 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
           </NavigationMenu.Content>
         </NavigationMenu.Item>
 
-        {/* Cases */}
-        <NavigationMenu.Item>
-          <NavigationMenu.Link asChild>
-            <Link
-              href="/cases"
-              style={{
-                color: ink,
-                fontSize: "16px",
-                lineHeight: 1.55,
-                textDecoration: "none",
-                padding: "8px 0",
-                borderBottom: `2px solid ${onCases ? "var(--color-spot)" : "transparent"}`,
-              }}
-            >
-              {tm("cases")}
-            </Link>
-          </NavigationMenu.Link>
-        </NavigationMenu.Item>
+        {/* Industries and Cases: plain links */}
+        {[
+          { href: "/industries", label: te("industries"), active: onIndustries },
+          { href: "/cases", label: tm("cases"), active: onCases },
+        ].map((item) => (
+          <NavigationMenu.Item key={item.href}>
+            <NavigationMenu.Link asChild>
+              <Link
+                href={item.href}
+                style={{
+                  color: ink,
+                  fontSize: "16px",
+                  lineHeight: 1.55,
+                  textDecoration: "none",
+                  padding: "8px 0",
+                  borderBottom: `2px solid ${item.active ? "var(--color-spot)" : "transparent"}`,
+                }}
+              >
+                {item.label}
+              </Link>
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+        ))}
 
         {/* Company */}
         <NavigationMenu.Item value="company">

@@ -8,7 +8,7 @@ import { TextSection } from "@/components/ui/TextSection";
 import { ServiceCarousel } from "@/components/solutions/ServiceCarousel";
 import { RelatedCases } from "@/components/solutions/RelatedCases";
 import { getIndustry, getService, listCases, listIndustries } from "@/content/loader";
-import { industryPages, sortIndustries, splitSections } from "@/lib/industries";
+import { industryHref, industryTiles, splitSections } from "@/lib/industries";
 import { sortCases } from "@/lib/cases";
 import { buildMetadata } from "@/lib/seo";
 
@@ -39,9 +39,12 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
   const doc = await getIndustry(slug, locale);
   if (!doc) notFound();
   const fm = doc.frontmatter;
-  const [t, ts] = await Promise.all([getTranslations("industries"), getTranslations("solutions")]);
+  const [t, ts, th] = await Promise.all([
+    getTranslations("industries"),
+    getTranslations("solutions"),
+    getTranslations("home.industries"),
+  ]);
 
-  const all = sortIndustries(await listIndustries(locale));
   const services = (
     await Promise.all(
       (fm.relevantServices ?? []).map(async (s) => {
@@ -60,15 +63,18 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
       <PhotoHero image={fm.heroImage} alt={fm.title} kicker={fm.eyebrow} title={fm.title} lede={fm.lede} bottom="overlap">
         <HeroIconLinks
           label={t("heroEyebrow")}
-          maxWidth="720px"
+          maxWidth="960px"
           dim={0.72}
           underline
-          items={all.map(({ frontmatter: i }) => ({
-            href: `/industries/${i.slug}`,
-            label: i.title,
-            Icon: industryPages.find((p) => p.slug === i.slug)!.Icon,
-            current: i.slug === fm.slug,
-          }))}
+          items={industryTiles.map((i) => {
+            const label = th(`items.${i.key}.title`);
+            return {
+              href: industryHref(i.href, label),
+              label,
+              Icon: i.Icon,
+              current: i.href === `/industries/${fm.slug}`,
+            };
+          })}
         />
       </PhotoHero>
 
