@@ -45,7 +45,7 @@ export function MachineCatalog({
         <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,240px),1fr))] gap-x-7 gap-y-10">
           {categories.map((c) => (
             <button key={c.key} type="button" onClick={() => setOpenKey(c.key)} className={`${tileClass} cursor-pointer`}>
-              <TileContent tile={c} cutout />
+              <TileContent tile={{ ...c, description: "" }} cutout />
               <span className="-mt-2 text-[15px] font-medium text-[var(--color-accent)]">
                 {labels.see} ({c.machines.length}) →
               </span>

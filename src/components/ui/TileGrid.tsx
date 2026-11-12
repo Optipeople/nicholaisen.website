@@ -66,7 +66,7 @@ export function TileContent({ tile, cutout = false }: { tile: Omit<Tile, "href">
       </div>
       <div>
         <div className="text-[19px] leading-[1.55] font-medium">{tile.title}</div>
-        <div className="text-meta mt-1">{tile.description}</div>
+        {tile.description ? <div className="text-meta mt-1">{tile.description}</div> : null}
       </div>
     </>
   );
