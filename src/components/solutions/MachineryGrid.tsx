@@ -55,6 +55,8 @@ export async function MachineryGrid({
         machines: (machinesByCategory[key] ?? []).map((m) => ({
           id: m.id,
           name: m.name,
+          image: m.image,
+          pdfs: (m.pdfs ?? []).map((pdf) => ({ href: pdf.path, label: pdf.label ? `${pdf.label} (PDF)` : t("pdf") })),
           line: t(`lines.${m.id}`),
           specs: m.specs.map((sp) => ({
             label: t(`labels.${sp.label}`),

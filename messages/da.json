@@ -809,6 +809,7 @@
         "close": "Luk",
         "count": "{count} maskiner",
         "see": "Se maskiner",
+        "pdf": "Produktblad (PDF)",
         "intro": "Leveret af NichoMachines med 3 års garanti. Spørg os, hvilken der passer til jeres produktion.",
         "labels": {
           "cutLength": "Skærelængde",

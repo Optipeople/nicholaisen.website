@@ -811,6 +811,7 @@
         "close": "Sulge",
         "count": "{count} masinat",
         "see": "Vaata masinaid",
+        "pdf": "Tooteleht (PDF)",
         "intro": "Tarnib NichoMachines, 3-aastase garantiiga. Küsige meilt, milline sobib teie tootmisse.",
         "labels": {
           "cutLength": "Lõikepikkus",

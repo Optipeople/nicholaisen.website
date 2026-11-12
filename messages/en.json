@@ -809,6 +809,7 @@
         "close": "Close",
         "count": "{count} machines",
         "see": "See machines",
+        "pdf": "Product sheet (PDF)",
         "intro": "Supplied by NichoMachines, with a 3-year warranty. Ask us which one fits your production.",
         "labels": {
           "cutLength": "Cutting length",
