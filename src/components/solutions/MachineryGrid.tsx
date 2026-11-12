@@ -1,4 +1,6 @@
-import { TileGrid } from "@/components/ui/TileGrid";
+import { getLocale, getTranslations } from "next-intl/server";
+import { MachineCatalog } from "@/components/solutions/MachineCatalog";
+import { localizeValue, machinesByCategory } from "@/lib/machines";
 
 /** Product photos supplied by NichoMachines (loaded from their site, as in the design). */
 const machinery = [
@@ -18,8 +20,8 @@ const machinery = [
 
 export type MachineryKey = (typeof machinery)[number]["key"];
 
-/** "Machinery we deliver" — product cut-outs on white cards. */
-export function MachineryGrid({
+/** "Machinery we deliver" — category cut-outs that open a panel with the category's machines. */
+export async function MachineryGrid({
   title,
   intro,
   items,
@@ -28,12 +30,38 @@ export function MachineryGrid({
   intro: string;
   items: Record<MachineryKey, { title: string; description: string }>;
 }) {
+  const [t, ts, locale] = await Promise.all([
+    getTranslations("solutions.machinery.catalog"),
+    getTranslations("solutions"),
+    getLocale(),
+  ]);
+
   return (
-    <TileGrid
+    <MachineCatalog
       title={title}
       intro={intro}
-      cutout
-      tiles={machinery.map(({ key, image }) => ({ key, href: "/contact", image, ...items[key] }))}
+      labels={{
+        quote: t("quote"),
+        close: t("close"),
+        count: t.raw("count") as string,
+        see: t("see"),
+        panelIntro: t("intro"),
+        contact: ts("contactUs"),
+      }}
+      categories={machinery.map(({ key, image }) => ({
+        key,
+        image,
+        ...items[key],
+        machines: (machinesByCategory[key] ?? []).map((m) => ({
+          id: m.id,
+          name: m.name,
+          line: t(`lines.${m.id}`),
+          specs: m.specs.map((sp) => ({
+            label: t(`labels.${sp.label}`),
+            value: sp.word ? t(`values.${sp.word}`) : localizeValue(sp.value ?? "", locale),
+          })),
+        })),
+      }))}
     />
   );
 }

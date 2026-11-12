@@ -47,7 +47,7 @@ export function HeroIconLinks({
           key={href + text}
           href={href}
           aria-current={current ? "page" : undefined}
-          className="flex flex-col items-center gap-[14px] text-white hover:text-white hover:!opacity-100"
+          className="flex min-w-0 flex-col items-center gap-[14px] text-white hover:text-white hover:!opacity-100"
           style={{ opacity: current ? 1 : dim }}
         >
           <span className="flex size-16 items-center justify-center">
@@ -55,7 +55,7 @@ export function HeroIconLinks({
           </span>
           <span
             className={cn(
-              "text-[16px]",
+              "text-[16px] [overflow-wrap:break-word] hyphens-auto",
               underline && "border-b-2 pb-1.5",
               tall && "box-content flex min-h-[2.6em] items-center justify-center text-center leading-[1.3] whitespace-pre-line",
             )}
