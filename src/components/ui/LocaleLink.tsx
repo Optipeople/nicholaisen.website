@@ -23,7 +23,8 @@ export function LocaleLink({ href, ...props }: Props) {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const localizedHref =
-    locale === routing.defaultLocale
+    // "#section" stays on the current page in every language.
+    locale === routing.defaultLocale || href.startsWith("#")
       ? href
       : href === "/" || href.startsWith("/#")
         ? `/${locale}${href.slice(1)}`

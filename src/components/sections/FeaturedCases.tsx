@@ -1,28 +1,8 @@
-import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
-import { routing } from "@/i18n/routing";
 import { listCases } from "@/content/loader";
+import { caseOrder as featured, formatCaseDate } from "@/lib/cases";
 import { LinkButton } from "@/components/ui/Button";
 import { FeaturedCasesPanels, type FeaturedCase } from "@/components/sections/FeaturedCasesPanels";
-
-/** Homepage order, with the message key for each case's short (collapsed) title. */
-const featured = [
-  { slug: "hardwood-drying-technology", key: "hardwood" },
-  { slug: "kitchen-producer-investment-decision", key: "kitchen" },
-  { slug: "million-unit-production-facility", key: "million" },
-  { slug: "turnkey-factory-establishment", key: "greenfield" },
-] as const;
-
-function formatCaseDate(iso: string, locale: string) {
-  // Guard: unknown segments (e.g. /favicon.ico) can reach the page as a "locale".
-  const tag = locale !== "en" && hasLocale(routing.locales, locale) ? locale : "en-GB";
-  return new Date(iso).toLocaleDateString(tag, {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-}
 
 /** "Case studies" — expanding photo panels fed by the localized case content. */
 export async function FeaturedCases({ locale }: { locale: string }) {

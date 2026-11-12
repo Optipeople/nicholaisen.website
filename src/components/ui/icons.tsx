@@ -169,6 +169,85 @@ export const MapPinIcon = (p: IconProps) => (
   </Svg>
 );
 
+/* Page-hero icons (64px, thin stroke) */
+const hero = (paths: React.ReactNode) =>
+  function HeroIcon(p: IconProps) {
+    return (
+      <Svg size={64} strokeWidth={1} {...p}>
+        {paths}
+      </Svg>
+    );
+  };
+export const InfoIcon = hero(
+  <>
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 16v-4" />
+    <path d="M12 8h.01" />
+  </>,
+);
+export const HistoryIcon = hero(
+  <>
+    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+    <path d="M3 3v5h5" />
+    <path d="M12 7v5l4 2" />
+  </>,
+);
+export const PeopleIcon = hero(
+  <>
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+    <circle cx="9" cy="7" r="4" />
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  </>,
+);
+export const LocationIcon = hero(
+  <>
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+    <circle cx="12" cy="10" r="3" />
+  </>,
+);
+export const GridIcon = hero(
+  <>
+    <rect x="3" y="3" width="7" height="7" rx="1" />
+    <rect x="14" y="3" width="7" height="7" rx="1" />
+    <rect x="14" y="14" width="7" height="7" rx="1" />
+    <rect x="3" y="14" width="7" height="7" rx="1" />
+  </>,
+);
+export const LogIcon = hero(
+  <>
+    <ellipse cx="17" cy="12" rx="4" ry="7" />
+    <path d="M17 5H7c-2.2 0-4 3.1-4 7s1.8 7 4 7h10" />
+    <ellipse cx="17" cy="12" rx="1.5" ry="3" />
+  </>,
+);
+export const LayersIcon = hero(
+  <>
+    <path d="m12 2 10 5-10 5L2 7l10-5Z" />
+    <path d="m2 12 10 5 10-5" />
+    <path d="m2 17 10 5 10-5" />
+  </>,
+);
+export const PackageIcon = hero(
+  <>
+    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+    <path d="m3.3 7 8.7 5 8.7-5" />
+    <path d="M12 22V12" />
+  </>,
+);
+export const PlayCircleIcon = hero(
+  <>
+    <circle cx="12" cy="12" r="10" />
+    <polygon points="10 8 16 12 10 16 10 8" />
+  </>,
+);
+export const ChartLineIcon = hero(
+  <>
+    <path d="M3 3v18h18" />
+    <path d="m19 9-5 5-4-4-3 3" />
+  </>,
+);
+
 /* Small UI icons */
 export const ChevronDownIcon = (p: IconProps) => (
   <Svg size={16} strokeWidth={2} {...p}>

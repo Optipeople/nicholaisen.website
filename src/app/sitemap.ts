@@ -7,6 +7,7 @@ import {
 } from "@/content/loader";
 import { site } from "@/lib/site";
 import { tracks } from "@/lib/tracks";
+import { serviceHref, servicePages } from "@/lib/services";
 
 const STATIC_PATHS = [
   "/",
@@ -15,6 +16,8 @@ const STATIC_PATHS = [
   "/cases",
   "/insights",
   "/about",
+  "/about/team",
+  "/about/group",
   "/contact",
   "/legal/privacy",
   "/legal/cookies",
@@ -39,7 +42,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]);
 
   // Track landing pages plus every MDX service (Machines has no MDX file).
-  const serviceSlugs = [...new Set([...tracks.map((t) => t.slug), ...services.map((s) => s.frontmatter.slug)])];
+  const serviceSlugs = [
+    ...new Set([
+      ...tracks.map((t) => t.slug),
+      ...servicePages.map((p) => serviceHref(p).replace("/services/", "")),
+      ...services.map((s) => s.frontmatter.slug),
+    ]),
+  ];
   const serviceEntries: MetadataRoute.Sitemap = serviceSlugs.map((slug) => ({
     url: `${base}/services/${slug}`,
     lastModified: now,

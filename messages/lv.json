@@ -939,5 +939,475 @@
     "title": "Ja kaut kas šeit ir aktuāls, izpētīsim to kopā",
     "body": "Bez jebkāda spiediena. Ja tagad nav īstais laiks, mēs vienkārši sazināsimies vēlāk.",
     "button": "Sazināties"
+  },
+  "company": {
+    "title": "33 gadi klienta pusē",
+    "lede": "Neatkarīgi no zīmoliem, atbildīgi par rezultātu — palīdzam ražotājiem saražot vairāk par mazāk, no pirmās iekārtas līdz pilnai rūpnīcai.",
+    "imageAlt": "Nicholaisen komanda",
+    "jumpLabel": "Šajā lapā",
+    "jumps": {
+      "about": "Par mums",
+      "history": "Mūsu vēsture",
+      "team": "Komanda"
+    },
+    "about": {
+      "kicker": "Par mums",
+      "title": "Mēs atbildam par rezultātu — nevis par iekārtu",
+      "p1": "Kopš 1993. gada Nicholaisen palīdz koksnes, plātņu mēbeļu un durvju un logu ražotājiem saražot vairāk par mazāk. Mēs neesam piesaistīti vienam zīmolam, tāpēc katrs ieteikums sākas ar jūsu produktu, procesu un biznesu.",
+      "p2": "No stratēģijas un ieguldījumu lēmumiem līdz iekārtām, pilnām ražošanas līnijām un datiem, kas uztur to veiktspēju — viens partneris, kas atbild visu ceļu.",
+      "solutions": "Mūsu risinājumi",
+      "cases": "Skatīt stāstus",
+      "imageAlt": "Koka rāmji ražošanā"
+    },
+    "values": {
+      "kicker": "Mūsu vērtības",
+      "title": "Četri principi vada katru projektu",
+      "imageAlt": "Nicholaisen tehniķis ražotnē",
+      "principles": [
+        {
+          "lead": "Klienta pusē.",
+          "text": "Brīva piegādātāja izvēle — mēs iesakām to, kas der jūsu ražošanai, nevis zīmolu."
+        },
+        {
+          "lead": "Izmērīts, nevis novērtēts.",
+          "text": "Katrs lēmums balstās uz jūsu pašu skaitļiem."
+        },
+        {
+          "lead": "Vispirms atmaksa.",
+          "text": "Mēs piedāvājam risinājumus, kas atpelna jūsu ieguldījumu divos līdz četros gados."
+        },
+        {
+          "lead": "Viens partneris no sākuma līdz beigām.",
+          "text": "No pirmā aprēķina līdz iekārta darbojas atbilstoši specifikācijai — un uz datiem balstīta uzraudzība pēc tam."
+        }
+      ]
+    },
+    "contact": "Sazināties",
+    "facts": [
+      {
+        "value": "1993",
+        "label": "Dibināts"
+      },
+      {
+        "value": "33 g.",
+        "label": "Klienta pusē"
+      },
+      {
+        "value": "3",
+        "label": "Uzņēmumi grupā"
+      }
+    ],
+    "group": {
+      "kicker": "Nicholaisen grupa",
+      "title": "Trīs uzņēmumi, viens partneris",
+      "text": "Nicholaisen A/S, Nicholaisen Sweden AB un Nicholaisen Baltic OÜ — tuvu mūsu klientiem Skandināvijā un Baltijā.",
+      "cta": "Iepazīt grupu",
+      "imageAlt": "Nicholaisen grupa"
+    },
+    "team": {
+      "kicker": "Komanda",
+      "title": "Komanda, kas stāv aiz Nicholaisen",
+      "text": "Pārdošanas, servisa, datu un projektu vadības speciālisti Dānijā, Zviedrijā un Baltijā.",
+      "cta": "Iepazīt komandu",
+      "imageAlt": "Nicholaisen komanda"
+    }
+  },
+  "team": {
+    "kicker": "Komanda",
+    "title": "Komanda, kas stāv aiz Nicholaisen",
+    "lede": "Viena komanda Dānijā, Zviedrijā un Baltijā.",
+    "imageAlt": "Nicholaisen komanda",
+    "show": "Rādīt",
+    "allDepartments": "Visas nodaļas",
+    "departments": {
+      "leadership": "Vadība",
+      "administration": "Administrācija",
+      "salesDenmark": "Pārdošana – Dānija",
+      "salesBaltic": "Pārdošana – Baltija",
+      "salesSweden": "Pārdošana – Zviedrija",
+      "innovation": "Inovācijas un efektivitāte",
+      "service": "Serviss un rezerves daļas",
+      "marketing": "Mārketings",
+      "finance": "Finanses"
+    },
+    "roles": {
+      "ceo": "Izpilddirektors",
+      "coo": "Operāciju direktors (COO)",
+      "cfo": "Finanšu direktors",
+      "paToCeo": "Izpilddirektora asistente",
+      "projectCoordinator": "Projektu koordinatore",
+      "officeAssistant": "Biroja asistente",
+      "salesPanel": "Pārdošana – plātņu un mēbeļu nozare",
+      "salesDoorWindow": "Pārdošana – durvju un logu nozare",
+      "salesWoodDrying": "Pārdošana – koksnes žāvēšana",
+      "salesAutomation": "Pārdošana – automatizācija",
+      "salesNichoMachines": "Pārdošana – NichoMachines",
+      "salesManager": "Pārdošanas vadītājs",
+      "businessDevelopmentManager": "Biznesa attīstības vadītājs",
+      "sales": "Pārdošana",
+      "projectManagerData": "Projektu vadītājs – dati",
+      "serviceManager": "Servisa vadītājs",
+      "sparePartsManager": "Rezerves daļu vadītājs",
+      "consultantBusinessDevelopment": "Konsultants – biznesa attīstība",
+      "serviceTechnician": "Servisa tehniķis",
+      "marketingManager": "Komunikācijas un mārketinga vadītājs",
+      "marketingCoordinator": "Mārketinga koordinatore",
+      "telemarketingManager": "Tirgus vadītājs – telemārketings",
+      "accountant": "Grāmatvedis",
+      "financialController": "Finanšu kontrolieris"
+    }
+  },
+  "group": {
+    "kicker": "Nicholaisen grupa",
+    "title": "Trīs uzņēmumi, viens partneris",
+    "lede": "Tuvu mūsu klientiem Skandināvijā un Baltijā — ar tiem pašiem cilvēkiem, datiem un atbildību aiz katra projekta.",
+    "imageAlt": "Koksnes ražošana",
+    "jumpLabel": "Uzņēmumi",
+    "contact": "Sazināties",
+    "country": "Dānija",
+    "companies": {
+      "denmark": {
+        "place": "Dānija",
+        "kicker": "Dānija · Galvenais birojs",
+        "role": "Grupas galvenais birojs",
+        "text": "Pārdošana, serviss, projektu vadība un datu komanda. No šejienes mēs plānojam, iepērkam un īstenojam projektus visos tirgos."
+      },
+      "sweden": {
+        "place": "Zviedrija",
+        "kicker": "Zviedrija",
+        "role": "Pārdošana un serviss",
+        "text": "Vietējā pārdošana un serviss Zviedrijas klientiem ar visas grupas atbalstu — tā pati piegādātāju izvēle, dati un uzraudzība."
+      },
+      "baltics": {
+        "place": "Baltija",
+        "kicker": "Baltija",
+        "role": "Pārdošana un serviss",
+        "text": "Vietējā pārdošana un serviss Baltijas klientiem ar visas grupas atbalstu — tā pati piegādātāju izvēle, dati un uzraudzība."
+      }
+    }
+  },
+  "casesPage": {
+    "kicker": "Klientu stāsti",
+    "title": "Reāli rezultāti no ražotnes.",
+    "lede": "Projektu izlase — no vienas līnijas optimizācijas līdz jaunām rūpnīcām no nulles.",
+    "imageAlt": "Nicholaisen tehniķis ražotnē",
+    "filterLabel": "Filtrēt pēc nozares",
+    "listTitle": "Mūsu stāsti",
+    "listIntro": "Izmērīts pirms, izmērīts pēc — un skaitļi ir paša klienta.",
+    "filters": {
+      "all": "Visi stāsti",
+      "solid-wood": "Masīvkoks",
+      "panel-furniture": "Plātnes un mēbeles"
+    }
+  },
+  "casePage": {
+    "allCases": "Visi stāsti",
+    "client": "Klients",
+    "results": "Rezultāti",
+    "challenge": "Izaicinājums",
+    "approach": "Pieeja",
+    "outcome": "Iznākums",
+    "servicesApplied": "Izmantotie pakalpojumi",
+    "keyInsight": "Galvenā atziņa",
+    "moreCases": "Vairāk stāstu"
+  },
+  "serviceDetail": {
+    "labels": {
+      "jumpLabel": "Šajā lapā",
+      "whatYouGet": "Ko jūs saņemat",
+      "howItWorks": "Kā tas darbojas",
+      "theProof": "Pierādījums",
+      "seeHow": "Skatīt, kā tas darbojas",
+      "why": "Kāpēc Nicholaisen?",
+      "customerCase": "Klienta stāsts",
+      "proofTitle": "Pierādījums ir skaitļos",
+      "seeAllCases": "Skatīt visus stāstus →",
+      "related": "Saistītie pakalpojumi",
+      "learnMore": "Uzzināt vairāk",
+      "getInTouch": "Sazināties",
+      "teamAlt": "Nicholaisen komanda"
+    },
+    "pages": {
+      "investmentCases": {
+        "headline": "Pērciet iekārtas, redzot visu ekonomiku.",
+        "sub": "Pirms lēmuma pieņemšanas redziet iekārtas kopējās izmaksas vienā lapā.",
+        "cta": "Rezervēt TCO pārskatu",
+        "introTitle": "Ieguldījumi uz stabila pamata",
+        "intro": [
+          "Cena piedāvājumā ir tikai daļa no stāsta. Ekspluatācija, apkope un dīkstāves nosaka, cik iekārta jums izmaksās gadu gaitā.",
+          "Vienas lapas TCO parāda visu ekonomiku un to, cik droši ir katrs skaitlis. Jūs varat salīdzināt piedāvājumus vienādi un pieņemt lēmumu, par kuru varat atbildēt."
+        ],
+        "getTitle": "Visa ekonomika vienā lapā",
+        "get": [
+          {
+            "title": "Četras jomas, viens pārskats",
+            "text": "Iegāde, ekspluatācija, apkope un dīkstāves vienā lapā."
+          },
+          {
+            "title": "Skaidra datu kvalitāte",
+            "text": "Katra pozīcija atzīmēta kā izmērīta, novērtēta vai neiekļauta."
+          },
+          {
+            "title": "Jūsu pašu skaitļi",
+            "text": "Balstīts uz jūsu ražošanu, nevis standarta vērtībām."
+          },
+          {
+            "title": "Atmaksāšanās laiks",
+            "text": "Skaidra atbilde, kad ieguldījums būs atmaksājies."
+          }
+        ],
+        "why": [
+          {
+            "title": "Viena tikšanās",
+            "text": "Mēs izejam cauri aprēķinam kopā ar jums vienā tikšanās reizē."
+          },
+          {
+            "title": "Salīdziniet piegādātājus",
+            "text": "Visās četrās jomās, ne tikai pēc cenas."
+          },
+          {
+            "title": "Viss process",
+            "text": "Mēs aplūkojam iekārtu kopā ar procesiem pirms un pēc tās."
+          },
+          {
+            "title": "Izmērīti dati no pirmās dienas",
+            "text": "Mūsu jaunās iekārtas tiek piegādātas ar OptiCloud un 3 gadu garantiju."
+          }
+        ],
+        "how": [
+          "Atsūtiet savu piedāvājumu vai aprēķinu",
+          "Kopīgs pārskats",
+          "Vienas lapas TCO",
+          "Lēmums"
+        ],
+        "proof": "Plānotā šķērsgriešanas līnija izrādījās nevajadzīga. Tā vietā esošā līnija tika optimizēta ar programmatūru un automātisku šķirošanu.",
+        "stats": [
+          {
+            "value": "10 %",
+            "label": "mazāk materiālu atgriezumu"
+          },
+          {
+            "value": "3 → 2",
+            "label": "maiņas tai pašai izlaidei"
+          },
+          {
+            "value": "< 1 gads",
+            "label": "atmaksāšanās laiks"
+          }
+        ],
+        "closing": "Gatavi redzēt pilnu ainu?",
+        "teaser": "Vienas lapas TCO jūsu pēdējai vai nākamajai iekārtai."
+      },
+      "capacityGrowth": {
+        "headline": "Ražojiet vairāk, nepalielinot izmaksas.",
+        "sub": "Atrodiet, kas bremzē ražošanu, un saņemiet izaugsmes plānu ar cenu katram variantam.",
+        "cta": "Kartējiet savu plūsmu",
+        "introTitle": "Izaugsme ar skaidru skatu",
+        "intro": [
+          "Kad pasūtījumu kļūst vairāk, papildu maiņa vai jauna iekārta šķiet acīmredzama atbilde. Taču tā ne vienmēr ir pareizā.",
+          "Mēs kartējam jūsu ražošanu no pasūtījuma līdz piegādei, atrodam šauro vietu un aprēķinām, cik maksā to novērst. Tad jūs zināt, kur nauda dod vislielāko labumu."
+        ],
+        "getTitle": "Izaugsmes plāns ar cenu katram variantam",
+        "get": [
+          {
+            "title": "Plūsmas kartēšana",
+            "text": "Procesa un gaidīšanas laiks katram solim no pasūtījuma līdz piegādei."
+          },
+          {
+            "title": "Atrasta šaurā vieta",
+            "text": "Skaidra atbilde, kur ražošana tiek bremzēta."
+          },
+          {
+            "title": "Laika cena",
+            "text": "Izmaksas minūtē, pasūtījumam un iekārtai."
+          },
+          {
+            "title": "Izaugsmes plāns",
+            "text": "Varianti ar cenu un sagaidāmo efektu, no optimizācijas līdz jaunai jaudai."
+          }
+        ],
+        "why": [
+          {
+            "title": "Jūsu pašu dati",
+            "text": "No ERP, iekārtām un mērījumiem ražotnē."
+          },
+          {
+            "title": "Plānots pēc jūsu pasūtījumiem",
+            "text": "Jauda tiek saskaņota ar sagaidāmajiem pasūtījumiem."
+          },
+          {
+            "title": "Automatizācija, kad tā atmaksājas",
+            "text": "Roboti un pārvietošana tiek pievienoti, kad to pamato skaitļi."
+          },
+          {
+            "title": "Mērīts no pirmās dienas",
+            "text": "Mūsu jaunās iekārtas reģistrē procesa un dīkstāvju laikus caur OptiCloud."
+          }
+        ],
+        "how": [
+          "Datu vākšana",
+          "Kartēšana un šaurā vieta",
+          "Varianti ar cenām",
+          "Izaugsmes plāns"
+        ],
+        "proof": "Mēbeļu ražotājs ar ātru, bet neelastīgu urbšanas līniju ieguva mazākas partijas un īsākus izpildes laikus ar vienu 6 pušu caurplūdes iekārtu, kas gatava robotam.",
+        "stats": [
+          {
+            "value": "9–12 tūkst.",
+            "label": "detaļu nedēļā"
+          },
+          {
+            "value": "2–4 g.",
+            "label": "ROI klasisko 8–12 vietā"
+          },
+          {
+            "value": "6 puses",
+            "label": "apstrādātas vienā caurejā"
+          }
+        ],
+        "closing": "Parādiet mums līnijas daļu, kas jūs kaitina",
+        "teaser": "Atrodiet, kas bremzē ražošanu, un saņemiet izaugsmes plānu."
+      },
+      "factoryLayout": {
+        "headline": "Izkārtojums, kas katru produktu padara lētāk ražojamu.",
+        "sub": "No vienas darba šūnas līdz jaunai rūpnīcai, plānots kā viena vienota plūsma.",
+        "cta": "Runājiet ar mums",
+        "introTitle": "Plūsma pārvietošanas vietā",
+        "intro": [
+          "Kad detaļas starp stacijām tiek pārvietotas un krautas ar rokām, tas maksā laiku, vietu un bojājumus.",
+          "Mēs plānojam ražošanu kā vienu plūsmu, automatizējot loģistiku un visvairāk atmaksājošos montāžas soļus. Vai nu jaunā rūpnīcā, vai soli pa solim esošajā."
+        ],
+        "getTitle": "Viena vienota plūsma, būvēta posmos",
+        "get": [
+          {
+            "title": "Montāžas analīze",
+            "text": "Cik tā ir sarežģīta un kā materiāli nonāk līdz katrai stacijai."
+          },
+          {
+            "title": "Automatizēta loģistika",
+            "text": "Buferi un automātisks transports starp stacijām."
+          },
+          {
+            "title": "Automatizācija pēc atmaksas",
+            "text": "Vispirms soļi, kas atmaksājas vislabāk."
+          },
+          {
+            "title": "Viens kopējais plāns",
+            "text": "Izkārtojums, kas saglabā vienotību arī būvējot posmos."
+          }
+        ],
+        "why": [
+          {
+            "title": "Jauna rūpnīca vai soli pa solim",
+            "text": "Jauna rūpnīca zemas sarežģītības gadījumā, soli pa solim — augstas."
+          },
+          {
+            "title": "Mazāk smagu pacelšanu",
+            "text": "Mazāk smaga un vienveidīga darba."
+          },
+          {
+            "title": "Mazāk bojājumu",
+            "text": "Mazāk pārvietošanas nozīmē mazāk bojātu detaļu."
+          },
+          {
+            "title": "Vairāk no grīdas platības",
+            "text": "Vairāk izlaides tajā pašā platībā."
+          }
+        ],
+        "how": [
+          "Analīze",
+          "Atmaksas novērtējums",
+          "Izkārtojums un posmu plāns",
+          "Jauna rūpnīca vai soli pa solim"
+        ],
+        "proof": "Logu un durvju montāža automatizēta deviņos soļos, no skenēšanas līdz paletizēšanai, ar robotu stiklošanai.",
+        "stats": [
+          {
+            "value": "> 50 %",
+            "label": "zemākas darbaspēka izmaksas montāžā"
+          },
+          {
+            "value": "+100 %",
+            "label": "tās pašas grīdas platības izmantojums"
+          },
+          {
+            "value": "9 soļi",
+            "label": "vienā vienotā plūsmā"
+          }
+        ],
+        "closing": "Atsūtiet mums savu izkārtojumu vai jaunas rūpnīcas plānus",
+        "teaser": "No vienas šūnas līdz jaunai rūpnīcai, plānots ap zemāko vienības cenu."
+      },
+      "sourcing": {
+        "headline": "Labākais piegādātājs katram uzdevumam. Viens atbildīgs partneris.",
+        "sub": "Mēs brīvi veidojam jūsu līniju no dažādu piegādātāju iekārtām un atbildam par kopējo rezultātu.",
+        "cta": "Atsūtiet savu sarakstu",
+        "introTitle": "Brīva izvēle, viens atbildīgais",
+        "intro": [
+          "Mēs neesam piesaistīti vienam ražotājam. Tas ļauj izvēlēties aprīkojumu, kas vislabāk atbilst katram uzdevumam jūsu ražošanā.",
+          "Jūs saņemat vienu līgumu un vienu kontaktpersonu, un mēs atbildam, lai viss darbotos kopā, no piegādes līdz servisam."
+        ],
+        "getTitle": "Labākā atbilstība katram uzdevumam",
+        "get": [
+          {
+            "title": "Brīva piegādātāja izvēle",
+            "text": "Labākā atbilstība katram uzdevumam."
+          },
+          {
+            "title": "Izvēlēts pēc kopējām izmaksām",
+            "text": "Iegāde, ekspluatācija, apkope un dīkstāves, ne tikai cena."
+          },
+          {
+            "title": "Bez uzcenojuma uz uzcenojumu",
+            "text": "Īsa piegādes ķēde bez liekiem starpniekiem."
+          },
+          {
+            "title": "Viens atbildīgais",
+            "text": "Integrācija, FAT, piegāde un serviss no viena partnera."
+          }
+        ],
+        "why": [
+          {
+            "title": "Cena pēc kvalitātes un kalpošanas laika",
+            "text": "Vispiemērotākais risinājums, nevis lētākais."
+          },
+          {
+            "title": "Zemas darbaspēka izmaksas uz detaļu",
+            "text": "Aprīkojums, kas pielāgots jūsu produktiem un uzdevumiem."
+          },
+          {
+            "title": "3 gadu garantija",
+            "text": "NichoMachines standarta iekārtām."
+          },
+          {
+            "title": "OptiCloud no pirmās dienas",
+            "text": "Dati no katras jaunās iekārtas no pirmās dienas."
+          }
+        ],
+        "how": [
+          "Atsūtiet savas vajadzības",
+          "Prasības katram procesam",
+          "Piegādātāja izvēle pēc kopējām izmaksām",
+          "Integrācija, piegāde un serviss"
+        ],
+        "proof": "Brīva piegādātāja izvēle katram uzdevumam un uz vērtību vērsts process saīsina atmaksāšanās laiku.",
+        "stats": [
+          {
+            "value": "2–4 g.",
+            "label": "ROI klasisko 8–12 vietā"
+          },
+          {
+            "value": "1 partneris",
+            "label": "atbildīgs par visu līniju"
+          },
+          {
+            "value": "3 gadi",
+            "label": "garantija standarta iekārtām"
+          }
+        ],
+        "closing": "Atsūtiet mums sarakstu ar to, kas jums nepieciešams",
+        "teaser": "Labākais piegādātājs katram uzdevumam un viens atbildīgs partneris."
+      }
+    }
   }
 }

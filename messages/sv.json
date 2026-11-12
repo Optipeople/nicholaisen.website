@@ -939,5 +939,475 @@
     "title": "Om något här är relevant, låt oss gå in på det tillsammans",
     "body": "Helt utan press. Om det inte är rätt tillfälle hör vi helt enkelt av oss längre fram.",
     "button": "Kontakta oss"
+  },
+  "company": {
+    "title": "33 år på kundens sida",
+    "lede": "Oberoende av märken, ansvariga för resultatet — vi hjälper tillverkare att producera mer för mindre, från den första maskinen till en komplett fabrik.",
+    "imageAlt": "Nicholaisen-teamet",
+    "jumpLabel": "På den här sidan",
+    "jumps": {
+      "about": "Om oss",
+      "history": "Vår historia",
+      "team": "Teamet"
+    },
+    "about": {
+      "kicker": "Om oss",
+      "title": "Vi ansvarar för resultatet — inte för maskinen",
+      "p1": "Sedan 1993 har Nicholaisen hjälpt tillverkare inom trä, skivmöbler samt dörrar och fönster att producera mer för mindre. Vi är inte bundna till ett märke, så varje rekommendation utgår från din produkt, din process och din affär.",
+      "p2": "Från strategi och investeringsbeslut till maskiner, kompletta produktionslinjer och de data som håller dem igång — en partner med ansvar hela vägen.",
+      "solutions": "Våra lösningar",
+      "cases": "Se våra case",
+      "imageAlt": "Träramar i produktion"
+    },
+    "values": {
+      "kicker": "Våra värderingar",
+      "title": "Fyra principer styr varje projekt",
+      "imageAlt": "Nicholaisen-tekniker på produktionsgolvet",
+      "principles": [
+        {
+          "lead": "På kundens sida.",
+          "text": "Fritt val av leverantör — vi rekommenderar det som passar din produktion, inte ett märke."
+        },
+        {
+          "lead": "Uppmätt, inte uppskattat.",
+          "text": "Varje beslut vilar på dina egna siffror."
+        },
+        {
+          "lead": "Återbetalning först.",
+          "text": "Vi föreslår lösningar som tjänar in din investering på två till fyra år."
+        },
+        {
+          "lead": "En partner från start till mål.",
+          "text": "Från den första kalkylen tills maskinen går enligt specifikation — och datadriven uppföljning efteråt."
+        }
+      ]
+    },
+    "contact": "Kontakta oss",
+    "facts": [
+      {
+        "value": "1993",
+        "label": "Grundat"
+      },
+      {
+        "value": "33 år",
+        "label": "På kundens sida"
+      },
+      {
+        "value": "3",
+        "label": "Bolag i koncernen"
+      }
+    ],
+    "group": {
+      "kicker": "Nicholaisen-koncernen",
+      "title": "Tre bolag, en partner",
+      "text": "Nicholaisen A/S, Nicholaisen Sweden AB och Nicholaisen Baltic OÜ — nära våra kunder i Skandinavien och Baltikum.",
+      "cta": "Möt koncernen",
+      "imageAlt": "Nicholaisen-koncernen"
+    },
+    "team": {
+      "kicker": "Teamet",
+      "title": "Teamet bakom Nicholaisen",
+      "text": "Specialister inom försäljning, service, data och projektledning i Danmark, Sverige och Baltikum.",
+      "cta": "Möt teamet",
+      "imageAlt": "Nicholaisen-teamet"
+    }
+  },
+  "team": {
+    "kicker": "Teamet",
+    "title": "Teamet bakom Nicholaisen",
+    "lede": "Ett team i Danmark, Sverige och Baltikum.",
+    "imageAlt": "Nicholaisen-teamet",
+    "show": "Visa",
+    "allDepartments": "Alla avdelningar",
+    "departments": {
+      "leadership": "Ledning",
+      "administration": "Administration",
+      "salesDenmark": "Försäljning – Danmark",
+      "salesBaltic": "Försäljning – Baltikum",
+      "salesSweden": "Försäljning – Sverige",
+      "innovation": "Innovation & effektivitet",
+      "service": "Service & reservdelar",
+      "marketing": "Marknadsföring",
+      "finance": "Ekonomi"
+    },
+    "roles": {
+      "ceo": "VD",
+      "coo": "COO",
+      "cfo": "CFO",
+      "paToCeo": "Assistent till VD",
+      "projectCoordinator": "Projektkoordinator",
+      "officeAssistant": "Kontorsassistent",
+      "salesPanel": "Försäljning – skiv- och möbelindustrin",
+      "salesDoorWindow": "Försäljning – dörr- och fönsterindustrin",
+      "salesWoodDrying": "Försäljning – virkestorkning",
+      "salesAutomation": "Försäljning – automation",
+      "salesNichoMachines": "Försäljning – NichoMachines",
+      "salesManager": "Försäljningschef",
+      "businessDevelopmentManager": "Business Development Manager",
+      "sales": "Försäljning",
+      "projectManagerData": "Projektledare – data",
+      "serviceManager": "Servicechef",
+      "sparePartsManager": "Reservdelschef",
+      "consultantBusinessDevelopment": "Konsult – affärsutveckling",
+      "serviceTechnician": "Servicetekniker",
+      "marketingManager": "Kommunikations- och marknadschef",
+      "marketingCoordinator": "Marknadskoordinator",
+      "telemarketingManager": "Market Manager – telemarketing",
+      "accountant": "Redovisningsekonom",
+      "financialController": "Financial Controller"
+    }
+  },
+  "group": {
+    "kicker": "Nicholaisen-koncernen",
+    "title": "Tre bolag, en partner",
+    "lede": "Nära våra kunder i Skandinavien och Baltikum — med samma människor, data och ansvar bakom varje projekt.",
+    "imageAlt": "Träproduktion",
+    "jumpLabel": "Bolag",
+    "contact": "Kontakta oss",
+    "country": "Danmark",
+    "companies": {
+      "denmark": {
+        "place": "Danmark",
+        "kicker": "Danmark · Huvudkontor",
+        "role": "Koncernens huvudkontor",
+        "text": "Försäljning, service, projektledning och datateamet. Härifrån planerar, köper in och levererar vi projekt på alla marknader."
+      },
+      "sweden": {
+        "place": "Sverige",
+        "kicker": "Sverige",
+        "role": "Försäljning & service",
+        "text": "Lokal försäljning och service för svenska kunder, med hela koncernen i ryggen — samma leverantörsval, data och uppföljning."
+      },
+      "baltics": {
+        "place": "Baltikum",
+        "kicker": "Baltikum",
+        "role": "Försäljning & service",
+        "text": "Lokal försäljning och service för kunder i Baltikum, med hela koncernen i ryggen — samma leverantörsval, data och uppföljning."
+      }
+    }
+  },
+  "casesPage": {
+    "kicker": "Case",
+    "title": "Verkliga resultat från produktionsgolvet.",
+    "lede": "Ett urval av projekt — från optimering av en enskild linje till nya fabriker från grunden.",
+    "imageAlt": "Nicholaisen-tekniker på produktionsgolvet",
+    "filterLabel": "Filtrera efter bransch",
+    "listTitle": "Våra case",
+    "listIntro": "Uppmätt före, uppmätt efter — och siffrorna är kundens egna.",
+    "filters": {
+      "all": "Alla case",
+      "solid-wood": "Massivträ",
+      "panel-furniture": "Skivor & möbler"
+    }
+  },
+  "casePage": {
+    "allCases": "Alla case",
+    "client": "Kund",
+    "results": "Resultat",
+    "challenge": "Utmaning",
+    "approach": "Tillvägagångssätt",
+    "outcome": "Utfall",
+    "servicesApplied": "Tjänster som användes",
+    "keyInsight": "Viktig insikt",
+    "moreCases": "Fler case"
+  },
+  "serviceDetail": {
+    "labels": {
+      "jumpLabel": "På den här sidan",
+      "whatYouGet": "Det här får du",
+      "howItWorks": "Så fungerar det",
+      "theProof": "Beviset",
+      "seeHow": "Se hur det fungerar",
+      "why": "Varför Nicholaisen?",
+      "customerCase": "Kundcase",
+      "proofTitle": "Beviset finns i siffrorna",
+      "seeAllCases": "Se alla case →",
+      "related": "Relaterade tjänster",
+      "learnMore": "Läs mer",
+      "getInTouch": "Kontakta oss",
+      "teamAlt": "Nicholaisen-teamet"
+    },
+    "pages": {
+      "investmentCases": {
+        "headline": "Köp maskiner med hela ekonomin i sikte.",
+        "sub": "Se hela kostnaden för en maskin på en sida innan du bestämmer dig.",
+        "cta": "Boka en TCO-genomgång",
+        "introTitle": "Investeringar på stabil grund",
+        "intro": [
+          "Priset i offerten är bara en del av historien. Drift, underhåll och stillestånd avgör vad maskinen kostar dig över åren.",
+          "En TCO på en sida visar hela ekonomin och hur säker varje siffra är. Du kan jämföra offerter på samma grund och fatta ett beslut du kan stå för."
+        ],
+        "getTitle": "Hela ekonomin på en sida",
+        "get": [
+          {
+            "title": "Fyra områden, en överblick",
+            "text": "Inköp, drift, underhåll och stillestånd på en enda sida."
+          },
+          {
+            "title": "Tydlig datakvalitet",
+            "text": "Varje post markerad som uppmätt, uppskattad eller inte medräknad."
+          },
+          {
+            "title": "Dina egna siffror",
+            "text": "Byggd på din produktion, inte på standardvärden."
+          },
+          {
+            "title": "Återbetalningstid",
+            "text": "Ett tydligt svar på när investeringen har betalat sig."
+          }
+        ],
+        "why": [
+          {
+            "title": "Ett möte",
+            "text": "Vi går igenom kalkylen med dig på ett enda möte."
+          },
+          {
+            "title": "Jämför leverantörer",
+            "text": "På alla fyra områden, inte bara på pris."
+          },
+          {
+            "title": "Hela processen",
+            "text": "Vi ser på maskinen tillsammans med processerna före och efter den."
+          },
+          {
+            "title": "Uppmätta data från dag ett",
+            "text": "Nya maskiner från oss levereras med OptiCloud och 3 års garanti."
+          }
+        ],
+        "how": [
+          "Skicka din offert eller kalkyl",
+          "Gemensam genomgång",
+          "TCO på en sida",
+          "Beslut"
+        ],
+        "proof": "En planerad kaplinje visade sig vara onödig. I stället optimerades den befintliga linjen med mjukvara och automatisk sortering.",
+        "stats": [
+          {
+            "value": "10 %",
+            "label": "mindre materialspill"
+          },
+          {
+            "value": "3 → 2",
+            "label": "skift för samma produktion"
+          },
+          {
+            "value": "< 1 år",
+            "label": "återbetalningstid"
+          }
+        ],
+        "closing": "Redo att se hela bilden?",
+        "teaser": "En TCO på en sida för din senaste eller nästa maskin."
+      },
+      "capacityGrowth": {
+        "headline": "Producera mer utan att höja dina kostnader.",
+        "sub": "Hitta det som håller tillbaka produktionen och få en tillväxtplan med ett pris på varje alternativ.",
+        "cta": "Kartlägg ditt flöde",
+        "introTitle": "Tillväxt med klar sikt",
+        "intro": [
+          "När orderna ökar är ett extra skift eller en ny maskin det självklara svaret. Men det är inte alltid det rätta.",
+          "Vi kartlägger din produktion från order till leverans, hittar flaskhalsen och räknar ut vad det kostar att ta bort den. Då vet du var pengarna gör mest nytta."
+        ],
+        "getTitle": "En tillväxtplan med ett pris på varje alternativ",
+        "get": [
+          {
+            "title": "Flödeskartläggning",
+            "text": "Process- och väntetid för varje steg från order till leverans."
+          },
+          {
+            "title": "Flaskhalsen hittad",
+            "text": "Ett tydligt svar på var produktionen hålls tillbaka."
+          },
+          {
+            "title": "Ett pris på tid",
+            "text": "Kostnad per minut, per order och per maskin."
+          },
+          {
+            "title": "Tillväxtplan",
+            "text": "Alternativ med pris och förväntad effekt, från optimering till ny kapacitet."
+          }
+        ],
+        "why": [
+          {
+            "title": "Dina egna data",
+            "text": "Från affärssystem, maskiner och mätningar på golvet."
+          },
+          {
+            "title": "Planerad efter dina order",
+            "text": "Kapaciteten matchas mot de order du förväntar dig."
+          },
+          {
+            "title": "Automation när det lönar sig",
+            "text": "Robotar och hantering läggs till när siffrorna talar för det."
+          },
+          {
+            "title": "Uppmätt från dag ett",
+            "text": "Nya maskiner från oss loggar process- och stopptider via OptiCloud."
+          }
+        ],
+        "how": [
+          "Datainsamling",
+          "Kartläggning och flaskhals",
+          "Alternativ med priser",
+          "Tillväxtplan"
+        ],
+        "proof": "En möbeltillverkare med en snabb men oflexibel borrlinje fick mindre serier och kortare ledtider med en 6-sidig genommatningsmaskin, redo för en robot.",
+        "stats": [
+          {
+            "value": "9–12k",
+            "label": "detaljer per vecka"
+          },
+          {
+            "value": "2–4 år",
+            "label": "ROI i stället för de klassiska 8–12"
+          },
+          {
+            "value": "6 sidor",
+            "label": "bearbetade i en passage"
+          }
+        ],
+        "closing": "Ge oss den del av linjen som frustrerar dig",
+        "teaser": "Hitta det som håller tillbaka produktionen och få en plan för tillväxt."
+      },
+      "factoryLayout": {
+        "headline": "En layout som gör varje produkt billigare att tillverka.",
+        "sub": "Från en enskild arbetscell till en ny fabrik, planerad som ett sammanhängande flöde.",
+        "cta": "Prata med oss",
+        "introTitle": "Flöde i stället för hantering",
+        "intro": [
+          "När detaljer flyttas och staplas för hand mellan stationer kostar det tid, utrymme och skador.",
+          "Vi planerar produktionen som ett flöde, där logistiken och de monteringssteg som lönar sig bäst automatiseras. Antingen i en ny fabrik eller steg för steg i den du har."
+        ],
+        "getTitle": "Ett sammanhängande flöde, byggt i etapper",
+        "get": [
+          {
+            "title": "Monteringsanalys",
+            "text": "Hur komplex den är och hur materialet når varje station."
+          },
+          {
+            "title": "Automatiserad logistik",
+            "text": "Buffertar och automatisk transport mellan stationer."
+          },
+          {
+            "title": "Automation efter återbetalning",
+            "text": "De steg som lönar sig bäst kommer först."
+          },
+          {
+            "title": "En övergripande plan",
+            "text": "En layout som håller ihop, även när den byggs i etapper."
+          }
+        ],
+        "why": [
+          {
+            "title": "Ny fabrik eller steg för steg",
+            "text": "Ny fabrik vid låg komplexitet, steg för steg vid hög komplexitet."
+          },
+          {
+            "title": "Färre tunga lyft",
+            "text": "Mindre tungt och repetitivt arbete."
+          },
+          {
+            "title": "Färre skador",
+            "text": "Mindre hantering ger färre skador på detaljerna."
+          },
+          {
+            "title": "Mer ur golvytan",
+            "text": "Mer produktion på samma golv."
+          }
+        ],
+        "how": [
+          "Analys",
+          "Bedömning av återbetalning",
+          "Layout och etappplan",
+          "Ny fabrik eller steg för steg"
+        ],
+        "proof": "Montering av fönster och dörrar automatiserad i nio steg, från skanning till palletering, med en robot för glasning.",
+        "stats": [
+          {
+            "value": "> 50 %",
+            "label": "lägre lönekostnad i monteringen"
+          },
+          {
+            "value": "+100 %",
+            "label": "utnyttjande av samma golvyta"
+          },
+          {
+            "value": "9 steg",
+            "label": "i ett sammanhängande flöde"
+          }
+        ],
+        "closing": "Skicka oss din layout eller dina planer för en ny fabrik",
+        "teaser": "Från en enskild cell till en ny fabrik, planerad kring det lägsta styckpriset."
+      },
+      "sourcing": {
+        "headline": "Den bästa leverantören för varje uppgift. En ansvarig partner.",
+        "sub": "Vi bygger din linje fritt över leverantörer och ansvarar för det samlade resultatet.",
+        "cta": "Skicka din lista",
+        "introTitle": "Fritt val, en ansvarspunkt",
+        "intro": [
+          "Vi är inte bundna till en tillverkare. Det gör att vi kan välja den utrustning som passar bäst för varje uppgift i din produktion.",
+          "Du får ett kontrakt och en kontaktperson, och vi ansvarar för att allt fungerar tillsammans, från leverans till service."
+        ],
+        "getTitle": "Bästa matchningen för varje uppgift",
+        "get": [
+          {
+            "title": "Fritt val av leverantör",
+            "text": "Bästa matchningen för varje uppgift."
+          },
+          {
+            "title": "Vald på total kostnad",
+            "text": "Inköp, drift, underhåll och stillestånd, inte bara pris."
+          },
+          {
+            "title": "Ingen marginal på marginal",
+            "text": "En kort leveranskedja utan onödiga mellanhänder."
+          },
+          {
+            "title": "En ansvarspunkt",
+            "text": "Integration, FAT, leverans och service från en partner."
+          }
+        ],
+        "why": [
+          {
+            "title": "Pris efter kvalitet och livslängd",
+            "text": "Den lösning som passar bäst, inte den billigaste."
+          },
+          {
+            "title": "Låg lönekostnad per detalj",
+            "text": "Utrustning anpassad efter dina produkter och uppgifter."
+          },
+          {
+            "title": "3 års garanti",
+            "text": "På standardmaskiner från NichoMachines."
+          },
+          {
+            "title": "OptiCloud från dag ett",
+            "text": "Data från varje ny maskin från första dagen."
+          }
+        ],
+        "how": [
+          "Skicka dina behov",
+          "Krav för varje process",
+          "Leverantörsval på total kostnad",
+          "Integration, leverans och service"
+        ],
+        "proof": "Fritt val av leverantör för varje uppgift och en värdefokuserad process förkortar återbetalningstiden.",
+        "stats": [
+          {
+            "value": "2–4 år",
+            "label": "ROI i stället för de klassiska 8–12"
+          },
+          {
+            "value": "1 partner",
+            "label": "ansvarig för hela linjen"
+          },
+          {
+            "value": "3 år",
+            "label": "garanti på standardmaskiner"
+          }
+        ],
+        "closing": "Skicka oss en lista över vad du behöver",
+        "teaser": "Den bästa leverantören för varje uppgift, och en ansvarig partner."
+      }
+    }
   }
 }

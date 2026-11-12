@@ -25,7 +25,7 @@ type Variant =
   | "pill-outline-light"
   | "pill-outline"
   | "outline";
-type Size = "sm" | "md" | "lg" | "hero" | "panel" | "pill" | "card";
+type Size = "sm" | "md" | "lg" | "hero" | "panel" | "pill" | "card" | "feature";
 
 const base =
   "inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap cursor-pointer";
@@ -66,6 +66,8 @@ const sizes: Record<Size, string> = {
   pill: "px-[24px] py-[12px] text-[16px] leading-[1.55]",
   /** 12×20, 16px regular — card and section buttons (outline variant drops 1px for the border) */
   card: "px-5 py-3 text-[16px] leading-[1.55] font-normal",
+  /** 13×22, 16px regular — buttons in feature blocks (outline variant drops 1px for the border) */
+  feature: "px-[22px] py-[13px] text-[16px] leading-[1.55] font-normal",
 };
 
 type CommonProps = {

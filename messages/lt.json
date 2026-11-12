@@ -939,5 +939,475 @@
     "title": "Jei kas nors čia aktualu, panagrinėkime tai kartu",
     "body": "Jokio spaudimo. Jei dabar ne laikas, tiesiog susisieksime vėliau.",
     "button": "Susisiekite"
+  },
+  "company": {
+    "title": "33 metai kliento pusėje",
+    "lede": "Nepriklausomi nuo prekės ženklų, atsakingi už rezultatą — padedame gamintojams pagaminti daugiau už mažiau, nuo pirmųjų staklių iki visos gamyklos.",
+    "imageAlt": "Nicholaisen komanda",
+    "jumpLabel": "Šiame puslapyje",
+    "jumps": {
+      "about": "Apie mus",
+      "history": "Mūsų istorija",
+      "team": "Komanda"
+    },
+    "about": {
+      "kicker": "Apie mus",
+      "title": "Atsakome už rezultatą — ne už stakles",
+      "p1": "Nuo 1993 m. Nicholaisen padeda medienos, plokščių baldų bei durų ir langų gamintojams pagaminti daugiau už mažiau. Nesame susieti su vienu prekės ženklu, todėl kiekviena rekomendacija prasideda nuo jūsų produkto, proceso ir verslo.",
+      "p2": "Nuo strategijos ir investicinių sprendimų iki staklių, visų gamybos linijų ir duomenų, kurie palaiko jų našumą — vienas partneris, atsakingas visą kelią.",
+      "solutions": "Mūsų sprendimai",
+      "cases": "Žiūrėti atvejus",
+      "imageAlt": "Mediniai rėmai gamyboje"
+    },
+    "values": {
+      "kicker": "Mūsų vertybės",
+      "title": "Keturi principai lemia kiekvieną projektą",
+      "imageAlt": "Nicholaisen technikas gamybos ceche",
+      "principles": [
+        {
+          "lead": "Kliento pusėje.",
+          "text": "Laisvas tiekėjo pasirinkimas — rekomenduojame tai, kas tinka jūsų gamybai, o ne prekės ženklą."
+        },
+        {
+          "lead": "Išmatuota, o ne įvertinta.",
+          "text": "Kiekvienas sprendimas remiasi jūsų pačių skaičiais."
+        },
+        {
+          "lead": "Pirmiausia atsipirkimas.",
+          "text": "Siūlome sprendimus, kurie atsiperka per dvejus–ketverius metus."
+        },
+        {
+          "lead": "Vienas partneris nuo pradžios iki galo.",
+          "text": "Nuo pirmojo skaičiavimo iki staklių, veikiančių pagal specifikaciją — ir duomenimis pagrįsta priežiūra vėliau."
+        }
+      ]
+    },
+    "contact": "Susisiekite",
+    "facts": [
+      {
+        "value": "1993",
+        "label": "Įkurta"
+      },
+      {
+        "value": "33 m.",
+        "label": "Kliento pusėje"
+      },
+      {
+        "value": "3",
+        "label": "Įmonės grupėje"
+      }
+    ],
+    "group": {
+      "kicker": "Nicholaisen grupė",
+      "title": "Trys įmonės, vienas partneris",
+      "text": "Nicholaisen A/S, Nicholaisen Sweden AB ir Nicholaisen Baltic OÜ — arti mūsų klientų Skandinavijoje ir Baltijos šalyse.",
+      "cta": "Susipažinkite su grupe",
+      "imageAlt": "Nicholaisen grupė"
+    },
+    "team": {
+      "kicker": "Komanda",
+      "title": "Komanda, kuri stovi už Nicholaisen",
+      "text": "Pardavimų, aptarnavimo, duomenų ir projektų valdymo specialistai Danijoje, Švedijoje ir Baltijos šalyse.",
+      "cta": "Susipažinkite su komanda",
+      "imageAlt": "Nicholaisen komanda"
+    }
+  },
+  "team": {
+    "kicker": "Komanda",
+    "title": "Komanda, kuri stovi už Nicholaisen",
+    "lede": "Viena komanda Danijoje, Švedijoje ir Baltijos šalyse.",
+    "imageAlt": "Nicholaisen komanda",
+    "show": "Rodyti",
+    "allDepartments": "Visi skyriai",
+    "departments": {
+      "leadership": "Vadovybė",
+      "administration": "Administracija",
+      "salesDenmark": "Pardavimai – Danija",
+      "salesBaltic": "Pardavimai – Baltijos šalys",
+      "salesSweden": "Pardavimai – Švedija",
+      "innovation": "Inovacijos ir efektyvumas",
+      "service": "Aptarnavimas ir atsarginės dalys",
+      "marketing": "Rinkodara",
+      "finance": "Finansai"
+    },
+    "roles": {
+      "ceo": "Generalinis direktorius",
+      "coo": "Vykdantysis direktorius (COO)",
+      "cfo": "Finansų direktorius",
+      "paToCeo": "Generalinio direktoriaus asistentė",
+      "projectCoordinator": "Projektų koordinatorė",
+      "officeAssistant": "Biuro asistentė",
+      "salesPanel": "Pardavimai – plokščių ir baldų pramonė",
+      "salesDoorWindow": "Pardavimai – durų ir langų pramonė",
+      "salesWoodDrying": "Pardavimai – medienos džiovinimas",
+      "salesAutomation": "Pardavimai – automatizavimas",
+      "salesNichoMachines": "Pardavimai – NichoMachines",
+      "salesManager": "Pardavimų vadovas",
+      "businessDevelopmentManager": "Verslo plėtros vadovas",
+      "sales": "Pardavimai",
+      "projectManagerData": "Projektų vadovas – duomenys",
+      "serviceManager": "Aptarnavimo vadovas",
+      "sparePartsManager": "Atsarginių dalių vadovas",
+      "consultantBusinessDevelopment": "Konsultantas – verslo plėtra",
+      "serviceTechnician": "Aptarnavimo technikas",
+      "marketingManager": "Komunikacijos ir rinkodaros vadovas",
+      "marketingCoordinator": "Rinkodaros koordinatorė",
+      "telemarketingManager": "Rinkos vadovas – telemarketingas",
+      "accountant": "Buhalteris",
+      "financialController": "Finansų kontrolierius"
+    }
+  },
+  "group": {
+    "kicker": "Nicholaisen grupė",
+    "title": "Trys įmonės, vienas partneris",
+    "lede": "Arti mūsų klientų Skandinavijoje ir Baltijos šalyse — su tais pačiais žmonėmis, duomenimis ir atsakomybe kiekviename projekte.",
+    "imageAlt": "Medienos gamyba",
+    "jumpLabel": "Įmonės",
+    "contact": "Susisiekite",
+    "country": "Danija",
+    "companies": {
+      "denmark": {
+        "place": "Danija",
+        "kicker": "Danija · Būstinė",
+        "role": "Grupės būstinė",
+        "text": "Pardavimai, aptarnavimas, projektų valdymas ir duomenų komanda. Iš čia planuojame, perkame ir įgyvendiname projektus visose rinkose."
+      },
+      "sweden": {
+        "place": "Švedija",
+        "kicker": "Švedija",
+        "role": "Pardavimai ir aptarnavimas",
+        "text": "Vietiniai pardavimai ir aptarnavimas Švedijos klientams, palaikomi visos grupės — tas pats tiekėjų pasirinkimas, duomenys ir priežiūra."
+      },
+      "baltics": {
+        "place": "Baltijos šalys",
+        "kicker": "Baltijos šalys",
+        "role": "Pardavimai ir aptarnavimas",
+        "text": "Vietiniai pardavimai ir aptarnavimas Baltijos šalių klientams, palaikomi visos grupės — tas pats tiekėjų pasirinkimas, duomenys ir priežiūra."
+      }
+    }
+  },
+  "casesPage": {
+    "kicker": "Atvejai",
+    "title": "Tikri rezultatai iš gamybos cecho.",
+    "lede": "Projektų pavyzdžiai — nuo vienos linijos optimizavimo iki naujų gamyklų nuo nulio.",
+    "imageAlt": "Nicholaisen technikas gamybos ceche",
+    "filterLabel": "Filtruoti pagal pramonės šaką",
+    "listTitle": "Mūsų atvejai",
+    "listIntro": "Išmatuota prieš, išmatuota po — ir skaičiai yra paties kliento.",
+    "filters": {
+      "all": "Visi atvejai",
+      "solid-wood": "Medžio masyvas",
+      "panel-furniture": "Plokštės ir baldai"
+    }
+  },
+  "casePage": {
+    "allCases": "Visi atvejai",
+    "client": "Klientas",
+    "results": "Rezultatai",
+    "challenge": "Iššūkis",
+    "approach": "Požiūris",
+    "outcome": "Rezultatas",
+    "servicesApplied": "Taikytos paslaugos",
+    "keyInsight": "Pagrindinė įžvalga",
+    "moreCases": "Daugiau atvejų"
+  },
+  "serviceDetail": {
+    "labels": {
+      "jumpLabel": "Šiame puslapyje",
+      "whatYouGet": "Ką gausite",
+      "howItWorks": "Kaip tai veikia",
+      "theProof": "Įrodymas",
+      "seeHow": "Žiūrėti, kaip tai veikia",
+      "why": "Kodėl Nicholaisen?",
+      "customerCase": "Kliento atvejis",
+      "proofTitle": "Įrodymas — skaičiuose",
+      "seeAllCases": "Visi atvejai →",
+      "related": "Susijusios paslaugos",
+      "learnMore": "Sužinoti daugiau",
+      "getInTouch": "Susisiekite",
+      "teamAlt": "Nicholaisen komanda"
+    },
+    "pages": {
+      "investmentCases": {
+        "headline": "Pirkite stakles matydami visą ekonomiką.",
+        "sub": "Prieš apsispręsdami pamatykite visą staklių kainą viename puslapyje.",
+        "cta": "Užsisakykite TCO peržiūrą",
+        "introTitle": "Investicijos ant tvirto pagrindo",
+        "intro": [
+          "Kaina pasiūlyme — tik dalis istorijos. Eksploatacija, priežiūra ir prastovos lemia, kiek staklės jums kainuos per metus.",
+          "Vieno puslapio TCO parodo visą ekonomiką ir kiek patikimas kiekvienas skaičius. Galite palyginti pasiūlymus vienodu pagrindu ir priimti sprendimą, už kurį galite atsakyti."
+        ],
+        "getTitle": "Visa ekonomika viename puslapyje",
+        "get": [
+          {
+            "title": "Keturios sritys, viena apžvalga",
+            "text": "Pirkimas, eksploatacija, priežiūra ir prastovos viename puslapyje."
+          },
+          {
+            "title": "Aiški duomenų kokybė",
+            "text": "Kiekviena eilutė pažymėta kaip išmatuota, įvertinta ar neįtraukta."
+          },
+          {
+            "title": "Jūsų pačių skaičiai",
+            "text": "Paremta jūsų gamyba, o ne standartinėmis vertėmis."
+          },
+          {
+            "title": "Atsipirkimo laikas",
+            "text": "Aiškus atsakymas, kada investicija atsipirks."
+          }
+        ],
+        "why": [
+          {
+            "title": "Vienas susitikimas",
+            "text": "Skaičiavimą su jumis aptariame per vieną susitikimą."
+          },
+          {
+            "title": "Palyginkite tiekėjus",
+            "text": "Visose keturiose srityse, ne tik pagal kainą."
+          },
+          {
+            "title": "Visas procesas",
+            "text": "Žiūrime į stakles kartu su procesais prieš jas ir po jų."
+          },
+          {
+            "title": "Išmatuoti duomenys nuo pirmos dienos",
+            "text": "Mūsų naujos staklės tiekiamos su OptiCloud ir 3 metų garantija."
+          }
+        ],
+        "how": [
+          "Atsiųskite pasiūlymą ar skaičiavimą",
+          "Bendra peržiūra",
+          "Vieno puslapio TCO",
+          "Sprendimas"
+        ],
+        "proof": "Planuota skersinio pjovimo linija pasirodė nereikalinga. Vietoj jos esama linija buvo optimizuota programine įranga ir automatiniu rūšiavimu.",
+        "stats": [
+          {
+            "value": "10 %",
+            "label": "mažiau medžiagų atliekų"
+          },
+          {
+            "value": "3 → 2",
+            "label": "pamainos tam pačiam kiekiui"
+          },
+          {
+            "value": "< 1 metai",
+            "label": "atsipirkimo laikas"
+          }
+        ],
+        "closing": "Pasiruošę pamatyti visą vaizdą?",
+        "teaser": "Vieno puslapio TCO jūsų paskutinėms ar kitoms staklėms."
+      },
+      "capacityGrowth": {
+        "headline": "Gaminkite daugiau nedidindami sąnaudų.",
+        "sub": "Raskite, kas stabdo gamybą, ir gaukite augimo planą su kaina kiekvienam variantui.",
+        "cta": "Išanalizuokite savo srautą",
+        "introTitle": "Augimas su aiškiu vaizdu",
+        "intro": [
+          "Kai užsakymų daugėja, papildoma pamaina ar naujos staklės atrodo akivaizdus atsakymas. Bet ne visada teisingas.",
+          "Išanalizuojame jūsų gamybą nuo užsakymo iki pristatymo, randame kliūtį ir apskaičiuojame, kiek kainuoja ją pašalinti. Tada žinote, kur pinigai duoda daugiausia naudos."
+        ],
+        "getTitle": "Augimo planas su kaina kiekvienam variantui",
+        "get": [
+          {
+            "title": "Srauto analizė",
+            "text": "Proceso ir laukimo laikas kiekvienam žingsniui nuo užsakymo iki pristatymo."
+          },
+          {
+            "title": "Rasta kliūtis",
+            "text": "Aiškus atsakymas, kur stabdoma gamyba."
+          },
+          {
+            "title": "Laiko kaina",
+            "text": "Sąnaudos per minutę, užsakymą ir stakles."
+          },
+          {
+            "title": "Augimo planas",
+            "text": "Variantai su kaina ir laukiamu poveikiu, nuo optimizavimo iki naujo pajėgumo."
+          }
+        ],
+        "why": [
+          {
+            "title": "Jūsų pačių duomenys",
+            "text": "Iš ERP, staklių ir matavimų ceche."
+          },
+          {
+            "title": "Planuojama pagal jūsų užsakymus",
+            "text": "Pajėgumas derinamas su laukiamais užsakymais."
+          },
+          {
+            "title": "Automatizavimas, kai jis apsimoka",
+            "text": "Robotai ir krovimas pridedami, kai tai pagrindžia skaičiai."
+          },
+          {
+            "title": "Matuojama nuo pirmos dienos",
+            "text": "Mūsų naujos staklės per OptiCloud registruoja proceso ir prastovų laiką."
+          }
+        ],
+        "how": [
+          "Duomenų rinkimas",
+          "Analizė ir kliūtis",
+          "Variantai su kainomis",
+          "Augimo planas"
+        ],
+        "proof": "Baldų gamintojas su greita, bet nelanksčia gręžimo linija gavo mažesnes partijas ir trumpesnius terminus su vienomis 6 pusių pratekamosiomis staklėmis, paruoštomis robotui.",
+        "stats": [
+          {
+            "value": "9–12 tūkst.",
+            "label": "detalių per savaitę"
+          },
+          {
+            "value": "2–4 m.",
+            "label": "ROI vietoj klasikinių 8–12"
+          },
+          {
+            "value": "6 pusės",
+            "label": "apdirbamos per vieną praėjimą"
+          }
+        ],
+        "closing": "Parodykite mums linijos dalį, kuri jus erzina",
+        "teaser": "Raskite, kas stabdo gamybą, ir gaukite augimo planą."
+      },
+      "factoryLayout": {
+        "headline": "Išdėstymas, kuris kiekvieną produktą padaro pigesniu.",
+        "sub": "Nuo vienos darbo celės iki naujos gamyklos, suplanuota kaip vienas vientisas srautas.",
+        "cta": "Pasikalbėkime",
+        "introTitle": "Srautas vietoj krovimo",
+        "intro": [
+          "Kai detalės tarp stočių perkeliamos ir kraunamos rankomis, tai kainuoja laiką, vietą ir pažeidimus.",
+          "Gamybą planuojame kaip vieną srautą, automatizuodami logistiką ir labiausiai apsimokančius surinkimo žingsnius. Naujoje gamykloje arba žingsnis po žingsnio esamoje."
+        ],
+        "getTitle": "Vienas vientisas srautas, statomas etapais",
+        "get": [
+          {
+            "title": "Surinkimo analizė",
+            "text": "Kiek jis sudėtingas ir kaip medžiagos pasiekia kiekvieną stotį."
+          },
+          {
+            "title": "Automatizuota logistika",
+            "text": "Buferiai ir automatinis transportas tarp stočių."
+          },
+          {
+            "title": "Automatizavimas pagal atsipirkimą",
+            "text": "Pirmiausia — labiausiai apsimokantys žingsniai."
+          },
+          {
+            "title": "Vienas bendras planas",
+            "text": "Išdėstymas, kuris išlieka vientisas net statant etapais."
+          }
+        ],
+        "why": [
+          {
+            "title": "Nauja gamykla ar žingsnis po žingsnio",
+            "text": "Nauja gamykla esant mažam sudėtingumui, žingsnis po žingsnio — esant dideliam."
+          },
+          {
+            "title": "Mažiau sunkių kėlimų",
+            "text": "Mažiau sunkaus ir monotoniško darbo."
+          },
+          {
+            "title": "Mažiau pažeidimų",
+            "text": "Mažiau krovimo reiškia mažiau pažeistų detalių."
+          },
+          {
+            "title": "Daugiau iš to paties ploto",
+            "text": "Daugiau produkcijos tame pačiame plote."
+          }
+        ],
+        "how": [
+          "Analizė",
+          "Atsipirkimo vertinimas",
+          "Išdėstymas ir etapų planas",
+          "Nauja gamykla ar žingsnis po žingsnio"
+        ],
+        "proof": "Langų ir durų surinkimas automatizuotas devyniais žingsniais, nuo skenavimo iki paletizavimo, su stiklinimo robotu.",
+        "stats": [
+          {
+            "value": "> 50 %",
+            "label": "mažesnės darbo sąnaudos surinkime"
+          },
+          {
+            "value": "+100 %",
+            "label": "to paties ploto panaudojimas"
+          },
+          {
+            "value": "9 žingsniai",
+            "label": "viename vientisame sraute"
+          }
+        ],
+        "closing": "Atsiųskite mums savo išdėstymą ar naujos gamyklos planus",
+        "teaser": "Nuo vienos celės iki naujos gamyklos, suplanuota pagal mažiausią vieneto kainą."
+      },
+      "sourcing": {
+        "headline": "Geriausias tiekėjas kiekvienai užduočiai. Vienas atsakingas partneris.",
+        "sub": "Jūsų liniją laisvai sudarome iš skirtingų tiekėjų ir atsakome už bendrą rezultatą.",
+        "cta": "Atsiųskite sąrašą",
+        "introTitle": "Laisvas pasirinkimas, vienas atsakingas",
+        "intro": [
+          "Nesame susieti su vienu gamintoju. Tai leidžia pasirinkti įrangą, kuri geriausiai tinka kiekvienai jūsų gamybos užduočiai.",
+          "Gaunate vieną sutartį ir vieną kontaktinį asmenį, o mes atsakome, kad viskas veiktų kartu, nuo pristatymo iki aptarnavimo."
+        ],
+        "getTitle": "Geriausias atitikimas kiekvienai užduočiai",
+        "get": [
+          {
+            "title": "Laisvas tiekėjo pasirinkimas",
+            "text": "Geriausias atitikimas kiekvienai užduočiai."
+          },
+          {
+            "title": "Pasirinkta pagal bendras sąnaudas",
+            "text": "Pirkimas, eksploatacija, priežiūra ir prastovos, ne tik kaina."
+          },
+          {
+            "title": "Jokio antkainio ant antkainio",
+            "text": "Trumpa tiekimo grandinė be nereikalingų tarpininkų."
+          },
+          {
+            "title": "Vienas atsakingas",
+            "text": "Integracija, FAT, pristatymas ir aptarnavimas iš vieno partnerio."
+          }
+        ],
+        "why": [
+          {
+            "title": "Kaina pagal kokybę ir tarnavimo laiką",
+            "text": "Geriausiai tinkantis sprendimas, o ne pigiausias."
+          },
+          {
+            "title": "Mažos darbo sąnaudos detalei",
+            "text": "Įranga, pritaikyta jūsų produktams ir užduotims."
+          },
+          {
+            "title": "3 metų garantija",
+            "text": "NichoMachines standartinėms staklėms."
+          },
+          {
+            "title": "OptiCloud nuo pirmos dienos",
+            "text": "Duomenys iš kiekvienų naujų staklių nuo pirmos dienos."
+          }
+        ],
+        "how": [
+          "Atsiųskite savo poreikius",
+          "Reikalavimai kiekvienam procesui",
+          "Tiekėjo pasirinkimas pagal bendras sąnaudas",
+          "Integracija, pristatymas ir aptarnavimas"
+        ],
+        "proof": "Laisvas tiekėjo pasirinkimas kiekvienai užduočiai ir į vertę orientuotas procesas sutrumpina atsipirkimo laiką.",
+        "stats": [
+          {
+            "value": "2–4 m.",
+            "label": "ROI vietoj klasikinių 8–12"
+          },
+          {
+            "value": "1 partneris",
+            "label": "atsakingas už visą liniją"
+          },
+          {
+            "value": "3 metai",
+            "label": "garantija standartinėms staklėms"
+          }
+        ],
+        "closing": "Atsiųskite mums sąrašą, ko jums reikia",
+        "teaser": "Geriausias tiekėjas kiekvienai užduočiai ir vienas atsakingas partneris."
+      }
+    }
   }
 }

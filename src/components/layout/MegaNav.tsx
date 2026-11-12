@@ -29,6 +29,9 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
   const pathname = usePathname();
   // Underline "Solutions" while on a track page, as in the design.
   const onTrack = tracks.some((t) => pathname === t.href || pathname.endsWith(t.href));
+  // Likewise "Cases" on case pages and "Company" on about, team and group.
+  const onCases = /^(\/[a-z]{2})?\/cases(\/|$)/.test(pathname);
+  const onCompany = /^(\/[a-z]{2})?\/about(\/|$)/.test(pathname);
   const triggers = useRef<Record<string, HTMLButtonElement | null>>({});
   // Open each dropdown under its own trigger, 16px to the left (as in the design).
   const menuLeft = (triggers.current[value]?.offsetLeft ?? 0) - 16;
@@ -43,7 +46,9 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
     fontSize: "16px",
     lineHeight: 1.55,
     padding: "8px 0",
-    borderBottom: `2px solid ${value === key || (key === "solutions" && onTrack) ? "var(--color-spot)" : "transparent"}`,
+    borderBottom: `2px solid ${
+      value === key || (key === "solutions" && onTrack) || (key === "company" && onCompany) ? "var(--color-spot)" : "transparent"
+    }`,
   });
 
   return (
@@ -109,7 +114,17 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
         {/* Cases */}
         <NavigationMenu.Item>
           <NavigationMenu.Link asChild>
-            <Link href="/cases" style={{ color: ink, fontSize: "16px", lineHeight: 1.55, textDecoration: "none", padding: "8px 0" }}>
+            <Link
+              href="/cases"
+              style={{
+                color: ink,
+                fontSize: "16px",
+                lineHeight: 1.55,
+                textDecoration: "none",
+                padding: "8px 0",
+                borderBottom: `2px solid ${onCases ? "var(--color-spot)" : "transparent"}`,
+              }}
+            >
               Cases
             </Link>
           </NavigationMenu.Link>

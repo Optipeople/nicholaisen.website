@@ -12,15 +12,15 @@ const solutions = [
 ];
 
 const group = [
-  { title: "Nicholaisen A/S", href: "/about#group" },
-  { title: "Nicholaisen Sweden AB", href: "/about#group" },
-  { title: "Nicholaisen Baltic OÜ", href: "/about#group" },
+  { title: "Nicholaisen A/S", href: "/about/group#denmark" },
+  { title: "Nicholaisen Sweden AB", href: "/about/group#sweden" },
+  { title: "Nicholaisen Baltic OÜ", href: "/about/group#baltics" },
 ];
 
 const company = [
   { title: "About", href: "/about" },
-  { title: "People", href: "/about#team" },
-  { title: "Nicholaisen group", href: "/about#group" },
+  { title: "People", href: "/about/team" },
+  { title: "Nicholaisen group", href: "/about/group" },
   { title: "Cases", href: "/cases" },
   { title: "Contact", href: "/contact" },
   { title: "Privacy", href: "/legal/privacy" },

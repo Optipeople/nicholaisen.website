@@ -939,5 +939,475 @@
     "title": "Kui midagi siin on asjakohane, uurime seda koos lähemalt",
     "body": "Ilma igasuguse surveta. Kui praegu pole õige aeg, võtame lihtsalt hiljem uuesti ühendust.",
     "button": "Võtke ühendust"
+  },
+  "company": {
+    "title": "33 aastat kliendi poolel",
+    "lede": "Kaubamärkidest sõltumatud, tulemuse eest vastutavad — aitame tootjatel toota rohkem vähemaga, esimesest masinast kuni tervikliku tehaseni.",
+    "imageAlt": "Nicholaiseni meeskond",
+    "jumpLabel": "Sellel lehel",
+    "jumps": {
+      "about": "Meist",
+      "history": "Meie ajalugu",
+      "team": "Meeskond"
+    },
+    "about": {
+      "kicker": "Meist",
+      "title": "Vastutame tulemuse eest — mitte masina eest",
+      "p1": "Alates 1993. aastast on Nicholaisen aidanud puidu-, plaatmööbli- ning uste ja akende tootjatel toota rohkem vähemaga. Me ei ole seotud ühe kaubamärgiga, seega lähtub iga soovitus teie tootest, protsessist ja ärist.",
+      "p2": "Strateegiast ja investeerimisotsustest masinate, tervikliku tootmisliini ja neid töös hoidvate andmeteni — üks partner, kes vastutab algusest lõpuni.",
+      "solutions": "Meie lahendused",
+      "cases": "Vaata juhtumeid",
+      "imageAlt": "Puitraamid tootmises"
+    },
+    "values": {
+      "kicker": "Meie väärtused",
+      "title": "Neli põhimõtet juhivad iga projekti",
+      "imageAlt": "Nicholaiseni tehnik tootmises",
+      "principles": [
+        {
+          "lead": "Kliendi poolel.",
+          "text": "Vaba tarnijavalik — soovitame seda, mis sobib teie tootmisele, mitte kaubamärki."
+        },
+        {
+          "lead": "Mõõdetud, mitte hinnatud.",
+          "text": "Iga otsus põhineb teie enda numbritel."
+        },
+        {
+          "lead": "Tasuvus eelkõige.",
+          "text": "Pakume lahendusi, mis teenivad teie investeeringu tagasi kahe kuni nelja aastaga."
+        },
+        {
+          "lead": "Üks partner algusest lõpuni.",
+          "text": "Esimesest arvutusest kuni masin töötab vastavalt spetsifikatsioonile — ja andmepõhine järelkontroll hiljem."
+        }
+      ]
+    },
+    "contact": "Võtke ühendust",
+    "facts": [
+      {
+        "value": "1993",
+        "label": "Asutatud"
+      },
+      {
+        "value": "33 a",
+        "label": "Kliendi poolel"
+      },
+      {
+        "value": "3",
+        "label": "Ettevõtet kontsernis"
+      }
+    ],
+    "group": {
+      "kicker": "Nicholaiseni kontsern",
+      "title": "Kolm ettevõtet, üks partner",
+      "text": "Nicholaisen A/S, Nicholaisen Sweden AB ja Nicholaisen Baltic OÜ — lähedal meie klientidele Skandinaavias ja Baltikumis.",
+      "cta": "Tutvu kontserniga",
+      "imageAlt": "Nicholaiseni kontsern"
+    },
+    "team": {
+      "kicker": "Meeskond",
+      "title": "Meeskond Nicholaiseni taga",
+      "text": "Müügi, hoolduse, andmete ja projektijuhtimise spetsialistid Taanis, Rootsis ja Baltikumis.",
+      "cta": "Tutvu meeskonnaga",
+      "imageAlt": "Nicholaiseni meeskond"
+    }
+  },
+  "team": {
+    "kicker": "Meeskond",
+    "title": "Meeskond Nicholaiseni taga",
+    "lede": "Üks meeskond Taanis, Rootsis ja Baltikumis.",
+    "imageAlt": "Nicholaiseni meeskond",
+    "show": "Näita",
+    "allDepartments": "Kõik osakonnad",
+    "departments": {
+      "leadership": "Juhtkond",
+      "administration": "Administratsioon",
+      "salesDenmark": "Müük – Taani",
+      "salesBaltic": "Müük – Baltikum",
+      "salesSweden": "Müük – Rootsi",
+      "innovation": "Innovatsioon ja efektiivsus",
+      "service": "Hooldus ja varuosad",
+      "marketing": "Turundus",
+      "finance": "Finants"
+    },
+    "roles": {
+      "ceo": "Tegevjuht",
+      "coo": "Tegevdirektor (COO)",
+      "cfo": "Finantsjuht",
+      "paToCeo": "Tegevjuhi assistent",
+      "projectCoordinator": "Projektikoordinaator",
+      "officeAssistant": "Kontoriassistent",
+      "salesPanel": "Müük – plaadi- ja mööblitööstus",
+      "salesDoorWindow": "Müük – uste ja akende tööstus",
+      "salesWoodDrying": "Müük – puidukuivatus",
+      "salesAutomation": "Müük – automatiseerimine",
+      "salesNichoMachines": "Müük – NichoMachines",
+      "salesManager": "Müügijuht",
+      "businessDevelopmentManager": "Äriarenduse juht",
+      "sales": "Müük",
+      "projectManagerData": "Projektijuht – andmed",
+      "serviceManager": "Hooldusjuht",
+      "sparePartsManager": "Varuosade juht",
+      "consultantBusinessDevelopment": "Konsultant – äriarendus",
+      "serviceTechnician": "Hooldustehnik",
+      "marketingManager": "Kommunikatsiooni- ja turundusjuht",
+      "marketingCoordinator": "Turunduskoordinaator",
+      "telemarketingManager": "Turundusjuht – telemarketing",
+      "accountant": "Raamatupidaja",
+      "financialController": "Finantskontroller"
+    }
+  },
+  "group": {
+    "kicker": "Nicholaiseni kontsern",
+    "title": "Kolm ettevõtet, üks partner",
+    "lede": "Lähedal meie klientidele Skandinaavias ja Baltikumis — samade inimeste, andmete ja vastutusega iga projekti taga.",
+    "imageAlt": "Puidutootmine",
+    "jumpLabel": "Ettevõtted",
+    "contact": "Võtke ühendust",
+    "country": "Taani",
+    "companies": {
+      "denmark": {
+        "place": "Taani",
+        "kicker": "Taani · Peakontor",
+        "role": "Kontserni peakontor",
+        "text": "Müük, hooldus, projektijuhtimine ja andmemeeskond. Siit planeerime, hangime ja tarnime projekte kõigil turgudel."
+      },
+      "sweden": {
+        "place": "Rootsi",
+        "kicker": "Rootsi",
+        "role": "Müük ja hooldus",
+        "text": "Kohalik müük ja hooldus Rootsi klientidele, kogu kontserni toel — sama tarnijavalik, andmed ja järelkontroll."
+      },
+      "baltics": {
+        "place": "Baltikum",
+        "kicker": "Baltikum",
+        "role": "Müük ja hooldus",
+        "text": "Kohalik müük ja hooldus Baltikumi klientidele, kogu kontserni toel — sama tarnijavalik, andmed ja järelkontroll."
+      }
+    }
+  },
+  "casesPage": {
+    "kicker": "Juhtumid",
+    "title": "Tegelikud tulemused tootmisest.",
+    "lede": "Valik projekte — üksiku liini optimeerimisest kuni uute tehasteni nullist.",
+    "imageAlt": "Nicholaiseni tehnik tootmises",
+    "filterLabel": "Filtreeri valdkonna järgi",
+    "listTitle": "Meie juhtumid",
+    "listIntro": "Mõõdetud enne, mõõdetud pärast — ja numbrid on kliendi enda omad.",
+    "filters": {
+      "all": "Kõik juhtumid",
+      "solid-wood": "Massiivpuit",
+      "panel-furniture": "Plaadid ja mööbel"
+    }
+  },
+  "casePage": {
+    "allCases": "Kõik juhtumid",
+    "client": "Klient",
+    "results": "Tulemused",
+    "challenge": "Väljakutse",
+    "approach": "Lähenemine",
+    "outcome": "Tulemus",
+    "servicesApplied": "Kasutatud teenused",
+    "keyInsight": "Põhiline järeldus",
+    "moreCases": "Veel juhtumeid"
+  },
+  "serviceDetail": {
+    "labels": {
+      "jumpLabel": "Sellel lehel",
+      "whatYouGet": "Mida saate",
+      "howItWorks": "Kuidas see toimib",
+      "theProof": "Tõestus",
+      "seeHow": "Vaata, kuidas see toimib",
+      "why": "Miks Nicholaisen?",
+      "customerCase": "Kliendijuhtum",
+      "proofTitle": "Tõestus on numbrites",
+      "seeAllCases": "Vaata kõiki juhtumeid →",
+      "related": "Seotud teenused",
+      "learnMore": "Loe lähemalt",
+      "getInTouch": "Võtke ühendust",
+      "teamAlt": "Nicholaiseni meeskond"
+    },
+    "pages": {
+      "investmentCases": {
+        "headline": "Ostke masinaid, nähes kogu majandust.",
+        "sub": "Vaadake masina kogukulu ühel lehel enne otsuse tegemist.",
+        "cta": "Broneeri TCO ülevaatus",
+        "introTitle": "Investeeringud kindlal alusel",
+        "intro": [
+          "Pakkumise hind on vaid osa loost. Käitamine, hooldus ja seisakud määravad, mida masin teile aastate jooksul maksab.",
+          "Üheleheküljeline TCO näitab kogu majandust ja seda, kui kindel on iga number. Saate võrrelda pakkumisi samadel alustel ja teha otsuse, mille taga saate seista."
+        ],
+        "getTitle": "Kogu majandus ühel lehel",
+        "get": [
+          {
+            "title": "Neli valdkonda, üks ülevaade",
+            "text": "Ost, käitamine, hooldus ja seisakud ühel lehel."
+          },
+          {
+            "title": "Selge andmekvaliteet",
+            "text": "Iga rida märgitud kui mõõdetud, hinnatud või arvestamata."
+          },
+          {
+            "title": "Teie enda numbrid",
+            "text": "Põhineb teie tootmisel, mitte standardväärtustel."
+          },
+          {
+            "title": "Tasuvusaeg",
+            "text": "Selge vastus, millal investeering end ära tasub."
+          }
+        ],
+        "why": [
+          {
+            "title": "Üks kohtumine",
+            "text": "Käime arvutuse teiega läbi ühel kohtumisel."
+          },
+          {
+            "title": "Võrdle tarnijaid",
+            "text": "Kõigis neljas valdkonnas, mitte ainult hinna järgi."
+          },
+          {
+            "title": "Kogu protsess",
+            "text": "Vaatame masinat koos sellele eelnevate ja järgnevate protsessidega."
+          },
+          {
+            "title": "Mõõdetud andmed esimesest päevast",
+            "text": "Meie uued masinad tulevad OptiCloudi ja 3-aastase garantiiga."
+          }
+        ],
+        "how": [
+          "Saatke oma pakkumine või arvutus",
+          "Ühine ülevaatus",
+          "Üheleheküljeline TCO",
+          "Otsus"
+        ],
+        "proof": "Planeeritud järkamisliin osutus tarbetuks. Selle asemel optimeeriti olemasolevat liini tarkvara ja automaatse sorteerimisega.",
+        "stats": [
+          {
+            "value": "10 %",
+            "label": "vähem materjalikadu"
+          },
+          {
+            "value": "3 → 2",
+            "label": "vahetust sama toodangu jaoks"
+          },
+          {
+            "value": "< 1 aasta",
+            "label": "tasuvusaeg"
+          }
+        ],
+        "closing": "Valmis nägema tervikpilti?",
+        "teaser": "Üheleheküljeline TCO teie viimase või järgmise masina kohta."
+      },
+      "capacityGrowth": {
+        "headline": "Tootke rohkem ilma kulusid tõstmata.",
+        "sub": "Leidke, mis tootmist tagasi hoiab, ja saage kasvuplaan, kus igal valikul on hind.",
+        "cta": "Kaardista oma voog",
+        "introTitle": "Kasv selge ülevaatega",
+        "intro": [
+          "Kui tellimusi tuleb juurde, on lisavahetus või uus masin ilmne vastus. Kuid see pole alati õige.",
+          "Kaardistame teie tootmise tellimusest tarneni, leiame kitsaskoha ja arvutame, mida selle kõrvaldamine maksab. Siis teate, kus raha annab kõige rohkem kasu."
+        ],
+        "getTitle": "Kasvuplaan, kus igal valikul on hind",
+        "get": [
+          {
+            "title": "Voo kaardistamine",
+            "text": "Protsessi- ja ooteaeg iga sammu kohta tellimusest tarneni."
+          },
+          {
+            "title": "Kitsaskoht leitud",
+            "text": "Selge vastus, kus tootmist tagasi hoitakse."
+          },
+          {
+            "title": "Hind ajale",
+            "text": "Kulu minuti, tellimuse ja masina kohta."
+          },
+          {
+            "title": "Kasvuplaan",
+            "text": "Valikud koos hinna ja oodatava mõjuga, optimeerimisest uue võimsuseni."
+          }
+        ],
+        "why": [
+          {
+            "title": "Teie enda andmed",
+            "text": "ERP-st, masinatest ja mõõtmistest tootmises."
+          },
+          {
+            "title": "Planeeritud teie tellimuste järgi",
+            "text": "Võimsus sobitatakse oodatavate tellimustega."
+          },
+          {
+            "title": "Automatiseerimine, kui see tasub",
+            "text": "Robotid ja käsitsemine lisatakse, kui numbrid seda toetavad."
+          },
+          {
+            "title": "Mõõdetud esimesest päevast",
+            "text": "Meie uued masinad logivad protsessi- ja seisakuajad OptiCloudi kaudu."
+          }
+        ],
+        "how": [
+          "Andmete kogumine",
+          "Kaardistamine ja kitsaskoht",
+          "Valikud koos hindadega",
+          "Kasvuplaan"
+        ],
+        "proof": "Kiire, kuid paindumatu puurimisliiniga mööblitootja sai väiksemad partiid ja lühemad tarneajad ühe 6-poolse läbiviigumasinaga, mis on valmis robotiks.",
+        "stats": [
+          {
+            "value": "9–12k",
+            "label": "detaili nädalas"
+          },
+          {
+            "value": "2–4 a",
+            "label": "ROI klassikalise 8–12 asemel"
+          },
+          {
+            "value": "6 külge",
+            "label": "töödeldud ühe läbimisega"
+          }
+        ],
+        "closing": "Tooge meile see osa liinist, mis teid häirib",
+        "teaser": "Leidke, mis tootmist tagasi hoiab, ja saage kasvuplaan."
+      },
+      "factoryLayout": {
+        "headline": "Paigutus, mis muudab iga toote valmistamise odavamaks.",
+        "sub": "Üksikust töörakust uue tehaseni, planeeritud ühe sidusa voona.",
+        "cta": "Räägi meiega",
+        "introTitle": "Voog käsitsemise asemel",
+        "intro": [
+          "Kui detaile tõstetakse ja laotakse jaamade vahel käsitsi, maksab see aega, ruumi ja vigastusi.",
+          "Planeerime tootmise ühe voona, kus logistika ja kõige paremini tasuvad koostesammud on automatiseeritud. Kas uues tehases või samm-sammult olemasolevas."
+        ],
+        "getTitle": "Üks sidus voog, ehitatud etappidena",
+        "get": [
+          {
+            "title": "Koosteanalüüs",
+            "text": "Kui keerukas see on ja kuidas materjal iga jaamani jõuab."
+          },
+          {
+            "title": "Automatiseeritud logistika",
+            "text": "Puhvrid ja automaatne transport jaamade vahel."
+          },
+          {
+            "title": "Automatiseerimine tasuvuse järgi",
+            "text": "Kõige paremini tasuvad sammud tulevad esimesena."
+          },
+          {
+            "title": "Üks üldplaan",
+            "text": "Paigutus, mis püsib koos ka etappidena ehitades."
+          }
+        ],
+        "why": [
+          {
+            "title": "Uus tehas või samm-sammult",
+            "text": "Uus tehas madala keerukuse korral, samm-sammult kõrge keerukuse korral."
+          },
+          {
+            "title": "Vähem raskeid tõsteid",
+            "text": "Vähem rasket ja korduvat tööd."
+          },
+          {
+            "title": "Vähem vigastusi",
+            "text": "Vähem käsitsemist tähendab vähem kahjustusi detailidele."
+          },
+          {
+            "title": "Rohkem põrandapinnast",
+            "text": "Rohkem toodangut samal pinnal."
+          }
+        ],
+        "how": [
+          "Analüüs",
+          "Tasuvuse hindamine",
+          "Paigutus ja etapiplaan",
+          "Uus tehas või samm-sammult"
+        ],
+        "proof": "Akende ja uste koostamine automatiseeriti üheksas etapis, skaneerimisest kaubaaluste ladumiseni, koos klaasimisrobotiga.",
+        "stats": [
+          {
+            "value": "> 50 %",
+            "label": "madalam tööjõukulu koostes"
+          },
+          {
+            "value": "+100 %",
+            "label": "sama põrandapinna kasutus"
+          },
+          {
+            "value": "9 sammu",
+            "label": "ühes sidusas voos"
+          }
+        ],
+        "closing": "Saatke meile oma paigutus või uue tehase plaanid",
+        "teaser": "Üksikust rakust uue tehaseni, planeeritud madalaima ühikuhinna järgi."
+      },
+      "sourcing": {
+        "headline": "Parim tarnija iga ülesande jaoks. Üks vastutav partner.",
+        "sub": "Ehitame teie liini vabalt eri tarnijate seadmetest ja vastutame koondtulemuse eest.",
+        "cta": "Saada oma nimekiri",
+        "introTitle": "Vaba valik, üks vastutaja",
+        "intro": [
+          "Me ei ole seotud ühe tootjaga. See võimaldab meil valida seadmed, mis sobivad iga tööülesande jaoks teie tootmises kõige paremini.",
+          "Saate ühe lepingu ja ühe kontaktisiku ning meie vastutame, et kõik töötaks koos, tarnest hoolduseni."
+        ],
+        "getTitle": "Parim sobivus iga ülesande jaoks",
+        "get": [
+          {
+            "title": "Vaba tarnijavalik",
+            "text": "Parim sobivus iga ülesande jaoks."
+          },
+          {
+            "title": "Valitud kogukulu järgi",
+            "text": "Ost, käitamine, hooldus ja seisakud, mitte ainult hind."
+          },
+          {
+            "title": "Marginaal marginaalile puudub",
+            "text": "Lühike tarneahel ilma tarbetute vahendajateta."
+          },
+          {
+            "title": "Üks vastutaja",
+            "text": "Integreerimine, FAT, tarne ja hooldus ühelt partnerilt."
+          }
+        ],
+        "why": [
+          {
+            "title": "Hind kvaliteedi ja eluea järgi",
+            "text": "Kõige paremini sobiv lahendus, mitte odavaim."
+          },
+          {
+            "title": "Madal tööjõukulu detaili kohta",
+            "text": "Seadmed, mis sobivad teie toodete ja ülesannetega."
+          },
+          {
+            "title": "3-aastane garantii",
+            "text": "NichoMachinesi standardmasinatele."
+          },
+          {
+            "title": "OptiCloud esimesest päevast",
+            "text": "Andmed igalt uuelt masinalt esimesest päevast."
+          }
+        ],
+        "how": [
+          "Saatke oma vajadused",
+          "Nõuded iga protsessi jaoks",
+          "Tarnijavalik kogukulu järgi",
+          "Integreerimine, tarne ja hooldus"
+        ],
+        "proof": "Vaba tarnijavalik iga ülesande jaoks ja väärtusele keskendunud protsess lühendavad tasuvusaega.",
+        "stats": [
+          {
+            "value": "2–4 a",
+            "label": "ROI klassikalise 8–12 asemel"
+          },
+          {
+            "value": "1 partner",
+            "label": "vastutab kogu liini eest"
+          },
+          {
+            "value": "3 a",
+            "label": "garantii standardmasinatele"
+          }
+        ],
+        "closing": "Saatke meile nimekiri sellest, mida vajate",
+        "teaser": "Parim tarnija iga ülesande jaoks ja üks vastutav partner."
+      }
+    }
   }
 }

@@ -937,5 +937,475 @@
     "title": "If something here is relevant, let's dig into it together",
     "body": "No pressure either way. If it's not the right time, we'll simply check back down the road.",
     "button": "Get in touch"
+  },
+  "company": {
+    "title": "33 years on the customer’s side",
+    "lede": "Independent of brands, responsible for the result — helping manufacturers produce more for less, from the first machine to a complete factory.",
+    "imageAlt": "The Nicholaisen team",
+    "jumpLabel": "On this page",
+    "jumps": {
+      "about": "About us",
+      "history": "Our history",
+      "team": "The team"
+    },
+    "about": {
+      "kicker": "About us",
+      "title": "We answer for the result — not the machine",
+      "p1": "Since 1993 Nicholaisen has helped manufacturers in wood, panel furniture and doors & windows produce more for less. We are not tied to one brand, so every recommendation starts from your product, your process and your business.",
+      "p2": "From strategy and investment decisions to machines, complete production lines and the data that keeps them performing — one partner, responsible all the way through.",
+      "solutions": "Our solutions",
+      "cases": "See our cases",
+      "imageAlt": "Wood frames in production"
+    },
+    "values": {
+      "kicker": "Our values",
+      "title": "Four principles guide every project",
+      "imageAlt": "Nicholaisen technician on the shop floor",
+      "principles": [
+        {
+          "lead": "On the customer’s side.",
+          "text": "Free choice of supplier — we recommend what fits your production, not a brand."
+        },
+        {
+          "lead": "Measured, not estimated.",
+          "text": "Every decision rests on your own numbers."
+        },
+        {
+          "lead": "Payback first.",
+          "text": "We suggest solutions that earn back your investment in two to four years."
+        },
+        {
+          "lead": "One partner, start to finish.",
+          "text": "From the first calculation to the machine running at spec — and data-based follow-up after."
+        }
+      ]
+    },
+    "contact": "Get in touch",
+    "facts": [
+      {
+        "value": "1993",
+        "label": "Founded"
+      },
+      {
+        "value": "33 yrs",
+        "label": "On the customer’s side"
+      },
+      {
+        "value": "3",
+        "label": "Companies in the group"
+      }
+    ],
+    "group": {
+      "kicker": "Nicholaisen Group",
+      "title": "Three companies, one partner",
+      "text": "Nicholaisen A/S, Nicholaisen Sweden AB and Nicholaisen Baltic OÜ — close to our customers across Scandinavia and the Baltics.",
+      "cta": "Meet the group",
+      "imageAlt": "Nicholaisen Group"
+    },
+    "team": {
+      "kicker": "The team",
+      "title": "The team behind Nicholaisen",
+      "text": "Specialists in sales, service, data and project management across Denmark, Sweden and the Baltics.",
+      "cta": "Meet the team",
+      "imageAlt": "The Nicholaisen team"
+    }
+  },
+  "team": {
+    "kicker": "The team",
+    "title": "The team behind Nicholaisen",
+    "lede": "One team across Denmark, Sweden and the Baltics.",
+    "imageAlt": "The Nicholaisen team",
+    "show": "Show",
+    "allDepartments": "All departments",
+    "departments": {
+      "leadership": "Leadership",
+      "administration": "Administration",
+      "salesDenmark": "Sales – Denmark",
+      "salesBaltic": "Sales – Baltic",
+      "salesSweden": "Sales – Sweden",
+      "innovation": "Innovation & Efficiency",
+      "service": "Service & Spare Parts",
+      "marketing": "Marketing",
+      "finance": "Finance"
+    },
+    "roles": {
+      "ceo": "CEO",
+      "coo": "COO",
+      "cfo": "CFO",
+      "paToCeo": "PA to CEO",
+      "projectCoordinator": "Project Coordinator",
+      "officeAssistant": "Office Assistant",
+      "salesPanel": "Sales – Plate & Furniture Industry",
+      "salesDoorWindow": "Sales – Door & Window Industry",
+      "salesWoodDrying": "Sales – Wood Drying",
+      "salesAutomation": "Sales – Automation",
+      "salesNichoMachines": "Sales – NichoMachines",
+      "salesManager": "Sales Manager",
+      "businessDevelopmentManager": "Business Development Manager",
+      "sales": "Sales",
+      "projectManagerData": "Project Manager – Data",
+      "serviceManager": "Service Manager",
+      "sparePartsManager": "Spare Parts Manager",
+      "consultantBusinessDevelopment": "Consultant – Business Development",
+      "serviceTechnician": "Service Technician",
+      "marketingManager": "Communications & Marketing Manager",
+      "marketingCoordinator": "Marketing Coordinator",
+      "telemarketingManager": "Market Manager – Telemarketing",
+      "accountant": "Accountant",
+      "financialController": "Financial Controller"
+    }
+  },
+  "group": {
+    "kicker": "Nicholaisen group",
+    "title": "Three companies, one partner",
+    "lede": "Close to our customers across Scandinavia and the Baltics — with the same people, data and responsibility behind every project.",
+    "imageAlt": "Wood production",
+    "jumpLabel": "Companies",
+    "contact": "Get in touch",
+    "country": "Denmark",
+    "companies": {
+      "denmark": {
+        "place": "Denmark",
+        "kicker": "Denmark · Headquarters",
+        "role": "Headquarters of the group",
+        "text": "Sales, service, project management and the data team. From here we plan, source and deliver projects across all markets."
+      },
+      "sweden": {
+        "place": "Sweden",
+        "kicker": "Sweden",
+        "role": "Sales & service",
+        "text": "Local sales and service for Swedish customers, backed by the full group — the same supplier choice, data and follow-up."
+      },
+      "baltics": {
+        "place": "Baltics",
+        "kicker": "Baltics",
+        "role": "Sales & service",
+        "text": "Local sales and service for customers in the Baltics, backed by the full group — the same supplier choice, data and follow-up."
+      }
+    }
+  },
+  "casesPage": {
+    "kicker": "Cases",
+    "title": "Real results from the shop floor.",
+    "lede": "A selection of projects — from single-line optimizations to greenfield factories.",
+    "imageAlt": "Nicholaisen technician on the shop floor",
+    "filterLabel": "Filter by industry",
+    "listTitle": "Our cases",
+    "listIntro": "Measured before, measured after — and the numbers are the customer's own.",
+    "filters": {
+      "all": "All cases",
+      "solid-wood": "Solid wood",
+      "panel-furniture": "Panel & furniture"
+    }
+  },
+  "casePage": {
+    "allCases": "All cases",
+    "client": "Client",
+    "results": "Results",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "outcome": "Outcome",
+    "servicesApplied": "Services applied",
+    "keyInsight": "Key insight",
+    "moreCases": "More cases"
+  },
+  "serviceDetail": {
+    "labels": {
+      "jumpLabel": "On this page",
+      "whatYouGet": "What you get",
+      "howItWorks": "How it works",
+      "theProof": "The proof",
+      "seeHow": "See how it works",
+      "why": "Why Nicholaisen?",
+      "customerCase": "Customer case",
+      "proofTitle": "The proof is in the numbers",
+      "seeAllCases": "See all cases →",
+      "related": "Related services",
+      "learnMore": "Learn more",
+      "getInTouch": "Get in touch",
+      "teamAlt": "The Nicholaisen team"
+    },
+    "pages": {
+      "investmentCases": {
+        "headline": "Buy machines with the full economics in view.",
+        "sub": "See the whole cost of a machine on one page before you decide.",
+        "cta": "Book a TCO review",
+        "introTitle": "Investments on solid ground",
+        "intro": [
+          "The price on the quote is only part of the story. Operation, maintenance and downtime decide what the machine costs you over the years.",
+          "A one-page TCO shows you the full economics and how certain each figure is. You can compare quotes on the same basis and make a decision you can stand behind."
+        ],
+        "getTitle": "The full economics on one page",
+        "get": [
+          {
+            "title": "Four areas, one overview",
+            "text": "Purchase, operation, maintenance and downtime on a single page."
+          },
+          {
+            "title": "Clear data quality",
+            "text": "Every item marked as measured, estimated or not included."
+          },
+          {
+            "title": "Your own figures",
+            "text": "Built on your production, not on standard values."
+          },
+          {
+            "title": "Payback time",
+            "text": "A clear answer on when the investment has paid for itself."
+          }
+        ],
+        "why": [
+          {
+            "title": "One meeting",
+            "text": "We go through the calculation with you in a single meeting."
+          },
+          {
+            "title": "Compare suppliers",
+            "text": "On all four areas, not just on price."
+          },
+          {
+            "title": "The whole process",
+            "text": "We look at the machine together with the processes before and after it."
+          },
+          {
+            "title": "Measured data from day one",
+            "text": "New machines from us come with OptiCloud and a 3-year warranty."
+          }
+        ],
+        "how": [
+          "Send your quote or calculation",
+          "Joint review",
+          "One-page TCO",
+          "Decision"
+        ],
+        "proof": "A planned cut-off line turned out to be unnecessary. Instead, the existing line was optimised with software and automatic sorting.",
+        "stats": [
+          {
+            "value": "10 %",
+            "label": "less material waste"
+          },
+          {
+            "value": "3 → 2",
+            "label": "shifts for the same output"
+          },
+          {
+            "value": "< 1 year",
+            "label": "payback time"
+          }
+        ],
+        "closing": "Ready to see the full picture?",
+        "teaser": "A one-page TCO on your last or next machine."
+      },
+      "capacityGrowth": {
+        "headline": "Produce more without raising your costs.",
+        "sub": "Find what holds production back, and get a growth plan with a price on every option.",
+        "cta": "Map your flow",
+        "introTitle": "Growth with a clear view",
+        "intro": [
+          "When orders go up, an extra shift or a new machine is the obvious answer. But it is not always the right one.",
+          "We map your production from order to delivery, find the bottleneck and work out what it costs to remove it. Then you know where the money does the most good."
+        ],
+        "getTitle": "A growth plan with a price on every option",
+        "get": [
+          {
+            "title": "Flow mapping",
+            "text": "Process and waiting time for every step from order to delivery."
+          },
+          {
+            "title": "The bottleneck found",
+            "text": "A clear answer on where production is held back."
+          },
+          {
+            "title": "A price on time",
+            "text": "Cost per minute, per order and per machine."
+          },
+          {
+            "title": "Growth plan",
+            "text": "Options with price and expected effect, from optimisation to new capacity."
+          }
+        ],
+        "why": [
+          {
+            "title": "Your own data",
+            "text": "From ERP, machines and measurements on the floor."
+          },
+          {
+            "title": "Planned around your orders",
+            "text": "Capacity is matched against the orders you expect."
+          },
+          {
+            "title": "Automation when it pays",
+            "text": "Robots and handling are added when the numbers support it."
+          },
+          {
+            "title": "Measured from day one",
+            "text": "New machines from us log process and stop times through OptiCloud."
+          }
+        ],
+        "how": [
+          "Data collection",
+          "Mapping and bottleneck",
+          "Options with prices",
+          "Growth plan"
+        ],
+        "proof": "A furniture maker with a fast but inflexible drilling line got smaller batches and shorter lead times with one 6-sided through-feed machine, ready for a robot.",
+        "stats": [
+          {
+            "value": "9–12k",
+            "label": "parts per week"
+          },
+          {
+            "value": "2–4 years",
+            "label": "ROI instead of the classic 8–12"
+          },
+          {
+            "value": "6 sides",
+            "label": "machined in one pass"
+          }
+        ],
+        "closing": "Bring us the part of the line that frustrates you",
+        "teaser": "Find what holds production back, and get a plan for growth."
+      },
+      "factoryLayout": {
+        "headline": "A layout that makes every product cheaper to make.",
+        "sub": "From a single work cell to a new factory, planned as one connected flow.",
+        "cta": "Talk to us",
+        "introTitle": "Flow instead of handling",
+        "intro": [
+          "When parts are moved and stacked by hand between stations, it costs time, space and damage.",
+          "We plan production as one flow, with logistics and the assembly steps that pay off best automated. Either in a new factory or step by step in the one you have."
+        ],
+        "getTitle": "One connected flow, built in stages",
+        "get": [
+          {
+            "title": "Assembly analysis",
+            "text": "How complex it is, and how materials reach each station."
+          },
+          {
+            "title": "Automated logistics",
+            "text": "Buffers and automatic transport between stations."
+          },
+          {
+            "title": "Automation by payback",
+            "text": "The steps that pay off best come first."
+          },
+          {
+            "title": "One master plan",
+            "text": "A layout that holds together, even when it is built in stages."
+          }
+        ],
+        "why": [
+          {
+            "title": "New factory or step by step",
+            "text": "A new factory for low complexity, step by step for high complexity."
+          },
+          {
+            "title": "Fewer heavy lifts",
+            "text": "Less heavy and repetitive work."
+          },
+          {
+            "title": "Less damage",
+            "text": "Less handling means less damage to the parts."
+          },
+          {
+            "title": "More from your floor space",
+            "text": "More output on the same floor."
+          }
+        ],
+        "how": [
+          "Analysis",
+          "Payback assessment",
+          "Layout and phase plan",
+          "New factory or step by step"
+        ],
+        "proof": "Window and door assembly automated in nine steps, from scanning to palletising, with a robot for glazing.",
+        "stats": [
+          {
+            "value": "> 50 %",
+            "label": "lower labour cost in assembly"
+          },
+          {
+            "value": "+100 %",
+            "label": "use of the same floor space"
+          },
+          {
+            "value": "9 steps",
+            "label": "in one connected flow"
+          }
+        ],
+        "closing": "Send us your layout or plans for a new factory",
+        "teaser": "From a single cell to a new factory, planned around the lowest unit price."
+      },
+      "sourcing": {
+        "headline": "The best supplier for each task. One partner responsible.",
+        "sub": "We build your line freely across suppliers and answer for the combined result.",
+        "cta": "Send your list",
+        "introTitle": "Free choice, one point of responsibility",
+        "intro": [
+          "We are not tied to one manufacturer. That lets us choose the equipment that fits each task in your production best.",
+          "You get one contract and one contact person, and we are responsible for making it all work together, from delivery to service."
+        ],
+        "getTitle": "The best fit for each task",
+        "get": [
+          {
+            "title": "Free choice of supplier",
+            "text": "The best match for each task."
+          },
+          {
+            "title": "Chosen on total cost",
+            "text": "Purchase, operation, maintenance and downtime, not just price."
+          },
+          {
+            "title": "No margin on margin",
+            "text": "A short supply chain without unnecessary middlemen."
+          },
+          {
+            "title": "One point of responsibility",
+            "text": "Integration, FAT, delivery and service from one partner."
+          }
+        ],
+        "why": [
+          {
+            "title": "Price by quality and lifetime",
+            "text": "The solution that fits best, not the cheapest."
+          },
+          {
+            "title": "Low labour cost per part",
+            "text": "Equipment matched to your products and tasks."
+          },
+          {
+            "title": "3-year warranty",
+            "text": "On standard machines from NichoMachines."
+          },
+          {
+            "title": "OptiCloud from day one",
+            "text": "Data from every new machine from the first day."
+          }
+        ],
+        "how": [
+          "Send your needs",
+          "Requirements for each process",
+          "Supplier choice on total cost",
+          "Integration, delivery and service"
+        ],
+        "proof": "Free choice of supplier for each task and a value-focused process move the payback time.",
+        "stats": [
+          {
+            "value": "2–4 years",
+            "label": "ROI instead of the classic 8–12"
+          },
+          {
+            "value": "1 partner",
+            "label": "responsible for the whole line"
+          },
+          {
+            "value": "3 years",
+            "label": "warranty on standard machines"
+          }
+        ],
+        "closing": "Send us a list of what you need",
+        "teaser": "The best supplier for each task, and one partner responsible."
+      }
+    }
   }
 }

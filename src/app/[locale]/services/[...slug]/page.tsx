@@ -24,6 +24,8 @@ import {
 import { buildMetadata } from "@/lib/seo";
 import { trackBySlug, tracks } from "@/lib/tracks";
 import { TrackLanding } from "@/components/solutions/TrackLanding";
+import { ServiceDetail } from "@/components/solutions/ServiceDetail";
+import { serviceHref, servicePageBySlugs, servicePages } from "@/lib/services";
 
 type Params = { slug: string[]; locale: string };
 
@@ -33,12 +35,18 @@ export async function generateStaticParams() {
     ...services.map((s) => s.frontmatter.slug),
     // Track landing pages (some, like Machines, have no MDX file).
     ...tracks.map((t) => t.slug),
+    // Service sub-pages from the design.
+    ...servicePages.map((p) => serviceHref(p).replace("/services/", "")),
   ]);
   return [...slugs].map((slug) => ({ slug: slug.split("/") }));
 }
 
 /** A single segment naming one of the five tracks renders the track landing page. */
 const trackFor = (slug: string[]) => (slug.length === 1 && slug[0] ? trackBySlug(slug[0]) : undefined);
+
+/** Two segments naming a design service sub-page render the shared service template. */
+const servicePageFor = (slug: string[]) =>
+  slug.length === 2 && slug[0] && slug[1] ? servicePageBySlugs(slug[0], slug[1]) : undefined;
 
 export async function generateMetadata({
   params,
@@ -54,6 +62,18 @@ export async function generateMetadata({
       description: t(`${track.key}.lede`),
       path: track.href,
       ogImage: track.image,
+    });
+  }
+  const servicePage = servicePageFor(slug);
+  if (servicePage) {
+    const t = await getTranslations({ locale, namespace: "serviceDetail.pages" });
+    const ts = await getTranslations({ locale, namespace: "solutions.tracks" });
+    const services = ts.raw(`${servicePage.track}.services`) as { title: string }[];
+    return buildMetadata({
+      title: services[servicePage.index]?.title,
+      description: t(`${servicePage.key}.sub`),
+      path: serviceHref(servicePage),
+      ogImage: servicePage.image,
     });
   }
   const doc = await getService(slug.join("/"));
@@ -76,6 +96,8 @@ export default async function ServicePage({
   setRequestLocale(locale);
   const track = trackFor(slug);
   if (track) return <TrackLanding track={track} locale={locale} />;
+  const servicePage = servicePageFor(slug);
+  if (servicePage) return <ServiceDetail page={servicePage} />;
   const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const fullSlug = slug.join("/");
   const [t, tc] = await Promise.all([

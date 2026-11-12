@@ -94,8 +94,8 @@ export const solutions: NavLeaf[] = [
 
 export const companyItems: NavLeaf[] = [
   { title: "About us", href: "/about", key: "about" },
-  { title: "The team", href: "/about#team", key: "team" },
-  { title: "Nicholaisen Group", href: "/about#group", key: "group" },
+  { title: "The team", href: "/about/team", key: "team" },
+  { title: "Nicholaisen Group", href: "/about/group", key: "group" },
 ];
 
 export const primaryNav: NavSection[] = [

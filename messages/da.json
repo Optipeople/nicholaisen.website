@@ -937,5 +937,475 @@
     "title": "Hvis noget her er relevant, så lad os dykke ned i det sammen",
     "body": "Helt uforpligtende. Hvis det ikke er det rette tidspunkt, vender vi blot tilbage senere.",
     "button": "Kontakt os"
+  },
+  "company": {
+    "title": "33 år på kundens side",
+    "lede": "Uafhængige af mærker, ansvarlige for resultatet — vi hjælper producenter med at producere mere for mindre, fra den første maskine til en komplet fabrik.",
+    "imageAlt": "Nicholaisen-teamet",
+    "jumpLabel": "På denne side",
+    "jumps": {
+      "about": "Om os",
+      "history": "Vores historie",
+      "team": "Teamet"
+    },
+    "about": {
+      "kicker": "Om os",
+      "title": "Vi står inde for resultatet — ikke maskinen",
+      "p1": "Siden 1993 har Nicholaisen hjulpet producenter inden for træ, plademøbler samt døre og vinduer med at producere mere for mindre. Vi er ikke bundet til ét mærke, så hver anbefaling tager udgangspunkt i dit produkt, din proces og din forretning.",
+      "p2": "Fra strategi og investeringsbeslutninger til maskiner, komplette produktionslinjer og de data, der holder dem kørende — én partner med ansvar hele vejen.",
+      "solutions": "Vores løsninger",
+      "cases": "Se vores cases",
+      "imageAlt": "Trærammer i produktion"
+    },
+    "values": {
+      "kicker": "Vores værdier",
+      "title": "Fire principper styrer hvert projekt",
+      "imageAlt": "Nicholaisen-tekniker på produktionsgulvet",
+      "principles": [
+        {
+          "lead": "På kundens side.",
+          "text": "Frit valg af leverandør — vi anbefaler det, der passer til din produktion, ikke et mærke."
+        },
+        {
+          "lead": "Målt, ikke estimeret.",
+          "text": "Hver beslutning bygger på dine egne tal."
+        },
+        {
+          "lead": "Tilbagebetaling først.",
+          "text": "Vi foreslår løsninger, der tjener din investering hjem på to til fire år."
+        },
+        {
+          "lead": "Én partner fra start til slut.",
+          "text": "Fra den første beregning til maskinen kører efter specifikationen — og databaseret opfølgning bagefter."
+        }
+      ]
+    },
+    "contact": "Kontakt os",
+    "facts": [
+      {
+        "value": "1993",
+        "label": "Grundlagt"
+      },
+      {
+        "value": "33 år",
+        "label": "På kundens side"
+      },
+      {
+        "value": "3",
+        "label": "Selskaber i koncernen"
+      }
+    ],
+    "group": {
+      "kicker": "Nicholaisen-koncernen",
+      "title": "Tre selskaber, én partner",
+      "text": "Nicholaisen A/S, Nicholaisen Sweden AB og Nicholaisen Baltic OÜ — tæt på vores kunder i Skandinavien og Baltikum.",
+      "cta": "Mød koncernen",
+      "imageAlt": "Nicholaisen-koncernen"
+    },
+    "team": {
+      "kicker": "Teamet",
+      "title": "Teamet bag Nicholaisen",
+      "text": "Specialister i salg, service, data og projektledelse i Danmark, Sverige og Baltikum.",
+      "cta": "Mød teamet",
+      "imageAlt": "Nicholaisen-teamet"
+    }
+  },
+  "team": {
+    "kicker": "Teamet",
+    "title": "Teamet bag Nicholaisen",
+    "lede": "Ét team i Danmark, Sverige og Baltikum.",
+    "imageAlt": "Nicholaisen-teamet",
+    "show": "Vis",
+    "allDepartments": "Alle afdelinger",
+    "departments": {
+      "leadership": "Ledelse",
+      "administration": "Administration",
+      "salesDenmark": "Salg – Danmark",
+      "salesBaltic": "Salg – Baltikum",
+      "salesSweden": "Salg – Sverige",
+      "innovation": "Innovation & effektivitet",
+      "service": "Service & reservedele",
+      "marketing": "Marketing",
+      "finance": "Økonomi"
+    },
+    "roles": {
+      "ceo": "CEO",
+      "coo": "COO",
+      "cfo": "CFO",
+      "paToCeo": "Direktionsassistent",
+      "projectCoordinator": "Projektkoordinator",
+      "officeAssistant": "Kontorassistent",
+      "salesPanel": "Salg – plade- og møbelindustrien",
+      "salesDoorWindow": "Salg – dør- og vinduesindustrien",
+      "salesWoodDrying": "Salg – trætørring",
+      "salesAutomation": "Salg – automation",
+      "salesNichoMachines": "Salg – NichoMachines",
+      "salesManager": "Salgschef",
+      "businessDevelopmentManager": "Business Development Manager",
+      "sales": "Salg",
+      "projectManagerData": "Projektleder – data",
+      "serviceManager": "Servicechef",
+      "sparePartsManager": "Reservedelschef",
+      "consultantBusinessDevelopment": "Konsulent – forretningsudvikling",
+      "serviceTechnician": "Servicetekniker",
+      "marketingManager": "Kommunikations- og marketingchef",
+      "marketingCoordinator": "Marketingkoordinator",
+      "telemarketingManager": "Market Manager – telemarketing",
+      "accountant": "Bogholder",
+      "financialController": "Financial Controller"
+    }
+  },
+  "group": {
+    "kicker": "Nicholaisen-koncernen",
+    "title": "Tre selskaber, én partner",
+    "lede": "Tæt på vores kunder i Skandinavien og Baltikum — med de samme mennesker, data og det samme ansvar bag hvert projekt.",
+    "imageAlt": "Træproduktion",
+    "jumpLabel": "Selskaber",
+    "contact": "Kontakt os",
+    "country": "Danmark",
+    "companies": {
+      "denmark": {
+        "place": "Danmark",
+        "kicker": "Danmark · Hovedkontor",
+        "role": "Koncernens hovedkontor",
+        "text": "Salg, service, projektledelse og datateamet. Herfra planlægger, indkøber og leverer vi projekter på tværs af alle markeder."
+      },
+      "sweden": {
+        "place": "Sverige",
+        "kicker": "Sverige",
+        "role": "Salg & service",
+        "text": "Lokalt salg og service til svenske kunder, bakket op af hele koncernen — samme leverandørvalg, data og opfølgning."
+      },
+      "baltics": {
+        "place": "Baltikum",
+        "kicker": "Baltikum",
+        "role": "Salg & service",
+        "text": "Lokalt salg og service til kunder i Baltikum, bakket op af hele koncernen — samme leverandørvalg, data og opfølgning."
+      }
+    }
+  },
+  "casesPage": {
+    "kicker": "Cases",
+    "title": "Virkelige resultater fra produktionsgulvet.",
+    "lede": "Et udvalg af projekter — fra optimering af en enkelt linje til nye fabrikker fra bunden.",
+    "imageAlt": "Nicholaisen-tekniker på produktionsgulvet",
+    "filterLabel": "Filtrér efter branche",
+    "listTitle": "Vores cases",
+    "listIntro": "Målt før, målt efter — og tallene er kundens egne.",
+    "filters": {
+      "all": "Alle cases",
+      "solid-wood": "Massivtræ",
+      "panel-furniture": "Plader & møbler"
+    }
+  },
+  "casePage": {
+    "allCases": "Alle cases",
+    "client": "Kunde",
+    "results": "Resultater",
+    "challenge": "Udfordring",
+    "approach": "Tilgang",
+    "outcome": "Resultat",
+    "servicesApplied": "Anvendte ydelser",
+    "keyInsight": "Vigtig indsigt",
+    "moreCases": "Flere cases"
+  },
+  "serviceDetail": {
+    "labels": {
+      "jumpLabel": "På denne side",
+      "whatYouGet": "Det får du",
+      "howItWorks": "Sådan fungerer det",
+      "theProof": "Beviset",
+      "seeHow": "Se hvordan det fungerer",
+      "why": "Hvorfor Nicholaisen?",
+      "customerCase": "Kundecase",
+      "proofTitle": "Beviset ligger i tallene",
+      "seeAllCases": "Se alle cases →",
+      "related": "Relaterede ydelser",
+      "learnMore": "Læs mere",
+      "getInTouch": "Kontakt os",
+      "teamAlt": "Nicholaisen-teamet"
+    },
+    "pages": {
+      "investmentCases": {
+        "headline": "Køb maskiner med hele økonomien for øje.",
+        "sub": "Se den samlede pris for en maskine på én side, før du beslutter dig.",
+        "cta": "Book en TCO-gennemgang",
+        "introTitle": "Investeringer på et solidt grundlag",
+        "intro": [
+          "Prisen på tilbuddet er kun en del af historien. Drift, vedligehold og stilstand afgør, hvad maskinen koster dig over årene.",
+          "En TCO på én side viser dig hele økonomien, og hvor sikkert hvert tal er. Du kan sammenligne tilbud på samme grundlag og træffe en beslutning, du kan stå inde for."
+        ],
+        "getTitle": "Hele økonomien på én side",
+        "get": [
+          {
+            "title": "Fire områder, ét overblik",
+            "text": "Indkøb, drift, vedligehold og stilstand på en enkelt side."
+          },
+          {
+            "title": "Klar datakvalitet",
+            "text": "Hver post markeret som målt, estimeret eller ikke medregnet."
+          },
+          {
+            "title": "Dine egne tal",
+            "text": "Bygget på din produktion, ikke på standardværdier."
+          },
+          {
+            "title": "Tilbagebetalingstid",
+            "text": "Et klart svar på, hvornår investeringen har tjent sig hjem."
+          }
+        ],
+        "why": [
+          {
+            "title": "Ét møde",
+            "text": "Vi gennemgår beregningen med dig på et enkelt møde."
+          },
+          {
+            "title": "Sammenlign leverandører",
+            "text": "På alle fire områder, ikke kun på pris."
+          },
+          {
+            "title": "Hele processen",
+            "text": "Vi ser på maskinen sammen med processerne før og efter den."
+          },
+          {
+            "title": "Målte data fra dag ét",
+            "text": "Nye maskiner fra os leveres med OptiCloud og 3 års garanti."
+          }
+        ],
+        "how": [
+          "Send dit tilbud eller din beregning",
+          "Fælles gennemgang",
+          "TCO på én side",
+          "Beslutning"
+        ],
+        "proof": "En planlagt afkortningslinje viste sig at være unødvendig. I stedet blev den eksisterende linje optimeret med software og automatisk sortering.",
+        "stats": [
+          {
+            "value": "10 %",
+            "label": "mindre materialespild"
+          },
+          {
+            "value": "3 → 2",
+            "label": "skift for samme output"
+          },
+          {
+            "value": "< 1 år",
+            "label": "tilbagebetalingstid"
+          }
+        ],
+        "closing": "Klar til at se hele billedet?",
+        "teaser": "En TCO på én side for din seneste eller næste maskine."
+      },
+      "capacityGrowth": {
+        "headline": "Producér mere uden at hæve dine omkostninger.",
+        "sub": "Find det, der holder produktionen tilbage, og få en vækstplan med en pris på hver mulighed.",
+        "cta": "Kortlæg dit flow",
+        "introTitle": "Vækst med klart udsyn",
+        "intro": [
+          "Når ordrerne stiger, er et ekstra skift eller en ny maskine det oplagte svar. Men det er ikke altid det rigtige.",
+          "Vi kortlægger din produktion fra ordre til levering, finder flaskehalsen og beregner, hvad det koster at fjerne den. Så ved du, hvor pengene gør mest gavn."
+        ],
+        "getTitle": "En vækstplan med en pris på hver mulighed",
+        "get": [
+          {
+            "title": "Flowkortlægning",
+            "text": "Proces- og ventetid for hvert trin fra ordre til levering."
+          },
+          {
+            "title": "Flaskehalsen fundet",
+            "text": "Et klart svar på, hvor produktionen holdes tilbage."
+          },
+          {
+            "title": "En pris på tid",
+            "text": "Omkostning per minut, per ordre og per maskine."
+          },
+          {
+            "title": "Vækstplan",
+            "text": "Muligheder med pris og forventet effekt, fra optimering til ny kapacitet."
+          }
+        ],
+        "why": [
+          {
+            "title": "Dine egne data",
+            "text": "Fra ERP, maskiner og målinger på gulvet."
+          },
+          {
+            "title": "Planlagt efter dine ordrer",
+            "text": "Kapaciteten afstemmes med de ordrer, du forventer."
+          },
+          {
+            "title": "Automation, når det betaler sig",
+            "text": "Robotter og håndtering tilføjes, når tallene understøtter det."
+          },
+          {
+            "title": "Målt fra dag ét",
+            "text": "Nye maskiner fra os logger proces- og stoptider via OptiCloud."
+          }
+        ],
+        "how": [
+          "Dataindsamling",
+          "Kortlægning og flaskehals",
+          "Muligheder med priser",
+          "Vækstplan"
+        ],
+        "proof": "En møbelproducent med en hurtig, men ufleksibel boreline fik mindre serier og kortere leveringstider med én 6-sidet gennemløbsmaskine, klar til en robot.",
+        "stats": [
+          {
+            "value": "9–12k",
+            "label": "emner per uge"
+          },
+          {
+            "value": "2–4 år",
+            "label": "ROI i stedet for de klassiske 8–12"
+          },
+          {
+            "value": "6 sider",
+            "label": "bearbejdet i én gennemkørsel"
+          }
+        ],
+        "closing": "Bring os den del af linjen, der frustrerer dig",
+        "teaser": "Find det, der holder produktionen tilbage, og få en plan for vækst."
+      },
+      "factoryLayout": {
+        "headline": "Et layout, der gør hvert produkt billigere at lave.",
+        "sub": "Fra en enkelt arbejdscelle til en ny fabrik, planlagt som ét sammenhængende flow.",
+        "cta": "Tal med os",
+        "introTitle": "Flow i stedet for håndtering",
+        "intro": [
+          "Når emner flyttes og stables manuelt mellem stationer, koster det tid, plads og skader.",
+          "Vi planlægger produktionen som ét flow, hvor logistikken og de monteringstrin, der betaler sig bedst, automatiseres. Enten i en ny fabrik eller trin for trin i den, du har."
+        ],
+        "getTitle": "Ét sammenhængende flow, bygget i etaper",
+        "get": [
+          {
+            "title": "Monteringsanalyse",
+            "text": "Hvor kompleks den er, og hvordan materialerne når hver station."
+          },
+          {
+            "title": "Automatiseret logistik",
+            "text": "Buffere og automatisk transport mellem stationer."
+          },
+          {
+            "title": "Automation efter tilbagebetaling",
+            "text": "De trin, der betaler sig bedst, kommer først."
+          },
+          {
+            "title": "Én samlet plan",
+            "text": "Et layout, der hænger sammen, også når det bygges i etaper."
+          }
+        ],
+        "why": [
+          {
+            "title": "Ny fabrik eller trin for trin",
+            "text": "Ny fabrik ved lav kompleksitet, trin for trin ved høj kompleksitet."
+          },
+          {
+            "title": "Færre tunge løft",
+            "text": "Mindre tungt og ensformigt arbejde."
+          },
+          {
+            "title": "Færre skader",
+            "text": "Mindre håndtering betyder færre skader på emnerne."
+          },
+          {
+            "title": "Mere ud af gulvarealet",
+            "text": "Mere output på samme gulv."
+          }
+        ],
+        "how": [
+          "Analyse",
+          "Vurdering af tilbagebetaling",
+          "Layout og etapeplan",
+          "Ny fabrik eller trin for trin"
+        ],
+        "proof": "Montering af vinduer og døre automatiseret i ni trin, fra scanning til palletering, med en robot til indglasning.",
+        "stats": [
+          {
+            "value": "> 50 %",
+            "label": "lavere lønomkostning i montagen"
+          },
+          {
+            "value": "+100 %",
+            "label": "udnyttelse af samme gulvareal"
+          },
+          {
+            "value": "9 trin",
+            "label": "i ét sammenhængende flow"
+          }
+        ],
+        "closing": "Send os dit layout eller dine planer for en ny fabrik",
+        "teaser": "Fra en enkelt celle til en ny fabrik, planlagt efter den laveste enhedspris."
+      },
+      "sourcing": {
+        "headline": "Den bedste leverandør til hver opgave. Én ansvarlig partner.",
+        "sub": "Vi bygger din linje frit på tværs af leverandører og står inde for det samlede resultat.",
+        "cta": "Send din liste",
+        "introTitle": "Frit valg, ét ansvarspunkt",
+        "intro": [
+          "Vi er ikke bundet til én producent. Det giver os mulighed for at vælge det udstyr, der passer bedst til hver opgave i din produktion.",
+          "Du får én kontrakt og én kontaktperson, og vi har ansvaret for, at det hele fungerer sammen, fra levering til service."
+        ],
+        "getTitle": "Det bedste match til hver opgave",
+        "get": [
+          {
+            "title": "Frit valg af leverandør",
+            "text": "Det bedste match til hver opgave."
+          },
+          {
+            "title": "Valgt på samlede omkostninger",
+            "text": "Indkøb, drift, vedligehold og stilstand, ikke kun pris."
+          },
+          {
+            "title": "Ingen avance på avance",
+            "text": "En kort forsyningskæde uden unødvendige mellemled."
+          },
+          {
+            "title": "Ét ansvarspunkt",
+            "text": "Integration, FAT, levering og service fra én partner."
+          }
+        ],
+        "why": [
+          {
+            "title": "Pris efter kvalitet og levetid",
+            "text": "Den løsning, der passer bedst, ikke den billigste."
+          },
+          {
+            "title": "Lav lønomkostning per emne",
+            "text": "Udstyr afstemt efter dine produkter og opgaver."
+          },
+          {
+            "title": "3 års garanti",
+            "text": "På standardmaskiner fra NichoMachines."
+          },
+          {
+            "title": "OptiCloud fra dag ét",
+            "text": "Data fra alle nye maskiner fra første dag."
+          }
+        ],
+        "how": [
+          "Send dine behov",
+          "Krav til hver proces",
+          "Leverandørvalg på samlede omkostninger",
+          "Integration, levering og service"
+        ],
+        "proof": "Frit valg af leverandør til hver opgave og en værdifokuseret proces rykker tilbagebetalingstiden.",
+        "stats": [
+          {
+            "value": "2–4 år",
+            "label": "ROI i stedet for de klassiske 8–12"
+          },
+          {
+            "value": "1 partner",
+            "label": "ansvarlig for hele linjen"
+          },
+          {
+            "value": "3 år",
+            "label": "garanti på standardmaskiner"
+          }
+        ],
+        "closing": "Send os en liste over det, du har brug for",
+        "teaser": "Den bedste leverandør til hver opgave, og én ansvarlig partner."
+      }
+    }
   }
 }
