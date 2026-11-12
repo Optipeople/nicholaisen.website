@@ -78,7 +78,8 @@
       "solutions": "Lahendused",
       "industries": "Tööstusharud",
       "company": "Ettevõte",
-      "legal": "Juriidiline"
+      "legal": "Juriidiline",
+      "group": "Kontsern"
     },
     "company": {
       "about": "Meist",

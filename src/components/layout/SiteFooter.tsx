@@ -1,16 +1,11 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { site } from "@/lib/site";
+import { tracks } from "@/lib/tracks";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { NewsletterSignup } from "@/components/layout/NewsletterSignup";
 
-const solutions = [
-  { title: "Business Development", href: "/services/business-development" },
-  { title: "Production Optimization", href: "/services/production-optimization" },
-  { title: "Machines", href: "/services/machines" },
-  { title: "Project Solutions", href: "/services/project-solutions" },
-  { title: "Digital Performance", href: "/services/digital-performance" },
-];
 
 const group = [
   { title: "Nicholaisen A/S", href: "/about/group#denmark" },
@@ -18,14 +13,6 @@ const group = [
   { title: "Nicholaisen Baltic OÜ", href: "/about/group#baltics" },
 ];
 
-const company = [
-  { title: "About", href: "/about" },
-  { title: "People", href: "/about/team" },
-  { title: "Nicholaisen group", href: "/about/group" },
-  { title: "Cases", href: "/cases" },
-  { title: "Contact", href: "/contact" },
-  { title: "Privacy", href: "/legal/privacy" },
-];
 
 /** Round outline badge for a social icon (as the LinkedIn link). */
 const socialStyle: React.CSSProperties = {
@@ -40,7 +27,23 @@ const socialStyle: React.CSSProperties = {
   textDecoration: "none",
 };
 
-export function SiteFooter({ locale }: { locale: string }) {
+export async function SiteFooter({ locale }: { locale: string }) {
+  const [tf, tt, tn, tm, tc] = await Promise.all([
+    getTranslations({ locale, namespace: "footer" }),
+    getTranslations({ locale, namespace: "home.tracks.items" }),
+    getTranslations({ locale, namespace: "nav.companyMenu" }),
+    getTranslations({ locale, namespace: "nav.menu" }),
+    getTranslations({ locale, namespace: "contact.info" }),
+  ]);
+  const solutions = tracks.map((tr) => ({ title: tt(`${tr.key}.title`), href: tr.href }));
+  const company = [
+    { title: tf("company.about"), href: "/about" },
+    { title: tn("team"), href: "/about/team" },
+    { title: tn("group"), href: "/about/group" },
+    { title: tm("cases"), href: "/cases" },
+    { title: tf("company.contact"), href: "/contact" },
+    { title: tf("legal.privacy"), href: "/legal/privacy" },
+  ];
   return (
     <>
       <FooterCta />
@@ -79,7 +82,7 @@ export function SiteFooter({ locale }: { locale: string }) {
               </Link>
               <div style={{ color: "var(--color-accent-300)", fontSize: "14px", lineHeight: 1.7 }}>
                 {site.address.street}<br />
-                {site.address.postal} {site.address.city}, {site.address.country}<br />
+                {site.address.postal} {site.address.city}, {tc("country")}<br />
                 <a href={`mailto:${site.email}`} style={{ color: "inherit" }}>{site.email}</a><br />
                 <a href={`tel:${site.phone.replace(/\s+/g, "")}`} style={{ color: "inherit" }}>{site.phone}</a>
               </div>
@@ -97,7 +100,7 @@ export function SiteFooter({ locale }: { locale: string }) {
                   textTransform: "uppercase",
                 }}
               >
-                SOLUTIONS
+                {tf("sections.solutions")}
               </span>
               {solutions.map((s) => (
                 <Link key={s.href} href={s.href as "/"} style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}>
@@ -118,7 +121,7 @@ export function SiteFooter({ locale }: { locale: string }) {
                   textTransform: "uppercase",
                 }}
               >
-                GROUP
+                {tf("sections.group")}
               </span>
               {group.map((g) => (
                 <Link key={g.title} href={g.href} style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}>
@@ -139,7 +142,7 @@ export function SiteFooter({ locale }: { locale: string }) {
                   textTransform: "uppercase",
                 }}
               >
-                COMPANY
+                {tf("sections.company")}
               </span>
               {company.map((c) => (
                 <Link key={c.title} href={(c.href || "#") as "/"} style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}>
