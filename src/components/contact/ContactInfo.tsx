@@ -3,11 +3,36 @@ import { MailIcon, MapPinIcon, PhoneIcon } from "@/components/ui/icons";
 import { site } from "@/lib/site";
 
 const tel = (n: string) => `tel:${n.replace(/\s+/g, "")}`;
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  `${site.address.street}, ${site.address.postal} ${site.address.city}, ${site.address.country}`,
+)}`;
+const link = "text-white underline-offset-4 hover:text-white hover:underline";
 
-function InfoRow({ icon, label, children }: { icon: React.ReactNode; label: string; children: React.ReactNode }) {
+/** One way to reach us; the icon links to the same place as the row's main link. */
+function InfoRow({
+  icon,
+  label,
+  href,
+  external = false,
+  children,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  href: string;
+  external?: boolean;
+  children: React.ReactNode;
+}) {
   return (
     <div className="grid grid-cols-[32px_minmax(0,1fr)] items-start gap-x-6 gap-y-1">
-      <span className="mt-6 text-white">{icon}</span>
+      <a
+        href={href}
+        aria-hidden
+        tabIndex={-1}
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className="mt-6 text-white hover:text-[var(--color-accent-300)]"
+      >
+        {icon}
+      </a>
       <div className="flex flex-col gap-2">
         <span className="text-label text-[var(--color-accent-300)]">{label}</span>
         <div className="text-[18px] leading-[1.5] text-white">{children}</div>
@@ -28,25 +53,27 @@ export async function ContactInfo() {
       <p className="text-lede mt-9 mb-0 max-w-[46ch] text-white">{t("hero.lede")}</p>
 
       <div className="mt-16 flex flex-col gap-9">
-        <InfoRow icon={<PhoneIcon />} label={t("info.callUs")}>
-          <a href={tel(site.phone)} className="text-white hover:text-white">
+        <InfoRow icon={<PhoneIcon />} label={t("info.callUs")} href={tel(site.phone)}>
+          <a href={tel(site.phone)} className={link}>
             {site.phone}
           </a>
           <br />
           <span className="text-[var(--color-accent-300)]">{t("info.serviceLabel")}:</span>{" "}
-          <a href={tel(site.phoneService)} className="text-white hover:text-white">
+          <a href={tel(site.phoneService)} className={link}>
             {site.phoneService}
           </a>
         </InfoRow>
-        <InfoRow icon={<MailIcon />} label={t("info.emailLabel")}>
-          <a href={`mailto:${site.email}`} className="text-white hover:text-white">
+        <InfoRow icon={<MailIcon />} label={t("info.emailLabel")} href={`mailto:${site.email}`}>
+          <a href={`mailto:${site.email}`} className={link}>
             {site.email}
           </a>
         </InfoRow>
-        <InfoRow icon={<MapPinIcon />} label={t("info.visit")}>
-          {site.address.street}
-          <br />
-          {site.address.postal} {site.address.city}, {t("info.country")}
+        <InfoRow icon={<MapPinIcon />} label={t("info.visit")} href={mapsUrl} external>
+          <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className={link}>
+            {site.address.street}
+            <br />
+            {site.address.postal} {site.address.city}, {t("info.country")}
+          </a>
         </InfoRow>
       </div>
     </div>
