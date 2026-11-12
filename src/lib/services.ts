@@ -70,8 +70,9 @@ export const servicePageBySlugs = (trackSlug: string, slug: string) =>
 
 /**
  * Service sub-pages whose content comes from their MDX file (content/services)
- * rather than the design's messages — the Project Solutions services. They keep
- * their existing URLs and use the same template as the pages above.
+ * rather than the design's messages — the Project Solutions and Digital
+ * Performance services. They keep their existing URLs and use the same
+ * template as the pages above.
  */
 export type MdxServicePage = {
   track: TrackKey;
@@ -83,12 +84,19 @@ export type MdxServicePage = {
   mdxSlug: string;
   /** Photo for the "What you get" block. */
   image2: string;
+  /** Replaces the MDX hero photo when that file is missing. */
+  image?: string;
 };
 
 export const mdxServicePages: MdxServicePage[] = [
   { track: "projects", index: 0, slug: "custom-production-lines", mdxSlug: "project-solutions/custom-production-lines", image2: "/images/v3/robot-line.png" },
   { track: "projects", index: 1, slug: "automation-integration", mdxSlug: "project-solutions/automation-integration", image2: "/images/v3/robot-sorting.png" },
   { track: "projects", index: 2, slug: "turnkey-projects", mdxSlug: "project-solutions/turnkey-projects", image2: "/images/v3/complete-factory.png" },
+  // OptiCloud, Early warning and Low scrap → the matching Digital Performance pages.
+  { track: "digital", index: 0, slug: "production-insights", mdxSlug: "digital-performance/production-insights", image2: "/images/v3/data-boards.avif" },
+  // Its MDX hero photo (/images/cnc-machining.jpg) doesn't exist.
+  { track: "digital", index: 1, slug: "predictive-maintenance", mdxSlug: "digital-performance/predictive-maintenance", image2: "/images/v3/line-signal.avif", image: "/images/v3/cnc-spindle.jpg" },
+  { track: "digital", index: 2, slug: "continuous-optimization", mdxSlug: "digital-performance/continuous-optimization", image2: "/images/v3/saw-blade.avif" },
 ];
 
 export const mdxServiceHref = (p: MdxServicePage) => `${trackHref(p.track)}/${p.slug}`;

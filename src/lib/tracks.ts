@@ -65,7 +65,6 @@ export const tracks: Track[] = [
     { image: "/images/v3/data-boards.avif" },
     { image: "/images/v3/line-signal.avif" },
     { image: "/images/v3/saw-blade.avif" },
-    { image: "/images/v3/cnc-spindle.jpg" },
   ]),
 ];
 

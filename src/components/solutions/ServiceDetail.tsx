@@ -56,6 +56,8 @@ const h2Small = "m-0 text-[clamp(30px,3.4vw,48px)] leading-[1.1] font-medium tra
 /** Service sub-page (design v3 "SERVICE"), shared by every service that has one. */
 export async function ServiceDetailView({ data }: { data: ServiceDetailData }) {
   const t = await getTranslations("serviceDetail.labels");
+  // Without a case and its figures there is no "proof" section (or jump to it).
+  const hasProof = data.stats.length > 0;
 
   return (
     <main>
@@ -75,7 +77,7 @@ export async function ServiceDetailView({ data }: { data: ServiceDetailData }) {
           items={[
             { href: "#what-you-get", label: t("whatYouGet"), Icon: PackageIcon },
             { href: "#how-it-works", label: t("howItWorks"), Icon: PlayCircleIcon },
-            { href: "#proof", label: t("theProof"), Icon: ChartLineIcon },
+            ...(hasProof ? [{ href: "#proof", label: t("theProof"), Icon: ChartLineIcon }] : []),
           ]}
         />
       </PhotoHero>
@@ -153,6 +155,7 @@ export async function ServiceDetailView({ data }: { data: ServiceDetailData }) {
         <TextSection key={s.title} kicker={s.kicker} title={s.title} paragraphs={s.paragraphs} />
       ))}
 
+      {hasProof ? (
       <section
         id="proof"
         className="site-container section-top grid scroll-mt-6 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-center gap-x-[clamp(32px,6vw,96px)] gap-y-12"
@@ -179,6 +182,7 @@ export async function ServiceDetailView({ data }: { data: ServiceDetailData }) {
           ))}
         </div>
       </section>
+      ) : null}
 
       <section className="site-container section-top">
         <h2 className={`${h2Small} mb-8`}>{t("related")}</h2>
@@ -298,7 +302,7 @@ export async function MdxServiceDetail({ page, locale }: { page: MdxServicePage;
         const other = await getService(p.mdxSlug, locale);
         return {
           href: mdxServiceHref(p),
-          image: other?.frontmatter.heroImage ?? fm.heroImage,
+          image: p.image ?? other?.frontmatter.heroImage ?? fm.heroImage,
           area: tt(`${p.track}.title`),
           title: s.title,
           text: s.copy,
@@ -309,7 +313,7 @@ export async function MdxServiceDetail({ page, locale }: { page: MdxServicePage;
   return (
     <ServiceDetailView
       data={{
-        image: fm.heroImage,
+        image: page.image ?? fm.heroImage,
         image2: page.image2,
         kicker: self.title,
         area: tt(`${page.track}.title`),
