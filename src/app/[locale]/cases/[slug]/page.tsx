@@ -133,21 +133,21 @@ export default async function CasePage({ params }: { params: Promise<Params> }) 
         <article className="col-span-2 flex max-w-[760px] min-w-[min(100%,300px)] flex-col gap-[18px] max-[920px]:col-span-1">
           <Mdx source={body} components={caseMdx} />
           {callout ? (
-            <div className="mt-[38px] flex flex-col gap-3 rounded-[4px] bg-[var(--color-offwhite)] px-[clamp(24px,3vw,40px)] py-8">
+            <div className="mt-[38px] flex flex-col gap-3 rounded-[4px] bg-[var(--color-navy-900)] px-[clamp(24px,3vw,40px)] py-8 text-white">
               <span className="text-label text-[var(--color-spot)]">{t("keyInsight")}</span>
               {callout.title ? (
-                <h3 className="m-0 text-[22px] leading-[1.3] font-medium tracking-[-0.01em]">{callout.title}</h3>
+                <h3 className="m-0 text-[22px] leading-[1.3] font-medium tracking-[-0.01em] text-white">{callout.title}</h3>
               ) : null}
-              <p className="m-0 text-[16.5px] leading-[1.65] text-pretty text-[var(--color-accent-500)]">{callout.text}</p>
+              <p className="m-0 text-[16.5px] leading-[1.65] text-pretty text-white/75">{callout.text}</p>
             </div>
           ) : null}
         </article>
       </section>
 
-      {/* Figures band */}
+      {/* Figures band: white like the rest of the page, set off by a hairline above */}
       {figures.length ? (
-        <section className="bg-[var(--color-offwhite)]">
-          <div className="site-container grid grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))] gap-10 py-[88px]">
+        <section className="site-container">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))] gap-10 border-t border-[var(--color-divider)] pt-16 pb-4">
             {figures.map((f) => (
               <div key={f.label}>
                 <div className="text-[clamp(48px,5.6vw,80px)] leading-[0.95] font-extralight tracking-[-0.04em] tabular-nums">
