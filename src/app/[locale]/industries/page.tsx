@@ -4,6 +4,7 @@ import { PhotoHero } from "@/components/ui/PhotoHero";
 import { HeroIconLinks } from "@/components/ui/HeroIconLinks";
 import { TileGrid } from "@/components/ui/TileGrid";
 import { RelatedCases } from "@/components/solutions/RelatedCases";
+import { IndustryCta } from "@/components/solutions/IndustryCta";
 import { industryHref, industryTiles } from "@/lib/industries";
 import { buildMetadata } from "@/lib/seo";
 
@@ -54,12 +55,12 @@ export default async function IndustriesPage({ params }: { params: Promise<Param
         tiles={items.map((i) => ({ key: i.key, href: i.href, image: i.image, title: i.title, description: i.description, objectPosition: i.position }))}
       />
 
-      <div className="pb-28">
-        <RelatedCases
-          locale={locale}
-          slugs={["hardwood-drying-technology", "kitchen-producer-investment-decision", "million-unit-production-facility"]}
-        />
-      </div>
+      <RelatedCases
+        locale={locale}
+        slugs={["hardwood-drying-technology", "kitchen-producer-investment-decision", "million-unit-production-facility"]}
+      />
+
+      <IndustryCta image="/images/v3/complete-factory.png" title={t("ctaTitle")} />
     </main>
   );
 }

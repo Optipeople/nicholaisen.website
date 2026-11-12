@@ -7,6 +7,7 @@ import { OverlapCard } from "@/components/ui/OverlapCard";
 import { TextSection } from "@/components/ui/TextSection";
 import { ServiceCarousel } from "@/components/solutions/ServiceCarousel";
 import { RelatedCases } from "@/components/solutions/RelatedCases";
+import { IndustryCta } from "@/components/solutions/IndustryCta";
 import { getIndustry, getService, listCases, listIndustries } from "@/content/loader";
 import { industryHref, industryTiles, splitSections } from "@/lib/industries";
 import { sortCases } from "@/lib/cases";
@@ -57,6 +58,8 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
   ).filter((s): s is NonNullable<typeof s> => !!s);
   const cases = sortCases(await listCases(locale)).filter((c) => c.frontmatter.industry === fm.slug);
   const sections = splitSections(doc.body);
+  const tile = industryTiles.find((i) => i.href === `/industries/${fm.slug}`);
+  const industryName = tile ? th(`items.${tile.key}.title`) : fm.title;
 
   return (
     <main>
@@ -119,9 +122,13 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
 
       {cases.length ? (
         <RelatedCases locale={locale} slugs={cases.map((c) => c.frontmatter.slug)} title={t("ourWork", { title: fm.title })} />
-      ) : (
-        <div className="h-28" />
-      )}
+      ) : null}
+
+      <IndustryCta
+        image={tile?.image ?? fm.heroImage}
+        title={t("talkAboutLine", { title: industryName.toLowerCase() })}
+        industry={industryName}
+      />
     </main>
   );
 }
