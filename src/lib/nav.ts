@@ -93,12 +93,14 @@ export const solutions: NavLeaf[] = [
 ];
 
 export const companyItems: NavLeaf[] = [
-  { title: "About us", href: "/about" },
-  { title: "The team", href: "/team" },
+  { title: "About us", href: "/about", key: "about" },
+  { title: "The team", href: "/about#team", key: "team" },
+  { title: "Nicholaisen Group", href: "/about#group", key: "group" },
 ];
 
 export const primaryNav: NavSection[] = [
-  { title: "Solutions", href: "/services", items: solutions },
+  // Clicking "Solutions" opens the first track, as in the design.
+  { title: "Solutions", href: "/services/business-development", items: solutions },
   { title: "Cases", href: "/cases" },
   { title: "Company", href: "/about", items: companyItems },
 ];

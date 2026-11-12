@@ -3,7 +3,8 @@ import { z } from "zod";
 import { Resend } from "resend";
 import { site } from "@/lib/site";
 
-const Schema = z.object({
+const MessageSchema = z.object({
+  quick: z.undefined().optional(),
   name: z.string().min(1).max(120),
   company: z.string().min(1).max(160),
   email: z.string().email(),
@@ -13,6 +14,15 @@ const Schema = z.object({
   // honeypot — must be empty
   website: z.string().max(0).optional(),
 });
+
+/** "Reach out to me" on the contact page: just an e-mail address to call back. */
+const QuickSchema = z.object({
+  quick: z.literal(true),
+  email: z.string().email(),
+  website: z.string().max(0).optional(),
+});
+
+const Schema = z.union([QuickSchema, MessageSchema]);
 
 export async function POST(request: Request) {
   let payload: unknown;
@@ -48,21 +58,31 @@ export async function POST(request: Request) {
 
   try {
     const resend = new Resend(apiKey);
-    const result = await resend.emails.send({
-      from,
-      to,
-      replyTo: data.email,
-      subject: `Website enquiry - ${data.company}`,
-      text: [
-        `Name:     ${data.name}`,
-        `Company:  ${data.company}`,
-        `Role:     ${data.role ?? "-"}`,
-        `Email:    ${data.email}`,
-        `Interest: ${data.interest ?? "-"}`,
-        "",
-        data.message,
-      ].join("\n"),
-    });
+    const result = await resend.emails.send(
+      "quick" in data && data.quick
+        ? {
+            from,
+            to,
+            replyTo: data.email,
+            subject: `Website: please reach out - ${data.email}`,
+            text: `Reach-out request from the contact page.\n\nEmail: ${data.email}`,
+          }
+        : {
+            from,
+            to,
+            replyTo: data.email,
+            subject: `Website enquiry - ${data.company}`,
+            text: [
+              `Name:     ${data.name}`,
+              `Company:  ${data.company}`,
+              `Role:     ${data.role ?? "-"}`,
+              `Email:    ${data.email}`,
+              `Interest: ${data.interest ?? "-"}`,
+              "",
+              data.message,
+            ].join("\n"),
+          },
+    );
     if (result.error) {
       console.error("[contact] resend rejected send", result.error, { from, to });
       return NextResponse.json(

@@ -17,11 +17,11 @@ export function MobileNav() {
   const trackKeyOf = (href: string) => tracks.find((tr) => tr.href === href)?.key;
 
   const navLabel = (section: { href: string; title: string }) => {
-    if (section.href === "/services") return t("services");
+    if (section.title === "Solutions") return t("services");
     if (section.href === "/industries") return t("industries");
     if (section.href === "/cases") return t("cases");
     if (section.href === "/insights") return t("insights");
-    if (section.href === "/about") return t("about");
+    if (section.title === "Company") return t("about");
     return section.title;
   };
 
@@ -120,7 +120,9 @@ export function MobileNav() {
                           >
                             {trackKeyOf(item.href)
                               ? tt(`${trackKeyOf(item.href)}.title`)
-                              : (item as any).key
+                              : section.title === "Company" && item.key
+                                ? t(`companyMenu.${item.key}` as any)
+                                : (item as any).key
                                 ? t(`industriesMenu.${(item as any).key}.title` as any)
                                 : item.title}
                           </Link>

@@ -25,6 +25,17 @@ export function LocaleLink({ href, ...props }: Props) {
   const localizedHref =
     locale === routing.defaultLocale
       ? href
-      : `/${locale}${href === "/" ? "" : href}`;
+      : href === "/" || href.startsWith("/#")
+        ? `/${locale}${href.slice(1)}`
+        : `/${locale}${href}`;
+  // Section links (e.g. /about#team): next/link appends the new hash to an
+  // existing one on same-page clicks (/about#team#group), so let the browser
+  // handle anchors natively.
+  if (localizedHref.includes("#")) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { prefetch, replace, scroll, shallow, locale: _l, legacyBehavior, passHref, onNavigate, ...anchorProps } = props;
+    // eslint-disable-next-line @next/next/no-html-link-for-pages
+    return <a href={localizedHref} {...anchorProps} />;
+  }
   return <NextLink href={localizedHref} {...props} />;
 }

@@ -29,6 +29,7 @@ const twMerge = extendTailwindMerge({
             "panel-kicker",
             "stat",
             "stat-lg",
+            "label",
           ],
         },
       ],

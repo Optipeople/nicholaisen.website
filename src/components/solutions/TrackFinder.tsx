@@ -24,7 +24,9 @@ export function TrackFinder({ track }: { track: TrackKey }) {
 
   const submit = () => {
     const lines = [first && `${t("finder.label1")}: ${first}`, second && `${t("finder.label2")}: ${second}`].filter(Boolean);
-    const query: Record<string, string> = { topic: track };
+    const query: Record<string, string | string[]> = { topic: track };
+    const choices = [first, second].filter(Boolean);
+    if (choices.length) query.choice = choices;
     if (lines.length) query.message = `${lines.join("\n")}\n\n`;
     router.push({ pathname: "/contact", query });
   };

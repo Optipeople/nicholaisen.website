@@ -25,6 +25,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
   const [value, setValue] = useState("");
   const tt = useTranslations("home.tracks.items");
   const te = useTranslations("home.entry");
+  const tn = useTranslations("nav.companyMenu");
   const pathname = usePathname();
   // Underline "Solutions" while on a track page, as in the design.
   const onTrack = tracks.some((t) => pathname === t.href || pathname.endsWith(t.href));
@@ -151,7 +152,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
                     textDecoration: "none",
                   }}
                 >
-                  <span style={{ fontSize: "16px", fontWeight: 500 }}>{item.title}</span>
+                  <span style={{ fontSize: "16px", fontWeight: 500 }}>{item.key ? tn(item.key) : item.title}</span>
                 </Link>
               </NavigationMenu.Link>
             ))}

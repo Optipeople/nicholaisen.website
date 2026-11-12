@@ -9,7 +9,7 @@ export async function InfoCardRow() {
   const t = await getTranslations("home.infoCards");
   const cards = [
     { title: t("newToTitle"), description: t("newToDesc"), cta: t("newToCta"), href: "/about", icon: Compass },
-    { title: t("optimizeTitle"), description: t("optimizeDesc"), cta: t("optimizeCta"), href: "/services", icon: Wrench },
+    { title: t("optimizeTitle"), description: t("optimizeDesc"), cta: t("optimizeCta"), href: "/#tracks", icon: Wrench },
     { title: t("optiTitle"), description: t("optiDesc"), cta: t("optiCta"), href: "/services/digital-performance", icon: LineChart },
   ];
 

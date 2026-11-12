@@ -22,7 +22,7 @@ const slides: Slide[] = [
     description:
       "Where we'd look first on a wood line — bottlenecks, throughput, and the changes that pay back fastest.",
     image: "/images/workshop/cnc-machining.jpg",
-    href: "/services",
+    href: "/#tracks",
     cta: "Explore solutions",
     tone: "dark",
   },
@@ -42,7 +42,7 @@ const slides: Slide[] = [
     description:
       "From a single station to a turnkey line — engineered, integrated, and commissioned with you.",
     image: "/images/workshop/panel-saw-2.jpg",
-    href: "/services",
+    href: "/#tracks",
     cta: "See capabilities",
     tone: "dark",
   },

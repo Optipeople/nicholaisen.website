@@ -1,5 +1,10 @@
 {
   "nav": {
+    "companyMenu": {
+      "about": "Om oss",
+      "team": "Teamet",
+      "group": "Nicholaisen-koncernen"
+    },
     "services": "Tjänster",
     "industries": "Branscher",
     "cases": "Cases",
@@ -383,13 +388,31 @@
         "digitalPerformance": "Digital Performance",
         "partnership": "Partnerskap",
         "other": "Något annat"
+      },
+      "quickTitle": "Kom igång",
+      "quickBody": "Lämna din e-postadress så hör vi av oss — inget formulär behövs.",
+      "quickSubmit": "Kontakta mig",
+      "divider": "eller skicka ett meddelande",
+      "prefill": "Från ditt val:",
+      "sentTitle": "Vi har tagit emot ditt meddelande.",
+      "sendAnother": "Skicka ett nytt meddelande",
+      "error": "Något gick fel och ditt meddelande skickades inte. Försök igen eller ring oss på +45 8692 4711.",
+      "topics": {
+        "business": "Affärsutveckling",
+        "optimization": "Produktionsoptimering",
+        "machines": "Maskiner",
+        "projects": "Projektlösningar",
+        "digital": "Digital Performance",
+        "service": "Service och reservdelar",
+        "other": "Något annat"
       }
     },
     "info": {
       "callUs": "Ring oss",
       "emailLabel": "E-post",
       "visit": "Besök oss",
-      "serviceLabel": "Service"
+      "serviceLabel": "Service",
+      "country": "Danmark"
     },
     "team": {
       "eyebrow": "Dina kontaktpersoner",
@@ -406,6 +429,23 @@
       "service": "Service & Reservdelar",
       "marketing": "Marknadsföring",
       "finance": "Ekonomi"
+    },
+    "next": {
+      "title": "Vad händer sedan",
+      "steps": [
+        {
+          "title": "Vi läser det samma dag",
+          "text": "Ditt meddelande går direkt till en specialist inom ditt område — inte till en kö."
+        },
+        {
+          "title": "Ett kort samtal",
+          "text": "Tjugo minuter om din produktion, dina maskiner och det du redan mäter i dag."
+        },
+        {
+          "title": "En titt på dina siffror",
+          "text": "Vi återkommer med en första bild av dina egna data — TCO, kapacitet eller maskinen som oroar dig."
+        }
+      ]
     }
   },
   "cases": {
@@ -894,5 +934,10 @@
       "about": "Om OptiCloud",
       "imageAlt": "Tekniker som servar en uppkopplad maskin"
     }
+  },
+  "footerCta": {
+    "title": "Om något här är relevant, låt oss gå in på det tillsammans",
+    "body": "Helt utan press. Om det inte är rätt tillfälle hör vi helt enkelt av oss längre fram.",
+    "button": "Kontakta oss"
   }
 }

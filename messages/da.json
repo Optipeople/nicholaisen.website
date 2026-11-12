@@ -1,5 +1,10 @@
 {
   "nav": {
+    "companyMenu": {
+      "about": "Om os",
+      "team": "Teamet",
+      "group": "Nicholaisen-koncernen"
+    },
     "services": "Ydelser",
     "industries": "Brancher",
     "cases": "Cases",
@@ -381,13 +386,31 @@
         "panelFurniture": "Plade og møbler",
         "doorsWindows": "Døre og vinduer",
         "other": "Noget andet"
+      },
+      "quickTitle": "Kom i gang",
+      "quickBody": "Skriv din e-mail, så kontakter vi dig — ingen formular nødvendig.",
+      "quickSubmit": "Kontakt mig",
+      "divider": "eller send en besked",
+      "prefill": "Fra dit valg:",
+      "sentTitle": "Vi har modtaget din besked.",
+      "sendAnother": "Send en ny besked",
+      "error": "Noget gik galt, og din besked blev ikke sendt. Prøv igen, eller ring til os på +45 8692 4711.",
+      "topics": {
+        "business": "Forretningsudvikling",
+        "optimization": "Produktionsoptimering",
+        "machines": "Maskiner",
+        "projects": "Projektløsninger",
+        "digital": "Digital Performance",
+        "service": "Service og reservedele",
+        "other": "Noget andet"
       }
     },
     "info": {
       "callUs": "Ring til os",
       "emailLabel": "E-mail",
       "visit": "Besøg os",
-      "serviceLabel": "Service"
+      "serviceLabel": "Service",
+      "country": "Danmark"
     },
     "team": {
       "eyebrow": "Dine kontaktpersoner",
@@ -404,6 +427,23 @@
       "service": "Service & Reservedele",
       "marketing": "Marketing",
       "finance": "Økonomi"
+    },
+    "next": {
+      "title": "Det sker der nu",
+      "steps": [
+        {
+          "title": "Vi læser den samme dag",
+          "text": "Din besked går direkte til en specialist inden for dit område — ikke i en kø."
+        },
+        {
+          "title": "Et kort opkald",
+          "text": "Tyve minutter om din produktion, dine maskiner og det, du allerede måler i dag."
+        },
+        {
+          "title": "Et kig på dine tal",
+          "text": "Vi vender tilbage med et første blik på dine egne data — TCO, kapacitet eller den maskine, der bekymrer dig."
+        }
+      ]
     }
   },
   "cases": {
@@ -892,5 +932,10 @@
       "about": "Om OptiCloud",
       "imageAlt": "Tekniker der servicerer en forbundet maskine"
     }
+  },
+  "footerCta": {
+    "title": "Hvis noget her er relevant, så lad os dykke ned i det sammen",
+    "body": "Helt uforpligtende. Hvis det ikke er det rette tidspunkt, vender vi blot tilbage senere.",
+    "button": "Kontakt os"
   }
 }

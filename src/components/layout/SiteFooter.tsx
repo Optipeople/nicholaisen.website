@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { site } from "@/lib/site";
+import { FooterCta } from "@/components/layout/FooterCta";
 
 const solutions = [
   { title: "Business Development", href: "/services/business-development" },
@@ -11,14 +12,15 @@ const solutions = [
 ];
 
 const group = [
-  { title: "Nicholaisen A/S" },
-  { title: "Nicholaisen Sweden AB" },
-  { title: "Nicholaisen Baltic OÜ" },
+  { title: "Nicholaisen A/S", href: "/about#group" },
+  { title: "Nicholaisen Sweden AB", href: "/about#group" },
+  { title: "Nicholaisen Baltic OÜ", href: "/about#group" },
 ];
 
 const company = [
   { title: "About", href: "/about" },
-  { title: "People", href: "/contact" },
+  { title: "People", href: "/about#team" },
+  { title: "Nicholaisen group", href: "/about#group" },
   { title: "Cases", href: "/cases" },
   { title: "Contact", href: "/contact" },
   { title: "Privacy", href: "/legal/privacy" },
@@ -27,57 +29,7 @@ const company = [
 export function SiteFooter({ locale }: { locale: string }) {
   return (
     <>
-      {/* Close / CTA section */}
-      <section style={{ background: "#fff" }}>
-        <div
-          style={{
-            maxWidth: "1320px",
-            margin: "0 auto",
-            padding: "112px clamp(20px,5vw,64px)",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontWeight: 500,
-              fontSize: "clamp(32px,4vw,56px)",
-              lineHeight: 1.1,
-              letterSpacing: "-0.02em",
-              margin: "0 auto",
-              maxWidth: "22ch",
-            }}
-          >
-            If something here is relevant, let&apos;s dig into it together
-          </h2>
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.6,
-              margin: "20px auto 36px",
-              maxWidth: "52ch",
-              color: "var(--color-accent-500)",
-            }}
-          >
-            No pressure either way. If it&apos;s not the right time, we&apos;ll simply check back down the road.
-          </p>
-          <Link
-            href="/contact"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              padding: "14px 28px",
-              background: "var(--color-spot)",
-              color: "#fff",
-              borderRadius: "4px",
-              fontSize: "17px",
-              fontWeight: 500,
-              textDecoration: "none",
-            }}
-          >
-            Get in touch
-          </Link>
-        </div>
-      </section>
+      <FooterCta />
 
       {/* Footer */}
       <footer style={{ background: "var(--color-navy-900)", color: "#fff" }}>
@@ -152,7 +104,9 @@ export function SiteFooter({ locale }: { locale: string }) {
                 GROUP
               </span>
               {group.map((g) => (
-                <span key={g.title} style={{ color: "rgba(255,255,255,0.8)" }}>{g.title}</span>
+                <Link key={g.title} href={g.href} style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}>
+                  {g.title}
+                </Link>
               ))}
             </div>
 

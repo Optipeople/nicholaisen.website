@@ -1,5 +1,10 @@
 {
   "nav": {
+    "companyMenu": {
+      "about": "Apie mus",
+      "team": "Komanda",
+      "group": "Nicholaisen grupė"
+    },
     "services": "Paslaugos",
     "industries": "Pramonės šakos",
     "cases": "Projektai",
@@ -383,13 +388,31 @@
         "digitalPerformance": "Digital Performance",
         "partnership": "Partnerystė",
         "other": "Kažkas kita"
+      },
+      "quickTitle": "Pradėkite",
+      "quickBody": "Palikite savo el. pašto adresą ir mes susisieksime — forma nereikalinga.",
+      "quickSubmit": "Susisiekite su manimi",
+      "divider": "arba siųskite žinutę",
+      "prefill": "Iš jūsų pasirinkimo:",
+      "sentTitle": "Gavome jūsų žinutę.",
+      "sendAnother": "Siųsti kitą žinutę",
+      "error": "Kažkas nepavyko ir jūsų žinutė nebuvo išsiųsta. Bandykite dar kartą arba paskambinkite mums +45 8692 4711.",
+      "topics": {
+        "business": "Verslo plėtra",
+        "optimization": "Gamybos optimizavimas",
+        "machines": "Staklės",
+        "projects": "Projektų sprendimai",
+        "digital": "Digital Performance",
+        "service": "Aptarnavimas ir atsarginės dalys",
+        "other": "Kita"
       }
     },
     "info": {
       "callUs": "Skambinkite mums",
       "emailLabel": "El. paštas",
       "visit": "Aplankykite mus",
-      "serviceLabel": "Servisas"
+      "serviceLabel": "Servisas",
+      "country": "Danija"
     },
     "team": {
       "eyebrow": "Jūsų kontaktai",
@@ -406,6 +429,23 @@
       "service": "Servisas & Atsarginės dalys",
       "marketing": "Rinkodara",
       "finance": "Finansai"
+    },
+    "next": {
+      "title": "Kas bus toliau",
+      "steps": [
+        {
+          "title": "Perskaitome tą pačią dieną",
+          "text": "Jūsų žinutė patenka tiesiai jūsų srities specialistui — ne į eilę."
+        },
+        {
+          "title": "Trumpas pokalbis",
+          "text": "Dvidešimt minučių apie jūsų gamybą, stakles ir tai, ką jau šiandien matuojate."
+        },
+        {
+          "title": "Žvilgsnis į jūsų skaičius",
+          "text": "Grįžtame su pirmuoju jūsų pačių duomenų vertinimu — TCO, pajėgumas ar staklės, kurios jums kelia nerimą."
+        }
+      ]
     }
   },
   "cases": {
@@ -894,5 +934,10 @@
       "about": "Apie OptiCloud",
       "imageAlt": "Technikas aptarnauja prijungtas stakles"
     }
+  },
+  "footerCta": {
+    "title": "Jei kas nors čia aktualu, panagrinėkime tai kartu",
+    "body": "Jokio spaudimo. Jei dabar ne laikas, tiesiog susisieksime vėliau.",
+    "button": "Susisiekite"
   }
 }

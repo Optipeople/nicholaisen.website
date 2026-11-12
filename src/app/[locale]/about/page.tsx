@@ -120,7 +120,7 @@ export default async function AboutPage({
           </p>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "12px" }}>
             <Link
-              href="/services"
+              href="/#tracks"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -260,6 +260,8 @@ export default async function AboutPage({
 
       {/* Stats + Group */}
       <section
+        id="group"
+        className="scroll-mt-6"
         style={{
           maxWidth: "1320px",
           margin: "0 auto",
@@ -395,6 +397,8 @@ export default async function AboutPage({
 
       {/* Team teaser */}
       <section
+        id="team"
+        className="scroll-mt-6"
         style={{
           maxWidth: "1320px",
           margin: "0 auto",

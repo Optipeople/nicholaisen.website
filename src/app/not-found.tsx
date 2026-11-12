@@ -21,7 +21,7 @@ export default function NotFound() {
             <LinkButton href="/" variant="primary" size="md" withArrow>
               Home
             </LinkButton>
-            <LinkButton href="/services" variant="secondary" size="md">
+            <LinkButton href="/#tracks" variant="secondary" size="md">
               Services
             </LinkButton>
             <LinkButton href="/contact" variant="secondary" size="md">

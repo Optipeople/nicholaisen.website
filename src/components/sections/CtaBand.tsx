@@ -35,7 +35,7 @@ export async function CtaBand({
   };
   const resolvedSecondary = secondary ?? {
     label: t?.("cta.secondary") ?? "Explore solutions",
-    href: "/services",
+    href: "/#tracks",
   };
 
   return (

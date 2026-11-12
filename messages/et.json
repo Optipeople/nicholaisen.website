@@ -1,5 +1,10 @@
 {
   "nav": {
+    "companyMenu": {
+      "about": "Meist",
+      "team": "Meeskond",
+      "group": "Nicholaiseni kontsern"
+    },
     "services": "Teenused",
     "industries": "Tööstusharud",
     "cases": "Projektid",
@@ -383,13 +388,31 @@
         "digitalPerformance": "Digital Performance",
         "partnership": "Partnerlus",
         "other": "Midagi muud"
+      },
+      "quickTitle": "Alustage",
+      "quickBody": "Jätke oma e-posti aadress ja me võtame ühendust — vormi pole vaja.",
+      "quickSubmit": "Võtke minuga ühendust",
+      "divider": "või saatke sõnum",
+      "prefill": "Teie valikust:",
+      "sentTitle": "Saime teie sõnumi kätte.",
+      "sendAnother": "Saada uus sõnum",
+      "error": "Midagi läks valesti ja teie sõnumit ei saadetud. Proovige uuesti või helistage meile numbril +45 8692 4711.",
+      "topics": {
+        "business": "Äri arendus",
+        "optimization": "Tootmise optimeerimine",
+        "machines": "Masinad",
+        "projects": "Projektilahendused",
+        "digital": "Digital Performance",
+        "service": "Hooldus ja varuosad",
+        "other": "Midagi muud"
       }
     },
     "info": {
       "callUs": "Helistage meile",
       "emailLabel": "E-post",
       "visit": "Külastage meid",
-      "serviceLabel": "Teenindus"
+      "serviceLabel": "Teenindus",
+      "country": "Taani"
     },
     "team": {
       "eyebrow": "Teie kontaktisikud",
@@ -406,6 +429,23 @@
       "service": "Teenindus & Varuosad",
       "marketing": "Turundus",
       "finance": "Finants"
+    },
+    "next": {
+      "title": "Mis edasi saab",
+      "steps": [
+        {
+          "title": "Loeme selle samal päeval",
+          "text": "Teie sõnum jõuab otse teie valdkonna spetsialistini — mitte järjekorda."
+        },
+        {
+          "title": "Lühike kõne",
+          "text": "Kakskümmend minutit teie tootmisest, masinatest ja sellest, mida te juba täna mõõdate."
+        },
+        {
+          "title": "Pilk teie numbritele",
+          "text": "Tuleme tagasi esimese ülevaatega teie enda andmetest — TCO, võimsus või masin, mis teile muret teeb."
+        }
+      ]
     }
   },
   "cases": {
@@ -894,5 +934,10 @@
       "about": "OptiCloudist",
       "imageAlt": "Tehnik hooldab ühendatud masinat"
     }
+  },
+  "footerCta": {
+    "title": "Kui midagi siin on asjakohane, uurime seda koos lähemalt",
+    "body": "Ilma igasuguse surveta. Kui praegu pole õige aeg, võtame lihtsalt hiljem uuesti ühendust.",
+    "button": "Võtke ühendust"
   }
 }

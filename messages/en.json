@@ -1,5 +1,10 @@
 {
   "nav": {
+    "companyMenu": {
+      "about": "About us",
+      "team": "The team",
+      "group": "Nicholaisen Group"
+    },
     "services": "Services",
     "industries": "Industries",
     "cases": "Cases",
@@ -381,13 +386,31 @@
         "panelFurniture": "Panel and Furniture",
         "doorsWindows": "Doors and Windows",
         "other": "Something else"
+      },
+      "quickTitle": "Get started",
+      "quickBody": "Leave your email and we'll reach out — no form required.",
+      "quickSubmit": "Reach out to me",
+      "divider": "or send a message",
+      "prefill": "From your selection:",
+      "sentTitle": "We've got your message.",
+      "sendAnother": "Send another message",
+      "error": "Something went wrong and your message wasn't sent. Please try again, or call us on +45 8692 4711.",
+      "topics": {
+        "business": "Business Development",
+        "optimization": "Production Optimization",
+        "machines": "Machines",
+        "projects": "Project Solutions",
+        "digital": "Digital Performance",
+        "service": "Service & spare parts",
+        "other": "Something else"
       }
     },
     "info": {
       "callUs": "Call us",
       "emailLabel": "Email",
       "visit": "Visit",
-      "serviceLabel": "Service"
+      "serviceLabel": "Service",
+      "country": "Denmark"
     },
     "team": {
       "eyebrow": "Your contact people",
@@ -404,6 +427,23 @@
       "service": "Service & Spare Parts",
       "marketing": "Marketing",
       "finance": "Finance"
+    },
+    "next": {
+      "title": "What happens next",
+      "steps": [
+        {
+          "title": "We read it the same day",
+          "text": "Your message goes straight to a specialist in your area — not into a queue."
+        },
+        {
+          "title": "A short call",
+          "text": "Twenty minutes on your production, your machines and what you already measure today."
+        },
+        {
+          "title": "A look at your numbers",
+          "text": "We come back with a first view on your own data — TCO, capacity or the machine that worries you."
+        }
+      ]
     }
   },
   "cases": {
@@ -892,5 +932,10 @@
       "about": "About OptiCloud",
       "imageAlt": "Technician servicing a connected machine"
     }
+  },
+  "footerCta": {
+    "title": "If something here is relevant, let's dig into it together",
+    "body": "No pressure either way. If it's not the right time, we'll simply check back down the road.",
+    "button": "Get in touch"
   }
 }

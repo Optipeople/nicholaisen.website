@@ -1,5 +1,10 @@
 {
   "nav": {
+    "companyMenu": {
+      "about": "Par mums",
+      "team": "Komanda",
+      "group": "Nicholaisen grupa"
+    },
     "services": "Pakalpojumi",
     "industries": "Nozares",
     "cases": "Projekti",
@@ -383,13 +388,31 @@
         "digitalPerformance": "Digital Performance",
         "partnership": "Partnerība",
         "other": "Kaut kas cits"
+      },
+      "quickTitle": "Sāciet",
+      "quickBody": "Atstājiet savu e-pasta adresi, un mēs sazināsimies — veidlapa nav nepieciešama.",
+      "quickSubmit": "Sazinieties ar mani",
+      "divider": "vai nosūtiet ziņu",
+      "prefill": "No jūsu izvēles:",
+      "sentTitle": "Mēs saņēmām jūsu ziņu.",
+      "sendAnother": "Nosūtīt vēl vienu ziņu",
+      "error": "Kaut kas nogāja greizi, un jūsu ziņa netika nosūtīta. Mēģiniet vēlreiz vai zvaniet mums pa +45 8692 4711.",
+      "topics": {
+        "business": "Biznesa attīstība",
+        "optimization": "Ražošanas optimizācija",
+        "machines": "Iekārtas",
+        "projects": "Projektu risinājumi",
+        "digital": "Digital Performance",
+        "service": "Serviss un rezerves daļas",
+        "other": "Kas cits"
       }
     },
     "info": {
       "callUs": "Zvaniet mums",
       "emailLabel": "E-pasts",
       "visit": "Apmeklējiet mūs",
-      "serviceLabel": "Serviss"
+      "serviceLabel": "Serviss",
+      "country": "Dānija"
     },
     "team": {
       "eyebrow": "Jūsu kontaktpersonas",
@@ -406,6 +429,23 @@
       "service": "Serviss & Rezerves daļas",
       "marketing": "Mārketings",
       "finance": "Finanses"
+    },
+    "next": {
+      "title": "Kas notiks tālāk",
+      "steps": [
+        {
+          "title": "Izlasām to tajā pašā dienā",
+          "text": "Jūsu ziņa nonāk tieši pie jūsu jomas speciālista — nevis rindā."
+        },
+        {
+          "title": "Īsa saruna",
+          "text": "Divdesmit minūtes par jūsu ražošanu, iekārtām un to, ko jūs jau šodien mērāt."
+        },
+        {
+          "title": "Ieskats jūsu skaitļos",
+          "text": "Mēs atgriežamies ar pirmo skatījumu uz jūsu pašu datiem — TCO, jauda vai iekārta, kas jūs uztrauc."
+        }
+      ]
     }
   },
   "cases": {
@@ -894,5 +934,10 @@
       "about": "Par OptiCloud",
       "imageAlt": "Tehniķis apkalpo pieslēgtu iekārtu"
     }
+  },
+  "footerCta": {
+    "title": "Ja kaut kas šeit ir aktuāls, izpētīsim to kopā",
+    "body": "Bez jebkāda spiediena. Ja tagad nav īstais laiks, mēs vienkārši sazināsimies vēlāk.",
+    "button": "Sazināties"
   }
 }

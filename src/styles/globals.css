@@ -274,6 +274,33 @@
     font-variant-numeric: tabular-nums;
   }
 
+  /* Small-caps label used for form fields and contact details — 13px */
+  .text-label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--color-accent-500);
+  }
+
+  /* Text input / select / textarea on white cards */
+  .field-input {
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 16px 18px;
+    border: 1px solid var(--color-accent-300);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--color-text);
+    outline: none;
+  }
+  .field-input:focus {
+    border-color: var(--color-accent);
+  }
+
   /* ── Shared layout ── */
   .site-container {
     width: 100%;
