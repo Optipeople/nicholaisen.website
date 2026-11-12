@@ -187,7 +187,7 @@ export function ContactPanel({
                 disabled={sending}
                 className="flex cursor-pointer items-center gap-3 rounded-[6px] bg-[var(--color-accent)] px-8 py-[18px] text-[17px] leading-[1.55] font-medium text-white hover:bg-[var(--color-accent-600)] disabled:opacity-60"
               >
-                {sending ? t("submitting") : t("submit")} <span aria-hidden>→</span>
+                {sending ? t("submitting") : t("submit")}
               </button>
               {status === "error" ? (
                 <span role="alert" className="text-[14px] text-[var(--color-spot)]">
