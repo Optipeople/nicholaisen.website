@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { trackHref } from "@/lib/tracks";
 import { LinkButton } from "@/components/ui/Button";
 
 /** Homepage hero: full-bleed photo, navy gradient, heading bottom-left. */
@@ -34,7 +35,8 @@ export async function HeroSplit() {
         <h1 className="text-display-1 m-0 max-w-[16ch]">{t("title")}</h1>
         <p className="text-lede mt-6 mb-0 max-w-[46ch]">{t("lede")}</p>
         <div className="mt-9 flex flex-wrap gap-4">
-          <LinkButton href="#tracks" variant="light" size="hero">
+          {/* The solutions landing (first track), as "Solutions" in the header. */}
+          <LinkButton href={trackHref("business")} variant="light" size="hero">
             {t("primary")}
           </LinkButton>
           <LinkButton href="/contact" variant="outline-light" size="hero">
