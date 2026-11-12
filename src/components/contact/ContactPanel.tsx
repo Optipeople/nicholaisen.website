@@ -156,7 +156,7 @@ export function ContactPanel({
 
             <label className={labelClass}>
               {t("interest")}
-              <select value={topic} onChange={(e) => setTopic(e.target.value)} className="field-input [appearance:auto]">
+              <select value={topic} onChange={(e) => setTopic(e.target.value)} className="field-input field-select">
                 <option value="">{t("interestDefault")}</option>
                 {topicKeys.map((k) => (
                   <option key={k} value={k}>

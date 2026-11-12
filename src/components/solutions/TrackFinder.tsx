@@ -6,7 +6,7 @@ import { useRouter } from "@/i18n/navigation";
 import type { TrackKey } from "@/lib/tracks";
 
 const selectClass =
-  "w-full rounded-[4px] border border-[var(--color-accent-400)] bg-white p-4 text-[16px] text-[var(--color-text)]";
+  "field-select w-full rounded-[4px] border border-[var(--color-accent-400)] bg-white p-4 pr-[52px] text-[16px] text-[var(--color-text)]";
 
 /**
  * Card overlapping the hero: the track's question, two dropdowns and a CTA

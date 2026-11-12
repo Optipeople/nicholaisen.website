@@ -78,7 +78,7 @@ export function ContactForm() {
         <label className="text-eyebrow" htmlFor="interest">
           {t("interest")}
         </label>
-        <select id="interest" name="interest" className={cn(fieldClasses, "mt-2")} defaultValue="">
+        <select id="interest" name="interest" className={cn(fieldClasses, "field-select mt-2 pr-[52px]")} defaultValue="">
           <option value="" disabled>
             {t("interestDefault")}
           </option>
