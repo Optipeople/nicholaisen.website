@@ -197,6 +197,7 @@ export async function ServiceDetailView({ data }: { data: ServiceDetailData }) {
       </section>
       ) : null}
 
+      {data.related.length > 0 ? (
       <section className="site-container section-top">
         <h2 className={`${h2Small} mb-8`}>{t("related")}</h2>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-7">
@@ -205,6 +206,7 @@ export async function ServiceDetailView({ data }: { data: ServiceDetailData }) {
           ))}
         </div>
       </section>
+      ) : null}
 
       <SplitFeature
         image="/images/v3/complete-factory.png"

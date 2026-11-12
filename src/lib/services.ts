@@ -36,7 +36,7 @@ export const servicePages: ServicePage[] = [
     { page: "capacityGrowth" },
     { page: "factoryLayout" },
     { page: "sourcing" },
-    { track: "optimization", index: 1 },
+    { track: "optimization", index: 0 },
   ]),
   page("capacityGrowth", 1, "capacity-growth-plans", "/images/v3/wood-stack.jpg", "/images/v3/edgebander.jpg", [
     { page: "investmentCases" },
@@ -53,7 +53,7 @@ export const servicePages: ServicePage[] = [
     { page: "investmentCases" },
     { page: "capacityGrowth" },
     { page: "factoryLayout" },
-    { track: "optimization", index: 2 },
+    { track: "optimization", index: 0 },
   ]),
 ];
 

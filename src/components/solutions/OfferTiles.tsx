@@ -4,7 +4,8 @@ import { trackHref } from "@/lib/tracks";
 
 const offers = [
   { key: "investment", href: trackHref("business"), Icon: CalculatorIcon },
-  { key: "runningCost", href: trackHref("optimization"), Icon: MergeIcon },
+  // "Send your list" goes to the contact form, pre-filled for Production Optimization.
+  { key: "runningCost", href: "/contact?topic=optimization", Icon: MergeIcon },
   { key: "criticalMachine", href: trackHref("digital"), Icon: GaugeIcon },
 ] as const;
 
@@ -28,7 +29,7 @@ export function OfferTiles({
         {offers.map(({ key, href, Icon }) => (
           <Link
             key={key}
-            href={href}
+            href={href.startsWith("/contact") ? `${href}&choice=${encodeURIComponent(items[key].title)}` : href}
             className="flex flex-col gap-[18px] text-center text-[var(--color-text)] hover:text-[var(--color-accent-500)]"
           >
             <div className="flex justify-center pt-2 pb-1 text-[var(--color-accent)]">

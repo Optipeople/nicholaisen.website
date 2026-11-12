@@ -50,8 +50,6 @@ export const tracks: Track[] = [
   ]),
   track("optimization", "production-optimization", "/images/v3/line-signal.avif", "optimize", [
     { image: "/images/v3/edgebander.jpg", digital: true },
-    { image: "/images/v3/saw-blade-shavings.jpg", digital: true },
-    { image: "/images/v3/cnc-tool-closeup.jpg" },
   ]),
   track("machines", "machines", "/images/v3/machine-nkb2812.jpg", "build", [{}, {}, {}, { digital: true }]),
   // Photos from each service's own page (content/services/project-solutions).

@@ -88,6 +88,8 @@ export function ServiceCarousel({
         ))}
       </div>
 
+      {/* Nothing to scroll when every card fits. */}
+      {pages > 1 ? (
       <div className="mt-10 grid grid-cols-[1fr_auto_1fr] items-center">
         <span />
         <div className="flex items-center gap-2.5">
@@ -126,6 +128,7 @@ export function ServiceCarousel({
           </button>
         </div>
       </div>
+      ) : null}
     </>
   );
 }
