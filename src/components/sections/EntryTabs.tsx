@@ -1,206 +1,91 @@
 "use client";
 
-import { useState } from "react";
+import * as Tabs from "@radix-ui/react-tabs";
 import { useTranslations } from "next-intl";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import { services, industries } from "@/lib/nav";
+import { LinkRow, LinkRowGrid } from "@/components/ui/LinkRow";
+import { BriefcaseIcon, CalendarCheckIcon, FactoryIcon } from "@/components/ui/icons";
+import { tracks } from "@/lib/tracks";
 
-type Tab = "services" | "industries" | "schedule";
+const materials = ["solidPanel", "doorsWindows", "plasticsAluminium"] as const;
+const callTopics = ["investment", "runningCost", "criticalMachine"] as const;
 
-const ArrowRight = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" style={{ flexShrink: 0 }}>
-    <path d="M4 12h16M14 6l6 6-6 6" />
-  </svg>
-);
-
+/** "Start here" card overlapping the bottom of the homepage hero. */
 export function EntryTabs() {
-  const [tab, setTab] = useState<Tab>("services");
   const t = useTranslations("home.entry");
-  const tn = useTranslations("nav");
+  const tt = useTranslations("home.tracks.items");
 
-  const tabs: { key: Tab; label: string }[] = [
-    { key: "services", label: t("services") },
-    { key: "industries", label: t("industries") },
-    { key: "schedule", label: t("schedule") },
+  const tabs = [
+    { value: "services", label: t("services"), Icon: BriefcaseIcon },
+    { value: "industries", label: t("industries"), Icon: FactoryIcon },
+    { value: "call", label: t("schedule"), Icon: CalendarCheckIcon },
   ];
 
   return (
-    <div
-      style={{
-        maxWidth: "1320px",
-        width: "100%",
-        margin: "-96px auto 0",
-        padding: "0 clamp(20px, 5vw, 64px)",
-        boxSizing: "border-box",
-        position: "relative",
-        zIndex: 2,
-      }}
-    >
-      <div
-        style={{
-          background: "#fff",
-          border: "1px solid var(--color-accent-200)",
-          borderRadius: "12px",
-          boxShadow: "0 10px 32px color-mix(in srgb, #003050 14%, transparent)",
-        }}
+    <section className="site-container relative z-[2] -mt-24">
+      <Tabs.Root
+        defaultValue="services"
+        className="rounded-[12px] border border-[var(--color-tan)] bg-white shadow-[0_10px_32px_color-mix(in_srgb,#003050_14%,transparent)]"
       >
-        {/* Tab bar */}
-        <div
-          role="tablist"
-          aria-label={t("services")}
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "8px",
-            padding: "0 28px",
-            borderBottom: "1px solid var(--color-accent-200)",
-          }}
+        <Tabs.List
+          aria-label={t("tabsLabel")}
+          className="flex flex-wrap gap-2 border-b border-[var(--color-accent-200)] px-7"
         >
-          {tabs.map(({ key, label }) => (
-            <button
-              key={key}
-              type="button"
-              role="tab"
-              aria-selected={tab === key}
-              onClick={() => setTab(key)}
-              style={{
-                all: "unset",
-                cursor: "pointer",
-                fontSize: "17px",
-                fontWeight: tab === key ? 500 : 400,
-                color: tab === key ? "var(--color-text)" : "var(--color-accent-500)",
-                borderBottom: `3px solid ${tab === key ? "var(--color-spot)" : "transparent"}`,
-                padding: "20px 14px 17px",
-                marginBottom: "-1px",
-              }}
+          {tabs.map(({ value, label, Icon }) => (
+            <Tabs.Trigger
+              key={value}
+              value={value}
+              className="-mb-px flex cursor-pointer items-center gap-2.5 border-b-[3px] border-transparent px-3.5 pt-5 pb-[17px] text-[17px] leading-[1.55] font-normal text-[var(--color-accent-500)] data-[state=active]:border-[var(--color-accent)] data-[state=active]:font-medium data-[state=active]:text-[var(--color-text)]"
             >
+              <Icon />
               {label}
-            </button>
+            </Tabs.Trigger>
           ))}
+        </Tabs.List>
+
+        <div className="px-[clamp(20px,4vw,44px)] pt-8 pb-9">
+          <Tabs.Content value="services" className="flex flex-col gap-[14px] outline-none">
+            <p className="text-eyebrow m-0">{t("findService")}</p>
+            <LinkRowGrid>
+              {tracks.map((track) => (
+                <LinkRow
+                  key={track.key}
+                  href={track.href}
+                  title={tt(`${track.key}.title`)}
+                  description={tt(`${track.key}.subtitle`)}
+                />
+              ))}
+            </LinkRowGrid>
+          </Tabs.Content>
+
+          <Tabs.Content value="industries" className="flex flex-col gap-[14px] outline-none">
+            <p className="text-eyebrow m-0">{t("pickMaterial")}</p>
+            <LinkRowGrid>
+              {materials.map((key) => (
+                <LinkRow
+                  key={key}
+                  href="#industries"
+                  title={t(`materials.${key}.title`)}
+                  description={t(`materials.${key}.description`)}
+                />
+              ))}
+            </LinkRowGrid>
+          </Tabs.Content>
+
+          <Tabs.Content value="call" className="flex flex-col gap-[14px] outline-none">
+            <p className="text-eyebrow m-0">{t("whatToLookAt")}</p>
+            <LinkRowGrid>
+              {callTopics.map((key) => (
+                <LinkRow
+                  key={key}
+                  href="/contact"
+                  title={t(`call.${key}.title`)}
+                  description={t(`call.${key}.description`)}
+                />
+              ))}
+            </LinkRowGrid>
+          </Tabs.Content>
         </div>
-
-        {/* Tab content */}
-        <div style={{ padding: "32px clamp(20px, 4vw, 44px) 36px" }}>
-          {tab === "services" && <ServicesPanel />}
-          {tab === "industries" && <IndustriesPanel />}
-          {tab === "schedule" && <SchedulePanel />}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function NavItem({
-  href,
-  title,
-  description,
-}: {
-  href: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <Link
-      href={href as "/"}
-      style={{
-        color: "var(--color-text)",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        gap: "16px",
-        padding: "14px 0",
-        borderBottom: "1px solid var(--color-accent-200)",
-        textDecoration: "none",
-      }}
-    >
-      <span style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-        <strong style={{ fontSize: "18px", fontWeight: 600 }}>{title}</strong>
-        <span style={{ fontSize: "15px", color: "var(--color-accent-500)" }}>{description}</span>
-      </span>
-      <ArrowRight />
-    </Link>
-  );
-}
-
-function ServicesPanel() {
-  const t = useTranslations("home.entry");
-  const tn = useTranslations("nav");
-  return (
-    <div>
-      <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
-        {t("findService")}
-      </p>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
-          gap: "0 40px",
-          marginTop: "14px",
-        }}
-      >
-        {services.map((s) => (
-          <NavItem
-            key={s.href}
-            href={s.href}
-            title={s.key ? tn(`servicesMenu.${s.key}.title` as any) : s.title}
-            description={s.key ? tn(`servicesMenu.${s.key}.description` as any) : (s.description ?? "")}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function IndustriesPanel() {
-  const t = useTranslations("home.entry");
-  const tn = useTranslations("nav");
-  return (
-    <div>
-      <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
-        {t("browseIndustry")}
-      </p>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
-          gap: "0 40px",
-          marginTop: "14px",
-        }}
-      >
-        {industries.map((i) => (
-          <NavItem
-            key={i.href}
-            href={i.href}
-            title={i.key ? tn(`industriesMenu.${i.key}.title` as any) : i.title}
-            description={i.key ? tn(`industriesMenu.${i.key}.description` as any) : (i.description ?? "")}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function SchedulePanel() {
-  const t = useTranslations("home.entry");
-  return (
-    <div>
-      <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
-        {t("talkEngineer")}
-      </p>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
-          gap: "0 40px",
-          marginTop: "14px",
-        }}
-      >
-        <NavItem
-          href="/contact"
-          title={t("scheduleTitle")}
-          description={t("scheduleBody")}
-        />
-      </div>
-    </div>
+      </Tabs.Root>
+    </section>
   );
 }

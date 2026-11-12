@@ -71,22 +71,49 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Nicholaisen · Jūsu efektivitātes partneris",
-      "title": "Koksnes ražošanas optimizācija no stratēģijas līdz ražošanas ceham.",
-      "lede": "Pārdošana, inženierpakalpojumi un konsultācijas par inovatīviem mašīnu risinājumiem koksnes, plastmasas un alumīnija nozarēm. Kopā mēs pārvēršam jūsu datus gudros optimizācijas risinājumos un ienesīgos ieguldījumos.",
+      "eyebrow": "Jūsu efektivitātes partneris",
+      "title": "Atraisiet savas ražošanas pilno efektivitāti",
+      "lede": "Iekārtas, automatizācija, ražošanas dati un gudra iepirkšana koksnes, plastmasas un alumīnija ražotājiem — no vienas iekārtas līdz pilnai rūpnīcai.",
       "primary": "Izpētīt risinājumus",
-      "secondary": "Sazināties"
+      "secondary": "Sazināties",
+      "imageAlt": "Koks, mēbeles, logi un alumīnija profili ražošanā"
     },
     "entry": {
       "services": "Pakalpojumi",
       "industries": "Nozares",
       "schedule": "Rezervēt zvanu",
-      "findService": "Atrast pakalpojumu",
-      "browseIndustry": "Pārlūkot pēc nozares",
-      "talkEngineer": "Runāt ar inženieri",
-      "scheduleTitle": "30 minūšu saruna. Bez prezentācijām.",
-      "scheduleBody": "Pastāstiet mums, ko ražojat, kur iestrēgāt un kāds būtu labāks rezultāts. Mēs atgriezīsimies ar to, ko aplūkotu vispirms.",
-      "scheduleBtn": "Rezervēt zvanu"
+      "findService": "Atrodiet pakalpojumu",
+      "tabsLabel": "Sāciet šeit",
+      "pickMaterial": "Izvēlieties materiālu",
+      "whatToLookAt": "Ko mums vajadzētu apskatīt?",
+      "materials": {
+        "solidPanel": {
+          "title": "Masīvkoks un plātņu mēbeles",
+          "description": "Mēbeles, rāmji, komponenti un būvelementi"
+        },
+        "doorsWindows": {
+          "title": "Durvis un logi",
+          "description": "Koks, PVC un alumīnijs — kārbas, vērtnes un profili"
+        },
+        "plasticsAluminium": {
+          "title": "Plastmasa un alumīnijs",
+          "description": "Profili, fasādes un komponenti"
+        }
+      },
+      "call": {
+        "investment": {
+          "title": "Jūsu nākamais ieguldījums",
+          "description": "Atnesiet aprēķinu — saņemiet vienas lapas TCO"
+        },
+        "runningCost": {
+          "title": "Jūsu ekspluatācijas izmaksas",
+          "description": "Atsūtiet palīgmateriālu sarakstu — parasti ietaupījums 10–15 %"
+        },
+        "criticalMachine": {
+          "title": "Jūsu kritiskā iekārta",
+          "description": "Noskaidrojiet, cik jums maksā dīkstāves stunda"
+        }
+      }
     },
     "infoCards": {
       "eyebrow": "Kā sākt",
@@ -123,6 +150,154 @@
     "latestInsights": {
       "eyebrow": "Jaunākie ieskati",
       "title": "Piezīmes no ražošanas ceha."
+    },
+    "tracks": {
+      "eyebrow": "Jūsu klienta ceļš",
+      "title": "Pieci virzieni. Viens partneris.",
+      "intro": "Lai kur jūs atrastos savā ceļā, mēs pārņemam un atbildam par rezultātu līdz pašām beigām.",
+      "learnMore": "Uzzināt vairāk",
+      "stages": {
+        "plan": "Plānot",
+        "optimize": "Optimizēt",
+        "build": "Būvēt",
+        "improve": "Uzlabot"
+      },
+      "items": {
+        "business": {
+          "title": "Biznesa attīstība",
+          "subtitle": "Stratēģija, ieguldījumi un izaugsme",
+          "lede": "Stratēģija, ieguldījumi un izaugsme — lēmumi, kas balstīti uz jūsu pašu skaitļiem, nevis standarta izmaksām un intuīciju.",
+          "cta": "Rezervēt TCO pārskatu"
+        },
+        "optimization": {
+          "title": "Ražošanas optimizācija",
+          "subtitle": "Lielāka jauda, efektivitāte un zemāks TCO",
+          "lede": "Palieliniet jaudu un efektivitāti un samaziniet TCO. Neredzamu laiku pārvēršam redzamā cenā.",
+          "cta": "Atsūtiet savu sarakstu"
+        },
+        "machines": {
+          "title": "Iekārtas",
+          "subtitle": "Standarta iekārtas, speciālās iekārtas un modernizācija",
+          "lede": "Standarta iekārtas, speciālās iekārtas un modernizācija kokam, plastmasai un alumīnijam. Katra mūsu piegādātā iekārta ir pieslēgta.",
+          "cta": "Atrast iekārtu"
+        },
+        "projects": {
+          "title": "Projektu risinājumi",
+          "subtitle": "Ražošanas līnijas, automatizācija un projekti „atslēgas galā“",
+          "lede": "Ražošanas līnijas, automatizācija un projekti „atslēgas galā“ — viens partneris atbild par rezultātu.",
+          "cta": "Runājiet ar mums"
+        },
+        "digital": {
+          "title": "Digital Performance",
+          "subtitle": "Ražošanas ieskati, MI un optimizācija",
+          "lede": "Ražošanas ieskati, MI un optimizācija. Platforma sniedz datus — mēs sniedzam rezultātus.",
+          "cta": "Kartējiet savu iekārtu"
+        }
+      }
+    },
+    "industries": {
+      "title": "Nozares, kurās strādājam",
+      "items": {
+        "solidWood": {
+          "title": "Masīvkoks",
+          "description": "Mēbeles, rāmji un komponenti",
+          "alt": "Masīvkoka šķērsgriezums"
+        },
+        "panelFurniture": {
+          "title": "Plātņu mēbeles",
+          "description": "Virtuves, skapji un biroji",
+          "alt": "Plātņu un finiera paraugi"
+        },
+        "doorsWindows": {
+          "title": "Durvis un logi",
+          "description": "Kārbas, vērtnes un galdniecība",
+          "alt": "Logi uz statīva"
+        },
+        "plasticsAluminium": {
+          "title": "Plastmasa un alumīnijs",
+          "description": "Profili, logi un fasādes",
+          "alt": "Apstrādāti rāmju komponenti"
+        }
+      }
+    },
+    "scale": {
+      "title": "Viena iekārta vai visa rūpnīca",
+      "intro": "Neatkarīgi no projekta lieluma Nicholaisen to īsteno no sākuma līdz beigām.",
+      "tiles": {
+        "standalone": {
+          "title": "Atsevišķa iekārta",
+          "alt": "Atsevišķa caurplūdes CNC iekārta"
+        },
+        "machineRobot": {
+          "title": "Iekārta + robots",
+          "alt": "Robotu šūna šķiro detaļas noliktavas plauktos"
+        },
+        "factory": {
+          "title": "Pilnīgi jauna rūpnīca",
+          "alt": "Komanda jaunas rūpnīcas cehā"
+        }
+      },
+      "stat": {
+        "figure": "2–4 g.",
+        "title": "Ātrāka atmaksa",
+        "body": "Mēs neesam piesaistīti vienam zīmolam — katrai darba daļai izvēlamies labāko piegādātāju.",
+        "link": "Kā mēs iepērkam →"
+      }
+    },
+    "cases": {
+      "title": "Klientu stāsti: kā mūsu klienti saražo vairāk par mazāk",
+      "all": "Visi stāsti →",
+      "read": "Lasīt stāstu",
+      "short": {
+        "hardwood": "Cietkoka žāvēšana",
+        "kitchen": "Virtuvju ražotājs",
+        "million": "Miljona vienību rūpnīca",
+        "greenfield": "Jauna rūpnīca no nulles"
+      },
+      "industries": {
+        "solid-wood": "Masīvkoks",
+        "panel-furniture": "Plātņu mēbeles",
+        "doors-windows": "Durvis un logi"
+      }
+    },
+    "timeline": {
+      "title": "33 gadi klienta pusē",
+      "intro": "Ar vienotu skatījumu uz biznesu un konkurētspēju.",
+      "replay": "Atskaņot vēlreiz",
+      "milestones": {
+        "y1993": {
+          "title": "Tiek dibināts Nicholaisen A/S",
+          "copy": "Sākot ar klienta produktu, procesu un biznesu."
+        },
+        "y2007": {
+          "title": "Pirmā pilnā rūpnīca",
+          "copy": "No atsevišķām iekārtām līdz visas ražošanas plūsmas pārvaldībai."
+        },
+        "y2009": {
+          "title": "Bizness nostiprinās",
+          "copy": "Fokuss uz ilgtermiņa klientu attiecībām un biznesa attīstību."
+        },
+        "y2012": {
+          "title": "Optipeople",
+          "copy": "Programmatūra, dati un digitalizācija kļūst par daļu no ražošanas skatījuma."
+        },
+        "y2018": {
+          "title": "25 gadu pieredze",
+          "copy": "Kompetences no analīzes un izstrādes līdz iepirkumiem un ieviešanai."
+        },
+        "y2021": {
+          "title": "Nicholaisen Baltic OÜ",
+          "copy": "Lielāka jauda un piekļuve ekspertīzei Baltijā."
+        },
+        "y2024": {
+          "title": "Ziemeļvalstu paplašināšanās",
+          "copy": "Nicholaisen Sweden AB un NichoMachines stiprina mūsu klātbūtni tirgū."
+        },
+        "y2026": {
+          "title": "Nākamā nodaļa",
+          "copy": "MI un digitalizācija, gudra iepirkšana un automatizācija — viss veidots ap klienta mērķiem."
+        }
+      }
     }
   },
   "about": {

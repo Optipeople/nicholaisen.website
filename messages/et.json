@@ -71,22 +71,49 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Nicholaisen · Teie efektiivsuspartner",
-      "title": "Puidutootmise optimeerimine strateegiast tootmispõrandani.",
-      "lede": "Müük, inseneriteenused ja nõustamine innovaatiliste masinalahenduste osas puidu-, plasti- ja alumiiniumitööstuses. Koos muudame teie andmed arukaks optimeerimiseks ja kasumlikeks investeeringuteks.",
+      "eyebrow": "Teie efektiivsuspartner",
+      "title": "Vabastage oma tootmise täielik efektiivsus",
+      "lede": "Masinad, automatiseerimine, tootmisandmed ja nutikas hankimine puidu-, plasti- ja alumiiniumitootjatele — üksikmasinast kuni tervikliku tehaseni.",
       "primary": "Avasta lahendused",
-      "secondary": "Võtke ühendust"
+      "secondary": "Võtke ühendust",
+      "imageAlt": "Puit, mööbel, aknad ja alumiiniumprofiilid tootmises"
     },
     "entry": {
       "services": "Teenused",
-      "industries": "Tööstusharud",
+      "industries": "Valdkonnad",
       "schedule": "Broneeri kõne",
       "findService": "Leia teenus",
-      "browseIndustry": "Sirvige tööstusharu järgi",
-      "talkEngineer": "Rääkige inseneriga",
-      "scheduleTitle": "30-minutiline vestlus. Ilma esitluseta.",
-      "scheduleBody": "Rääkige meile, mida toodate, kus takerdute ja milline näeks välja parem tulemus. Tuleme tagasi sellega, mida vaataksime esmalt.",
-      "scheduleBtn": "Broneeri kõne"
+      "tabsLabel": "Alusta siit",
+      "pickMaterial": "Vali oma materjal",
+      "whatToLookAt": "Mida peaksime vaatama?",
+      "materials": {
+        "solidPanel": {
+          "title": "Massiivpuit ja plaatmööbel",
+          "description": "Mööbel, raamid, komponendid ja ehituselemendid"
+        },
+        "doorsWindows": {
+          "title": "Uksed ja aknad",
+          "description": "Puit, PVC ja alumiinium — lengid, raamid ja profiilid"
+        },
+        "plasticsAluminium": {
+          "title": "Plast ja alumiinium",
+          "description": "Profiilid, fassaadid ja komponendid"
+        }
+      },
+      "call": {
+        "investment": {
+          "title": "Teie järgmine investeering",
+          "description": "Tooge kalkulatsioon — saage üheleheküljeline TCO"
+        },
+        "runningCost": {
+          "title": "Teie jooksvad kulud",
+          "description": "Saatke kulumaterjalide nimekiri — tavaliselt 10–15% sääst"
+        },
+        "criticalMachine": {
+          "title": "Teie kriitiline masin",
+          "description": "Kaardistage, mida tund seisakut teile maksab"
+        }
+      }
     },
     "infoCards": {
       "eyebrow": "Kuidas alustada",
@@ -123,6 +150,154 @@
     "latestInsights": {
       "eyebrow": "Viimased ülevaated",
       "title": "Märkmed tootmispõrandalt."
+    },
+    "tracks": {
+      "eyebrow": "Teie klienditeekond",
+      "title": "Viis suunda. Üks partner.",
+      "intro": "Ükskõik, kus te teekonnal olete, võtame üle ja vastutame tulemuse eest kogu tee.",
+      "learnMore": "Loe lähemalt",
+      "stages": {
+        "plan": "Planeeri",
+        "optimize": "Optimeeri",
+        "build": "Ehita",
+        "improve": "Paranda"
+      },
+      "items": {
+        "business": {
+          "title": "Äri arendus",
+          "subtitle": "Strateegia, investeeringud ja kasv",
+          "lede": "Strateegia, investeeringud ja kasv — otsustatud teie enda numbrite, mitte standardkulude ja kõhutunde põhjal.",
+          "cta": "Broneeri TCO ülevaatus"
+        },
+        "optimization": {
+          "title": "Tootmise optimeerimine",
+          "subtitle": "Suurenda võimsust ja efektiivsust, vähenda TCO-d",
+          "lede": "Suurendage võimsust ja efektiivsust ning vähendage TCO-d. Muudame nähtamatu aja nähtavaks hinnaks.",
+          "cta": "Saada oma nimekiri"
+        },
+        "machines": {
+          "title": "Masinad",
+          "subtitle": "Standardmasinad, eritellimusmasinad ja uuendused",
+          "lede": "Standardmasinad, eritellimusmasinad ja uuendused puidule, plastile ja alumiiniumile. Iga meie tarnitud masin on ühendatud.",
+          "cta": "Leia masin"
+        },
+        "projects": {
+          "title": "Projektilahendused",
+          "subtitle": "Tootmisliinid, automatiseerimine ja võtmed-kätte projektid",
+          "lede": "Tootmisliinid, automatiseerimine ja võtmed-kätte projektid — üks partner vastutab tulemuse eest.",
+          "cta": "Räägi meiega"
+        },
+        "digital": {
+          "title": "Digital Performance",
+          "subtitle": "Tootmisülevaated, AI ja optimeerimine",
+          "lede": "Tootmisülevaated, AI ja optimeerimine. Platvorm annab andmed — meie anname tulemused.",
+          "cta": "Kaardista oma masin"
+        }
+      }
+    },
+    "industries": {
+      "title": "Valdkonnad, kus töötame",
+      "items": {
+        "solidWood": {
+          "title": "Massiivpuit",
+          "description": "Mööbel, raamid ja komponendid",
+          "alt": "Massiivpuidu ristlõige"
+        },
+        "panelFurniture": {
+          "title": "Plaatmööbel",
+          "description": "Köögid, kapid ja kontor",
+          "alt": "Plaadi- ja spooninäidised"
+        },
+        "doorsWindows": {
+          "title": "Uksed ja aknad",
+          "description": "Lengid, raamid ja tisleritööd",
+          "alt": "Aknad riiulil"
+        },
+        "plasticsAluminium": {
+          "title": "Plast ja alumiinium",
+          "description": "Profiilid, aknad ja fassaadid",
+          "alt": "Töödeldud raamikomponendid"
+        }
+      }
+    },
+    "scale": {
+      "title": "Üks masin või terve tehas",
+      "intro": "Olenemata projekti suurusest viib Nicholaisen selle läbi algusest lõpuni.",
+      "tiles": {
+        "standalone": {
+          "title": "Eraldiseisev masin",
+          "alt": "Eraldiseisev läbiviigu-CNC-masin"
+        },
+        "machineRobot": {
+          "title": "Masin + robot",
+          "alt": "Robotrakk sorteerib detaile laoriiulitesse"
+        },
+        "factory": {
+          "title": "Täiesti uus tehas",
+          "alt": "Meeskond uue tehase põrandal"
+        }
+      },
+      "stat": {
+        "figure": "2–4 a",
+        "title": "Kiirem tasuvus",
+        "body": "Me ei ole seotud ühe kaubamärgiga — valime iga tööosa jaoks parima tarnija.",
+        "link": "Kuidas me hangime →"
+      }
+    },
+    "cases": {
+      "title": "Juhtumiuuringud: kuidas meie kliendid toodavad rohkem vähemaga",
+      "all": "Kõik juhtumid →",
+      "read": "Loe juhtumit",
+      "short": {
+        "hardwood": "Kõvapuidu kuivatus",
+        "kitchen": "Köögitootja",
+        "million": "Miljoni ühiku tehas",
+        "greenfield": "Uus tehas nullist"
+      },
+      "industries": {
+        "solid-wood": "Massiivpuit",
+        "panel-furniture": "Plaatmööbel",
+        "doors-windows": "Uksed ja aknad"
+      }
+    },
+    "timeline": {
+      "title": "33 aastat kliendi poolel",
+      "intro": "Ühendatud vaatega ärile ja konkurentsivõimele.",
+      "replay": "Mängi uuesti",
+      "milestones": {
+        "y1993": {
+          "title": "Asutatakse Nicholaisen A/S",
+          "copy": "Lähtudes kliendi tootest, protsessist ja ärist."
+        },
+        "y2007": {
+          "title": "Esimene terviklik tehas",
+          "copy": "Üksikmasinatest kogu tootmisvoo omamiseni."
+        },
+        "y2009": {
+          "title": "Äri tugevneb",
+          "copy": "Fookus pikaajalistel kliendisuhetel ja äri arendusel."
+        },
+        "y2012": {
+          "title": "Optipeople",
+          "copy": "Tarkvara, andmed ja digitaliseerimine saavad osaks tootmisvaatest."
+        },
+        "y2018": {
+          "title": "25 aastat kogemust",
+          "copy": "Pädevused analüüsist ja arendusest hankimise ja juurutamiseni."
+        },
+        "y2021": {
+          "title": "Nicholaisen Baltic OÜ",
+          "copy": "Suurem võimsus ja juurdepääs Baltikumi asjatundlikkusele."
+        },
+        "y2024": {
+          "title": "Põhjamaine laienemine",
+          "copy": "Nicholaisen Sweden AB ja NichoMachines tugevdavad meie turupositsiooni."
+        },
+        "y2026": {
+          "title": "Järgmine peatükk",
+          "copy": "AI ja digitaliseerimine, nutikas hankimine ja automatiseerimine — kõik ehitatud kliendi eesmärkide ümber."
+        }
+      }
     }
   },
   "about": {

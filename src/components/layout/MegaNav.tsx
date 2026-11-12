@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { solutions, companyItems } from "@/lib/nav";
@@ -18,7 +19,12 @@ const ArrowRight = () => (
 
 export function MegaNav({ transparent = false }: { transparent?: boolean }) {
   const ink = transparent ? "#fff" : "var(--color-text)";
-  const triggerStyle = {
+  const [value, setValue] = useState("");
+  const triggers = useRef<Record<string, HTMLButtonElement | null>>({});
+  // Open each dropdown under its own trigger, 16px to the left (as in the design).
+  const menuLeft = (triggers.current[value]?.offsetLeft ?? 0) - 16;
+
+  const triggerStyle = (key: string) => ({
     all: "unset" as const,
     cursor: "pointer",
     display: "flex",
@@ -26,17 +32,24 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
     gap: "6px",
     color: ink,
     fontSize: "16px",
+    lineHeight: 1.55,
     padding: "8px 0",
-  };
+    borderBottom: `2px solid ${value === key ? "var(--color-spot)" : "transparent"}`,
+  });
 
   return (
-    <NavigationMenu.Root style={{ position: "relative" }}>
+    <NavigationMenu.Root value={value} onValueChange={setValue} style={{ position: "relative" }}>
       <NavigationMenu.List
         style={{ display: "flex", alignItems: "center", gap: "clamp(20px, 2.6vw, 36px)", flexWrap: "wrap", listStyle: "none", margin: 0, padding: 0 }}
       >
         {/* Solutions */}
-        <NavigationMenu.Item>
-          <NavigationMenu.Trigger style={triggerStyle}>
+        <NavigationMenu.Item value="solutions">
+          <NavigationMenu.Trigger
+            ref={(el) => {
+              triggers.current.solutions = el;
+            }}
+            style={triggerStyle("solutions")}
+          >
             Solutions <ChevronDown />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content
@@ -87,15 +100,20 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
         {/* Cases */}
         <NavigationMenu.Item>
           <NavigationMenu.Link asChild>
-            <Link href="/cases" style={{ color: ink, fontSize: "16px", textDecoration: "none", padding: "8px 0" }}>
+            <Link href="/cases" style={{ color: ink, fontSize: "16px", lineHeight: 1.55, textDecoration: "none", padding: "8px 0" }}>
               Cases
             </Link>
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
         {/* Company */}
-        <NavigationMenu.Item>
-          <NavigationMenu.Trigger style={triggerStyle}>
+        <NavigationMenu.Item value="company">
+          <NavigationMenu.Trigger
+            ref={(el) => {
+              triggers.current.company = el;
+            }}
+            style={triggerStyle("company")}
+          >
             Company <ChevronDown />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content
@@ -133,7 +151,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
         </NavigationMenu.Item>
       </NavigationMenu.List>
 
-      <div style={{ position: "absolute", left: "50%", top: "100%", transform: "translateX(-50%)", display: "flex", justifyContent: "center" }}>
+      <div style={{ position: "absolute", left: `${menuLeft}px`, top: "100%", zIndex: 20 }}>
         <NavigationMenu.Viewport
           style={{
             position: "relative",

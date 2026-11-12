@@ -20,7 +20,7 @@ export default async function HomePage({
       <TracksCarousel />
       <IndustriesSection />
       <ScaleTiles />
-      <FeaturedCases />
+      <FeaturedCases locale={locale} />
       <TimelineSection />
     </>
   );

@@ -71,22 +71,49 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Nicholaisen · Jūsų efektyvumo partneris",
-      "title": "Medienos gamybos optimizavimas nuo strategijos iki gamybos cecho.",
-      "lede": "Pardavimas, inžinerinės paslaugos ir konsultacijos dėl inovatyvių mašinų sprendimų medienos, plastiko ir aliuminio pramonės šakose. Kartu paverčiame jūsų duomenis protingais optimizavimo sprendimais ir pelningomis investicijomis.",
-      "primary": "Ištirti sprendimus",
-      "secondary": "Susisiekite"
+      "eyebrow": "Jūsų efektyvumo partneris",
+      "title": "Atskleiskite visą savo gamybos efektyvumą",
+      "lede": "Staklės, automatizavimas, gamybos duomenys ir išmanus tiekimas medienos, plastiko ir aliuminio gamintojams — nuo vienų staklių iki visos gamyklos.",
+      "primary": "Atraskite sprendimus",
+      "secondary": "Susisiekite",
+      "imageAlt": "Mediena, baldai, langai ir aliuminio profiliai gamyboje"
     },
     "entry": {
       "services": "Paslaugos",
       "industries": "Pramonės šakos",
-      "schedule": "Užsisakyti skambutį",
-      "findService": "Rasti paslaugą",
-      "browseIndustry": "Naršyti pagal pramonės šaką",
-      "talkEngineer": "Kalbėkite su inžinieriumi",
-      "scheduleTitle": "30 minučių pokalbis. Be pristatymų.",
-      "scheduleBody": "Papasakokite, ką gaminate, kur įstrigote ir kaip atrodytų geriau. Grįšime su tuo, ką peržiūrėtume pirmiausia.",
-      "scheduleBtn": "Užsisakyti skambutį"
+      "schedule": "Užsisakykite skambutį",
+      "findService": "Raskite paslaugą",
+      "tabsLabel": "Pradėkite čia",
+      "pickMaterial": "Pasirinkite medžiagą",
+      "whatToLookAt": "Ką turėtume įvertinti?",
+      "materials": {
+        "solidPanel": {
+          "title": "Medžio masyvas ir plokščių baldai",
+          "description": "Baldai, rėmai, komponentai ir statybiniai elementai"
+        },
+        "doorsWindows": {
+          "title": "Durys ir langai",
+          "description": "Mediena, PVC ir aliuminis — staktos, rėmai ir profiliai"
+        },
+        "plasticsAluminium": {
+          "title": "Plastikas ir aliuminis",
+          "description": "Profiliai, fasadai ir komponentai"
+        }
+      },
+      "call": {
+        "investment": {
+          "title": "Jūsų kita investicija",
+          "description": "Atsineškite skaičiavimą — gaukite vieno puslapio TCO"
+        },
+        "runningCost": {
+          "title": "Jūsų eksploatacijos sąnaudos",
+          "description": "Atsiųskite eksploatacinių medžiagų sąrašą — paprastai sutaupoma 10–15 %"
+        },
+        "criticalMachine": {
+          "title": "Jūsų kritinės staklės",
+          "description": "Įvertinkite, kiek jums kainuoja prastovos valanda"
+        }
+      }
     },
     "infoCards": {
       "eyebrow": "Kaip pradėti",
@@ -123,6 +150,154 @@
     "latestInsights": {
       "eyebrow": "Naujausios įžvalgos",
       "title": "Užrašai iš gamybos cecho."
+    },
+    "tracks": {
+      "eyebrow": "Jūsų kliento kelionė",
+      "title": "Penkios kryptys. Vienas partneris.",
+      "intro": "Kad ir kuriame kelionės etape būtumėte, perimame ir atsakome už rezultatą iki pat galo.",
+      "learnMore": "Sužinoti daugiau",
+      "stages": {
+        "plan": "Planuoti",
+        "optimize": "Optimizuoti",
+        "build": "Kurti",
+        "improve": "Tobulinti"
+      },
+      "items": {
+        "business": {
+          "title": "Verslo plėtra",
+          "subtitle": "Strategija, investicijos ir augimas",
+          "lede": "Strategija, investicijos ir augimas — sprendžiama pagal jūsų pačių skaičius, o ne pagal standartines sąnaudas ir nuojautą.",
+          "cta": "Užsisakykite TCO peržiūrą"
+        },
+        "optimization": {
+          "title": "Gamybos optimizavimas",
+          "subtitle": "Didesnis pajėgumas, efektyvumas ir mažesnis TCO",
+          "lede": "Didinkite pajėgumą ir efektyvumą bei mažinkite TCO. Nematomą laiką paverčiame matoma kaina.",
+          "cta": "Atsiųskite sąrašą"
+        },
+        "machines": {
+          "title": "Staklės",
+          "subtitle": "Standartinės staklės, specialios staklės ir modernizavimas",
+          "lede": "Standartinės staklės, specialios staklės ir modernizavimas medienai, plastikui ir aliuminiui. Visos mūsų tiekiamos staklės yra prijungtos.",
+          "cta": "Raskite stakles"
+        },
+        "projects": {
+          "title": "Projektų sprendimai",
+          "subtitle": "Gamybos linijos, automatizavimas ir projektai „iki rakto“",
+          "lede": "Gamybos linijos, automatizavimas ir projektai „iki rakto“ — vienas partneris atsako už rezultatą.",
+          "cta": "Pasikalbėkime"
+        },
+        "digital": {
+          "title": "Digital Performance",
+          "subtitle": "Gamybos įžvalgos, DI ir optimizavimas",
+          "lede": "Gamybos įžvalgos, DI ir optimizavimas. Platforma teikia duomenis — mes teikiame rezultatus.",
+          "cta": "Įvertinkite savo stakles"
+        }
+      }
+    },
+    "industries": {
+      "title": "Pramonės šakos, kuriose dirbame",
+      "items": {
+        "solidWood": {
+          "title": "Medžio masyvas",
+          "description": "Baldai, rėmai ir komponentai",
+          "alt": "Medžio masyvo pjūvis"
+        },
+        "panelFurniture": {
+          "title": "Plokščių baldai",
+          "description": "Virtuvės, spintos ir biurai",
+          "alt": "Plokščių ir lukšto pavyzdžiai"
+        },
+        "doorsWindows": {
+          "title": "Durys ir langai",
+          "description": "Staktos, rėmai ir stalių gaminiai",
+          "alt": "Langai ant stovo"
+        },
+        "plasticsAluminium": {
+          "title": "Plastikas ir aliuminis",
+          "description": "Profiliai, langai ir fasadai",
+          "alt": "Apdirbti rėmų komponentai"
+        }
+      }
+    },
+    "scale": {
+      "title": "Vienos staklės ar visa gamykla",
+      "intro": "Kad ir koks būtų jūsų projekto dydis, Nicholaisen jį įgyvendina nuo pradžios iki pabaigos.",
+      "tiles": {
+        "standalone": {
+          "title": "Atskiros staklės",
+          "alt": "Atskiros pratekamosios CNC staklės"
+        },
+        "machineRobot": {
+          "title": "Staklės + robotas",
+          "alt": "Roboto celė rūšiuoja detales į sandėliavimo stelažus"
+        },
+        "factory": {
+          "title": "Visiškai nauja gamykla",
+          "alt": "Komanda naujos gamyklos ceche"
+        }
+      },
+      "stat": {
+        "figure": "2–4 m.",
+        "title": "Greitesnis atsipirkimas",
+        "body": "Nesame susieti su vienu prekės ženklu — kiekvienai darbo daliai renkamės geriausią tiekėją.",
+        "link": "Kaip renkamės tiekėjus →"
+      }
+    },
+    "cases": {
+      "title": "Atvejų analizės: kaip mūsų klientai pagamina daugiau už mažiau",
+      "all": "Visi atvejai →",
+      "read": "Skaityti atvejį",
+      "short": {
+        "hardwood": "Kietmedžio džiovinimas",
+        "kitchen": "Virtuvių gamintojas",
+        "million": "Milijono vienetų gamykla",
+        "greenfield": "Nauja gamykla nuo nulio"
+      },
+      "industries": {
+        "solid-wood": "Medžio masyvas",
+        "panel-furniture": "Plokščių baldai",
+        "doors-windows": "Durys ir langai"
+      }
+    },
+    "timeline": {
+      "title": "33 metai kliento pusėje",
+      "intro": "Su bendru požiūriu į verslą ir konkurencingumą.",
+      "replay": "Paleisti iš naujo",
+      "milestones": {
+        "y1993": {
+          "title": "Įkuriama Nicholaisen A/S",
+          "copy": "Pradedant nuo kliento produkto, proceso ir verslo."
+        },
+        "y2007": {
+          "title": "Pirmoji visa gamykla",
+          "copy": "Nuo pavienių staklių iki viso gamybos srauto valdymo."
+        },
+        "y2009": {
+          "title": "Verslas sustiprėja",
+          "copy": "Dėmesys ilgalaikiams santykiams su klientais ir verslo plėtrai."
+        },
+        "y2012": {
+          "title": "Optipeople",
+          "copy": "Programinė įranga, duomenys ir skaitmeninimas tampa gamybos požiūrio dalimi."
+        },
+        "y2018": {
+          "title": "25 metų patirtis",
+          "copy": "Kompetencijos nuo analizės ir plėtros iki tiekimo ir diegimo."
+        },
+        "y2021": {
+          "title": "Nicholaisen Baltic OÜ",
+          "copy": "Didesnis pajėgumas ir prieiga prie ekspertizės Baltijos šalyse."
+        },
+        "y2024": {
+          "title": "Plėtra Šiaurės šalyse",
+          "copy": "Nicholaisen Sweden AB ir NichoMachines stiprina mūsų buvimą rinkoje."
+        },
+        "y2026": {
+          "title": "Kitas skyrius",
+          "copy": "DI ir skaitmeninimas, išmanus tiekimas ir automatizavimas — viskas sukurta pagal kliento tikslus."
+        }
+      }
     }
   },
   "about": {

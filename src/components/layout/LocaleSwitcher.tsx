@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Globe, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
@@ -76,29 +76,31 @@ export function LocaleSwitcher({ onSelect, transparent }: { onSelect?: () => voi
         aria-label="Switch language"
         aria-expanded={open}
       >
-        <Globe style={{ width: "16px", height: "16px" }} />
         <span style={{ textTransform: "uppercase" as const }}>{locale}</span>
         <ChevronDown style={{ width: "12px", height: "12px", transition: "transform 200ms", transform: open ? "rotate(180deg)" : "none" }} />
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 z-50 min-w-[148px] rounded-lg border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] shadow-lg py-1">
-          {routing.locales.map((l) => (
-            <button
-              key={l}
-              onClick={() => handleSelect(l)}
-              className={`flex w-full items-center gap-2.5 px-3 py-2 text-sm transition-colors hover:bg-[var(--color-paper-dark)] ${
-                l === locale
-                  ? "font-semibold text-[var(--color-navy-900)]"
-                  : "text-[var(--color-ink-700)]"
-              }`}
-            >
-              <span className="w-6 text-xs uppercase font-mono text-[var(--color-ink-400)]">
-                {l}
-              </span>
-              {localeNames[l]}
-            </button>
-          ))}
+        <div className="absolute top-full right-[-12px] z-50 pt-3">
+          <div className="flex min-w-[180px] flex-col gap-0.5 rounded-[8px] border border-[var(--color-divider)] bg-white p-1.5 text-[var(--color-text)] shadow-[0_16px_40px_color-mix(in_srgb,#003050_16%,transparent)]">
+            {routing.locales.map((l) => (
+              <button
+                key={l}
+                onClick={() => handleSelect(l)}
+                className={`flex w-full cursor-pointer items-center justify-between gap-4 rounded-[6px] px-3 py-2.5 text-[15px] hover:bg-[var(--color-accent-100)] ${
+                  l === locale ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <span>{localeNames[l]}</span>
+                <span
+                  className="text-[12px] tracking-[0.08em] uppercase"
+                  style={{ color: l === locale ? "var(--color-spot)" : "var(--color-accent-400)" }}
+                >
+                  {l}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </div>

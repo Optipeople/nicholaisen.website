@@ -256,7 +256,7 @@ export default async function AboutPage({
       </section>
 
       {/* Timeline */}
-      <TimelineSection />
+      <TimelineSection className="mt-24" />
 
       {/* Stats + Group */}
       <section

@@ -75,18 +75,45 @@
       "title": "Unlock the full efficiency of your production",
       "lede": "Machines, automation, production data and smart sourcing for manufacturers in wood, plastics and aluminium — from a single machine to a complete factory.",
       "primary": "Explore solutions",
-      "secondary": "Get in touch"
+      "secondary": "Get in touch",
+      "imageAlt": "Wood, furniture, windows and aluminium profiles in production"
     },
     "entry": {
       "services": "Services",
       "industries": "Industries",
       "schedule": "Schedule a call",
       "findService": "Find a service",
-      "browseIndustry": "Browse by industry",
-      "talkEngineer": "Talk to an engineer",
-      "scheduleTitle": "A 30-minute conversation. No deck.",
-      "scheduleBody": "Tell us what you're running, where you're stuck, and what better would look like. We'll come back with what we'd look at first.",
-      "scheduleBtn": "Schedule a call"
+      "tabsLabel": "Start here",
+      "pickMaterial": "Pick your material",
+      "whatToLookAt": "What should we look at?",
+      "materials": {
+        "solidPanel": {
+          "title": "Solid wood & panel furniture",
+          "description": "Furniture, frames, components & building elements"
+        },
+        "doorsWindows": {
+          "title": "Doors & windows",
+          "description": "Wood, PVC and aluminium — frames, sashes & profiles"
+        },
+        "plasticsAluminium": {
+          "title": "Plastics & aluminium",
+          "description": "Profiles, façades & components"
+        }
+      },
+      "call": {
+        "investment": {
+          "title": "Your next investment",
+          "description": "Bring the calculation — get a one-page TCO"
+        },
+        "runningCost": {
+          "title": "Your running cost",
+          "description": "Send your consumables list — typically 10–15% saved"
+        },
+        "criticalMachine": {
+          "title": "Your critical machine",
+          "description": "Map what an hour of standstill costs you"
+        }
+      }
     },
     "infoCards": {
       "eyebrow": "How to get started",
@@ -123,6 +150,154 @@
     "latestInsights": {
       "eyebrow": "Latest insights",
       "title": "Notes from the shop floor."
+    },
+    "tracks": {
+      "eyebrow": "Your customer journey",
+      "title": "Five tracks. One partner.",
+      "intro": "Wherever you are in the journey, we pick it up and answer for the result all the way through.",
+      "learnMore": "Learn more",
+      "stages": {
+        "plan": "Plan",
+        "optimize": "Optimize",
+        "build": "Build",
+        "improve": "Improve"
+      },
+      "items": {
+        "business": {
+          "title": "Business Development",
+          "subtitle": "Strategy, investments & growth",
+          "lede": "Strategy, investments and growth — decided on your own numbers, not on standard cost and gut feeling.",
+          "cta": "Book a TCO review"
+        },
+        "optimization": {
+          "title": "Production Optimization",
+          "subtitle": "Improve capacity, efficiency & reduce TCO",
+          "lede": "Improve capacity and efficiency, and reduce TCO. We turn invisible time into a visible price.",
+          "cta": "Send your list"
+        },
+        "machines": {
+          "title": "Machines",
+          "subtitle": "Standard machines, custom machines & upgrades",
+          "lede": "Standard machines, custom machines and upgrades for wood, plastics and aluminium. Every machine we deliver is connected.",
+          "cta": "Find a machine"
+        },
+        "projects": {
+          "title": "Project Solutions",
+          "subtitle": "Production lines, automation & turnkey projects",
+          "lede": "Production lines, automation and turnkey projects — with one partner answering for the result.",
+          "cta": "Talk to us"
+        },
+        "digital": {
+          "title": "Digital Performance",
+          "subtitle": "Production insights, AI & optimization",
+          "lede": "Production insights, AI and optimization. The platform delivers data — we deliver results.",
+          "cta": "Map your machine"
+        }
+      }
+    },
+    "industries": {
+      "title": "Industries we work in",
+      "items": {
+        "solidWood": {
+          "title": "Solid wood",
+          "description": "Furniture, frames & components",
+          "alt": "Cross-section of solid wood"
+        },
+        "panelFurniture": {
+          "title": "Panel furniture",
+          "description": "Kitchens, cabinets & office",
+          "alt": "Panel and veneer samples"
+        },
+        "doorsWindows": {
+          "title": "Doors & windows",
+          "description": "Frames, sashes & joinery",
+          "alt": "Windows on a rack"
+        },
+        "plasticsAluminium": {
+          "title": "Plastics & aluminium",
+          "description": "Profiles, windows & façades",
+          "alt": "Machined frame components"
+        }
+      }
+    },
+    "scale": {
+      "title": "One machine or a whole factory",
+      "intro": "Whatever the size of your project, Nicholaisen handles it from start to finish.",
+      "tiles": {
+        "standalone": {
+          "title": "Standalone machine",
+          "alt": "Standalone through-feed CNC machine"
+        },
+        "machineRobot": {
+          "title": "Machine + robot",
+          "alt": "Robot cell sorting parts into storage racks"
+        },
+        "factory": {
+          "title": "Complete new factory",
+          "alt": "Team on the floor of a complete new factory"
+        }
+      },
+      "stat": {
+        "figure": "2–4 yrs",
+        "title": "Faster payback",
+        "body": "We're not tied to one brand — we pick the best supplier for each part of the job.",
+        "link": "How we source →"
+      }
+    },
+    "cases": {
+      "title": "Case studies: how our customers produce more for less",
+      "all": "All cases →",
+      "read": "Read case",
+      "short": {
+        "hardwood": "Hardwood drying",
+        "kitchen": "Kitchen producer",
+        "million": "Million-unit facility",
+        "greenfield": "Greenfield factory"
+      },
+      "industries": {
+        "solid-wood": "Solid · Wood",
+        "panel-furniture": "Panel · Furniture",
+        "doors-windows": "Doors · Windows"
+      }
+    },
+    "timeline": {
+      "title": "33 years on the customer's side",
+      "intro": "With a combined view of business and competitiveness.",
+      "replay": "Replay",
+      "milestones": {
+        "y1993": {
+          "title": "Nicholaisen A/S is founded",
+          "copy": "Starting from the customer’s product, process and business."
+        },
+        "y2007": {
+          "title": "First complete factory",
+          "copy": "From single machines to owning the entire production flow."
+        },
+        "y2009": {
+          "title": "The business is strengthened",
+          "copy": "Focus on long-term customer relationships and business development."
+        },
+        "y2012": {
+          "title": "Optipeople",
+          "copy": "Software, data and digitalization become part of the production perspective."
+        },
+        "y2018": {
+          "title": "25 years of experience",
+          "copy": "Capabilities from analysis and development to sourcing and implementation."
+        },
+        "y2021": {
+          "title": "Nicholaisen Baltic OÜ",
+          "copy": "Greater capacity and access to expertise in the Baltics."
+        },
+        "y2024": {
+          "title": "Nordic scaling",
+          "copy": "Nicholaisen Sweden AB and NichoMachines strengthen our market presence."
+        },
+        "y2026": {
+          "title": "The next chapter",
+          "copy": "AI and digitalization, smart sourcing and automation — all built around the customer’s goals."
+        }
+      }
     }
   },
   "about": {

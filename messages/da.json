@@ -71,22 +71,49 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Nicholaisen · Din effektivitetspartner",
-      "title": "Optimering af træproduktion fra strategi til produktionsgulv.",
-      "lede": "Salg, ingeniørservice og rådgivning om innovative maskinløsninger til træ-, plast- og aluminiumindustrien. Sammen forvandler vi dine data til intelligente optimeringer og profitable investeringer.",
+      "eyebrow": "Din effektivitetspartner",
+      "title": "Få den fulde effektivitet ud af din produktion",
+      "lede": "Maskiner, automation, produktionsdata og smart indkøb til producenter inden for træ, plast og aluminium — fra en enkelt maskine til en komplet fabrik.",
       "primary": "Udforsk løsninger",
-      "secondary": "Kontakt os"
+      "secondary": "Kontakt os",
+      "imageAlt": "Træ, møbler, vinduer og aluminiumsprofiler i produktion"
     },
     "entry": {
       "services": "Ydelser",
       "industries": "Brancher",
-      "schedule": "Book et møde",
+      "schedule": "Book et opkald",
       "findService": "Find en ydelse",
-      "browseIndustry": "Gennemse efter branche",
-      "talkEngineer": "Tal med en ingeniør",
-      "scheduleTitle": "En 30-minutters samtale. Uden præsentation.",
-      "scheduleBody": "Fortæl os, hvad du kører, hvor du sidder fast, og hvad der ville se bedre ud. Vi vender tilbage med, hvad vi ville kigge på først.",
-      "scheduleBtn": "Book et møde"
+      "tabsLabel": "Start her",
+      "pickMaterial": "Vælg dit materiale",
+      "whatToLookAt": "Hvad skal vi kigge på?",
+      "materials": {
+        "solidPanel": {
+          "title": "Massivtræ & plademøbler",
+          "description": "Møbler, rammer, komponenter & byggeelementer"
+        },
+        "doorsWindows": {
+          "title": "Døre & vinduer",
+          "description": "Træ, PVC og aluminium — karme, rammer & profiler"
+        },
+        "plasticsAluminium": {
+          "title": "Plast & aluminium",
+          "description": "Profiler, facader & komponenter"
+        }
+      },
+      "call": {
+        "investment": {
+          "title": "Din næste investering",
+          "description": "Tag kalkulen med — få en TCO på én side"
+        },
+        "runningCost": {
+          "title": "Dine driftsomkostninger",
+          "description": "Send din liste over forbrugsvarer — typisk 10–15% sparet"
+        },
+        "criticalMachine": {
+          "title": "Din kritiske maskine",
+          "description": "Se hvad en times stilstand koster dig"
+        }
+      }
     },
     "infoCards": {
       "eyebrow": "Sådan kommer du i gang",
@@ -123,6 +150,154 @@
     "latestInsights": {
       "eyebrow": "Seneste indsigt",
       "title": "Noter fra produktionsgulvet."
+    },
+    "tracks": {
+      "eyebrow": "Din kunderejse",
+      "title": "Fem spor. Én partner.",
+      "intro": "Uanset hvor du er på rejsen, tager vi over og står inde for resultatet hele vejen.",
+      "learnMore": "Læs mere",
+      "stages": {
+        "plan": "Planlæg",
+        "optimize": "Optimér",
+        "build": "Byg",
+        "improve": "Forbedr"
+      },
+      "items": {
+        "business": {
+          "title": "Forretningsudvikling",
+          "subtitle": "Strategi, investeringer & vækst",
+          "lede": "Strategi, investeringer og vækst — besluttet på dine egne tal, ikke på standardomkostninger og mavefornemmelse.",
+          "cta": "Book en TCO-gennemgang"
+        },
+        "optimization": {
+          "title": "Produktionsoptimering",
+          "subtitle": "Øg kapacitet, effektivitet & reducér TCO",
+          "lede": "Øg kapacitet og effektivitet, og reducér TCO. Vi gør usynlig tid til en synlig pris.",
+          "cta": "Send din liste"
+        },
+        "machines": {
+          "title": "Maskiner",
+          "subtitle": "Standardmaskiner, specialmaskiner & opgraderinger",
+          "lede": "Standardmaskiner, specialmaskiner og opgraderinger til træ, plast og aluminium. Alle maskiner, vi leverer, er forbundne.",
+          "cta": "Find en maskine"
+        },
+        "projects": {
+          "title": "Projektløsninger",
+          "subtitle": "Produktionslinjer, automation & totalprojekter",
+          "lede": "Produktionslinjer, automation og totalprojekter — med én partner, der står inde for resultatet.",
+          "cta": "Tal med os"
+        },
+        "digital": {
+          "title": "Digital Performance",
+          "subtitle": "Produktionsindsigt, AI & optimering",
+          "lede": "Produktionsindsigt, AI og optimering. Platformen leverer data — vi leverer resultater.",
+          "cta": "Kortlæg din maskine"
+        }
+      }
+    },
+    "industries": {
+      "title": "Brancher vi arbejder i",
+      "items": {
+        "solidWood": {
+          "title": "Massivtræ",
+          "description": "Møbler, rammer & komponenter",
+          "alt": "Tværsnit af massivtræ"
+        },
+        "panelFurniture": {
+          "title": "Plademøbler",
+          "description": "Køkkener, skabe & kontor",
+          "alt": "Prøver på plader og finér"
+        },
+        "doorsWindows": {
+          "title": "Døre & vinduer",
+          "description": "Karme, rammer & snedkeri",
+          "alt": "Vinduer på et stativ"
+        },
+        "plasticsAluminium": {
+          "title": "Plast & aluminium",
+          "description": "Profiler, vinduer & facader",
+          "alt": "Bearbejdede rammekomponenter"
+        }
+      }
+    },
+    "scale": {
+      "title": "Én maskine eller en hel fabrik",
+      "intro": "Uanset størrelsen på dit projekt håndterer Nicholaisen det fra start til slut.",
+      "tiles": {
+        "standalone": {
+          "title": "Enkeltstående maskine",
+          "alt": "Enkeltstående gennemløbs-CNC-maskine"
+        },
+        "machineRobot": {
+          "title": "Maskine + robot",
+          "alt": "Robotcelle der sorterer emner i lagerreoler"
+        },
+        "factory": {
+          "title": "Komplet ny fabrik",
+          "alt": "Team på gulvet i en komplet ny fabrik"
+        }
+      },
+      "stat": {
+        "figure": "2–4 år",
+        "title": "Hurtigere tilbagebetaling",
+        "body": "Vi er ikke bundet til ét mærke — vi vælger den bedste leverandør til hver del af opgaven.",
+        "link": "Sådan køber vi ind →"
+      }
+    },
+    "cases": {
+      "title": "Cases: sådan producerer vores kunder mere for mindre",
+      "all": "Alle cases →",
+      "read": "Læs casen",
+      "short": {
+        "hardwood": "Tørring af hårdttræ",
+        "kitchen": "Køkkenproducent",
+        "million": "Million-enheds-anlæg",
+        "greenfield": "Ny fabrik fra bunden"
+      },
+      "industries": {
+        "solid-wood": "Massivtræ",
+        "panel-furniture": "Plademøbler",
+        "doors-windows": "Døre & vinduer"
+      }
+    },
+    "timeline": {
+      "title": "33 år på kundens side",
+      "intro": "Med et samlet blik på forretning og konkurrenceevne.",
+      "replay": "Afspil igen",
+      "milestones": {
+        "y1993": {
+          "title": "Nicholaisen A/S grundlægges",
+          "copy": "Med udgangspunkt i kundens produkt, proces og forretning."
+        },
+        "y2007": {
+          "title": "Første komplette fabrik",
+          "copy": "Fra enkeltmaskiner til at eje hele produktionsflowet."
+        },
+        "y2009": {
+          "title": "Forretningen styrkes",
+          "copy": "Fokus på langvarige kunderelationer og forretningsudvikling."
+        },
+        "y2012": {
+          "title": "Optipeople",
+          "copy": "Software, data og digitalisering bliver en del af produktionsperspektivet."
+        },
+        "y2018": {
+          "title": "25 års erfaring",
+          "copy": "Kompetencer fra analyse og udvikling til indkøb og implementering."
+        },
+        "y2021": {
+          "title": "Nicholaisen Baltic OÜ",
+          "copy": "Større kapacitet og adgang til ekspertise i Baltikum."
+        },
+        "y2024": {
+          "title": "Nordisk skalering",
+          "copy": "Nicholaisen Sweden AB og NichoMachines styrker vores tilstedeværelse på markedet."
+        },
+        "y2026": {
+          "title": "Det næste kapitel",
+          "copy": "AI og digitalisering, smart indkøb og automation — alt bygget op om kundens mål."
+        }
+      }
     }
   },
   "about": {

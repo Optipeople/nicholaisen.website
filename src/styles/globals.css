@@ -115,7 +115,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-inter), "Inter", system-ui, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.12;
     letter-spacing: -0.02em;
     margin: 0 0 var(--space-2);
@@ -146,38 +146,136 @@
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
 
+  /* ── Shared typography (approved design, Docs/prototypes v3) ──
+     Use these on every page so headings and text stay identical. */
+
+  /* Page hero heading — 40→76px */
   .text-display-1 {
     font-size: clamp(2.5rem, 5.4vw, 4.75rem);
     line-height: 1.08;
     letter-spacing: -0.025em;
-    font-weight: 600;
+    font-weight: 500;
   }
 
+  /* Section heading — 34→56px */
   .text-display-2 {
     font-size: clamp(2.125rem, 4vw, 3.5rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
-    font-weight: 600;
+    font-weight: 500;
   }
 
+  /* Compact section heading (dark bands) — 30→46px */
   .text-display-3 {
     font-size: clamp(1.875rem, 3.4vw, 2.875rem);
     line-height: 1.1;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+  }
+
+  /* Card / panel heading — 28→40px */
+  .text-heading-1 {
+    font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+    line-height: 1.1;
     letter-spacing: -0.02em;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  /* Tile title — 21px */
+  .text-heading-2 {
+    font-size: 1.3125rem;
+    line-height: 1.55;
+    font-weight: 500;
+  }
+
+  /* List-row title — 18px semibold */
+  .text-heading-3 {
+    font-size: 1.125rem;
+    line-height: 1.55;
     font-weight: 600;
   }
 
+  /* Hero lede — 17→21px */
   .text-lede {
     font-size: clamp(1.0625rem, 1.5vw, 1.3125rem);
-    line-height: 1.6;
+    line-height: 1.55;
   }
 
+  /* Section intro paragraph — 18px muted */
+  .text-intro {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-accent-500);
+  }
+
+  /* Body copy on cards and panels — 16px */
+  .text-body {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  /* Supporting line under a title — 15px muted */
+  .text-meta {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-accent-500);
+  }
+
+  /* Small caps label above lists and cards — 13px */
   .text-eyebrow {
     font-size: 0.8125rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--color-accent);
+    color: var(--color-accent-500);
+  }
+
+  /* Kicker above hero and section headings — 14px */
+  .text-kicker {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Kicker on image panels — 14px, wider tracking */
+  .text-panel-kicker {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-accent-300);
+  }
+
+  /* Big figure — light weight, tabular */
+  .text-stat {
+    font-size: clamp(2.75rem, 4.4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-weight: 200;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Shared layout ── */
+  .site-container {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: clamp(20px, 5vw, 64px);
+    box-sizing: border-box;
+  }
+
+  /* Standard gap above a section */
+  .section-top {
+    padding-top: 112px;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 
   .divider-hairline {
@@ -186,23 +284,23 @@
   }
 }
 
-/* SiteHeader responsive layout */
+/* SiteHeader layout (v3): logo, nav right after it, language + contact at the far right */
 .site-header-inner {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 5vw, 64px);
+  padding: 22px clamp(20px, 5vw, 64px);
   display: flex;
-  height: 64px;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 16px clamp(20px, 3vw, 40px);
+  box-sizing: border-box;
 }
+.site-header-logo { margin-right: clamp(8px, 2vw, 32px); }
 .site-header-nav { display: none; }
 .site-header-desktop { display: none; }
-.site-header-mobile { display: flex; }
-@media (min-width: 1024px) {
-  .site-header-nav { display: flex; flex: 1; justify-content: center; }
-  .site-header-desktop { display: flex; align-items: center; gap: 16px; }
+.site-header-mobile { display: flex; margin-left: auto; }
+@media (min-width: 900px) {
+  .site-header-nav { display: flex; margin-right: auto; }
+  .site-header-desktop { display: flex; align-items: center; gap: 20px; }
   .site-header-mobile { display: none; }
 }
 

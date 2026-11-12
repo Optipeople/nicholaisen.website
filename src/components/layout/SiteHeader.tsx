@@ -29,6 +29,7 @@ export function SiteHeader({ locale }: { locale: string }) {
       <div className="site-header-inner">
         <Link
           href="/"
+          className="site-header-logo"
           style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}
           aria-label="Nicholaisen — Home"
         >
@@ -38,7 +39,7 @@ export function SiteHeader({ locale }: { locale: string }) {
             width={472}
             height={190}
             priority
-            style={{ height: "32px", width: "auto", display: "block" }}
+            style={{ height: transparent ? "48px" : "32px", width: "auto", display: "block" }}
           />
         </Link>
 
