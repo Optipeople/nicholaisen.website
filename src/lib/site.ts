@@ -1,7 +1,7 @@
 export const site = {
   name: "Nicholaisen",
   legalName: "Nicholaisen A/S",
-  tagline: "Engineered precision, told quietly.",
+  tagline: "Your Efficiency Partner",
   valueProp: "Optimizing wood production from strategy to shop floor.",
   description:
     "Nicholaisen provides sales, engineering and consulting of innovative machine solutions and service concepts for the wood, plastics and aluminum industries.",

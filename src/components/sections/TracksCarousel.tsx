@@ -79,10 +79,10 @@ export function TracksCarousel() {
         <p className="text-intro mt-5 mb-0">{t("intro")}</p>
       </div>
 
-      {/* Journey navigator */}
+      {/* Journey navigator — fits the screen on phones (smaller circles), full size from 640px. */}
       <div className="no-scrollbar mb-8 overflow-x-auto">
-        <div className="relative grid min-w-[700px] grid-cols-5 gap-x-4 gap-y-3">
-          <div aria-hidden className="absolute top-[35px] right-[10%] left-[10%] h-[2px] bg-[var(--color-accent-300)]" />
+        <div className="relative grid grid-cols-5 gap-x-1 gap-y-3 sm:min-w-[700px] sm:gap-x-4">
+          <div aria-hidden className="absolute top-[23px] right-[10%] left-[10%] h-[2px] bg-[var(--color-accent-300)] sm:top-[35px]" />
           {[20, 45, 75].map((left) => (
             <svg
               key={left}
@@ -90,7 +90,7 @@ export function TracksCarousel() {
               width="14"
               height="14"
               viewBox="0 0 14 14"
-              className="absolute top-[36px] block -translate-x-1/2 -translate-y-1/2"
+              className="absolute top-[24px] block -translate-x-1/2 -translate-y-1/2 sm:top-[36px]"
               style={{ left: `${left}%` }}
             >
               <path
@@ -114,11 +114,11 @@ export function TracksCarousel() {
                 aria-pressed={on}
                 onClick={() => selectStage(stage)}
                 onMouseEnter={() => selectStage(stage)}
-                className="relative z-[1] row-start-1 flex cursor-pointer flex-col items-center gap-3"
+                className="relative z-[1] row-start-1 flex min-w-0 cursor-pointer flex-col items-center gap-2 sm:gap-3"
                 style={{ gridColumn: column }}
               >
                 <span
-                  className="flex size-[72px] items-center justify-center rounded-full border-2 border-[var(--color-accent)]"
+                  className="flex size-12 items-center justify-center rounded-full border-2 border-[var(--color-accent)] sm:size-[72px]"
                   style={{
                     background: on ? "var(--color-accent)" : "#fff",
                     color: on ? "#fff" : "var(--color-accent)",
@@ -128,7 +128,7 @@ export function TracksCarousel() {
                   <Icon />
                 </span>
                 <span
-                  className="text-[24px] leading-[1.55] font-medium tracking-[-0.015em]"
+                  className="max-w-full text-center text-[14px] leading-[1.3] font-medium tracking-[-0.01em] [overflow-wrap:break-word] hyphens-auto sm:text-[24px] sm:leading-[1.55] sm:tracking-[-0.015em]"
                   style={{
                     color: on ? "var(--color-accent)" : "var(--color-accent-500)",
                     transition: "color 300ms",

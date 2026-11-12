@@ -15,7 +15,7 @@ export function buildMetadata({
   ogImage,
 }: SeoInput): Metadata {
   const url = new URL(path, site.url).toString();
-  const fullTitle = title ?? `${site.name} — ${site.tagline}`;
+  const fullTitle = title ?? `${site.name} - ${site.tagline}`;
   const desc = description ?? site.description;
 
   return {

@@ -18,8 +18,8 @@ function useStacked() {
 }
 
 /** Heights when stacked: a closed bar, and the open panel's minimum (it grows to fit its text). */
-const BAR = 64;
-const OPEN_MIN = 420;
+const BAR = 56;
+const OPEN_MIN = 260;
 
 export type ExpandingPanel = {
   key: string;
@@ -117,9 +117,12 @@ export function ExpandingPanels({
                   }}
                   aria-hidden={!open}
                   className={cn(
-                    "absolute bottom-0 left-0 box-border flex flex-col gap-[14px] px-[clamp(24px,3vw,44px)] py-[clamp(28px,3vw,44px)]",
-                    // Long single words (e.g. "Produktionsoptimering") would overflow a phone screen.
-                    stacked && "[overflow-wrap:break-word] hyphens-auto",
+                    "absolute bottom-0 left-0 box-border flex flex-col",
+                    stacked
+                      ? // Phones: tighter padding and smaller type, so the open panel stays compact.
+                        // Long single words (e.g. "Produktionsoptimering") hyphenate instead of overflowing.
+                        "gap-2.5 px-5 py-6 [overflow-wrap:break-word] hyphens-auto [&_h3]:text-[24px] [&_h3]:leading-[1.15] [&_p]:text-[15px] [&_p]:leading-[1.5] [&_a]:px-4 [&_a]:py-2 [&_a]:text-[14px]"
+                      : "gap-[14px] px-[clamp(24px,3vw,44px)] py-[clamp(28px,3vw,44px)]",
                   )}
                   style={{
                     width: stacked ? "100%" : openContentWidth,
@@ -138,7 +141,7 @@ export function ExpandingPanels({
                   className={cn(
                     "pointer-events-none absolute top-0 left-0 box-border flex px-4",
                     // Stacked: number and title side by side in the bar.
-                    stacked ? "h-16 flex-row items-center gap-3" : "bottom-0 flex-col items-start justify-between py-6",
+                    stacked ? "h-14 flex-row items-center gap-3" : "bottom-0 flex-col items-start justify-between py-6",
                   )}
                   style={{
                     width: stacked ? "100%" : collapsedWidth,

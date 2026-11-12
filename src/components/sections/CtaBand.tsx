@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { site } from "@/lib/site";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 
 type CtaBandProps = {
@@ -26,7 +27,7 @@ export async function CtaBand({
     ? await getTranslations({ locale, namespace: "home" })
     : null;
 
-  const resolvedEyebrow = eyebrow ?? t?.("cta.eyebrow") ?? "Engineered precision, told quietly.";
+  const resolvedEyebrow = eyebrow ?? t?.("cta.eyebrow") ?? site.tagline;
   const resolvedTitle = title ?? t?.("cta.title") ?? "Tell us what you're trying to make better.";
   const resolvedBody = body ?? t?.("cta.body") ?? "Bring us the part of the line that frustrates you. We'll come back with what we'd look at first.";
   const resolvedPrimary = primary ?? {

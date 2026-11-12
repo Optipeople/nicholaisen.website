@@ -66,7 +66,7 @@ export default async function OgImage({
           }}
         >
           <span>nicholaisen.dk</span>
-          <span style={{ fontStyle: "italic" }}>Engineered precision, told quietly.</span>
+          <span style={{ fontStyle: "italic" }}>Your Efficiency Partner</span>
         </div>
       </div>
     ),
