@@ -65,6 +65,14 @@
     "optional": "(valgfri)"
   },
   "footer": {
+    "newsletter": {
+      "title": "Nyhedsbrev",
+      "text": "Tilmeld dig vores nyhedsbrev og få de seneste opdateringer.",
+      "emailLabel": "E-mailadresse",
+      "button": "Tilmeld",
+      "sent": "Tak — du er tilmeldt.",
+      "error": "Noget gik galt. Prøv igen."
+    },
     "description": "Nicholaisen leverer salg, ingeniørservice og rådgivning om innovative maskinløsninger og servicekoncept til træ-, plast- og aluminiumindustrien.",
     "sections": {
       "solutions": "Løsninger",

@@ -65,6 +65,14 @@
     "optional": "(neprivaloma)"
   },
   "footer": {
+    "newsletter": {
+      "title": "Naujienlaiškis",
+      "text": "Prenumeruokite mūsų naujienlaiškį ir gaukite naujausias naujienas.",
+      "emailLabel": "El. pašto adresas",
+      "button": "Prenumeruoti",
+      "sent": "Ačiū — esate sąraše.",
+      "error": "Kažkas nepavyko. Bandykite dar kartą."
+    },
     "description": "Nicholaisen teikia pardavimą, inžinerines paslaugas ir konsultacijas dėl inovatyvių mašinų sprendimų ir aptarnavimo koncepcijų medienos, plastiko ir aliuminio pramonės šakoms.",
     "sections": {
       "solutions": "Sprendimai",

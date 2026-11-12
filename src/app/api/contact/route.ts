@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 
 const MessageSchema = z.object({
   quick: z.undefined().optional(),
+  newsletter: z.undefined().optional(),
   name: z.string().min(1).max(120),
   company: z.string().min(1).max(160),
   email: z.string().email(),
@@ -22,7 +23,14 @@ const QuickSchema = z.object({
   website: z.string().max(0).optional(),
 });
 
-const Schema = z.union([QuickSchema, MessageSchema]);
+/** Newsletter sign-up in the footer: just an e-mail address. */
+const NewsletterSchema = z.object({
+  newsletter: z.literal(true),
+  email: z.string().email(),
+  website: z.string().max(0).optional(),
+});
+
+const Schema = z.union([QuickSchema, NewsletterSchema, MessageSchema]);
 
 export async function POST(request: Request) {
   let payload: unknown;
@@ -59,7 +67,15 @@ export async function POST(request: Request) {
   try {
     const resend = new Resend(apiKey);
     const result = await resend.emails.send(
-      "quick" in data && data.quick
+      "newsletter" in data && data.newsletter
+        ? {
+            from,
+            to,
+            replyTo: data.email,
+            subject: `Website: newsletter sign-up - ${data.email}`,
+            text: `Newsletter sign-up from the website footer.\n\nEmail: ${data.email}`,
+          }
+        : "quick" in data && data.quick
         ? {
             from,
             to,

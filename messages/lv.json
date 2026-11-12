@@ -65,6 +65,14 @@
     "optional": "(neobligāts)"
   },
   "footer": {
+    "newsletter": {
+      "title": "Jaunumu vēstule",
+      "text": "Pierakstieties mūsu jaunumu vēstulei, lai saņemtu jaunākos jaunumus.",
+      "emailLabel": "E-pasta adrese",
+      "button": "Pierakstīties",
+      "sent": "Paldies — jūs esat sarakstā.",
+      "error": "Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz."
+    },
     "description": "Nicholaisen nodrošina pārdošanu, inženierpakalpojumus un konsultācijas par inovatīviem mašīnu risinājumiem un servisa konceptiem koksnes, plastmasas un alumīnija nozarēm.",
     "sections": {
       "solutions": "Risinājumi",

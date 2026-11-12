@@ -65,6 +65,14 @@
     "optional": "(valfritt)"
   },
   "footer": {
+    "newsletter": {
+      "title": "Nyhetsbrev",
+      "text": "Prenumerera på vårt nyhetsbrev för de senaste uppdateringarna.",
+      "emailLabel": "E-postadress",
+      "button": "Prenumerera",
+      "sent": "Tack — du är anmäld.",
+      "error": "Något gick fel. Försök igen."
+    },
     "description": "Nicholaisen tillhandahåller försäljning, teknisk rådgivning och konsulttjänster för innovativa maskinlösningar och servicekoncept inom trä-, plast- och aluminiumindustrin.",
     "sections": {
       "solutions": "Lösningar",

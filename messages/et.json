@@ -65,6 +65,14 @@
     "optional": "(valikuline)"
   },
   "footer": {
+    "newsletter": {
+      "title": "Uudiskiri",
+      "text": "Tellige meie uudiskiri, et saada viimaseid uudiseid.",
+      "emailLabel": "E-posti aadress",
+      "button": "Telli",
+      "sent": "Aitäh — olete nimekirjas.",
+      "error": "Midagi läks valesti. Proovige uuesti."
+    },
     "description": "Nicholaisen pakub müüki, inseneriteenuseid ja nõustamist innovaatiliste masinalahenduste ja teenuskontseptsioonide osas puidu-, plasti- ja alumiiniumitööstusele.",
     "sections": {
       "solutions": "Lahendused",
