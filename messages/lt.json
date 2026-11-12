@@ -1118,6 +1118,7 @@
   },
   "serviceDetail": {
     "labels": {
+      "visitOptipeople": "Apsilankykite OptiPeople",
       "jumpLabel": "Šiame puslapyje",
       "whatYouGet": "Ką gausite",
       "howItWorks": "Kaip tai veikia",

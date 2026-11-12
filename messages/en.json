@@ -1116,6 +1116,7 @@
   },
   "serviceDetail": {
     "labels": {
+      "visitOptipeople": "Visit OptiPeople",
       "jumpLabel": "On this page",
       "whatYouGet": "What you get",
       "howItWorks": "How it works",

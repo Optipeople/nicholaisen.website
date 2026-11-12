@@ -1118,6 +1118,7 @@
   },
   "serviceDetail": {
     "labels": {
+      "visitOptipeople": "Besök OptiPeople",
       "jumpLabel": "På den här sidan",
       "whatYouGet": "Det här får du",
       "howItWorks": "Så fungerar det",

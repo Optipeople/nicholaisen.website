@@ -43,7 +43,7 @@ export type ServiceDetailData = {
   why: Pair[];
   how: string[];
   /** Extra text sections after the grid (MDX story sections). */
-  extra: { kicker: string; title: string; paragraphs: string[] }[];
+  extra: { kicker: string; title: string; paragraphs: string[]; link?: { href: string; label: string } }[];
   proof: string;
   stats: { value: string; label: string }[];
   proofLink: { href: string; label: string };
@@ -152,7 +152,19 @@ export async function ServiceDetailView({ data }: { data: ServiceDetailData }) {
       </section>
 
       {data.extra.map((s) => (
-        <TextSection key={s.title} kicker={s.kicker} title={s.title} paragraphs={s.paragraphs} />
+        <TextSection
+          key={s.title}
+          kicker={s.kicker}
+          title={s.title}
+          paragraphs={s.paragraphs}
+          action={
+            s.link ? (
+              <LinkButton href={s.link.href} external variant="outline" size="card" className="py-[11px]">
+                {s.link.label} <span aria-hidden>↗</span>
+              </LinkButton>
+            ) : null
+          }
+        />
       ))}
 
       {hasProof ? (
@@ -280,11 +292,12 @@ export async function MdxServiceDetail({ page, locale }: { page: MdxServicePage;
   const doc = await getService(page.mdxSlug, locale);
   if (!doc) return null;
   const fm = doc.frontmatter;
-  const [ts, tt, tc, tSol] = await Promise.all([
+  const [ts, tt, tc, tSol, tl] = await Promise.all([
     getTranslations("services"),
     getTranslations("home.tracks.items"),
     getTranslations("home.cases"),
     getTranslations("solutions.tracks"),
+    getTranslations("serviceDetail.labels"),
   ]);
   const self = await trackService(page.track, page.index);
   const sections = splitSections(doc.body);
@@ -328,7 +341,13 @@ export async function MdxServiceDetail({ page, locale }: { page: MdxServicePage;
         whyTitle: ts("whatCovers", { title: fm.title }),
         why: (fm.capabilities ?? []).map((c) => ({ title: c.title, text: c.description })),
         how: (fm.process ?? []).map((s) => s.title),
-        extra: rest.map((s) => ({ kicker: self.title, title: s.heading, paragraphs: s.paragraphs })),
+        extra: rest.map((s, i) => ({
+          kicker: self.title,
+          title: s.heading,
+          paragraphs: s.paragraphs,
+          // The page's external link goes under its last text section.
+          link: page.externalLink && i === rest.length - 1 ? { href: page.externalLink, label: tl("visitOptipeople") } : undefined,
+        })),
         proof: caseDoc?.frontmatter.excerpt ?? self.copy,
         stats: (caseDoc?.frontmatter.metrics ?? []).slice(0, 3),
         proofLink: caseDoc

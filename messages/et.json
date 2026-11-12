@@ -1118,6 +1118,7 @@
   },
   "serviceDetail": {
     "labels": {
+      "visitOptipeople": "Külasta OptiPeople’it",
       "jumpLabel": "Sellel lehel",
       "whatYouGet": "Mida saate",
       "howItWorks": "Kuidas see toimib",

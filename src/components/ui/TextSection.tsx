@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Kicker } from "@/components/ui/Kicker";
 import { cn } from "@/lib/cn";
 
@@ -9,11 +10,14 @@ export function TextSection({
   kicker,
   title,
   paragraphs,
+  action,
   className,
 }: {
   kicker: string;
   title: string;
   paragraphs: string[];
+  /** Shown below the paragraphs, e.g. a button. */
+  action?: ReactNode;
   className?: string;
 }) {
   return (
@@ -33,6 +37,7 @@ export function TextSection({
             {p}
           </p>
         ))}
+        {action ? <div className="mt-3 flex flex-wrap gap-3">{action}</div> : null}
       </div>
     </section>
   );
