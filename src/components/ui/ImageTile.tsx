@@ -48,10 +48,13 @@ export function ImageTile({
   );
 }
 
-/** Auto-fitting grid of ImageTiles (min 240px per column). */
+/**
+ * Grid of ImageTiles (min 240px per column). On phones a sideways swipe row
+ * instead, each tile 70% wide with the next one peeking in.
+ */
 export function ImageTileGrid({ children }: { children: React.ReactNode }) {
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,240px),1fr))] gap-x-10 gap-y-8">
+    <div className="no-scrollbar -mx-5 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 [&>*]:w-[70%] [&>*]:flex-none [&>*]:snap-start sm:mx-0 sm:grid sm:grid-cols-[repeat(auto-fit,minmax(min(100%,240px),1fr))] sm:gap-x-10 sm:gap-y-8 sm:overflow-visible sm:px-0 sm:[&>*]:w-auto">
       {children}
     </div>
   );

@@ -17,9 +17,7 @@ function useStacked() {
   return stacked;
 }
 
-/** Heights when stacked: a closed bar, and the open panel's minimum (it grows to fit its text). */
-const BAR = 56;
-const OPEN_MIN = 260;
+
 
 export type ExpandingPanel = {
   key: string;
@@ -40,8 +38,8 @@ const EASE = "cubic-bezier(.2,.7,.2,1)";
 /**
  * A row of photo panels where the open one(s) take the free width and the
  * rest collapse to narrow strips. Hover or click opens a panel.
- * Shared by the homepage tracks and featured cases. On phones the panels stack:
- * closed ones become slim bars (number and title), the open one full width.
+ * Shared by the homepage tracks and featured cases. On phones they become a
+ * row of cards you swipe sideways, each showing its full content.
  */
 export function ExpandingPanels({
   panels,
@@ -62,25 +60,12 @@ export function ExpandingPanels({
   minWidth: string;
 }) {
   const stacked = useStacked();
-  // Stacked open panels are as tall as their text needs (measured, so the height can animate).
-  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const topRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [heights, setHeights] = useState<number[]>([]);
-  useEffect(() => {
-    if (!stacked) return;
-    const measure = () =>
-      setHeights(contentRefs.current.map((el, i) => Math.max(OPEN_MIN, (el?.offsetHeight ?? 0) + (topRefs.current[i]?.offsetHeight ?? 0))));
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, [stacked, panels.length]);
+  if (stacked) return <SwipeCards panels={panels} isOpen={isOpen} />;
+
   return (
     <div className="mx-auto max-w-[1320px] [container-type:inline-size]">
-      <div className={cn("rounded-[4px]", !stacked && "no-scrollbar overflow-x-auto")}>
-        <div
-          className={cn("flex gap-[6px]", stacked ? "flex-col" : "h-[clamp(440px,38vw,500px)]")}
-          style={stacked ? undefined : { minWidth, transition: "min-width 400ms" }}
-        >
+      <div className="no-scrollbar overflow-x-auto rounded-[4px]">
+        <div className="flex h-[clamp(440px,38vw,500px)] gap-[6px]" style={{ minWidth, transition: "min-width 400ms" }}>
           {panels.map((panel, i) => {
             const open = isOpen(i);
             return (
@@ -92,11 +77,7 @@ export function ExpandingPanels({
                   "relative min-w-0 overflow-hidden bg-[var(--color-accent)] text-white",
                   open ? "cursor-default" : "cursor-pointer",
                 )}
-                style={
-                  stacked
-                    ? { flex: "none", height: open ? (heights[i] ?? OPEN_MIN) : BAR, transition: `height 600ms ${EASE}` }
-                    : { flex: open ? "1 1 0px" : `0 0 ${collapsedWidth}`, transition: `flex 600ms ${EASE}` }
-                }
+                style={{ flex: open ? "1 1 0px" : `0 0 ${collapsedWidth}`, transition: `flex 600ms ${EASE}` }}
               >
                 <Image
                   src={panel.image}
@@ -117,16 +98,10 @@ export function ExpandingPanels({
                 {/* Open state: optional top line */}
                 {panel.top ? (
                   <div
-                    ref={(el) => {
-                      topRefs.current[i] = el;
-                    }}
                     aria-hidden={!open}
-                    className={cn(
-                      "absolute top-0 left-0 box-border",
-                      stacked ? "px-5 pt-6" : "px-[clamp(24px,3vw,44px)] pt-[clamp(28px,3vw,44px)]",
-                    )}
+                    className="absolute top-0 left-0 box-border px-[clamp(24px,3vw,44px)] pt-[clamp(28px,3vw,44px)]"
                     style={{
-                      width: stacked ? "100%" : openContentWidth,
+                      width: openContentWidth,
                       opacity: open ? 1 : 0,
                       transition: `opacity 450ms ease ${open ? "220ms" : "0ms"}`,
                     }}
@@ -137,20 +112,10 @@ export function ExpandingPanels({
 
                 {/* Open state */}
                 <div
-                  ref={(el) => {
-                    contentRefs.current[i] = el;
-                  }}
                   aria-hidden={!open}
-                  className={cn(
-                    "absolute bottom-0 left-0 box-border flex flex-col",
-                    stacked
-                      ? // Phones: tighter padding and smaller type, so the open panel stays compact.
-                        // Long single words (e.g. "Produktionsoptimering") hyphenate instead of overflowing.
-                        "gap-2.5 px-5 py-6 [overflow-wrap:break-word] hyphens-auto [&_h3]:text-[24px] [&_h3]:leading-[1.15] [&_p]:text-[15px] [&_p]:leading-[1.5] [&_a]:px-4 [&_a]:py-2 [&_a]:text-[14px]"
-                      : "gap-[14px] px-[clamp(24px,3vw,44px)] py-[clamp(28px,3vw,44px)]",
-                  )}
+                  className="absolute bottom-0 left-0 box-border flex flex-col gap-[14px] px-[clamp(24px,3vw,44px)] py-[clamp(28px,3vw,44px)]"
                   style={{
-                    width: stacked ? "100%" : openContentWidth,
+                    width: openContentWidth,
                     opacity: open ? 1 : 0,
                     transform: open ? "translateY(0)" : "translateY(24px)",
                     pointerEvents: open ? "auto" : "none",
@@ -163,13 +128,9 @@ export function ExpandingPanels({
                 {/* Collapsed state */}
                 <div
                   aria-hidden={open}
-                  className={cn(
-                    "pointer-events-none absolute top-0 left-0 box-border flex px-4",
-                    // Stacked: number and title side by side in the bar.
-                    stacked ? "h-14 flex-row items-center gap-3" : "bottom-0 flex-col items-start justify-between py-6",
-                  )}
+                  className="pointer-events-none absolute top-0 bottom-0 left-0 box-border flex flex-col items-start justify-between px-4 py-6"
                   style={{
-                    width: stacked ? "100%" : collapsedWidth,
+                    width: collapsedWidth,
                     opacity: open ? 0 : 1,
                     transform: open ? "translateY(16px)" : "translateY(0)",
                     transition: `opacity 350ms ease ${open ? "0ms" : "260ms"}, transform 500ms ${EASE} ${open ? "0ms" : "260ms"}`,
@@ -187,6 +148,49 @@ export function ExpandingPanels({
           })}
         </div>
       </div>
+    </div>
+  );
+}
+
+/**
+ * Phones: one card per panel in a sideways scroll row, the next card peeking in.
+ * Every card shows its photo, top line and content. When the parent opens a
+ * panel (e.g. a journey stage is tapped), the row scrolls to it.
+ */
+function SwipeCards({ panels, isOpen }: { panels: ExpandingPanel[]; isOpen: (index: number) => boolean }) {
+  const rowRef = useRef<HTMLDivElement>(null);
+  const openIndex = panels.findIndex((_, i) => isOpen(i));
+  const first = useRef(true);
+  useEffect(() => {
+    // Not on first render: only follow later changes.
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    const row = rowRef.current;
+    const card = row?.children[openIndex] as HTMLElement | undefined;
+    if (row && card) row.scrollTo({ left: card.offsetLeft - row.offsetLeft - 20, behavior: "smooth" });
+  }, [openIndex]);
+
+  return (
+    <div
+      ref={rowRef}
+      className="no-scrollbar -mx-5 flex snap-x snap-mandatory scroll-px-5 gap-3 overflow-x-auto px-5"
+    >
+      {panels.map((panel) => (
+        <div
+          key={panel.key}
+          className="relative flex min-h-[380px] w-[84%] flex-none snap-start flex-col justify-between overflow-hidden rounded-[4px] bg-[var(--color-accent)] text-white"
+        >
+          <Image src={panel.image} alt={panel.alt} fill sizes="85vw" className="object-cover" />
+          <div aria-hidden className="absolute inset-0" style={{ background: "color-mix(in srgb, #003050 52%, transparent)" }} />
+          {panel.top ? <div className="relative px-5 pt-6">{panel.top}</div> : <span />}
+          {/* Compact type; long single words hyphenate instead of overflowing. */}
+          <div className="relative flex flex-col gap-2.5 px-5 pt-10 pb-6 [overflow-wrap:break-word] hyphens-auto [&_a]:px-4 [&_a]:py-2 [&_a]:text-[14px] [&_h3]:text-[24px] [&_h3]:leading-[1.15] [&_p]:text-[15px] [&_p]:leading-[1.5]">
+            {panel.content}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
