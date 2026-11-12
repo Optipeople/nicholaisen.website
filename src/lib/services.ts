@@ -67,3 +67,39 @@ export const servicePageFor = (track: TrackKey, index: number) =>
 /** Sub-page addressed by /services/<track-slug>/<slug>. */
 export const servicePageBySlugs = (trackSlug: string, slug: string) =>
   servicePages.find((p) => trackHref(p.track) === `/services/${trackSlug}` && p.slug === slug);
+
+/**
+ * Service sub-pages whose content comes from their MDX file (content/services)
+ * rather than the design's messages — the Project Solutions services. They keep
+ * their existing URLs and use the same template as the pages above.
+ */
+export type MdxServicePage = {
+  track: TrackKey;
+  /** Position in the track's service list. */
+  index: number;
+  /** URL segment after the track, e.g. "custom-production-lines". */
+  slug: string;
+  /** MDX slug, e.g. "project-solutions/custom-production-lines". */
+  mdxSlug: string;
+  /** Photo for the "What you get" block. */
+  image2: string;
+};
+
+export const mdxServicePages: MdxServicePage[] = [
+  { track: "projects", index: 0, slug: "custom-production-lines", mdxSlug: "project-solutions/custom-production-lines", image2: "/images/v3/robot-line.png" },
+  { track: "projects", index: 1, slug: "automation-integration", mdxSlug: "project-solutions/automation-integration", image2: "/images/v3/robot-sorting.png" },
+  { track: "projects", index: 2, slug: "turnkey-projects", mdxSlug: "project-solutions/turnkey-projects", image2: "/images/v3/complete-factory.png" },
+];
+
+export const mdxServiceHref = (p: MdxServicePage) => `${trackHref(p.track)}/${p.slug}`;
+
+export const mdxServicePageBySlugs = (trackSlug: string, slug: string) =>
+  mdxServicePages.find((p) => trackHref(p.track) === `/services/${trackSlug}` && p.slug === slug);
+
+/** Where a track's service card links: its sub-page if one exists. */
+export function subPageHref(track: TrackKey, index: number): string | undefined {
+  const page = servicePageFor(track, index);
+  if (page) return serviceHref(page);
+  const mdx = mdxServicePages.find((p) => p.track === track && p.index === index);
+  return mdx ? mdxServiceHref(mdx) : undefined;
+}

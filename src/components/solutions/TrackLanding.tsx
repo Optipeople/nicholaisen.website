@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import type { Track } from "@/lib/tracks";
-import { serviceHref, servicePageFor } from "@/lib/services";
+import { subPageHref } from "@/lib/services";
 import { TrackHero } from "@/components/solutions/TrackHero";
 import { TrackFinder } from "@/components/solutions/TrackFinder";
 import { ServiceCarousel } from "@/components/solutions/ServiceCarousel";
@@ -45,10 +45,7 @@ export async function TrackLanding({ track, locale }: { track: Track; locale: st
             image: track.services[i]?.image,
             digital: track.services[i]?.digital,
             // Services with a sub-page link to it; the rest fall back to contact, as in the design.
-            href: (() => {
-              const sub = servicePageFor(track.key, i);
-              return sub ? serviceHref(sub) : "/contact";
-            })(),
+            href: subPageHref(track.key, i) ?? "/contact",
           }))}
           labels={{
             contact: t("contactUs"),

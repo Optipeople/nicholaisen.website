@@ -24,8 +24,8 @@ import {
 import { buildMetadata } from "@/lib/seo";
 import { trackBySlug, tracks } from "@/lib/tracks";
 import { TrackLanding } from "@/components/solutions/TrackLanding";
-import { ServiceDetail } from "@/components/solutions/ServiceDetail";
-import { serviceHref, servicePageBySlugs, servicePages } from "@/lib/services";
+import { MdxServiceDetail, ServiceDetail } from "@/components/solutions/ServiceDetail";
+import { mdxServicePageBySlugs, serviceHref, servicePageBySlugs, servicePages } from "@/lib/services";
 
 type Params = { slug: string[]; locale: string };
 
@@ -47,6 +47,10 @@ const trackFor = (slug: string[]) => (slug.length === 1 && slug[0] ? trackBySlug
 /** Two segments naming a design service sub-page render the shared service template. */
 const servicePageFor = (slug: string[]) =>
   slug.length === 2 && slug[0] && slug[1] ? servicePageBySlugs(slug[0], slug[1]) : undefined;
+
+/** Project Solutions sub-pages: their MDX content in the same service template. */
+const mdxPageFor = (slug: string[]) =>
+  slug.length === 2 && slug[0] && slug[1] ? mdxServicePageBySlugs(slug[0], slug[1]) : undefined;
 
 export async function generateMetadata({
   params,
@@ -98,6 +102,11 @@ export default async function ServicePage({
   if (track) return <TrackLanding track={track} locale={locale} />;
   const servicePage = servicePageFor(slug);
   if (servicePage) return <ServiceDetail page={servicePage} />;
+  const mdxPage = mdxPageFor(slug);
+  if (mdxPage) {
+    const view = await MdxServiceDetail({ page: mdxPage, locale });
+    if (view) return view;
+  }
   const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const fullSlug = slug.join("/");
   const [t, tc] = await Promise.all([
