@@ -40,7 +40,7 @@
       "customProductionLines": { "title": "Kohandatud tootmisliinid", "description": "Ehitatud teie äri-eesmärkide jaoks." },
       "automationIntegration": { "title": "Automatiseerimine ja integreerimine", "description": "Ühendage ja laiendage tegevust." },
       "turnkeyProjects": { "title": "Terviklahendused", "description": "Ideest teostuseni." },
-      "digitalPerformance": { "title": "Digital Performance", "description": "Opti — reaalajas ülevaade tootmispõrandalt." },
+      "digitalPerformance": { "title": "Digitaalne jõudlus", "description": "Opti — reaalajas ülevaade tootmispõrandalt." },
       "productionInsights": { "title": "Tootmisülevaated", "description": "Reaalajas jõudluse nähtavus." },
       "predictiveMaintenance": { "title": "Ennustav hooldus", "description": "Hoidke seisakuid ära enne nende tekkimist." },
       "continuousOptimization": { "title": "Pidev optimeerimine", "description": "Parandage jõudlust aja jooksul." },
@@ -219,7 +219,7 @@
           "cta": "Räägi meiega"
         },
         "digital": {
-          "title": "Digital Performance",
+          "title": "Digitaalne jõudlus",
           "subtitle": "Tootmisülevaated, AI ja optimeerimine",
           "lede": "Tootmisülevaated, AI ja optimeerimine. Platvorm annab andmed — meie anname tulemused.",
           "cta": "Kaardista oma masin"
@@ -414,7 +414,7 @@
         "businessDevelopment": "Äri arendus",
         "productionOptimization": "Tootmise optimeerimine",
         "projectSolutions": "Projektilahendused",
-        "digitalPerformance": "Digital Performance",
+        "digitalPerformance": "Digitaalne jõudlus",
         "partnership": "Partnerlus",
         "other": "Midagi muud"
       },
@@ -431,7 +431,7 @@
         "optimization": "Tootmise optimeerimine",
         "machines": "Masinad",
         "projects": "Projektilahendused",
-        "digital": "Digital Performance",
+        "digital": "Digitaalne jõudlus",
         "service": "Hooldus ja varuosad",
         "other": "Midagi muud"
       }
@@ -769,7 +769,7 @@
         }
       },
       "digital": {
-        "switcherLabel": "Digital\nPerformance",
+        "switcherLabel": "Digitaalne\njõudlus",
         "question": "Mida soovite, et teie masinaandmed teie heaks teeksid?",
         "proof": "Tehnikud, kes näevad masina andmeid enne kohale jõudmist. Varuosad laos komponentide seisukorra järgi, kokkulepitud hinnaga.",
         "finder": {
