@@ -12,7 +12,7 @@ export const redirects: Redirect[] = [
   { source: "/services/optimization", destination: "/services/production-optimization", permanent: true },
   { source: "/services/optimering", destination: "/services/production-optimization", permanent: true },
   { source: "/services/projekter", destination: "/services/project-solutions", permanent: true },
-  { source: "/services/maskiner", destination: "/services/project-solutions", permanent: true },
+  { source: "/services/maskiner", destination: "/services/machines", permanent: true },
   { source: "/news", destination: "/insights", permanent: true },
   { source: "/news/:slug", destination: "/insights/:slug", permanent: true },
   { source: "/blog", destination: "/insights", permanent: true },

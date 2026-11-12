@@ -509,5 +509,390 @@
       "title": "Sīkdatņu politika",
       "description": "Kā Nicholaisen izmanto sīkdatnes šajā vietnē."
     }
+  },
+  "solutions": {
+    "switcherLabel": "Risinājumu virzieni",
+    "whatWeDo": "Ko mēs darām",
+    "contactUs": "Sazināties",
+    "learnMore": "Uzzināt vairāk",
+    "digitalizedBadge": "DIGITALIZĒTS",
+    "previous": "Iepriekšējais",
+    "next": "Nākamais",
+    "page": "Lapa",
+    "relatedCases": "Saistītie stāsti",
+    "tracks": {
+      "business": {
+        "switcherLabel": "Biznesa\nattīstība",
+        "question": "Kur vajadzētu novirzīt jūsu nākamo ieguldījumu?",
+        "proof": "Lielākā daļa ieguldījumu tiek izlemti pēc iegādes cenas. Mēs tos izlemjam pēc tā, cik iekārta izmaksā visā tās kalpošanas laikā.",
+        "finder": {
+          "label1": "Jūsu mērķis",
+          "options1": [
+            "Palielināt jaudu",
+            "Plānot ieguldījumu",
+            "Uzbūvēt jaunu rūpnīcu",
+            "Izvēlēties pareizos piegādātājus",
+            "Cits"
+          ],
+          "label2": "Laika grafiks",
+          "options2": [
+            "6 mēnešu laikā",
+            "6–12 mēneši",
+            "1–2 gadi",
+            "Tikai interesējos",
+            "Cits"
+          ]
+        },
+        "services": [
+          {
+            "title": "Ieguldījumu aprēķini",
+            "copy": "Vienas lapas TCO jūsu pēdējai vai nākamajai iekārtai. Atzīmējam, kas ir izmērīts, novērtēts — un kas izlaists."
+          },
+          {
+            "title": "Jaudas un izaugsmes plāni",
+            "copy": "Kur plūsma šodien apstājas un kas nepieciešams, lai palielinātu ražošanu, nepalielinot izmaksas."
+          },
+          {
+            "title": "Rūpnīcas izkārtojums un plūsma",
+            "copy": "No vienas šūnas līdz jaunai rūpnīcai tukšā vietā, plānots ap zemāko vienības cenu."
+          },
+          {
+            "title": "Iepirkumu stratēģija",
+            "copy": "Brīva piegādātāja izvēle katram uzdevumam — mēs atbildam par kopējo rezultātu."
+          }
+        ],
+        "statement": {
+          "kicker": "Izlemts pēc jūsu skaitļiem",
+          "title": "Ieguldījumi, kas atmaksājas ātrāk",
+          "body": "Lielākā daļa ieguldījumu tiek izlemti pēc iegādes cenas. Mēs tos izlemjam pēc tā, cik iekārta izmaksā visā tās kalpošanas laikā.",
+          "note": "Mēs mērām, sagatavojam vienas lapas TCO un reaģējam, kad efektivitāte krītas.",
+          "figure": "2–4 g.",
+          "figureTitle": "Tipisks atmaksāšanās laiks",
+          "figureText": "Klasisko 8–12 gadu vietā."
+        }
+      },
+      "optimization": {
+        "switcherLabel": "Ražošanas\noptimizācija",
+        "question": "Ko jūs vēlētos uzlabot savā ražošanā?",
+        "proof": "Atsūtiet mums savu palīgmateriālu un rezerves daļu sarakstu. Jūs saņemsiet salīdzinājumu, kas balstīts uz jūsu pašu skaitļiem.",
+        "finder": {
+          "label1": "Ko uzlabot",
+          "options1": [
+            "Jauda un izlaide",
+            "Efektivitāte (OEE)",
+            "Ekspluatācijas un palīgmateriālu izmaksas",
+            "Šaurās vietas un plūsma",
+            "Kvalitāte un pārstrāde",
+            "Cits"
+          ],
+          "label2": "Materiāls",
+          "options2": [
+            "Masīvkoks",
+            "Plātnes un mēbeles",
+            "Durvis un logi",
+            "Cits"
+          ]
+        },
+        "services": [
+          {
+            "title": "Plūsmas un šauro vietu analīze",
+            "copy": "Izmērīts uz līnijas, lai jūs zinātu, vai samazināt izmaksas vai novērst šauro vietu."
+          },
+          {
+            "title": "Palīgmateriālu salīdzinājums",
+            "copy": "Cena un kvalitāte, pozīciju pa pozīcijai. Parasti ietaupījums 10–15 % uz palīgmateriāliem."
+          },
+          {
+            "title": "Rezerves daļu plāns",
+            "copy": "Kritiskie komponenti apzināti, ar zaudēto stundu cenu."
+          },
+          {
+            "title": "Laika pētījumi",
+            "copy": "Kur paiet operatoru laiks — un cik vērts ir to atgūt."
+          }
+        ]
+      },
+      "machines": {
+        "switcherLabel": "Iekārtas",
+        "question": "Pareizā iekārta — veidota ap jūsu produktu.",
+        "proof": "Standarta iekārtas, speciālās iekārtas un modernizācija — katra izvēlēta pēc tā, cik izmaksā tās turēšana, nevis iegāde.",
+        "finder": {
+          "label1": "Iekārtas veids",
+          "options1": [
+            "CNC frēze",
+            "Malu līmēšanas iekārta",
+            "Urbšana",
+            "Zāģi",
+            "Slīpēšana",
+            "Robotu šūna",
+            "Cits"
+          ],
+          "label2": "Kas jums nepieciešams",
+          "options2": [
+            "Jauna iekārta",
+            "Modernizācija",
+            "Nomaiņa",
+            "Cits"
+          ]
+        },
+        "services": [
+          {
+            "title": "Standarta iekārtas",
+            "copy": "CNC, caurplūdes urbšana un frēzēšana, malu līmēšana — izvēlētas pēc TCO, nevis cenrāža."
+          },
+          {
+            "title": "Speciālās iekārtas",
+            "copy": "Veidotas jūsu produktam un procesam, ja standarta risinājums neder."
+          },
+          {
+            "title": "Modernizācija",
+            "copy": "Vairāk jaudas no iekārtām, kas jums jau pieder."
+          },
+          {
+            "title": "Pieslēgta no pirmās dienas",
+            "copy": "OptiCloud katrā jaunā iekārtā, ar jūsu pašu bāzes līmeni visam kalpošanas laikam."
+          }
+        ],
+        "statement": {
+          "kicker": "Pieslēgta no pirmās dienas",
+          "title": "Katra mūsu piegādātā iekārta ir pieslēgta",
+          "body": "OptiCloud darbojas katrā jaunā iekārtā no pirmās maiņas, ar jūsu pašu bāzes līmeni visam kalpošanas laikam.",
+          "note": "Darba stundas, dīkstāves un izlaide tiek reģistrētas automātiski, lai mēs varētu reaģēt, pirms efektivitāte krītas.",
+          "figure": "1. diena",
+          "figureTitle": "OptiCloud iekļauts",
+          "figureText": "Dati no katras jaunās iekārtas no pirmās darba dienas."
+        }
+      },
+      "projects": {
+        "switcherLabel": "Projektu\nrisinājumi",
+        "question": "Kādu projektu jūs plānojat?",
+        "proof": "Brīva piegādātāja izvēle katram uzdevumam un uz vērtību vērsts process saīsina atmaksāšanās laiku.",
+        "finder": {
+          "label1": "Projekta veids",
+          "options1": [
+            "Esošas līnijas automatizācija",
+            "Iekārta + robotu šūna",
+            "Jauna ražošanas līnija",
+            "Pilnīgi jauna rūpnīca",
+            "Cits"
+          ],
+          "label2": "Laika grafiks",
+          "options2": [
+            "6 mēnešu laikā",
+            "6–12 mēneši",
+            "1–2 gadi",
+            "Tikai interesējos",
+            "Cits"
+          ]
+        },
+        "services": [
+          {
+            "title": "Ražošanas līnijas",
+            "copy": "Iekārtas, pārvietošana un programmatūra, plānotas kā viena plūsma."
+          },
+          {
+            "title": "Automatizācija, kad tā atmaksājas",
+            "copy": "Robotu šūnas un pārvietošana, pievienotas, kad to rāda skaitļi."
+          },
+          {
+            "title": "Projektu vadība",
+            "copy": "No analīzes un iepirkuma līdz uzstādīšanai, palaišanai un turpmākai uzraudzībai."
+          }
+        ],
+        "statement": {
+          "kicker": "Viens atbildīgs partneris",
+          "title": "Viens līgums, viens kontakts, viens rezultāts",
+          "body": "Mēs plānojam, iepērkam un uzstādām visu līniju un atbildam, lai viss darbotos kopā.",
+          "note": "Brīva piegādātāja izvēle katram uzdevumam un uz vērtību vērsts process saīsina atmaksāšanās laiku.",
+          "figure": "1",
+          "figureTitle": "Partneris no sākuma līdz beigām",
+          "figureText": "No analīzes un iepirkuma līdz palaišanai un turpmākai uzraudzībai."
+        }
+      },
+      "digital": {
+        "switcherLabel": "Digital\nPerformance",
+        "question": "Ko jūs vēlaties, lai jūsu iekārtu dati darītu jūsu labā?",
+        "proof": "Tehniķi, kas redz iekārtas datus pirms ierašanās. Rezerves daļas noliktavā pēc komponentu stāvokļa, par saskaņotu cenu.",
+        "finder": {
+          "label1": "Jūsu mērķis",
+          "options1": [
+            "Redzēt ražošanas statusu reāllaikā",
+            "Atrast dīkstāvju cēloņus",
+            "Prognozēt apkopi un daļas",
+            "Optimizēt ar MI",
+            "Saglabāt servisu pēc garantijas",
+            "Cits"
+          ],
+          "label2": "Iekārtas ekspluatācijā",
+          "options2": [
+            "1–5",
+            "6–20",
+            "Vairāk nekā 20",
+            "Cits"
+          ]
+        },
+        "services": [
+          {
+            "title": "OptiCloud",
+            "copy": "Darba stundas, komponentu stāvoklis un efektivitāte katrai iekārtai."
+          },
+          {
+            "title": "Agrīna brīdināšana",
+            "copy": "Mēs reaģējam, kad efektivitāte sāk kristies — pirms tā kļūst par dīkstāvi."
+          },
+          {
+            "title": "Maz atgriezumu",
+            "copy": "Optimizācijas programmatūra katrā iekārtā."
+          },
+          {
+            "title": "MI asistents",
+            "copy": "Palīdz operatoriem un tehniķiem ātri novērst kļūmes. Jebkurā valodā, nolasot skaļi."
+          }
+        ],
+        "statement": {
+          "kicker": "Serviss, kas redz uz priekšu",
+          "title": "Veiktspēja, kas ilgst ilgāk par garantiju",
+          "body": "Tehniķi, kas redz iekārtas datus pirms ierašanās. Rezerves daļas noliktavā pēc komponentu stāvokļa, par saskaņotu cenu.",
+          "note": "Pēc trešā gada dati un serviss turpinās saskaņā ar servisa līgumu.",
+          "figure": "4. g.+",
+          "figureTitle": "Turpināts serviss",
+          "figureText": "Saskaņā ar servisa līgumu, ar datiem no katras iekārtas."
+        }
+      }
+    },
+    "machinery": {
+      "title": "Iekārtas, ko piegādājam",
+      "intro": "No vienas iekārtas līdz pilnībā automatizētai šūnai.",
+      "items": {
+        "panelSaws": {
+          "title": "Plātņu zāģi",
+          "description": "Precīza griešana ar mazāk atgriezumu"
+        },
+        "edgebanders": {
+          "title": "Malu līmēšanas iekārtas",
+          "description": "Tīras malas lielākā padeves ātrumā"
+        },
+        "nesting": {
+          "title": "Nesting",
+          "description": "Optimizēta plātņu izmantošana un plūsma"
+        },
+        "cnc": {
+          "title": "CNC apstrāde",
+          "description": "Elastīga sarežģītu detaļu apstrāde"
+        },
+        "drilling": {
+          "title": "6 pušu urbšana",
+          "description": "Visas puses, viena caureja, bez pārstiprināšanas"
+        },
+        "moulding": {
+          "title": "Profilu frēzēšana",
+          "description": "Vienmērīgi profili lielos apjomos"
+        },
+        "sanding": {
+          "title": "Slīpēšana",
+          "description": "Vienmērīga apdare, mazāk pārstrādes"
+        },
+        "framePresses": {
+          "title": "Rāmju preses",
+          "description": "Taisnleņķa, stipra rāmju salikšana"
+        },
+        "packaging": {
+          "title": "Iepakošana",
+          "description": "Ātrāka un drošāka nosūtīšana"
+        },
+        "cobots": {
+          "title": "Koboti",
+          "description": "Automatizācija līdzās jūsu operatoriem"
+        },
+        "robots": {
+          "title": "Industriālie roboti",
+          "description": "Pārvietošana un padeve visu diennakti"
+        },
+        "palletizing": {
+          "title": "Paletizēšana",
+          "description": "Kraušana līnijas galā bez celšanas"
+        }
+      },
+      "payback": {
+        "kicker": "Ko mēs darām",
+        "title": "Iekārta, kas atmaksājas visātrāk",
+        "body": "Mēs varam piegādāt visu lielāko ražotāju iekārtas. Mūsu uzdevums ir atrast to, kas padara jūsu ražošanu visefektīvāko — un pēc iespējas ātrāk atpelna jūsu ieguldījumu.",
+        "note": "Mēs ieviešam modernas tehnoloģijas, uzstādām tās jūsu cehā un paliekam, līdz tās darbojas atbilstoši specifikācijai.",
+        "figure": "2–4 g.",
+        "figureTitle": "Tipisks atmaksāšanās laiks",
+        "figureText": "Mēs piedāvājam risinājumus, kas atpelna jūsu ieguldījumu divos līdz četros gados — aprēķināts pēc jūsu pašu skaitļiem."
+      },
+      "delivery": {
+        "title": "Kā mēs piegādājam",
+        "steps": [
+          {
+            "title": "Analīze",
+            "text": "Mēs izmērām jūsu pašreizējo ražošanu — jaudu, atgriezumus, pārregulēšanu un dīkstāves."
+          },
+          {
+            "title": "Ieteikums",
+            "text": "Vienas lapas TCO, kas salīdzina iespējas, ar atmaksāšanās laiku gados."
+          },
+          {
+            "title": "Uzstādīšana",
+            "text": "Mēs uzstādām iekārtu jūsu cehā un pieslēdzam to no pirmās dienas."
+          },
+          {
+            "title": "Apmācība",
+            "text": "Jūsu operatori apgūst iekārtu uz jūsu pašu detaļām."
+          },
+          {
+            "title": "Uzraudzība",
+            "text": "Serviss, rezerves daļas un modernizācija, kad efektivitāte sāk kristies."
+          }
+        ]
+      }
+    },
+    "offers": {
+      "title": "Izmērīts, nevis novērtēts",
+      "intro": "Lielākā daļa ražotāju joprojām vadās pēc standarta izmaksām un intuīcijas. Sāciet ar saviem skaitļiem.",
+      "items": {
+        "investment": {
+          "title": "Jūsu nākamais ieguldījums",
+          "description": "Vienas lapas TCO pēc jūsu pašu skaitļiem",
+          "cta": "Rezervēt TCO pārskatu"
+        },
+        "runningCost": {
+          "title": "Jūsu ekspluatācijas izmaksas",
+          "description": "Parasti ietaupījums 10–15 % uz palīgmateriāliem",
+          "cta": "Atsūtiet savu sarakstu"
+        },
+        "criticalMachine": {
+          "title": "Jūsu kritiskā iekārta",
+          "description": "Rezerves daļu plāns un zaudēto stundu cena",
+          "cta": "Kartējiet savu iekārtu"
+        }
+      }
+    },
+    "digitalized": {
+      "kicker": "Digitalizēti risinājumi",
+      "title": "Dati, kas uztur jūsu līnijas veiktspēju",
+      "intro": "OptiCloud no pirmās dienas un Opti AI papildus. Serviss, rezerves daļas un ietaupījumi balstās uz jūsu iekārtas datiem — izmērīts, nevis novērtēts.",
+      "rows": [
+        {
+          "when": "1. diena",
+          "lead": "Pieslēgta.",
+          "text": "OptiCloud uzstādīts katrā jaunā iekārtā."
+        },
+        {
+          "when": "1.–3. gads",
+          "lead": "Bāzes līmenis garantijas laikā.",
+          "text": "Jūsu pašu bāzes līmenis visam iekārtas kalpošanas laikam."
+        },
+        {
+          "when": "4. g.+",
+          "lead": "Servisa līgums.",
+          "text": "Mēs reaģējam, kad efektivitāte sāk kristies."
+        }
+      ],
+      "contact": "Sazināties",
+      "about": "Par OptiCloud",
+      "imageAlt": "Tehniķis apkalpo pieslēgtu iekārtu"
+    }
   }
 }

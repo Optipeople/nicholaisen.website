@@ -2,8 +2,11 @@
 
 import { useRef, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import { solutions, companyItems } from "@/lib/nav";
+import { companyItems } from "@/lib/nav";
+import { tracks } from "@/lib/tracks";
 
 const ChevronDown = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -20,6 +23,11 @@ const ArrowRight = () => (
 export function MegaNav({ transparent = false }: { transparent?: boolean }) {
   const ink = transparent ? "#fff" : "var(--color-text)";
   const [value, setValue] = useState("");
+  const tt = useTranslations("home.tracks.items");
+  const te = useTranslations("home.entry");
+  const pathname = usePathname();
+  // Underline "Solutions" while on a track page, as in the design.
+  const onTrack = tracks.some((t) => pathname === t.href || pathname.endsWith(t.href));
   const triggers = useRef<Record<string, HTMLButtonElement | null>>({});
   // Open each dropdown under its own trigger, 16px to the left (as in the design).
   const menuLeft = (triggers.current[value]?.offsetLeft ?? 0) - 16;
@@ -34,7 +42,7 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
     fontSize: "16px",
     lineHeight: 1.55,
     padding: "8px 0",
-    borderBottom: `2px solid ${value === key ? "var(--color-spot)" : "transparent"}`,
+    borderBottom: `2px solid ${value === key || (key === "solutions" && onTrack) ? "var(--color-spot)" : "transparent"}`,
   });
 
   return (
@@ -67,10 +75,10 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
             }}
           >
             <p style={{ margin: 0, fontSize: "13px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-500)" }}>
-              Find a service
+              {te("findService")}
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "0 40px" }}>
-              {solutions.map((s) => (
+              {tracks.map((s) => (
                 <NavigationMenu.Link key={s.href} asChild>
                   <Link
                     href={s.href as "/"}
@@ -86,8 +94,8 @@ export function MegaNav({ transparent = false }: { transparent?: boolean }) {
                     }}
                   >
                     <span style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                      <strong style={{ fontSize: "18px", fontWeight: 600 }}>{s.title}</strong>
-                      <span style={{ fontSize: "15px", color: "var(--color-accent-500)" }}>{s.description}</span>
+                      <strong style={{ fontSize: "18px", fontWeight: 600 }}>{tt(`${s.key}.title`)}</strong>
+                      <span style={{ fontSize: "15px", color: "var(--color-accent-500)" }}>{tt(`${s.key}.subtitle`)}</span>
                     </span>
                     <ArrowRight />
                   </Link>

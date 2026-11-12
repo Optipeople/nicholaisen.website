@@ -6,7 +6,23 @@ export const metadata: Metadata = {
   description: "Schedule a call, ask a question, or find your direct contact. We reply within one business day.",
 };
 
-export default async function ContactPage() {
+/** Track keys the solution pages send as `?topic=` → the matching option below. */
+const topicOptions: Record<string, string> = {
+  business: "Business Development",
+  optimization: "Production Optimization",
+  machines: "Machines",
+  projects: "Project Solutions",
+  digital: "Digital Performance",
+};
+
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ topic?: string; message?: string }>;
+}) {
+  const { topic, message } = await searchParams;
+  const defaultTopic = (topic && topicOptions[topic]) || "Choose a topic";
+  const defaultMessage = typeof message === "string" ? message.slice(0, 2000) : "";
   return (
     <main style={{ background: "var(--color-accent)", color: "#fff" }}>
       {/* Hero + form */}
@@ -201,6 +217,7 @@ export default async function ContactPage() {
                 I&apos;m interested in
                 <select
                   name="topic"
+                  defaultValue={defaultTopic}
                   style={{
                     font: "inherit",
                     fontSize: "16px",
@@ -231,6 +248,7 @@ export default async function ContactPage() {
                 What are you trying to make better?
                 <textarea
                   name="message"
+                  defaultValue={defaultMessage}
                   rows={6}
                   placeholder="A few sentences is plenty."
                   style={{

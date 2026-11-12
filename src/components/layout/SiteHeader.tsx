@@ -16,12 +16,13 @@ export function SiteHeader({ locale }: { locale: string }) {
   return (
     <header
       style={{
-        position: transparent ? "absolute" : "sticky",
+        // Inner pages: solid white bar that scrolls with the page (design v3).
+        position: transparent ? "absolute" : "relative",
         top: 0,
         left: transparent ? 0 : undefined,
         right: transparent ? 0 : undefined,
         zIndex: 40,
-        background: transparent ? "transparent" : "var(--color-offwhite)",
+        background: transparent ? "transparent" : "#fff",
         borderBottom: transparent ? "none" : "1px solid var(--color-divider)",
         color: transparent ? "#fff" : "var(--color-text)",
       }}
@@ -39,7 +40,7 @@ export function SiteHeader({ locale }: { locale: string }) {
             width={472}
             height={190}
             priority
-            style={{ height: transparent ? "48px" : "32px", width: "auto", display: "block" }}
+            style={{ height: "48px", width: "auto", display: "block" }}
           />
         </Link>
 
@@ -55,7 +56,7 @@ export function SiteHeader({ locale }: { locale: string }) {
               display: "inline-flex",
               alignItems: "center",
               padding: "11px 20px",
-              background: transparent ? "#fff" : "var(--color-spot)",
+              background: transparent ? "#fff" : "var(--color-accent)",
               color: transparent ? "var(--color-accent)" : "#fff",
               borderRadius: "4px",
               fontSize: "15px",

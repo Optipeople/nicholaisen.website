@@ -509,5 +509,390 @@
       "title": "Slapukų politika",
       "description": "Kaip Nicholaisen naudoja slapukus šioje svetainėje."
     }
+  },
+  "solutions": {
+    "switcherLabel": "Sprendimų kryptys",
+    "whatWeDo": "Ką darome",
+    "contactUs": "Susisiekite",
+    "learnMore": "Sužinoti daugiau",
+    "digitalizedBadge": "SKAITMENIZUOTA",
+    "previous": "Ankstesnis",
+    "next": "Kitas",
+    "page": "Puslapis",
+    "relatedCases": "Susiję atvejai",
+    "tracks": {
+      "business": {
+        "switcherLabel": "Verslo\nplėtra",
+        "question": "Kur turėtų būti nukreipta jūsų kita investicija?",
+        "proof": "Dauguma investicijų sprendžiamos pagal pirkimo kainą. Mes jas sprendžiame pagal tai, kiek staklės kainuoja per visą jų eksploatacijos laiką.",
+        "finder": {
+          "label1": "Jūsų tikslas",
+          "options1": [
+            "Padidinti pajėgumą",
+            "Suplanuoti investiciją",
+            "Pastatyti naują gamyklą",
+            "Pasirinkti tinkamus tiekėjus",
+            "Kita"
+          ],
+          "label2": "Terminas",
+          "options2": [
+            "Per 6 mėnesius",
+            "6–12 mėnesių",
+            "1–2 metai",
+            "Tik domiuosi",
+            "Kita"
+          ]
+        },
+        "services": [
+          {
+            "title": "Investicijų skaičiavimai",
+            "copy": "Vieno puslapio TCO jūsų paskutinėms ar kitoms staklėms. Pažymime, kas išmatuota, įvertinta — ir kas neįtraukta."
+          },
+          {
+            "title": "Pajėgumo ir augimo planai",
+            "copy": "Kur šiandien stringa srautas ir ko reikia, kad gamyba augtų nedidinant sąnaudų."
+          },
+          {
+            "title": "Gamyklos išdėstymas ir srautas",
+            "copy": "Nuo vienos celės iki naujos gamyklos tuščiame sklype, suplanuota pagal mažiausią vieneto kainą."
+          },
+          {
+            "title": "Tiekimo strategija",
+            "copy": "Laisvas tiekėjo pasirinkimas kiekvienai užduočiai — mes atsakome už bendrą rezultatą."
+          }
+        ],
+        "statement": {
+          "kicker": "Sprendžiama pagal jūsų skaičius",
+          "title": "Investicijos, kurios atsiperka greičiau",
+          "body": "Dauguma investicijų sprendžiamos pagal pirkimo kainą. Mes jas sprendžiame pagal tai, kiek staklės kainuoja per visą jų eksploatacijos laiką.",
+          "note": "Matuojame, parengiame vieno puslapio TCO ir reaguojame, kai efektyvumas krenta.",
+          "figure": "2–4 m.",
+          "figureTitle": "Įprastas atsipirkimo laikas",
+          "figureText": "Vietoj klasikinių 8–12 metų."
+        }
+      },
+      "optimization": {
+        "switcherLabel": "Gamybos\noptimizavimas",
+        "question": "Ką norėtumėte pagerinti savo gamyboje?",
+        "proof": "Atsiųskite mums eksploatacinių medžiagų ir atsarginių dalių sąrašą. Gausite palyginimą pagal savo pačių skaičius.",
+        "finder": {
+          "label1": "Ką gerinti",
+          "options1": [
+            "Pajėgumas ir gamyba",
+            "Efektyvumas (OEE)",
+            "Eksploatacijos ir medžiagų sąnaudos",
+            "Kliūtys ir srautas",
+            "Kokybė ir perdirbimas",
+            "Kita"
+          ],
+          "label2": "Medžiaga",
+          "options2": [
+            "Medžio masyvas",
+            "Plokštės ir baldai",
+            "Durys ir langai",
+            "Kita"
+          ]
+        },
+        "services": [
+          {
+            "title": "Srauto ir kliūčių analizė",
+            "copy": "Išmatuota linijoje, kad žinotumėte, ar mažinti sąnaudas, ar pašalinti kliūtį."
+          },
+          {
+            "title": "Eksploatacinių medžiagų palyginimas",
+            "copy": "Kaina ir kokybė, prekė po prekės. Paprastai sutaupoma 10–15 % eksploatacinių medžiagų išlaidų."
+          },
+          {
+            "title": "Atsarginių dalių planas",
+            "copy": "Kritiniai komponentai sužymėti, su prarastų valandų kaina."
+          },
+          {
+            "title": "Laiko tyrimai",
+            "copy": "Kur dingsta operatorių laikas — ir kiek verta jį susigrąžinti."
+          }
+        ]
+      },
+      "machines": {
+        "switcherLabel": "Staklės",
+        "question": "Tinkamos staklės — sukurtos pagal jūsų produktą.",
+        "proof": "Standartinės staklės, specialios staklės ir modernizavimas — kiekvienos parinktos pagal tai, kiek kainuoja jas valdyti, o ne nusipirkti.",
+        "finder": {
+          "label1": "Staklių tipas",
+          "options1": [
+            "CNC frezavimo staklės",
+            "Kraštų klijavimo staklės",
+            "Gręžimas",
+            "Pjūklai",
+            "Šlifavimas",
+            "Robotų celė",
+            "Kita"
+          ],
+          "label2": "Ko jums reikia",
+          "options2": [
+            "Naujos staklės",
+            "Modernizavimas",
+            "Pakeitimas",
+            "Kita"
+          ]
+        },
+        "services": [
+          {
+            "title": "Standartinės staklės",
+            "copy": "CNC, pratekamasis gręžimas ir frezavimas, kraštų klijavimas — parinkta pagal TCO, o ne kainoraštį."
+          },
+          {
+            "title": "Specialios staklės",
+            "copy": "Sukurtos jūsų produktui ir procesui, kai standartinės netinka."
+          },
+          {
+            "title": "Modernizavimas",
+            "copy": "Daugiau pajėgumo iš jau turimų staklių."
+          },
+          {
+            "title": "Prijungtos nuo pirmos dienos",
+            "copy": "OptiCloud kiekvienose naujose staklėse, su jūsų pačių baziniu lygiu visam eksploatacijos laikui."
+          }
+        ],
+        "statement": {
+          "kicker": "Prijungtos nuo pirmos dienos",
+          "title": "Visos mūsų tiekiamos staklės yra prijungtos",
+          "body": "OptiCloud veikia kiekvienose naujose staklėse nuo pirmos pamainos, su jūsų pačių baziniu lygiu visam eksploatacijos laikui.",
+          "note": "Darbo valandos, prastovos ir gamyba registruojamos automatiškai, todėl galime reaguoti, kol efektyvumas dar nesumažėjo.",
+          "figure": "1 diena",
+          "figureTitle": "OptiCloud įtraukta",
+          "figureText": "Duomenys iš kiekvienų naujų staklių nuo pirmos jų darbo dienos."
+        }
+      },
+      "projects": {
+        "switcherLabel": "Projektų\nsprendimai",
+        "question": "Kokį projektą planuojate?",
+        "proof": "Laisvas tiekėjo pasirinkimas kiekvienai užduočiai ir į vertę orientuotas procesas sutrumpina atsipirkimo laiką.",
+        "finder": {
+          "label1": "Projekto tipas",
+          "options1": [
+            "Esamos linijos automatizavimas",
+            "Staklės + robotų celė",
+            "Nauja gamybos linija",
+            "Visiškai nauja gamykla",
+            "Kita"
+          ],
+          "label2": "Terminas",
+          "options2": [
+            "Per 6 mėnesius",
+            "6–12 mėnesių",
+            "1–2 metai",
+            "Tik domiuosi",
+            "Kita"
+          ]
+        },
+        "services": [
+          {
+            "title": "Gamybos linijos",
+            "copy": "Staklės, krovimas ir programinė įranga, suplanuoti kaip vienas srautas."
+          },
+          {
+            "title": "Automatizavimas, kai jis apsimoka",
+            "copy": "Robotų celės ir krovimas, pridedami tada, kai to reikalauja skaičiai."
+          },
+          {
+            "title": "Projektų valdymas",
+            "copy": "Nuo analizės ir tiekimo iki montavimo, paleidimo ir tolesnės priežiūros."
+          }
+        ],
+        "statement": {
+          "kicker": "Vienas atsakingas partneris",
+          "title": "Viena sutartis, vienas kontaktas, vienas rezultatas",
+          "body": "Suplanuojame, nuperkame ir sumontuojame visą liniją bei atsakome, kad viskas veiktų kartu.",
+          "note": "Laisvas tiekėjo pasirinkimas kiekvienai užduočiai ir į vertę orientuotas procesas sutrumpina atsipirkimo laiką.",
+          "figure": "1",
+          "figureTitle": "Partneris nuo pradžios iki galo",
+          "figureText": "Nuo analizės ir tiekimo iki paleidimo ir tolesnės priežiūros."
+        }
+      },
+      "digital": {
+        "switcherLabel": "Digital\nPerformance",
+        "question": "Ką norite, kad jūsų staklių duomenys darytų jums?",
+        "proof": "Technikai, kurie mato staklių duomenis prieš atvykdami. Atsarginės dalys laikomos sandėlyje pagal komponentų būklę, už sutartą kainą.",
+        "finder": {
+          "label1": "Jūsų tikslas",
+          "options1": [
+            "Matyti gamybos būseną realiu laiku",
+            "Rasti prastovų priežastis",
+            "Prognozuoti priežiūrą ir dalis",
+            "Optimizuoti su DI",
+            "Išlaikyti priežiūrą po garantijos",
+            "Kita"
+          ],
+          "label2": "Veikiančios staklės",
+          "options2": [
+            "1–5",
+            "6–20",
+            "Daugiau nei 20",
+            "Kita"
+          ]
+        },
+        "services": [
+          {
+            "title": "OptiCloud",
+            "copy": "Darbo valandos, komponentų būklė ir efektyvumas — kiekvienoms staklėms."
+          },
+          {
+            "title": "Ankstyvas įspėjimas",
+            "copy": "Reaguojame, kai efektyvumas pradeda kristi — kol tai netapo prastova."
+          },
+          {
+            "title": "Mažai atliekų",
+            "copy": "Optimizavimo programinė įranga kiekvienose staklėse."
+          },
+          {
+            "title": "DI asistentas",
+            "copy": "Padeda operatoriams ir technikams greitai šalinti gedimus. Bet kuria kalba, garsiai."
+          }
+        ],
+        "statement": {
+          "kicker": "Priežiūra, kuri mato į priekį",
+          "title": "Našumas, trunkantis ilgiau nei garantija",
+          "body": "Technikai, kurie mato staklių duomenis prieš atvykdami. Atsarginės dalys laikomos sandėlyje pagal komponentų būklę, už sutartą kainą.",
+          "note": "Po trečiųjų metų duomenys ir priežiūra tęsiami pagal priežiūros sutartį.",
+          "figure": "4 m.+",
+          "figureTitle": "Tęstinė priežiūra",
+          "figureText": "Pagal priežiūros sutartį, su duomenimis iš kiekvienų staklių."
+        }
+      }
+    },
+    "machinery": {
+      "title": "Staklės, kurias tiekiame",
+      "intro": "Nuo vienų staklių iki visiškai automatizuotos celės.",
+      "items": {
+        "panelSaws": {
+          "title": "Plokščių pjūklai",
+          "description": "Tikslus pjovimas su mažiau atliekų"
+        },
+        "edgebanders": {
+          "title": "Kraštų klijavimo staklės",
+          "description": "Švarūs kraštai didesniu greičiu"
+        },
+        "nesting": {
+          "title": "Nesting",
+          "description": "Optimizuotas plokščių panaudojimas ir srautas"
+        },
+        "cnc": {
+          "title": "CNC apdirbimas",
+          "description": "Lankstus sudėtingų detalių apdirbimas"
+        },
+        "drilling": {
+          "title": "6 pusių gręžimas",
+          "description": "Visos pusės, vienas praėjimas, be perkabinimo"
+        },
+        "moulding": {
+          "title": "Profilių frezavimas",
+          "description": "Vienodi profiliai dideliais kiekiais"
+        },
+        "sanding": {
+          "title": "Šlifavimas",
+          "description": "Tolygi apdaila, mažiau perdirbimo"
+        },
+        "framePresses": {
+          "title": "Rėmų presai",
+          "description": "Statūs, tvirti rėmų sujungimai"
+        },
+        "packaging": {
+          "title": "Pakavimas",
+          "description": "Greitesnis ir saugesnis išsiuntimas"
+        },
+        "cobots": {
+          "title": "Kobotai",
+          "description": "Automatizavimas šalia jūsų operatorių"
+        },
+        "robots": {
+          "title": "Pramoniniai robotai",
+          "description": "Krovimas ir tiekimas visą parą"
+        },
+        "palletizing": {
+          "title": "Paletizavimas",
+          "description": "Krovimas linijos gale be kėlimo"
+        }
+      },
+      "payback": {
+        "kicker": "Ką darome",
+        "title": "Staklės, kurios atsiperka greičiausiai",
+        "body": "Galime tiekti visų didžiųjų gamintojų stakles. Mūsų darbas — rasti tas, kurios jūsų gamybą padarys efektyviausią ir kuo greičiau atpirks jūsų investiciją.",
+        "note": "Atnešame modernias technologijas, jas sumontuojame jūsų ceche ir liekame, kol jos veikia pagal specifikaciją.",
+        "figure": "2–4 m.",
+        "figureTitle": "Įprastas atsipirkimo laikas",
+        "figureText": "Siūlome sprendimus, kurie atsiperka per dvejus–ketverius metus — apskaičiuota pagal jūsų pačių skaičius."
+      },
+      "delivery": {
+        "title": "Kaip mes tiekiame",
+        "steps": [
+          {
+            "title": "Analizė",
+            "text": "Išmatuojame jūsų dabartinę gamybą — pajėgumą, atliekas, perderinimus ir prastovas."
+          },
+          {
+            "title": "Rekomendacija",
+            "text": "Vieno puslapio TCO, lyginanti variantus, su atsipirkimu metais."
+          },
+          {
+            "title": "Montavimas",
+            "text": "Sumontuojame stakles jūsų ceche ir prijungiame jas nuo pirmos dienos."
+          },
+          {
+            "title": "Mokymai",
+            "text": "Jūsų operatoriai išmoksta dirbti staklėmis su jūsų pačių detalėmis."
+          },
+          {
+            "title": "Priežiūra",
+            "text": "Aptarnavimas, atsarginės dalys ir modernizavimas, kai efektyvumas pradeda kristi."
+          }
+        ]
+      }
+    },
+    "offers": {
+      "title": "Išmatuota, o ne įvertinta",
+      "intro": "Dauguma gamintojų vis dar vadovaujasi standartinėmis sąnaudomis ir nuojauta. Pradėkite nuo savo skaičių.",
+      "items": {
+        "investment": {
+          "title": "Jūsų kita investicija",
+          "description": "Vieno puslapio TCO pagal jūsų pačių skaičius",
+          "cta": "Užsisakykite TCO peržiūrą"
+        },
+        "runningCost": {
+          "title": "Jūsų eksploatacijos sąnaudos",
+          "description": "Paprastai sutaupoma 10–15 % eksploatacinių medžiagų išlaidų",
+          "cta": "Atsiųskite sąrašą"
+        },
+        "criticalMachine": {
+          "title": "Jūsų kritinės staklės",
+          "description": "Atsarginių dalių planas ir prarastų valandų kaina",
+          "cta": "Įvertinkite savo stakles"
+        }
+      }
+    },
+    "digitalized": {
+      "kicker": "Skaitmenizuoti sprendimai",
+      "title": "Duomenys, kurie palaiko jūsų linijos našumą",
+      "intro": "OptiCloud nuo pirmos dienos ir Opti AI papildomai. Priežiūra, atsarginės dalys ir sutaupymai remiasi jūsų staklių duomenimis — išmatuota, o ne įvertinta.",
+      "rows": [
+        {
+          "when": "1 diena",
+          "lead": "Prijungta.",
+          "text": "OptiCloud įdiegta kiekvienose naujose staklėse."
+        },
+        {
+          "when": "1–3 metai",
+          "lead": "Bazinis lygis garantijos metu.",
+          "text": "Jūsų pačių bazinis lygis visam staklių eksploatacijos laikui."
+        },
+        {
+          "when": "4 m.+",
+          "lead": "Priežiūros sutartis.",
+          "text": "Reaguojame, kai efektyvumas pradeda kristi."
+        }
+      ],
+      "contact": "Susisiekite",
+      "about": "Apie OptiCloud",
+      "imageAlt": "Technikas aptarnauja prijungtas stakles"
+    }
   }
 }

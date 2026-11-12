@@ -2,7 +2,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -22,22 +22,40 @@ import {
   listServices,
 } from "@/content/loader";
 import { buildMetadata } from "@/lib/seo";
+import { trackBySlug, tracks } from "@/lib/tracks";
+import { TrackLanding } from "@/components/solutions/TrackLanding";
 
 type Params = { slug: string[]; locale: string };
 
 export async function generateStaticParams() {
   const services = await listServices();
-  return services.map((s) => ({
-    slug: s.frontmatter.slug.split("/"),
-  }));
+  const slugs = new Set([
+    ...services.map((s) => s.frontmatter.slug),
+    // Track landing pages (some, like Machines, have no MDX file).
+    ...tracks.map((t) => t.slug),
+  ]);
+  return [...slugs].map((slug) => ({ slug: slug.split("/") }));
 }
+
+/** A single segment naming one of the five tracks renders the track landing page. */
+const trackFor = (slug: string[]) => (slug.length === 1 && slug[0] ? trackBySlug(slug[0]) : undefined);
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  const track = trackFor(slug);
+  if (track) {
+    const t = await getTranslations({ locale, namespace: "home.tracks.items" });
+    return buildMetadata({
+      title: t(`${track.key}.title`),
+      description: t(`${track.key}.lede`),
+      path: track.href,
+      ogImage: track.image,
+    });
+  }
   const doc = await getService(slug.join("/"));
   if (!doc) return {};
   const fm = doc.frontmatter;
@@ -55,6 +73,9 @@ export default async function ServicePage({
   params: Promise<Params>;
 }) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const track = trackFor(slug);
+  if (track) return <TrackLanding track={track} locale={locale} />;
   const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
   const fullSlug = slug.join("/");
   const [t, tc] = await Promise.all([

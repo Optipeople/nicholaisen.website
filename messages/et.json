@@ -509,5 +509,390 @@
       "title": "Küpsiste poliitika",
       "description": "Kuidas Nicholaisen kasutab küpsiseid sellel veebisaidil."
     }
+  },
+  "solutions": {
+    "switcherLabel": "Lahendussuunad",
+    "whatWeDo": "Mida me teeme",
+    "contactUs": "Võtke ühendust",
+    "learnMore": "Loe lähemalt",
+    "digitalizedBadge": "DIGITALISEERITUD",
+    "previous": "Eelmine",
+    "next": "Järgmine",
+    "page": "Leht",
+    "relatedCases": "Seotud juhtumid",
+    "tracks": {
+      "business": {
+        "switcherLabel": "Äri\narendus",
+        "question": "Kuhu peaks teie järgmine investeering minema?",
+        "proof": "Enamik investeeringuid otsustatakse ostuhinna põhjal. Meie otsustame need selle põhjal, mida masin kogu oma eluea jooksul maksab.",
+        "finder": {
+          "label1": "Teie eesmärk",
+          "options1": [
+            "Suurendada võimsust",
+            "Planeerida investeeringut",
+            "Ehitada uus tehas",
+            "Valida õiged tarnijad",
+            "Muu"
+          ],
+          "label2": "Ajakava",
+          "options2": [
+            "6 kuu jooksul",
+            "6–12 kuud",
+            "1–2 aastat",
+            "Lihtsalt uurin",
+            "Muu"
+          ]
+        },
+        "services": [
+          {
+            "title": "Investeerimisjuhtumid",
+            "copy": "Üheleheküljeline TCO teie viimase või järgmise masina kohta. Märgime, mis on mõõdetud, hinnatud — ja välja jäetud."
+          },
+          {
+            "title": "Võimsuse ja kasvu plaanid",
+            "copy": "Kus voog täna seiskub ja mida on vaja, et suurendada toodangut ilma kulusid suurendamata."
+          },
+          {
+            "title": "Tehase paigutus ja voog",
+            "copy": "Üksikust rakust kuni uue tehaseni tühjal krundil, planeeritud madalaima ühikuhinna järgi."
+          },
+          {
+            "title": "Hankestrateegia",
+            "copy": "Vaba tarnijavalik iga ülesande jaoks — meie vastutame koondtulemuse eest."
+          }
+        ],
+        "statement": {
+          "kicker": "Otsustatud teie numbrite põhjal",
+          "title": "Investeeringud, mis tasuvad end kiiremini ära",
+          "body": "Enamik investeeringuid otsustatakse ostuhinna põhjal. Meie otsustame need selle põhjal, mida masin kogu oma eluea jooksul maksab.",
+          "note": "Me mõõdame, koostame üheleheküljelise TCO ja reageerime, kui efektiivsus langeb.",
+          "figure": "2–4 a",
+          "figureTitle": "Tüüpiline tasuvusaeg",
+          "figureText": "Klassikalise 8–12 aasta asemel."
+        }
+      },
+      "optimization": {
+        "switcherLabel": "Tootmise\noptimeerimine",
+        "question": "Mida soovite oma tootmises parandada?",
+        "proof": "Saatke meile oma kulumaterjalide ja varuosade nimekiri. Saate tagasi võrdlusanalüüsi teie enda numbrite põhjal.",
+        "finder": {
+          "label1": "Mida parandada",
+          "options1": [
+            "Võimsus ja toodang",
+            "Efektiivsus (OEE)",
+            "Käitamis- ja kulumaterjalide kulud",
+            "Kitsaskohad ja voog",
+            "Kvaliteet ja ümbertöötlus",
+            "Muu"
+          ],
+          "label2": "Materjal",
+          "options2": [
+            "Massiivpuit",
+            "Plaadid ja mööbel",
+            "Uksed ja aknad",
+            "Muu"
+          ]
+        },
+        "services": [
+          {
+            "title": "Voo ja kitsaskohtade analüüs",
+            "copy": "Mõõdetud liinil, et teaksite, kas kärpida kulusid või kõrvaldada kitsaskoht."
+          },
+          {
+            "title": "Kulumaterjalide võrdlus",
+            "copy": "Hind ja kvaliteet, artikkel artikli haaval. Tavaliselt 10–15% sääst kulumaterjalidelt."
+          },
+          {
+            "title": "Varuosade plaan",
+            "copy": "Kriitilised komponendid kaardistatud, koos kaotatud tundide hinnaga."
+          },
+          {
+            "title": "Ajauuringud",
+            "copy": "Kuhu operaatorite aeg kulub — ja mida on väärt see tagasi saada."
+          }
+        ]
+      },
+      "machines": {
+        "switcherLabel": "Masinad",
+        "question": "Õige masin — ehitatud teie toote ümber.",
+        "proof": "Standardmasinad, eritellimusmasinad ja uuendused — igaüks valitud selle järgi, mida selle omamine maksab, mitte mida selle ostmine maksab.",
+        "finder": {
+          "label1": "Masina tüüp",
+          "options1": [
+            "CNC-frees",
+            "Servapealistusmasin",
+            "Puurimine",
+            "Saed",
+            "Lihvimine",
+            "Robotrakk",
+            "Muu"
+          ],
+          "label2": "Mida vajate",
+          "options2": [
+            "Uus masin",
+            "Uuendus või moderniseerimine",
+            "Asendus",
+            "Muu"
+          ]
+        },
+        "services": [
+          {
+            "title": "Standardmasinad",
+            "copy": "CNC, läbiviigu puurimine ja freesimine, servapealistus — valitud TCO, mitte hinnakirja järgi."
+          },
+          {
+            "title": "Eritellimusmasinad",
+            "copy": "Ehitatud teie toote ja protsessi jaoks, kui standardne ei sobi."
+          },
+          {
+            "title": "Uuendused ja moderniseerimine",
+            "copy": "Rohkem võimsust masinatest, mis teil juba on."
+          },
+          {
+            "title": "Ühendatud esimesest päevast",
+            "copy": "OptiCloud igal uuel masinal, teie enda baastasemega kogu eluea jooksul."
+          }
+        ],
+        "statement": {
+          "kicker": "Ühendatud esimesest päevast",
+          "title": "Iga meie tarnitud masin on ühendatud",
+          "body": "OptiCloud töötab igal uuel masinal esimesest vahetusest, teie enda baastasemega kogu eluea jooksul.",
+          "note": "Töötunnid, seisakud ja toodang logitakse automaatselt, et saaksime reageerida enne, kui efektiivsus langeb.",
+          "figure": "1. päev",
+          "figureTitle": "OptiCloud kaasas",
+          "figureText": "Andmed igalt uuelt masinalt alates esimesest tööpäevast."
+        }
+      },
+      "projects": {
+        "switcherLabel": "Projekti-\nlahendused",
+        "question": "Millist projekti te planeerite?",
+        "proof": "Vaba tarnijavalik iga ülesande jaoks ja väärtusele keskendunud protsess lühendavad tasuvusaega.",
+        "finder": {
+          "label1": "Projekti tüüp",
+          "options1": [
+            "Olemasoleva liini automatiseerimine",
+            "Masin + robotrakk",
+            "Uus tootmisliin",
+            "Täiesti uus tehas",
+            "Muu"
+          ],
+          "label2": "Ajakava",
+          "options2": [
+            "6 kuu jooksul",
+            "6–12 kuud",
+            "1–2 aastat",
+            "Lihtsalt uurin",
+            "Muu"
+          ]
+        },
+        "services": [
+          {
+            "title": "Tootmisliinid",
+            "copy": "Masinad, käsitsemine ja tarkvara planeeritud ühe voona."
+          },
+          {
+            "title": "Automatiseerimine, kui see tasub",
+            "copy": "Robotrakud ja käsitsemine, lisatud siis, kui numbrid seda ütlevad."
+          },
+          {
+            "title": "Projektijuhtimine",
+            "copy": "Analüüsist ja hankest kuni paigalduse, käivitamise ja järelkontrollini."
+          }
+        ],
+        "statement": {
+          "kicker": "Üks vastutav partner",
+          "title": "Üks leping, üks kontakt, üks tulemus",
+          "body": "Me planeerime, hangime ja paigaldame kogu liini ning vastutame, et kõik töötaks koos.",
+          "note": "Vaba tarnijavalik iga ülesande jaoks ja väärtusele keskendunud protsess lühendavad tasuvusaega.",
+          "figure": "1",
+          "figureTitle": "Partner algusest lõpuni",
+          "figureText": "Analüüsist ja hankest kuni käivitamise ja järelkontrollini."
+        }
+      },
+      "digital": {
+        "switcherLabel": "Digital\nPerformance",
+        "question": "Mida soovite, et teie masinaandmed teie heaks teeksid?",
+        "proof": "Tehnikud, kes näevad masina andmeid enne kohale jõudmist. Varuosad laos komponentide seisukorra järgi, kokkulepitud hinnaga.",
+        "finder": {
+          "label1": "Teie eesmärk",
+          "options1": [
+            "Näha tootmise olekut reaalajas",
+            "Leida seisakute põhjused",
+            "Ennustada hooldust ja varuosi",
+            "Optimeerida AI abil",
+            "Säilitada hooldus pärast garantiid",
+            "Muu"
+          ],
+          "label2": "Kasutusel olevad masinad",
+          "options2": [
+            "1–5",
+            "6–20",
+            "Rohkem kui 20",
+            "Muu"
+          ]
+        },
+        "services": [
+          {
+            "title": "OptiCloud",
+            "copy": "Töötunnid, komponentide seisukord ja efektiivsus, masina kaupa."
+          },
+          {
+            "title": "Varajane hoiatus",
+            "copy": "Reageerime, kui efektiivsus hakkab langema — enne kui sellest saab seisak."
+          },
+          {
+            "title": "Vähe jäätmeid",
+            "copy": "Optimeerimistarkvara igal masinal."
+          },
+          {
+            "title": "AI-assistent",
+            "copy": "Aitab operaatoritel ja tehnikutel rikkeid kiiresti kõrvaldada. Mis tahes keeles, ettelugemisega."
+          }
+        ],
+        "statement": {
+          "kicker": "Hooldus, mis näeb ette",
+          "title": "Jõudlus, mis kestab kauem kui garantii",
+          "body": "Tehnikud, kes näevad masina andmeid enne kohale jõudmist. Varuosad laos komponentide seisukorra järgi, kokkulepitud hinnaga.",
+          "note": "Pärast kolmandat aastat jätkuvad andmed ja hooldus hoolduslepingu alusel.",
+          "figure": "4. a+",
+          "figureTitle": "Jätkuv hooldus",
+          "figureText": "Hoolduslepingu alusel, andmetega igalt masinalt."
+        }
+      }
+    },
+    "machinery": {
+      "title": "Masinad, mida tarnime",
+      "intro": "Üksikmasinast kuni täielikult automatiseeritud rakuni.",
+      "items": {
+        "panelSaws": {
+          "title": "Plaadisaed",
+          "description": "Täpne lõikamine väiksema jäägiga"
+        },
+        "edgebanders": {
+          "title": "Servapealistusmasinad",
+          "description": "Puhtad servad suurema etteandekiirusega"
+        },
+        "nesting": {
+          "title": "Nesting",
+          "description": "Optimeeritud plaadikasutus ja voog"
+        },
+        "cnc": {
+          "title": "CNC-töötlus",
+          "description": "Paindlik töötlus keerukatele detailidele"
+        },
+        "drilling": {
+          "title": "6-poolne puurimine",
+          "description": "Kõik küljed, üks läbimine, ilma ümberkinnitamiseta"
+        },
+        "moulding": {
+          "title": "Profiilfreesimine",
+          "description": "Ühtlased profiilid suurtes mahtudes"
+        },
+        "sanding": {
+          "title": "Lihvimine",
+          "description": "Ühtlane viimistlus, vähem ümbertöötlust"
+        },
+        "framePresses": {
+          "title": "Raamipressid",
+          "description": "Täisnurkne, tugev raamikoost"
+        },
+        "packaging": {
+          "title": "Pakendamine",
+          "description": "Kiirem ja ohutum väljasaatmine"
+        },
+        "cobots": {
+          "title": "Kobotid",
+          "description": "Automatiseerimine operaatorite kõrval"
+        },
+        "robots": {
+          "title": "Tööstusrobotid",
+          "description": "Käsitsemine ja laadimine ööpäevaringselt"
+        },
+        "palletizing": {
+          "title": "Kaubaaluste ladumine",
+          "description": "Ladumine liini lõpus ilma tõstmiseta"
+        }
+      },
+      "payback": {
+        "kicker": "Mida me teeme",
+        "title": "Masin, mis tasub end kõige kiiremini ära",
+        "body": "Saame tarnida masinaid kõigilt suurematelt tootjatelt. Meie ülesanne on leida see, mis muudab teie tootmise kõige efektiivsemaks — ja teenib teie investeeringu võimalikult kiiresti tagasi.",
+        "note": "Toome kaasaegse tehnoloogia, seadistame selle teie tootmises ja jääme, kuni see töötab vastavalt spetsifikatsioonile.",
+        "figure": "2–4 a",
+        "figureTitle": "Tüüpiline tasuvusaeg",
+        "figureText": "Pakume lahendusi, mis teenivad teie investeeringu tagasi kahe kuni nelja aastaga — arvutatud teie enda numbrite põhjal."
+      },
+      "delivery": {
+        "title": "Kuidas me tarnime",
+        "steps": [
+          {
+            "title": "Analüüs",
+            "text": "Mõõdame teie praegust tootmist — võimsust, jääke, ümberseadistusi ja seisakuid."
+          },
+          {
+            "title": "Soovitus",
+            "text": "Üheleheküljeline TCO, mis võrdleb võimalusi, koos tasuvusajaga aastates."
+          },
+          {
+            "title": "Paigaldus",
+            "text": "Seadistame masina teie tootmises ja ühendame selle esimesest päevast."
+          },
+          {
+            "title": "Koolitus",
+            "text": "Teie operaatorid õpivad masinat tundma teie enda detailidel."
+          },
+          {
+            "title": "Järelkontroll",
+            "text": "Hooldus, varuosad ja uuendused, kui efektiivsus hakkab langema."
+          }
+        ]
+      }
+    },
+    "offers": {
+      "title": "Mõõdetud, mitte hinnatud",
+      "intro": "Enamik tootjaid juhindub endiselt standardkuludest ja kõhutundest. Alustage oma numbritest.",
+      "items": {
+        "investment": {
+          "title": "Teie järgmine investeering",
+          "description": "Üheleheküljeline TCO teie enda numbrite põhjal",
+          "cta": "Broneeri TCO ülevaatus"
+        },
+        "runningCost": {
+          "title": "Teie jooksvad kulud",
+          "description": "Tavaliselt 10–15% sääst kulumaterjalidelt",
+          "cta": "Saada oma nimekiri"
+        },
+        "criticalMachine": {
+          "title": "Teie kriitiline masin",
+          "description": "Varuosade plaan ja kaotatud tundide hind",
+          "cta": "Kaardista oma masin"
+        }
+      }
+    },
+    "digitalized": {
+      "kicker": "Digitaliseeritud lahendused",
+      "title": "Andmed, mis hoiavad teie liini töös",
+      "intro": "OptiCloud esimesest päevast ja Opti AI selle peal. Hooldus, varuosad ja säästud põhinevad teie masina enda andmetel — mõõdetud, mitte hinnatud.",
+      "rows": [
+        {
+          "when": "1. päev",
+          "lead": "Ühendatud.",
+          "text": "OptiCloud paigaldatud igale uuele masinale."
+        },
+        {
+          "when": "1.–3. aasta",
+          "lead": "Baastase garantii ajal.",
+          "text": "Teie enda baastase kogu masina eluea jooksul."
+        },
+        {
+          "when": "4. a+",
+          "lead": "Hooldusleping.",
+          "text": "Reageerime, kui efektiivsus hakkab langema."
+        }
+      ],
+      "contact": "Võtke ühendust",
+      "about": "OptiCloudist",
+      "imageAlt": "Tehnik hooldab ühendatud masinat"
+    }
   }
 }

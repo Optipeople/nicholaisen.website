@@ -507,5 +507,390 @@
       "title": "Cookie Policy",
       "description": "How Nicholaisen uses cookies on this website."
     }
+  },
+  "solutions": {
+    "switcherLabel": "Solution tracks",
+    "whatWeDo": "What we do",
+    "contactUs": "Contact us",
+    "learnMore": "Learn more",
+    "digitalizedBadge": "DIGITALIZED",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "relatedCases": "Related cases",
+    "tracks": {
+      "business": {
+        "switcherLabel": "Business\nDevelopment",
+        "question": "Where should your next investment go?",
+        "proof": "Most investments are decided on purchase price. We decide them on what the machine costs over its whole life.",
+        "finder": {
+          "label1": "Your goal",
+          "options1": [
+            "Grow capacity",
+            "Plan an investment",
+            "Build a new factory",
+            "Choose the right suppliers",
+            "Other"
+          ],
+          "label2": "Timeline",
+          "options2": [
+            "Within 6 months",
+            "6–12 months",
+            "1–2 years",
+            "Just exploring",
+            "Other"
+          ]
+        },
+        "services": [
+          {
+            "title": "Investment cases",
+            "copy": "A one-page TCO on your last or next machine. We mark what was measured, estimated — and left out."
+          },
+          {
+            "title": "Capacity & growth plans",
+            "copy": "Where the flow stalls today, and what it takes to grow output without growing cost."
+          },
+          {
+            "title": "Factory layout & flow",
+            "copy": "From a single cell to a green-field plant, planned around the lowest unit price."
+          },
+          {
+            "title": "Sourcing strategy",
+            "copy": "Free choice of supplier for each task — we answer for the combined result."
+          }
+        ],
+        "statement": {
+          "kicker": "Decided on your numbers",
+          "title": "Investments that pay back faster",
+          "body": "Most investments are decided on purchase price. We decide them on what the machine costs over its whole life.",
+          "note": "We measure, build a one-page TCO and follow up when efficiency slides.",
+          "figure": "2–4 yrs",
+          "figureTitle": "Typical payback",
+          "figureText": "Instead of the classic 8–12 years."
+        }
+      },
+      "optimization": {
+        "switcherLabel": "Production\nOptimization",
+        "question": "What would you like to improve in your production?",
+        "proof": "Send us your consumables and spare-parts list. You get a benchmark back on your own numbers.",
+        "finder": {
+          "label1": "What to improve",
+          "options1": [
+            "Capacity & output",
+            "Efficiency (OEE)",
+            "Running & consumables costs",
+            "Bottlenecks & flow",
+            "Quality & rework",
+            "Other"
+          ],
+          "label2": "Material",
+          "options2": [
+            "Solid wood",
+            "Panel & furniture",
+            "Doors & windows",
+            "Other"
+          ]
+        },
+        "services": [
+          {
+            "title": "Flow & bottleneck analysis",
+            "copy": "Measured on the line, so you know whether to cut costs or remove a bottleneck."
+          },
+          {
+            "title": "Consumables benchmark",
+            "copy": "Price and quality, item by item. Typically 10–15% saved on consumables."
+          },
+          {
+            "title": "Spare-parts plan",
+            "copy": "Critical components mapped, with a price on lost hours."
+          },
+          {
+            "title": "Time studies",
+            "copy": "Where operator time goes — and what it is worth to get it back."
+          }
+        ]
+      },
+      "machines": {
+        "switcherLabel": "Machines",
+        "question": "The right machine — built around your product.",
+        "proof": "Standard machines, custom machines and upgrades — each one chosen on what it costs to own, not what it costs to buy.",
+        "finder": {
+          "label1": "Machine type",
+          "options1": [
+            "CNC router",
+            "Edgebander",
+            "Drilling & boring",
+            "Saws",
+            "Sanding",
+            "Robot cell",
+            "Other"
+          ],
+          "label2": "What you need",
+          "options2": [
+            "New machine",
+            "Upgrade or retrofit",
+            "Replacement",
+            "Other"
+          ]
+        },
+        "services": [
+          {
+            "title": "Standard machines",
+            "copy": "CNC, through-feed drilling and milling, edge banding — chosen on TCO, not list price."
+          },
+          {
+            "title": "Custom machines",
+            "copy": "Built for your product and process when standard does not fit."
+          },
+          {
+            "title": "Upgrades & retrofits",
+            "copy": "More capacity from the machines you already own."
+          },
+          {
+            "title": "Connected from day 1",
+            "copy": "OptiCloud on every new machine, with your own baseline for its whole life."
+          }
+        ],
+        "statement": {
+          "kicker": "Connected from day one",
+          "title": "Every machine we deliver is connected",
+          "body": "OptiCloud runs on every new machine from the first shift, with your own baseline for its whole life.",
+          "note": "Running hours, stops and output are logged automatically, so we can react before efficiency slides.",
+          "figure": "Day 1",
+          "figureTitle": "OptiCloud included",
+          "figureText": "Data from every new machine, from the first day it runs."
+        }
+      },
+      "projects": {
+        "switcherLabel": "Project\nSolutions",
+        "question": "What kind of project are you planning?",
+        "proof": "Free choice of supplier for each task and a value-focused process move payback.",
+        "finder": {
+          "label1": "Project type",
+          "options1": [
+            "Automating an existing line",
+            "Machine + robot cell",
+            "New production line",
+            "Complete new factory",
+            "Other"
+          ],
+          "label2": "Timeline",
+          "options2": [
+            "Within 6 months",
+            "6–12 months",
+            "1–2 years",
+            "Just exploring",
+            "Other"
+          ]
+        },
+        "services": [
+          {
+            "title": "Production lines",
+            "copy": "Machines, handling and software planned as one flow."
+          },
+          {
+            "title": "Automation when it pays",
+            "copy": "Robot cells and handling, added when the numbers say so."
+          },
+          {
+            "title": "Project management",
+            "copy": "From analysis and sourcing to installation, ramp-up and follow-up."
+          }
+        ],
+        "statement": {
+          "kicker": "One partner responsible",
+          "title": "One contract, one contact, one result",
+          "body": "We plan, source and install the full line, and answer for it all working together.",
+          "note": "Free choice of supplier for each task and a value-focused process move payback.",
+          "figure": "1",
+          "figureTitle": "Partner end to end",
+          "figureText": "From analysis and sourcing to ramp-up and follow-up."
+        }
+      },
+      "digital": {
+        "switcherLabel": "Digital\nPerformance",
+        "question": "What do you want your machine data to do for you?",
+        "proof": "Technicians who see the machine data before they arrive. Parts stocked by component health, at an agreed price.",
+        "finder": {
+          "label1": "Your goal",
+          "options1": [
+            "See live production status",
+            "Find the causes of stops",
+            "Predict maintenance & parts",
+            "Optimize with AI",
+            "Keep service after warranty",
+            "Other"
+          ],
+          "label2": "Machines in operation",
+          "options2": [
+            "1–5",
+            "6–20",
+            "More than 20",
+            "Other"
+          ]
+        },
+        "services": [
+          {
+            "title": "OptiCloud",
+            "copy": "Running hours, component health and efficiency, per machine."
+          },
+          {
+            "title": "Early warning",
+            "copy": "We react when efficiency starts to slide — before it becomes standstill."
+          },
+          {
+            "title": "Low scrap",
+            "copy": "Optimisation software on every machine."
+          },
+          {
+            "title": "AI assistant",
+            "copy": "Helps operators and technicians fix faults fast. Any language, read aloud."
+          }
+        ],
+        "statement": {
+          "kicker": "Service that sees ahead",
+          "title": "Performance that lasts beyond the warranty",
+          "body": "Technicians who see the machine data before they arrive. Parts stocked by component health, at an agreed price.",
+          "note": "After year three, the data and the service continue under a service contract.",
+          "figure": "Year 4+",
+          "figureTitle": "Continued service",
+          "figureText": "Under service contract, with data from every machine."
+        }
+      }
+    },
+    "machinery": {
+      "title": "Machinery we deliver",
+      "intro": "From a single machine to a fully automated cell.",
+      "items": {
+        "panelSaws": {
+          "title": "Panel saws",
+          "description": "Accurate cutting with less waste"
+        },
+        "edgebanders": {
+          "title": "Edgebanders",
+          "description": "Clean edges at higher feed rates"
+        },
+        "nesting": {
+          "title": "Nesting",
+          "description": "Optimised sheet yield and flow"
+        },
+        "cnc": {
+          "title": "CNC machining",
+          "description": "Flexible processing for complex parts"
+        },
+        "drilling": {
+          "title": "6-sided drilling",
+          "description": "Every side, one pass, no re-clamping"
+        },
+        "moulding": {
+          "title": "Profile moulding",
+          "description": "Consistent profiles at volume"
+        },
+        "sanding": {
+          "title": "Sanding",
+          "description": "Even finish, less rework"
+        },
+        "framePresses": {
+          "title": "Frame presses",
+          "description": "Square, strong frame assembly"
+        },
+        "packaging": {
+          "title": "Packaging",
+          "description": "Faster, safer dispatch"
+        },
+        "cobots": {
+          "title": "Cobots",
+          "description": "Automation next to your operators"
+        },
+        "robots": {
+          "title": "Industrial robots",
+          "description": "Handling and loading around the clock"
+        },
+        "palletizing": {
+          "title": "Palletizing",
+          "description": "End-of-line stacking without lifting"
+        }
+      },
+      "payback": {
+        "kicker": "What we do",
+        "title": "The machine that pays back fastest",
+        "body": "We can deliver machinery from every major brand. Our job is to find the one that makes your production most efficient — and earns back your investment as fast as possible.",
+        "note": "We bring modern technology, set it up on your floor and stay until it runs at spec.",
+        "figure": "2–4 yrs",
+        "figureTitle": "Typical payback",
+        "figureText": "We suggest solutions that bring your investment back in two to four years — calculated on your own numbers."
+      },
+      "delivery": {
+        "title": "How we deliver",
+        "steps": [
+          {
+            "title": "Analyse",
+            "text": "We measure your current production — capacity, scrap, changeovers and standstill."
+          },
+          {
+            "title": "Recommend",
+            "text": "A one-page TCO comparing the options, with the payback in years."
+          },
+          {
+            "title": "Install",
+            "text": "We set the machine up on your floor and connect it from day one."
+          },
+          {
+            "title": "Train",
+            "text": "Your operators learn the machine on your own parts."
+          },
+          {
+            "title": "Follow up",
+            "text": "Service, spare parts and upgrades when efficiency starts to slide."
+          }
+        ]
+      }
+    },
+    "offers": {
+      "title": "Measured, not estimated",
+      "intro": "Most manufacturers still steer by standard cost and gut feeling. Start with your own numbers.",
+      "items": {
+        "investment": {
+          "title": "Your next investment",
+          "description": "A one-page TCO on your own numbers",
+          "cta": "Book a TCO review"
+        },
+        "runningCost": {
+          "title": "Your running cost",
+          "description": "Typically 10–15% saved on consumables",
+          "cta": "Send your list"
+        },
+        "criticalMachine": {
+          "title": "Your critical machine",
+          "description": "A spare-parts plan and a price on lost hours",
+          "cta": "Map your machine"
+        }
+      }
+    },
+    "digitalized": {
+      "kicker": "Digitalized solutions",
+      "title": "Data that keeps your line performing",
+      "intro": "OptiCloud from day one and Opti AI on top. Service, spare parts and savings run on your machine's own data — measured, not estimated.",
+      "rows": [
+        {
+          "when": "Day 1",
+          "lead": "Connected.",
+          "text": "OptiCloud installed on every new machine."
+        },
+        {
+          "when": "Year 1–3",
+          "lead": "Baseline under warranty.",
+          "text": "Your own baseline for the machine's whole life."
+        },
+        {
+          "when": "Year 4+",
+          "lead": "Service contract.",
+          "text": "We react when efficiency starts to slide."
+        }
+      ],
+      "contact": "Get in touch",
+      "about": "About OptiCloud",
+      "imageAlt": "Technician servicing a connected machine"
+    }
   }
 }

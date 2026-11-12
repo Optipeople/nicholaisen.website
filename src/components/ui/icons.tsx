@@ -78,6 +78,97 @@ export const TrendUpIcon = (p: IconProps) => (
   </Svg>
 );
 
+/* Track switcher icons (64px, thin stroke) — compass/gauge/factory reuse the shapes above */
+export const GearIcon = (p: IconProps) => (
+  <Svg size={64} strokeWidth={1} {...p}>
+    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+    <circle cx="12" cy="12" r="3" />
+  </Svg>
+);
+export const FactoryLinesIcon = (p: IconProps) => (
+  <Svg size={64} strokeWidth={1} {...p}>
+    <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+    <path d="M17 18h1" />
+    <path d="M12 18h1" />
+    <path d="M7 18h1" />
+  </Svg>
+);
+export const ActivityIcon = (p: IconProps) => (
+  <Svg size={64} strokeWidth={1} {...p}>
+    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+  </Svg>
+);
+export const CalculatorIcon = (p: IconProps) => (
+  <Svg size={64} strokeWidth={1} {...p}>
+    <rect width="16" height="20" x="4" y="2" rx="2" />
+    <line x1="8" x2="16" y1="6" y2="6" />
+    <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" />
+    <line x1="16" x2="16" y1="14" y2="18" />
+  </Svg>
+);
+export const MergeIcon = (p: IconProps) => (
+  <Svg size={64} strokeWidth={1} {...p}>
+    <path d="M16 3h5v5" />
+    <path d="M8 3H3v5" />
+    <path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" />
+    <path d="m15 9 6-6" />
+  </Svg>
+);
+
+/* Delivery step icons (24px) */
+export const ChartIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M3 3v18h18" />
+    <path d="m19 9-5 5-4-4-3 3" />
+  </Svg>
+);
+export const FileIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+    <polyline points="14 2 14 8 20 8" />
+  </Svg>
+);
+export const WrenchIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+  </Svg>
+);
+export const UsersIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+    <circle cx="9" cy="7" r="4" />
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  </Svg>
+);
+export const RefreshIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+    <path d="M21 3v5h-5" />
+    <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+    <path d="M8 16H3v5" />
+  </Svg>
+);
+
+/* Small UI icons */
+export const ChevronDownIcon = (p: IconProps) => (
+  <Svg size={16} strokeWidth={2} {...p}>
+    <path d="m6 9 6 6 6-6" />
+  </Svg>
+);
+export const ArrowLeftLongIcon = (p: IconProps) => (
+  <Svg size={22} {...p}>
+    <path d="m12 19-7-7 7-7" />
+    <path d="M19 12H5" />
+  </Svg>
+);
+export const ArrowRightLongIcon = (p: IconProps) => (
+  <Svg size={22} {...p}>
+    <path d="M5 12h14" />
+    <path d="m12 5 7 7-7 7" />
+  </Svg>
+);
+
 /**
  * Timeline milestone glyphs, drawn inside the timeline's own <svg>
  * (24×24 coordinate space, positioned by the caller).

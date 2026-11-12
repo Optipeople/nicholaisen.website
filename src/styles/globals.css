@@ -157,6 +157,14 @@
     font-weight: 500;
   }
 
+  /* Landing-page hero heading — 40→80px */
+  .text-display-page {
+    font-size: clamp(2.5rem, 5.6vw, 5rem);
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+  }
+
   /* Section heading — 34→56px */
   .text-display-2 {
     font-size: clamp(2.125rem, 4vw, 3.5rem);
@@ -251,6 +259,15 @@
   /* Big figure — light weight, tabular */
   .text-stat {
     font-size: clamp(2.75rem, 4.4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-weight: 200;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Large figure in statement blocks — 56→88px */
+  .text-stat-lg {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
     line-height: 1;
     letter-spacing: -0.04em;
     font-weight: 200;

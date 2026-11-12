@@ -509,5 +509,390 @@
       "title": "Cookiepolicy",
       "description": "Hur Nicholaisen använder cookies på denna webbplats."
     }
+  },
+  "solutions": {
+    "switcherLabel": "Lösningsspår",
+    "whatWeDo": "Det här gör vi",
+    "contactUs": "Kontakta oss",
+    "learnMore": "Läs mer",
+    "digitalizedBadge": "DIGITALISERAD",
+    "previous": "Föregående",
+    "next": "Nästa",
+    "page": "Sida",
+    "relatedCases": "Relaterade case",
+    "tracks": {
+      "business": {
+        "switcherLabel": "Affärsutveckling",
+        "question": "Vart ska din nästa investering gå?",
+        "proof": "De flesta investeringar beslutas utifrån inköpspriset. Vi beslutar dem utifrån vad maskinen kostar under hela sin livslängd.",
+        "finder": {
+          "label1": "Ditt mål",
+          "options1": [
+            "Öka kapaciteten",
+            "Planera en investering",
+            "Bygga en ny fabrik",
+            "Välja rätt leverantörer",
+            "Annat"
+          ],
+          "label2": "Tidsplan",
+          "options2": [
+            "Inom 6 månader",
+            "6–12 månader",
+            "1–2 år",
+            "Undersöker bara",
+            "Annat"
+          ]
+        },
+        "services": [
+          {
+            "title": "Investeringskalkyler",
+            "copy": "En TCO på en sida för din senaste eller nästa maskin. Vi markerar vad som är uppmätt, uppskattat — och utelämnat."
+          },
+          {
+            "title": "Kapacitets- och tillväxtplaner",
+            "copy": "Var flödet stannar i dag, och vad som krävs för att öka produktionen utan att öka kostnaderna."
+          },
+          {
+            "title": "Fabrikslayout och flöde",
+            "copy": "Från en enskild cell till en ny fabrik på bar mark, planerad kring det lägsta styckpriset."
+          },
+          {
+            "title": "Inköpsstrategi",
+            "copy": "Fritt val av leverantör för varje uppgift — vi ansvarar för det samlade resultatet."
+          }
+        ],
+        "statement": {
+          "kicker": "Beslutat på dina siffror",
+          "title": "Investeringar som betalar sig snabbare",
+          "body": "De flesta investeringar beslutas utifrån inköpspriset. Vi beslutar dem utifrån vad maskinen kostar under hela sin livslängd.",
+          "note": "Vi mäter, tar fram en TCO på en sida och följer upp när effektiviteten sjunker.",
+          "figure": "2–4 år",
+          "figureTitle": "Typisk återbetalningstid",
+          "figureText": "I stället för de klassiska 8–12 åren."
+        }
+      },
+      "optimization": {
+        "switcherLabel": "Produktionsoptimering",
+        "question": "Vad vill du förbättra i din produktion?",
+        "proof": "Skicka oss din lista över förbrukningsmaterial och reservdelar. Du får tillbaka en benchmark på dina egna siffror.",
+        "finder": {
+          "label1": "Vad ska förbättras",
+          "options1": [
+            "Kapacitet och produktion",
+            "Effektivitet (OEE)",
+            "Drifts- och förbrukningskostnader",
+            "Flaskhalsar och flöde",
+            "Kvalitet och omarbete",
+            "Annat"
+          ],
+          "label2": "Material",
+          "options2": [
+            "Massivträ",
+            "Skivor och möbler",
+            "Dörrar och fönster",
+            "Annat"
+          ]
+        },
+        "services": [
+          {
+            "title": "Flödes- och flaskhalsanalys",
+            "copy": "Uppmätt på linjen, så att du vet om du ska sänka kostnaderna eller ta bort en flaskhals."
+          },
+          {
+            "title": "Benchmark av förbrukningsmaterial",
+            "copy": "Pris och kvalitet, artikel för artikel. Oftast 10–15 % besparing på förbrukningsmaterial."
+          },
+          {
+            "title": "Reservdelsplan",
+            "copy": "Kritiska komponenter kartlagda, med ett pris på förlorade timmar."
+          },
+          {
+            "title": "Tidsstudier",
+            "copy": "Vart operatörstiden tar vägen — och vad det är värt att få tillbaka den."
+          }
+        ]
+      },
+      "machines": {
+        "switcherLabel": "Maskiner",
+        "question": "Rätt maskin — byggd kring din produkt.",
+        "proof": "Standardmaskiner, specialmaskiner och uppgraderingar — var och en vald utifrån vad den kostar att äga, inte vad den kostar att köpa.",
+        "finder": {
+          "label1": "Maskintyp",
+          "options1": [
+            "CNC-fräs",
+            "Kantlistmaskin",
+            "Borrning",
+            "Sågar",
+            "Slipning",
+            "Robotcell",
+            "Annat"
+          ],
+          "label2": "Vad du behöver",
+          "options2": [
+            "Ny maskin",
+            "Uppgradering eller ombyggnad",
+            "Ersättning",
+            "Annat"
+          ]
+        },
+        "services": [
+          {
+            "title": "Standardmaskiner",
+            "copy": "CNC, genommatningsborrning och -fräsning, kantlistning — valda på TCO, inte listpris."
+          },
+          {
+            "title": "Specialmaskiner",
+            "copy": "Byggda för din produkt och process när standard inte räcker."
+          },
+          {
+            "title": "Uppgraderingar och ombyggnader",
+            "copy": "Mer kapacitet ur de maskiner du redan äger."
+          },
+          {
+            "title": "Uppkopplad från dag 1",
+            "copy": "OptiCloud på varje ny maskin, med din egen baslinje under hela livslängden."
+          }
+        ],
+        "statement": {
+          "kicker": "Uppkopplad från dag ett",
+          "title": "Varje maskin vi levererar är uppkopplad",
+          "body": "OptiCloud körs på varje ny maskin från första skiftet, med din egen baslinje under hela livslängden.",
+          "note": "Drifttimmar, stopp och produktion loggas automatiskt, så att vi kan reagera innan effektiviteten sjunker.",
+          "figure": "Dag 1",
+          "figureTitle": "OptiCloud ingår",
+          "figureText": "Data från varje ny maskin, från första dagen den körs."
+        }
+      },
+      "projects": {
+        "switcherLabel": "Projektlösningar",
+        "question": "Vilken typ av projekt planerar du?",
+        "proof": "Fritt val av leverantör för varje uppgift och en värdefokuserad process förkortar återbetalningstiden.",
+        "finder": {
+          "label1": "Projekttyp",
+          "options1": [
+            "Automatisera en befintlig linje",
+            "Maskin + robotcell",
+            "Ny produktionslinje",
+            "Komplett ny fabrik",
+            "Annat"
+          ],
+          "label2": "Tidsplan",
+          "options2": [
+            "Inom 6 månader",
+            "6–12 månader",
+            "1–2 år",
+            "Undersöker bara",
+            "Annat"
+          ]
+        },
+        "services": [
+          {
+            "title": "Produktionslinjer",
+            "copy": "Maskiner, hantering och mjukvara planerade som ett flöde."
+          },
+          {
+            "title": "Automation när det lönar sig",
+            "copy": "Robotceller och hantering, tillagda när siffrorna säger det."
+          },
+          {
+            "title": "Projektledning",
+            "copy": "Från analys och inköp till installation, uppstart och uppföljning."
+          }
+        ],
+        "statement": {
+          "kicker": "En ansvarig partner",
+          "title": "Ett kontrakt, en kontakt, ett resultat",
+          "body": "Vi planerar, köper in och installerar hela linjen och ansvarar för att allt fungerar tillsammans.",
+          "note": "Fritt val av leverantör för varje uppgift och en värdefokuserad process förkortar återbetalningstiden.",
+          "figure": "1",
+          "figureTitle": "Partner hela vägen",
+          "figureText": "Från analys och inköp till uppstart och uppföljning."
+        }
+      },
+      "digital": {
+        "switcherLabel": "Digital\nPerformance",
+        "question": "Vad vill du att dina maskindata ska göra för dig?",
+        "proof": "Tekniker som ser maskindata innan de kommer. Reservdelar i lager efter komponenternas skick, till ett avtalat pris.",
+        "finder": {
+          "label1": "Ditt mål",
+          "options1": [
+            "Se produktionsstatus live",
+            "Hitta orsakerna till stopp",
+            "Förutse underhåll och reservdelar",
+            "Optimera med AI",
+            "Behålla service efter garantin",
+            "Annat"
+          ],
+          "label2": "Maskiner i drift",
+          "options2": [
+            "1–5",
+            "6–20",
+            "Fler än 20",
+            "Annat"
+          ]
+        },
+        "services": [
+          {
+            "title": "OptiCloud",
+            "copy": "Drifttimmar, komponenternas skick och effektivitet, per maskin."
+          },
+          {
+            "title": "Tidig varning",
+            "copy": "Vi reagerar när effektiviteten börjar sjunka — innan det blir stillestånd."
+          },
+          {
+            "title": "Lite spill",
+            "copy": "Optimeringsmjukvara på varje maskin."
+          },
+          {
+            "title": "AI-assistent",
+            "copy": "Hjälper operatörer och tekniker att åtgärda fel snabbt. På alla språk, uppläst."
+          }
+        ],
+        "statement": {
+          "kicker": "Service som ser framåt",
+          "title": "Prestanda som håller längre än garantin",
+          "body": "Tekniker som ser maskindata innan de kommer. Reservdelar i lager efter komponenternas skick, till ett avtalat pris.",
+          "note": "Efter år tre fortsätter data och service under ett serviceavtal.",
+          "figure": "År 4+",
+          "figureTitle": "Fortsatt service",
+          "figureText": "Under serviceavtal, med data från varje maskin."
+        }
+      }
+    },
+    "machinery": {
+      "title": "Maskiner vi levererar",
+      "intro": "Från en enskild maskin till en helt automatiserad cell.",
+      "items": {
+        "panelSaws": {
+          "title": "Plattsågar",
+          "description": "Exakt kapning med mindre spill"
+        },
+        "edgebanders": {
+          "title": "Kantlistmaskiner",
+          "description": "Rena kanter vid högre matningshastighet"
+        },
+        "nesting": {
+          "title": "Nesting",
+          "description": "Optimerat skivutnyttjande och flöde"
+        },
+        "cnc": {
+          "title": "CNC-bearbetning",
+          "description": "Flexibel bearbetning av komplexa detaljer"
+        },
+        "drilling": {
+          "title": "6-sidig borrning",
+          "description": "Alla sidor, en passage, ingen omspänning"
+        },
+        "moulding": {
+          "title": "Profilhyvling",
+          "description": "Jämna profiler i stora volymer"
+        },
+        "sanding": {
+          "title": "Slipning",
+          "description": "Jämn finish, mindre omarbete"
+        },
+        "framePresses": {
+          "title": "Rampressar",
+          "description": "Vinkelrät, stark ramsammanfogning"
+        },
+        "packaging": {
+          "title": "Emballering",
+          "description": "Snabbare och säkrare utleverans"
+        },
+        "cobots": {
+          "title": "Cobotar",
+          "description": "Automation sida vid sida med dina operatörer"
+        },
+        "robots": {
+          "title": "Industrirobotar",
+          "description": "Hantering och matning dygnet runt"
+        },
+        "palletizing": {
+          "title": "Palletering",
+          "description": "Stapling vid linjens slut utan lyft"
+        }
+      },
+      "payback": {
+        "kicker": "Det här gör vi",
+        "title": "Maskinen som betalar sig snabbast",
+        "body": "Vi kan leverera maskiner från alla stora märken. Vår uppgift är att hitta den som gör din produktion mest effektiv — och tjänar in din investering så snabbt som möjligt.",
+        "note": "Vi tar in modern teknik, installerar den på ditt golv och stannar tills den går enligt specifikation.",
+        "figure": "2–4 år",
+        "figureTitle": "Typisk återbetalningstid",
+        "figureText": "Vi föreslår lösningar som tjänar in din investering på två till fyra år — beräknat på dina egna siffror."
+      },
+      "delivery": {
+        "title": "Så levererar vi",
+        "steps": [
+          {
+            "title": "Analysera",
+            "text": "Vi mäter din nuvarande produktion — kapacitet, spill, omställningar och stillestånd."
+          },
+          {
+            "title": "Rekommendera",
+            "text": "En TCO på en sida som jämför alternativen, med återbetalningstiden i år."
+          },
+          {
+            "title": "Installera",
+            "text": "Vi installerar maskinen på ditt golv och kopplar upp den från dag ett."
+          },
+          {
+            "title": "Utbilda",
+            "text": "Dina operatörer lär sig maskinen på dina egna detaljer."
+          },
+          {
+            "title": "Följa upp",
+            "text": "Service, reservdelar och uppgraderingar när effektiviteten börjar sjunka."
+          }
+        ]
+      }
+    },
+    "offers": {
+      "title": "Uppmätt, inte uppskattat",
+      "intro": "De flesta tillverkare styr fortfarande efter standardkostnader och magkänsla. Börja med dina egna siffror.",
+      "items": {
+        "investment": {
+          "title": "Din nästa investering",
+          "description": "En TCO på en sida på dina egna siffror",
+          "cta": "Boka en TCO-genomgång"
+        },
+        "runningCost": {
+          "title": "Dina driftskostnader",
+          "description": "Oftast 10–15 % besparing på förbrukningsmaterial",
+          "cta": "Skicka din lista"
+        },
+        "criticalMachine": {
+          "title": "Din kritiska maskin",
+          "description": "En reservdelsplan och ett pris på förlorade timmar",
+          "cta": "Kartlägg din maskin"
+        }
+      }
+    },
+    "digitalized": {
+      "kicker": "Digitaliserade lösningar",
+      "title": "Data som håller din linje igång",
+      "intro": "OptiCloud från dag ett och Opti AI ovanpå. Service, reservdelar och besparingar bygger på maskinens egna data — uppmätt, inte uppskattat.",
+      "rows": [
+        {
+          "when": "Dag 1",
+          "lead": "Uppkopplad.",
+          "text": "OptiCloud installerat på varje ny maskin."
+        },
+        {
+          "when": "År 1–3",
+          "lead": "Baslinje under garanti.",
+          "text": "Din egen baslinje under maskinens hela livslängd."
+        },
+        {
+          "when": "År 4+",
+          "lead": "Serviceavtal.",
+          "text": "Vi reagerar när effektiviteten börjar sjunka."
+        }
+      ],
+      "contact": "Kontakta oss",
+      "about": "Om OptiCloud",
+      "imageAlt": "Tekniker som servar en uppkopplad maskin"
+    }
   }
 }

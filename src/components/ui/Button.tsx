@@ -23,8 +23,9 @@ type Variant =
   | "outline-light"
   | "pill-light"
   | "pill-outline-light"
-  | "pill-outline";
-type Size = "sm" | "md" | "lg" | "hero" | "panel" | "pill";
+  | "pill-outline"
+  | "outline";
+type Size = "sm" | "md" | "lg" | "hero" | "panel" | "pill" | "card";
 
 const base =
   "inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap cursor-pointer";
@@ -49,6 +50,8 @@ const variants: Record<Variant, string> = {
     "rounded-full border-[1.5px] border-white text-white hover:bg-white/14 hover:text-white",
   "pill-outline":
     "rounded-full border-[1.5px] border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white",
+  outline:
+    "rounded-[4px] border border-[var(--color-accent-400)] text-[var(--color-text)] hover:bg-[var(--color-accent-100)] hover:text-[var(--color-text)]",
 };
 
 const sizes: Record<Size, string> = {
@@ -61,6 +64,8 @@ const sizes: Record<Size, string> = {
   panel: "px-[22px] py-[11px] text-[15px] leading-[1.55]",
   /** 12×24, 16px — section header pill */
   pill: "px-[24px] py-[12px] text-[16px] leading-[1.55]",
+  /** 12×20, 16px regular — card and section buttons (outline variant drops 1px for the border) */
+  card: "px-5 py-3 text-[16px] leading-[1.55] font-normal",
 };
 
 type CommonProps = {

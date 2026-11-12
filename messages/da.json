@@ -507,5 +507,390 @@
       "title": "Cookiepolitik",
       "description": "Sådan bruger Nicholaisen cookies på denne hjemmeside."
     }
+  },
+  "solutions": {
+    "switcherLabel": "Løsningsspor",
+    "whatWeDo": "Det gør vi",
+    "contactUs": "Kontakt os",
+    "learnMore": "Læs mere",
+    "digitalizedBadge": "DIGITALISERET",
+    "previous": "Forrige",
+    "next": "Næste",
+    "page": "Side",
+    "relatedCases": "Relaterede cases",
+    "tracks": {
+      "business": {
+        "switcherLabel": "Forretningsudvikling",
+        "question": "Hvor skal din næste investering hen?",
+        "proof": "De fleste investeringer besluttes på indkøbsprisen. Vi beslutter dem på, hvad maskinen koster over hele sin levetid.",
+        "finder": {
+          "label1": "Dit mål",
+          "options1": [
+            "Øge kapaciteten",
+            "Planlægge en investering",
+            "Bygge en ny fabrik",
+            "Vælge de rette leverandører",
+            "Andet"
+          ],
+          "label2": "Tidshorisont",
+          "options2": [
+            "Inden for 6 måneder",
+            "6–12 måneder",
+            "1–2 år",
+            "Undersøger bare",
+            "Andet"
+          ]
+        },
+        "services": [
+          {
+            "title": "Investeringscases",
+            "copy": "En TCO på én side for din seneste eller næste maskine. Vi markerer, hvad der er målt, estimeret — og udeladt."
+          },
+          {
+            "title": "Kapacitets- og vækstplaner",
+            "copy": "Hvor flowet går i stå i dag, og hvad det kræver at øge outputtet uden at øge omkostningerne."
+          },
+          {
+            "title": "Fabrikslayout og flow",
+            "copy": "Fra en enkelt celle til en ny fabrik på bar mark, planlagt efter den laveste enhedspris."
+          },
+          {
+            "title": "Indkøbsstrategi",
+            "copy": "Frit valg af leverandør til hver opgave — vi står inde for det samlede resultat."
+          }
+        ],
+        "statement": {
+          "kicker": "Besluttet på dine tal",
+          "title": "Investeringer der tjener sig hurtigere hjem",
+          "body": "De fleste investeringer besluttes på indkøbsprisen. Vi beslutter dem på, hvad maskinen koster over hele sin levetid.",
+          "note": "Vi måler, laver en TCO på én side og følger op, når effektiviteten falder.",
+          "figure": "2–4 år",
+          "figureTitle": "Typisk tilbagebetalingstid",
+          "figureText": "I stedet for de klassiske 8–12 år."
+        }
+      },
+      "optimization": {
+        "switcherLabel": "Produktionsoptimering",
+        "question": "Hvad vil du gerne forbedre i din produktion?",
+        "proof": "Send os din liste over forbrugsvarer og reservedele. Du får et benchmark tilbage på dine egne tal.",
+        "finder": {
+          "label1": "Hvad skal forbedres",
+          "options1": [
+            "Kapacitet og output",
+            "Effektivitet (OEE)",
+            "Drifts- og forbrugsomkostninger",
+            "Flaskehalse og flow",
+            "Kvalitet og omarbejde",
+            "Andet"
+          ],
+          "label2": "Materiale",
+          "options2": [
+            "Massivtræ",
+            "Plader og møbler",
+            "Døre og vinduer",
+            "Andet"
+          ]
+        },
+        "services": [
+          {
+            "title": "Flow- og flaskehalsanalyse",
+            "copy": "Målt på linjen, så du ved, om du skal skære i omkostningerne eller fjerne en flaskehals."
+          },
+          {
+            "title": "Benchmark af forbrugsvarer",
+            "copy": "Pris og kvalitet, vare for vare. Typisk 10–15 % sparet på forbrugsvarer."
+          },
+          {
+            "title": "Reservedelsplan",
+            "copy": "Kritiske komponenter kortlagt, med en pris på tabte timer."
+          },
+          {
+            "title": "Tidsstudier",
+            "copy": "Hvor operatørtiden går hen — og hvad det er værd at få den tilbage."
+          }
+        ]
+      },
+      "machines": {
+        "switcherLabel": "Maskiner",
+        "question": "Den rigtige maskine — bygget op om dit produkt.",
+        "proof": "Standardmaskiner, specialmaskiner og opgraderinger — hver især valgt ud fra, hvad den koster at eje, ikke hvad den koster at købe.",
+        "finder": {
+          "label1": "Maskintype",
+          "options1": [
+            "CNC-fræser",
+            "Kantlimer",
+            "Boring",
+            "Save",
+            "Slibning",
+            "Robotcelle",
+            "Andet"
+          ],
+          "label2": "Hvad du har brug for",
+          "options2": [
+            "Ny maskine",
+            "Opgradering eller ombygning",
+            "Udskiftning",
+            "Andet"
+          ]
+        },
+        "services": [
+          {
+            "title": "Standardmaskiner",
+            "copy": "CNC, gennemløbsboring og -fræsning, kantlimning — valgt på TCO, ikke listepris."
+          },
+          {
+            "title": "Specialmaskiner",
+            "copy": "Bygget til dit produkt og din proces, når standard ikke slår til."
+          },
+          {
+            "title": "Opgraderinger og ombygninger",
+            "copy": "Mere kapacitet fra de maskiner, du allerede ejer."
+          },
+          {
+            "title": "Forbundet fra dag 1",
+            "copy": "OptiCloud på alle nye maskiner, med din egen baseline i hele levetiden."
+          }
+        ],
+        "statement": {
+          "kicker": "Forbundet fra dag ét",
+          "title": "Alle maskiner, vi leverer, er forbundne",
+          "body": "OptiCloud kører på alle nye maskiner fra første skift, med din egen baseline i hele levetiden.",
+          "note": "Driftstimer, stop og output logges automatisk, så vi kan reagere, før effektiviteten falder.",
+          "figure": "Dag 1",
+          "figureTitle": "OptiCloud inkluderet",
+          "figureText": "Data fra alle nye maskiner fra den første dag, de kører."
+        }
+      },
+      "projects": {
+        "switcherLabel": "Projektløsninger",
+        "question": "Hvilken slags projekt planlægger du?",
+        "proof": "Frit valg af leverandør til hver opgave og en værdifokuseret proces rykker tilbagebetalingstiden.",
+        "finder": {
+          "label1": "Projekttype",
+          "options1": [
+            "Automatisering af en eksisterende linje",
+            "Maskine + robotcelle",
+            "Ny produktionslinje",
+            "Komplet ny fabrik",
+            "Andet"
+          ],
+          "label2": "Tidshorisont",
+          "options2": [
+            "Inden for 6 måneder",
+            "6–12 måneder",
+            "1–2 år",
+            "Undersøger bare",
+            "Andet"
+          ]
+        },
+        "services": [
+          {
+            "title": "Produktionslinjer",
+            "copy": "Maskiner, håndtering og software planlagt som ét flow."
+          },
+          {
+            "title": "Automation, når det betaler sig",
+            "copy": "Robotceller og håndtering, tilføjet når tallene siger det."
+          },
+          {
+            "title": "Projektledelse",
+            "copy": "Fra analyse og indkøb til installation, indkøring og opfølgning."
+          }
+        ],
+        "statement": {
+          "kicker": "Én ansvarlig partner",
+          "title": "Én kontrakt, én kontakt, ét resultat",
+          "body": "Vi planlægger, indkøber og installerer hele linjen og står inde for, at det hele virker sammen.",
+          "note": "Frit valg af leverandør til hver opgave og en værdifokuseret proces rykker tilbagebetalingstiden.",
+          "figure": "1",
+          "figureTitle": "Partner hele vejen",
+          "figureText": "Fra analyse og indkøb til indkøring og opfølgning."
+        }
+      },
+      "digital": {
+        "switcherLabel": "Digital\nPerformance",
+        "question": "Hvad vil du have, at dine maskindata gør for dig?",
+        "proof": "Teknikere, der ser maskindata, før de ankommer. Reservedele på lager efter komponenternes tilstand, til en aftalt pris.",
+        "finder": {
+          "label1": "Dit mål",
+          "options1": [
+            "Se live produktionsstatus",
+            "Finde årsagerne til stop",
+            "Forudsige vedligehold og reservedele",
+            "Optimere med AI",
+            "Beholde service efter garantien",
+            "Andet"
+          ],
+          "label2": "Maskiner i drift",
+          "options2": [
+            "1–5",
+            "6–20",
+            "Mere end 20",
+            "Andet"
+          ]
+        },
+        "services": [
+          {
+            "title": "OptiCloud",
+            "copy": "Driftstimer, komponenttilstand og effektivitet, per maskine."
+          },
+          {
+            "title": "Tidlig varsling",
+            "copy": "Vi reagerer, når effektiviteten begynder at falde — før det bliver til stilstand."
+          },
+          {
+            "title": "Lavt spild",
+            "copy": "Optimeringssoftware på alle maskiner."
+          },
+          {
+            "title": "AI-assistent",
+            "copy": "Hjælper operatører og teknikere med at rette fejl hurtigt. På alle sprog, læst højt."
+          }
+        ],
+        "statement": {
+          "kicker": "Service der ser fremad",
+          "title": "Ydelse der holder ud over garantien",
+          "body": "Teknikere, der ser maskindata, før de ankommer. Reservedele på lager efter komponenternes tilstand, til en aftalt pris.",
+          "note": "Efter år tre fortsætter data og service under en servicekontrakt.",
+          "figure": "År 4+",
+          "figureTitle": "Fortsat service",
+          "figureText": "Under servicekontrakt, med data fra alle maskiner."
+        }
+      }
+    },
+    "machinery": {
+      "title": "Maskiner vi leverer",
+      "intro": "Fra en enkelt maskine til en fuldt automatiseret celle.",
+      "items": {
+        "panelSaws": {
+          "title": "Pladesave",
+          "description": "Præcis opskæring med mindre spild"
+        },
+        "edgebanders": {
+          "title": "Kantlimere",
+          "description": "Rene kanter ved højere fremføring"
+        },
+        "nesting": {
+          "title": "Nesting",
+          "description": "Optimeret pladeudnyttelse og flow"
+        },
+        "cnc": {
+          "title": "CNC-bearbejdning",
+          "description": "Fleksibel bearbejdning af komplekse emner"
+        },
+        "drilling": {
+          "title": "6-sidet boring",
+          "description": "Alle sider, én gennemkørsel, ingen omspænding"
+        },
+        "moulding": {
+          "title": "Profilkehling",
+          "description": "Ensartede profiler i store mængder"
+        },
+        "sanding": {
+          "title": "Slibning",
+          "description": "Jævn finish, mindre omarbejde"
+        },
+        "framePresses": {
+          "title": "Rammepresser",
+          "description": "Retvinklet, stærk rammesamling"
+        },
+        "packaging": {
+          "title": "Emballering",
+          "description": "Hurtigere og sikrere forsendelse"
+        },
+        "cobots": {
+          "title": "Cobots",
+          "description": "Automation side om side med dine operatører"
+        },
+        "robots": {
+          "title": "Industrirobotter",
+          "description": "Håndtering og fødning døgnet rundt"
+        },
+        "palletizing": {
+          "title": "Palletering",
+          "description": "Stabling ved linjens ende uden løft"
+        }
+      },
+      "payback": {
+        "kicker": "Det gør vi",
+        "title": "Maskinen der tjener sig hurtigst hjem",
+        "body": "Vi kan levere maskiner fra alle store mærker. Vores opgave er at finde den, der gør din produktion mest effektiv — og tjener din investering hjem så hurtigt som muligt.",
+        "note": "Vi bringer moderne teknologi, sætter den op på dit gulv og bliver, til den kører efter specifikationen.",
+        "figure": "2–4 år",
+        "figureTitle": "Typisk tilbagebetalingstid",
+        "figureText": "Vi foreslår løsninger, der tjener din investering hjem på to til fire år — beregnet på dine egne tal."
+      },
+      "delivery": {
+        "title": "Sådan leverer vi",
+        "steps": [
+          {
+            "title": "Analysér",
+            "text": "Vi måler din nuværende produktion — kapacitet, spild, omstillinger og stilstand."
+          },
+          {
+            "title": "Anbefal",
+            "text": "En TCO på én side, der sammenligner mulighederne, med tilbagebetalingstiden i år."
+          },
+          {
+            "title": "Installér",
+            "text": "Vi sætter maskinen op på dit gulv og forbinder den fra dag ét."
+          },
+          {
+            "title": "Oplær",
+            "text": "Dine operatører lærer maskinen at kende på dine egne emner."
+          },
+          {
+            "title": "Følg op",
+            "text": "Service, reservedele og opgraderinger, når effektiviteten begynder at falde."
+          }
+        ]
+      }
+    },
+    "offers": {
+      "title": "Målt, ikke estimeret",
+      "intro": "De fleste producenter styrer stadig efter standardomkostninger og mavefornemmelse. Start med dine egne tal.",
+      "items": {
+        "investment": {
+          "title": "Din næste investering",
+          "description": "En TCO på én side på dine egne tal",
+          "cta": "Book en TCO-gennemgang"
+        },
+        "runningCost": {
+          "title": "Dine driftsomkostninger",
+          "description": "Typisk 10–15 % sparet på forbrugsvarer",
+          "cta": "Send din liste"
+        },
+        "criticalMachine": {
+          "title": "Din kritiske maskine",
+          "description": "En reservedelsplan og en pris på tabte timer",
+          "cta": "Kortlæg din maskine"
+        }
+      }
+    },
+    "digitalized": {
+      "kicker": "Digitaliserede løsninger",
+      "title": "Data der holder din linje kørende",
+      "intro": "OptiCloud fra dag ét og Opti AI ovenpå. Service, reservedele og besparelser kører på din maskines egne data — målt, ikke estimeret.",
+      "rows": [
+        {
+          "when": "Dag 1",
+          "lead": "Forbundet.",
+          "text": "OptiCloud installeret på alle nye maskiner."
+        },
+        {
+          "when": "År 1–3",
+          "lead": "Baseline under garanti.",
+          "text": "Din egen baseline i hele maskinens levetid."
+        },
+        {
+          "when": "År 4+",
+          "lead": "Servicekontrakt.",
+          "text": "Vi reagerer, når effektiviteten begynder at falde."
+        }
+      ],
+      "contact": "Kontakt os",
+      "about": "Om OptiCloud",
+      "imageAlt": "Tekniker der servicerer en forbundet maskine"
+    }
   }
 }

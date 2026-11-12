@@ -6,12 +6,15 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { primaryNav } from "@/lib/nav";
+import { tracks } from "@/lib/tracks";
 import { LinkButton } from "@/components/ui/Button";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
   const t = useTranslations("nav");
+  const tt = useTranslations("home.tracks.items");
+  const trackKeyOf = (href: string) => tracks.find((tr) => tr.href === href)?.key;
 
   const navLabel = (section: { href: string; title: string }) => {
     if (section.href === "/services") return t("services");
@@ -115,9 +118,11 @@ export function MobileNav() {
                             onClick={() => setOpen(false)}
                             className="block rounded-md px-4 py-2 text-sm text-[var(--color-ink-700)] hover:bg-[var(--color-paper-dark)]"
                           >
-                            {(item as any).key
-                              ? t(`industriesMenu.${(item as any).key}.title` as any)
-                              : item.title}
+                            {trackKeyOf(item.href)
+                              ? tt(`${trackKeyOf(item.href)}.title`)
+                              : (item as any).key
+                                ? t(`industriesMenu.${(item as any).key}.title` as any)
+                                : item.title}
                           </Link>
                         ))}
                   </div>
