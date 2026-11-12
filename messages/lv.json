@@ -126,7 +126,15 @@
         "criticalMachine": {
           "title": "Jūsu kritiskā iekārta",
           "description": "Noskaidrojiet, cik jums maksā dīkstāves stunda"
+        },
+        "other": {
+          "title": "Kas cits",
+          "description": "Pastāstiet, pie kā strādājat"
         }
+      },
+      "talk": {
+        "kicker": "Vēlaties parunāt?",
+        "title": "Runājiet ar mums tieši"
       }
     },
     "infoCards": {

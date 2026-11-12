@@ -126,7 +126,15 @@
         "criticalMachine": {
           "title": "Din kritiska maskin",
           "description": "Kartlägg vad en timmes stillestånd kostar dig"
+        },
+        "other": {
+          "title": "Något annat",
+          "description": "Berätta vad ni arbetar med"
         }
+      },
+      "talk": {
+        "kicker": "Vill du hellre prata?",
+        "title": "Prata direkt med oss"
       }
     },
     "infoCards": {

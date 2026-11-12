@@ -126,7 +126,15 @@
         "criticalMachine": {
           "title": "Your critical machine",
           "description": "Map what an hour of standstill costs you"
+        },
+        "other": {
+          "title": "Something else",
+          "description": "Tell us what you're working on"
         }
+      },
+      "talk": {
+        "kicker": "Prefer to talk?",
+        "title": "Talk to us directly"
       }
     },
     "infoCards": {

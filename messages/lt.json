@@ -126,7 +126,15 @@
         "criticalMachine": {
           "title": "Jūsų kritinės staklės",
           "description": "Įvertinkite, kiek jums kainuoja prastovos valanda"
+        },
+        "other": {
+          "title": "Kita",
+          "description": "Papasakokite, prie ko dirbate"
         }
+      },
+      "talk": {
+        "kicker": "Norite pasikalbėti?",
+        "title": "Kalbėkite su mumis tiesiogiai"
       }
     },
     "infoCards": {

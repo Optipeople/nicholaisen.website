@@ -126,7 +126,15 @@
         "criticalMachine": {
           "title": "Teie kriitiline masin",
           "description": "Kaardistage, mida tund seisakut teile maksab"
+        },
+        "other": {
+          "title": "Midagi muud",
+          "description": "Rääkige, millega tegelete"
         }
+      },
+      "talk": {
+        "kicker": "Eelistate rääkida?",
+        "title": "Rääkige meiega otse"
       }
     },
     "infoCards": {

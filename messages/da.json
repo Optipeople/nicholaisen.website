@@ -126,7 +126,15 @@
         "criticalMachine": {
           "title": "Din kritiske maskine",
           "description": "Se hvad en times stilstand koster dig"
+        },
+        "other": {
+          "title": "Noget andet",
+          "description": "Fortæl os, hvad I arbejder med"
         }
+      },
+      "talk": {
+        "kicker": "Vil du hellere tale sammen?",
+        "title": "Tal direkte med os"
       }
     },
     "infoCards": {
