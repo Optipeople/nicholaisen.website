@@ -247,15 +247,15 @@
       "intro": "Uanset størrelsen på dit projekt håndterer Nicholaisen det fra start til slut.",
       "tiles": {
         "standalone": {
-          "title": "Enkeltstående maskine",
+          "title": "Én maskine",
           "alt": "Enkeltstående gennemløbs-CNC-maskine"
         },
         "machineRobot": {
-          "title": "Maskine + robot",
+          "title": "Maskine med robotcelle",
           "alt": "Robotcelle der sorterer emner i lagerreoler"
         },
         "factory": {
-          "title": "Komplet ny fabrik",
+          "title": "En komplet fabrik",
           "alt": "Team på gulvet i en komplet ny fabrik"
         }
       },

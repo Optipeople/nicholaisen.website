@@ -247,15 +247,15 @@
       "intro": "Whatever the size of your project, Nicholaisen handles it from start to finish.",
       "tiles": {
         "standalone": {
-          "title": "Standalone machine",
+          "title": "One machine",
           "alt": "Standalone through-feed CNC machine"
         },
         "machineRobot": {
-          "title": "Machine + robot",
+          "title": "Machine with a robot cell",
           "alt": "Robot cell sorting parts into storage racks"
         },
         "factory": {
-          "title": "Complete new factory",
+          "title": "A complete factory",
           "alt": "Team on the floor of a complete new factory"
         }
       },

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PhotoHero } from "@/components/ui/PhotoHero";
 import { HeroIconLinks } from "@/components/ui/HeroIconLinks";
+import { FactStrip } from "@/components/ui/FactStrip";
 import { SplitFeature, FeatureText } from "@/components/ui/SplitFeature";
 import { LinkButton } from "@/components/ui/Button";
 import { HistoryIcon, InfoIcon, PeopleIcon } from "@/components/ui/icons";
@@ -93,16 +94,7 @@ export default async function AboutPage({ params }: { params: Promise<Params> })
       </div>
 
       <section className="site-container section-top">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,160px),1fr))] gap-10 border-y border-[var(--color-divider)] py-10">
-          {facts.map((f) => (
-            <div key={f.label} className="flex flex-col gap-2">
-              <span className="text-[clamp(40px,4vw,56px)] leading-none font-extralight tracking-[-0.04em] text-[var(--color-accent)] tabular-nums">
-                {f.value}
-              </span>
-              <span className="text-[15px] text-[var(--color-accent-500)]">{f.label}</span>
-            </div>
-          ))}
-        </div>
+        <FactStrip items={facts} />
       </section>
 
       <SplitFeature

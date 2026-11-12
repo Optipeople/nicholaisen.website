@@ -247,15 +247,15 @@
       "intro": "Neatkarīgi no projekta lieluma Nicholaisen to īsteno no sākuma līdz beigām.",
       "tiles": {
         "standalone": {
-          "title": "Atsevišķa iekārta",
+          "title": "Viena iekārta",
           "alt": "Atsevišķa caurplūdes CNC iekārta"
         },
         "machineRobot": {
-          "title": "Iekārta + robots",
+          "title": "Iekārta ar robotu šūnu",
           "alt": "Robotu šūna šķiro detaļas noliktavas plauktos"
         },
         "factory": {
-          "title": "Pilnīgi jauna rūpnīca",
+          "title": "Visa rūpnīca",
           "alt": "Komanda jaunas rūpnīcas cehā"
         }
       },

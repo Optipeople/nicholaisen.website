@@ -27,7 +27,6 @@ export async function ScaleTiles() {
             alt={t(`tiles.${tile.key}.alt`)}
             title={t(`tiles.${tile.key}.title`)}
             objectPosition={tile.position}
-            arrow
           />
         ))}
       </ImageTileGrid>

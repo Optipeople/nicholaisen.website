@@ -247,15 +247,15 @@
       "intro": "Oavsett projektets storlek tar Nicholaisen hand om det från start till mål.",
       "tiles": {
         "standalone": {
-          "title": "Fristående maskin",
+          "title": "En enskild maskin",
           "alt": "Fristående genommatnings-CNC-maskin"
         },
         "machineRobot": {
-          "title": "Maskin + robot",
+          "title": "Maskin med robotcell",
           "alt": "Robotcell som sorterar detaljer i lagerställ"
         },
         "factory": {
-          "title": "Komplett ny fabrik",
+          "title": "En komplett fabrik",
           "alt": "Team på golvet i en komplett ny fabrik"
         }
       },

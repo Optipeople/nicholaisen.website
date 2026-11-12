@@ -247,15 +247,15 @@
       "intro": "Olenemata projekti suurusest viib Nicholaisen selle läbi algusest lõpuni.",
       "tiles": {
         "standalone": {
-          "title": "Eraldiseisev masin",
+          "title": "Üks masin",
           "alt": "Eraldiseisev läbiviigu-CNC-masin"
         },
         "machineRobot": {
-          "title": "Masin + robot",
+          "title": "Masin koos robotrakuga",
           "alt": "Robotrakk sorteerib detaile laoriiulitesse"
         },
         "factory": {
-          "title": "Täiesti uus tehas",
+          "title": "Terve tehas",
           "alt": "Meeskond uue tehase põrandal"
         }
       },

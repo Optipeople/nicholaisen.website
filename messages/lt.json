@@ -247,15 +247,15 @@
       "intro": "Kad ir koks būtų jūsų projekto dydis, Nicholaisen jį įgyvendina nuo pradžios iki pabaigos.",
       "tiles": {
         "standalone": {
-          "title": "Atskiros staklės",
+          "title": "Viena staklė",
           "alt": "Atskiros pratekamosios CNC staklės"
         },
         "machineRobot": {
-          "title": "Staklės + robotas",
+          "title": "Staklė su robotų cele",
           "alt": "Roboto celė rūšiuoja detales į sandėliavimo stelažus"
         },
         "factory": {
-          "title": "Visiškai nauja gamykla",
+          "title": "Visa gamykla",
           "alt": "Komanda naujos gamyklos ceche"
         }
       },
