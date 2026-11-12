@@ -261,9 +261,9 @@
           "alt": "Eraldiseisev läbiviigu-CNC-masin"
         },
         "machineRobot": {
-          "title": "Masin koos robotrakuga",
-          "description": "Automaatika ja robotrakud teie liini ümber",
-          "alt": "Robotrakk sorteerib detaile laoriiulitesse"
+          "title": "Masin ja robot",
+          "description": "Automatiseerimine ja robotlahendused teie liinile",
+          "alt": "Robot sorteerib detaile laoriiulitesse"
         },
         "factory": {
           "title": "Terve tehas",
@@ -683,7 +683,7 @@
             "Puurimine",
             "Saed",
             "Lihvimine",
-            "Robotrakk",
+            "Robotlahendus",
             "Muu"
           ],
           "label2": "Mida vajate",
@@ -730,7 +730,7 @@
           "label1": "Projekti tüüp",
           "options1": [
             "Olemasoleva liini automatiseerimine",
-            "Masin + robotrakk",
+            "Masin ja robot",
             "Uus tootmisliin",
             "Täiesti uus tehas",
             "Muu"
@@ -751,7 +751,7 @@
           },
           {
             "title": "Automatiseerimine, kui see tasub",
-            "copy": "Robotrakud ja käsitsemine, lisatud siis, kui numbrid seda ütlevad."
+            "copy": "Robotid ja materjalikäsitlus, lisatud siis, kui numbrid seda toetavad."
           },
           {
             "title": "Projektijuhtimine",
