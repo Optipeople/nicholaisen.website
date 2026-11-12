@@ -2,6 +2,7 @@
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PhotoHero } from "@/components/ui/PhotoHero";
+import { OverlapCard } from "@/components/ui/OverlapCard";
 import { CardMetrics } from "@/components/ui/CardLink";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { RelatedCases } from "@/components/solutions/RelatedCases";
@@ -87,25 +88,18 @@ export default async function CasePage({ params }: { params: Promise<Params> }) 
       />
 
       {/* Results card over the hero */}
-      <section className="site-container relative z-[2] -mt-[88px]">
-        <div className="rounded-[4px] bg-white shadow-[0_10px_40px_color-mix(in_srgb,#003050_14%,transparent)]">
-          <div className="flex justify-center border-b border-[var(--color-divider)]">
-            <span className="-mb-px flex items-center border-b-[3px] border-[var(--color-spot)] px-7 pt-[22px] pb-[19px] text-[17px] leading-[1.55]">
-              {t("results")}
-            </span>
-          </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] gap-x-10 gap-y-7 px-[clamp(20px,4vw,48px)] pt-8 pb-9">
-            {fm.metrics.map((m) => (
-              <div key={m.label} className="flex flex-col gap-2.5">
-                <span className="text-[13px] font-medium tracking-[0.1em] text-[var(--color-accent-500)] uppercase">{m.label}</span>
-                <span className="text-[clamp(30px,3vw,44px)] leading-none font-medium tracking-[-0.02em] text-[var(--color-accent)] tabular-nums">
-                  {m.value}
-                </span>
-              </div>
-            ))}
-          </div>
+      <OverlapCard tab={t("results")}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] gap-x-10 gap-y-7 px-[clamp(20px,4vw,48px)] pt-8 pb-9">
+          {fm.metrics.map((m) => (
+            <div key={m.label} className="flex flex-col gap-2.5">
+              <span className="text-[13px] font-medium tracking-[0.1em] text-[var(--color-accent-500)] uppercase">{m.label}</span>
+              <span className="text-[clamp(30px,3vw,44px)] leading-none font-medium tracking-[-0.02em] text-[var(--color-accent)] tabular-nums">
+                {m.value}
+              </span>
+            </div>
+          ))}
         </div>
-      </section>
+      </OverlapCard>
 
       {/* Challenge · Approach · Outcome */}
       <section className="site-container pt-24">

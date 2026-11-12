@@ -1,17 +1,15 @@
 ﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { PageHero } from "@/components/sections/PageHero";
-import { CtaBand } from "@/components/sections/CtaBand";
-import { CaseList } from "@/components/sections/CaseList";
-import { Mdx } from "@/components/mdx/Mdx";
-import { getIndustry, listIndustries, listServices } from "@/content/loader";
-import { routing } from "@/i18n/routing";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PhotoHero } from "@/components/ui/PhotoHero";
+import { HeroIconLinks } from "@/components/ui/HeroIconLinks";
+import { OverlapCard } from "@/components/ui/OverlapCard";
+import { TextSection } from "@/components/ui/TextSection";
+import { ServiceCarousel } from "@/components/solutions/ServiceCarousel";
+import { RelatedCases } from "@/components/solutions/RelatedCases";
+import { getIndustry, getService, listCases, listIndustries } from "@/content/loader";
+import { industryPages, sortIndustries, splitSections } from "@/lib/industries";
+import { sortCases } from "@/lib/cases";
 import { buildMetadata } from "@/lib/seo";
 
 type Params = { slug: string; locale: string };
@@ -21,13 +19,9 @@ export async function generateStaticParams() {
   return industries.map((i) => ({ slug: i.frontmatter.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const doc = await getIndustry(slug);
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const doc = await getIndustry(slug, locale);
   if (!doc) return {};
   const fm = doc.frontmatter;
   return buildMetadata({
@@ -38,108 +32,90 @@ export async function generateMetadata({
   });
 }
 
-export default async function IndustryPage({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
+/** Industry page in the solution-page design; all content comes from content/industries. */
+export default async function IndustryPage({ params }: { params: Promise<Params> }) {
   const { slug, locale } = await params;
-  const lp = (path: string) => locale === routing.defaultLocale ? path : `/${locale}${path}`;
-  const [t, ts] = await Promise.all([
-    getTranslations({ locale, namespace: "industries" }),
-    getTranslations({ locale, namespace: "common" }),
-  ]);
+  setRequestLocale(locale);
   const doc = await getIndustry(slug, locale);
   if (!doc) notFound();
   const fm = doc.frontmatter;
+  const [t, ts] = await Promise.all([getTranslations("industries"), getTranslations("solutions")]);
 
-  const services = await listServices(locale);
-  const relevant = (fm.relevantServices ?? [])
-    .map((s) => services.find((x) => x.frontmatter.slug === s))
-    .filter(Boolean);
+  const all = sortIndustries(await listIndustries(locale));
+  const services = (
+    await Promise.all(
+      (fm.relevantServices ?? []).map(async (s) => {
+        const svc = await getService(s, locale);
+        return svc
+          ? { title: svc.frontmatter.title, copy: svc.frontmatter.lede, image: svc.frontmatter.heroImage, href: `/services/${s}` }
+          : null;
+      }),
+    )
+  ).filter((s): s is NonNullable<typeof s> => !!s);
+  const cases = sortCases(await listCases(locale)).filter((c) => c.frontmatter.industry === fm.slug);
+  const sections = splitSections(doc.body);
 
   return (
-    <>
-      <PageHero
-        eyebrow={fm.eyebrow}
-        title={fm.title}
-        lede={fm.lede}
-        image={fm.heroImage}
-      />
+    <main>
+      <PhotoHero image={fm.heroImage} alt={fm.title} kicker={fm.eyebrow} title={fm.title} lede={fm.lede} bottom="overlap">
+        <HeroIconLinks
+          label={t("heroEyebrow")}
+          maxWidth="720px"
+          dim={0.72}
+          underline
+          items={all.map(({ frontmatter: i }) => ({
+            href: `/industries/${i.slug}`,
+            label: i.title,
+            Icon: industryPages.find((p) => p.slug === i.slug)!.Icon,
+            current: i.slug === fm.slug,
+          }))}
+        />
+      </PhotoHero>
 
-      <Section tone="cream" size="md">
-        <Container size="narrow">
-          <div className="mx-auto max-w-3xl">
-            <Mdx source={doc.body} />
+      {fm.challenges?.length ? (
+        <OverlapCard tab={t("whatWeHear")}>
+          <ol className="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-x-10 px-[clamp(20px,4vw,48px)] pt-5 pb-8">
+            {fm.challenges.map((c, i) => (
+              <li key={c} className="flex gap-4 border-b border-[var(--color-accent-200)] py-[14px] text-[16px] leading-[1.55]">
+                <span className="text-[13px] leading-[1.9] font-semibold text-[var(--color-spot)] tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                {c}
+              </li>
+            ))}
+          </ol>
+        </OverlapCard>
+      ) : null}
+
+      {services.length ? (
+        <section className="site-container section-top">
+          <div className="mx-auto mb-14 max-w-[820px] text-center">
+            <h2 className="text-display-2 m-0">{t("mostRelevantServices")}</h2>
+            <p className="text-intro mt-5 mb-0">{t("whereToStart", { title: fm.title })}</p>
           </div>
-        </Container>
-      </Section>
-
-      {fm.challenges && fm.challenges.length > 0 ? (
-        <Section tone="paper" size="md">
-          <Container>
-            <div className="max-w-2xl">
-              <Eyebrow>{t("whatWeHear")}</Eyebrow>
-              <h2 className="mt-4 text-display-3 text-balance">
-                {t("recurringProblems", { title: fm.title.toLowerCase() })}
-              </h2>
-            </div>
-            <ul className="mt-12 grid gap-4 sm:grid-cols-2">
-              {fm.challenges.map((c) => (
-                <li
-                  key={c}
-                  className="rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-cream-50)] p-6 text-[0.95rem] leading-relaxed text-[var(--color-ink-700)]"
-                >
-                  {c}
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </Section>
+          <ServiceCarousel
+            cards={services}
+            labels={{
+              contact: ts("contactUs"),
+              learnMore: ts("learnMore"),
+              digitalized: ts("digitalizedBadge"),
+              prev: ts("previous"),
+              next: ts("next"),
+              page: ts("page"),
+            }}
+          />
+        </section>
       ) : null}
 
-      {relevant.length > 0 ? (
-        <Section tone="cream" size="md">
-          <Container>
-            <div className="max-w-2xl">
-              <Eyebrow>{t("mostRelevantServices")}</Eyebrow>
-              <h2 className="mt-4 text-display-3 text-balance">
-                {t("whereToStart", { title: fm.title.toLowerCase() })}
-              </h2>
-            </div>
-            <div className="mt-12 grid gap-4 md:grid-cols-3">
-              {relevant.map((d) => (
-                <Link
-                  key={d!.frontmatter.slug}
-                  href={lp(`/services/${d!.frontmatter.slug}`)}
-                  className="group flex flex-col rounded-xl border border-[var(--color-ink-300)]/30 bg-[var(--color-paper)] p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
-                >
-                  <Eyebrow>{d!.frontmatter.eyebrow}</Eyebrow>
-                  <h3 className="mt-3 text-base font-semibold text-[var(--color-ink-900)] group-hover:text-[var(--color-navy-900)]">
-                    {d!.frontmatter.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-[var(--color-ink-500)]">
-                    {d!.frontmatter.lede}
-                  </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-navy-900)] group-hover:gap-2 transition-all">
-                    {ts("learnMore")} <ArrowRight className="size-3.5" aria-hidden />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </Container>
-        </Section>
-      ) : null}
+      {sections.map((s, i) => (
+        <TextSection key={s.heading} kicker={String(i + 1).padStart(2, "0")} title={s.heading} paragraphs={s.paragraphs} />
+      ))}
 
-      <CaseList
-        filterByIndustry={fm.slug}
-        title={t("ourWork", { title: fm.title.toLowerCase() })}
-        eyebrow={t("casesEyebrow")}
-        emptyMessage={t("casesComing")}
-        locale={locale}
-      />
-
-      <CtaBand locale={locale} />
-    </>
+      {cases.length ? (
+        <RelatedCases locale={locale} slugs={cases.map((c) => c.frontmatter.slug)} title={t("ourWork", { title: fm.title })} />
+      ) : (
+        <div className="h-28" />
+      )}
+    </main>
   );
 }
