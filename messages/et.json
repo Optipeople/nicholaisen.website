@@ -40,7 +40,7 @@
       "customProductionLines": { "title": "Kohandatud tootmisliinid", "description": "Ehitatud teie äri-eesmärkide jaoks." },
       "automationIntegration": { "title": "Automatiseerimine ja integreerimine", "description": "Ühendage ja laiendage tegevust." },
       "turnkeyProjects": { "title": "Terviklahendused", "description": "Ideest teostuseni." },
-      "digitalPerformance": { "title": "Digitaalne jõudlus", "description": "Opti — reaalajas ülevaade tootmispõrandalt." },
+      "digitalPerformance": { "title": "Digitaalsed lahendused", "description": "Opti — reaalajas ülevaade tootmispõrandalt." },
       "productionInsights": { "title": "Tootmisülevaated", "description": "Reaalajas jõudluse nähtavus." },
       "predictiveMaintenance": { "title": "Ennustav hooldus", "description": "Hoidke seisakuid ära enne nende tekkimist." },
       "continuousOptimization": { "title": "Pidev optimeerimine", "description": "Parandage jõudlust aja jooksul." },
@@ -219,7 +219,7 @@
           "cta": "Räägi meiega"
         },
         "digital": {
-          "title": "Digitaalne jõudlus",
+          "title": "Digitaalsed lahendused",
           "subtitle": "Tootmisülevaated, AI ja optimeerimine",
           "lede": "Tootmisülevaated, AI ja optimeerimine. Platvorm annab andmed — meie anname tulemused.",
           "cta": "Kaardista oma masin"
@@ -375,7 +375,7 @@
       "2010sTitle": "Nõustamine saab distsipliiniks",
       "2010sDesc": "Andmeanalüüs enne investeeringut. Tootmise optimeerimine. Võimsuse planeerimine. Nõustav töö formaliseeriti nimetatud radadeks.",
       "todayYear": "Täna",
-      "todayTitle": "Opti — digitaalne jõudlus",
+      "todayTitle": "Opti — digitaalsed lahendused",
       "todayDesc": "Reaalajas masinate andmed muudetud otsusteks, mis liini edasi viivad. Kus strateegia ja tootmispõrand kohtuvad."
     },
     "location": {
@@ -414,7 +414,7 @@
         "businessDevelopment": "Äri arendus",
         "productionOptimization": "Tootmise optimeerimine",
         "projectSolutions": "Projektilahendused",
-        "digitalPerformance": "Digitaalne jõudlus",
+        "digitalPerformance": "Digitaalsed lahendused",
         "partnership": "Partnerlus",
         "other": "Midagi muud"
       },
@@ -431,7 +431,7 @@
         "optimization": "Tootmise optimeerimine",
         "machines": "Masinad",
         "projects": "Projektilahendused",
-        "digital": "Digitaalne jõudlus",
+        "digital": "Digitaalsed lahendused",
         "service": "Hooldus ja varuosad",
         "other": "Midagi muud"
       }
@@ -524,7 +524,7 @@
   "services": {
     "meta": {
       "title": "Teenused",
-      "description": "Viis teenuserada, mis on ehitatud teie tootmise ümber — strateegiast digitaalse jõudluseni."
+      "description": "Viis teenuserada, mis on ehitatud teie tootmise ümber — strateegiast digitaalsete lahendusteni."
     },
     "hero": {
       "eyebrow": "Teenused",
@@ -769,7 +769,7 @@
         }
       },
       "digital": {
-        "switcherLabel": "Digitaalne\njõudlus",
+        "switcherLabel": "Digitaalsed\nlahendused",
         "question": "Mida soovite, et teie masinaandmed teie heaks teeksid?",
         "proof": "Tehnikud, kes näevad masina andmeid enne kohale jõudmist. Varuosad laos komponentide seisukorra järgi, kokkulepitud hinnaga.",
         "finder": {
