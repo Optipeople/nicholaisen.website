@@ -16,7 +16,7 @@ const serviceCategoryEnum = z.enum([
   "partnership",
 ]);
 
-const industryEnum = z.enum(["doors-windows", "panel-furniture", "solid-wood"]);
+const industryEnum = z.enum(["doors-windows", "panel-furniture", "solid-wood", "plastics-aluminium"]);
 
 export const serviceFrontmatter = z.object({
   title: z.string(),

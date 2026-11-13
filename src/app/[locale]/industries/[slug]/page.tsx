@@ -68,7 +68,15 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
 
   return (
     <main>
-      <PhotoHero image={fm.heroImage} alt={fm.title} kicker={fm.eyebrow} title={fm.title} lede={fm.lede} bottom="overlap">
+      <PhotoHero
+        image={fm.heroImage}
+        alt={fm.title}
+        kicker={fm.eyebrow}
+        title={fm.title}
+        lede={fm.lede}
+        // Room for the "What we hear" card, when the page has one.
+        bottom={fm.challenges?.length ? "overlap" : "default"}
+      >
         <HeroIconLinks
           label={t("heroEyebrow")}
           maxWidth="960px"

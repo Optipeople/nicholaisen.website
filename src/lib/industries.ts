@@ -5,18 +5,19 @@ export const industryPages = [
   { slug: "solid-wood", Icon: LogIcon },
   { slug: "panel-furniture", Icon: LayersIcon },
   { slug: "doors-windows", Icon: DoorIcon },
+  { slug: "plastics-aluminium", Icon: GridIcon },
 ] as const;
 
 /**
  * The four industries shown on the homepage and the industries overview,
  * with photos; text in messages under `home.industries.items.<key>`.
- * Plastics & aluminium has no page yet (no `href`).
+ * Plastics & aluminium has a short "more information soon" page for now.
  */
 export const industryTiles = [
   { key: "solidWood", href: "/industries/solid-wood", image: "/images/v3/industry-solid-wood.avif", position: "50% 50%", Icon: LogIcon },
   { key: "panelFurniture", href: "/industries/panel-furniture", image: "/images/v3/industry-panel-furniture.avif", position: "50% 50%", Icon: LayersIcon },
   { key: "doorsWindows", href: "/industries/doors-windows", image: "/images/v3/industry-doors-windows.jpg", position: "35% 50%", Icon: DoorIcon },
-  { key: "plasticsAluminium", href: undefined, image: "/images/v3/industry-plastics-aluminium.avif", position: "50% 50%", Icon: GridIcon },
+  { key: "plasticsAluminium", href: "/industries/plastics-aluminium", image: "/images/v3/industry-plastics-aluminium.avif", position: "50% 50%", Icon: GridIcon },
 ] as const;
 
 /** Where an industry links: its page, or (no page yet) the contact form with the industry filled in. */
@@ -36,6 +37,13 @@ export const industryServiceImages: Record<string, Record<string, string>> = {
     "project-solutions/custom-production-lines": "/images/v3/woodshop-profiles.jpg",
     "business-development/investment-advisory": "/images/cases/case-2.jpg",
   },
+  "panel-furniture": {
+    "production-optimization/flow-optimization": "/images/top-view-boards-mdf-material-1-scaled-1.jpg",
+    "production-optimization/capacity-improvement": "/images/workshop/six-sided-drilling.jpg",
+    "project-solutions/custom-production-lines": "/images/workshop/cutting-machine.png",
+    "project-solutions/automation-integration": "/images/workshop/nesting.jpg",
+    "digital-performance/production-insights": "/images/c028208a-ebc6-4616-8f79-bce49b04e26a.avif",
+  },
   "doors-windows": {
     "production-optimization/flow-optimization": "/images/02795d5e-8c61-4cb2-a658-ea128715c541.png",
     "production-optimization/oee-efficiency": "/images/cases/case-3.jpg",
@@ -47,6 +55,7 @@ export const industryServiceImages: Record<string, Record<string, string>> = {
 /** Photo for the closing "Talk to us" block where the industry's tile photo is already the hero. */
 export const industryCtaImages: Record<string, string> = {
   "doors-windows": "/images/cases/case-4.jpg",
+  "plastics-aluminium": "/images/v3/cnc-spindle.jpg",
 };
 
 export type IndustrySlug = (typeof industryPages)[number]["slug"];
