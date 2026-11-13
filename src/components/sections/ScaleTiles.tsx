@@ -5,9 +5,9 @@ import { trackHref } from "@/lib/tracks";
 
 const tiles = [
   { key: "standalone", href: trackHref("machines"), image: "/images/v3/machine-nkb2812.jpg", position: "55% 50%" },
-  { key: "machineRobot", href: trackHref("projects"), image: "/images/v3/robot-sorting.png", position: "50% 50%" },
+  { key: "machineRobot", href: trackHref("projects"), image: "/images/v3/robot-line.png", position: "50% 50%" },
   // Factory layout & sourcing live under Business Development until their own pages exist.
-  { key: "factory", href: trackHref("business"), image: "/images/v3/complete-factory.png", position: "65% 50%" },
+  { key: "factory", href: trackHref("business"), image: "/images/v3/wood-frames.jpg", position: "50% 50%" },
 ] as const;
 
 /** "One machine or a whole factory" — three scale tiles and a payback figure. */

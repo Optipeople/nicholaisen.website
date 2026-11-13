@@ -9,7 +9,8 @@ import { ServiceCarousel } from "@/components/solutions/ServiceCarousel";
 import { RelatedCases } from "@/components/solutions/RelatedCases";
 import { IndustryCta } from "@/components/solutions/IndustryCta";
 import { getIndustry, getService, listCases, listIndustries } from "@/content/loader";
-import { industryCtaImages, industryHref, industryServiceImages, industryTiles, splitSections } from "@/lib/industries";
+import { industryCtaImages, industryHref, industryTiles, splitSections } from "@/lib/industries";
+import { mdxServicePages, serviceHref, servicePageBySlugs } from "@/lib/services";
 import { sortCases } from "@/lib/cases";
 import { buildMetadata } from "@/lib/seo";
 
@@ -46,15 +47,30 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
     getTranslations("home.industries"),
   ]);
 
+  const [tsd, tst] = await Promise.all([getTranslations("serviceDetail"), getTranslations("solutions.tracks")]);
   const services = (
     await Promise.all(
       (fm.relevantServices ?? []).map(async (s) => {
+        // Business Development design pages (text in messages).
+        const [trackSlug, pageSlug] = s.split("/");
+        const design = trackSlug && pageSlug ? servicePageBySlugs(trackSlug, pageSlug) : undefined;
+        if (design) {
+          const card = (tst.raw(`${design.track}.services`) as { title: string }[])[design.index];
+          return {
+            title: card?.title ?? "",
+            copy: tsd(`pages.${design.key}.teaser`),
+            image: design.image,
+            href: serviceHref(design),
+          };
+        }
+        // Service pages with MDX content.
         const svc = await getService(s, locale);
         return svc
           ? {
               title: svc.frontmatter.title,
               copy: svc.frontmatter.lede,
-              image: industryServiceImages[fm.slug]?.[s] ?? svc.frontmatter.heroImage,
+              // The service page's own hero, so card and page match.
+              image: mdxServicePages.find((p) => p.mdxSlug === s)?.image ?? svc.frontmatter.heroImage,
               href: `/services/${s}`,
             }
           : null;

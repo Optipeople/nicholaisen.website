@@ -84,7 +84,7 @@ export type MdxServicePage = {
   mdxSlug: string;
   /** Photo for the "What you get" block. */
   image2: string;
-  /** Replaces the MDX hero photo when that file is missing. */
+  /** Hero photo: the same as the service's card on its track page, so card and page match. */
   image?: string;
   /** External site linked under the last text section. */
   externalLink?: string;
@@ -92,15 +92,14 @@ export type MdxServicePage = {
 
 export const mdxServicePages: MdxServicePage[] = [
   // Flow & bottleneck analysis → the Flow Optimization page.
-  { track: "optimization", index: 0, slug: "flow-optimization", mdxSlug: "production-optimization/flow-optimization", image2: "/images/workshop/panel-saw-2.jpg" },
+  { track: "optimization", index: 0, slug: "flow-optimization", mdxSlug: "production-optimization/flow-optimization", image: "/images/v3/edgebander.jpg", image2: "/images/workshop/panel-saw.png" },
   { track: "projects", index: 0, slug: "custom-production-lines", mdxSlug: "project-solutions/custom-production-lines", image2: "/images/v3/robot-line.png" },
   { track: "projects", index: 1, slug: "automation-integration", mdxSlug: "project-solutions/automation-integration", image2: "/images/v3/robot-sorting.png" },
   { track: "projects", index: 2, slug: "turnkey-projects", mdxSlug: "project-solutions/turnkey-projects", image2: "/images/v3/complete-factory.png" },
   // The Digital Performance cards → their pages.
-  { track: "digital", index: 0, slug: "production-insights", mdxSlug: "digital-performance/production-insights", image2: "/images/v3/data-boards.avif", externalLink: "https://optipeople.com" },
-  // Its MDX hero photo (/images/cnc-machining.jpg) doesn't exist.
-  { track: "digital", index: 1, slug: "predictive-maintenance", mdxSlug: "digital-performance/predictive-maintenance", image2: "/images/v3/line-signal.avif", image: "/images/v3/cnc-spindle.jpg" },
-  { track: "digital", index: 2, slug: "continuous-optimization", mdxSlug: "digital-performance/continuous-optimization", image2: "/images/v3/saw-blade.avif" },
+  { track: "digital", index: 0, slug: "production-insights", mdxSlug: "digital-performance/production-insights", image: "/images/v3/data-boards.avif", image2: "/images/workshop/six-sided-drilling.jpg", externalLink: "https://optipeople.com" },
+  { track: "digital", index: 1, slug: "predictive-maintenance", mdxSlug: "digital-performance/predictive-maintenance", image: "/images/v3/line-signal.avif", image2: "/images/v3/cnc-spindle.jpg" },
+  { track: "digital", index: 2, slug: "continuous-optimization", mdxSlug: "digital-performance/continuous-optimization", image: "/images/v3/saw-blade.avif", image2: "/images/workshop/panel-saw-2.jpg" },
 ];
 
 export const mdxServiceHref = (p: MdxServicePage) => `${trackHref(p.track)}/${p.slug}`;
