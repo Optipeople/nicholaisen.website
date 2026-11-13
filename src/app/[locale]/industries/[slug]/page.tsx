@@ -9,7 +9,7 @@ import { ServiceCarousel } from "@/components/solutions/ServiceCarousel";
 import { RelatedCases } from "@/components/solutions/RelatedCases";
 import { IndustryCta } from "@/components/solutions/IndustryCta";
 import { getIndustry, getService, listCases, listIndustries } from "@/content/loader";
-import { industryHref, industryTiles, splitSections } from "@/lib/industries";
+import { industryCtaImages, industryHref, industryServiceImages, industryTiles, splitSections } from "@/lib/industries";
 import { sortCases } from "@/lib/cases";
 import { buildMetadata } from "@/lib/seo";
 
@@ -51,7 +51,12 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
       (fm.relevantServices ?? []).map(async (s) => {
         const svc = await getService(s, locale);
         return svc
-          ? { title: svc.frontmatter.title, copy: svc.frontmatter.lede, image: svc.frontmatter.heroImage, href: `/services/${s}` }
+          ? {
+              title: svc.frontmatter.title,
+              copy: svc.frontmatter.lede,
+              image: industryServiceImages[fm.slug]?.[s] ?? svc.frontmatter.heroImage,
+              href: `/services/${s}`,
+            }
           : null;
       }),
     )
@@ -125,7 +130,7 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
       ) : null}
 
       <IndustryCta
-        image={tile?.image ?? fm.heroImage}
+        image={industryCtaImages[fm.slug] ?? tile?.image ?? fm.heroImage}
         title={t("talkAboutLine", { title: industryName.toLowerCase() })}
         industry={industryName}
       />

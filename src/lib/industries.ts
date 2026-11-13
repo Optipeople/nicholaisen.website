@@ -23,6 +23,32 @@ export const industryTiles = [
 export const industryHref = (href: string | undefined, title: string) =>
   href ?? `/contact?topic=other&choice=${encodeURIComponent(title)}`;
 
+/**
+ * Photos for the "Most relevant services" cards on an industry page, so each
+ * industry shows its own material (frames, windows, timber) instead of the
+ * services' general panel-production photos. Services not listed keep theirs.
+ */
+export const industryServiceImages: Record<string, Record<string, string>> = {
+  "solid-wood": {
+    "production-optimization/flow-optimization": "/images/v3/wood-frames.jpg",
+    "production-optimization/capacity-improvement": "/images/hero-planks.jpg",
+    "project-solutions/turnkey-projects": "/images/cases/case-1.jpg",
+    "project-solutions/custom-production-lines": "/images/v3/woodshop-profiles.jpg",
+    "business-development/investment-advisory": "/images/cases/case-2.jpg",
+  },
+  "doors-windows": {
+    "production-optimization/flow-optimization": "/images/02795d5e-8c61-4cb2-a658-ea128715c541.png",
+    "production-optimization/oee-efficiency": "/images/cases/case-3.jpg",
+    "project-solutions/custom-production-lines": "/images/1a6ffb1b-577d-4bf4-80f4-2e3a8434c3ee.png",
+    "digital-performance/production-insights": "/images/case-doors.jpg",
+  },
+};
+
+/** Photo for the closing "Talk to us" block where the industry's tile photo is already the hero. */
+export const industryCtaImages: Record<string, string> = {
+  "doors-windows": "/images/cases/case-4.jpg",
+};
+
 export type IndustrySlug = (typeof industryPages)[number]["slug"];
 
 export const sortIndustries = <T extends { frontmatter: { slug: string } }>(docs: T[]) =>
