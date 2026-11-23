@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { LinkButton } from "@/components/ui/Button";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowLeftLongIcon, ArrowRightLongIcon } from "@/components/ui/icons";
 
 export type ServiceCard = {
@@ -59,17 +60,32 @@ export function ServiceCarousel({
         className="no-scrollbar flex snap-x snap-mandatory gap-7 overflow-x-auto"
       >
         {cards.map((card) => (
+          // The whole card opens its page (the title link stretches over it); the
+          // buttons sit above that link so "Contact us" still goes to the contact form.
           <article
             key={card.title}
-            className="flex min-w-[280px] flex-[0_0_calc((100%-56px)/3)] snap-start flex-col gap-3"
+            className="group relative flex min-w-[280px] flex-[0_0_calc((100%-56px)/3)] snap-start flex-col gap-3"
           >
             <div className="relative aspect-[16/10] overflow-hidden rounded-[4px] bg-[var(--color-accent-200)]">
               {card.image ? (
-                <Image src={card.image} alt={card.title} fill sizes="(min-width: 1320px) 400px, 80vw" className="object-cover" />
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  sizes="(min-width: 1320px) 400px, 80vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
               ) : null}
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-2.5">
-              <h3 className="m-0 text-[24px] leading-[1.12] font-medium tracking-[-0.015em]">{card.title}</h3>
+              <h3 className="m-0 text-[24px] leading-[1.12] font-medium tracking-[-0.015em]">
+                <Link
+                  href={card.href}
+                  className="text-[var(--color-text)] after:absolute after:inset-0 after:content-[''] group-hover:text-[var(--color-accent-500)]"
+                >
+                  {card.title}
+                </Link>
+              </h3>
               {card.digital ? (
                 <span className="rounded-[3px] bg-[var(--color-accent-100)] px-2 py-[3px] text-[11px] font-semibold tracking-[0.08em] text-[var(--color-accent-500)]">
                   {labels.digitalized}
@@ -77,7 +93,7 @@ export function ServiceCarousel({
               ) : null}
             </div>
             <p className="m-0 flex-1 text-[17px] leading-[1.55] text-[var(--color-accent-500)]">{card.copy}</p>
-            <div className="mt-3 flex flex-wrap gap-3">
+            <div className="relative z-[1] mt-3 flex flex-wrap gap-3">
               <LinkButton href="/contact" variant="solid" size="card">
                 {labels.contact}
               </LinkButton>
