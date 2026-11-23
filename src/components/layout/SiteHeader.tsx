@@ -37,12 +37,12 @@ export function SiteHeader({ locale }: { locale: string }) {
           aria-label="Nicholaisen — Home"
         >
           <Image
-            src={transparent ? "/brand/logo-white.png" : "/brand/logo-navy.png"}
+            src={transparent ? "/brand/logo-stacked-white.png" : "/brand/logo-stacked-navy.png"}
             alt="Nicholaisen"
-            width={472}
-            height={190}
+            width={693}
+            height={839}
             priority
-            style={{ height: "48px", width: "auto", display: "block" }}
+            style={{ height: "60px", width: "auto", display: "block" }}
           />
         </Link>
 

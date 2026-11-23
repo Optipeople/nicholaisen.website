@@ -44,8 +44,8 @@ export async function SiteFooter({ locale }: { locale: string }) {
   ];
   const logo = (
     <Link href="/" aria-label="Nicholaisen — Home" className="block">
-      <Image src="/brand/logo-white.png" alt="Nicholaisen" width={140} height={48} className="block h-12 w-auto group-data-[light]:hidden" />
-      <Image src="/brand/logo-navy.png" alt="Nicholaisen" width={472} height={190} className="hidden h-12 w-auto group-data-[light]:block" />
+      <Image src="/brand/logo-stacked-white.png" alt="Nicholaisen" width={391} height={473} className="block h-[72px] w-auto group-data-[light]:hidden" />
+      <Image src="/brand/logo-stacked-navy.png" alt="Nicholaisen" width={693} height={839} className="hidden h-[72px] w-auto group-data-[light]:block" />
     </Link>
   );
   const links = [

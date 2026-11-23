@@ -56,7 +56,7 @@ export function MobileNav({ transparent = false }: { transparent?: boolean }) {
           {/* Same top row as the header */}
           <div className="flex items-center justify-between border-b border-[var(--color-divider)] px-[clamp(20px,5vw,32px)] py-[22px]">
             <Link href="/" onClick={close} aria-label="Nicholaisen" className="block">
-              <Image src="/brand/logo-navy.png" alt="Nicholaisen" width={472} height={190} style={{ height: "48px", width: "auto" }} />
+              <Image src="/brand/logo-stacked-navy.png" alt="Nicholaisen" width={693} height={839} style={{ height: "56px", width: "auto" }} />
             </Link>
             <Dialog.Close aria-label={t("close")} className="inline-flex size-11 cursor-pointer items-center justify-center text-[var(--color-text)]">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden>
